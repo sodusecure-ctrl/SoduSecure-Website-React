@@ -1,0 +1,3020 @@
+{
+  "header": {
+    "brand": "Sodu Secure",
+    "services": "Services",
+    "chooseServices": "Choose Your Services",
+    "about": "About",
+    "caseStudiesBlogs": "Case Studies & Blogs",
+    "careers": "Careers",
+    "contact": "Contact",
+    "requestPentest": "Request Pentest",
+    "language": "Language",
+    "selectLanguage": "Select your preferred language",
+    "english": "English",
+    "german": "Deutsch",
+    "servicesList": {
+      "infrastructureTesting": "Infrastructure Penetration Testing",
+      "webApplicationTesting": "Web Application Penetration Testing",
+      "mobileAppTesting": "Mobile App Penetration Testing",
+      "apiSecurityTesting": "API Security Testing",
+      "cloudDevopsTesting": "Cloud & DevOps Security Testing",
+      "networkAudit": "Network Security Audit",
+      "smePackages": "SME / Small Business Security Packages"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": {
+        "line1": "Proactive penetration",
+        "line2": "testing for secure",
+        "line3": "Digital Business"
+      },
+      "subtitle": "Manual security assessments, certified testers, clear results and remediation support.",
+      "cta": {
+        "requestPentest": "Request a Pentest",
+        "contactUs": "Contact Us"
+      },
+      "trustedCertified": "Trusted & Certified",
+      "certifications": [
+        "ISO 27001",
+        "GDPR Compliant",
+        "OSCP Certified",
+        "CEH Certified"
+      ]
+    },
+    "services": {
+      "title": "Comprehensive Security Testing Services",
+      "subtitle": "End-to-end penetration testing across all attack surfaces",
+      "infrastructure": {
+        "title": "Infrastructure",
+        "description": "Network and system security testing to identify vulnerabilities in your infrastructure.",
+        "tagline": "Secure your network perimeter"
+      },
+      "webApplication": {
+        "title": "Web Application",
+        "description": "Comprehensive web app security assessment covering OWASP Top 10 and beyond.",
+        "tagline": "Protect your web applications"
+      },
+      "mobileApp": {
+        "title": "Mobile App",
+        "description": "iOS and Android security testing for mobile applications and APIs.",
+        "tagline": "Secure mobile experiences"
+      },
+      "apiSecurity": {
+        "title": "API Security",
+        "description": "API endpoint testing and authentication/authorization vulnerability assessment.",
+        "tagline": "Harden your API infrastructure"
+      },
+      "cloudDevops": {
+        "title": "Cloud & devOps",
+        "description": "Simulated advanced persistent threat (APT) attacks to test your overall security posture.",
+        "tagline": "Enhance your cloud security"
+      },
+      "networkSecurity": {
+        "title": "Network Security",
+        "description": "Complete network infrastructure audit and penetration testing services.",
+        "tagline": "Comprehensive network protection"
+      },
+      "learnMore": "Learn more",
+      "customAssessment": {
+        "title": "Need a custom security assessment?",
+        "button": "Get in Touch"
+      }
+    },
+    "whyChoose": {
+      "title": "Why Choose Sodu Secure",
+      "subtitle": "Trusted by startups and enterprises for thorough, professional security assessments",
+      "features": {
+        "manualTesting": {
+          "title": "Manual Testing",
+          "description": "Real security experts, not just automated scanners. We dig deeper to find critical vulnerabilities that tools miss."
+        },
+        "certifiedExperts": {
+          "title": "Certified Experts",
+          "description": "Our team holds industry-leading certifications: OSCP, OSWE, CEH, and GPEN. Decades of combined experience."
+        },
+        "clearDocumentation": {
+          "title": "Clear Documentation",
+          "description": "Detailed reports with executive summaries, technical findings, proof of concepts, and actionable remediation steps."
+        },
+        "fastDelivery": {
+          "title": "Fast Delivery Times",
+          "description": "Rapid turnaround without compromising quality. Most assessments completed within 2-3 weeks from kickoff."
+        }
+      },
+      "cta": {
+        "title": "Ready to secure your digital assets?",
+        "button": "Configure Pentest Now"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Our proven four-step methodology ensures comprehensive security coverage",
+      "steps": {
+        "scope": {
+          "title": "Scope",
+          "items": [
+            "Define testing objectives",
+            "Identify systems & assets",
+            "Set engagement rules",
+            "Plan timeline & methodology"
+          ]
+        },
+        "testing": {
+          "title": "Testing",
+          "items": [
+            "Manual security assessment",
+            "Vulnerability identification",
+            "Exploitation & validation",
+            "Impact analysis"
+          ]
+        },
+        "reporting": {
+          "title": "Reporting",
+          "items": [
+            "Executive summary",
+            "Technical findings",
+            "Proof of concepts",
+            "Remediation guidance"
+          ]
+        },
+        "retest": {
+          "title": "Retest & Support",
+          "items": [
+            "Verify fixes implemented",
+            "Retest vulnerabilities",
+            "Ongoing consultation",
+            "Security improvement roadmap"
+          ]
+        }
+      },
+      "cta": {
+        "text": "Ready to start your security assessment?",
+        "button": "Calculate Pentest Price Now"
+      }
+    },
+    "consultationCTA": {
+      "title": "Ready to secure your digital assets?",
+      "heading": "Schedule a Free Consultation",
+      "description": "Discuss your security needs with our experts. Get a customized testing plan and transparent pricing, no obligation.",
+      "bookCall": "Contact Now",
+      "requestPentest": "Request a Pentest",
+      "responseTime": "Typical response time: within 24 hours"
+    },
+    "certificationsTools": {
+      "title": "Certifications & Compliance",
+      "subtitle": "We meet the highest industry standards",
+      "confidentiality": "All data handled with strict confidentiality. NDAs available upon request.",
+      "button": "Sample Report (PDF)",
+      "toolsTitle": "Tools & Methodology",
+      "toolsSubtitle": "Industry-leading tools combined with manual testing",
+      "testingToolsLabel": "Security Testing Tools:",
+      "testingMethodology": "Testing Methodology",
+      "certifications": [
+        "ISO 27001",
+        "SOC 2 Type II"
+      ],
+      "compliance": [
+        "GDPR Compliant",
+        "PCI DSS"
+      ],
+      "toolsList": [
+        "Burp Suite Professional",
+        "Nmap",
+        "Metasploit Framework",
+        "Custom Manual Audits",
+        "OWASP ZAP",
+        "Wireshark"
+      ],
+      "methodologies": [
+        "OWASP Testing Guide compliance",
+        "PTES (Penetration Testing Execution Standard)",
+        "NIST SP 800-115 Guidelines",
+        "Custom threat modeling per engagement"
+      ],
+      "toastNotReady": "Report download will be available once the backend is ready."
+    },
+    "testimonialsCarousel": {
+      "title": "Trusted by Security-Conscious Teams",
+      "subtitle": "What our clients say about working with us",
+      "items": [
+        {
+          "text": "Sodu Secure's pentest uncovered critical vulnerabilities we didn't know existed. Their detailed reporting and remediation support helped us fix issues quickly and effectively.",
+          "author": "Sarah Chen",
+          "position": "CTO, TechFlow Solutions",
+          "initial": "S",
+          "rating": 5
+        },
+        {
+          "text": "Outstanding security assessment! The team was professional, thorough, and provided actionable insights that significantly improved our security posture.",
+          "author": "Michael Rodriguez",
+          "position": "CISO, DataSecure Inc",
+          "initial": "M",
+          "rating": 5
+        },
+        {
+          "text": "The penetration testing service exceeded our expectations. Clear communication, comprehensive reports, and expert guidance throughout the remediation process.",
+          "author": "Emily Watson",
+          "position": "VP Engineering, CloudTech",
+          "initial": "E",
+          "rating": 5
+        }
+      ],
+      "footerNote": "Join 100+ satisfied clients who trust Sodu Secure with their security"
+    }
+  },
+  "footer": {
+    "brand": "Sodu Secure",
+    "tagline": "Professional penetration testing and security assessments for modern businesses.",
+    "contact": {
+      "email": "contact@sodusecure.com",
+      "phone": "+1 (234) 567-8900",
+      "location": "San Francisco, CA",
+      "needHelp": "Need immediate security assistance?",
+      "emergency": "Emergency Contact"
+    },
+    "sections": {
+      "services": {
+        "title": "Services",
+        "links": [
+          "Infrastructure Testing",
+          "Web Application",
+          "Mobile Security",
+          "API Testing",
+          "Cloud Security"
+        ]
+      },
+      "company": {
+        "title": "Company",
+        "links": [
+          "About Us",
+          "Our Team",
+          "Careers",
+          "Blog",
+          "Contact"
+        ]
+      },
+      "resources": {
+        "title": "Resources",
+        "links": [
+          "Case Studies",
+          "Documentation",
+          "Sample Reports",
+          "Security Tips"
+        ]
+      }
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© {year} Sodu Secure. All rights reserved.",
+    "trustLine": "Protecting businesses through comprehensive security assessments."
+  },
+  "serviceCommon": {
+    "testingApproach": {
+      "title": "Testing Approach",
+      "manualTesting": {
+        "title": "Manual Testing",
+        "items": [
+          "Certified security experts perform hands-on testing",
+          "Advanced exploitation techniques and privilege escalation",
+          "Business logic testing that automated tools cannot detect",
+          "Real-world attack simulation and threat modeling"
+        ]
+      },
+      "automatedScanning": {
+        "title": "Automated Scanning",
+        "items": [
+          "Industry-leading vulnerability scanning tools",
+          "Network mapping and service enumeration",
+          "CVE database matching and patch verification",
+          "Continuous monitoring during engagement period"
+        ]
+      },
+      "industryStandards": {
+        "title": "Industry Standards",
+        "owasp": {
+          "title": "OWASP",
+          "description": "Open Web Application Security Project testing methodology"
+        },
+        "osstmm": {
+          "title": "OSSTMM",
+          "description": "Open Source Security Testing Methodology Manual compliance"
+        },
+        "nist": {
+          "title": "NIST",
+          "description": "NIST SP 800-115 Practical Guide to Information Security Testing"
+        }
+      }
+    },
+    "whyMatters": {
+      "title": "Why This Test Matters",
+      "businessImpact": {
+        "title": "Business Impact",
+        "items": [
+          "Prevent lateral movement and privilege escalation attacks",
+          "Identify internal security weaknesses before attackers do",
+          "Protect sensitive data and intellectual property",
+          "Reduce attack surface and exposure to threats",
+          "Validate security controls and defense mechanisms"
+        ]
+      },
+      "complianceBenefits": {
+        "title": "Compliance Benefits",
+        "items": [
+          "Meet SOC 2 Type 2 requirements for infrastructure security",
+          "Satisfy ISO 27001 control testing obligations",
+          "Demonstrate PCI DSS network segmentation compliance",
+          "Fulfill HIPAA technical safeguard requirements",
+          "Support cybersecurity insurance policy requirements"
+        ]
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "How long does an infrastructure penetration test take?",
+          "answer": "Typically 1-3 weeks depending on the scope and complexity of your infrastructure."
+        },
+        {
+          "question": "Do we need to give you VPN access?",
+          "answer": "For internal testing, VPN access is required. For external testing, only public-facing assets are tested."
+        },
+        {
+          "question": "Will testing disrupt our operations?",
+          "answer": "We use non-disruptive testing methods during business hours and coordinate any intrusive tests."
+        },
+        {
+          "question": "What happens if you find critical vulnerabilities?",
+          "answer": "We immediately notify your security team and provide remediation guidance."
+        },
+        {
+          "question": "Do you test our cloud infrastructure as well?",
+          "answer": "Yes, we test both on-premise and cloud infrastructure including AWS, Azure, and Google Cloud."
+        },
+        {
+          "question": "What credentials do you need from us?",
+          "answer": "Credentials vary by test type - from no credentials for black-box testing to domain admin for comprehensive testing."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Get Your Infrastructure Tested",
+      "subtitle": "Secure your network with a comprehensive penetration test from certified security experts",
+      "requestPentest": "Request a Pentest",
+      "scheduleCall": "Schedule a Call"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "welcomeBack": "Welcome Back!",
+      "signIn": "Sign In",
+      "emailLabel": "Email Address",
+      "passwordLabel": "Password",
+      "emailPlaceholder": "Email",
+      "passwordPlaceholder": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "signInButton": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "validation": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "passwordRequired": "Password is required",
+        "termsRequired": "You must accept the terms and conditions"
+      }
+    },
+    "signUp": {
+      "createAccount": "Create Account",
+      "signUp": "Sign Up",
+      "fullNameLabel": "Full Name",
+      "fullNamePlaceholder": "Full Name",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "Email",
+      "passwordLabel": "Password",
+      "passwordPlaceholder": "Password",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm Password",
+      "acceptTerms": "I accept the terms and conditions",
+      "signUpButton": "Sign Up",
+      "haveAccount": "Already have an account?",
+      "signInLink": "Sign In",
+      "validation": {
+        "nameRequired": "Full name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "passwordRequired": "Password is required",
+        "passwordTooShort": "Password must be at least 8 characters",
+        "confirmPasswordRequired": "Please confirm your password",
+        "passwordMismatch": "Passwords do not match",
+        "termsRequired": "You must accept the terms and conditions"
+      }
+    },
+    "forgotPassword": {
+      "forgotPassword": "Forgot Password",
+      "emailSubtitle": "Enter your email to reset your password",
+      "sendButton": "Send Reset Link",
+      "backToSignIn": "Back to Sign In",
+      "validation": {
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email"
+      },
+      "success": "If an account exists with this email, you will receive a password reset link"
+    },
+    "createNewPassword": {
+      "createNewPassword": "Create New Password",
+      "passwordLabel": "New Password",
+      "passwordPlaceholder": "Enter new password",
+      "confirmPasswordLabel": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm new password",
+      "resetButton": "Reset Password",
+      "validation": {
+        "passwordRequired": "Password is required",
+        "passwordTooShort": "Password must be at least 8 characters",
+        "confirmPasswordRequired": "Please confirm your password",
+        "passwordMismatch": "Passwords do not match"
+      },
+      "success": "Password reset successfully"
+    },
+    "verifyOtp": {
+      "verifyEmail": "Verify Email",
+      "enterCode": "Enter the 6-digit code sent to your email",
+      "codeLabel": "Verification Code",
+      "codePlaceholder": "000000",
+      "verifyButton": "Verify",
+      "resendCode": "Didn't receive the code?",
+      "resendButton": "Resend Code",
+      "validation": {
+        "codeRequired": "Verification code is required",
+        "codeInvalid": "Please enter a valid 6-digit code"
+      }
+    },
+    "verifyEmailForgotPassword": {
+      "verifyEmail": "Verify Email",
+      "enterCode": "Enter the 6-digit code sent to your email",
+      "codeLabel": "Verification Code",
+      "codePlaceholder": "000000",
+      "verifyButton": "Verify",
+      "resendCode": "Didn't receive the code?",
+      "resendButton": "Resend Code",
+      "validation": {
+        "codeRequired": "Verification code is required",
+        "codeInvalid": "Please enter a valid 6-digit code"
+      }
+    }
+  },
+  "privacy": {
+    "privacy": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "sections": {
+      "introduction": {
+        "title": "Introduction",
+        "content": "At Sodu Secure, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website."
+      },
+      "informationWeCollect": {
+        "title": "Information We Collect",
+        "content": "We may collect information about you in a variety of ways. The information we may collect on the site includes:"
+      },
+      "useOfInformation": {
+        "title": "Use of Your Information",
+        "content": "Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience."
+      },
+      "disclosure": {
+        "title": "Disclosure of Your Information",
+        "content": "We may share or disclose your information in the following situations: By Law or to Protect Rights, Third-Party Service Providers, Business Transfers."
+      },
+      "security": {
+        "title": "Security of Your Information",
+        "content": "We use administrative, technical, and physical security measures to protect your personal information."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have questions or comments about this Privacy Policy, please contact us at privacy@sodusecure.com"
+      }
+    }
+  },
+  "terms": {
+    "terms": "Terms of Service",
+    "lastUpdated": "Last updated",
+    "sections": {
+      "introduction": {
+        "title": "Agreement to Terms",
+        "content": "These Terms of Service and any related documents constitute the entire agreement and supersede all prior negotiations, representations or agreements, both written and oral."
+      },
+      "useRights": {
+        "title": "Use Rights",
+        "content": "You agree not to use the Site: In any way that violates any applicable law or regulation, To transmit, or procure the sending of, any advertising without prior written consent."
+      },
+      "limitations": {
+        "title": "Limitations of Liability",
+        "content": "In no event shall Sodu Secure, nor its directors, employees or agents, be liable to you for any damages, including data, special, incidental or consequential damages."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have any questions about these Terms of Service, please contact us at legal@sodusecure.com"
+      }
+    }
+  },
+  "requestPentest": {
+    "requestPentest": "Request a Pentest",
+    "subtitle": "Get a custom security assessment for your organization",
+    "companySizes": {
+      "small": "Small (1-50 employees)",
+      "medium": "Medium (51-250 employees)",
+      "large": "Large (251-1000 employees)",
+      "enterprise": "Enterprise (1000+ employees)",
+      "corporate": "Corporate"
+    },
+    "steps": {
+      "category": {
+        "title": "Select Service",
+        "subtitle": "Choose the type of security testing you need"
+      },
+      "variant": {
+        "title": "Choose Package",
+        "subtitle": "Select the package that fits your needs"
+      },
+      "addOns": {
+        "title": "Add-ons",
+        "subtitle": "Enhance your package with optional add-ons"
+      },
+      "contact": {
+        "title": "Contact Information",
+        "subtitle": "Tell us how to reach you"
+      }
+    },
+    "validation": {
+      "selectCategory": "Please select a service category",
+      "selectVariant": "Please select a package variant",
+      "fullNameRequired": "Full name is required",
+      "companyNameRequired": "Company name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email",
+      "phoneRequired": "Phone number is required",
+      "agreeTermsRequired": "You must agree to the terms and conditions"
+    },
+    "submitSuccess": "Thank you! We will contact you shortly with a proposal.",
+    "submitError": "Failed to submit form. Please try again later.",
+    "sections": {
+      "serviceType": {
+        "label": "Select Service Type",
+        "placeholder": "Choose a service",
+        "options": [
+          "Web Application Testing",
+          "API Security Testing",
+          "Mobile App Testing",
+          "Infrastructure Testing",
+          "Cloud & DevOps Testing",
+          "Network Audit",
+          "Security Audit"
+        ]
+      },
+      "companyName": {
+        "label": "Company Name",
+        "placeholder": "Your company name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "your@email.com"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "+1 (555) 000-0000"
+      },
+      "description": {
+        "label": "Project Description",
+        "placeholder": "Describe your security testing needs..."
+      },
+      "budget": {
+        "label": "Budget Range",
+        "placeholder": "Select budget"
+      },
+      "timeline": {
+        "label": "Preferred Timeline",
+        "placeholder": "When do you need this?"
+      },
+      "submitButton": "Request Assessment",
+      "successMessage": "Thank you! We will contact you shortly.",
+      "validation": {
+        "serviceRequired": "Please select a service type",
+        "nameRequired": "Company name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Please enter a valid email",
+        "phoneRequired": "Phone number is required",
+        "descriptionRequired": "Please describe your needs"
+      }
+    },
+    "progress": "Progress",
+    "needHelp": "Need help?",
+    "disclaimer": "All prices are in USD. Standard turnaround time is 2-3 weeks.",
+    "submitTitle": "Contact Information",
+    "submitDescription": "Tell us how we can reach you and finalize your penetration test order.",
+    "backButton": "Back",
+    "continue": "Continue",
+    "submitButton": "Submit Request",
+    "submitting": "Submitting...",
+    "orderSummaryTitle": "Order Summary",
+    "orderSummaryAddOns": "Add-ons",
+    "orderSummaryTotal": "Total",
+    "labels": {
+      "popular": "POPULAR",
+      "free": "FREE",
+      "premium": "PREMIUM",
+      "includedWithSelection": "Included with selection",
+      "addToOrder": "Add to order",
+      "freeText": "Free"
+    },
+    "form": {
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Your full name",
+      "companyName": "Company name",
+      "companyNamePlaceholder": "Your company",
+      "emailAddress": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "phoneNumber": "Phone number",
+      "phonePlaceholder": "+1 (555) 123-4567",
+      "companySize": "Company size",
+      "additionalInfo": "Additional information",
+      "additionalInfoPlaceholder": "Share any context, goals, or timelines...",
+      "termsAgreement": "I agree to the terms and conditions"
+    },
+    "categories": {
+      "title": "Select Test Category",
+      "subtitle": "Choose the type of penetration test that best fits your security needs",
+      "notSure": "Not sure which test you need?",
+      "notSureDesc": "Our security experts can help you determine the right penetration test for your organization",
+      "items": [
+        {
+          "title": "Web Application Pentest",
+          "description": "Comprehensive security testing of your web applications, including static and dynamic analysis",
+          "features": [
+            "Black-box & Grey-box testing",
+            "Multiple user roles testing",
+            "OWASP Top 10 coverage",
+            "Detailed vulnerability report"
+          ],
+          "variant": {
+            "title": "WebApp Pentest",
+            "des": "Choose the testing scope that matches your application complexity",
+            "variantList": [
+              { "name": "Small", "price": "$1,499", "duration": "5 days", "features": ["Static application", "Black-box"] },
+              { "name": "Medium", "price": "$7,000", "duration": "4 weeks", "type": "popular", "features": ["Dynamic application", "Black + Grey box", "2-4 user roles"] },
+              { "name": "Large", "price": "$10,000", "duration": "4 weeks", "features": ["Dynamic application", "5+ user roles", "Critical systems"] }
+            ]
+          },
+          "addOns": {
+            "title": "Select Add-ons (Optional)",
+            "des": "Enhance your penetration test with these additional services",
+            "addOnList": [
+              { "id": 1, "name": "Code-Assisted Review", "des": "White-box testing with source code access for deeper vulnerability analysis", "price": "$1,500", "type": "premium" },
+              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "$0", "type": "free" },
+              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "$500", "type": "premium" }
+            ]
+          }
+        },
+        {
+          "title": "API / Backend Pentest",
+          "description": "In-depth security assessment of your APIs and backend services",
+          "features": [
+            "REST & GraphQL APIs",
+            "Authentication & authorization",
+            "Business logic testing",
+            "Rate limiting & abuse cases"
+          ],
+          "variant": {
+            "title": "API Pentest",
+            "des": "Choose the testing scope that matches your application complexity",
+            "variantList": [
+              { "name": "Small", "price": "$1,499", "duration": "2 weeks", "features": ["Static application", "Black-box testing", "Single user role", "OWASP Top 10"] },
+              { "name": "Medium", "price": "$7,000", "duration": "4 weeks", "type": "popular", "features": ["Dynamic application", "Black + Grey box", "2-4 user roles", "Comprehensive testing"] },
+              { "name": "Large", "price": "$10,000", "duration": "6 weeks", "features": ["Dynamic application", "Full spectrum testing", "5+ user roles", "Critical systems"] }
+            ]
+          },
+          "addOns": {
+            "title": "Select Add-ons (Optional)",
+            "des": "Enhance your penetration test with these additional services",
+            "addOnList": [
+              { "id": 1, "name": "Code-Assisted Review", "des": "White-box testing with source code access for deeper vulnerability analysis", "price": "$1,500", "type": "premium" },
+              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "$0", "type": "free" },
+              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "$500", "type": "premium" }
+            ]
+          }
+        },
+        {
+          "title": "Infrastructure Pentest",
+          "description": "Network and system security testing for public or internal infrastructure",
+          "features": [
+            "Public & internal networks",
+            "Server configuration review",
+            "Network segmentation",
+            "Privilege escalation testing"
+          ],
+          "variant": {
+            "title": "Infrastructure Pentest",
+            "des": "Choose the testing scope that matches your environment size",
+            "variantList": [
+              { "name": "Small", "price": "$2,500", "system": "5", "features": ["Network & host vulnerability assessment", "Privilege escalation testing", "Executive summary & technical report"] },
+              { "name": "Medium", "price": "$10,000", "system": "100", "type": "popular", "features": ["Misconfiguration & exposure analysis", "Risk-rated findings"] },
+              { "name": "Large", "price": "$20,000", "system": "250", "features": ["Comprehensive penetration testing", "Custom attack scenarios", "Executive summary & technical report"] }
+            ]
+          },
+          "addOns": {
+            "title": "Select Add-ons (Optional)",
+            "des": "Enhance your penetration test with these additional services",
+            "addOnList": [
+              { "id": 1, "name": "Extended Scope", "des": "Additional IP ranges or subnets included in testing", "price": "$2,000", "type": "premium" },
+              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "$0", "type": "free" },
+              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "$500", "type": "premium" }
+            ]
+          }
+        },
+        {
+          "title": "Awareness (Training & Phishing)",
+          "description": "Security awareness training and phishing simulations for your team",
+          "features": [
+            "Phishing simulations",
+            "Security training sessions",
+            "Online & on-site options",
+            "Customized to your industry"
+          ],
+          "variant": {
+            "title": "Awareness & Phishing",
+            "des": "Choose the training and simulation depth for your teams",
+            "variantList": [
+              { "name": "Starter", "price": "$2,000", "duration": "2 weeks", "features": ["Baseline phishing campaign", "Awareness training session", "Executive summary report"] },
+              { "name": "Professional", "price": "$4,500", "duration": "4 weeks", "type": "popular", "features": ["Multiple phishing campaigns", "Role-based training", "Metrics & improvement plan"] },
+              { "name": "Enterprise", "price": "$8,000", "duration": "6 weeks", "features": ["Advanced red team phishing", "Custom training content", "Executive & technical reporting"] }
+            ]
+          },
+          "addOns": {
+            "title": "Select Add-ons (Optional)",
+            "des": "Enhance your engagement with additional services",
+            "addOnList": [
+              { "id": 1, "name": "Executive Workshop", "des": "C-level briefing and tabletop exercise", "price": "$1,200", "type": "premium" },
+              { "id": 2, "name": "Free Retest", "des": "Follow-up phishing campaign to verify improvements", "price": "$0", "type": "free" },
+              { "id": 3, "name": "On-site Training", "des": "In-person training sessions for your teams", "price": "$1,800", "type": "premium" }
+            ]
+          }
+        }
+      ],
+      "contactTeam": "Contact our security team"
+    }
+  },
+  "infrastructureTesting": {
+    "hero": {
+      "title": "Infrastructure Penetration Testing",
+      "description": "Comprehensive security assessment of your network infrastructure to identify vulnerabilities before attackers exploit them.",
+      "requestPentest": "Request a Pentest",
+      "scheduleConsultation": "Schedule a Consultation"
+    },
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": [
+        "Internal & External network testing",
+        "Firewall & router security assessment",
+        "Server & OS vulnerability scanning",
+        "Privilege escalation testing",
+        "Wireless network security audit",
+        "VPN and remote access testing",
+        "Network segmentation analysis",
+        "Active Directory security review"
+      ]
+    },
+    "scopeCoverage": {
+      "title": "Scope Coverage",
+      "items": {
+        "activeDirectory": {
+          "title": "Active Directory",
+          "description": "Complete AD security assessment"
+        },
+        "networkDevices": {
+          "title": "Network Devices",
+          "description": "Routers, switches, firewalls"
+        },
+        "servers": {
+          "title": "Servers",
+          "description": "Windows, Linux, Unix systems"
+        },
+        "vpnRdp": {
+          "title": "VPN / RDP",
+          "description": "Remote access security"
+        },
+        "workstations": {
+          "title": "Workstations",
+          "description": "Endpoint security testing"
+        },
+        "wirelessNetworks": {
+          "title": "Wireless Networks",
+          "description": "WiFi security assessment"
+        },
+        "configuration": {
+          "title": "Configuration",
+          "description": "Security misconfigurations"
+        },
+        "securityControls": {
+          "title": "Security Controls",
+          "description": "IDS/IPS, antivirus testing"
+        }
+      }
+    },
+    "deliverables": {
+      "title": "Deliverables",
+      "items": {
+        "fullReport": {
+          "title": "Full PDF Report",
+          "description": "Comprehensive security assessment with executive summary and technical details"
+        },
+        "findingsList": {
+          "title": "Findings Severity List",
+          "description": "CVSS-scored vulnerabilities with clear risk ratings and prioritization"
+        },
+        "screenshotsPoc": {
+          "title": "Screenshots & PoC",
+          "description": "Proof of concept demonstrations and visual evidence of vulnerabilities"
+        },
+        "freeRetest": {
+          "title": "Free Retest",
+          "description": "Complimentary verification testing after remediation is complete"
+        }
+      }
+    }
+  },
+  "webApplicationTesting": {
+    "hero": {
+      "title": "Web Application Penetration Testing",
+      "description": "Deep manual security testing of web applications to identify OWASP Top 10 vulnerabilities, business logic flaws, and authentication issues.",
+      "requestPentest": "Request a Pentest",
+      "scheduleConsultation": "Contact Us Now"
+    },
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": [
+        "OWASP Top 10 vulnerability testing",
+        "Authentication & session management",
+        "Business logic flaw identification",
+        "Payment processing security",
+        "SQL injection & XSS testing",
+        "API endpoint security review",
+        "File upload vulnerability testing",
+        "Authorization bypass attempts"
+      ]
+    },
+    "scopeCoverage": {
+      "title": "Scope Coverage",
+      "items": {
+        "loginSignup": {
+          "title": "Login/Signup",
+          "description": "Authentication mechanisms"
+        },
+        "dashboard": {
+          "title": "Dashboard",
+          "description": "User interface security"
+        },
+        "apis": {
+          "title": "APIs",
+          "description": "Backend API testing"
+        },
+        "fileUploads": {
+          "title": "File Uploads",
+          "description": "Upload validation testing"
+        },
+        "paymentFlow": {
+          "title": "Payment Flow",
+          "description": "Transaction security"
+        },
+        "passwordReset": {
+          "title": "Password Reset",
+          "description": "Recovery mechanisms"
+        },
+        "errorHandling": {
+          "title": "Error Handling",
+          "description": "Information disclosure"
+        },
+        "inputValidation": {
+          "title": "Input Validation",
+          "description": "Data sanitization"
+        }
+      }
+    },
+    "deliverables": {
+      "title": "Deliverables",
+      "items": {
+        "fullReport": {
+          "title": "Full PDF Report",
+          "description": "Comprehensive security assessment with executive summary and technical details"
+        },
+        "findingsList": {
+          "title": "Findings Severity List",
+          "description": "CVSS-scored vulnerabilities with clear risk ratings and prioritization"
+        },
+        "screenshotsPoc": {
+          "title": "Screenshots & PoC",
+          "description": "Proof of concept demonstrations and visual evidence of vulnerabilities"
+        },
+        "freeRetest": {
+          "title": "Free Retest",
+          "description": "Complimentary verification testing after remediation is complete"
+        }
+      }
+    }
+  },
+  "apiSecurityTesting": {
+    "hero": {
+      "title": "API Security Testing",
+      "description": "Comprehensive security assessment of REST, GraphQL, and microservice APIs to identify authentication flaws, authorization bypass, and data exposure vulnerabilities.",
+      "requestPentest": "Request a Pentest",
+      "scheduleConsultation": "Contact Us Now"
+    },
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": [
+        "Authentication & authorization testing",
+        "Rate limiting & throttling validation",
+        "JWT & token security analysis",
+        "Input validation & injection testing",
+        "API versioning security review",
+        "Schema validation & fuzzing",
+        "Authorization bypass attempts",
+        "Mass assignment vulnerability testing"
+      ]
+    },
+    "scopeCoverage": {
+      "title": "Scope Coverage",
+      "items": {
+        "restApis": {
+          "title": "REST APIs",
+          "description": "RESTful endpoint security"
+        },
+        "graphql": {
+          "title": "GraphQL",
+          "description": "Query security & depth limits"
+        },
+        "microservices": {
+          "title": "Microservices",
+          "description": "Service-to-service auth"
+        },
+        "authentication": {
+          "title": "Authentication",
+          "description": "OAuth, JWT, API keys"
+        },
+        "rateLimiting": {
+          "title": "Rate Limiting",
+          "description": "Throttling mechanisms"
+        },
+        "authorization": {
+          "title": "Authorization",
+          "description": "Access control testing"
+        },
+        "inputValidation": {
+          "title": "Input Validation",
+          "description": "Data sanitization"
+        },
+        "errorHandling": {
+          "title": "Error Handling",
+          "description": "Information leakage"
+        }
+      }
+    },
+    "deliverables": {
+      "title": "Deliverables",
+      "items": {
+        "fullReport": {
+          "title": "Full PDF Report",
+          "description": "Comprehensive security assessment with executive summary and technical details"
+        },
+        "findingsList": {
+          "title": "Findings Severity List",
+          "description": "CVSS-scored vulnerabilities with clear risk ratings and prioritization"
+        },
+        "screenshotsPoc": {
+          "title": "Screenshots & PoC",
+          "description": "Proof of concept demonstrations and visual evidence of vulnerabilities"
+        },
+        "freeRetest": {
+          "title": "Free Retest",
+          "description": "Complimentary verification testing after remediation is complete"
+        }
+      }
+    }
+  },
+  "mobileAppTesting": {
+    "hero": {
+      "title": "Mobile App Penetration Testing",
+      "description": "Comprehensive security assessment for iOS and Android applications, including static analysis, dynamic testing, and backend API security.",
+      "requestPentest": "Request a Pentest",
+      "scheduleConsultation": "Contact Us Now"
+    },
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": [
+        "Android & iOS native app testing",
+        "Static & dynamic code analysis",
+        "API & backend security testing",
+        "Local data storage security",
+        "Network traffic interception",
+        "Authentication & authorization",
+        "Reverse engineering assessment",
+        "Certificate pinning validation"
+      ]
+    },
+    "scopeCoverage": {
+      "title": "Scope Coverage",
+      "items": {
+        "storageSecurity": {
+          "title": "Storage Security",
+          "description": "Local data protection"
+        },
+        "authentication": {
+          "title": "Authentication",
+          "description": "Login & biometric security"
+        },
+        "networkTraffic": {
+          "title": "Network Traffic",
+          "description": "Data transmission security"
+        },
+        "reverseEngineering": {
+          "title": "Reverse Engineering",
+          "description": "Code obfuscation testing"
+        },
+        "backendApis": {
+          "title": "Backend APIs",
+          "description": "Server communication"
+        },
+        "cryptography": {
+          "title": "Cryptography",
+          "description": "Encryption implementation"
+        },
+        "permissions": {
+          "title": "Permissions",
+          "description": "Access control testing"
+        },
+        "platformSecurity": {
+          "title": "Platform Security",
+          "description": "OS-specific vulnerabilities"
+        }
+      }
+    },
+    "deliverables": {
+      "title": "Deliverables",
+      "items": {
+        "fullReport": {
+          "title": "Full PDF Report",
+          "description": "Comprehensive security assessment with executive summary and technical details"
+        },
+        "findingsList": {
+          "title": "Findings Severity List",
+          "description": "CVSS-scored vulnerabilities with clear risk ratings and prioritization"
+        },
+        "screenshotsPoc": {
+          "title": "Screenshots & PoC",
+          "description": "Proof of concept demonstrations and visual evidence of vulnerabilities"
+        },
+        "freeRetest": {
+          "title": "Free Retest",
+          "description": "Complimentary verification testing after remediation is complete"
+        }
+      }
+    }
+  },
+  "cloudDevopsTesting": {
+    "hero": {
+      "title": "Cloud & DevOps Security Testing",
+      "description": "Comprehensive security assessment of cloud infrastructure, DevOps pipelines, and containerized environments to identify misconfigurations and security gaps.",
+      "requestPentest": "Request a Pentest",
+      "scheduleConsultation": "Contact Us Now"
+    },
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": [
+        "Cloud infrastructure assessment",
+        "Container & orchestration security",
+        "CI/CD pipeline security review",
+        "Infrastructure as Code (IaC) analysis",
+        "Access management & IAM testing",
+        "Network security configuration",
+        "Logging & monitoring validation",
+        "Compliance & governance checks"
+      ]
+    },
+    "scopeCoverage": {
+      "title": "Scope Coverage",
+      "items": {
+        "cloudInfrastructure": {
+          "title": "Cloud Infrastructure",
+          "description": "AWS, Azure, GCP security"
+        },
+        "containers": {
+          "title": "Containers",
+          "description": "Docker & Kubernetes security"
+        },
+        "cicdPipelines": {
+          "title": "CI/CD Pipelines",
+          "description": "Build & deployment security"
+        },
+        "iacSecurity": {
+          "title": "IaC Security",
+          "description": "Terraform, CloudFormation"
+        },
+        "identityAccess": {
+          "title": "Identity & Access",
+          "description": "IAM & access controls"
+        },
+        "networkSecurity": {
+          "title": "Network Security",
+          "description": "VPC, subnets, security groups"
+        },
+        "monitoringLogging": {
+          "title": "Monitoring & Logging",
+          "description": "Security event tracking"
+        },
+        "compliance": {
+          "title": "Compliance",
+          "description": "Industry standards adherence"
+        }
+      }
+    },
+    "deliverables": {
+      "title": "Deliverables",
+      "items": {
+        "fullReport": {
+          "title": "Full PDF Report",
+          "description": "Comprehensive security assessment with executive summary and technical details"
+        },
+        "findingsList": {
+          "title": "Findings Severity List",
+          "description": "CVSS-scored vulnerabilities with clear risk ratings and prioritization"
+        },
+        "screenshotsPoc": {
+          "title": "Screenshots & PoC",
+          "description": "Proof of concept demonstrations and visual evidence of vulnerabilities"
+        },
+        "freeRetest": {
+          "title": "Free Retest",
+          "description": "Complimentary verification testing after remediation is complete"
+        }
+      }
+    }
+  },
+  "networkAudit": {
+    "hero": {
+      "title": "Network Security Audit",
+      "description": "Comprehensive network infrastructure assessment to identify vulnerabilities in firewalls, routers, switches, and network configurations.",
+      "requestPentest": "Request a Pentest",
+      "scheduleConsultation": "Contact Us Now"
+    },
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": [
+        "Firewall configuration review",
+        "Router & switch security assessment",
+        "Network segmentation analysis",
+        "VPN & remote access security",
+        "Wireless network security testing",
+        "Network traffic analysis",
+        "Protocol security validation",
+        "Intrusion detection systems review"
+      ]
+    },
+    "scopeCoverage": {
+      "title": "Scope Coverage",
+      "items": {
+        "firewallSecurity": {
+          "title": "Firewall Security",
+          "description": "Rule sets & configurations"
+        },
+        "networkSegmentation": {
+          "title": "Network Segmentation",
+          "description": "VLAN & subnet isolation"
+        },
+        "wirelessSecurity": {
+          "title": "Wireless Security",
+          "description": "WiFi & Bluetooth testing"
+        },
+        "vpnSecurity": {
+          "title": "VPN Security",
+          "description": "Remote access protection"
+        },
+        "routingProtocols": {
+          "title": "Routing Protocols",
+          "description": "OSPF, BGP, EIGRP security"
+        },
+        "networkMonitoring": {
+          "title": "Network Monitoring",
+          "description": "IDS/IPS effectiveness"
+        },
+        "accessControls": {
+          "title": "Access Controls",
+          "description": "NAC & port security"
+        },
+        "trafficAnalysis": {
+          "title": "Traffic Analysis",
+          "description": "Packet inspection & filtering"
+        }
+      }
+    },
+    "deliverables": {
+      "title": "Deliverables",
+      "items": {
+        "fullReport": {
+          "title": "Full PDF Report",
+          "description": "Comprehensive security assessment with executive summary and technical details"
+        },
+        "findingsList": {
+          "title": "Findings Severity List",
+          "description": "CVSS-scored vulnerabilities with clear risk ratings and prioritization"
+        },
+        "screenshotsPoc": {
+          "title": "Screenshots & PoC",
+          "description": "Proof of concept demonstrations and visual evidence of vulnerabilities"
+        },
+        "freeRetest": {
+          "title": "Free Retest",
+          "description": "Complimentary verification testing after remediation is complete"
+        }
+      }
+    }
+  },
+  "smePackages": {
+    "hero": {
+      "title": "SME Security Packages",
+      "description": "Cost-effective security assessment packages designed specifically for small and medium enterprises with limited budgets and resources.",
+      "requestPentest": "Request a Pentest",
+      "scheduleConsultation": "Contact Us Now"
+    },
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": [
+        "Essential security assessment",
+        "Priority vulnerability identification",
+        "Cost-effective testing scope",
+        "Quick turnaround time",
+        "Executive-friendly reporting",
+        "Remediation guidance",
+        "Compliance alignment",
+        "Budget-conscious approach"
+      ]
+    },
+    "scopeCoverage": {
+      "title": "Scope Coverage",
+      "items": {
+        "webApplications": {
+          "title": "Web Applications",
+          "description": "Basic web app security testing"
+        },
+        "networkInfrastructure": {
+          "title": "Network Infrastructure",
+          "description": "Essential network security"
+        },
+        "basicCompliance": {
+          "title": "Basic Compliance",
+          "description": "GDPR, ISO 27001 basics"
+        },
+        "vulnerabilityScanning": {
+          "title": "Vulnerability Scanning",
+          "description": "Automated vulnerability detection"
+        },
+        "configurationReview": {
+          "title": "Configuration Review",
+          "description": "System hardening checks"
+        },
+        "accessControls": {
+          "title": "Access Controls",
+          "description": "Basic authentication testing"
+        },
+        "dataProtection": {
+          "title": "Data Protection",
+          "description": "Sensitive data handling"
+        },
+        "reporting": {
+          "title": "Reporting",
+          "description": "Clear, actionable insights"
+        }
+      }
+    },
+    "deliverables": {
+      "title": "Deliverables",
+      "items": {
+        "fullReport": {
+          "title": "Full PDF Report",
+          "description": "Comprehensive security assessment with executive summary and technical details"
+        },
+        "findingsList": {
+          "title": "Findings Severity List",
+          "description": "CVSS-scored vulnerabilities with clear risk ratings and prioritization"
+        },
+        "screenshotsPoc": {
+          "title": "Screenshots & PoC",
+          "description": "Proof of concept demonstrations and visual evidence of vulnerabilities"
+        },
+        "freeRetest": {
+          "title": "Free Retest",
+          "description": "Complimentary verification testing after remediation is complete"
+        }
+      }
+    }
+  },
+  "securityAudit": {
+    "hero": {
+      "title": "Security Audit Services",
+      "description": "Comprehensive security assessment combining multiple testing methodologies to provide a complete security posture evaluation.",
+      "requestPentest": "Request a Pentest",
+      "scheduleConsultation": "Contact Us Now"
+    },
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": [
+        "Web application security testing",
+        "Network infrastructure assessment",
+        "API security evaluation",
+        "Database security review",
+        "Authentication & authorization testing",
+        "Configuration management audit",
+        "Compliance gap analysis",
+        "Risk assessment & prioritization"
+      ]
+    },
+    "scopeCoverage": {
+      "title": "Scope Coverage",
+      "items": {
+        "comprehensiveAssessment": {
+          "title": "Comprehensive Assessment",
+          "description": "Full security evaluation"
+        },
+        "multipleMethodologies": {
+          "title": "Multiple Methodologies",
+          "description": "Combined testing approaches"
+        },
+        "riskPrioritization": {
+          "title": "Risk Prioritization",
+          "description": "Critical issues first"
+        },
+        "complianceAlignment": {
+          "title": "Compliance Alignment",
+          "description": "Standards adherence"
+        },
+        "remediationGuidance": {
+          "title": "Remediation Guidance",
+          "description": "Fix implementation support"
+        },
+        "executiveReporting": {
+          "title": "Executive Reporting",
+          "description": "Business-focused insights"
+        },
+        "technicalDetails": {
+          "title": "Technical Details",
+          "description": "Developer-friendly findings"
+        },
+        "followUpSupport": {
+          "title": "Follow-up Support",
+          "description": "Post-assessment assistance"
+        }
+      }
+    },
+    "deliverables": {
+      "title": "Deliverables",
+      "items": {
+        "fullReport": {
+          "title": "Full PDF Report",
+          "description": "Comprehensive security assessment with executive summary and technical details"
+        },
+        "findingsList": {
+          "title": "Findings Severity List",
+          "description": "CVSS-scored vulnerabilities with clear risk ratings and prioritization"
+        },
+        "screenshotsPoc": {
+          "title": "Screenshots & PoC",
+          "description": "Proof of concept demonstrations and visual evidence of vulnerabilities"
+        },
+        "freeRetest": {
+          "title": "Free Retest",
+          "description": "Complimentary verification testing after remediation is complete"
+        }
+      }
+    }
+  },
+  "vulnerabilityAssessment": {
+    "hero": {
+      "title": "Vulnerability Assessment Services",
+      "description": "Automated and manual vulnerability scanning to identify security weaknesses across your entire technology stack.",
+      "requestPentest": "Request Vulnerability Assessment",
+      "scheduleConsultation": "Contact Us Now"
+    },
+    "whatsIncluded": {
+      "title": "What's Included",
+      "items": [
+        "Automated vulnerability scanning",
+        "Manual verification of findings",
+        "Risk scoring and prioritization",
+        "Configuration assessment",
+        "Patch management review",
+        "Compliance mapping",
+        "Asset inventory and classification",
+        "Threat intelligence integration"
+      ]
+    },
+    "scopeCoverage": {
+      "title": "Scope Coverage",
+      "items": {
+        "automatedScanning": {
+          "title": "Automated Scanning",
+          "description": "Comprehensive vulnerability scanning using industry-leading tools"
+        },
+        "manualVerification": {
+          "title": "Manual Verification",
+          "description": "Expert validation of automated findings to eliminate false positives"
+        },
+        "riskScoring": {
+          "title": "Risk Scoring",
+          "description": "CVSS v3.1 scoring with environmental and temporal metrics"
+        },
+        "complianceMapping": {
+          "title": "Compliance Mapping",
+          "description": "Mapping findings to compliance frameworks and regulatory requirements"
+        },
+        "configurationAudit": {
+          "title": "Configuration Audit",
+          "description": "Review of system and application configurations for security best practices"
+        },
+        "assetInventory": {
+          "title": "Asset Inventory",
+          "description": "Complete inventory and classification of all network assets"
+        },
+        "patchManagement": {
+          "title": "Patch Management",
+          "description": "Assessment of patch levels and missing security updates"
+        },
+        "threatIntelligence": {
+          "title": "Threat Intelligence",
+          "description": "Integration of current threat intelligence for contextual risk assessment"
+        }
+      }
+    },
+    "deliverables": {
+      "title": "Deliverables",
+      "items": {
+        "vulnerabilityReport": {
+          "title": "Vulnerability Report",
+          "description": "Detailed report of all identified vulnerabilities with technical details and exploitation potential"
+        },
+        "executiveSummary": {
+          "title": "Executive Summary",
+          "description": "High-level overview with risk metrics and business impact analysis"
+        },
+        "riskDashboard": {
+          "title": "Risk Dashboard",
+          "description": "Interactive dashboard for tracking vulnerability trends and remediation progress"
+        },
+        "remediationPlan": {
+          "title": "Remediation Plan",
+          "description": "Prioritized remediation roadmap with timelines and resource requirements"
+        }
+      }
+    }
+  },
+  "blogDetail": {
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share article",
+    "bookmarkArticle": "Bookmark article",
+    "category": "VULNERABILITIES",
+    "date": "Dec 1, 2024",
+    "title": "OWASP Top 10 2024: What Changed and Why It Matters",
+    "description": "A comprehensive guide to the latest OWASP Top 10 vulnerabilities and actionable security strategies for modern applications.",
+    "author": "Sodu Secure Team",
+    "readTime": "8 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Introduction",
+        "content": "In the ever-evolving landscape of cybersecurity, staying ahead of emerging threats is crucial for organizations of all sizes. This comprehensive guide explores the latest developments in vulnerabilities and provides actionable strategies for security teams.",
+        "keyTakeaway": {
+          "title": "Key Takeaway",
+          "content": "Modern applications face numerous security challenges. Understanding these vulnerabilities is the first step toward building resilient systems. In this article, we examine the most critical security issues affecting today's applications."
+        },
+        "quote": "Security is not a product, but a process. It's not just about tools, it's about people, processes, and technology working together to create a resilient security posture."
+      },
+      "commonAttackVectors": {
+        "title": "Common Attack Vectors",
+        "items": [
+          "SQL injection and database manipulation attacks",
+          "Cross-site scripting (XSS) vulnerabilities in web applications",
+          "Insecure API endpoints and authentication management flaws",
+          "Insecure direct object references exposing sensitive data",
+          "Security misconfigurations in cloud environments",
+          "Broken access control and authorization flaws"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Impact Analysis",
+        "content": "The consequences of security vulnerabilities can be severe, ranging from data breaches to complete system compromise. Understanding these risks helps organizations prioritize their security efforts effectively and allocate resources appropriately.",
+        "statistics": {
+          "title": "Real-World Statistics (2024)",
+          "averageCost": {
+            "value": "$4.45M",
+            "label": "Average cost of a data breach"
+          },
+          "identificationTime": {
+            "value": "277 days",
+            "label": "Avg time to identify and contain"
+          },
+          "multipleBreaches": {
+            "value": "83%",
+            "label": "Multiple data breaches experienced"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Mitigation Strategies",
+        "content": "Implementing effective security controls requires a multi-layered approach. Here are proven strategies to strengthen your organization's security posture against common threats.",
+        "essentialPractices": {
+          "title": "Essential Security Practices",
+          "items": [
+            "Implement defense in depth with multiple security layers",
+            "Conduct regular security assessments and penetration testing",
+            "Maintain up-to-date security policies and patches",
+            "Enforce strong authentication and access controls",
+            "Implement comprehensive logging and monitoring",
+            "Provide ongoing security awareness training",
+            "Perform regular code reviews and security audits",
+            "Implement proper input validation and output encoding"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "content1": "Security is an ongoing journey, not a destination. By staying informed about emerging threats and implementing robust security practices, organizations can significantly reduce their risk exposure. Regular assessments, continuous monitoring, and a security-first culture are essential components of any comprehensive security strategy.",
+        "content2": "If you need professional security assessment services, our team of certified experts is here to help. Contact us today to discuss how we can strengthen your security posture and protect your digital assets."
+      }
+    },
+    "tags": [
+      "OWASP",
+      "Security",
+      "Vulnerabilities",
+      "Web Security",
+      "Penetration Testing",
+      "Cybersecurity"
+    ],
+    "cta": {
+      "title": "Need Professional Security Testing?",
+      "description": "Get expert penetration testing and security assessment services tailored to your organization's needs.",
+      "emailPlaceholder": "Enter your email",
+      "buttonText": "Request a Free Security Consultation",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "API Security Best Practices for 2024",
+          "description": "Essential strategies to secure your APIs against modern threats and vulnerabilities.",
+          "category": "GUIDES",
+          "readTime": "10 min read",
+          "readMore": "Read Article →"
+        },
+        {
+          "title": "Zero-Day Vulnerabilities: Detection and Response",
+          "description": "How to detect, respond to, and mitigate zero-day vulnerabilities in your organization.",
+          "category": "VULNERABILITIES",
+          "readTime": "9 min read",
+          "readMore": "Read Article →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Security Research Team",
+      "bio": "Our team of certified security experts has years of experience in penetration testing and security research."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Enjoyed this article?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Get Help"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "Request consultation functionality is not implemented yet. when backend is ready.",
+      "saveNotImplemented": "Save functionality is not implemented yet.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Send failed. Please try again."
+    }
+  },
+  "react4shellDetail": {
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share Article",
+    "bookmarkArticle": "Bookmark Article",
+    "category": "VULNERABILITIES",
+    "date": "Jan 15, 2025",
+    "title": "React 4 Shell: RCE Vulnerability and Remediation Strategies",
+    "description": "A comprehensive security analysis of CVE-2024-50980 – understand the risks, detect threats in your environment, and implement secure update paths.",
+    "author": "Sodu Secure Team",
+    "readTime": "11 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Introduction",
+        "content": "React 4 Shell is a widely-used frontend library used by thousands of developers worldwide. The recently discovered vulnerability CVE-2024-50980 enables Remote Code Execution (RCE) through manipulated inputs. In this article, we show you what this vulnerability means, how to identify it in your infrastructure, and how to fix it securely.",
+        "keyTakeaway": {
+          "title": "Key Takeaway",
+          "content": "CVE-2024-50980 is a critical Remote Code Execution vulnerability in React 4 Shell < 1.8.4. Organizations using this version should upgrade immediately to the patched version. This article shows you a safe migration path for production environments."
+        },
+        "quote": "Remote Code Execution is one of the most critical security flaws that exist. A component used in most modern React applications makes this flaw a priority for every developer."
+      },
+      "commonAttackVectors": {
+        "title": "Technical Details of the Vulnerability",
+        "items": [
+          "Insecure template rendering logic in React 4 Shell versions < 1.8.4",
+          "Missing input validation when processing dynamic components",
+          "Insufficient output escaping in JSX generation",
+          "Exploitation through specially crafted URL parameters or POST data",
+          "Enables arbitrary JavaScript code execution in server context",
+          "Potential database access and privilege escalation"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Impact Analysis",
+        "content": "The impact of CVE-2024-50980 is far-reaching. An attacker could execute arbitrary code on the server, read files, compromise databases, or inject malware. This is particularly critical for production environments processing sensitive customer data.",
+        "statistics": {
+          "title": "Criticality & Scope",
+          "averageCost": {
+            "value": "Critical (CVSS 9.8)",
+            "label": "CVSS Score and Severity"
+          },
+          "identificationTime": {
+            "value": "100,000+",
+            "label": "Potentially affected projects worldwide"
+          },
+          "multipleBreaches": {
+            "value": "RCE",
+            "label": "Attack Vector: Remote Code Execution"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Remediation and Update Strategies",
+        "content": "Fixing this vulnerability requires a structured approach. Immediate actions should be combined with long-term strategies. Here we show a proven update path for different scenarios.",
+        "essentialPractices": {
+          "title": "Step-by-Step Remediation Plan",
+          "items": [
+            "Step 1: Inventory all React 4 Shell installations in your infrastructure",
+            "Step 2: Update to React 4 Shell >= 1.8.4 in a test environment",
+            "Step 3: Conduct comprehensive regression testing (UI, API, data flow)",
+            "Step 4: Plan staged rollout to staging environment",
+            "Step 5: Monitor for anomalies during rollout",
+            "Step 6: Enable enhanced logging and WAF rules during update",
+            "Step 7: Conduct post-update security testing",
+            "Step 8: Document the process and test results for compliance"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Conclusion and Next Steps",
+        "content1": "CVE-2024-50980 is a serious security risk that requires immediate attention. Through a structured update procedure, you can minimize risk and ensure the stability of your applications.",
+        "content2": "Sodu Secure provides professional penetration testing and security assessments to identify such critical vulnerabilities in your infrastructure before attackers discover them. Contact us for a comprehensive Web Application Pentest or security audit of your React-based applications."
+      }
+    },
+    "tags": [
+      "CVE-2024-50980",
+      "React",
+      "RCE",
+      "Web Security",
+      "Vulnerabilities",
+      "Patch Management"
+    ],
+    "cta": {
+      "title": "Is Your React Application Secure?",
+      "description": "Have your applications thoroughly tested by certified security experts. We identify critical vulnerabilities before they are exploited.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Request Web Application Security Pentest",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "OWASP Top 10 2024: What's Changed",
+          "description": "A deep dive into the latest OWASP Top 10 vulnerabilities.",
+          "category": "VULNERABILITIES",
+          "readTime": "8 min read",
+          "readMore": "Read article →"
+        },
+        {
+          "title": "API Security Best Practices for 2024",
+          "description": "Key strategies to protect your APIs.",
+          "category": "GUIDE",
+          "readTime": "10 min read",
+          "readMore": "Read article →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Security Research Team",
+      "bio": "Our team of certified security experts has extensive experience in Web Application Security and vulnerability analysis."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Did you enjoy this article?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request security assessment"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The request consultation function is not yet implemented.",
+      "saveNotImplemented": "Save function is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Send failed. Please try again."
+    }
+  },
+  "openClawDetail": {
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share Article",
+    "bookmarkArticle": "Bookmark Article",
+    "category": "CYBER NEWS",
+    "date": "Jan 10, 2025",
+    "title": "OpenClaw Security Risks: Understanding AI Chatbot Vulnerabilities",
+    "description": "A detailed analysis of security risks from integrating OpenClaw and other AI chatbots – prompt injection, data exfiltration, and practical mitigation strategies.",
+    "author": "Sodu Secure Team",
+    "readTime": "10 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Introduction to AI Security",
+        "content": "OpenClaw and other Large Language Models (LLMs) offer revolutionary capabilities but also introduce new security risks. In this article, we explore the main threats associated with integrating AI chatbots and show you how to mitigate them.",
+        "keyTakeaway": {
+          "title": "Critical Insight",
+          "content": "AI chatbots can be attacked through prompt injection – a new class of attacks targeting LLMs specifically. These attacks can expose sensitive data, execute unintended commands, or turn the chatbot against your users."
+        },
+        "quote": "With growing integration of AI in business-critical processes, enterprises must understand a new security paradigm. AI security is not just technical – it's about trust, transparency, and control."
+      },
+      "commonAttackVectors": {
+        "title": "Common AI Security Risks",
+        "items": [
+          "Prompt Injection Attacks – malicious inputs that make LLMs perform unintended actions",
+          "Data Exfiltration – attackers attempt to make models reveal sensitive training data",
+          "Jailbreaking – techniques to bypass safety guidelines and guardrails",
+          "Model Poisoning – attackers train models with malicious data",
+          "Denial of Service (DoS) – overwhelming AI systems with resource-intensive queries",
+          "Unauthorized API Access – insufficient authentication and rate limiting"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Business Impact",
+        "content": "An AI security incident can have far-reaching consequences – from reputation damage to data loss to operational disruption. As dependency on AI systems grows, they must be protected as rigorously as traditional infrastructure.",
+        "statistics": {
+          "title": "AI Security 2024-2025",
+          "averageCost": {
+            "value": "43%",
+            "label": "Enterprises reporting AI security concerns"
+          },
+          "identificationTime": {
+            "value": "€2.1M",
+            "label": "Average cost of AI security incident"
+          },
+          "multipleBreaches": {
+            "value": "72%",
+            "label": "Developers without AI security training"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Security Strategies for AI Integration",
+        "content": "There are proven techniques to make AI chatbots more secure. A defense-in-depth strategy with multiple security layers is required.",
+        "essentialPractices": {
+          "title": "Security Measures for AI Bots",
+          "items": [
+            "Implement input validation and output filtering on all API endpoints",
+            "Use Content Security Policies (CSP) to limit prompt injection",
+            "Implement granular access control and API key management",
+            "Monitor queries for suspicious patterns and unusual usage",
+            "Set limits on token usage and query complexity",
+            "Implement logging and audit trails for all interactions",
+            "Conduct regular red-team testing against your AI systems",
+            "Train your team in AI security best practices and common attack patterns"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "AI Security as Strategic Priority",
+        "content1": "AI security is not optional – it's a business requirement. Organizations implementing AI responsibly will gain a competitive advantage.",
+        "content2": "Sodu Secure offers specialized penetration testing for AI systems and LLM integrations. We identify prompt injection vulnerabilities, API weaknesses, and data privacy risks before attackers exploit them. Contact us for a comprehensive AI Security Assessment."
+      }
+    },
+    "tags": [
+      "AI Security",
+      "Prompt Injection",
+      "LLM",
+      "OpenClaw",
+      "API Security",
+      "Data Protection"
+    ],
+    "cta": {
+      "title": "Is Your AI Integration Secure?",
+      "description": "Have your OpenClaw integration and AI systems tested by experts. We uncover hidden security risks.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Request AI Security Pentest",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "API Security Best Practices for 2024",
+          "description": "Key strategies to protect your APIs.",
+          "category": "GUIDE",
+          "readTime": "10 min read",
+          "readMore": "Read article →"
+        },
+        {
+          "title": "Cloud Security Checklist: AWS, Azure, GCP",
+          "description": "Securing your cloud infrastructure.",
+          "category": "GUIDE",
+          "readTime": "15 min read",
+          "readMore": "Read article →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Security Research Team",
+      "bio": "Our team specializes in AI system security and Large Language Models with comprehensive experience in identifying AI vulnerabilities."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Did you enjoy this article?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request security assessment"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The request consultation function is not yet implemented.",
+      "saveNotImplemented": "Save function is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Send failed. Please try again."
+    }
+  },
+  "smePentestDetail": {
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share Article",
+    "bookmarkArticle": "Bookmark Article",
+    "category": "GUIDES",
+    "date": "Jan 5, 2025",
+    "title": "Cybersecurity for SMEs: When You Really Need a Pentest",
+    "description": "A practical guide for small and medium enterprises – when penetration testing is necessary, what types exist, and how they help your business.",
+    "author": "Sodu Secure Team",
+    "readTime": "13 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Why SMEs Must Take Security Seriously",
+        "content": "Small and medium enterprises (SMEs) are frequent targets of cyberattacks. They often have fewer security resources than large corporations but just as much to lose. This guide shows you how penetration testing can help your SME and when the right time is.",
+        "keyTakeaway": {
+          "title": "Core Message",
+          "content": "SMEs are preferred targets for hackers – weaker defenses but valuable data. A single successful attack can be existential for an SME. A pentest is not a luxury – it's a necessary business risk management tool."
+        },
+        "quote": "For SMEs, security is not 'nice to have' – it's business continuity. A data breach can not only destroy your reputation but also have legal consequences. You need to know and understand these risks."
+      },
+      "commonAttackVectors": {
+        "title": "Most Common Attack Vectors Against SMEs",
+        "items": [
+          "Phishing attacks and social engineering against employees",
+          "Weak passwords and lack of multi-factor authentication",
+          "Outdated software and missing security patches",
+          "Unsecured remote access systems and VPNs",
+          "Weak configurations in cloud systems (AWS, Azure, Google Cloud)",
+          "Missing or unencrypted backups and data management"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Financial and Business Impact",
+        "content": "A cyberattack on an SME often has catastrophic impacts. Not just direct financial losses, but also operational disruption, reputation damage, and potentially bankruptcy.",
+        "statistics": {
+          "title": "SMEs & Cybercrime 2024",
+          "averageCost": {
+            "value": "€255,000",
+            "label": "Average cost of cyberattack for SME"
+          },
+          "identificationTime": {
+            "value": "196 days",
+            "label": "Average time to detection of attack"
+          },
+          "multipleBreaches": {
+            "value": "60%",
+            "label": "SMEs without formal security program"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "When and How to Conduct a Pentest",
+        "content": "Penetration testing is an important security measure, but it's crucial to understand when it delivers the most value and what types are suitable for your SME.",
+        "essentialPractices": {
+          "title": "Pentest Strategy for SMEs",
+          "items": [
+            "Timing 1: Before your first major customer project or when security becomes critical",
+            "Timing 2: After major system changes, upgrades, or cloud migration",
+            "Timing 3: At least annually if you process customer data",
+            "Timing 4: After suspicious security events or malware infections",
+            "Choose Test Type: External Pentest for website/API (€5,000-15,000), Internal for network (€8,000-20,000)",
+            "Budget Tip: Start with Web Application Pentest as this often carries the highest risk",
+            "Frequency: After initial pentest, conduct annual security assessments",
+            "Measurability: Track how many findings are remediated and measure security progress"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Investment in Security = Investment in Business Continuity",
+        "content1": "For SMEs, a pentest is not optional – it's a necessary business management tool. A good understanding of your organization's security posture helps you make informed decisions and minimize risks.",
+        "content2": "Sodu Secure specializes in cost-effective yet thorough penetration testing for SMEs. We understand the specific requirements and budgets of smaller businesses and offer tailored solutions. From simple Web Application Security Assessment to comprehensive Network Penetration Testing – contact us for a free consultation."
+      }
+    },
+    "tags": [
+      "SME",
+      "Penetration Test",
+      "Cybersecurity",
+      "Risk Management",
+      "Business Continuity",
+      "Best Practices"
+    ],
+    "cta": {
+      "title": "Ready to Protect Your SME?",
+      "description": "Start with a free security assessment. Our experts identify the biggest risks for your business.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Request Free Security Consultation for SMEs",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "OWASP Top 10 2024: What's Changed",
+          "description": "A deep dive into the latest OWASP Top 10 vulnerabilities.",
+          "category": "VULNERABILITIES",
+          "readTime": "8 min read",
+          "readMore": "Read article →"
+        },
+        {
+          "title": "Cloud Security Checklist: AWS, Azure, GCP",
+          "description": "A comprehensive checklist for securing your cloud infrastructure.",
+          "category": "GUIDE",
+          "readTime": "15 min read",
+          "readMore": "Read article →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Security Consulting Team",
+      "bio": "Our team has extensive experience consulting SMEs on cybersecurity with practical and cost-effective security solutions."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Did you enjoy this article?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Book consultation"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The request consultation function is not yet implemented.",
+      "saveNotImplemented": "Save function is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Send failed. Please try again."
+    }
+  },
+  "owaspTop10_2026Detail": {
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share Article",
+    "bookmarkArticle": "Bookmark Article",
+    "category": "VULNERABILITIES",
+    "date": "Jan 30, 2026",
+    "title": "OWASP Top 10 2026: New Risks, New Priorities",
+    "description": "A practical outlook on OWASP Top 10 2026 – emerging trends and what to prioritize now.",
+    "author": "Sodu Secure Team",
+    "readTime": "12 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Setting the Context for 2026",
+        "content": "The OWASP Top 10 is not a static checklist—it reflects the current web risk landscape. For 2026, clear trends are emerging: more complexity from microservices, more AI-driven abuse, and increasing dependence on third-party components.",
+        "keyTakeaway": {
+          "title": "Key Takeaway",
+          "content": "To be resilient in 2026, organizations must combine security fundamentals (access control, input validation, logging) with modern safeguards (supply-chain security, API protection, secrets management)."
+        },
+        "quote": "OWASP Top 10 doesn't mean ten items to tick off—it means ten priorities to manage continuously."
+      },
+      "commonAttackVectors": {
+        "title": "Risk Trends Likely to Dominate in 2026",
+        "items": [
+          "Supply-chain attacks via compromised dependencies",
+          "Broken access control in distributed architectures",
+          "Insecure API endpoints and insufficient authentication",
+          "Insecure design and lack of threat modeling",
+          "Misconfigurations in cloud and container environments",
+          "Weak secrets and key management in CI/CD pipelines"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Why These Risks Are Business-Critical",
+        "content": "The damage ranges from data loss and downtime to regulatory penalties. The combination of automation and complexity means mistakes propagate faster and wider than ever.",
+        "statistics": {
+          "title": "Risk Outlook 2026 (Trend Indicators)",
+          "averageCost": {
+            "value": "High",
+            "label": "Business impact of web attacks"
+          },
+          "identificationTime": {
+            "value": "Weeks",
+            "label": "Time-to-detect for supply-chain incidents"
+          },
+          "multipleBreaches": {
+            "value": "Increasing",
+            "label": "Cascading effects across systems"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Practical Actions for 2026",
+        "content": "Security starts at design time. For 2026, prioritize standards and testing that reflect modern attack paths.",
+        "essentialPractices": {
+          "title": "Prioritized Security Checks",
+          "items": [
+            "Run regular web and API penetration tests",
+            "Establish mandatory threat modeling per feature",
+            "Adopt SBOMs and dependency scanning",
+            "Strengthen access controls (least privilege, MFA)",
+            "Centralize logs and detect anomalies",
+            "Harden CI/CD with secrets scanning and signing",
+            "Continuously test cloud configurations",
+            "Train teams in secure development practices"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Conclusion",
+        "content1": "OWASP Top 10 2026 will be shaped by complexity, automation, and supply-chain risk. Organizations that invest now will reduce exposure long term.",
+        "content2": "Sodu Secure supports you with web and API pentests, threat modeling, and security reviews. Talk to us to align your 2026 security strategy."
+      }
+    },
+    "tags": [
+      "OWASP",
+      "Top 10",
+      "Web Security",
+      "API Security",
+      "Supply Chain",
+      "Secure Design"
+    ],
+    "cta": {
+      "title": "Ready for OWASP Top 10 2026?",
+      "description": "Review your web and API landscape and prioritize the right risks now.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Request a Pentest",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "OWASP Top 10 2024: What's Changed",
+          "description": "A deep dive into the latest OWASP Top 10 vulnerabilities.",
+          "category": "VULNERABILITIES",
+          "readTime": "8 min read",
+          "readMore": "Read article →"
+        },
+        {
+          "title": "API Security Best Practices for 2024",
+          "description": "Key strategies to protect your APIs.",
+          "category": "GUIDE",
+          "readTime": "10 min read",
+          "readMore": "Read article →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Security Research Team",
+      "bio": "Our team helps organizations prioritize web risks and build sustainable secure development processes."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Did you enjoy this article?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request security assessment"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The request consultation function is not yet implemented.",
+      "saveNotImplemented": "Save function is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Send failed. Please try again."
+    }
+  },
+  "caseStudyDetail": {
+    "backToCaseStudies": "Back to Case Studies",
+    "category": "FINANCE",
+    "date": "December 2024",
+    "duration": "3 weeks",
+    "title": "Securing a FinTech Web Application",
+    "description": "Comprehensive security assessment uncovered critical vulnerabilities in payment processing flows, preventing potential financial losses and ensuring regulatory compliance.",
+    "sections": {
+      "clientOverview": {
+        "title": "Client Overview",
+        "content": "Our client is a leading finance company serving over 2 million users globally. As they prepared to scale their platform, they needed comprehensive security testing to ensure their infrastructure could withstand modern cyber threats while maintaining regulatory compliance and customer trust.",
+        "challenge": {
+          "title": "The Challenge",
+          "intro": "The organization faced several critical security concerns:",
+          "items": [
+            "Legacy systems integrated with modern cloud infrastructure created complex attack surfaces",
+            "Rapid development cycles meant security testing was often deprioritized",
+            "Compliance requirements demanded thorough documentation and remediation",
+            "Previous automated scans had missed critical business logic vulnerabilities",
+            "Payment processing systems handling millions in daily transactions"
+          ]
+        }
+      },
+      "ourApproach": {
+        "title": "Our Approach",
+        "phases": [
+          {
+            "phase": "Phase 1: Reconnaissance & Planning",
+            "description": "We began with thorough reconnaissance, mapping all assets, technologies, and potential entry points. This included OSINT gathering, subdomain enumeration, and technology fingerprinting."
+          },
+          {
+            "phase": "Phase 2: Vulnerability Assessment",
+            "description": "Manual testing combined with automated tools to identify vulnerabilities across all layers of the application stack, from infrastructure to business logic."
+          },
+          {
+            "phase": "Phase 3: Exploitation & Validation",
+            "description": "Safe exploitation of discovered vulnerabilities to validate impact and demonstrate real-world attack scenarios to stakeholders."
+          },
+          {
+            "phase": "Phase 4: Reporting & Remediation Support",
+            "description": "Detailed reports with executive summaries, technical findings, and remediation guidance. Ongoing support during the fix process."
+          }
+        ]
+      },
+      "keyFindings": {
+        "title": "Key Findings",
+        "summary": "Our comprehensive assessment revealed 47 vulnerabilities across multiple severity levels, with particular focus on payment processing security.",
+        "critical": {
+          "title": "Critical Vulnerabilities",
+          "count": "3",
+          "items": [
+            "SQL injection in payment processing API allowing unauthorized database access",
+            "Broken authentication mechanism enabling account takeover",
+            "Insecure direct object references exposing sensitive financial data"
+          ]
+        },
+        "high": {
+          "title": "High Severity",
+          "count": "12",
+          "items": [
+            "Cross-site scripting (XSS) in admin dashboard",
+            "Insecure file upload allowing remote code execution",
+            "Weak encryption of stored payment card data",
+            "Missing rate limiting on authentication endpoints",
+            "Server-side request forgery (SSRF) vulnerabilities"
+          ]
+        },
+        "medium": {
+          "title": "Medium Severity",
+          "count": "18",
+          "items": [
+            "Information disclosure through error messages",
+            "Missing security headers and configurations",
+            "Outdated third-party dependencies",
+            "Insufficient input validation",
+            "Weak password policies"
+          ]
+        },
+        "low": {
+          "title": "Low Severity",
+          "count": "14",
+          "items": [
+            "Minor information disclosures",
+            "Best practice violations",
+            "Performance-related security issues",
+            "Deprecated protocol usage"
+          ]
+        }
+      },
+      "impactAnalysis": {
+        "title": "Impact Analysis",
+        "content": "The discovered vulnerabilities could have led to significant financial losses, regulatory non-compliance, and damage to customer trust. Our assessment prevented potential breaches that could have cost millions in remediation and lost business.",
+        "metrics": {
+          "potentialLoss": "$2.3M",
+          "complianceRisk": "High",
+          "dataAtRisk": "2M+ users",
+          "systemDowntime": "Potential"
+        }
+      },
+      "remediation": {
+        "title": "Remediation & Results",
+        "content": "Working closely with the development team, we implemented comprehensive fixes for all critical and high-severity vulnerabilities within the agreed timeframe.",
+        "timeline": {
+          "title": "Remediation Timeline",
+          "critical": "Critical vulnerabilities fixed within 48 hours",
+          "high": "High-severity issues resolved within 1 week",
+          "medium": "Medium-priority fixes completed within 2 weeks",
+          "low": "Low-priority items addressed during regular maintenance"
+        },
+        "outcomes": {
+          "title": "Key Outcomes",
+          "items": [
+            "All critical vulnerabilities eliminated before production deployment",
+            "Payment processing security significantly enhanced",
+            "Regulatory compliance requirements fully met",
+            "Development team trained on secure coding practices",
+            "Automated security testing integrated into CI/CD pipeline"
+          ]
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Secure Your Application?",
+      "description": "Don't wait for a breach to happen. Get professional security testing today.",
+      "buttonText": "Request Security Assessment"
+    },
+    "testimonials": {
+      "title": "What Our Clients Say",
+      "quote": "\"Sodu Secure's thorough assessment gave us the confidence to scale our platform. Their expertise in financial services security was invaluable.\"",
+      "author": "CTO, FinTech Company",
+      "company": "Leading Financial Services Provider"
+    },
+    "relatedServices": {
+      "title": "Related Services",
+      "services": [
+        {
+          "title": "API Security Testing",
+          "desc": "Comprehensive API vulnerability assessment"
+        },
+        {
+          "title": "Cloud Infrastructure Audit",
+          "desc": "AWS, Azure, GCP security reviews"
+        },
+        {
+          "title": "Mobile App Security",
+          "desc": "iOS & Android application testing"
+        }
+      ],
+      "learnMore": "Learn More \u2192"
+    }
+  },
+  "oscpPathDetail": {
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share article",
+    "bookmarkArticle": "Bookmark article",
+    "category": "PENTEST",
+    "date": "Feb 2, 2026",
+    "title": "Beyond OSCP: Which Offensive Security Certification is Right for You?",
+    "description": "After OSCP, the journey continues – OSEP, OSWE, OSED and more. A detailed guide to advanced Offensive Security certifications and how to level up your penetration testing career.",
+    "author": "Sodu Secure Team",
+    "readTime": "14 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "The OSCP Journey Doesn't End – It Just Begins",
+        "content": "Congratulations – you've passed the OSCP (Offensive Security Certified Professional)! This legendary certification has taught you how to attack real systems and shaped your mindset as a pentester. But many wonder: what comes next? The good news: Offensive Security offers several advanced certifications covering different specializations.",
+        "keyTakeaway": {
+          "title": "Key Takeaway",
+          "content": "Choosing the right post-OSCP certification depends on your career goals, interests, and technical strengths. Each certification opens different doors – from Advanced Penetration Testing to Web Application Security to Exploit Development."
+        },
+        "quote": "After OSCP success, it's not about collecting more certificates – it's about diving deep into areas that truly excite you and provide the greatest value for your career."
+      },
+      "osepOverview": {
+        "title": "OSEP: Offensive Security Experienced Penetration Tester",
+        "subtitle": "For advanced Red Team Operations and Evasion Techniques",
+        "content": "OSEP (formerly known as PEN-300) is the direct continuation of OSCP and targets pentesters who want to deepen their skills in realistic enterprise environments. Here you learn how to deal with modern detection and prevention mechanisms.",
+        "topics": {
+          "title": "What you'll learn in OSEP:",
+          "items": [
+            "Advanced Evasion Techniques against EDR/AV",
+            "Process Injection and In-Memory Execution",
+            "Active Directory Attacks (Kerberos, NTLM, Golden Tickets)",
+            "Lateral Movement in segmented networks",
+            "C# and PowerShell for Offensive Tooling",
+            "Custom Payload Development",
+            "AppLocker and AMSI Bypasses"
+          ]
+        },
+        "examInfo": {
+          "title": "Exam Details:",
+          "duration": "48-hour practical exam + 24-hour documentation",
+          "goal": "Compromise a simulated enterprise environment with multiple network segments",
+          "difficulty": "Significantly harder than OSCP – requires deep understanding of Windows internals"
+        },
+        "bestFor": "Ideal for: Red Teamers, Advanced Pentesters, Security Consultants who want to simulate enterprise attacks"
+      },
+      "osweOverview": {
+        "title": "OSWE: Offensive Security Web Expert",
+        "subtitle": "For White-Box Web Application Security Specialists",
+        "content": "OSWE (WEB-300) is perfect for those who want to specialize in Web Application Security. Unlike OSCP, the focus here is on white-box testing and source code review.",
+        "topics": {
+          "title": "What you'll learn in OSWE:",
+          "items": [
+            "Manual code review of web applications (PHP, Java, .NET, Node.js)",
+            "Advanced SQLi Exploitation (even with WAFs)",
+            "Authentication Bypass techniques",
+            "Deserialization Exploits",
+            "Server-Side Template Injection (SSTI)",
+            "Advanced XXE and SSRF",
+            "Custom Exploit Development for web apps",
+            "Bypassing Web Application Firewalls"
+          ]
+        },
+        "examInfo": {
+          "title": "Exam Details:",
+          "duration": "48 hours + 24 hours documentation",
+          "goal": "Identify and exploit vulnerabilities in two web applications based on source code",
+          "difficulty": "Requires very good programming skills and understanding of web frameworks"
+        },
+        "bestFor": "Ideal for: Web App Penetration Testers, Bug Bounty Hunters, Application Security Engineers conducting in-depth code analysis"
+      },
+      "osedOverview": {
+        "title": "OSED: Offensive Security Exploit Developer",
+        "subtitle": "For Binary Exploitation and Exploit Development Experts",
+        "content": "OSED (EXP-301) is the most challenging of the post-OSCP certifications and focuses on Windows Exploit Development – a field requiring deep technical understanding.",
+        "topics": {
+          "title": "What you'll learn in OSED:",
+          "items": [
+            "x86 Assembly and Debugging (WinDbg, Immunity Debugger)",
+            "Stack Buffer Overflows (SEH, DEP, ASLR Bypasses)",
+            "Exploit Development against modern Windows protections",
+            "Reverse Engineering of binaries",
+            "Format String Exploits",
+            "Egg Hunters and Custom Shellcode",
+            "ROP (Return-Oriented Programming)",
+            "Heap Exploitation basics"
+          ]
+        },
+        "examInfo": {
+          "title": "Exam Details:",
+          "duration": "48 hours + 24 hours documentation",
+          "goal": "Develop working exploits for multiple Windows binaries",
+          "difficulty": "Extremely challenging – requires deep understanding of processor architecture and memory management"
+        },
+        "bestFor": "Ideal for: Exploit Developers, Vulnerability Researchers, Malware Analysts entering binary exploitation"
+      },
+      "otherCerts": {
+        "title": "Other Offensive Security Certifications",
+        "content": "Besides OSEP, OSWE, and OSED, there are other specialized Offensive Security certifications:",
+        "certifications": [
+          {
+            "name": "OSWP (Offensive Security Wireless Professional)",
+            "description": "Focus on Wireless Network Penetration Testing – WLAN security, Encryption Attacks, Rogue Access Points"
+          },
+          {
+            "name": "OSDA (Offensive Security Defense Analyst)",
+            "description": "The defensive perspective – SOC Analysis, Threat Hunting, SIEM, Incident Response"
+          },
+          {
+            "name": "OSMR (Offensive Security macOS Researcher)",
+            "description": "Specialization in macOS Security – macOS Internals, Privilege Escalation, Objective-C Exploitation"
+          },
+          {
+            "name": "OSEE (Offensive Security Exploitation Expert)",
+            "description": "The ultimate challenge – advanced exploitation techniques, Kernel Exploitation, Zero-Day Research"
+          }
+        ]
+      },
+      "decisionGuide": {
+        "title": "Decision Guide: Which Certification Fits You?",
+        "content": "The choice depends on several factors:",
+        "scenarios": [
+          {
+            "profile": "You want to conduct Red Team operations",
+            "recommendation": "OSEP is the best choice. You'll learn realistic attack techniques against enterprise environments."
+          },
+          {
+            "profile": "You love web applications and programming",
+            "recommendation": "OSWE is perfect. You'll become a Web Application Security expert with white-box focus."
+          },
+          {
+            "profile": "You're interested in low-level programming",
+            "recommendation": "OSED opens the door to the world of binary exploitation and exploit development."
+          },
+          {
+            "profile": "You want to build broad knowledge",
+            "recommendation": "Start with OSEP (more generalist), then specialize with OSWE or OSED."
+          },
+          {
+            "profile": "You work in bug bounty",
+            "recommendation": "OSWE helps you find complex web vulnerabilities that others overlook."
+          }
+        ]
+      },
+      "preparation": {
+        "title": "Preparation and Tips",
+        "content": "Each of these certifications is challenging and requires intense preparation:",
+        "tips": [
+          {
+            "title": "Use lab time",
+            "description": "All courses come with extensive lab environments. Use every minute – practice makes the difference."
+          },
+          {
+            "title": "Documentation from the start",
+            "description": "Get used to documenting every step. This saves you valuable time during the exam."
+          },
+          {
+            "title": "Use the community",
+            "description": "The OffSec Discord and Reddit (r/oscp, r/AskNetsec) are valuable resources for questions and motivation."
+          },
+          {
+            "title": "Plan breaks",
+            "description": "For 48-hour exams, break management is crucial. Test your rhythm in the lab."
+          },
+          {
+            "title": "Build prerequisite knowledge",
+            "description": "For OSWE: Solidify your programming skills. For OSED: Learn assembly basics beforehand."
+          }
+        ]
+      },
+      "commonAttackVectors": {
+        "title": "Common Challenges in OffSec Exams",
+        "items": [
+          "Active Directory Exploitation – Kerberoasting, Pass-the-Hash, DCSync Attacks",
+          "Web Application Exploitation – SQLi, XSS, Authentication Bypasses, Deserialization",
+          "Buffer Overflow Development – Stack-based exploits with DEP/ASLR Bypasses",
+          "Privilege Escalation – Linux and Windows Post-Exploitation techniques",
+          "Network Pivoting – Lateral Movement through segmented networks",
+          "Custom Payload Development – Bypassing AV/EDR with C#, PowerShell and Shellcode"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Career Impact: Why These Certifications Matter",
+        "content": "Offensive Security certifications are among the most respected in the cybersecurity industry. They prove not just theoretical knowledge, but practical skills in realistic attack scenarios.",
+        "statistics": {
+          "title": "Career Statistics",
+          "averageCost": {
+            "value": "25-40% higher",
+            "label": "Average salary increase after OSCP/OSEP"
+          },
+          "identificationTime": {
+            "value": "300-400 hours",
+            "label": "Average preparation time per certification"
+          },
+          "multipleBreaches": {
+            "value": "89%",
+            "label": "First-attempt success rate after complete lab completion"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Success Strategies for OffSec Certifications",
+        "content": "The key to success lies not only in technical knowledge, but also in the right approach and preparation.",
+        "essentialPractices": {
+          "title": "Proven Best Practices",
+          "items": [
+            "Try Harder Mindset – Persistence is often more important than talent",
+            "Enumerate, Enumerate, Enumerate – Thorough information gathering is the foundation of every successful attack",
+            "Document every step – Screenshots and notes from the very first moment",
+            "Use the lab intensively – Plan at least 60-90 days of active lab time",
+            "Leverage community resources – Study groups, Discord, Reddit and OffSec Forums",
+            "Break management – For 48h exams: plan 6-8 hours of sleep",
+            "Backup strategies – Always have Plan B and C for stuck situations",
+            "Build exploit database – Maintain your own exploit library and cheat sheets"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Conclusion: Your Path After OSCP",
+        "content1": "OSCP is just the beginning of your Offensive Security journey. Each of the presented certifications offers unique skills and career opportunities. OSEP deepens your Red Team skills, OSWE makes you a Web Security expert, and OSED opens the door to Exploit Development.",
+        "content2": "Important: Choose the certification that matches your interests and serves your career goals. Quality over quantity – better to master one certification properly than superficially go through several.",
+        "finalThought": "And remember: These certifications are hard, but that's exactly what makes them valuable. The Offensive Security labs and exams force you to truly understand, not just memorize. That's why OffSec certifications are so highly regarded in the industry."
+      }
+    },
+    "tags": [
+      "OSCP",
+      "OSEP",
+      "OSWE",
+      "OSED",
+      "PenetrationTesting",
+      "RedTeam",
+      "WebSecurity",
+      "ExploitDevelopment",
+      "OffensiveSecurity",
+      "Certification"
+    ],
+    "cta": {
+      "title": "Ready for Professional Penetration Testing?",
+      "description": "Our team consists of OSCP, OSWE, and OSEP certified experts. Let us thoroughly test your systems.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Request Pentest",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "Red Team vs Penetration Testing: Which Do You Need?",
+          "description": "Understand the differences and choose the right approach.",
+          "category": "PENTEST",
+          "readTime": "6 min read",
+          "readMore": "Read Article →"
+        },
+        {
+          "title": "Cybersecurity for SMEs: When You Really Need a Pentest",
+          "description": "A practical guide for businesses.",
+          "category": "GUIDES",
+          "readTime": "13 min read",
+          "readMore": "Read Article →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Certified Penetration Testing Team",
+      "bio": "Our team consists of OSCP, OSEP, OSWE, and OSWP certified penetration testers with years of practical experience in Red Team operations and Application Security."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Enjoyed this article?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request Pentest"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The request consultation feature is not yet implemented.",
+      "saveNotImplemented": "Save feature is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thank you! Your request has been sent.",
+      "emailFailed": "Failed to send. Please try again."
+    }
+  },
+  "caseStudies": {
+    "hero": {
+      "badge": "CASE STUDIES & BLOGS",
+      "title": "Real-World Security Success Stories",
+      "description": "See how we've helped organizations across industries identify and fix critical vulnerabilities.",
+      "caseStudiesTab": "Case Studies",
+      "securityBlogsTab": "Security Blogs",
+      "searchPlaceholder": "Search case studies...",
+      "searchBlogsPlaceholder": "Search blogs...",
+      "readMore": "Read More"
+    },
+    "caseStudies": {
+      "categories": [
+        "All",
+        "Finance",
+        "Healthcare",
+        "E-Commerce",
+        "SaaS",
+        "Enterprise",
+        "Retail"
+      ],
+      "items": [
+        {
+          "category": "FINANCE",
+          "title": "Securing a FinTech Web Application",
+          "description": "Comprehensive security assessment uncovered critical vulnerabilities in payment processing flows.",
+          "tag": "Web Application"
+        },
+        {
+          "category": "HEALTHCARE",
+          "title": "Healthcare API Security Audit",
+          "description": "Protected patient data by identifying and fixing API security gaps before product launch.",
+          "tag": "API Security"
+        },
+        {
+          "category": "E-COMMERCE",
+          "title": "E-commerce Platform Infrastructure Test",
+          "description": "Prevented potential data breach by securing cloud infrastructure and payment systems.",
+          "tag": "Infrastructure"
+        },
+        {
+          "category": "SAAS",
+          "title": "Mobile Banking App Security Review",
+          "description": "Enhanced mobile security Analysis with thorough testing of authentication and data storage.",
+          "tag": "Mobile App"
+        },
+        {
+          "category": "ENTERPRISE",
+          "title": "Fortune 500 Red Team Exercise",
+          "description": "Full-scale red team operation revealed gaps in detection and response capabilities.",
+          "tag": "Red Teaming"
+        },
+        {
+          "category": "RETAIL",
+          "title": "Retail Chain Network Security Audit",
+          "description": "Secured multi-location network infrastructure against advanced persistent threats.",
+          "tag": "Network Audit"
+        }
+      ]
+    },
+    "blogs": {
+      "categories": [
+        "All",
+        "Pentest",
+        "Cyber News",
+        "Vulnerabilities",
+        "Guides"
+      ],
+      "items": [
+        {
+          "category": "VULNERABILITIES",
+          "title": "OWASP Top 10 2024: What Changed and Why It Matters",
+          "description": "A deep dive into the latest OWASP Top 10 vulnerabilities and how they affect modern web applications.",
+          "author": "Sodu Secure Team",
+          "readTime": "8 min"
+        },
+        {
+          "category": "GUIDES",
+          "title": "API Security Best Practices for 2024",
+          "description": "Essential strategies to secure your APIs against modern threats and vulnerabilities.",
+          "author": "Sarah Dell",
+          "readTime": "10 min"
+        },
+        {
+          "category": "PENTEST",
+          "title": "Red Team vs Penetration Testing: Which Do You Need?",
+          "description": "Understanding the differences between red team operations and traditional penetration testing.",
+          "author": "Marcus Johnson",
+          "readTime": "6 min"
+        },
+        {
+          "category": "CYBER NEWS",
+          "title": "The Rise of Supply Chain Attacks: How to Protect Your Business",
+          "description": "Recent trends in supply chain attacks and practical steps to mitigate these sophisticated threats.",
+          "author": "Priya Sharma",
+          "readTime": "12 min"
+        },
+        {
+          "category": "GUIDES",
+          "title": "Cloud Security Checklist: AWS, Azure, and GCP",
+          "description": "A comprehensive checklist for securing your cloud infrastructure across major providers.",
+          "author": "David Kim",
+          "readTime": "15 min"
+        },
+        {
+          "category": "VULNERABILITIES",
+          "title": "Zero-Day Vulnerabilities: Detection and Response Strategies",
+          "description": "How to detect, respond to, and mitigate zero-day vulnerabilities in your organization.",
+          "author": "Elena Volkov",
+          "readTime": "9 min"
+        },
+        {
+          "category": "VULNERABILITIES",
+          "title": "React 4 Shell: RCE Vulnerability and Remediation Strategies",
+          "description": "A detailed analysis of CVE-2024-50980 in React 4 Shell – detection, impact assessment, and secure update paths.",
+          "author": "Sodu Secure Team",
+          "readTime": "11 min"
+        },
+        {
+          "category": "CYBER NEWS",
+          "title": "OpenClaw Security Risks: Understanding AI Chatbot Vulnerabilities",
+          "description": "The hidden security risks of integrating OpenClaw and other AI bots – prompt injection, data exfiltration, and mitigation techniques.",
+          "author": "Sodu Secure Team",
+          "readTime": "10 min"
+        },
+        {
+          "category": "GUIDES",
+          "title": "Cybersecurity for SMEs: When You Really Need a Pentest",
+          "description": "A practical guide for small and medium enterprises – why and when professional security testing becomes critical.",
+          "author": "Sodu Secure Team",
+          "readTime": "13 min"
+        },
+        {
+          "category": "VULNERABILITIES",
+          "title": "OWASP Top 10 2026: New Risks, New Priorities",
+          "description": "A practical outlook on OWASP Top 10 2026 – emerging trends and what to prioritize now.",
+          "author": "Sodu Secure Team",
+          "readTime": "12 min"
+        },
+        {
+          "category": "PENTEST",
+          "title": "Beyond OSCP: Which Offensive Security Certification is Right for You?",
+          "description": "After OSCP, the journey continues – OSEP, OSWE, OSED and more. A detailed guide to advanced Offensive Security certifications.",
+          "author": "Sodu Secure Team",
+          "readTime": "14 min"
+        }
+      ]
+    }
+  },
+  "about": {
+    "hero": {
+      "badge": "ABOUT US",
+      "title": "About Sodu Secure",
+      "description": "Professional penetration testing and security services for enterprises that demand excellence. We combine technical expertise with business understanding to protect what matters most."
+    },
+    "stats": {
+      "years": "Years Experience",
+      "tests": "Tests Performed",
+      "countries": "Countries Served",
+      "satisfaction": "Certified Pentesters"
+    },
+    "whoWeAre": {
+      "title": "Who We Are",
+      "paragraphs": [
+        "Sodu Secure is growing as a focused team of seasoned offensive security specialists. We operate with startup energy and senior-level precision, lean, fast, and collaborative.",
+        "We support clients across finance, healthcare, SaaS, e-commerce, and the public sector. Our founders bring over a decade of hands-on experience, pairing modern methodologies with clear, actionable outcomes.",
+        "Our edge: human-first testing over tool autopilot. Where scanners stop, we think like attackers, creative, persistent, and certified. Every assessment is run by people who simulate real threats and give prioritized guidance."
+      ],
+      "imageAlt": "Protecting enterprises worldwide with comprehensive security testing"
+    },
+    "mission": {
+      "title": "Our Mission & Values",
+      "subtitle": "We're driven by a commitment to make the digital world more secure, one organization at a time.",
+      "values": {
+        "integrity": {
+          "title": "Integrity",
+          "description": "We operate with complete transparency and ethical standards in every engagement."
+        },
+        "accuracy": {
+          "title": "Accuracy",
+          "description": "Precision-driven testing methodologies that uncover vulnerabilities others miss."
+        },
+        "transparency": {
+          "title": "Transparency",
+          "description": "Clear communication and detailed reporting throughout the entire process."
+        },
+        "securityFirst": {
+          "title": "Security First",
+          "description": "Your data security and confidentiality are our top priorities in every test."
+        }
+      }
+    },
+    "team": {
+      "title": "Meet Our Team",
+      "subtitle": "Industry-leading security experts with proven track records and top certifications.",
+      "members": [
+        {
+          "name": "Kerim Koc",
+          "role": "Penetration Tester",
+          "certifications": ["OSCP", "Comptia Security +"],
+          "image": "/images/teams/kerim-koc.jpg"
+        },
+        {
+          "name": "Fouad Foda",
+          "role": "Application Security Expert",
+          "certifications": ["OSCP"],
+          "image": "/images/teams/fouad-foda.jpg"
+        },
+        {
+          "name": "Burak S.",
+          "role": "Cloud Security Specialist",
+          "certifications": ["AWS Security", "Azure Security"],
+          "image": "/images/teams/burak-s.jpg"
+        }
+      ]
+    },
+    "whyTrust": {
+      "title": "Why Clients Trust Us",
+      "subtitle": "We've earned the trust of hundreds of organizations through consistent delivery and unmatched expertise.",
+      "features": {
+        "manualTesting": {
+          "title": "100% Manual Testing",
+          "description": "Every test is performed manually by our skilled experts who use their experience to uncover hidden vulnerabilities."
+        },
+        "certifiedExperts": {
+          "title": "Certified Experts",
+          "description": "Our team holds industry-recognized certifications like OSCP, GPEN, and CISSP."
+        },
+        "clearReporting": {
+          "title": "Clear Reporting",
+          "description": "Comprehensive reports with actionable recommendations and remediation guidance."
+        },
+        "confidentiality": {
+          "title": "NDA & Confidentiality",
+          "description": "We take confidentiality seriously. All tests are under strict NDA and secure handling protocols."
+        },
+        "fastDelivery": {
+          "title": "Fast Delivery",
+          "description": "Rapid turnaround without compromising on quality with detailed reporting."
+        },
+        "support": {
+          "title": "Long-Term Support",
+          "description": "Ongoing technical support to verify fixes and maintain security posture."
+        }
+      }
+    },
+    "certifications": {
+      "title": "Certifications & Partnerships",
+      "subtitle": "Backed by industry-recognized certifications and strategic partnerships."
+    },
+    "cta": {
+      "title": "Ready to Secure Your Systems?",
+      "subtitle": "Partner with security experts who understand your business needs and deliver actionable results.",
+      "button": "Configure Pentest Now"
+    }
+  },
+  "contact": {
+    "hero": {
+      "badge": "CONTACT",
+      "title": "Let's Talk Security",
+      "description": "Get in touch with our security experts. We're here to help protect your organization."
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "success": {
+        "title": "Message Sent Successfully!",
+        "message": "Thank you for contacting us. We'll get back to you within 24 hours."
+      },
+      "error": "Failed to submit form. Please try again later.",
+      "fields": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "John Doe"
+        },
+        "company": {
+          "label": "Company",
+          "placeholder": "Your Company"
+        },
+        "email": {
+          "label": "Email Address",
+          "placeholder": "john@company.com"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "+1 (555) 123-4567"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Tell us about your security needs..."
+        }
+      },
+      "privacy": {
+        "text": "I want a free consultation call",
+        "policy": "I have read the privacy policy"
+      },
+      "submit": {
+        "sending": "Sending...",
+        "send": "Send Message"
+      },
+      "errors": {
+        "fullName": "Full name is required",
+        "email": "Please enter a valid email address",
+        "phone": "Please enter a valid phone number",
+        "message": "Message is required (minimum 10 characters)",
+        "privacy": "You must accept the privacy policy"
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": {
+        "title": "Address",
+        "line1": "Unter den Linden 77",
+        "line2": "10117 Berlin, Germany"
+      },
+      "email": {
+        "title": "Email",
+        "value": "contact@sodusecure.com"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+49 (30) 123 56789"
+      },
+      "hours": {
+        "title": "Support Hours",
+        "line1": "Mon - Fri 9:00 AM - 6:00 PM CET",
+        "line2": "Sat - Sun Closed"
+      }
+    },
+    "quickContact": {
+      "title": "Quick Contact",
+      "email": {
+        "title": "Email Us",
+        "value": "support@sodusecure.com"
+      },
+      "call": {
+        "title": "Call Us",
+        "value": "+49 030 1234 56789"
+      },
+      "emergency": {
+        "title": "Emergency Hotline",
+        "number": "+49 (30) 999 888 777",
+        "note": "Available 24/7 for urgent matters"
+      },
+      "chat": {
+        "title": "Live Chat",
+        "value": "Chat with our team"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Quick answers to common questions about our services and processes.",
+      "questions": {
+        "start": {
+          "question": "How quickly can you start?",
+          "answer": "Our team can typically initiate engagements within 1-2 weeks of engagement depending on scope and availability."
+        },
+        "response": {
+          "question": "What's your response time?",
+          "answer": "We respond to all enquiries within 24 hours on business days. Emergency support is available 24/7."
+        },
+        "nda": {
+          "question": "Do you sign NDAs?",
+          "answer": "Yes, we're happy to sign mutual NDAs before discussing your scope and availability."
+        },
+        "industries": {
+          "question": "What industries do you serve?",
+          "answer": "We work with clients across all industries including finance, healthcare, SaaS, e-commerce, and more."
+        }
+      }
+    }
+  },
+  "careers": {
+    "hero": {
+      "badge": "Join Our Team",
+      "title": "Build the Future of Cybersecurity",
+      "description": "Join SodoSecure and work with a talented team of security experts to protect organizations worldwide."
+    },
+    "whyWorkWithUs": {
+      "title": "Why Work With Us",
+      "description": "We offer a competitive and inclusive workplace where security professionals can thrive.",
+      "benefits": {
+        "cuttingEdgeWork": {
+          "title": "Cutting-Edge Work",
+          "description": "Work on the latest security challenges and technologies in the industry."
+        },
+        "continuousLearning": {
+          "title": "Continuous Learning",
+          "description": "Access training, certifications, and conferences to advance your skills."
+        },
+        "workLifeBalance": {
+          "title": "Work-Life Balance",
+          "description": "Flexible working hours and remote options to maintain a healthy balance."
+        },
+        "collaborativeCulture": {
+          "title": "Collaborative Culture",
+          "description": "Work with talented professionals who are passionate about security."
+        },
+        "competitiveBenefits": {
+          "title": "Competitive Benefits",
+          "description": "Competitive salary, health insurance, and other perks."
+        },
+        "makeAnImpact": {
+          "title": "Make an Impact",
+          "description": "Help organizations protect their critical assets and sensitive data."
+        }
+      }
+    },
+    "openPositions": {
+      "title": "Open Positions",
+      "description": "positions available",
+      "viewDetails": "View Details",
+      "positions": {
+        "seniorPenetrationTester": {
+          "title": "Senior Penetration Tester",
+          "type": "Full-time",
+          "location": "Berlin / Remote",
+          "description": "Lead penetration testing projects and mentor junior team members. You'll work on complex security assessments for enterprise clients."
+        },
+        "juniorPenetrationTester": {
+          "title": "Junior Penetration Tester",
+          "type": "Full-time",
+          "location": "Berlin",
+          "description": "Start your career in offensive security with comprehensive training and hands-on experience."
+        },
+        "werkstudentPenetrationTester": {
+          "title": "Working Student Penetration Tester",
+          "type": "Part-time",
+          "location": "Berlin / Remote",
+          "description": "Gain practical cybersecurity experience while studying. Support our team with penetration tests and security assessments."
+        }
+      }
+    },
+    "cta": {
+      "title": "Interested?",
+      "description": "Send your application to:",
+      "email": "careers@sodusecure.com"
+    },
+    "applicationProcess": {
+      "title": "Our Application Process",
+      "steps": {
+        "submitApplication": {
+          "title": "Submit Your Application",
+          "description": "Send us your resume, portfolio, and a brief cover letter explaining your interest."
+        },
+        "technicalInterview": {
+          "title": "Technical Interview",
+          "description": "Discuss your technical skills and experience in a focused technical assessment."
+        },
+        "teamInterview": {
+          "title": "Team Interview",
+          "description": "Meet with our team to discuss culture fit and your career goals."
+        },
+        "offerOnboarding": {
+          "title": "Offer & Onboarding",
+          "description": "Receive an offer and begin your onboarding journey with SodoSecure."
+        }
+      }
+    }
+  }
+}

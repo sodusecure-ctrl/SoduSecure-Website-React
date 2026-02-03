@@ -1,0 +1,349 @@
+{
+  "category": {
+    "categoryList": {
+      "categoryOne": {
+        "name": "Web Application Pentest",
+        "des": "Comprehensive security testing of your web applications, including static and dynamic analysis",
+        "features": [
+          "Black-box & Grey-box testing",
+          "Multiple user roles testing",
+          "OWASP Top 10 coverage",
+          "Detailed vulnerability report"
+        ],
+        "variant": {
+          "title": "WebApp Pentest",
+          "des": "Choose the testing scope that matches your application complexity",
+          "variantList": [
+            {
+              "id": 1,
+              "name": "Small",
+              "price": "$1,499",
+              "duration": "5 days",
+              "features": [
+                "Static application",
+                "Black-box"
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Medium",
+              "price": "$7,000",
+              "duration": "4 weeks",
+              "type": "popular",
+              "features": [
+                "Dynamic application",
+                "Black + Grey box",
+                "2-4 user roles"
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Large",
+              "price": "$10,000",
+              "duration": "4 weeks",
+              "features": [
+                "Dynamic application",
+                "5+ user roles",
+                "Critical systems"
+              ]
+            }
+          ]
+        },
+        "addOns": {
+          "title": "Select Add-ons (Optional)",
+          "des": "Enhance your penetration test with these additional services",
+          "addOnList": [
+            {
+              "id": 1,
+              "name": "Code-Assisted Review",
+              "des": "White-box testing with source code access for deeper vulnerability analysis",
+              "price": "$1,500",
+              "type": "premium",
+              "icon": ""
+            },
+            {
+              "id": 2,
+              "name": "Free Retest",
+              "des": "Verify fixes after remediation at no additional cost",
+              "price": "$0",
+              "type": "free",
+              "icon": ""
+            },
+            {
+              "id": 3,
+              "name": "On-site Final Presentation",
+              "des": "In-person presentation of findings to your team",
+              "price": "$500",
+              "type": "premium",
+              "icon": ""
+            }
+          ]
+        }
+      },
+      "categoryTwo": {
+        "name": "API / Backend Pentest",
+        "des": "In-depth security assessment of your APIs and backend services",
+        "features": [
+          "REST & GraphQL APIs",
+          "Authentication & authorization",
+          "Business logic testing",
+          "Rate limiting & abuse cases"
+        ],
+        "variant": {
+          "title": "API Pentest",
+          "des": "Choose the testing scope that matches your application complexity",
+          "variantList": [
+            {
+              "id": 1,
+              "name": "Small",
+              "price": "$1,499",
+              "duration": "2 Weeks",
+              "features": [
+                "Static application",
+                "Black-box testing",
+                "Single user role",
+                "OWASP Top 10"
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Medium",
+              "price": "$7,000",
+              "duration": "4 weeks",
+              "type": "popular",
+              "features": [
+                "Dynamic application",
+                "Black + Grey box",
+                "2-4 user roles",
+                "Comprehensive testing"
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Large",
+              "price": "$10,000",
+              "duration": "6 weeks",
+              "features": [
+                "Dynamic application",
+                "Full spectrum testing",
+                "5+ user roles",
+                "Critical systems"
+              ]
+            }
+          ]
+        },
+        "addOns": {
+          "title": "Select Add-ons (Optional)",
+          "des": "Enhance your penetration test with these additional services",
+          "addOnList": [
+            {
+              "id": 1,
+              "name": "Code-Assisted Review",
+              "des": "White-box testing with source code access for deeper vulnerability analysis",
+              "price": "$1,500",
+              "type": "premium",
+              "icon": ""
+            },
+            {
+              "id": 2,
+              "name": "Free Retest",
+              "des": "Verify fixes after remediation at no additional cost",
+              "price": "$0",
+              "type": "free",
+              "icon": ""
+            },
+            {
+              "id": 3,
+              "name": "On-site Final Presentation",
+              "des": "In-person presentation of findings to your team",
+              "price": "$500",
+              "type": "premium",
+              "icon": ""
+            }
+          ]
+        }
+      },
+      "categoryThree": {
+        "name": "Infrastructure Pentest",
+        "des": "Network and system security testing for public or internal infrastructure",
+        "features": [
+          "Public & internal networks",
+          "Server configuration review",
+          "Network segmentation",
+          "Privilege escalation testing"
+        ],
+        "variant": {
+          "title": "Infrastructure Pentest",
+          "des": "Choose the testing scope that matches your application complexity",
+          "variantList": [
+            {
+              "id": 1,
+              "name": "Small",
+              "price": "$2,500",
+              "system": "5",
+              "features": [
+                "Network & host vulnerability assessment",
+                "Privilege escalation testing",
+                "Executive summary & technical report"
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Medium",
+              "price": "$10,000",
+              "system": "100",
+              "type": "popular",
+              "features": [
+                "Misconfiguration & exposure analysis",
+                "Risk-rated findings"
+              ]
+            }
+          ]
+        },
+        "addOns": {
+          "title": "Select Add-ons (Optional)",
+          "des": "Enhance your penetration test with these additional services",
+          "addOnList": [
+            {
+              "id": 1,
+              "name": "OSINT Assessment",
+              "des": "External intelligence gathering to identify exposed assets, leaked credentials, and public attack vectors",
+              "price": "$2,500",
+              "type": "premium",
+              "icon": ""
+            },
+            {
+              "id": 2,
+              "name": "Phishing Campaign",
+              "des": "Simulated phishing attacks to measure employee awareness and response",
+              "price": "$5,000",
+              "type": "premium",
+              "icon": ""
+            },
+            {
+              "id": 3,
+              "name": "Password Audit (Internal Only)",
+              "des": "Analysis of internal password strength and reuse",
+              "price": "$2,000",
+              "type": "premium",
+              "icon": ""
+            },
+            {
+              "id": 4,
+              "name": "On-site Engagement",
+              "des": "In-person testing or final presentation at your office location",
+              "price": "$1,000",
+              "type": "premium",
+              "icon": ""
+            }
+          ]
+        }
+      },
+      "categoryFour": {
+        "name": "Awareness (Training & Phishing)",
+        "des": "Security awareness training and phishing simulations for your team",
+        "features": [
+          "Phishing simulations",
+          "Security training sessions",
+          "Online & on-site options",
+          "Customized to your industry"
+        ],
+        "variant": {
+          "title": "Security Awareness",
+          "des": "Build a human firewall against social engineering attacks",
+          "tabs": [
+            {
+              "id": 1,
+              "name": "Phishing Simulation",
+              "des": "Measure employee awareness through controlled phishing campaigns",
+              "icon": "",
+              "types": [
+                {
+                  "title": "Email Phishing (Per Person)",
+                  "features": [
+                    "Customized phishing campaign",
+                    "Email security training",
+                    "Real-time reporting dashboard"
+                  ],
+                  "packages": [
+                    {
+                      "size": "Small (1-50 people)",
+                      "price": "$80"
+                    },
+                    {
+                      "size": "Medium (51-200 people)",
+                      "price": "$60"
+                    },
+                    {
+                      "size": "Large (200+ people)",
+                      "price": "$50"
+                    }
+                  ]
+                },
+                {
+                  "title": "Complete Phishing Package (Per Person)",
+                  "features": [
+                    "Multiple phishing scenarios",
+                    "Follow-up awareness content",
+                    "Credential harvesting simulation"
+                  ],
+                  "packages": [
+                    {
+                      "size": "Small (1-50 people)",
+                      "price": "$120"
+                    },
+                    {
+                      "size": "Medium (51-200 people)",
+                      "price": "$100"
+                    },
+                    {
+                      "size": "Large (200+ people)",
+                      "price": "$95"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Training",
+              "des": "Educate employees to identify threats before damage occurs",
+              "icon": "",
+              "packages": [
+                {
+                  "id": 1,
+                  "type": "Online Webinar",
+                  "price": "$95",
+                  "features": [
+                    "Live expert-led session",
+                    "Interactive Q&A",
+                    "Certificate of completion"
+                  ]
+                },
+                {
+                  "id": 2,
+                  "type": "On-site Training (Customer Location)",
+                  "price": "$9,000",
+                  "features": [
+                    "In-person instructor-led training",
+                    "Live demonstrations",
+                    "Extended Q&A sessions"
+                  ]
+                },
+                {
+                  "id": 3,
+                  "type": "On-site Training (Per Person – Provider Location)",
+                  "price": "$500",
+                  "features": [
+                    "Hands-on examples",
+                    "Small-group focused training"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
