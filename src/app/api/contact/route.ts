@@ -123,18 +123,18 @@ export async function POST(request: NextRequest) {
       { status: 200 }
     );
   } catch (error: unknown) {
-    const err = error as Error & { code?: string; command?: string; response?: string };
+    const err = error as Error & { code?: string; command?: string; response?: string; responseCode?: string };
     console.error('Email sending error details:', {
       message: err.message,
       code: err.code,
       command: err.command,
       response: err.response,
-      responseCode: error.responseCode,
+      responseCode: err.responseCode,
     });
     return NextResponse.json(
       { 
         error: 'Failed to send email',
-        details: error.message 
+        details: err.message 
       },
       { status: 500 }
     );

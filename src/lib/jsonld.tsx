@@ -17,7 +17,7 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'DE',
-        ...data.address,
+        ...(typeof data.address === 'object' && data.address !== null ? data.address : {}),
       },
       contactPoint: {
         '@type': 'ContactPoint',
