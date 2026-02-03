@@ -82,6 +82,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  icons: {
+    icon: '/-origin.png',
+  },
 };
 
 export default async function RootLayout({
