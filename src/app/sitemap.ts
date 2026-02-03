@@ -4,8 +4,6 @@ import { blogPosts } from '@/lib/blogData';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://sodusecure.de'; // Update with your actual domain
   
-  const locales = ['en', 'de'];
-  
   // Static routes
   const staticRoutes = [
     '',
@@ -33,54 +31,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes: MetadataRoute.Sitemap = [];
 
-  // Add routes for each locale
-  locales.forEach((locale) => {
-    // Add static routes
-    staticRoutes.forEach((route) => {
-      routes.push({
-        url: `${baseUrl}/${locale}${route}`,
-        lastModified: new Date(),
-        changeFrequency: route === '' ? 'daily' : 'weekly',
-        priority: route === '' ? 1.0 : 0.8,
-        alternates: {
-          languages: {
-            en: `${baseUrl}/en${route}`,
-            de: `${baseUrl}/de${route}`,
-          },
-        },
-      });
+  // Add static routes (without locale prefix)
+  staticRoutes.forEach((route) => {
+    routes.push({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: route === '' ? 'daily' : 'weekly',
+      priority: route === '' ? 1.0 : 0.8,
     });
+  });
 
-    // Add service routes
-    serviceRoutes.forEach((route) => {
-      routes.push({
-        url: `${baseUrl}/${locale}${route}`,
-        lastModified: new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.9,
-        alternates: {
-          languages: {
-            en: `${baseUrl}/en${route}`,
-            de: `${baseUrl}/de${route}`,
-          },
-        },
-      });
+  // Add service routes (without locale prefix)
+  serviceRoutes.forEach((route) => {
+    routes.push({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
     });
+  });
 
-    // Add blog routes
-    blogPosts.forEach((blog) => {
-      routes.push({
-        url: `${baseUrl}/${locale}/case-studies/blogs/${blog.slug}`,
-        lastModified: new Date(blog.date),
-        changeFrequency: 'monthly',
-        priority: 0.7,
-        alternates: {
-          languages: {
-            en: `${baseUrl}/en/case-studies/blogs/${blog.slug}`,
-            de: `${baseUrl}/de/case-studies/blogs/${blog.slug}`,
-          },
-        },
-      });
+  // Add blog routes (without locale prefix)
+  blogPosts.forEach((blog) => {
+    routes.push({
+      url: `${baseUrl}/case-studies/blogs/${blog.slug}`,
+      lastModified: new Date(blog.date),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     });
   });
 
