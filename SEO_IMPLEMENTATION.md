@@ -1,4 +1,4 @@
-# SEO Optimizations Implementation Guide
+﻿# SEO Optimizations Implementation Guide
 
 ## ✅ Implemented Optimizations
 
@@ -29,7 +29,7 @@
 ## 📝 Manual Steps Required
 
 ### Update Domain URL
-Replace `https://sudosecure.com` with your actual domain in:
+Replace `https://sodusecure.de` with your actual domain in:
 - `src/app/sitemap.ts`
 - `src/app/robots.ts`
 - `src/app/layout.tsx`

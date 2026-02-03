@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -16,13 +16,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseUrl = 'https://sudosecure.com';
+const baseUrl = 'https://sodusecure.de';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "SudoSecure - Professional Penetration Testing Services",
-    template: "%s | SudoSecure"
+    default: "sodusecure - Professional Penetration Testing Services",
+    template: "%s | sodusecure"
   },
   description: "Comprehensive penetration testing services to identify and remediate security vulnerabilities. Expert cybersecurity team protecting your digital assets with OWASP Top 10 testing, API security, and infrastructure audits.",
   keywords: [
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     'VAPT',
     'security audit',
   ],
-  authors: [{ name: 'SudoSecure' }],
-  creator: 'SudoSecure',
-  publisher: 'SudoSecure',
+  authors: [{ name: 'sodusecure' }],
+  creator: 'sodusecure',
+  publisher: 'sodusecure',
   formatDetection: {
     email: false,
     address: false,
@@ -49,24 +49,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: baseUrl,
-    title: 'SudoSecure - Professional Penetration Testing Services',
+    title: 'sodusecure - Professional Penetration Testing Services',
     description: 'Comprehensive penetration testing services to identify and remediate security vulnerabilities. Expert cybersecurity team protecting your digital assets.',
-    siteName: 'SudoSecure',
+    siteName: 'sodusecure',
     images: [
       {
         url: `${baseUrl}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'SudoSecure - Professional Penetration Testing Services',
+        alt: 'sodusecure - Professional Penetration Testing Services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SudoSecure - Professional Penetration Testing Services',
+    title: 'sodusecure - Professional Penetration Testing Services',
     description: 'Comprehensive penetration testing services to identify and remediate security vulnerabilities.',
     images: [`${baseUrl}/images/twitter-image.jpg`],
-    creator: '@sudosecure',
+    creator: '@sodusecure',
   },
   robots: {
     index: true,

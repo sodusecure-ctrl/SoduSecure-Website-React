@@ -1,4 +1,4 @@
-# Email Configuration für Sodu Secure
+﻿# Email Configuration für Sodu Secure
 
 ## Überblick
 Das Projekt ist jetzt so konfiguriert, dass:

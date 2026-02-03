@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
-const baseUrl = 'https://sudosecure.com';
+const baseUrl = 'https://sodusecure.de';
 
 export const metadata: Metadata = {
   title: 'Careers - Join Our Cybersecurity Team',
-  description: 'Join SudoSecure and work on cutting-edge penetration testing projects. Open positions for penetration testers, security analysts, and cybersecurity experts.',
+  description: 'Join sodusecure and work on cutting-edge penetration testing projects. Open positions for penetration testers, security analysts, and cybersecurity experts.',
   keywords: [
     'cybersecurity jobs',
     'penetration tester jobs',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'ethical hacker jobs',
   ],
   openGraph: {
-    title: 'Careers at SudoSecure - Join Our Cybersecurity Team',
+    title: 'Careers at sodusecure - Join Our Cybersecurity Team',
     description: 'Join our team of expert penetration testers and security professionals.',
     url: `${baseUrl}/careers`,
     type: 'website',

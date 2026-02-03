@@ -1,4 +1,4 @@
-import { Resend } from 'resend';
+﻿import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -101,7 +101,7 @@ export async function POST(request: NextRequest) {
               </p>
               <p style="color: #888888; font-size: 13px; margin: 15px 0 0 0; line-height: 1.5;">
                 🔒 Ihre Cybersecurity-Experten<br>
-                <a href="https://sudosecure.com" style="color: #667eea; text-decoration: none;">www.sudosecure.com</a>
+                <a href="https://sodusecure.de" style="color: #667eea; text-decoration: none;">www.sodusecure.de</a>
               </p>
             </div>
           </div>
@@ -122,12 +122,13 @@ export async function POST(request: NextRequest) {
       { message: 'Email sent successfully' },
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const err = error as Error & { code?: string; command?: string; response?: string };
     console.error('Email sending error details:', {
-      message: error.message,
-      code: error.code,
-      command: error.command,
-      response: error.response,
+      message: err.message,
+      code: err.code,
+      command: err.command,
+      response: err.response,
       responseCode: error.responseCode,
     });
     return NextResponse.json(

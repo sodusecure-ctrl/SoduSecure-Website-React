@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
-const baseUrl = 'https://sudosecure.com';
+const baseUrl = 'https://sodusecure.de';
 
 export const metadata: Metadata = {
   title: 'SME Security Packages - Affordable Penetration Testing',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'SME packages',
   ],
   openGraph: {
-    title: 'SME Security Packages - SudoSecure',
+    title: 'SME Security Packages - sodusecure',
     description: 'Affordable penetration testing packages for small and medium enterprises.',
     url: `${baseUrl}/services/sme-packages`,
     type: 'website',

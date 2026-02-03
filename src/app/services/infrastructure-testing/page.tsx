@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Database, FileText, Image, List, Lock, Network, RotateCcw, Server, Settings, Shield, Wifi } from 'lucide-react';

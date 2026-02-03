@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
-const baseUrl = 'https://sudosecure.com';
+const baseUrl = 'https://sodusecure.de';
 
 export const metadata: Metadata = {
   title: 'Web Application Penetration Testing - OWASP Top 10',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'application penetration testing',
   ],
   openGraph: {
-    title: 'Web Application Penetration Testing - SudoSecure',
+    title: 'Web Application Penetration Testing - sodusecure',
     description: 'Professional web application security testing to identify and fix vulnerabilities.',
     url: `${baseUrl}/services/web-application-testing`,
     type: 'website',

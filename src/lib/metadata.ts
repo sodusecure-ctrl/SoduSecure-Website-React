@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
-const baseUrl = 'https://sudosecure.com'; // Update with your actual domain
+const baseUrl = 'https://sodusecure.de'; // Update with your actual domain
 
 interface PageMetadata {
   title: string;
@@ -17,9 +17,8 @@ export function generatePageMetadata({
   path,
   locale = 'en',
 }: PageMetadata): Metadata {
-  const fullTitle = `${title} | SudoSecure - Professional Penetration Testing`;
+  const fullTitle = `${title} | sodusecure - Professional Penetration Testing`;
   const url = `${baseUrl}${path}`;
-  const alternateUrl = locale === 'en' ? `${baseUrl}/de${path}` : `${baseUrl}/en${path}`;
 
   return {
     title: fullTitle,
@@ -32,9 +31,9 @@ export function generatePageMetadata({
       'web application security',
       ...keywords,
     ],
-    authors: [{ name: 'SudoSecure' }],
-    creator: 'SudoSecure',
-    publisher: 'SudoSecure',
+    authors: [{ name: 'sodusecure' }],
+    creator: 'sodusecure',
+    publisher: 'sodusecure',
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: url,
@@ -49,13 +48,13 @@ export function generatePageMetadata({
       url,
       title: fullTitle,
       description,
-      siteName: 'SudoSecure',
+      siteName: 'sodusecure',
       images: [
         {
           url: `${baseUrl}/images/og-image.jpg`,
           width: 1200,
           height: 630,
-          alt: 'SudoSecure - Professional Penetration Testing Services',
+          alt: 'sodusecure - Professional Penetration Testing Services',
         },
       ],
     },
@@ -64,7 +63,7 @@ export function generatePageMetadata({
       title: fullTitle,
       description,
       images: [`${baseUrl}/images/twitter-image.jpg`],
-      creator: '@sudosecure',
+      creator: '@sodusecure',
     },
     robots: {
       index: true,

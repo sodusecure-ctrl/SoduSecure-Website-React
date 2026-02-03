@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
-const baseUrl = 'https://sudosecure.com';
+const baseUrl = 'https://sodusecure.de';
 
 export const metadata: Metadata = {
   title: 'Case Studies & Security Blog - Real-World Pentesting Insights',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'API security',
   ],
   openGraph: {
-    title: 'Case Studies & Security Blog - SudoSecure',
+    title: 'Case Studies & Security Blog - sodusecure',
     description: 'Real-world penetration testing case studies and expert cybersecurity blog posts.',
     url: `${baseUrl}/case-studies`,
     type: 'website',

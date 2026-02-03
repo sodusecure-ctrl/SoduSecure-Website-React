@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Award, FileText, HandMetal, Zap } from 'lucide-react';
 import { useTranslations } from 'next-intl';

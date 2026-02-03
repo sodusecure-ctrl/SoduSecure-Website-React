@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -18,15 +18,6 @@ export default function TestimonialsCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
   const handlePrev = () => {
     if (isAnimating) return;
     setIsAnimating(true);
@@ -40,6 +31,15 @@ export default function TestimonialsCarousel() {
     setCurrentIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
     setTimeout(() => setIsAnimating(false), 300);
   };
+
+  // Auto-rotate testimonials
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [currentIndex, handleNext]);
 
   const currentTestimonial = testimonials[currentIndex];
 

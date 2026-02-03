@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { AlertCircle, FileText, Globe, Image, List, Lock, Network, RotateCcw, Shield, Target, Wifi } from 'lucide-react';

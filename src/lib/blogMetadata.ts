@@ -1,7 +1,7 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import { getBlogById } from '@/lib/blogData';
 
-const baseUrl = 'https://sudosecure.com';
+const baseUrl = 'https://sodusecure.de';
 
 interface GenerateBlogMetadataParams {
   params: { id: string };
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: GenerateBlogMetadataParams): 
     keywords: blog.keywords,
     authors: [{ name: blog.author }],
     creator: blog.author,
-    publisher: 'SudoSecure',
+    publisher: 'sodusecure',
     alternates: {
       canonical: blogUrl,
       languages: {
@@ -55,7 +55,7 @@ export async function generateMetadata({ params }: GenerateBlogMetadataParams): 
       title: blog.title,
       description: blog.description,
       images: [`${baseUrl}${blog.image}`],
-      creator: '@sudosecure',
+      creator: '@sodusecure',
     },
     robots: {
       index: true,

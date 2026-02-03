@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect } from 'react';
 
@@ -25,7 +25,7 @@ export default function DynamicMetaTags({
 }: DynamicMetaTagsProps) {
   useEffect(() => {
     // Update document title
-    document.title = `${title} | SudoSecure`;
+    document.title = `${title} | sodusecure`;
 
     // Update or create meta tags
     const updateMetaTag = (name: string, content: string, attribute: 'name' | 'property' = 'name') => {

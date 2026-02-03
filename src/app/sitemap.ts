@@ -1,8 +1,8 @@
-import { MetadataRoute } from 'next';
+﻿import { MetadataRoute } from 'next';
 import { blogPosts } from '@/lib/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sudosecure.com'; // Update with your actual domain
+  const baseUrl = 'https://sodusecure.de'; // Update with your actual domain
   
   const locales = ['en', 'de'];
   

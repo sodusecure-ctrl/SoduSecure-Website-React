@@ -1,4 +1,4 @@
-# Blog SEO Optimization - Implementation Guide
+﻿# Blog SEO Optimization - Implementation Guide
 
 ## ✅ Implementierte Blog-Optimierungen
 
@@ -22,7 +22,7 @@
   - Headline, Description, Image
   - Autor-Information
   - Veröffentlichungsdatum
-  - Publisher (SudoSecure)
+  - Publisher (sodusecure)
   - Keywords und Kategorie
   
 - ✅ **Blog Schema** auf der Hauptseite (Case Studies)
@@ -84,7 +84,7 @@ Nach der Indexierung werden Ihre Blogs so erscheinen:
 
 ```
 Understanding SQL Injection: A Deep Dive into Database Security
-SudoSecure › Blog
+sodusecure › Blog
 Learn about SQL injection vulnerabilities, how they work, and comprehensive 
 strategies to protect your database from attacks...
 [Bild] Dr. Sarah Mitchell • 1. Dez 2024 • 8 min read
@@ -117,7 +117,7 @@ strategies to protect your database from attacks...
 # Nach dem Deploy:
 1. Öffnen Sie Google Search Console
 2. Gehen Sie zu "Sitemaps"
-3. Fügen Sie hinzu: https://sudosecure.com/sitemap.xml
+3. Fügen Sie hinzu: https://sodusecure.de/sitemap.xml
 4. Warten Sie auf die Indexierung (1-7 Tage)
 ```
 

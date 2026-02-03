@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { ChevronRight, Home } from 'lucide-react';
 import Link from 'next/link';
@@ -46,13 +46,13 @@ export default function Breadcrumbs() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://sudosecure.com',
+        item: 'https://sodusecure.de',
       },
       ...breadcrumbs.map((crumb, index) => ({
         '@type': 'ListItem',
         position: index + 2,
         name: crumb.label,
-        item: `https://sudosecure.com${crumb.href}`,
+        item: `https://sodusecure.de${crumb.href}`,
       })),
     ],
   };

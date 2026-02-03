@@ -47,7 +47,7 @@ export default function BlogArticleDetail() {
     '@type': 'BlogPosting',
     headline: blogData.title,
     description: blogData.description,
-    image: `https://sudosecure.com${blogData.image}`,
+    image: `https://sodusecure.de${blogData.image}`,
     datePublished: blogData.date,
     dateModified: blogData.date,
     author: {
@@ -56,10 +56,10 @@ export default function BlogArticleDetail() {
     },
     publisher: {
       '@type': 'Organization',
-      name: 'SudoSecure',
+      name: 'SoduSecure',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://sudosecure.com/images/logo.png',
+        url: 'https://sodusecure.de/images/logo.png',
       },
     },
     keywords: blogData.keywords.join(', '),
@@ -103,7 +103,7 @@ export default function BlogArticleDetail() {
 
       toast.success(t('toasts.emailSent'));
       setCtaEmail('');
-    } catch (error) {
+    } catch {
       toast.error(t('toasts.emailFailed'));
     }
   };
@@ -148,8 +148,8 @@ export default function BlogArticleDetail() {
           description={blogData.description}
           keywords={blogData.keywords}
           author={blogData.author}
-          image={`https://sudosecure.com${blogData.image}`}
-          url={`https://sudosecure.com/case-studies/blogs/${blogData.slug}`}
+          image={`https://sodusecure.de${blogData.image}`}
+          url={`https://sodusecure.de/case-studies/blogs/${blogData.slug}`}
           type="article"
           publishedTime={blogData.date}
         />

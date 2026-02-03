@@ -1,4 +1,4 @@
-import CertificationsToolsSection from '../components/home/CertificationsToolsSection';
+﻿import CertificationsToolsSection from '../components/home/CertificationsToolsSection';
 import ConsultationCTA from '../components/home/ConsultationCTA';
 import Hero from '../components/home/Hero';
 import HowItWorksSection from '../components/home/HowItWorksSection';
@@ -6,14 +6,14 @@ import SecurityServices from '../components/home/SecurityServices';
 import TestimonialsCarousel from '../components/home/TestimonialsCarousel';
 import WhyChooseSection from '../components/home/WhyChooseSection';
 
-const baseUrl = 'https://sudosecure.com';
+const baseUrl = 'https://sodusecure.de';
 
 export default function Home() {
   // Organization Schema
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'SudoSecure',
+    name: 'sodusecure',
     url: baseUrl,
     logo: `${baseUrl}/images/logo.png`,
     description: 'Professional penetration testing and cybersecurity services',
@@ -21,7 +21,7 @@ export default function Home() {
       '@type': 'ContactPoint',
       telephone: '+49-XXX-XXXXXXX',
       contactType: 'Customer Service',
-      email: 'contact@sudosecure.com',
+      email: 'contact@sodusecure.de',
       availableLanguage: ['English', 'German'],
     },
     address: {
@@ -40,7 +40,7 @@ export default function Home() {
     serviceType: 'Penetration Testing',
     provider: {
       '@type': 'Organization',
-      name: 'SudoSecure',
+      name: 'sodusecure',
     },
     areaServed: {
       '@type': 'Country',

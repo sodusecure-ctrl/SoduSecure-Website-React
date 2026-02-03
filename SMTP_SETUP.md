@@ -1,4 +1,4 @@
-# Email Setup Anleitung
+﻿# Email Setup Anleitung
 
 ## Problem
 Gmail App-Passwörter benötigen 2-Faktor-Authentifizierung. Dein Account hat diese Einstellung nicht verfügbar.

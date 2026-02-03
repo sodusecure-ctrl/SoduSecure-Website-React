@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { ArrowRight, Briefcase, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';

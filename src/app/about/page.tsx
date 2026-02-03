@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Award, Building2, CheckCircle, Eye, Headphones, Lock, Shield, Target, TrendingUp, Users } from 'lucide-react';
 import { useTranslations } from 'next-intl';

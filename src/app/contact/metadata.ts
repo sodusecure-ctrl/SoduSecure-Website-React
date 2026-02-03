@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
-const baseUrl = 'https://sudosecure.com';
+const baseUrl = 'https://sodusecure.de';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Get Your Free Security Consultation',
-  description: 'Contact SudoSecure for professional penetration testing services. Get a free consultation and quote for your security needs. Available in English and German.',
+  description: 'Contact sodusecure for professional penetration testing services. Get a free consultation and quote for your security needs. Available in English and German.',
   keywords: [
     'contact cybersecurity',
     'penetration testing quote',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'get pentest quote',
   ],
   openGraph: {
-    title: 'Contact SudoSecure - Get Your Free Security Consultation',
+    title: 'Contact sodusecure - Get Your Free Security Consultation',
     description: 'Contact us for professional penetration testing services. Free consultation available.',
     url: `${baseUrl}/contact`,
     type: 'website',

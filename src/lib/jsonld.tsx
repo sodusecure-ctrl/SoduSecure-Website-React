@@ -1,18 +1,16 @@
-import { Metadata } from 'next';
-
-const baseUrl = 'https://sudosecure.com';
+﻿const baseUrl = 'https://sodusecure.de';
 
 interface JsonLdProps {
   type: 'Organization' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList';
-  data: any;
+  data: Record<string, unknown>;
 }
 
 export function generateJsonLd({ type, data }: JsonLdProps) {
-  const schemas: Record<string, any> = {
+  const schemas: Record<string, Record<string, unknown>> = {
     Organization: {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'SudoSecure',
+      name: 'SoduSecure',
       url: baseUrl,
       logo: `${baseUrl}/images/logo.png`,
       description: 'Professional penetration testing and cybersecurity services',
@@ -25,7 +23,7 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
         '@type': 'ContactPoint',
         telephone: data.phone || '+49-XXX-XXXXXXX',
         contactType: 'Customer Service',
-        email: data.email || 'contact@sudosecure.com',
+        email: data.email || 'contact@sodusecure.de',
         availableLanguage: ['en', 'de'],
       },
       sameAs: data.socialMedia || [
@@ -38,7 +36,7 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
       serviceType: data.serviceType || 'Penetration Testing',
       provider: {
         '@type': 'Organization',
-        name: 'SudoSecure',
+        name: 'SoduSecure',
         url: baseUrl,
       },
       areaServed: {
@@ -62,14 +60,14 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
       inLanguage: data.locale || 'en',
       isPartOf: {
         '@type': 'WebSite',
-        name: 'SudoSecure',
+        name: 'SoduSecure',
         url: baseUrl,
       },
     },
     FAQPage: {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: data.questions.map((q: any) => ({
+      mainEntity: (data.questions as Array<{ question: string; answer: string }>).map((q) => ({
         '@type': 'Question',
         name: q.question,
         acceptedAnswer: {
@@ -81,7 +79,7 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
     BreadcrumbList: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      itemListElement: data.items.map((item: any, index: number) => ({
+      itemListElement: (data.items as Array<{ name: string; url: string }>).map((item, index: number) => ({
         '@type': 'ListItem',
         position: index + 1,
         name: item.name,

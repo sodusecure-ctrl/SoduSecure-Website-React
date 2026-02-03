@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { ClipboardList, FileText, RotateCcw, Search } from 'lucide-react';
 import { useTranslations } from 'next-intl';

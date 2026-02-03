@@ -1,4 +1,4 @@
-import { Alert, AlertDescription } from '@/components/ui/alert';
+﻿import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Bell, Database, Eye, Lock, Shield, UserCheck } from 'lucide-react';
 import { useTranslations } from 'next-intl';

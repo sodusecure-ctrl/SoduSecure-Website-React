@@ -1,4 +1,4 @@
-// Blog data for metadata generation
+﻿// Blog data for metadata generation
 export const blogPosts = [
   {
     id: 1,

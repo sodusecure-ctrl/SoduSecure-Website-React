@@ -1,7 +1,7 @@
-"use client";
+﻿"use client";
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Briefcase, Building2, CheckCircle, DollarSign, FileText, Image, List, RotateCcw, Shield, Target, TrendingUp, Zap } from 'lucide-react';
+import { Briefcase, Building2, CheckCircle, DollarSign, FileText, Image, List, RotateCcw, Shield, Target } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import ComprehensiveTesting from '../../../components/service/ComprehensiveTesting';
 import { useTranslations } from 'next-intl';

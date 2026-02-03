@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -19,20 +19,20 @@ export default function CaseStudiesPage() {
   const blogListSchema = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    name: 'SudoSecure Security Blog',
+    name: 'sodusecure Security Blog',
     description: 'Cybersecurity insights, penetration testing guides, and security best practices',
-    url: 'https://sudosecure.com/case-studies',
+    url: 'https://sodusecure.de/case-studies',
     blogPost: blogPosts.map(blog => ({
       '@type': 'BlogPosting',
       headline: blog.title,
       description: blog.description,
-      image: `https://sudosecure.com${blog.image}`,
+      image: `https://sodusecure.de${blog.image}`,
       datePublished: blog.date,
       author: {
         '@type': 'Person',
         name: blog.author,
       },
-      url: `https://sudosecure.com/case-studies/blogs/${blog.slug}`,
+      url: `https://sodusecure.de/case-studies/blogs/${blog.slug}`,
     })),
   };
   const [selectedBlogCategory, setSelectedBlogCategory] = useState('All');
