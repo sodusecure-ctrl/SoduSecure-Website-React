@@ -15,8 +15,6 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   // Enable React strict mode for better SEO
   reactStrictMode: true,
-  // Optimize bundle
-  swcMinify: true,
 };
 
 export default withNextIntl(nextConfig);
