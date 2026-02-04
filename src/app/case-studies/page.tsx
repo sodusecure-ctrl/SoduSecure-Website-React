@@ -32,7 +32,7 @@ export default function CaseStudiesPage() {
         '@type': 'Person',
         name: blog.author,
       },
-      url: `https://sodusecure.de/case-studies/blogs/${blog.slug}`,
+      url: `https://sodusecure.com/case-studies/blogs/${blog.slug}`,
     })),
   };
   const [selectedBlogCategory, setSelectedBlogCategory] = useState('All');

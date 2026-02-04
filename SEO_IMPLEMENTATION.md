@@ -29,7 +29,7 @@
 ## 📝 Manual Steps Required
 
 ### Update Domain URL
-Replace `https://sodusecure.de` with your actual domain in:
+Replace `https://sodusecure.com` with your actual domain in:
 - `src/app/sitemap.ts`
 - `src/app/robots.ts`
 - `src/app/layout.tsx`

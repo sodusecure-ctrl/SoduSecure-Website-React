@@ -1,4 +1,4 @@
-﻿const baseUrl = 'https://sodusecure.de';
+﻿const baseUrl = 'https://sodusecure.com';
 
 interface JsonLdProps {
   type: 'Organization' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList';
@@ -23,7 +23,7 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
         '@type': 'ContactPoint',
         telephone: data.phone || '+49-XXX-XXXXXXX',
         contactType: 'Customer Service',
-        email: data.email || 'contact@sodusecure.de',
+        email: data.email || 'contact@sodusecure.com',
         availableLanguage: ['en', 'de'],
       },
       sameAs: data.socialMedia || [

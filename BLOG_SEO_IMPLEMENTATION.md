@@ -117,7 +117,7 @@ strategies to protect your database from attacks...
 # Nach dem Deploy:
 1. Öffnen Sie Google Search Console
 2. Gehen Sie zu "Sitemaps"
-3. Fügen Sie hinzu: https://sodusecure.de/sitemap.xml
+3. Fügen Sie hinzu: https://sodusecure.com/sitemap.xml
 4. Warten Sie auf die Indexierung (1-7 Tage)
 ```
 

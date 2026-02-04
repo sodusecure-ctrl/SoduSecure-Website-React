@@ -2,7 +2,7 @@
 import { blogPosts } from '@/lib/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sodusecure.de'; // Update with your actual domain
+  const baseUrl = 'https://sodusecure.com'; // Update with your actual domain
   
   // Static routes
   const staticRoutes = [

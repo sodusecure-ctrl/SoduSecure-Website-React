@@ -6,7 +6,7 @@ import SecurityServices from '../components/home/SecurityServices';
 import TestimonialsCarousel from '../components/home/TestimonialsCarousel';
 import WhyChooseSection from '../components/home/WhyChooseSection';
 
-const baseUrl = 'https://sodusecure.de';
+const baseUrl = 'https://sodusecure.com';
 
 export default function Home() {
   // Organization Schema
@@ -21,7 +21,7 @@ export default function Home() {
       '@type': 'ContactPoint',
       telephone: '+49-XXX-XXXXXXX',
       contactType: 'Customer Service',
-      email: 'contact@sodusecure.de',
+      email: 'contact@sodusecure.com',
       availableLanguage: ['English', 'German'],
     },
     address: {
