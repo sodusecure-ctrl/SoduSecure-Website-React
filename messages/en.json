@@ -472,27 +472,110 @@
     "sections": {
       "introduction": {
         "title": "Introduction",
-        "content": "At Sodu Secure, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website."
+        "content": "At sodusecure, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website."
       },
-      "informationWeCollect": {
+      "collect": {
         "title": "Information We Collect",
-        "content": "We may collect information about you in a variety of ways. The information we may collect on the site includes:"
+        "intro": "We may collect information about you in a variety of ways. The information we may collect on the site includes:",
+        "personal": "Personal Data",
+        "personalItems": {
+          "name": "Name, email address, phone number, and contact information",
+          "account": "Account credentials and profile information",
+          "payment": "Payment information and billing address",
+          "preferences": "Communication preferences and marketing opt-ins"
+        },
+        "usage": "Usage Data",
+        "usageItems": {
+          "browser": "Browser type and version",
+          "pages": "Pages visited and time spent on pages",
+          "time": "Date and time of visits",
+          "referring": "Referring website addresses"
+        }
       },
-      "useOfInformation": {
-        "title": "Use of Your Information",
-        "content": "Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience."
+      "use": {
+        "title": "How We Use Your Information",
+        "intro": "We use the information we collect in the following ways:",
+        "items": {
+          "provide": "To provide, operate, and maintain our services",
+          "process": "To process transactions and send related information",
+          "admin": "To manage your account and provide customer support",
+          "respond": "To respond to your inquiries and fulfill your requests",
+          "monitor": "To monitor and analyze usage patterns and trends",
+          "detect": "To detect, prevent, and address technical issues and security threats",
+          "marketing": "To send you marketing and promotional communications (with your consent)",
+          "comply": "To comply with legal obligations and enforce our terms"
+        }
       },
-      "disclosure": {
-        "title": "Disclosure of Your Information",
-        "content": "We may share or disclose your information in the following situations: By Law or to Protect Rights, Third-Party Service Providers, Business Transfers."
+      "sharing": {
+        "title": "Sharing Your Information",
+        "intro": "We may share your information in the following situations:",
+        "providers": "Service Providers",
+        "providersDesc": "We share information with third-party service providers who perform services on our behalf",
+        "transfers": "Business Transfers",
+        "transfersDesc": "We may share or transfer your information in connection with a merger, acquisition, or sale of assets",
+        "legal": "Legal Requirements",
+        "legalDesc": "We may disclose your information if required by law or in response to valid requests by public authorities",
+        "consent": "With Your Consent",
+        "consentDesc": "We may share your information for any other purpose with your consent",
+        "notSell": "We do not sell, trade, or rent your personal information to third parties for marketing purposes."
       },
       "security": {
         "title": "Security of Your Information",
-        "content": "We use administrative, technical, and physical security measures to protect your personal information."
+        "content": "We use administrative, technical, and physical security measures to protect your personal information. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security."
+      },
+      "rights": {
+        "title": "Your Privacy Rights",
+        "intro": "Depending on your location, you may have the following rights regarding your personal information:",
+        "access": "Access",
+        "accessDesc": "Request access to your personal information",
+        "correction": "Correction",
+        "correctionDesc": "Request correction of inaccurate or incomplete information",
+        "deletion": "Deletion",
+        "deletionDesc": "Request deletion of your personal information",
+        "portability": "Data Portability",
+        "portabilityDesc": "Request a copy of your information in a portable format",
+        "optOut": "Opt-Out",
+        "optOutDesc": "Opt out of marketing communications and data processing",
+        "withdraw": "Withdraw Consent",
+        "withdrawDesc": "Withdraw your consent for data processing at any time",
+        "contact": "To exercise any of these rights, please contact us using the information provided below."
+      },
+      "cookies": {
+        "title": "Cookies and Tracking Technologies",
+        "intro": "We use cookies and similar tracking technologies to track activity on our service and store certain information. Types of cookies we use:",
+        "essential": "Essential Cookies",
+        "essentialDesc": "Required for the website to function properly",
+        "performance": "Performance Cookies",
+        "performanceDesc": "Help us understand how visitors interact with our website",
+        "functional": "Functional Cookies",
+        "functionalDesc": "Enable enhanced functionality and personalization",
+        "marketing": "Marketing Cookies",
+        "marketingDesc": "Used to deliver relevant advertisements to you",
+        "browser": "You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our service."
+      },
+      "retention": {
+        "title": "Data Retention",
+        "content": "We retain your personal information only for as long as necessary to fulfill the purposes for which we collected it, including for the purposes of satisfying any legal, accounting, or reporting requirements. When we no longer need your information, we will securely delete or anonymize it."
+      },
+      "children": {
+        "title": "Children's Privacy",
+        "content": "Our service is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us."
+      },
+      "international": {
+        "title": "International Data Transfers",
+        "content": "Your information may be transferred to and maintained on computers located outside of your state, province, country, or other governmental jurisdiction where data protection laws may differ. By using our service, you consent to the transfer of your information to our facilities and those third parties with whom we share it."
+      },
+      "changes": {
+        "title": "Changes to This Privacy Policy",
+        "intro": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date.",
+        "effective": "You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
       },
       "contact": {
         "title": "Contact Us",
-        "content": "If you have questions or comments about this Privacy Policy, please contact us at privacy@sodusecure.com"
+        "intro": "If you have any questions about this Privacy Policy, please contact us:",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address"
       }
     }
   },

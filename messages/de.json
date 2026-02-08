@@ -472,27 +472,110 @@
     "sections": {
       "introduction": {
         "title": "Einführung",
-        "content": "Bei Sodu Secure setzen wir uns für den Schutz Ihrer Privatsphäre ein. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen erfassen, verwenden, offenlegen und schützen, wenn Sie unsere Website besuchen."
+        "content": "Bei sodusecure setzen wir uns für den Schutz Ihrer Privatsphäre ein. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Informationen erfassen, verwenden, offenlegen und schützen, wenn Sie unsere Website besuchen."
       },
-      "informationWeCollect": {
+      "collect": {
         "title": "Informationen, die wir erfassen",
-        "content": "Wir können Informationen über Sie auf verschiedene Weise erfassen. Die Informationen, die wir auf der Website erfassen könnten, umfassen:"
+        "intro": "Wir können Informationen über Sie auf verschiedene Weise erfassen. Die Informationen, die wir auf der Website erfassen können, umfassen:",
+        "personal": "Personenbezogene Daten",
+        "personalItems": {
+          "name": "Name, E-Mail-Adresse, Telefonnummer und Kontaktinformationen",
+          "account": "Konto-Anmeldedaten und Profilinformationen",
+          "payment": "Zahlungsinformationen und Rechnungsadresse",
+          "preferences": "Kommunikationspräferenzen und Marketing-Einwilligungen"
+        },
+        "usage": "Nutzungsdaten",
+        "usageItems": {
+          "browser": "Browsertyp und -version",
+          "pages": "Besuchte Seiten und auf Seiten verbrachte Zeit",
+          "time": "Datum und Uhrzeit der Besuche",
+          "referring": "Verweisende Website-Adressen"
+        }
       },
-      "useOfInformation": {
-        "title": "Verwendung Ihrer Informationen",
-        "content": "Mit genauen Informationen über Sie können wir Ihnen ein reibungsloses, effizientes und maßgeschneidertes Erlebnis bieten."
+      "use": {
+        "title": "Wie wir Ihre Informationen verwenden",
+        "intro": "Wir verwenden die von uns erfassten Informationen auf folgende Weise:",
+        "items": {
+          "provide": "Um unsere Dienste bereitzustellen, zu betreiben und zu warten",
+          "process": "Um Transaktionen zu verarbeiten und zugehörige Informationen zu senden",
+          "admin": "Um Ihr Konto zu verwalten und Kundensupport bereitzustellen",
+          "respond": "Um auf Ihre Anfragen zu antworten und Ihre Anforderungen zu erfüllen",
+          "monitor": "Um Nutzungsmuster und -trends zu überwachen und zu analysieren",
+          "detect": "Um technische Probleme und Sicherheitsbedrohungen zu erkennen, zu verhindern und zu beheben",
+          "marketing": "Um Ihnen Marketing- und Werbekommunikation zu senden (mit Ihrer Zustimmung)",
+          "comply": "Um gesetzliche Verpflichtungen zu erfüllen und unsere Bedingungen durchzusetzen"
+        }
       },
-      "disclosure": {
-        "title": "Offenlegung Ihrer Informationen",
-        "content": "Wir können Ihre Informationen in den folgenden Situationen teilen oder offenlegen: Nach Gesetz oder zum Schutz von Rechten, Drittanbieter-Dienstleister, Geschäftsübergänge."
+      "sharing": {
+        "title": "Weitergabe Ihrer Informationen",
+        "intro": "Wir können Ihre Informationen in den folgenden Situationen weitergeben:",
+        "providers": "Dienstleister",
+        "providersDesc": "Wir teilen Informationen mit Drittanbieter-Dienstleistern, die Dienstleistungen in unserem Auftrag erbringen",
+        "transfers": "Geschäftsübertragungen",
+        "transfersDesc": "Wir können Ihre Informationen im Zusammenhang mit einer Fusion, Übernahme oder dem Verkauf von Vermögenswerten teilen oder übertragen",
+        "legal": "Gesetzliche Anforderungen",
+        "legalDesc": "Wir können Ihre Informationen offenlegen, wenn dies gesetzlich vorgeschrieben ist oder als Antwort auf gültige Anfragen von Behörden",
+        "consent": "Mit Ihrer Zustimmung",
+        "consentDesc": "Wir können Ihre Informationen für jeden anderen Zweck mit Ihrer Zustimmung weitergeben",
+        "notSell": "Wir verkaufen, handeln oder vermieten Ihre persönlichen Informationen nicht an Dritte für Marketingzwecke."
       },
       "security": {
         "title": "Sicherheit Ihrer Informationen",
-        "content": "Wir verwenden administrative, technische und physische Sicherheitsmaßnahmen, um Ihre persönlichen Informationen zu schützen."
+        "content": "Wir verwenden administrative, technische und physische Sicherheitsmaßnahmen, um Ihre persönlichen Informationen zu schützen. Allerdings ist keine Übertragungsmethode über das Internet oder elektronische Speicherung zu 100% sicher, und wir können keine absolute Sicherheit garantieren."
+      },
+      "rights": {
+        "title": "Ihre Datenschutzrechte",
+        "intro": "Abhängig von Ihrem Standort haben Sie möglicherweise die folgenden Rechte in Bezug auf Ihre persönlichen Informationen:",
+        "access": "Zugriff",
+        "accessDesc": "Anfrage auf Zugriff auf Ihre persönlichen Informationen",
+        "correction": "Berichtigung",
+        "correctionDesc": "Anfrage auf Berichtigung ungenauer oder unvollständiger Informationen",
+        "deletion": "Löschung",
+        "deletionDesc": "Anfrage auf Löschung Ihrer persönlichen Informationen",
+        "portability": "Datenübertragbarkeit",
+        "portabilityDesc": "Anfrage auf eine Kopie Ihrer Informationen in einem portablen Format",
+        "optOut": "Widerspruch",
+        "optOutDesc": "Widerspruch gegen Marketingkommunikation und Datenverarbeitung",
+        "withdraw": "Widerruf der Einwilligung",
+        "withdrawDesc": "Widerrufen Sie Ihre Einwilligung zur Datenverarbeitung jederzeit",
+        "contact": "Um eines dieser Rechte auszuüben, kontaktieren Sie uns bitte über die unten angegebenen Informationen."
+      },
+      "cookies": {
+        "title": "Cookies und Tracking-Technologien",
+        "intro": "Wir verwenden Cookies und ähnliche Tracking-Technologien, um Aktivitäten auf unserem Service zu verfolgen und bestimmte Informationen zu speichern. Arten von Cookies, die wir verwenden:",
+        "essential": "Wesentliche Cookies",
+        "essentialDesc": "Erforderlich, damit die Website ordnungsgemäß funktioniert",
+        "performance": "Leistungs-Cookies",
+        "performanceDesc": "Helfen uns zu verstehen, wie Besucher mit unserer Website interagieren",
+        "functional": "Funktionale Cookies",
+        "functionalDesc": "Ermöglichen erweiterte Funktionalität und Personalisierung",
+        "marketing": "Marketing-Cookies",
+        "marketingDesc": "Werden verwendet, um Ihnen relevante Werbung zuzustellen",
+        "browser": "Sie können Ihren Browser anweisen, alle Cookies abzulehnen oder anzuzeigen, wenn ein Cookie gesendet wird. Wenn Sie jedoch keine Cookies akzeptieren, können Sie möglicherweise einige Teile unseres Service nicht nutzen."
+      },
+      "retention": {
+        "title": "Datenspeicherung",
+        "content": "Wir speichern Ihre persönlichen Informationen nur so lange, wie es notwendig ist, um die Zwecke zu erfüllen, für die wir sie erfasst haben, einschließlich der Erfüllung rechtlicher, buchhalterischer oder Berichtspflichten. Wenn wir Ihre Informationen nicht mehr benötigen, werden wir sie sicher löschen oder anonymisieren."
+      },
+      "children": {
+        "title": "Datenschutz für Kinder",
+        "content": "Unser Service richtet sich nicht an Kinder unter 13 Jahren. Wir erfassen wissentlich keine persönlichen Informationen von Kindern unter 13 Jahren. Wenn Sie ein Elternteil oder Erziehungsberechtigter sind und wissen, dass Ihr Kind uns persönliche Informationen zur Verfügung gestellt hat, kontaktieren Sie uns bitte."
+      },
+      "international": {
+        "title": "Internationale Datenübertragungen",
+        "content": "Ihre Informationen können auf Computer übertragen und dort gespeichert werden, die sich außerhalb Ihres Bundeslands, Ihrer Provinz, Ihres Landes oder einer anderen staatlichen Gerichtsbarkeit befinden, wo Datenschutzgesetze unterschiedlich sein können. Durch die Nutzung unseres Service stimmen Sie der Übertragung Ihrer Informationen an unsere Einrichtungen und die Drittanbieter zu, mit denen wir sie teilen."
+      },
+      "changes": {
+        "title": "Änderungen an dieser Datenschutzrichtlinie",
+        "intro": "Wir können unsere Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Wir werden Sie über Änderungen benachrichtigen, indem wir die neue Datenschutzrichtlinie auf dieser Seite veröffentlichen und das Datum \"Zuletzt aktualisiert\" aktualisieren.",
+        "effective": "Es wird empfohlen, diese Datenschutzrichtlinie regelmäßig auf Änderungen zu überprüfen. Änderungen an dieser Datenschutzrichtlinie sind wirksam, wenn sie auf dieser Seite veröffentlicht werden."
       },
       "contact": {
         "title": "Kontaktieren Sie uns",
-        "content": "Wenn Sie Fragen oder Anmerkungen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns unter privacy@sodusecure.com"
+        "intro": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte:",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "address": "Adresse"
       }
     }
   },
