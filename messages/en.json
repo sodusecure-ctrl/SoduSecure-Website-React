@@ -504,17 +504,60 @@
         "title": "Agreement to Terms",
         "content": "These Terms of Service and any related documents constitute the entire agreement and supersede all prior negotiations, representations or agreements, both written and oral."
       },
-      "useRights": {
-        "title": "Use Rights",
-        "content": "You agree not to use the Site: In any way that violates any applicable law or regulation, To transmit, or procure the sending of, any advertising without prior written consent."
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "content": "By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use this service."
       },
-      "limitations": {
-        "title": "Limitations of Liability",
-        "content": "In no event shall Sodu Secure, nor its directors, employees or agents, be liable to you for any damages, including data, special, incidental or consequential damages."
+      "license": {
+        "title": "Use License",
+        "intro": "Permission is granted to temporarily download one copy of the materials on sodusecure's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:",
+        "items": {
+          "license": "Modify or copy the materials",
+          "modify": "Use the materials for any commercial purpose or for any public display",
+          "commercial": "Attempt to reverse engineer any software contained on sodusecure's website",
+          "reverse": "Remove any copyright or other proprietary notations from the materials"
+        }
+      },
+      "account": {
+        "title": "User Accounts",
+        "content": "When you create an account with us, you must provide accurate, complete, and current information. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account."
+      },
+      "privacy": {
+        "title": "Privacy Policy",
+        "content": "Your use of our service is also governed by our Privacy Policy. Please review our Privacy Policy, which also governs the Site and informs users of our data collection practices."
+      },
+      "prohibited": {
+        "title": "Prohibited Uses",
+        "intro": "You may use the Service only for lawful purposes and in accordance with Terms. You agree not to use the Service:",
+        "items": {
+          "violating": "In any way that violates any applicable national or international law or regulation",
+          "framing": "To transmit, or procure the sending of, any advertising or promotional material without our prior written consent",
+          "uploading": "To impersonate or attempt to impersonate the Company, a Company employee, another user, or any other person or entity",
+          "impersonate": "In any way that infringes upon the rights of others, or in any way is illegal, threatening, fraudulent, or harmful",
+          "harassing": "To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of Service"
+        }
+      },
+      "intellectual": {
+        "title": "Intellectual Property",
+        "content": "The Service and its original content, features, and functionality are and will remain the exclusive property of sodusecure and its licensors. The Service is protected by copyright, trademark, and other laws."
+      },
+      "limitation": {
+        "title": "Limitation of Liability",
+        "content": "In no event shall sodusecure, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses."
+      },
+      "termination": {
+        "title": "Termination",
+        "content": "We may terminate or suspend your account and bar access to Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of Terms."
+      },
+      "changes": {
+        "title": "Changes to Terms",
+        "content": "We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect."
       },
       "contact": {
         "title": "Contact Us",
-        "content": "If you have any questions about these Terms of Service, please contact us at legal@sodusecure.com"
+        "intro": "If you have any questions about these Terms of Service, please contact us:",
+        "email": "Email",
+        "phone": "Phone"
       }
     }
   },

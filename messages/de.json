@@ -504,17 +504,60 @@
         "title": "Zustimmung zu Bedingungen",
         "content": "Diese Nutzungsbedingungen und alle zugehörigen Dokumente stellen die gesamte Vereinbarung dar und ersetzen alle vorherigen Verhandlungen, Darstellungen oder Vereinbarungen, schriftlich oder mündlich."
       },
-      "useRights": {
-        "title": "Nutzungsrechte",
-        "content": "Sie erklären sich damit einverstanden, die Website nicht wie folgt zu verwenden: Auf eine Weise, die gegen geltende Gesetze oder Vorschriften verstößt, um Werbung zu übertragen oder zu senden."
+      "acceptance": {
+        "title": "Akzeptanz der Bedingungen",
+        "content": "Durch den Zugriff auf und die Nutzung dieser Website akzeptieren Sie die Bedingungen dieser Vereinbarung und erklären sich damit einverstanden. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie diesen Service bitte nicht."
       },
-      "limitations": {
-        "title": "Haftungsbegrenzung",
-        "content": "In keinem Fall haften Sodu Secure oder dessen Direktoren, Mitarbeiter oder Vertreter Ihnen gegenüber für Schäden, einschließlich Daten, besonderer, zufälliger oder Folgeschäden."
+      "license": {
+        "title": "Nutzungslizenz",
+        "intro": "Es wird die Erlaubnis erteilt, vorübergehend eine Kopie der Materialien auf der Website von sodusecure für den persönlichen, nicht-kommerziellen vorübergehenden Gebrauch herunterzuladen. Dies ist die Gewährung einer Lizenz, keine Übertragung des Titels, und unter dieser Lizenz dürfen Sie nicht:",
+        "items": {
+          "license": "Die Materialien ändern oder kopieren",
+          "modify": "Die Materialien für kommerzielle Zwecke oder zur öffentlichen Darstellung verwenden",
+          "commercial": "Versuchen, Software auf der Website von sodusecure zurückzuentwickeln",
+          "reverse": "Urheberrechts- oder andere geschützte Hinweise von den Materialien entfernen"
+        }
+      },
+      "account": {
+        "title": "Benutzerkonten",
+        "content": "Wenn Sie ein Konto bei uns erstellen, müssen Sie genaue, vollständige und aktuelle Informationen angeben. Eine Nichterfüllung stellt einen Verstoß gegen die Bedingungen dar und kann zur sofortigen Kündigung Ihres Kontos führen."
+      },
+      "privacy": {
+        "title": "Datenschutzrichtlinie",
+        "content": "Ihre Nutzung unseres Services unterliegt auch unserer Datenschutzrichtlinie. Bitte lesen Sie unsere Datenschutzrichtlinie, die auch die Website regelt und Benutzer über unsere Datenerfassungspraktiken informiert."
+      },
+      "prohibited": {
+        "title": "Verbotene Nutzungen",
+        "intro": "Sie dürfen den Service nur für rechtmäßige Zwecke und in Übereinstimmung mit den Bedingungen nutzen. Sie erklären sich damit einverstanden, den Service nicht zu verwenden:",
+        "items": {
+          "violating": "Auf eine Weise, die gegen geltende nationale oder internationale Gesetze oder Vorschriften verstößt",
+          "framing": "Um Werbe- oder Promotionsmaterial ohne unsere vorherige schriftliche Zustimmung zu übertragen oder zu senden",
+          "uploading": "Um sich als das Unternehmen, einen Mitarbeiter des Unternehmens, einen anderen Benutzer oder eine andere Person oder Entität auszugeben oder zu versuchen",
+          "impersonate": "Auf eine Weise, die die Rechte anderer verletzt oder in irgendeiner Weise illegal, bedrohlich, betrügerisch oder schädlich ist",
+          "harassing": "Um sich an anderen Verhaltensweisen zu beteiligen, die die Nutzung oder den Genuss des Services durch andere einschränken oder behindern"
+        }
+      },
+      "intellectual": {
+        "title": "Geistiges Eigentum",
+        "content": "Der Service und sein ursprünglicher Inhalt, seine Funktionen und Funktionalität sind und bleiben das ausschließliche Eigentum von sodusecure und seinen Lizenzgebern. Der Service ist durch Urheberrechte, Markenrechte und andere Gesetze geschützt."
+      },
+      "limitation": {
+        "title": "Haftungsbeschränkung",
+        "content": "In keinem Fall haften sodusecure oder seine Direktoren, Mitarbeiter, Partner, Vertreter, Lieferanten oder verbundenen Unternehmen für indirekte, zufällige, besondere, Folge- oder Strafschäden, einschließlich, aber nicht beschränkt auf Verlust von Gewinnen, Daten, Nutzung, Goodwill oder anderen immateriellen Verlusten."
+      },
+      "termination": {
+        "title": "Kündigung",
+        "content": "Wir können Ihr Konto kündigen oder aussetzen und den Zugang zum Service sofort ohne vorherige Ankündigung oder Haftung nach unserem alleinigen Ermessen aus beliebigen Gründen und ohne Einschränkung sperren, einschließlich, aber nicht beschränkt auf einen Verstoß gegen die Bedingungen."
+      },
+      "changes": {
+        "title": "Änderungen der Bedingungen",
+        "content": "Wir behalten uns das Recht vor, diese Bedingungen nach unserem alleinigen Ermessen jederzeit zu ändern oder zu ersetzen. Wenn eine Überarbeitung wesentlich ist, werden wir mindestens 30 Tage im Voraus benachrichtigen, bevor neue Bedingungen in Kraft treten."
       },
       "contact": {
         "title": "Kontaktieren Sie uns",
-        "content": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns unter legal@sodusecure.com"
+        "intro": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte:",
+        "email": "E-Mail",
+        "phone": "Telefon"
       }
     }
   },

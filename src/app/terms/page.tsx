@@ -139,8 +139,8 @@ export default function TermsAndConditions() {
                 {t('sections.contact.intro')}
               </p>
               <div className="mt-4 text-gray-700">
-                <p className="font-semibold">{t('sections.contact.email')}: support@yourcompany.com</p>
-                <p className="font-semibold">{t('sections.contact.phone')}: +880 123-456-7890</p>
+                <p className="font-semibold">{t('sections.contact.email')}: sodusecure@gmail.com</p>
+                <p className="font-semibold">{t('sections.contact.phone')}: +49 179 2396294</p>
               </div>
             </CardContent>
           </Card>

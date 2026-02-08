@@ -209,9 +209,9 @@ export default function PrivacyPolicy() {
                 {t('sections.contact.intro')}
               </p>
               <div className="space-y-2 text-gray-700">
-                <p><strong>{t('sections.contact.email')}:</strong> privacy@yourcompany.com</p>
-                <p><strong>{t('sections.contact.phone')}:</strong> +880 123-456-7890</p>
-                <p><strong>{t('sections.contact.address')}:</strong> Gazipur, Dhaka Division, Bangladesh</p>
+                <p><strong>{t('sections.contact.email')}:</strong> sodusecure@gmail.com</p>
+                <p><strong>{t('sections.contact.phone')}:</strong> +49 179 2396294</p>
+                <p><strong>{t('sections.contact.address')}:</strong> Berlin, Germany</p>
               </div>
             </CardContent>
           </Card>
