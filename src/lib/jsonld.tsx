@@ -21,9 +21,9 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
       },
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: data.phone || '+49-XXX-XXXXXXX',
+        telephone: data.phone || '+49-179-2396294',
         contactType: 'Customer Service',
-        email: data.email || 'contact@sodusecure.com',
+        email: data.email || 'sodusecure@gmail.com',
         availableLanguage: ['en', 'de'],
       },
       sameAs: data.socialMedia || [

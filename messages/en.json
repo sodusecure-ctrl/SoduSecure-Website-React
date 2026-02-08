@@ -227,9 +227,9 @@
     "brand": "Sodu Secure",
     "tagline": "Professional penetration testing and security assessments for modern businesses.",
     "contact": {
-      "email": "contact@sodusecure.com",
-      "phone": "+1 (234) 567-8900",
-      "location": "San Francisco, CA",
+      "email": "sodusecure@gmail.com",
+      "phone": "+49 179 2396294",
+      "location": "Berlin, Germany",
       "needHelp": "Need immediate security assistance?",
       "emergency": "Emergency Contact"
     },
@@ -609,7 +609,7 @@
     },
     "progress": "Progress",
     "needHelp": "Need help?",
-    "disclaimer": "All prices are in USD. Standard turnaround time is 2-3 weeks.",
+    "disclaimer": "All prices are in EUR. Standard turnaround time is 2-3 weeks.",
     "submitTitle": "Contact Information",
     "submitDescription": "Tell us how we can reach you and finalize your penetration test order.",
     "backButton": "Back",
@@ -635,7 +635,7 @@
       "emailAddress": "Email address",
       "emailPlaceholder": "you@example.com",
       "phoneNumber": "Phone number",
-      "phonePlaceholder": "+1 (555) 123-4567",
+      "phonePlaceholder": "+49 179 2396294",
       "companySize": "Company size",
       "additionalInfo": "Additional information",
       "additionalInfoPlaceholder": "Share any context, goals, or timelines...",
@@ -660,18 +660,18 @@
             "title": "WebApp Pentest",
             "des": "Choose the testing scope that matches your application complexity",
             "variantList": [
-              { "name": "Small", "price": "$1,499", "duration": "5 days", "features": ["Static application", "Black-box"] },
-              { "name": "Medium", "price": "$7,000", "duration": "4 weeks", "type": "popular", "features": ["Dynamic application", "Black + Grey box", "2-4 user roles"] },
-              { "name": "Large", "price": "$10,000", "duration": "4 weeks", "features": ["Dynamic application", "5+ user roles", "Critical systems"] }
+              { "name": "Small", "price": "€1,499", "duration": "5 days", "features": ["Static application", "Black-box"] },
+              { "name": "Medium", "price": "€7,000", "duration": "4 weeks", "type": "popular", "features": ["Dynamic application", "Black + Grey box", "2-4 user roles"] },
+              { "name": "Large", "price": "€10,000", "duration": "4 weeks", "features": ["Dynamic application", "5+ user roles", "Critical systems"] }
             ]
           },
           "addOns": {
             "title": "Select Add-ons (Optional)",
             "des": "Enhance your penetration test with these additional services",
             "addOnList": [
-              { "id": 1, "name": "Code-Assisted Review", "des": "White-box testing with source code access for deeper vulnerability analysis", "price": "$1,500", "type": "premium" },
-              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "$0", "type": "free" },
-              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "$500", "type": "premium" }
+              { "id": 1, "name": "Code-Assisted Review", "des": "White-box testing with source code access for deeper vulnerability analysis", "price": "€1,500", "type": "premium" },
+              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "€0", "type": "free" },
+              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "€500", "type": "premium" }
             ]
           }
         },
@@ -688,18 +688,18 @@
             "title": "API Pentest",
             "des": "Choose the testing scope that matches your application complexity",
             "variantList": [
-              { "name": "Small", "price": "$1,499", "duration": "2 weeks", "features": ["Static application", "Black-box testing", "Single user role", "OWASP Top 10"] },
-              { "name": "Medium", "price": "$7,000", "duration": "4 weeks", "type": "popular", "features": ["Dynamic application", "Black + Grey box", "2-4 user roles", "Comprehensive testing"] },
-              { "name": "Large", "price": "$10,000", "duration": "6 weeks", "features": ["Dynamic application", "Full spectrum testing", "5+ user roles", "Critical systems"] }
+              { "name": "Small", "price": "€1,499", "duration": "2 weeks", "features": ["Static application", "Black-box testing", "Single user role", "OWASP Top 10"] },
+              { "name": "Medium", "price": "€7,000", "duration": "4 weeks", "type": "popular", "features": ["Dynamic application", "Black + Grey box", "2-4 user roles", "Comprehensive testing"] },
+              { "name": "Large", "price": "€10,000", "duration": "6 weeks", "features": ["Dynamic application", "Full spectrum testing", "5+ user roles", "Critical systems"] }
             ]
           },
           "addOns": {
             "title": "Select Add-ons (Optional)",
             "des": "Enhance your penetration test with these additional services",
             "addOnList": [
-              { "id": 1, "name": "Code-Assisted Review", "des": "White-box testing with source code access for deeper vulnerability analysis", "price": "$1,500", "type": "premium" },
-              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "$0", "type": "free" },
-              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "$500", "type": "premium" }
+              { "id": 1, "name": "Code-Assisted Review", "des": "White-box testing with source code access for deeper vulnerability analysis", "price": "€1,500", "type": "premium" },
+              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "€0", "type": "free" },
+              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "€500", "type": "premium" }
             ]
           }
         },
@@ -716,18 +716,18 @@
             "title": "Infrastructure Pentest",
             "des": "Choose the testing scope that matches your environment size",
             "variantList": [
-              { "name": "Small", "price": "$2,500", "system": "5", "features": ["Network & host vulnerability assessment", "Privilege escalation testing", "Executive summary & technical report"] },
-              { "name": "Medium", "price": "$10,000", "system": "100", "type": "popular", "features": ["Misconfiguration & exposure analysis", "Risk-rated findings"] },
-              { "name": "Large", "price": "$20,000", "system": "250", "features": ["Comprehensive penetration testing", "Custom attack scenarios", "Executive summary & technical report"] }
+              { "name": "Small", "price": "€2,500", "system": "5", "features": ["Network & host vulnerability assessment", "Privilege escalation testing", "Executive summary & technical report"] },
+              { "name": "Medium", "price": "€10,000", "system": "100", "type": "popular", "features": ["Misconfiguration & exposure analysis", "Risk-rated findings"] },
+              { "name": "Large", "price": "€20,000", "system": "250", "features": ["Comprehensive penetration testing", "Custom attack scenarios", "Executive summary & technical report"] }
             ]
           },
           "addOns": {
             "title": "Select Add-ons (Optional)",
             "des": "Enhance your penetration test with these additional services",
             "addOnList": [
-              { "id": 1, "name": "Extended Scope", "des": "Additional IP ranges or subnets included in testing", "price": "$2,000", "type": "premium" },
-              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "$0", "type": "free" },
-              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "$500", "type": "premium" }
+              { "id": 1, "name": "Extended Scope", "des": "Additional IP ranges or subnets included in testing", "price": "€2,000", "type": "premium" },
+              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "€0", "type": "free" },
+              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "€500", "type": "premium" }
             ]
           }
         },
@@ -744,18 +744,18 @@
             "title": "Awareness & Phishing",
             "des": "Choose the training and simulation depth for your teams",
             "variantList": [
-              { "name": "Starter", "price": "$2,000", "duration": "2 weeks", "features": ["Baseline phishing campaign", "Awareness training session", "Executive summary report"] },
-              { "name": "Professional", "price": "$4,500", "duration": "4 weeks", "type": "popular", "features": ["Multiple phishing campaigns", "Role-based training", "Metrics & improvement plan"] },
-              { "name": "Enterprise", "price": "$8,000", "duration": "6 weeks", "features": ["Advanced red team phishing", "Custom training content", "Executive & technical reporting"] }
+              { "name": "Starter", "price": "€2,000", "duration": "2 weeks", "features": ["Baseline phishing campaign", "Awareness training session", "Executive summary report"] },
+              { "name": "Professional", "price": "€4,500", "duration": "4 weeks", "type": "popular", "features": ["Multiple phishing campaigns", "Role-based training", "Metrics & improvement plan"] },
+              { "name": "Enterprise", "price": "€8,000", "duration": "6 weeks", "features": ["Advanced red team phishing", "Custom training content", "Executive & technical reporting"] }
             ]
           },
           "addOns": {
             "title": "Select Add-ons (Optional)",
             "des": "Enhance your engagement with additional services",
             "addOnList": [
-              { "id": 1, "name": "Executive Workshop", "des": "C-level briefing and tabletop exercise", "price": "$1,200", "type": "premium" },
-              { "id": 2, "name": "Free Retest", "des": "Follow-up phishing campaign to verify improvements", "price": "$0", "type": "free" },
-              { "id": 3, "name": "On-site Training", "des": "In-person training sessions for your teams", "price": "$1,800", "type": "premium" }
+              { "id": 1, "name": "Executive Workshop", "des": "C-level briefing and tabletop exercise", "price": "€1,200", "type": "premium" },
+              { "id": 2, "name": "Free Retest", "des": "Follow-up phishing campaign to verify improvements", "price": "€0", "type": "free" },
+              { "id": 3, "name": "On-site Training", "des": "In-person training sessions for your teams", "price": "€1,800", "type": "premium" }
             ]
           }
         }
@@ -1515,7 +1515,7 @@
         "statistics": {
           "title": "Real-World Statistics (2024)",
           "averageCost": {
-            "value": "$4.45M",
+            "value": "€4.45M",
             "label": "Average cost of a data breach"
           },
           "identificationTime": {
@@ -2217,7 +2217,7 @@
         "title": "Impact Analysis",
         "content": "The discovered vulnerabilities could have led to significant financial losses, regulatory non-compliance, and damage to customer trust. Our assessment prevented potential breaches that could have cost millions in remediation and lost business.",
         "metrics": {
-          "potentialLoss": "$2.3M",
+          "potentialLoss": "€2.3M",
           "complianceRisk": "High",
           "dataAtRisk": "2M+ users",
           "systemDowntime": "Potential"
@@ -2842,7 +2842,7 @@
         },
         "phone": {
           "label": "Phone Number",
-          "placeholder": "+1 (555) 123-4567"
+          "placeholder": "+49 179 2396294"
         },
         "message": {
           "label": "Message",
@@ -2874,11 +2874,11 @@
       },
       "email": {
         "title": "Email",
-        "value": "contact@sodusecure.com"
+        "value": "sodusecure@gmail.com"
       },
       "phone": {
         "title": "Phone",
-        "value": "+49 (30) 123 56789"
+        "value": "+49 179 2396294"
       },
       "hours": {
         "title": "Support Hours",
@@ -2890,15 +2890,15 @@
       "title": "Quick Contact",
       "email": {
         "title": "Email Us",
-        "value": "support@sodusecure.com"
+        "value": "sodusecure@gmail.com"
       },
       "call": {
         "title": "Call Us",
-        "value": "+49 030 1234 56789"
+        "value": "+49 179 2396294"
       },
       "emergency": {
         "title": "Emergency Hotline",
-        "number": "+49 (30) 999 888 777",
+        "number": "+49 179 2396294",
         "note": "Available 24/7 for urgent matters"
       },
       "chat": {

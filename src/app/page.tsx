@@ -19,9 +19,9 @@ export default function Home() {
     description: 'Professional penetration testing and cybersecurity services',
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+49-XXX-XXXXXXX',
+      telephone: '+49-179-2396294',
       contactType: 'Customer Service',
-      email: 'contact@sodusecure.com',
+      email: 'sodusecure@gmail.com',
       availableLanguage: ['English', 'German'],
     },
     address: {
