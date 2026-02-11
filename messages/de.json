@@ -2438,786 +2438,6 @@
             "Lateral Movement in segmentierten Netzwerken",
             "C# und PowerShell für Offensive Tooling",
             "Custom Payload Development",
-      "sqlInjectionDetail": {
-        "backToBlog": "Zurück zum Blog",
-        "shareArticle": "Artikel teilen",
-        "bookmarkArticle": "Artikel speichern",
-        "category": "SCHWACHSTELLEN",
-        "date": "1. Dez 2024",
-        "title": "SQL Injection verstehen: Tiefenblick in Datenbanksicherheit",
-        "description": "SQL-Injection bleibt eine der gefährlichsten Web-Schwachstellen. Lernen Sie Angriffsmuster, Risiken und praxisnahe Abwehrstrategien kennen.",
-        "author": "Dr. Sarah Mitchell",
-        "readTime": "8 Min. Lesezeit",
-        "tableOfContents": "Inhaltsverzeichnis",
-        "shareThisArticle": "Diesen Artikel teilen",
-        "share": "Teilen",
-        "save": "Speichern",
-        "sections": {
-          "introduction": {
-            "title": "Warum SQL-Injection immer noch Top-Risiko ist",
-            "content": "Trotz moderner Frameworks sind SQL-Injection-Angriffe weiterhin verbreitet. Schon kleine Eingabefehler können dazu führen, dass Angreifer Daten auslesen, manipulieren oder ganze Systeme kompromittieren. In diesem Artikel zeigen wir, wie SQLi entsteht, wie Angriffe ablaufen und welche Maßnahmen wirklich schützen.",
-            "keyTakeaway": {
-              "title": "Wichtige Erkenntnis",
-              "content": "SQLi ist selten ein einzelner Fehler – meist ist es eine Kette aus fehlender Eingabevalidierung, unsicherem Query-Building und zu weit gefassten Datenbankrechten."
-            },
-            "quote": "Wenn Datenbanken offen sind, ist jede Anwendung nur so sicher wie ihre schwächste Abfrage."
-          },
-          "commonAttackVectors": {
-            "title": "Häufige Angriffsmuster",
-            "items": [
-              "Unsichere String-Konkatenation in SQL-Queries",
-              "Fehlende Parametrisierung in Login- und Suchfunktionen",
-              "Error-Based SQLi durch detaillierte Fehlermeldungen",
-              "Blind SQLi über zeitbasierte Abfragen",
-              "Second-Order SQLi durch gespeicherte Nutzereingaben",
-              "ORM-Fehlkonfigurationen mit direktem Query-Zugriff"
-            ]
-          },
-          "impactAnalysis": {
-            "title": "Auswirkungsanalyse",
-            "content": "SQL-Injection kann zu Datenabfluss, Manipulation von Kundendaten und vollständiger Systemübernahme führen. Gerade personenbezogene Daten sind besonders betroffen – mit unmittelbaren DSGVO-Risiken.",
-            "statistics": {
-              "title": "Relevante Zahlen",
-              "averageCost": {
-                "value": "4,45 Mio. €",
-                "label": "Ø Kosten eines Datenlecks"
-              },
-              "identificationTime": {
-                "value": "277 Tage",
-                "label": "Ø Zeit bis zur Entdeckung"
-              },
-              "multipleBreaches": {
-                "value": "65%",
-                "label": "Web-Apps mit kritischen Input-Fehlern"
-              }
-            }
-          },
-          "mitigationStrategies": {
-            "title": "Abwehrstrategien",
-            "content": "Wirksamer Schutz entsteht durch technische Kontrollen und regelmäßige Tests.",
-            "essentialPractices": {
-              "title": "Bewährte Maßnahmen",
-              "items": [
-                "Ausschließlich vorbereitete Statements und Parameterbindung verwenden",
-                "Zentrale Eingabevalidierung und Output-Encoding etablieren",
-                "Datenbank-Accounts nach Least-Privilege konfigurieren",
-                "WAF-Regeln gegen typische SQLi-Payloads aktivieren",
-                "Fehlermeldungen in Produktion minimieren",
-                "SAST/DAST in CI/CD integrieren",
-                "Regelmäßige Code-Reviews mit Security-Fokus",
-                "Pentests inkl. Retest durchführen"
-              ]
-            }
-          },
-          "conclusion": {
-            "title": "Fazit",
-            "content1": "SQL-Injection ist alt, aber hochwirksam. Wer Datenbanken schützt, schützt das gesamte Unternehmen.",
-            "content2": "Ein strukturierter Pentest deckt SQLi zuverlässig auf und liefert klare Behebungsmaßnahmen – ideal für Security und Compliance."
-          }
-        },
-        "tags": [
-          "SQLi",
-          "Datenbanksicherheit",
-          "OWASP",
-          "InputValidation",
-          "WebSecurity",
-          "Pentest"
-        ],
-        "cta": {
-          "title": "SQL-Injection in Ihrer App ausschließen",
-          "description": "Lassen Sie Ihre Webanwendungen umfassend testen und erhalten Sie klare Fix-Empfehlungen.",
-          "emailPlaceholder": "E-Mail eingeben",
-          "buttonText": "Web Application Pentest anfragen",
-          "disclaimer": "Kein Spam, jederzeit abbestellen"
-        },
-        "relatedArticles": {
-          "title": "Verwandte Artikel",
-          "articles": [
-            {
-              "title": "API-Sicherheitsbest Practices für 2024",
-              "description": "Schützen Sie APIs vor Auth- und Zugriffslücken.",
-              "category": "LEITFÄDEN",
-              "readTime": "10 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            },
-            {
-              "title": "OWASP Top 10 2026: Neue Risiken, neue Prioritäten",
-              "description": "Welche Web-Risiken 2026 im Fokus stehen.",
-              "category": "SCHWACHSTELLEN",
-              "readTime": "12 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            }
-          ]
-        },
-        "authorBio": {
-          "name": "Dr. Sarah Mitchell",
-          "role": "Security Research Lead",
-          "bio": "Fokus auf Web Application Security, Datenbankschutz und sichere Softwarearchitektur."
-        },
-        "mobileActions": {
-          "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
-          "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
-          "getHelp": "Pentest anfragen"
-        },
-        "toasts": {
-          "linkCopied": "Link in die Zwischenablage kopiert!",
-          "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
-          "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
-          "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-          "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
-          "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
-        }
-      },
-      "zeroDayDetail": {
-        "backToBlog": "Zurück zum Blog",
-        "shareArticle": "Artikel teilen",
-        "bookmarkArticle": "Artikel speichern",
-        "category": "SCHWACHSTELLEN",
-        "date": "28. Nov 2024",
-        "title": "Zero-Day-Schwachstellen: Erkennen, Reagieren, Absichern",
-        "description": "Zero-Days sind die gefährlichsten Schwachstellen. Lernen Sie, wie Sie Angriffe früh erkennen, Reaktionspläne testen und Risiken senken.",
-        "author": "Marcus Chen",
-        "readTime": "10 Min. Lesezeit",
-        "tableOfContents": "Inhaltsverzeichnis",
-        "shareThisArticle": "Diesen Artikel teilen",
-        "share": "Teilen",
-        "save": "Speichern",
-        "sections": {
-          "introduction": {
-            "title": "Wenn es keinen Patch gibt",
-            "content": "Zero-Day-Schwachstellen sind besonders kritisch, weil sie ausgenutzt werden können, bevor ein Patch existiert. Für Unternehmen bedeutet das: Detektion, Response und Resilienz sind entscheidend. Wir zeigen, welche Frühindikatoren helfen und welche Kontrollen wirksam sind.",
-            "keyTakeaway": {
-              "title": "Wichtige Erkenntnis",
-              "content": "Zero-Day-Risiken lassen sich nie vollständig eliminieren – aber durch Monitoring, Segmentierung und Incident Response massiv reduzieren."
-            },
-            "quote": "Bei Zero-Days gewinnt nicht der mit den meisten Tools, sondern der mit den schnellsten Reaktionen."
-          },
-          "commonAttackVectors": {
-            "title": "Typische Angriffswege",
-            "items": [
-              "Spearphishing mit Exploit-Anhang",
-              "Drive-by-Downloads über kompromittierte Websites",
-              "Supply-Chain-Angriffe auf Software-Updates",
-              "Exploits in VPN- und Remote-Access-Systemen",
-              "Privilege Escalation nach Erstzugriff",
-              "Laterale Bewegung in flachen Netzwerken"
-            ]
-          },
-          "impactAnalysis": {
-            "title": "Auswirkungsanalyse",
-            "content": "Zero-Day-Angriffe führen häufig zu vollständiger Systemkompromittierung. Ohne Frühwarnung bleiben Angreifer oft lange unentdeckt.",
-            "statistics": {
-              "title": "Relevante Zahlen",
-              "averageCost": {
-                "value": "6+ Monate",
-                "label": "Ø Verweildauer unentdeckter Angreifer"
-              },
-              "identificationTime": {
-                "value": "72 Std",
-                "label": "Zielzeit für Incident-Response-Start"
-              },
-              "multipleBreaches": {
-                "value": "52%",
-                "label": "Folgeangriffe nach Erstzugriff"
-              }
-            }
-          },
-          "mitigationStrategies": {
-            "title": "Abwehrstrategien",
-            "content": "Zero-Day-Resilienz entsteht durch Kombination aus Prävention und Reaktion.",
-            "essentialPractices": {
-              "title": "Bewährte Maßnahmen",
-              "items": [
-                "EDR/Threat-Detection mit High-Fidelity Alerts",
-                "Netzwerksegmentierung und strikte Zugriffsgrenzen",
-                "Threat-Intelligence-Feeds für Indikatoren",
-                "Security Patching beschleunigen (auch Out-of-Band)",
-                "Härtung kritischer Systeme (VPN, Email, IAM)",
-                "Incident-Response-Pläne regelmäßig testen",
-                "Backups und Wiederherstellungspläne verifizieren",
-                "Red Teaming und Pentests zur Simulation"
-              ]
-            }
-          },
-          "conclusion": {
-            "title": "Fazit",
-            "content1": "Zero-Days sind unvermeidbar – unvorbereitet zu sein ist es nicht.",
-            "content2": "Ein getesteter Response-Plan und regelmäßige Sicherheitstests reduzieren die Auswirkung drastisch."
-          }
-        },
-        "tags": [
-          "ZeroDay",
-          "ThreatIntel",
-          "IncidentResponse",
-          "EDR",
-          "PatchManagement",
-          "Risk"
-        ],
-        "cta": {
-          "title": "Zero-Day-Resilienz prüfen",
-          "description": "Wir testen Ihre Erkennung, Reaktionsfähigkeit und technische Härtung.",
-          "emailPlaceholder": "E-Mail eingeben",
-          "buttonText": "Security Assessment anfragen",
-          "disclaimer": "Kein Spam, jederzeit abbestellen"
-        },
-        "relatedArticles": {
-          "title": "Verwandte Artikel",
-          "articles": [
-            {
-              "title": "React 4 Shell: RCE-Schwachstelle und Behebungsstrategien",
-              "description": "Erkennen, bewerten und sicher aktualisieren.",
-              "category": "SCHWACHSTELLEN",
-              "readTime": "11 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            },
-            {
-              "title": "OWASP Top 10 2026: Neue Risiken, neue Prioritäten",
-              "description": "Aktuelle Bedrohungen im Überblick.",
-              "category": "SCHWACHSTELLEN",
-              "readTime": "12 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            }
-          ]
-        },
-        "authorBio": {
-          "name": "Marcus Chen",
-          "role": "Threat Intelligence Lead",
-          "bio": "Fokus auf Zero-Day Research, Detection Engineering und Incident Response Strategien."
-        },
-        "mobileActions": {
-          "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
-          "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
-          "getHelp": "Security Assessment anfragen"
-        },
-        "toasts": {
-          "linkCopied": "Link in die Zwischenablage kopiert!",
-          "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
-          "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
-          "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-          "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
-          "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
-        }
-      },
-      "apiSecurityDetail": {
-        "backToBlog": "Zurück zum Blog",
-        "shareArticle": "Artikel teilen",
-        "bookmarkArticle": "Artikel speichern",
-        "category": "LEITFÄDEN",
-        "date": "25. Nov 2024",
-        "title": "API-Sicherheit: Best Practices für moderne Anwendungen",
-        "description": "APIs sind das Rückgrat digitaler Produkte. Erfahren Sie, welche Risiken am häufigsten sind und wie Sie Ihre Schnittstellen sicher machen.",
-        "author": "Elena Rodriguez",
-        "readTime": "12 Min. Lesezeit",
-        "tableOfContents": "Inhaltsverzeichnis",
-        "shareThisArticle": "Diesen Artikel teilen",
-        "share": "Teilen",
-        "save": "Speichern",
-        "sections": {
-          "introduction": {
-            "title": "Warum APIs so oft das Einfallstor sind",
-            "content": "APIs verbinden Systeme, Partner und Apps. Genau deshalb sind sie ein attraktives Ziel. Fehlkonfigurationen, schwache Authentifizierung oder unzureichende Validierung führen häufig zu kritischen Datenlecks.",
-            "keyTakeaway": {
-              "title": "Wichtige Erkenntnis",
-              "content": "API-Sicherheit beginnt bei klaren Berechtigungsmodellen und endet bei kontinuierlichen Tests – am besten in jeder Release-Pipeline."
-            },
-            "quote": "Wer seine APIs nicht testet, testet in Produktion – durch Angreifer."
-          },
-          "commonAttackVectors": {
-            "title": "Häufige API-Angriffsvektoren",
-            "items": [
-              "Broken Object Level Authorization (BOLA)",
-              "Schwache Authentifizierung und Session-Handling",
-              "Fehlende Rate-Limits und Missbrauch von Endpoints",
-              "Mass Assignment und übermäßige Datenexposition",
-              "Injection in Query-Parameter und Filter",
-              "Server-Side Request Forgery (SSRF)"
-            ]
-          },
-          "impactAnalysis": {
-            "title": "Auswirkungsanalyse",
-            "content": "API-Lücken führen oft direkt zu Datenabfluss, weil APIs strukturierte Daten liefern. Der Impact ist besonders hoch bei personenbezogenen Datensätzen.",
-            "statistics": {
-              "title": "Relevante Zahlen",
-              "averageCost": {
-                "value": "45%",
-                "label": "Anteil der Apps mit API-Auth-Lücken"
-              },
-              "identificationTime": {
-                "value": "3–6 Monate",
-                "label": "Ø Zeit bis API-Fehler entdeckt werden"
-              },
-              "multipleBreaches": {
-                "value": "BOLA",
-                "label": "Häufigster OWASP API-Top-10-Vektor"
-              }
-            }
-          },
-          "mitigationStrategies": {
-            "title": "Abwehrstrategien",
-            "content": "API-Security braucht technische Kontrollen und klare Governance.",
-            "essentialPractices": {
-              "title": "Bewährte Maßnahmen",
-              "items": [
-                "OAuth2/OIDC mit kurzlebigen Tokens nutzen",
-                "Zugriffsrechte pro Objekt prüfen (BOLA vermeiden)",
-                "Schema-Validierung für Requests/Responses",
-                "Rate-Limits und Abuse-Protection aktivieren",
-                "Secrets und API-Keys sicher verwalten",
-                "Logging und Monitoring pro Endpoint",
-                "Security Tests in CI/CD automatisieren",
-                "Regelmäßige API-Penetrationstests"
-              ]
-            }
-          },
-          "conclusion": {
-            "title": "Fazit",
-            "content1": "APIs sind geschäftskritisch – und brauchen denselben Schutz wie Ihre Kernsysteme.",
-            "content2": "Ein dedizierter API-Pentest deckt Auth- und Berechtigungsfehler auf, bevor sie ausgenutzt werden."
-          }
-        },
-        "tags": [
-          "APISecurity",
-          "OAuth",
-          "BOLA",
-          "OWASPAPI",
-          "RateLimiting",
-          "Pentest"
-        ],
-        "cta": {
-          "title": "APIs sicher prüfen",
-          "description": "Wir testen Ihre APIs gegen OWASP API Top 10 – inklusive Retest.",
-          "emailPlaceholder": "E-Mail eingeben",
-          "buttonText": "API Pentest anfragen",
-          "disclaimer": "Kein Spam, jederzeit abbestellen"
-        },
-        "relatedArticles": {
-          "title": "Verwandte Artikel",
-          "articles": [
-            {
-              "title": "SQL Injection verstehen: Tiefenblick in Datenbanksicherheit",
-              "description": "Wie SQLi entsteht und wie Sie sich schützen.",
-              "category": "SCHWACHSTELLEN",
-              "readTime": "8 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            },
-            {
-              "title": "Cloud-Sicherheitscheckliste: AWS, Azure und GCP",
-              "description": "Harte Fakten für sichere Cloud-Architektur.",
-              "category": "LEITFÄDEN",
-              "readTime": "15 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            }
-          ]
-        },
-        "authorBio": {
-          "name": "Elena Rodriguez",
-          "role": "API Security Specialist",
-          "bio": "Spezialisiert auf API Threat Modeling, OAuth Security und sichere Integrationen."
-        },
-        "mobileActions": {
-          "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
-          "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
-          "getHelp": "API Pentest anfragen"
-        },
-        "toasts": {
-          "linkCopied": "Link in die Zwischenablage kopiert!",
-          "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
-          "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
-          "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-          "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
-          "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
-        }
-      },
-      "mobileAppSecurityDetail": {
-        "backToBlog": "Zurück zum Blog",
-        "shareArticle": "Artikel teilen",
-        "bookmarkArticle": "Artikel speichern",
-        "category": "MOBILE SECURITY",
-        "date": "22. Nov 2024",
-        "title": "Mobile App Security: iOS vs Android im Vergleich",
-        "description": "Mobile Apps speichern und übertragen sensible Daten. Wir zeigen typische Schwachstellen und wie Sie iOS- und Android-Apps absichern.",
-        "author": "James Anderson",
-        "readTime": "15 Min. Lesezeit",
-        "tableOfContents": "Inhaltsverzeichnis",
-        "shareThisArticle": "Diesen Artikel teilen",
-        "share": "Teilen",
-        "save": "Speichern",
-        "sections": {
-          "introduction": {
-            "title": "Mobile Security ist mehr als nur App-Store",
-            "content": "Mobile Apps sind eng mit Backend-APIs verbunden. Fehler in Speicherung, Transport oder Authentifizierung führen schnell zu Datenabfluss. Wir vergleichen iOS und Android und zeigen die wichtigsten Sicherheitsfaktoren.",
-            "keyTakeaway": {
-              "title": "Wichtige Erkenntnis",
-              "content": "Die größte Gefahr liegt selten im UI – sondern in unsicherer Datenspeicherung und API-Kommunikation."
-            },
-            "quote": "Eine sichere App schützt nicht nur das Gerät – sondern die gesamte Datenkette dahinter."
-          },
-          "commonAttackVectors": {
-            "title": "Häufige Schwachstellen",
-            "items": [
-              "Unsichere Speicherung von Tokens und PII",
-              "Fehlende TLS-Härtung bei API-Kommunikation",
-              "Client-Side-Trust ohne Server-Validierung",
-              "Jailbreak/Root-Bypass und Runtime-Manipulation",
-              "Schwache Authentifizierung und Session-Handling",
-              "Unsichere Drittanbieter-SDKs"
-            ]
-          },
-          "impactAnalysis": {
-            "title": "Auswirkungsanalyse",
-            "content": "Mobile Schwachstellen führen oft zu Account-Übernahmen, Datenabfluss und Reputationsschäden – besonders im Finanz- und Gesundheitsbereich.",
-            "statistics": {
-              "title": "Relevante Zahlen",
-              "averageCost": {
-                "value": "60%",
-                "label": "Apps mit unsicherer Speicherung"
-              },
-              "identificationTime": {
-                "value": "90 Tage",
-                "label": "Ø Zeit bis mobile Bugs entdeckt werden"
-              },
-              "multipleBreaches": {
-                "value": "PII",
-                "label": "Häufigstes betroffenes Datenfeld"
-              }
-            }
-          },
-          "mitigationStrategies": {
-            "title": "Abwehrstrategien",
-            "content": "Mobile Security erfordert App- und Backend-Schutz gleichzeitig.",
-            "essentialPractices": {
-              "title": "Bewährte Maßnahmen",
-              "items": [
-                "Sichere Speicherung mit Keychain/Keystore",
-                "TLS-Härtung und Zertifikatsprüfung",
-                "Server-seitige Validierung aller kritischen Aktionen",
-                "Obfuscation und Anti-Tampering-Maßnahmen",
-                "MFA und Session-Timeouts für sensible Features",
-                "Regelmäßige Updates für SDKs und Libraries",
-                "Mobile Threat Modeling nach MASVS",
-                "Regelmäßige Mobile App Pentests"
-              ]
-            }
-          },
-          "conclusion": {
-            "title": "Fazit",
-            "content1": "Mobile Sicherheit entscheidet über Vertrauen und Compliance.",
-            "content2": "Ein Mobile App Pentest zeigt Schwächen auf, bevor Nutzer oder Angreifer sie ausnutzen."
-          }
-        },
-        "tags": [
-          "MobileSecurity",
-          "iOS",
-          "Android",
-          "MASVS",
-          "SecureStorage",
-          "Pentest"
-        ],
-        "cta": {
-          "title": "Mobile Apps sicher prüfen",
-          "description": "Wir testen iOS- und Android-Apps inklusive API-Backends.",
-          "emailPlaceholder": "E-Mail eingeben",
-          "buttonText": "Mobile App Pentest anfragen",
-          "disclaimer": "Kein Spam, jederzeit abbestellen"
-        },
-        "relatedArticles": {
-          "title": "Verwandte Artikel",
-          "articles": [
-            {
-              "title": "API-Sicherheit: Best Practices für moderne Anwendungen",
-              "description": "Kritische API-Lücken vermeiden.",
-              "category": "LEITFÄDEN",
-              "readTime": "12 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            },
-            {
-              "title": "Cloud-Sicherheitscheckliste: AWS, Azure und GCP",
-              "description": "Sichere Cloud-Architektur im Überblick.",
-              "category": "LEITFÄDEN",
-              "readTime": "15 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            }
-          ]
-        },
-        "authorBio": {
-          "name": "James Anderson",
-          "role": "Mobile Security Consultant",
-          "bio": "Spezialisiert auf iOS/Android-Pentests, sichere App-Architektur und MASVS-Reviews."
-        },
-        "mobileActions": {
-          "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
-          "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
-          "getHelp": "Mobile App Pentest anfragen"
-        },
-        "toasts": {
-          "linkCopied": "Link in die Zwischenablage kopiert!",
-          "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
-          "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
-          "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-          "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
-          "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
-        }
-      },
-      "cloudSecurityDetail": {
-        "backToBlog": "Zurück zum Blog",
-        "shareArticle": "Artikel teilen",
-        "bookmarkArticle": "Artikel speichern",
-        "category": "CLOUD SECURITY",
-        "date": "18. Nov 2024",
-        "title": "Cloud Security Fundamentals: AWS, Azure und GCP",
-        "description": "Cloud-Sicherheit beginnt bei IAM und endet bei Logging. Lernen Sie die häufigsten Cloud-Risiken und wie Sie sie vermeiden.",
-        "author": "Maya Patel",
-        "readTime": "14 Min. Lesezeit",
-        "tableOfContents": "Inhaltsverzeichnis",
-        "shareThisArticle": "Diesen Artikel teilen",
-        "share": "Teilen",
-        "save": "Speichern",
-        "sections": {
-          "introduction": {
-            "title": "Shared Responsibility richtig verstehen",
-            "content": "Cloud-Anbieter sichern die Plattform – für Konfiguration, Identitäten und Daten bleibt Ihr Team verantwortlich. Genau hier passieren die meisten Fehler. Wir zeigen, worauf es in AWS, Azure und GCP ankommt.",
-            "keyTakeaway": {
-              "title": "Wichtige Erkenntnis",
-              "content": "Die größten Risiken sind Fehlkonfigurationen und zu breite IAM-Rechte – nicht die Cloud selbst."
-            },
-            "quote": "Cloud-Sicherheit ist kein Produkt – sie ist eine Disziplin aus Architektur, Prozessen und Tests."
-          },
-          "commonAttackVectors": {
-            "title": "Typische Cloud-Risiken",
-            "items": [
-              "Öffentlich zugängliche Storage-Buckets",
-              "Zu weit gefasste IAM-Rollen und Policies",
-              "Fehlendes Netzwerk-Segmenting",
-              "Offene Management-Ports und Admin-Interfaces",
-              "Exponierte Secrets in CI/CD",
-              "Unsichere Container- und Kubernetes-Defaults"
-            ]
-          },
-          "impactAnalysis": {
-            "title": "Auswirkungsanalyse",
-            "content": "Cloud-Fehlkonfigurationen führen häufig zu großflächigem Datenabfluss – oft ohne dass Angreifer Exploits benötigen.",
-            "statistics": {
-              "title": "Relevante Zahlen",
-              "averageCost": {
-                "value": "70%",
-                "label": "Cloud-Incidents durch Fehlkonfiguration"
-              },
-              "identificationTime": {
-                "value": "120 Tage",
-                "label": "Ø Zeit bis Cloud-Exposure erkannt wird"
-              },
-              "multipleBreaches": {
-                "value": "IAM",
-                "label": "Häufigster Root Cause"
-              }
-            }
-          },
-          "mitigationStrategies": {
-            "title": "Abwehrstrategien",
-            "content": "Cloud Security braucht klare Guardrails und kontinuierliche Kontrolle.",
-            "essentialPractices": {
-              "title": "Bewährte Maßnahmen",
-              "items": [
-                "IAM nach Least-Privilege und MFA absichern",
-                "Security Baselines per IaC durchsetzen",
-                "CSPM-Tools für Continuous Compliance",
-                "Encryption at rest und in transit überall",
-                "Zentralisiertes Logging und SIEM-Integration",
-                "Netzwerksegmentierung und Zero-Trust-Modelle",
-                "Secrets-Management für CI/CD",
-                "Regelmäßige Cloud-Penetrationstests"
-              ]
-            }
-          },
-          "conclusion": {
-            "title": "Fazit",
-            "content1": "Cloud ist sicher – wenn Konfiguration, Rechte und Monitoring stimmen.",
-            "content2": "Ein Cloud-Pentest zeigt Fehlkonfigurationen und Sicherheitslücken, bevor sie ausgenutzt werden."
-          }
-        },
-        "tags": [
-          "CloudSecurity",
-          "IAM",
-          "Misconfiguration",
-          "AWS",
-          "Azure",
-          "GCP"
-        ],
-        "cta": {
-          "title": "Cloud-Sicherheit prüfen",
-          "description": "Wir testen AWS, Azure und GCP inkl. IAM, Netzwerk und Storage.",
-          "emailPlaceholder": "E-Mail eingeben",
-          "buttonText": "Cloud Security Assessment anfragen",
-          "disclaimer": "Kein Spam, jederzeit abbestellen"
-        },
-        "relatedArticles": {
-          "title": "Verwandte Artikel",
-          "articles": [
-            {
-              "title": "API-Sicherheit: Best Practices für moderne Anwendungen",
-              "description": "BOLA, Auth und Rate-Limits im Fokus.",
-              "category": "LEITFÄDEN",
-              "readTime": "12 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            },
-            {
-              "title": "Zero-Day-Schwachstellen: Erkennen, Reagieren, Absichern",
-              "description": "Resilienz gegen unbekannte Exploits.",
-              "category": "SCHWACHSTELLEN",
-              "readTime": "10 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            }
-          ]
-        },
-        "authorBio": {
-          "name": "Maya Patel",
-          "role": "Cloud Security Lead",
-          "bio": "Spezialisiert auf Cloud-Architekturen, IAM-Härtung und Compliance in AWS, Azure und GCP."
-        },
-        "mobileActions": {
-          "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
-          "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
-          "getHelp": "Cloud Security Assessment anfragen"
-        },
-        "toasts": {
-          "linkCopied": "Link in die Zwischenablage kopiert!",
-          "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
-          "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
-          "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-          "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
-          "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
-        }
-      },
-      "socialEngineeringDetail": {
-        "backToBlog": "Zurück zum Blog",
-        "shareArticle": "Artikel teilen",
-        "bookmarkArticle": "Artikel speichern",
-        "category": "SECURITY AWARENESS",
-        "date": "15. Nov 2024",
-        "title": "Social Engineering: Der menschliche Faktor",
-        "description": "Technik ist nur ein Teil der Sicherheit. Lernen Sie gängige Social-Engineering-Angriffe und wirksame Schutzmaßnahmen kennen.",
-        "author": "Dr. Sarah Mitchell",
-        "readTime": "9 Min. Lesezeit",
-        "tableOfContents": "Inhaltsverzeichnis",
-        "shareThisArticle": "Diesen Artikel teilen",
-        "share": "Teilen",
-        "save": "Speichern",
-        "sections": {
-          "introduction": {
-            "title": "Warum Menschen das bevorzugte Ziel sind",
-            "content": "Angreifer umgehen technische Kontrollen, indem sie menschliche Schwächen ausnutzen. Phishing, Vishing und Pretexting funktionieren, weil Vertrauen leichter zu kompromittieren ist als Systeme.",
-            "keyTakeaway": {
-              "title": "Wichtige Erkenntnis",
-              "content": "Security Awareness ist keine Schulung pro Jahr – sondern ein kontinuierlicher Prozess mit messbaren Übungen."
-            },
-            "quote": "Die beste Firewall hilft wenig, wenn ein Klick genügt."
-          },
-          "commonAttackVectors": {
-            "title": "Häufige Social-Engineering-Methoden",
-            "items": [
-              "Spearphishing mit täuschend echten Absendern",
-              "Vishing (Telefonbetrug) mit Drucksituationen",
-              "Smishing (SMS/Chat) mit schadhaften Links",
-              "Pretexting und Identitätsvortäuschung",
-              "Baiting mit USB-Sticks oder Downloads",
-              "MFA-Fatigue und Push-Bombing"
-            ]
-          },
-          "impactAnalysis": {
-            "title": "Auswirkungsanalyse",
-            "content": "Social Engineering führt häufig zu initialem Zugang, Credential Theft und Business Email Compromise – mit direktem finanziellen Schaden.",
-            "statistics": {
-              "title": "Relevante Zahlen",
-              "averageCost": {
-                "value": "85%",
-                "label": "Anteil der Incidents mit Human Factor"
-              },
-              "identificationTime": {
-                "value": "30 Tage",
-                "label": "Ø Zeit bis BEC entdeckt wird"
-              },
-              "multipleBreaches": {
-                "value": "Phishing",
-                "label": "Häufigster Initial Access"
-              }
-            }
-          },
-          "mitigationStrategies": {
-            "title": "Abwehrstrategien",
-            "content": "Schutz entsteht durch Training, Prozesse und technische Unterstützung.",
-            "essentialPractices": {
-              "title": "Bewährte Maßnahmen",
-              "items": [
-                "Regelmäßige Security-Awareness-Schulungen",
-                "Phishing-Simulationen mit messbaren KPIs",
-                "Starke MFA und Conditional Access",
-                "Email-Security (SPF/DKIM/DMARC)",
-                "Klare Freigabeprozesse für Zahlungen",
-                "Meldewege für verdächtige Nachrichten",
-                "Least-Privilege und Credential Hygiene",
-                "Red-Team-Übungen und Social-Engineering-Tests"
-              ]
-            }
-          },
-          "conclusion": {
-            "title": "Fazit",
-            "content1": "Social Engineering ist planbar – und damit abwehrbar.",
-            "content2": "Mit Training, Tests und klaren Prozessen reduzieren Sie das Risiko massiv."
-          }
-        },
-        "tags": [
-          "SocialEngineering",
-          "Phishing",
-          "Awareness",
-          "MFA",
-          "RedTeam",
-          "HumanFactor"
-        ],
-        "cta": {
-          "title": "Social Engineering testen",
-          "description": "Wir führen Awareness-Checks und kontrollierte Social-Engineering-Tests durch.",
-          "emailPlaceholder": "E-Mail eingeben",
-          "buttonText": "Awareness-Test anfragen",
-          "disclaimer": "Kein Spam, jederzeit abbestellen"
-        },
-        "relatedArticles": {
-          "title": "Verwandte Artikel",
-          "articles": [
-            {
-              "title": "Zero-Day-Schwachstellen: Erkennen, Reagieren, Absichern",
-              "description": "Resilienz durch Detektion und Response.",
-              "category": "SCHWACHSTELLEN",
-              "readTime": "10 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            },
-            {
-              "title": "Cybersecurity für KMU: Wann Sie einen Pentest wirklich brauchen",
-              "description": "Praktischer Leitfaden für Unternehmen.",
-              "category": "LEITFÄDEN",
-              "readTime": "13 Min. Lesezeit",
-              "readMore": "Artikel lesen →"
-            }
-          ]
-        },
-        "authorBio": {
-          "name": "Dr. Sarah Mitchell",
-          "role": "Security Awareness Lead",
-          "bio": "Spezialisiert auf Human-Risk-Programme, Phishing-Resilienz und Security Culture."
-        },
-        "mobileActions": {
-          "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
-          "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
-          "getHelp": "Awareness-Test anfragen"
-        },
-        "toasts": {
-          "linkCopied": "Link in die Zwischenablage kopiert!",
-          "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
-          "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
-          "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-          "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
-          "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
-        }
-      },
             "AppLocker und AMSI Bypasses"
           ]
         },
@@ -3454,6 +2674,786 @@
       "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
       "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
       "getHelp": "Pentest anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "sqlInjectionDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "SCHWACHSTELLEN",
+    "date": "1. Dez 2024",
+    "title": "SQL Injection verstehen: Tiefenblick in Datenbanksicherheit",
+    "description": "SQL-Injection bleibt eine der gefährlichsten Web-Schwachstellen. Lernen Sie Angriffsmuster, Risiken und praxisnahe Abwehrstrategien kennen.",
+    "author": "Dr. Sarah Mitchell",
+    "readTime": "8 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Warum SQL-Injection immer noch Top-Risiko ist",
+        "content": "Trotz moderner Frameworks sind SQL-Injection-Angriffe weiterhin verbreitet. Schon kleine Eingabefehler können dazu führen, dass Angreifer Daten auslesen, manipulieren oder ganze Systeme kompromittieren. In diesem Artikel zeigen wir, wie SQLi entsteht, wie Angriffe ablaufen und welche Maßnahmen wirklich schützen.",
+        "keyTakeaway": {
+          "title": "Wichtige Erkenntnis",
+          "content": "SQLi ist selten ein einzelner Fehler – meist ist es eine Kette aus fehlender Eingabevalidierung, unsicherem Query-Building und zu weit gefassten Datenbankrechten."
+        },
+        "quote": "Wenn Datenbanken offen sind, ist jede Anwendung nur so sicher wie ihre schwächste Abfrage."
+      },
+      "commonAttackVectors": {
+        "title": "Häufige Angriffsmuster",
+        "items": [
+          "Unsichere String-Konkatenation in SQL-Queries",
+          "Fehlende Parametrisierung in Login- und Suchfunktionen",
+          "Error-Based SQLi durch detaillierte Fehlermeldungen",
+          "Blind SQLi über zeitbasierte Abfragen",
+          "Second-Order SQLi durch gespeicherte Nutzereingaben",
+          "ORM-Fehlkonfigurationen mit direktem Query-Zugriff"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Auswirkungsanalyse",
+        "content": "SQL-Injection kann zu Datenabfluss, Manipulation von Kundendaten und vollständiger Systemübernahme führen. Gerade personenbezogene Daten sind besonders betroffen – mit unmittelbaren DSGVO-Risiken.",
+        "statistics": {
+          "title": "Relevante Zahlen",
+          "averageCost": {
+            "value": "4,45 Mio. €",
+            "label": "Ø Kosten eines Datenlecks"
+          },
+          "identificationTime": {
+            "value": "277 Tage",
+            "label": "Ø Zeit bis zur Entdeckung"
+          },
+          "multipleBreaches": {
+            "value": "65%",
+            "label": "Web-Apps mit kritischen Input-Fehlern"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Abwehrstrategien",
+        "content": "Wirksamer Schutz entsteht durch technische Kontrollen und regelmäßige Tests.",
+        "essentialPractices": {
+          "title": "Bewährte Maßnahmen",
+          "items": [
+            "Ausschließlich vorbereitete Statements und Parameterbindung verwenden",
+            "Zentrale Eingabevalidierung und Output-Encoding etablieren",
+            "Datenbank-Accounts nach Least-Privilege konfigurieren",
+            "WAF-Regeln gegen typische SQLi-Payloads aktivieren",
+            "Fehlermeldungen in Produktion minimieren",
+            "SAST/DAST in CI/CD integrieren",
+            "Regelmäßige Code-Reviews mit Security-Fokus",
+            "Pentests inkl. Retest durchführen"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Fazit",
+        "content1": "SQL-Injection ist alt, aber hochwirksam. Wer Datenbanken schützt, schützt das gesamte Unternehmen.",
+        "content2": "Ein strukturierter Pentest deckt SQLi zuverlässig auf und liefert klare Behebungsmaßnahmen – ideal für Security und Compliance."
+      }
+    },
+    "tags": [
+      "SQLi",
+      "Datenbanksicherheit",
+      "OWASP",
+      "InputValidation",
+      "WebSecurity",
+      "Pentest"
+    ],
+    "cta": {
+      "title": "SQL-Injection in Ihrer App ausschließen",
+      "description": "Lassen Sie Ihre Webanwendungen umfassend testen und erhalten Sie klare Fix-Empfehlungen.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Web Application Pentest anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "API-Sicherheitsbest Practices für 2024",
+          "description": "Schützen Sie APIs vor Auth- und Zugriffslücken.",
+          "category": "LEITFÄDEN",
+          "readTime": "10 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "OWASP Top 10 2026: Neue Risiken, neue Prioritäten",
+          "description": "Welche Web-Risiken 2026 im Fokus stehen.",
+          "category": "SCHWACHSTELLEN",
+          "readTime": "12 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Dr. Sarah Mitchell",
+      "role": "Security Research Lead",
+      "bio": "Fokus auf Web Application Security, Datenbankschutz und sichere Softwarearchitektur."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Pentest anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "zeroDayDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "SCHWACHSTELLEN",
+    "date": "28. Nov 2024",
+    "title": "Zero-Day-Schwachstellen: Erkennen, Reagieren, Absichern",
+    "description": "Zero-Days sind die gefährlichsten Schwachstellen. Lernen Sie, wie Sie Angriffe früh erkennen, Reaktionspläne testen und Risiken senken.",
+    "author": "Marcus Chen",
+    "readTime": "10 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Wenn es keinen Patch gibt",
+        "content": "Zero-Day-Schwachstellen sind besonders kritisch, weil sie ausgenutzt werden können, bevor ein Patch existiert. Für Unternehmen bedeutet das: Detektion, Response und Resilienz sind entscheidend. Wir zeigen, welche Frühindikatoren helfen und welche Kontrollen wirksam sind.",
+        "keyTakeaway": {
+          "title": "Wichtige Erkenntnis",
+          "content": "Zero-Day-Risiken lassen sich nie vollständig eliminieren – aber durch Monitoring, Segmentierung und Incident Response massiv reduzieren."
+        },
+        "quote": "Bei Zero-Days gewinnt nicht der mit den meisten Tools, sondern der mit den schnellsten Reaktionen."
+      },
+      "commonAttackVectors": {
+        "title": "Typische Angriffswege",
+        "items": [
+          "Spearphishing mit Exploit-Anhang",
+          "Drive-by-Downloads über kompromittierte Websites",
+          "Supply-Chain-Angriffe auf Software-Updates",
+          "Exploits in VPN- und Remote-Access-Systemen",
+          "Privilege Escalation nach Erstzugriff",
+          "Laterale Bewegung in flachen Netzwerken"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Auswirkungsanalyse",
+        "content": "Zero-Day-Angriffe führen häufig zu vollständiger Systemkompromittierung. Ohne Frühwarnung bleiben Angreifer oft lange unentdeckt.",
+        "statistics": {
+          "title": "Relevante Zahlen",
+          "averageCost": {
+            "value": "6+ Monate",
+            "label": "Ø Verweildauer unentdeckter Angreifer"
+          },
+          "identificationTime": {
+            "value": "72 Std",
+            "label": "Zielzeit für Incident-Response-Start"
+          },
+          "multipleBreaches": {
+            "value": "52%",
+            "label": "Folgeangriffe nach Erstzugriff"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Abwehrstrategien",
+        "content": "Zero-Day-Resilienz entsteht durch Kombination aus Prävention und Reaktion.",
+        "essentialPractices": {
+          "title": "Bewährte Maßnahmen",
+          "items": [
+            "EDR/Threat-Detection mit High-Fidelity Alerts",
+            "Netzwerksegmentierung und strikte Zugriffsgrenzen",
+            "Threat-Intelligence-Feeds für Indikatoren",
+            "Security Patching beschleunigen (auch Out-of-Band)",
+            "Härtung kritischer Systeme (VPN, Email, IAM)",
+            "Incident-Response-Pläne regelmäßig testen",
+            "Backups und Wiederherstellungspläne verifizieren",
+            "Red Teaming und Pentests zur Simulation"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Fazit",
+        "content1": "Zero-Days sind unvermeidbar – unvorbereitet zu sein ist es nicht.",
+        "content2": "Ein getesteter Response-Plan und regelmäßige Sicherheitstests reduzieren die Auswirkung drastisch."
+      }
+    },
+    "tags": [
+      "ZeroDay",
+      "ThreatIntel",
+      "IncidentResponse",
+      "EDR",
+      "PatchManagement",
+      "Risk"
+    ],
+    "cta": {
+      "title": "Zero-Day-Resilienz prüfen",
+      "description": "Wir testen Ihre Erkennung, Reaktionsfähigkeit und technische Härtung.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Security Assessment anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "React 4 Shell: RCE-Schwachstelle und Behebungsstrategien",
+          "description": "Erkennen, bewerten und sicher aktualisieren.",
+          "category": "SCHWACHSTELLEN",
+          "readTime": "11 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "OWASP Top 10 2026: Neue Risiken, neue Prioritäten",
+          "description": "Aktuelle Bedrohungen im Überblick.",
+          "category": "SCHWACHSTELLEN",
+          "readTime": "12 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Marcus Chen",
+      "role": "Threat Intelligence Lead",
+      "bio": "Fokus auf Zero-Day Research, Detection Engineering und Incident Response Strategien."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Security Assessment anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "apiSecurityDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "LEITFÄDEN",
+    "date": "25. Nov 2024",
+    "title": "API-Sicherheit: Best Practices für moderne Anwendungen",
+    "description": "APIs sind das Rückgrat digitaler Produkte. Erfahren Sie, welche Risiken am häufigsten sind und wie Sie Ihre Schnittstellen sicher machen.",
+    "author": "Elena Rodriguez",
+    "readTime": "12 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Warum APIs so oft das Einfallstor sind",
+        "content": "APIs verbinden Systeme, Partner und Apps. Genau deshalb sind sie ein attraktives Ziel. Fehlkonfigurationen, schwache Authentifizierung oder unzureichende Validierung führen häufig zu kritischen Datenlecks.",
+        "keyTakeaway": {
+          "title": "Wichtige Erkenntnis",
+          "content": "API-Sicherheit beginnt bei klaren Berechtigungsmodellen und endet bei kontinuierlichen Tests – am besten in jeder Release-Pipeline."
+        },
+        "quote": "Wer seine APIs nicht testet, testet in Produktion – durch Angreifer."
+      },
+      "commonAttackVectors": {
+        "title": "Häufige API-Angriffsvektoren",
+        "items": [
+          "Broken Object Level Authorization (BOLA)",
+          "Schwache Authentifizierung und Session-Handling",
+          "Fehlende Rate-Limits und Missbrauch von Endpoints",
+          "Mass Assignment und übermäßige Datenexposition",
+          "Injection in Query-Parameter und Filter",
+          "Server-Side Request Forgery (SSRF)"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Auswirkungsanalyse",
+        "content": "API-Lücken führen oft direkt zu Datenabfluss, weil APIs strukturierte Daten liefern. Der Impact ist besonders hoch bei personenbezogenen Datensätzen.",
+        "statistics": {
+          "title": "Relevante Zahlen",
+          "averageCost": {
+            "value": "45%",
+            "label": "Anteil der Apps mit API-Auth-Lücken"
+          },
+          "identificationTime": {
+            "value": "3–6 Monate",
+            "label": "Ø Zeit bis API-Fehler entdeckt werden"
+          },
+          "multipleBreaches": {
+            "value": "BOLA",
+            "label": "Häufigster OWASP API-Top-10-Vektor"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Abwehrstrategien",
+        "content": "API-Security braucht technische Kontrollen und klare Governance.",
+        "essentialPractices": {
+          "title": "Bewährte Maßnahmen",
+          "items": [
+            "OAuth2/OIDC mit kurzlebigen Tokens nutzen",
+            "Zugriffsrechte pro Objekt prüfen (BOLA vermeiden)",
+            "Schema-Validierung für Requests/Responses",
+            "Rate-Limits und Abuse-Protection aktivieren",
+            "Secrets und API-Keys sicher verwalten",
+            "Logging und Monitoring pro Endpoint",
+            "Security Tests in CI/CD automatisieren",
+            "Regelmäßige API-Penetrationstests"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Fazit",
+        "content1": "APIs sind geschäftskritisch – und brauchen denselben Schutz wie Ihre Kernsysteme.",
+        "content2": "Ein dedizierter API-Pentest deckt Auth- und Berechtigungsfehler auf, bevor sie ausgenutzt werden."
+      }
+    },
+    "tags": [
+      "APISecurity",
+      "OAuth",
+      "BOLA",
+      "OWASPAPI",
+      "RateLimiting",
+      "Pentest"
+    ],
+    "cta": {
+      "title": "APIs sicher prüfen",
+      "description": "Wir testen Ihre APIs gegen OWASP API Top 10 – inklusive Retest.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "API Pentest anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "SQL Injection verstehen: Tiefenblick in Datenbanksicherheit",
+          "description": "Wie SQLi entsteht und wie Sie sich schützen.",
+          "category": "SCHWACHSTELLEN",
+          "readTime": "8 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "Cloud-Sicherheitscheckliste: AWS, Azure und GCP",
+          "description": "Harte Fakten für sichere Cloud-Architektur.",
+          "category": "LEITFÄDEN",
+          "readTime": "15 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Elena Rodriguez",
+      "role": "API Security Specialist",
+      "bio": "Spezialisiert auf API Threat Modeling, OAuth Security und sichere Integrationen."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "API Pentest anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "mobileAppSecurityDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "MOBILE SECURITY",
+    "date": "22. Nov 2024",
+    "title": "Mobile App Security: iOS vs Android im Vergleich",
+    "description": "Mobile Apps speichern und übertragen sensible Daten. Wir zeigen typische Schwachstellen und wie Sie iOS- und Android-Apps absichern.",
+    "author": "James Anderson",
+    "readTime": "15 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Mobile Security ist mehr als nur App-Store",
+        "content": "Mobile Apps sind eng mit Backend-APIs verbunden. Fehler in Speicherung, Transport oder Authentifizierung führen schnell zu Datenabfluss. Wir vergleichen iOS und Android und zeigen die wichtigsten Sicherheitsfaktoren.",
+        "keyTakeaway": {
+          "title": "Wichtige Erkenntnis",
+          "content": "Die größte Gefahr liegt selten im UI – sondern in unsicherer Datenspeicherung und API-Kommunikation."
+        },
+        "quote": "Eine sichere App schützt nicht nur das Gerät – sondern die gesamte Datenkette dahinter."
+      },
+      "commonAttackVectors": {
+        "title": "Häufige Schwachstellen",
+        "items": [
+          "Unsichere Speicherung von Tokens und PII",
+          "Fehlende TLS-Härtung bei API-Kommunikation",
+          "Client-Side-Trust ohne Server-Validierung",
+          "Jailbreak/Root-Bypass und Runtime-Manipulation",
+          "Schwache Authentifizierung und Session-Handling",
+          "Unsichere Drittanbieter-SDKs"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Auswirkungsanalyse",
+        "content": "Mobile Schwachstellen führen oft zu Account-Übernahmen, Datenabfluss und Reputationsschäden – besonders im Finanz- und Gesundheitsbereich.",
+        "statistics": {
+          "title": "Relevante Zahlen",
+          "averageCost": {
+            "value": "60%",
+            "label": "Apps mit unsicherer Speicherung"
+          },
+          "identificationTime": {
+            "value": "90 Tage",
+            "label": "Ø Zeit bis mobile Bugs entdeckt werden"
+          },
+          "multipleBreaches": {
+            "value": "PII",
+            "label": "Häufigstes betroffenes Datenfeld"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Abwehrstrategien",
+        "content": "Mobile Security erfordert App- und Backend-Schutz gleichzeitig.",
+        "essentialPractices": {
+          "title": "Bewährte Maßnahmen",
+          "items": [
+            "Sichere Speicherung mit Keychain/Keystore",
+            "TLS-Härtung und Zertifikatsprüfung",
+            "Server-seitige Validierung aller kritischen Aktionen",
+            "Obfuscation und Anti-Tampering-Maßnahmen",
+            "MFA und Session-Timeouts für sensible Features",
+            "Regelmäßige Updates für SDKs und Libraries",
+            "Mobile Threat Modeling nach MASVS",
+            "Regelmäßige Mobile App Pentests"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Fazit",
+        "content1": "Mobile Sicherheit entscheidet über Vertrauen und Compliance.",
+        "content2": "Ein Mobile App Pentest zeigt Schwächen auf, bevor Nutzer oder Angreifer sie ausnutzen."
+      }
+    },
+    "tags": [
+      "MobileSecurity",
+      "iOS",
+      "Android",
+      "MASVS",
+      "SecureStorage",
+      "Pentest"
+    ],
+    "cta": {
+      "title": "Mobile Apps sicher prüfen",
+      "description": "Wir testen iOS- und Android-Apps inklusive API-Backends.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Mobile App Pentest anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "API-Sicherheit: Best Practices für moderne Anwendungen",
+          "description": "Kritische API-Lücken vermeiden.",
+          "category": "LEITFÄDEN",
+          "readTime": "12 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "Cloud-Sicherheitscheckliste: AWS, Azure und GCP",
+          "description": "Sichere Cloud-Architektur im Überblick.",
+          "category": "LEITFÄDEN",
+          "readTime": "15 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "James Anderson",
+      "role": "Mobile Security Consultant",
+      "bio": "Spezialisiert auf iOS/Android-Pentests, sichere App-Architektur und MASVS-Reviews."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Mobile App Pentest anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "cloudSecurityDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "CLOUD SECURITY",
+    "date": "18. Nov 2024",
+    "title": "Cloud Security Fundamentals: AWS, Azure und GCP",
+    "description": "Cloud-Sicherheit beginnt bei IAM und endet bei Logging. Lernen Sie die häufigsten Cloud-Risiken und wie Sie sie vermeiden.",
+    "author": "Maya Patel",
+    "readTime": "14 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Shared Responsibility richtig verstehen",
+        "content": "Cloud-Anbieter sichern die Plattform – für Konfiguration, Identitäten und Daten bleibt Ihr Team verantwortlich. Genau hier passieren die meisten Fehler. Wir zeigen, worauf es in AWS, Azure und GCP ankommt.",
+        "keyTakeaway": {
+          "title": "Wichtige Erkenntnis",
+          "content": "Die größten Risiken sind Fehlkonfigurationen und zu breite IAM-Rechte – nicht die Cloud selbst."
+        },
+        "quote": "Cloud-Sicherheit ist kein Produkt – sie ist eine Disziplin aus Architektur, Prozessen und Tests."
+      },
+      "commonAttackVectors": {
+        "title": "Typische Cloud-Risiken",
+        "items": [
+          "Öffentlich zugängliche Storage-Buckets",
+          "Zu weit gefasste IAM-Rollen und Policies",
+          "Fehlendes Netzwerk-Segmenting",
+          "Offene Management-Ports und Admin-Interfaces",
+          "Exponierte Secrets in CI/CD",
+          "Unsichere Container- und Kubernetes-Defaults"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Auswirkungsanalyse",
+        "content": "Cloud-Fehlkonfigurationen führen häufig zu großflächigem Datenabfluss – oft ohne dass Angreifer Exploits benötigen.",
+        "statistics": {
+          "title": "Relevante Zahlen",
+          "averageCost": {
+            "value": "70%",
+            "label": "Cloud-Incidents durch Fehlkonfiguration"
+          },
+          "identificationTime": {
+            "value": "120 Tage",
+            "label": "Ø Zeit bis Cloud-Exposure erkannt wird"
+          },
+          "multipleBreaches": {
+            "value": "IAM",
+            "label": "Häufigster Root Cause"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Abwehrstrategien",
+        "content": "Cloud Security braucht klare Guardrails und kontinuierliche Kontrolle.",
+        "essentialPractices": {
+          "title": "Bewährte Maßnahmen",
+          "items": [
+            "IAM nach Least-Privilege und MFA absichern",
+            "Security Baselines per IaC durchsetzen",
+            "CSPM-Tools für Continuous Compliance",
+            "Encryption at rest und in transit überall",
+            "Zentralisiertes Logging und SIEM-Integration",
+            "Netzwerksegmentierung und Zero-Trust-Modelle",
+            "Secrets-Management für CI/CD",
+            "Regelmäßige Cloud-Penetrationstests"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Fazit",
+        "content1": "Cloud ist sicher – wenn Konfiguration, Rechte und Monitoring stimmen.",
+        "content2": "Ein Cloud-Pentest zeigt Fehlkonfigurationen und Sicherheitslücken, bevor sie ausgenutzt werden."
+      }
+    },
+    "tags": [
+      "CloudSecurity",
+      "IAM",
+      "Misconfiguration",
+      "AWS",
+      "Azure",
+      "GCP"
+    ],
+    "cta": {
+      "title": "Cloud-Sicherheit prüfen",
+      "description": "Wir testen AWS, Azure und GCP inkl. IAM, Netzwerk und Storage.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Cloud Security Assessment anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "API-Sicherheit: Best Practices für moderne Anwendungen",
+          "description": "BOLA, Auth und Rate-Limits im Fokus.",
+          "category": "LEITFÄDEN",
+          "readTime": "12 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "Zero-Day-Schwachstellen: Erkennen, Reagieren, Absichern",
+          "description": "Resilienz gegen unbekannte Exploits.",
+          "category": "SCHWACHSTELLEN",
+          "readTime": "10 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Maya Patel",
+      "role": "Cloud Security Lead",
+      "bio": "Spezialisiert auf Cloud-Architekturen, IAM-Härtung und Compliance in AWS, Azure und GCP."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Cloud Security Assessment anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "socialEngineeringDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "SECURITY AWARENESS",
+    "date": "15. Nov 2024",
+    "title": "Social Engineering: Der menschliche Faktor",
+    "description": "Technik ist nur ein Teil der Sicherheit. Lernen Sie gängige Social-Engineering-Angriffe und wirksame Schutzmaßnahmen kennen.",
+    "author": "Dr. Sarah Mitchell",
+    "readTime": "9 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Warum Menschen das bevorzugte Ziel sind",
+        "content": "Angreifer umgehen technische Kontrollen, indem sie menschliche Schwächen ausnutzen. Phishing, Vishing und Pretexting funktionieren, weil Vertrauen leichter zu kompromittieren ist als Systeme.",
+        "keyTakeaway": {
+          "title": "Wichtige Erkenntnis",
+          "content": "Security Awareness ist keine Schulung pro Jahr – sondern ein kontinuierlicher Prozess mit messbaren Übungen."
+        },
+        "quote": "Die beste Firewall hilft wenig, wenn ein Klick genügt."
+      },
+      "commonAttackVectors": {
+        "title": "Häufige Social-Engineering-Methoden",
+        "items": [
+          "Spearphishing mit täuschend echten Absendern",
+          "Vishing (Telefonbetrug) mit Drucksituationen",
+          "Smishing (SMS/Chat) mit schadhaften Links",
+          "Pretexting und Identitätsvortäuschung",
+          "Baiting mit USB-Sticks oder Downloads",
+          "MFA-Fatigue und Push-Bombing"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Auswirkungsanalyse",
+        "content": "Social Engineering führt häufig zu initialem Zugang, Credential Theft und Business Email Compromise – mit direktem finanziellen Schaden.",
+        "statistics": {
+          "title": "Relevante Zahlen",
+          "averageCost": {
+            "value": "85%",
+            "label": "Anteil der Incidents mit Human Factor"
+          },
+          "identificationTime": {
+            "value": "30 Tage",
+            "label": "Ø Zeit bis BEC entdeckt wird"
+          },
+          "multipleBreaches": {
+            "value": "Phishing",
+            "label": "Häufigster Initial Access"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Abwehrstrategien",
+        "content": "Schutz entsteht durch Training, Prozesse und technische Unterstützung.",
+        "essentialPractices": {
+          "title": "Bewährte Maßnahmen",
+          "items": [
+            "Regelmäßige Security-Awareness-Schulungen",
+            "Phishing-Simulationen mit messbaren KPIs",
+            "Starke MFA und Conditional Access",
+            "Email-Security (SPF/DKIM/DMARC)",
+            "Klare Freigabeprozesse für Zahlungen",
+            "Meldewege für verdächtige Nachrichten",
+            "Least-Privilege und Credential Hygiene",
+            "Red-Team-Übungen und Social-Engineering-Tests"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Fazit",
+        "content1": "Social Engineering ist planbar – und damit abwehrbar.",
+        "content2": "Mit Training, Tests und klaren Prozessen reduzieren Sie das Risiko massiv."
+      }
+    },
+    "tags": [
+      "SocialEngineering",
+      "Phishing",
+      "Awareness",
+      "MFA",
+      "RedTeam",
+      "HumanFactor"
+    ],
+    "cta": {
+      "title": "Social Engineering testen",
+      "description": "Wir führen Awareness-Checks und kontrollierte Social-Engineering-Tests durch.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Awareness-Test anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "Zero-Day-Schwachstellen: Erkennen, Reagieren, Absichern",
+          "description": "Resilienz durch Detektion und Response.",
+          "category": "SCHWACHSTELLEN",
+          "readTime": "10 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "Cybersecurity für KMU: Wann Sie einen Pentest wirklich brauchen",
+          "description": "Praktischer Leitfaden für Unternehmen.",
+          "category": "LEITFÄDEN",
+          "readTime": "13 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Dr. Sarah Mitchell",
+      "role": "Security Awareness Lead",
+      "bio": "Spezialisiert auf Human-Risk-Programme, Phishing-Resilienz und Security Culture."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Hat Ihnen dieser Artikel gefallen?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Awareness-Test anfragen"
     },
     "toasts": {
       "linkCopied": "Link in die Zwischenablage kopiert!",
