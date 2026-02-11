@@ -24,17 +24,18 @@ export default function BlogArticleDetail() {
 
   const getBlogTranslationKey = (id: number): string => {
     const mapping: Record<number, string> = {
-      1: 'blogDetail',
-      2: 'blogDetail',
-      3: 'blogDetail',
-      4: 'blogDetail',
-      5: 'blogDetail',
-      6: 'blogDetail',
+      1: 'sqlInjectionDetail',
+      2: 'zeroDayDetail',
+      3: 'apiSecurityDetail',
+      4: 'mobileAppSecurityDetail',
+      5: 'cloudSecurityDetail',
+      6: 'socialEngineeringDetail',
       7: 'react4shellDetail',
       8: 'openClawDetail',
       9: 'smePentestDetail',
       10: 'owaspTop10_2026Detail',
-      11: 'oscpPathDetail'
+      11: 'oscpPathDetail',
+      12: 'gdprPentestDetail'
     };
     return mapping[id] || 'blogDetail';
   };

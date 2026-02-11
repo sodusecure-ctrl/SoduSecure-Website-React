@@ -132,6 +132,18 @@ export const blogPosts = [
     image: '/images/blogs/image1.png',
     keywords: ['OSCP', 'certification', 'penetration testing', 'ethical hacking', 'career development'],
   },
+  {
+    id: 12,
+    slug: '12',
+    title: 'GDPR & Penetration Testing: How Compliance and Security Work Together',
+    description: 'Discover how GDPR (DSGVO) and penetration testing align. Learn why security testing supports Article 32, reduces breach risk, and proves data protection in practice.',
+    category: 'Compliance & Pentesting',
+    author: 'Sodu Secure Team',
+    date: '2026-02-11',
+    readTime: '12 min read',
+    image: '/images/blogs/dsgvo-image-blog-pentest.jpg',
+    keywords: ['GDPR', 'DSGVO', 'penetration testing', 'data protection', 'Article 32', 'compliance'],
+  },
 ];
 
 export function getBlogById(id: number | string) {

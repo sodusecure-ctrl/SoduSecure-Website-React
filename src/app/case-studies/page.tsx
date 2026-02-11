@@ -21,12 +21,12 @@ export default function CaseStudiesPage() {
     '@type': 'Blog',
     name: 'sodusecure Security Blog',
     description: 'Cybersecurity insights, penetration testing guides, and security best practices',
-    url: 'https://sodusecure.de/case-studies',
+    url: 'https://sodusecure.com/case-studies',
     blogPost: blogPosts.map(blog => ({
       '@type': 'BlogPosting',
       headline: blog.title,
       description: blog.description,
-      image: `https://sodusecure.de${blog.image}`,
+      image: `https://sodusecure.com${blog.image}`,
       datePublished: blog.date,
       author: {
         '@type': 'Person',
@@ -224,6 +224,17 @@ export default function CaseStudiesPage() {
       date: "Feb 2, 2026",
       readTime: t('blogs.items.10.readTime'),
       categoryColor: "text-blue-600"
+    },
+    {
+      id: 12,
+      image: "/images/blogs/dsgvo-image-blog-pentest.jpg",
+      category: t('blogs.items.11.category'),
+      title: t('blogs.items.11.title'),
+      description: t('blogs.items.11.description'),
+      author: t('blogs.items.11.author'),
+      date: "Feb 11, 2026",
+      readTime: t('blogs.items.11.readTime'),
+      categoryColor: "text-red-500"
     }
   ].reverse();
 

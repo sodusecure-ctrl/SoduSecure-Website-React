@@ -2438,6 +2438,916 @@
             "Lateral Movement in segmented networks",
             "C# and PowerShell for Offensive Tooling",
             "Custom Payload Development",
+      "sqlInjectionDetail": {
+        "backToBlog": "Back to Blog",
+        "shareArticle": "Share Article",
+        "bookmarkArticle": "Bookmark Article",
+        "category": "VULNERABILITIES",
+        "date": "Dec 1, 2024",
+        "title": "Understanding SQL Injection: A Deep Dive into Database Security",
+        "description": "SQL injection remains one of the most dangerous web vulnerabilities. Learn common attack patterns, real impact, and proven defenses.",
+        "author": "Dr. Sarah Mitchell",
+        "readTime": "8 min read",
+        "tableOfContents": "Table of Contents",
+        "shareThisArticle": "Share this article",
+        "share": "Share",
+        "save": "Save",
+        "sections": {
+          "introduction": {
+            "title": "Why SQL injection still matters",
+            "content": "Even with modern frameworks, SQL injection still shows up in real systems. Small input mistakes can lead to data exfiltration or full system compromise. This guide explains how SQLi happens and how to stop it effectively.",
+            "keyTakeaway": {
+              "title": "Key takeaway",
+              "content": "SQLi is rarely a single bug—it’s usually missing validation, unsafe query building, and overly broad database privileges combined."
+            },
+            "quote": "If your queries are unsafe, your entire application is unsafe."
+          },
+          "commonAttackVectors": {
+            "title": "Common attack vectors",
+            "items": [
+              "String concatenation in SQL queries",
+              "Unparameterized login and search inputs",
+              "Error-based SQLi via verbose errors",
+              "Blind SQLi using time-based payloads",
+              "Second-order SQLi from stored inputs",
+              "ORM misconfigurations with raw queries"
+            ]
+          },
+          "impactAnalysis": {
+            "title": "Impact analysis",
+            "content": "SQL injection can expose customer data, alter records, and enable full compromise. It’s especially damaging where personal data is involved.",
+            "statistics": {
+              "title": "Key facts",
+              "averageCost": {
+                "value": "$4.45M",
+                "label": "Average breach cost"
+              },
+              "identificationTime": {
+                "value": "277 days",
+                "label": "Average time to detect"
+              },
+              "multipleBreaches": {
+                "value": "65%",
+                "label": "Apps with critical input flaws"
+              }
+            }
+          },
+          "mitigationStrategies": {
+            "title": "Mitigation strategies",
+            "content": "Real protection requires safe development and continuous testing.",
+            "essentialPractices": {
+              "title": "Best practices",
+              "items": [
+                "Use prepared statements and parameter binding",
+                "Centralize input validation and output encoding",
+                "Apply least-privilege to database accounts",
+                "Enable WAF rules for SQLi patterns",
+                "Reduce production error verbosity",
+                "Integrate SAST/DAST in CI/CD",
+                "Run security-focused code reviews",
+                "Perform regular pentests with retesting"
+              ]
+            }
+          },
+          "conclusion": {
+            "title": "Conclusion",
+            "content1": "SQL injection is old—but still highly effective. Protecting your database protects your business.",
+            "content2": "A structured pentest reliably finds SQLi and provides clear remediation steps."
+          }
+        },
+        "tags": [
+          "SQLi",
+          "DatabaseSecurity",
+          "OWASP",
+          "InputValidation",
+          "WebSecurity",
+          "Pentest"
+        ],
+        "cta": {
+          "title": "Eliminate SQL injection risk",
+          "description": "Get a full web application pentest with actionable fixes.",
+          "emailPlaceholder": "Enter email",
+          "buttonText": "Request web app pentest",
+          "disclaimer": "No spam, unsubscribe anytime"
+        },
+        "relatedArticles": {
+          "title": "Related articles",
+          "articles": [
+            {
+              "title": "API Security Best Practices for 2024",
+              "description": "Protect APIs from auth and access flaws.",
+              "category": "GUIDES",
+              "readTime": "10 min read",
+              "readMore": "Read article →"
+            },
+            {
+              "title": "OWASP Top 10 2026: New Risks, New Priorities",
+              "description": "Which web risks matter most in 2026.",
+              "category": "VULNERABILITIES",
+              "readTime": "12 min read",
+              "readMore": "Read article →"
+            }
+          ]
+        },
+        "authorBio": {
+          "name": "Dr. Sarah Mitchell",
+          "role": "Security Research Lead",
+          "bio": "Focus on web application security, database protection, and secure software architecture."
+        },
+        "mobileActions": {
+          "enjoyedArticle": "Enjoyed this article?",
+          "shareWithNetwork": "Share with your network",
+          "getHelp": "Request pentest"
+        },
+        "toasts": {
+          "linkCopied": "Link copied to clipboard!",
+          "consultationNotImplemented": "Consultation request functionality is not implemented yet.",
+          "saveNotImplemented": "Save functionality is not implemented yet.",
+          "invalidEmail": "Please enter a valid email address.",
+          "emailSent": "Thanks! Your request has been sent.",
+          "emailFailed": "Sending failed. Please try again."
+        }
+      },
+      "zeroDayDetail": {
+        "backToBlog": "Back to Blog",
+        "shareArticle": "Share Article",
+        "bookmarkArticle": "Bookmark Article",
+        "category": "VULNERABILITIES",
+        "date": "Nov 28, 2024",
+        "title": "Zero-Day Vulnerabilities: Detection and Response Strategies",
+        "description": "Zero-days are the most dangerous vulnerabilities. Learn how to detect early signals, test response plans, and reduce impact.",
+        "author": "Marcus Chen",
+        "readTime": "10 min read",
+        "tableOfContents": "Table of Contents",
+        "shareThisArticle": "Share this article",
+        "share": "Share",
+        "save": "Save",
+        "sections": {
+          "introduction": {
+            "title": "When there is no patch",
+            "content": "Zero-days can be exploited before a fix exists. For organizations, detection, response, and resilience matter most. This guide covers early indicators and effective controls.",
+            "keyTakeaway": {
+              "title": "Key takeaway",
+              "content": "You can’t eliminate zero-day risk—but you can drastically reduce impact with monitoring and tested response."
+            },
+            "quote": "With zero-days, speed of response is everything."
+          },
+          "commonAttackVectors": {
+            "title": "Typical attack paths",
+            "items": [
+              "Spearphishing with exploit payloads",
+              "Drive-by downloads from compromised sites",
+              "Supply-chain attacks via updates",
+              "Exploits in VPN and remote-access gateways",
+              "Privilege escalation after initial access",
+              "Lateral movement across flat networks"
+            ]
+          },
+          "impactAnalysis": {
+            "title": "Impact analysis",
+            "content": "Zero-day attacks often lead to full compromise and long dwell time when detection is weak.",
+            "statistics": {
+              "title": "Key facts",
+              "averageCost": {
+                "value": "6+ months",
+                "label": "Average attacker dwell time"
+              },
+              "identificationTime": {
+                "value": "72 hours",
+                "label": "Target time to start IR"
+              },
+              "multipleBreaches": {
+                "value": "52%",
+                "label": "Follow-on attacks after initial access"
+              }
+            }
+          },
+          "mitigationStrategies": {
+            "title": "Mitigation strategies",
+            "content": "Resilience comes from layered defense and tested response.",
+            "essentialPractices": {
+              "title": "Best practices",
+              "items": [
+                "EDR and high-fidelity detection alerts",
+                "Network segmentation and strict access boundaries",
+                "Threat-intel feeds for indicators",
+                "Accelerated patching, including out-of-band",
+                "Hardening critical services (VPN, email, IAM)",
+                "Regular incident-response exercises",
+                "Verified backups and recovery plans",
+                "Red teaming and pentests for simulation"
+              ]
+            }
+          },
+          "conclusion": {
+            "title": "Conclusion",
+            "content1": "Zero-days are inevitable—being unprepared isn’t.",
+            "content2": "Tested response plans and continuous security testing reduce impact dramatically."
+          }
+        },
+        "tags": [
+          "ZeroDay",
+          "ThreatIntel",
+          "IncidentResponse",
+          "EDR",
+          "PatchManagement",
+          "Risk"
+        ],
+        "cta": {
+          "title": "Assess zero-day resilience",
+          "description": "We test your detection, response, and hardening controls.",
+          "emailPlaceholder": "Enter email",
+          "buttonText": "Request security assessment",
+          "disclaimer": "No spam, unsubscribe anytime"
+        },
+        "relatedArticles": {
+          "title": "Related articles",
+          "articles": [
+            {
+              "title": "React 4 Shell: RCE Vulnerability and Remediation Strategies",
+              "description": "Detect, assess, and update safely.",
+              "category": "VULNERABILITIES",
+              "readTime": "11 min read",
+              "readMore": "Read article →"
+            },
+            {
+              "title": "OWASP Top 10 2026: New Risks, New Priorities",
+              "description": "The latest web threats at a glance.",
+              "category": "VULNERABILITIES",
+              "readTime": "12 min read",
+              "readMore": "Read article →"
+            }
+          ]
+        },
+        "authorBio": {
+          "name": "Marcus Chen",
+          "role": "Threat Intelligence Lead",
+          "bio": "Focus on zero-day research, detection engineering, and incident-response strategies."
+        },
+        "mobileActions": {
+          "enjoyedArticle": "Enjoyed this article?",
+          "shareWithNetwork": "Share with your network",
+          "getHelp": "Request security assessment"
+        },
+        "toasts": {
+          "linkCopied": "Link copied to clipboard!",
+          "consultationNotImplemented": "Consultation request functionality is not implemented yet.",
+          "saveNotImplemented": "Save functionality is not implemented yet.",
+          "invalidEmail": "Please enter a valid email address.",
+          "emailSent": "Thanks! Your request has been sent.",
+          "emailFailed": "Sending failed. Please try again."
+        }
+      },
+      "apiSecurityDetail": {
+        "backToBlog": "Back to Blog",
+        "shareArticle": "Share Article",
+        "bookmarkArticle": "Bookmark Article",
+        "category": "GUIDES",
+        "date": "Nov 25, 2024",
+        "title": "API Security Best Practices for Modern Applications",
+        "description": "APIs power modern products. Learn the most common risks and how to secure your endpoints effectively.",
+        "author": "Elena Rodriguez",
+        "readTime": "12 min read",
+        "tableOfContents": "Table of Contents",
+        "shareThisArticle": "Share this article",
+        "share": "Share",
+        "save": "Save",
+        "sections": {
+          "introduction": {
+            "title": "Why APIs are a prime target",
+            "content": "APIs connect systems, partners, and apps. Misconfigurations, weak auth, and missing validation lead to high-impact breaches. This guide highlights what to fix first.",
+            "keyTakeaway": {
+              "title": "Key takeaway",
+              "content": "Strong authorization and continuous testing are the backbone of API security."
+            },
+            "quote": "If you don’t test your APIs, attackers will."
+          },
+          "commonAttackVectors": {
+            "title": "Common API attack vectors",
+            "items": [
+              "Broken Object Level Authorization (BOLA)",
+              "Weak authentication and session handling",
+              "Missing rate limits and endpoint abuse",
+              "Mass assignment and excessive data exposure",
+              "Injection in query parameters",
+              "Server-Side Request Forgery (SSRF)"
+            ]
+          },
+          "impactAnalysis": {
+            "title": "Impact analysis",
+            "content": "API flaws often expose structured data directly. The impact is especially high for personal data and customer records.",
+            "statistics": {
+              "title": "Key facts",
+              "averageCost": {
+                "value": "45%",
+                "label": "Apps with API auth gaps"
+              },
+              "identificationTime": {
+                "value": "3–6 months",
+                "label": "Average time to find API bugs"
+              },
+              "multipleBreaches": {
+                "value": "BOLA",
+                "label": "Most common OWASP API Top 10 issue"
+              }
+            }
+          },
+          "mitigationStrategies": {
+            "title": "Mitigation strategies",
+            "content": "Secure APIs require technical controls and governance.",
+            "essentialPractices": {
+              "title": "Best practices",
+              "items": [
+                "Use OAuth2/OIDC with short-lived tokens",
+                "Enforce object-level authorization",
+                "Validate schemas for requests/responses",
+                "Enable rate limiting and abuse protection",
+                "Secure secrets and API keys",
+                "Log and monitor per endpoint",
+                "Automate security tests in CI/CD",
+                "Run regular API pentests"
+              ]
+            }
+          },
+          "conclusion": {
+            "title": "Conclusion",
+            "content1": "APIs are business-critical and need the same protection as core systems.",
+            "content2": "A dedicated API pentest uncovers auth and access flaws before attackers do."
+          }
+        },
+        "tags": [
+          "APISecurity",
+          "OAuth",
+          "BOLA",
+          "OWASPAPI",
+          "RateLimiting",
+          "Pentest"
+        ],
+        "cta": {
+          "title": "Test your APIs",
+          "description": "We assess your APIs against OWASP API Top 10 and retest fixes.",
+          "emailPlaceholder": "Enter email",
+          "buttonText": "Request API pentest",
+          "disclaimer": "No spam, unsubscribe anytime"
+        },
+        "relatedArticles": {
+          "title": "Related articles",
+          "articles": [
+            {
+              "title": "Understanding SQL Injection: A Deep Dive into Database Security",
+              "description": "How SQLi happens and how to prevent it.",
+              "category": "VULNERABILITIES",
+              "readTime": "8 min read",
+              "readMore": "Read article →"
+            },
+            {
+              "title": "Cloud Security Checklist: AWS, Azure, and GCP",
+              "description": "Practical guardrails for secure cloud architecture.",
+              "category": "GUIDES",
+              "readTime": "15 min read",
+              "readMore": "Read article →"
+            }
+          ]
+        },
+        "authorBio": {
+          "name": "Elena Rodriguez",
+          "role": "API Security Specialist",
+          "bio": "Specializes in API threat modeling, OAuth security, and secure integrations."
+        },
+        "mobileActions": {
+          "enjoyedArticle": "Enjoyed this article?",
+          "shareWithNetwork": "Share with your network",
+          "getHelp": "Request API pentest"
+        },
+        "toasts": {
+          "linkCopied": "Link copied to clipboard!",
+          "consultationNotImplemented": "Consultation request functionality is not implemented yet.",
+          "saveNotImplemented": "Save functionality is not implemented yet.",
+          "invalidEmail": "Please enter a valid email address.",
+          "emailSent": "Thanks! Your request has been sent.",
+          "emailFailed": "Sending failed. Please try again."
+        }
+      },
+      "mobileAppSecurityDetail": {
+        "backToBlog": "Back to Blog",
+        "shareArticle": "Share Article",
+        "bookmarkArticle": "Bookmark Article",
+        "category": "MOBILE SECURITY",
+        "date": "Nov 22, 2024",
+        "title": "Mobile App Security: iOS vs Android Threat Landscape",
+        "description": "Mobile apps handle sensitive data. Learn common weaknesses and how to secure iOS and Android apps effectively.",
+        "author": "James Anderson",
+        "readTime": "15 min read",
+        "tableOfContents": "Table of Contents",
+        "shareThisArticle": "Share this article",
+        "share": "Share",
+        "save": "Save",
+        "sections": {
+          "introduction": {
+            "title": "Mobile security goes beyond the app store",
+            "content": "Mobile apps are tightly coupled with backend APIs. Weak storage, transport, or auth can lead to major data exposure. We compare iOS and Android and highlight the key security factors.",
+            "keyTakeaway": {
+              "title": "Key takeaway",
+              "content": "Most mobile risk sits in insecure data storage and API communication—not the UI."
+            },
+            "quote": "A secure app protects the full data chain behind it."
+          },
+          "commonAttackVectors": {
+            "title": "Common weaknesses",
+            "items": [
+              "Insecure storage of tokens and PII",
+              "Weak TLS configuration to APIs",
+              "Client-side trust without server validation",
+              "Jailbreak/root bypass and runtime tampering",
+              "Weak authentication and session handling",
+              "Insecure third-party SDKs"
+            ]
+          },
+          "impactAnalysis": {
+            "title": "Impact analysis",
+            "content": "Mobile flaws often lead to account takeover, data leakage, and reputational damage—especially in finance and healthcare.",
+            "statistics": {
+              "title": "Key facts",
+              "averageCost": {
+                "value": "60%",
+                "label": "Apps with insecure storage"
+              },
+              "identificationTime": {
+                "value": "90 days",
+                "label": "Average time to detect mobile bugs"
+              },
+              "multipleBreaches": {
+                "value": "PII",
+                "label": "Most common exposed data type"
+              }
+            }
+          },
+          "mitigationStrategies": {
+            "title": "Mitigation strategies",
+            "content": "Mobile security requires both app and backend protection.",
+            "essentialPractices": {
+              "title": "Best practices",
+              "items": [
+                "Use Keychain/Keystore for secure storage",
+                "Harden TLS and validate certificates",
+                "Validate critical actions server-side",
+                "Apply obfuscation and anti-tampering",
+                "Enforce MFA and session timeouts",
+                "Keep SDKs and libraries up to date",
+                "Threat model using MASVS",
+                "Run regular mobile app pentests"
+              ]
+            }
+          },
+          "conclusion": {
+            "title": "Conclusion",
+            "content1": "Mobile security directly impacts trust and compliance.",
+            "content2": "A mobile app pentest exposes weaknesses before users or attackers do."
+          }
+        },
+        "tags": [
+          "MobileSecurity",
+          "iOS",
+          "Android",
+          "MASVS",
+          "SecureStorage",
+          "Pentest"
+        ],
+        "cta": {
+          "title": "Test mobile apps",
+          "description": "We assess iOS and Android apps including API backends.",
+          "emailPlaceholder": "Enter email",
+          "buttonText": "Request mobile app pentest",
+          "disclaimer": "No spam, unsubscribe anytime"
+        },
+        "relatedArticles": {
+          "title": "Related articles",
+          "articles": [
+            {
+              "title": "API Security Best Practices for Modern Applications",
+              "description": "Avoid critical API flaws.",
+              "category": "GUIDES",
+              "readTime": "12 min read",
+              "readMore": "Read article →"
+            },
+            {
+              "title": "Cloud Security Checklist: AWS, Azure, and GCP",
+              "description": "A practical view of secure cloud architecture.",
+              "category": "GUIDES",
+              "readTime": "15 min read",
+              "readMore": "Read article →"
+            }
+          ]
+        },
+        "authorBio": {
+          "name": "James Anderson",
+          "role": "Mobile Security Consultant",
+          "bio": "Specializes in iOS/Android pentests, secure app architecture, and MASVS reviews."
+        },
+        "mobileActions": {
+          "enjoyedArticle": "Enjoyed this article?",
+          "shareWithNetwork": "Share with your network",
+          "getHelp": "Request mobile app pentest"
+        },
+        "toasts": {
+          "linkCopied": "Link copied to clipboard!",
+          "consultationNotImplemented": "Consultation request functionality is not implemented yet.",
+          "saveNotImplemented": "Save functionality is not implemented yet.",
+          "invalidEmail": "Please enter a valid email address.",
+          "emailSent": "Thanks! Your request has been sent.",
+          "emailFailed": "Sending failed. Please try again."
+        }
+      },
+      "cloudSecurityDetail": {
+        "backToBlog": "Back to Blog",
+        "shareArticle": "Share Article",
+        "bookmarkArticle": "Bookmark Article",
+        "category": "CLOUD SECURITY",
+        "date": "Nov 18, 2024",
+        "title": "Cloud Security Fundamentals: AWS, Azure, and GCP",
+        "description": "Cloud security starts with IAM and ends with logging. Learn common cloud risks and how to mitigate them.",
+        "author": "Maya Patel",
+        "readTime": "14 min read",
+        "tableOfContents": "Table of Contents",
+        "shareThisArticle": "Share this article",
+        "share": "Share",
+        "save": "Save",
+        "sections": {
+          "introduction": {
+            "title": "Understanding shared responsibility",
+            "content": "Cloud providers secure the platform, but configuration, identities, and data remain your responsibility. That’s where most incidents happen. Here’s what to fix across AWS, Azure, and GCP.",
+            "keyTakeaway": {
+              "title": "Key takeaway",
+              "content": "Most cloud risk comes from misconfiguration and over-permissive IAM—not the cloud itself."
+            },
+            "quote": "Cloud security is a discipline of architecture, process, and continuous testing."
+          },
+          "commonAttackVectors": {
+            "title": "Typical cloud risks",
+            "items": [
+              "Publicly exposed storage buckets",
+              "Overly broad IAM roles and policies",
+              "Missing network segmentation",
+              "Open management ports and admin interfaces",
+              "Exposed secrets in CI/CD pipelines",
+              "Insecure container and Kubernetes defaults"
+            ]
+          },
+          "impactAnalysis": {
+            "title": "Impact analysis",
+            "content": "Cloud misconfigurations often lead to large-scale data exposure without the need for exploits.",
+            "statistics": {
+              "title": "Key facts",
+              "averageCost": {
+                "value": "70%",
+                "label": "Cloud incidents from misconfigurations"
+              },
+              "identificationTime": {
+                "value": "120 days",
+                "label": "Average time to detect exposure"
+              },
+              "multipleBreaches": {
+                "value": "IAM",
+                "label": "Most common root cause"
+              }
+            }
+          },
+          "mitigationStrategies": {
+            "title": "Mitigation strategies",
+            "content": "Cloud security requires guardrails and continuous control.",
+            "essentialPractices": {
+              "title": "Best practices",
+              "items": [
+                "Harden IAM with least privilege and MFA",
+                "Enforce baselines via infrastructure as code",
+                "Use CSPM for continuous compliance",
+                "Encrypt data in transit and at rest",
+                "Centralize logging and SIEM integration",
+                "Segment networks and adopt zero trust",
+                "Manage secrets securely in CI/CD",
+                "Perform regular cloud pentests"
+              ]
+            }
+          },
+          "conclusion": {
+            "title": "Conclusion",
+            "content1": "Cloud is secure when configuration, access, and monitoring are done right.",
+            "content2": "A cloud pentest uncovers misconfigurations and access risks before attackers do."
+          }
+        },
+        "tags": [
+          "CloudSecurity",
+          "IAM",
+          "Misconfiguration",
+          "AWS",
+          "Azure",
+          "GCP"
+        ],
+        "cta": {
+          "title": "Assess cloud security",
+          "description": "We test AWS, Azure, and GCP across IAM, network, and storage.",
+          "emailPlaceholder": "Enter email",
+          "buttonText": "Request cloud assessment",
+          "disclaimer": "No spam, unsubscribe anytime"
+        },
+        "relatedArticles": {
+          "title": "Related articles",
+          "articles": [
+            {
+              "title": "API Security Best Practices for Modern Applications",
+              "description": "BOLA, auth, and rate limiting in focus.",
+              "category": "GUIDES",
+              "readTime": "12 min read",
+              "readMore": "Read article →"
+            },
+            {
+              "title": "Zero-Day Vulnerabilities: Detection and Response Strategies",
+              "description": "Resilience against unknown exploits.",
+              "category": "VULNERABILITIES",
+              "readTime": "10 min read",
+              "readMore": "Read article →"
+            }
+          ]
+        },
+        "authorBio": {
+          "name": "Maya Patel",
+          "role": "Cloud Security Lead",
+          "bio": "Specializes in cloud architectures, IAM hardening, and compliance across AWS, Azure, and GCP."
+        },
+        "mobileActions": {
+          "enjoyedArticle": "Enjoyed this article?",
+          "shareWithNetwork": "Share with your network",
+          "getHelp": "Request cloud assessment"
+        },
+        "toasts": {
+          "linkCopied": "Link copied to clipboard!",
+          "consultationNotImplemented": "Consultation request functionality is not implemented yet.",
+          "saveNotImplemented": "Save functionality is not implemented yet.",
+          "invalidEmail": "Please enter a valid email address.",
+          "emailSent": "Thanks! Your request has been sent.",
+          "emailFailed": "Sending failed. Please try again."
+        }
+      },
+      "socialEngineeringDetail": {
+        "backToBlog": "Back to Blog",
+        "shareArticle": "Share Article",
+        "bookmarkArticle": "Bookmark Article",
+        "category": "SECURITY AWARENESS",
+        "date": "Nov 15, 2024",
+        "title": "Social Engineering: The Human Factor in Cybersecurity",
+        "description": "Technology is only part of security. Learn common social engineering attacks and how to defend effectively.",
+        "author": "Dr. Sarah Mitchell",
+        "readTime": "9 min read",
+        "tableOfContents": "Table of Contents",
+        "shareThisArticle": "Share this article",
+        "share": "Share",
+        "save": "Save",
+        "sections": {
+          "introduction": {
+            "title": "Why humans are the preferred target",
+            "content": "Attackers bypass technical controls by exploiting trust. Phishing, vishing, and pretexting succeed because people are easier to manipulate than systems.",
+            "keyTakeaway": {
+              "title": "Key takeaway",
+              "content": "Awareness is not a once-a-year training—it's a continuous, measurable program."
+            },
+            "quote": "The best firewall can’t stop a single click."
+          },
+          "commonAttackVectors": {
+            "title": "Common social engineering methods",
+            "items": [
+              "Spearphishing with realistic senders",
+              "Vishing (phone fraud) with pressure tactics",
+              "Smishing via SMS or chat links",
+              "Pretexting and identity spoofing",
+              "Baiting via USB or downloads",
+              "MFA fatigue and push bombing"
+            ]
+          },
+          "impactAnalysis": {
+            "title": "Impact analysis",
+            "content": "Social engineering often leads to initial access, credential theft, and business email compromise with direct financial loss.",
+            "statistics": {
+              "title": "Key facts",
+              "averageCost": {
+                "value": "85%",
+                "label": "Incidents involving the human factor"
+              },
+              "identificationTime": {
+                "value": "30 days",
+                "label": "Average time to detect BEC"
+              },
+              "multipleBreaches": {
+                "value": "Phishing",
+                "label": "Most common initial access vector"
+              }
+            }
+          },
+          "mitigationStrategies": {
+            "title": "Mitigation strategies",
+            "content": "Protection requires training, process, and technical support.",
+            "essentialPractices": {
+              "title": "Best practices",
+              "items": [
+                "Regular security-awareness training",
+                "Phishing simulations with KPIs",
+                "Strong MFA and conditional access",
+                "Email security (SPF/DKIM/DMARC)",
+                "Clear approval workflows for payments",
+                "Simple reporting paths for suspicious emails",
+                "Least privilege and credential hygiene",
+                "Red-team exercises and social engineering tests"
+              ]
+            }
+          },
+          "conclusion": {
+            "title": "Conclusion",
+            "content1": "Social engineering is predictable—and defendable.",
+            "content2": "With training, testing, and clear processes, you dramatically reduce risk."
+          }
+        },
+        "tags": [
+          "SocialEngineering",
+          "Phishing",
+          "Awareness",
+          "MFA",
+          "RedTeam",
+          "HumanFactor"
+        ],
+        "cta": {
+          "title": "Test social engineering resilience",
+          "description": "We run awareness checks and controlled social engineering tests.",
+          "emailPlaceholder": "Enter email",
+          "buttonText": "Request awareness test",
+          "disclaimer": "No spam, unsubscribe anytime"
+        },
+        "relatedArticles": {
+          "title": "Related articles",
+          "articles": [
+            {
+              "title": "Zero-Day Vulnerabilities: Detection and Response Strategies",
+              "description": "Resilience through detection and response.",
+              "category": "VULNERABILITIES",
+              "readTime": "10 min read",
+              "readMore": "Read article →"
+            },
+            {
+              "title": "Cybersecurity for SMEs: When You Really Need a Pentest",
+              "description": "A practical guide for organizations.",
+              "category": "GUIDES",
+              "readTime": "13 min read",
+              "readMore": "Read article →"
+            }
+          ]
+        },
+        "authorBio": {
+          "name": "Dr. Sarah Mitchell",
+          "role": "Security Awareness Lead",
+          "bio": "Specializes in human-risk programs, phishing resilience, and security culture."
+        },
+        "mobileActions": {
+          "enjoyedArticle": "Enjoyed this article?",
+          "shareWithNetwork": "Share with your network",
+          "getHelp": "Request awareness test"
+        },
+        "toasts": {
+          "linkCopied": "Link copied to clipboard!",
+          "consultationNotImplemented": "Consultation request functionality is not implemented yet.",
+          "saveNotImplemented": "Save functionality is not implemented yet.",
+          "invalidEmail": "Please enter a valid email address.",
+          "emailSent": "Thanks! Your request has been sent.",
+          "emailFailed": "Sending failed. Please try again."
+        }
+      },
+      "gdprPentestDetail": {
+        "backToBlog": "Back to Blog",
+        "shareArticle": "Share Article",
+        "bookmarkArticle": "Bookmark Article",
+        "category": "PENTEST",
+        "date": "Feb 11, 2026",
+        "title": "GDPR & Penetration Testing: How They Work Together and Why It Matters",
+        "description": "GDPR requires appropriate technical measures—penetration tests prove they work. Learn how pentests support Article 32, reduce breach risk, and make data protection real.",
+        "author": "Sodu Secure Team",
+        "readTime": "12 min read",
+        "tableOfContents": "Table of Contents",
+        "shareThisArticle": "Share this article",
+        "share": "Share",
+        "save": "Save",
+        "sections": {
+          "introduction": {
+            "title": "Why GDPR without security is incomplete",
+            "content": "GDPR is not just paperwork. Article 32 calls for \"appropriate technical and organizational measures\". Penetration testing turns that requirement into evidence by proving whether systems are truly resilient. This article explains how GDPR and pentests belong together—and why the combination is the most effective protection for personal data.",
+            "keyTakeaway": {
+              "title": "Key takeaway",
+              "content": "Penetration testing is not explicitly mandated by GDPR, but it is the strongest proof that your security controls are effective. Validated testing reduces liability and regulatory risk."
+            },
+            "quote": "Data protection without technical security is only a promise. A pentest makes that promise verifiable."
+          },
+          "commonAttackVectors": {
+            "title": "Where GDPR risks typically arise",
+            "items": [
+              "Overly broad or missing access controls (RBAC)",
+              "Insecure APIs with weak authentication or authorization",
+              "Unencrypted personal data in databases or backups",
+              "Cloud misconfigurations (public buckets or exposed services)",
+              "Weak session management and poor MFA enforcement",
+              "Insufficient logging and monitoring of data access"
+            ]
+          },
+          "impactAnalysis": {
+            "title": "Impact analysis",
+            "content": "A data breach is not only a technical incident. It triggers notification duties, potential fines, and long-term trust damage. Pentests surface these risks early and help you reduce them with evidence.",
+            "statistics": {
+              "title": "Relevant GDPR facts",
+              "averageCost": {
+                "value": "Up to €20M / 4% revenue",
+                "label": "Maximum GDPR fines"
+              },
+              "identificationTime": {
+                "value": "72 hours",
+                "label": "Breach notification window"
+              },
+              "multipleBreaches": {
+                "value": "Loss of trust",
+                "label": "Direct business impact"
+              }
+            }
+          },
+          "mitigationStrategies": {
+            "title": "A GDPR-aligned security strategy with pentests",
+            "content": "The most effective path to compliance is a risk-based security program. Penetration testing complements technical controls, provides proof, and prioritizes remediation.",
+            "essentialPractices": {
+              "title": "Best practices",
+              "items": [
+                "Classify data and map data flows to identify personal data",
+                "Define pentest scope based on Article 32 and risk assessment",
+                "Run regular web, API, and infrastructure pentests with retesting",
+                "Verify strong encryption for data in transit and at rest",
+                "Validate least-privilege roles and authorization paths",
+                "Prioritize findings, remediate, and document with SLAs",
+                "Review incident response and GDPR-grade logging",
+                "Produce auditable reports as compliance evidence"
+              ]
+            }
+          },
+          "conclusion": {
+            "title": "Conclusion",
+            "content1": "GDPR and penetration testing are inseparable: the regulation expects effective technical safeguards, and pentests prove whether they work in practice.",
+            "content2": "With a structured test plan, you gain clear priorities, measurable improvements, and defensible compliance evidence. Sodu Secure helps you design GDPR-focused pentests tailored to your systems."
+          }
+        },
+        "tags": [
+          "GDPR",
+          "DSGVO",
+          "Penetration Testing",
+          "Data Protection",
+          "Article 32",
+          "Compliance"
+        ],
+        "cta": {
+          "title": "Is your GDPR security defensible?",
+          "description": "Get your systems tested and receive a report that proves security and compliance.",
+          "emailPlaceholder": "Enter email",
+          "buttonText": "Request GDPR-focused pentest",
+          "disclaimer": "No spam, unsubscribe anytime"
+        },
+        "relatedArticles": {
+          "title": "Related articles",
+          "articles": [
+            {
+              "title": "OWASP Top 10 2026: New Risks, New Priorities",
+              "description": "Which web risks matter most in 2026—and how to prioritize them.",
+              "category": "VULNERABILITIES",
+              "readTime": "12 min read",
+              "readMore": "Read article →"
+            },
+            {
+              "title": "API Security Best Practices for 2024",
+              "description": "Practical steps for secure APIs and strong access control.",
+              "category": "GUIDES",
+              "readTime": "10 min read",
+              "readMore": "Read article →"
+            }
+          ]
+        },
+        "authorBio": {
+          "name": "Sodu Secure Team",
+          "role": "Security & Compliance Team",
+          "bio": "We combine penetration testing with data-protection expertise to make security measurable and compliance defensible."
+        },
+        "mobileActions": {
+          "enjoyedArticle": "Enjoyed this article?",
+          "shareWithNetwork": "Share with your network",
+          "getHelp": "Request GDPR pentest"
+        },
+        "toasts": {
+          "linkCopied": "Link copied to clipboard!",
+          "consultationNotImplemented": "Consultation request functionality is not implemented yet.",
+          "saveNotImplemented": "Save functionality is not implemented yet.",
+          "invalidEmail": "Please enter a valid email address.",
+          "emailSent": "Thanks! Your request has been sent.",
+          "emailFailed": "Sending failed. Please try again."
+        }
+      },
             "AppLocker and AMSI Bypasses"
           ]
         },
@@ -2755,64 +3665,64 @@
       "items": [
         {
           "category": "VULNERABILITIES",
-          "title": "OWASP Top 10 2024: What Changed and Why It Matters",
-          "description": "A deep dive into the latest OWASP Top 10 vulnerabilities and how they affect modern web applications.",
-          "author": "Sodu Secure Team",
+          "title": "Understanding SQL Injection: A Deep Dive into Database Security",
+          "description": "SQL injection remains one of the most dangerous web vulnerabilities. Learn common attack patterns, real impact, and proven defenses.",
+          "author": "Dr. Sarah Mitchell",
           "readTime": "8 min"
-        },
-        {
-          "category": "GUIDES",
-          "title": "API Security Best Practices for 2024",
-          "description": "Essential strategies to secure your APIs against modern threats and vulnerabilities.",
-          "author": "Sarah Dell",
-          "readTime": "10 min"
-        },
-        {
-          "category": "PENTEST",
-          "title": "Red Team vs Penetration Testing: Which Do You Need?",
-          "description": "Understanding the differences between red team operations and traditional penetration testing.",
-          "author": "Marcus Johnson",
-          "readTime": "6 min"
-        },
-        {
-          "category": "CYBER NEWS",
-          "title": "The Rise of Supply Chain Attacks: How to Protect Your Business",
-          "description": "Recent trends in supply chain attacks and practical steps to mitigate these sophisticated threats.",
-          "author": "Priya Sharma",
-          "readTime": "12 min"
-        },
-        {
-          "category": "GUIDES",
-          "title": "Cloud Security Checklist: AWS, Azure, and GCP",
-          "description": "A comprehensive checklist for securing your cloud infrastructure across major providers.",
-          "author": "David Kim",
-          "readTime": "15 min"
         },
         {
           "category": "VULNERABILITIES",
           "title": "Zero-Day Vulnerabilities: Detection and Response Strategies",
-          "description": "How to detect, respond to, and mitigate zero-day vulnerabilities in your organization.",
-          "author": "Elena Volkov",
+          "description": "Zero-days are the most dangerous vulnerabilities. Learn how to detect early signals, test response plans, and reduce impact.",
+          "author": "Marcus Chen",
+          "readTime": "10 min"
+        },
+        {
+          "category": "GUIDES",
+          "title": "API Security Best Practices for Modern Applications",
+          "description": "APIs power modern products. Learn the most common risks and how to secure your endpoints effectively.",
+          "author": "Elena Rodriguez",
+          "readTime": "12 min"
+        },
+        {
+          "category": "GUIDES",
+          "title": "Mobile App Security: iOS vs Android Threat Landscape",
+          "description": "Mobile apps handle sensitive data. Learn common weaknesses and how to secure iOS and Android apps effectively.",
+          "author": "James Anderson",
+          "readTime": "15 min"
+        },
+        {
+          "category": "GUIDES",
+          "title": "Cloud Security Fundamentals: AWS, Azure, and GCP",
+          "description": "Cloud security starts with IAM and ends with logging. Learn common cloud risks and how to mitigate them.",
+          "author": "Maya Patel",
+          "readTime": "14 min"
+        },
+        {
+          "category": "GUIDES",
+          "title": "Social Engineering: The Human Factor in Cybersecurity",
+          "description": "Technology is only part of security. Learn common social engineering attacks and how to defend effectively.",
+          "author": "Dr. Sarah Mitchell",
           "readTime": "9 min"
         },
         {
           "category": "VULNERABILITIES",
           "title": "React 4 Shell: RCE Vulnerability and Remediation Strategies",
-          "description": "A detailed analysis of CVE-2024-50980 in React 4 Shell – detection, impact assessment, and secure update paths.",
+          "description": "A comprehensive security analysis of CVE-2024-50980 – understand the risks, detect threats in your environment, and implement secure update paths.",
           "author": "Sodu Secure Team",
           "readTime": "11 min"
         },
         {
           "category": "CYBER NEWS",
           "title": "OpenClaw Security Risks: Understanding AI Chatbot Vulnerabilities",
-          "description": "The hidden security risks of integrating OpenClaw and other AI bots – prompt injection, data exfiltration, and mitigation techniques.",
+          "description": "A detailed analysis of security risks from integrating OpenClaw and other AI chatbots – prompt injection, data exfiltration, and practical mitigation strategies.",
           "author": "Sodu Secure Team",
           "readTime": "10 min"
         },
         {
           "category": "GUIDES",
           "title": "Cybersecurity for SMEs: When You Really Need a Pentest",
-          "description": "A practical guide for small and medium enterprises – why and when professional security testing becomes critical.",
+          "description": "A practical guide for small and medium enterprises – when penetration testing is necessary, what types exist, and how they help your business.",
           "author": "Sodu Secure Team",
           "readTime": "13 min"
         },
@@ -2826,9 +3736,16 @@
         {
           "category": "PENTEST",
           "title": "Beyond OSCP: Which Offensive Security Certification is Right for You?",
-          "description": "After OSCP, the journey continues – OSEP, OSWE, OSED and more. A detailed guide to advanced Offensive Security certifications.",
+          "description": "After OSCP, the journey continues – OSEP, OSWE, OSED and more. A detailed guide to advanced Offensive Security certifications and how to level up your penetration testing career.",
           "author": "Sodu Secure Team",
           "readTime": "14 min"
+        },
+        {
+          "category": "PENTEST",
+          "title": "GDPR & Penetration Testing: How They Work Together and Why It Matters",
+          "description": "GDPR requires appropriate technical measures—penetration tests prove they work. Learn how pentests support Article 32, reduce breach risk, and make data protection real.",
+          "author": "Sodu Secure Team",
+          "readTime": "12 min"
         }
       ]
     }
