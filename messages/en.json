@@ -3801,19 +3801,19 @@
           "name": "Kerim Koc",
           "role": "Penetration Tester",
           "certifications": ["OSCP", "Comptia Security +"],
-          "image": "/images/teams/kerim-koc.jpg"
+          "image": "/images/teams/kerim-koc.jpeg"
         },
         {
           "name": "Fouad Foda",
           "role": "Application Security Expert",
           "certifications": ["OSCP"],
-          "image": "/images/teams/fouad-foda.jpg"
+          "image": "/images/teams/fouad-foda.jpeg"
         },
         {
           "name": "Burak S.",
           "role": "Cloud Security Specialist",
           "certifications": ["AWS Security", "Azure Security"],
-          "image": "/images/teams/burak-s.jpg"
+          "image": "/images/teams/burak-s.jpeg"
         }
       ]
     },
