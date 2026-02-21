@@ -8,12 +8,13 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAuthRoute = pathname?.startsWith('/auth');
   const isDashboardRoute = pathname?.startsWith('/my-dashboard');
+  const isLandingPage = pathname?.startsWith('/berlin-kmu-pilot');
 
   return (
     <>
-      {!isAuthRoute && !isDashboardRoute && <Header />}
+      {!isAuthRoute && !isDashboardRoute && !isLandingPage && <Header />}
       {children}
-      {!isAuthRoute && !isDashboardRoute && <Footer />}
+      {!isAuthRoute && !isDashboardRoute && !isLandingPage && <Footer />}
     </>
   );
 }

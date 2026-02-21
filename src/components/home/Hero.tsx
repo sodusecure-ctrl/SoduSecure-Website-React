@@ -79,6 +79,18 @@ export default function Hero() {
               </Button>
             </div>
 
+            {/* Pilot Program CTA */}
+            <div className="animate-fade-in" style={{ animationDelay: '0.45s' }}>
+              <button
+                onClick={() => router.push('/berlin-kmu-pilot')}
+                className="inline-flex items-center gap-2 border border-red-200 bg-red-50 hover:bg-red-100 text-red-700 font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 hover:scale-105 group"
+              >
+                <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse flex-shrink-0" />
+                🔐 Gratis KMU-Pentest Berlin – 6 Plätze frei
+                <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+              </button>
+            </div>
+
             {/* Certifications */}
             <div className="space-y-3 sm:space-y-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
               <h3 className="text-red-600 font-semibold text-xs sm:text-sm uppercase tracking-wider">

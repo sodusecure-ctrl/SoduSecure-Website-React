@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static routes
   const staticRoutes = [
     '',
+    '/berlin-kmu-pilot',
     '/about',
     '/contact',
     '/careers',
@@ -36,8 +37,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     routes.push({
       url: `${baseUrl}${route}`,
       lastModified: new Date(),
-      changeFrequency: route === '' ? 'daily' : 'weekly',
-      priority: route === '' ? 1.0 : 0.8,
+      changeFrequency: route === '' ? 'daily' : route === '/berlin-kmu-pilot' ? 'daily' : 'weekly',
+      priority: route === '' ? 1.0 : route === '/berlin-kmu-pilot' ? 0.95 : 0.8,
     });
   });
 

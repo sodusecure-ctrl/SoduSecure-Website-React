@@ -5,6 +5,7 @@ import HowItWorksSection from '../components/home/HowItWorksSection';
 import SecurityServices from '../components/home/SecurityServices';
 import TestimonialsCarousel from '../components/home/TestimonialsCarousel';
 import WhyChooseSection from '../components/home/WhyChooseSection';
+import Link from 'next/link';
 
 const baseUrl = 'https://sodusecure.com';
 
@@ -88,6 +89,20 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+      {/* Pilot Program Announcement Banner */}
+      <Link href="/berlin-kmu-pilot" className="block w-full bg-gray-900 hover:bg-gray-800 transition-colors duration-200 group">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-center gap-3 flex-wrap">
+          <span className="inline-flex items-center gap-1.5 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full flex-shrink-0">
+            🔐 Neu
+          </span>
+          <span className="text-white text-sm font-medium text-center">
+            Berlin KMU Cybersecurity Pilotprogramm 2026 &ndash; 6 kostenfreie Plätze verfügbar
+          </span>
+          <span className="text-red-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0">
+            Jetzt bewerben →
+          </span>
+        </div>
+      </Link>
       <Hero />
       <SecurityServices />
       <WhyChooseSection />
