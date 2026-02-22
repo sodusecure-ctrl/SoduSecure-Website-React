@@ -884,6 +884,34 @@
               { "id": 3, "name": "Onsite-Training", "des": "Vor-Ort-Trainings für Ihre Teams", "price": "€1,800", "type": "premium" }
             ]
           }
+        },
+        {
+          "title": "KMU Sicherheits-Komplettpaket",
+          "description": "Vollständiges Security-Paket für KMUs – externer Pentest, Phishing-Kampagne, Web-Präsenz & optional interner AD-Pentest",
+          "features": [
+            "Externer Pentest (alle öffentlichen IPs)",
+            "Phishing-Kampagne komplett",
+            "Web-Präsenz Schnelltest oder Komplett-Pentest",
+            "Optional: Interner Pentest / Active Directory"
+          ],
+          "variant": {
+            "title": "KMU Paket konfigurieren",
+            "des": "Wählen Sie das passende Sicherheitspaket für Ihr Unternehmen",
+            "variantList": [
+              { "name": "Basis", "price": "€8,000", "duration": "3–4 Wochen", "features": ["Externer Pentest", "Phishing-Kampagne", "Web-Präsenz Schnelltest", "Management Summary", "Technischer Report"] },
+              { "name": "Basis + Intern", "price": "€10,500", "duration": "4–5 Wochen", "type": "popular", "features": ["Externer Pentest", "Phishing-Kampagne", "Web-Präsenz Schnelltest", "Interner Pentest / Active Directory", "Management Summary", "Technischer Report"] },
+              { "name": "Komplett", "price": "€13,000", "duration": "5–6 Wochen", "features": ["Externer Pentest", "Phishing-Kampagne", "Web Application Pentest (komplett)", "Interner Pentest / Active Directory", "Management Summary", "Technischer Report"] }
+            ]
+          },
+          "addOns": {
+            "title": "Add-ons auswählen (optional)",
+            "des": "Erweitern Sie Ihr KMU-Paket mit zusätzlichen Services",
+            "addOnList": [
+              { "id": 1, "name": "Abschlusspräsentation", "des": "Live-Präsentation der Ergebnisse für Geschäftsführung und IT-Team", "price": "€0", "type": "free" },
+              { "id": 2, "name": "Retest nach Behebung", "des": "Überprüfung der Fixes nach Abschluss der Remediation", "price": "€0", "type": "free" },
+              { "id": 3, "name": "Security Awareness Training", "des": "Ergänzendes Mitarbeiter-Training nach der Phishing-Kampagne", "price": "€1,500", "type": "premium" }
+            ]
+          }
         }
       ],
       "contactTeam": "Kontaktieren Sie unser Security-Team"

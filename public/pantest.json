@@ -343,6 +343,64 @@
             }
           ]
         }
+      },
+      "categoryFive": {
+        "name": "KMU Sicherheits-Komplettpaket",
+        "des": "Vollständiges Security-Paket für KMUs – externer Pentest, Phishing-Kampagne, Web-Präsenz & optional interner AD-Pentest",
+        "features": [
+          "Externer Pentest (öffentliche IPs & Server)",
+          "Phishing-Kampagne komplett inkl. Bericht",
+          "Web-Präsenz Schnelltest oder Komplett-Pentest",
+          "Optional: Interner Pentest / Active Directory"
+        ],
+        "variant": {
+          "title": "KMU Paket konfigurieren",
+          "des": "Wählen Sie das Paket passend zu Ihrer Infrastruktur – alle Pakete enthalten Management Summary, technischen Report und Abschlusspräsentation",
+          "variantList": [
+            {
+              "id": 1,
+              "name": "Basis",
+              "price": "8.000 €",
+              "duration": "3–4 Wochen",
+              "features": [
+                "Externer Pentest (öffentliche IPs, Server, Cloud)",
+                "Phishing-Kampagne inkl. Auswertung & Awareness-Report",
+                "Web-Präsenz Schnelltest (OWASP Top 10)",
+                "Management Summary + technischer Report",
+                "Abschlusspräsentation (Remote oder vor Ort)"
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Basis + Intern",
+              "price": "10.500 €",
+              "duration": "4–5 Wochen",
+              "type": "popular",
+              "features": [
+                "Externer Pentest (öffentliche IPs, Server, Cloud)",
+                "Phishing-Kampagne inkl. Auswertung & Awareness-Report",
+                "Web-Präsenz Schnelltest (OWASP Top 10)",
+                "Interner Pentest / Active Directory Analyse",
+                "Management Summary + technischer Report",
+                "Abschlusspräsentation (Remote oder vor Ort)"
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Komplett",
+              "price": "13.000 €",
+              "duration": "5–6 Wochen",
+              "features": [
+                "Externer Pentest (öffentliche IPs, Server, Cloud)",
+                "Phishing-Kampagne inkl. Auswertung & Awareness-Report",
+                "Web Application Pentest komplett (manuell, OWASP Top 10)",
+                "Interner Pentest / Active Directory Analyse",
+                "Management Summary + technischer Report",
+                "Abschlusspräsentation (Remote oder vor Ort)"
+              ]
+            }
+          ]
+        }
       }
     }
   }

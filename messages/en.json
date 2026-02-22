@@ -884,6 +884,34 @@
               { "id": 3, "name": "On-site Training", "des": "In-person training sessions for your teams", "price": "€1,800", "type": "premium" }
             ]
           }
+        },
+        {
+          "title": "SME Security Complete Package",
+          "description": "Complete security package for SMEs – external pentest, phishing campaign, web presence & optional internal AD pentest",
+          "features": [
+            "External pentest (all public IPs)",
+            "Full phishing campaign",
+            "Web presence quick test or full pentest",
+            "Optional: Internal pentest / Active Directory"
+          ],
+          "variant": {
+            "title": "Configure SME Package",
+            "des": "Choose the right security package for your company",
+            "variantList": [
+              { "name": "Basic", "price": "€8,000", "duration": "3–4 weeks", "features": ["External pentest", "Phishing campaign", "Web presence quick test", "Management summary", "Technical report"] },
+              { "name": "Basic + Internal", "price": "€10,500", "duration": "4–5 weeks", "type": "popular", "features": ["External pentest", "Phishing campaign", "Web presence quick test", "Internal pentest / Active Directory", "Management summary", "Technical report"] },
+              { "name": "Complete", "price": "€13,000", "duration": "5–6 weeks", "features": ["External pentest", "Phishing campaign", "Full web application pentest", "Internal pentest / Active Directory", "Management summary", "Technical report"] }
+            ]
+          },
+          "addOns": {
+            "title": "Select Add-ons (Optional)",
+            "des": "Enhance your SME package with additional services",
+            "addOnList": [
+              { "id": 1, "name": "Final Presentation", "des": "Live presentation of findings for management and IT team", "price": "€0", "type": "free" },
+              { "id": 2, "name": "Post-remediation Retest", "des": "Verification testing after fixes have been applied", "price": "€0", "type": "free" },
+              { "id": 3, "name": "Security Awareness Training", "des": "Supplementary employee training following the phishing campaign", "price": "€1,500", "type": "premium" }
+            ]
+          }
         }
       ],
       "contactTeam": "Contact our security team"

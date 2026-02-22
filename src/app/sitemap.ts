@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/case-studies',       lastModified: '2026-01-30', changeFreq: 'weekly',  priority: 0.8  },
     { path: '/privacy',            lastModified: '2025-12-23', changeFreq: 'yearly',  priority: 0.3  },
     { path: '/terms',              lastModified: '2025-12-23', changeFreq: 'yearly',  priority: 0.3  },
+    { path: '/services/sme-packages', lastModified: '2026-02-22', changeFreq: 'weekly',  priority: 0.95 },
   ];
 
   // Service pages
@@ -28,7 +29,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services/cloud-devops-testing',     lastModified: '2025-12-01' },
     { path: '/services/security-audit',           lastModified: '2025-12-01' },
     { path: '/services/vulnerability-assessment', lastModified: '2025-12-01' },
-    { path: '/services/sme-packages',             lastModified: '2026-01-01' },
   ];
 
   const routes: MetadataRoute.Sitemap = [];
