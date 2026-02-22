@@ -151,6 +151,12 @@ export default function Footer() {
             >
               {t('legal.terms')}
             </Link>
+            <Link
+              href="/impressum"
+              className="text-gray-400 hover:text-white transition-colors text-xs lg:text-sm py-1"
+            >
+              Impressum
+            </Link>
           </div>
 
           {/* Social Links */}

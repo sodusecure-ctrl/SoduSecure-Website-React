@@ -995,7 +995,7 @@ export default function BerlinKMUPilotPage() {
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
             <Link href="/" className="hover:text-white transition-colors">sodusecure.com</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Datenschutz</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Impressum</Link>
+            <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
             <a href={EMAIL_HREF} className="hover:text-white transition-colors">{EMAIL}</a>
           </div>
           <p className="text-xs text-center sm:text-right">© 2026 SODU Secure GmbH · Berlin</p>
