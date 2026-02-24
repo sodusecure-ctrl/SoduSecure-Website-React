@@ -3826,16 +3826,16 @@
       "subtitle": "Branchenführende Sicherheitsexperten mit bewiesenen Erfolgsbilanzen und Top-Zertifizierungen.",
       "members": [
         {
-          "name": "Kerim Koc",
+          "name": "Kerim K.",
           "role": "Pentester",
           "certifications": ["OSCP+", "Comptia Security +"],
           "image": "/images/teams/kerim-koc.jpeg"
         },
         {
-          "name": "Fouad Foda",
+          "name": "Markus F.",
           "role": "Application Security Expert",
           "certifications": ["OSCP+"],
-          "image": "/images/teams/fouad-foda.jpeg"
+          "image": ""
         },
         {
           "name": "Burak S.",

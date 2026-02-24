@@ -245,13 +245,19 @@ export default function AboutSection() {
               <div key={index} className="group">
                 <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <div className="aspect-square overflow-hidden bg-gray-100">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+                    {member.image ? (
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={1000}
+                        height={1000}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                        <span className="text-2xl font-bold text-gray-500">{member.name}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-4 sm:p-6">
                     <h3 className="text-lg sm:text-xl font-bold mb-1">{member.name}</h3>

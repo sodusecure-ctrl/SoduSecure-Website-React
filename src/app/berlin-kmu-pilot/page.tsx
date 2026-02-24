@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Shield,
   Phone,
@@ -467,6 +468,26 @@ export default function BerlinKMUPilotPage() {
 
   return (
     <div className="min-h-screen bg-white font-sans">
+
+      {/* ── LOGO NAV ────────────────────────────── */}
+      <nav className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur border-b border-white/10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-start">
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-9 h-9 rounded-2xl overflow-hidden flex items-center justify-center">
+              <Image
+                src="/icons/logo.png"
+                width={900}
+                height={900}
+                alt="SODU Secure Logo"
+                className="w-full h-full object-contain rounded shadow"
+              />
+            </div>
+            <span className="text-white text-lg font-semibold group-hover:text-red-400 transition-colors hidden sm:block">
+              SODU Secure
+            </span>
+          </Link>
+        </div>
+      </nav>
 
       {/* ── TOP BAR ─────────────────────────────── */}
       <div className="bg-gray-900 text-white py-2 px-4">
