@@ -662,7 +662,7 @@ export default function SMESecurityPackagesPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <span className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            Berliner KMU? 6 kostenfreie Plätze verfügbar
+            Berliner KMU? 2 kostenfreie Plätze verfügbar
           </span>
           <h3 className="text-white text-2xl sm:text-3xl font-bold mb-3">
             Testen Sie uns zuerst – kostenlos.
@@ -678,6 +678,47 @@ export default function SMESecurityPackagesPage() {
             Zum Pilotprogramm
             <ExternalLink className="w-4 h-4" />
           </Link>
+        </div>
+      </div>
+
+      {/* ── FREE PDF DOWNLOAD BANNER ──────── */}
+      <div className="bg-white border-t border-gray-100 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6">
+            <div className="flex-shrink-0 w-16 h-20 bg-red-600/20 border border-red-600/30 rounded-xl flex flex-col items-center justify-center gap-1">
+              <FileText className="w-8 h-8 text-red-400" />
+              <span className="text-red-400 text-xs font-bold">PDF</span>
+            </div>
+            <div className="flex-1 text-center sm:text-left">
+              <span className="text-red-400 text-xs font-bold uppercase tracking-wider">Kostenloser Download</span>
+              <h3 className="text-white font-bold text-lg sm:text-xl mt-1 mb-2">
+                5 Sicherheitslücken, die wir bei nahezu jedem KMU finden
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Erkenntnisse aus echten Pentests: Welche kritischen Schwachstellen in KMU-Infrastrukturen
+                am häufigsten auftreten – und wie Sie sich schützen.
+              </p>
+            </div>
+            <div className="flex-shrink-0 flex flex-col gap-2">
+              <a
+                href="/pdf/5_Sicherheitsluecken_KMU.pdf"
+                download="5_Sicherheitsluecken_KMU.pdf"
+                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-xl transition-all hover:scale-105 text-sm whitespace-nowrap"
+              >
+                <FileText className="w-4 h-4" />
+                Jetzt herunterladen
+              </a>
+              <a
+                href="/pdf/5_Sicherheitsluecken_KMU.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-white/20 text-gray-300 hover:bg-white/10 font-medium px-6 py-3 rounded-xl transition-all text-sm whitespace-nowrap justify-center"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                Im Browser öffnen
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

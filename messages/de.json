@@ -3622,6 +3622,135 @@
       "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
     }
   },
+  "kmuSicherheitslueckenDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "KMU SECURITY",
+    "date": "26. Feb 2026",
+    "title": "5 Sicherheitslücken, die wir bei nahezu jedem KMU finden",
+    "description": "Cyberangriffe treffen längst nicht mehr nur Konzerne. Mittelständische Unternehmen sind besonders attraktiv – weil sie wertvolle Daten besitzen, aber oft keine vollständige Sicherheitsvalidierung durchführen.",
+    "author": "Kerim K.",
+    "readTime": "10 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Warum KMUs besonders gefährdet sind",
+        "content": "Cyberangriffe treffen längst nicht mehr nur Konzerne. Mittelständische Unternehmen sind besonders attraktiv – weil sie wertvolle Daten besitzen, aber oft keine vollständige Sicherheitsvalidierung durchführen. In unserem Berliner Pilotprogramm und bei regulären Pentests begegnen wir denselben kritischen Schwachstellen immer wieder. Dieser Artikel fasst die fünf häufigsten zusammen – mit konkreten Erkenntnissen aus der Praxis.",
+        "keyTakeaway": {
+          "title": "Wichtige Erkenntnis",
+          "content": "Sicherheit beginnt nicht mit einem Tool – sondern mit einer realistischen Bewertung der eigenen Angriffsfläche. Wer seine Schwachstellen kennt, kann Risiken gezielt reduzieren – bevor es teuer wird."
+        },
+        "quote": "Ein Angreifer braucht nur einen Weg rein. Sie müssen alle schützen."
+      },
+      "commonAttackVectors": {
+        "title": "Die 5 häufigsten Sicherheitslücken bei KMUs",
+        "items": [
+          "1. Ungeschützte oder falsch konfigurierte Active Directory Strukturen – überprivilegierte Konten, fehlende Segmentierung, Legacy-Protokolle",
+          "2. Öffentlich erreichbare Systeme mit bekannten Schwachstellen – veraltete VPN-Gateways, offene Verwaltungsports, unsichere SSL-Konfigurationen",
+          "3. Schwache E-Mail-Sicherheit & fehlende DMARC-Konfiguration – kein SPF/DKIM, DMARC auf 'none', fehlende Anti-Spoofing-Absicherung",
+          "4. Webapplikationen ohne tiefgehende Sicherheitsprüfung – fehlende Zugriffskontrollen, IDOR-Schwachstellen, schwache Authentifizierung",
+          "5. Keine getestete Backup- und Wiederherstellungsstrategie – Backups werden nie zurückgespielt, keine Offline-Backups, unklare Wiederanlaufzeiten"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Warum diese Lücken so kritisch sind",
+        "content": "Jede dieser fünf Schwachstellen kann für sich allein katastrophale Folgen haben. In Kombination – und Angreifer kombinieren sie routinemäßig – entstehen Angriffsketten, die vom ersten Phishing bis zur vollständigen Ransomware-Verschlüsselung in wenigen Stunden führen können.",
+        "statistics": {
+          "title": "Zahlen aus der Praxis",
+          "averageCost": {
+            "value": "200.000 €+",
+            "label": "Durchschnittlicher Schaden pro Ransomware-Angriff bei KMUs"
+          },
+          "identificationTime": {
+            "value": "287 Tage",
+            "label": "Durchschnittliche Verweildauer eines Angreifers unentdeckt"
+          },
+          "multipleBreaches": {
+            "value": "80 %",
+            "label": "der AD-Umgebungen haben kritische Fehlkonfigurationen"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Was Sie konkret tun können",
+        "content": "Die gute Nachricht: Alle fünf Schwachstellen sind behebbar. Der erste Schritt ist immer die realistische Bewertung – ein professioneller Pentest zeigt, wo Sie tatsächlich angreifbar sind, nicht wo Sie es vermuten.",
+        "essentialPractices": {
+          "title": "Sofortmaßnahmen für KMUs",
+          "items": [
+            "Active Directory: Rechte-Audit durchführen, Legacy-Protokolle (NTLMv1, SMBv1) deaktivieren",
+            "Externe Angriffsfläche: Offene Ports inventarisieren, VPN-Software aktuell halten",
+            "E-Mail-Sicherheit: SPF, DKIM und DMARC korrekt konfigurieren und auf 'reject' setzen",
+            "Webapplikationen: Zugriffskontrollen und Authentifizierung regelmäßig prüfen lassen",
+            "Backups: Wiederherstellungstest mindestens einmal jährlich durchführen, Offline-Kopie anlegen",
+            "Awareness: Regelmäßige Phishing-Simulationen für Mitarbeitende durchführen",
+            "Pentest: Mindestens einmal jährlich externen Penetrationstest beauftragen"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Unser Pilotprogramm – Jetzt kostenlos prüfen lassen",
+        "content1": "Im Rahmen unserer Markteinführung bieten wir aktuell ausgewählten Berliner KMUs einen vollständigen Pentest kostenlos an – inklusive Active Directory Analyse, Phishing-Simulation und Management Report.",
+        "content2": "Nur noch 2 von 7 Plätzen verfügbar. Bewerben Sie sich jetzt unter sodusecure.com/berlin-kmu-pilot und erfahren Sie, wo Ihre Angriffsfläche wirklich liegt – bevor es ein Angreifer tut."
+      }
+    },
+    "tags": [
+      "Pentest KMU",
+      "Pentest Berlin",
+      "IT Security KMU",
+      "Active Directory",
+      "Phishing Simulation",
+      "Cybersecurity KMU",
+      "Ransomware Schutz"
+    ],
+    "cta": {
+      "title": "Wo sind Ihre Sicherheitslücken?",
+      "description": "Bewerben Sie sich für unser kostenloses KMU-Pilotprogramm und erhalten Sie einen vollständigen Pentest – jetzt noch 2 Plätze verfügbar.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Jetzt Pilotplatz sichern",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "DSGVO & Penetrationstest: Wie beides zusammenhängt",
+          "description": "Warum ein Pentest der stärkste Nachweis für DSGVO-Compliance ist.",
+          "category": "COMPLIANCE",
+          "readTime": "12 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "Active Directory: Die häufigsten Angriffspfade",
+          "description": "Kerberoasting, Pass-the-Hash und wie Angreifer Domain Admin werden.",
+          "category": "INFRASTRUKTUR",
+          "readTime": "14 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "Geschäftsführer & Offensive Security, SODU Secure GmbH",
+      "bio": "Informatikstudent TU Berlin, Gründer von SODU Secure. Spezialisiert auf Red Teaming, Penetration Testing und KMU-Sicherheit in Berlin."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Kostenloser Pentest anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
   "caseStudies": {
     "hero": {
       "badge": "FALLSTUDIEN & BLOGS",
@@ -3686,6 +3815,7 @@
       "categories": [
         "Alle",
         "Pentest",
+        "KMU Security",
         "Cyber-News",
         "Schwachstellen",
         "Leitfäden"
@@ -3774,6 +3904,13 @@
           "description": "DSGVO verlangt angemessene technische Maßnahmen – Penetrationstests liefern den Nachweis. Erfahren Sie, wie Pentests Art. 32 unterstützen, Risiken senken und Datenschutz greifbar machen.",
           "author": "Sodu Secure Team",
           "readTime": "12 Min"
+        },
+        {
+          "category": "KMU SECURITY",
+          "title": "5 Sicherheitslücken, die wir bei nahezu jedem KMU finden",
+          "description": "Cyberangriffe treffen längst nicht mehr nur Konzerne. Welche 5 kritischen Schwachstellen Berliner KMUs am häufigsten gefährden – und wie Sie sich schützen können, bevor es teuer wird.",
+          "author": "Kerim K.",
+          "readTime": "10 Min"
         }
       ]
     }

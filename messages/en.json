@@ -3622,6 +3622,135 @@
       "emailFailed": "Sending failed. Please try again."
     }
   },
+  "kmuSicherheitslueckenDetail": {
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share article",
+    "bookmarkArticle": "Save article",
+    "category": "SME SECURITY",
+    "date": "Feb 26, 2026",
+    "title": "5 Security Gaps We Find at Almost Every SME",
+    "description": "Cyber attacks no longer target only large corporations. SMEs are especially attractive because they hold valuable data but rarely conduct thorough security validation.",
+    "author": "Kerim K.",
+    "readTime": "10 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Why SMEs Are Especially at Risk",
+        "content": "Cyber attacks no longer target only large corporations. Small and medium-sized enterprises are particularly attractive – they hold valuable data but often lack thorough security validation. Through our Berlin pilot program and regular penetration tests, we encounter the same critical vulnerabilities repeatedly. This article summarizes the five most common ones – with concrete findings from real engagements.",
+        "keyTakeaway": {
+          "title": "Key Takeaway",
+          "content": "Security doesn't start with a tool – it starts with a realistic assessment of your attack surface. Knowing your vulnerabilities allows you to reduce risks proactively – before it gets expensive."
+        },
+        "quote": "An attacker only needs one way in. You have to protect all of them."
+      },
+      "commonAttackVectors": {
+        "title": "The 5 Most Common Security Gaps in SMEs",
+        "items": [
+          "1. Unprotected or misconfigured Active Directory – overprivileged accounts, missing segmentation, legacy protocols still active",
+          "2. Publicly accessible systems with known vulnerabilities – outdated VPN gateways, open admin ports, insecure SSL configurations",
+          "3. Weak email security & missing DMARC configuration – no SPF/DKIM, DMARC set to 'none', no anti-spoofing protection",
+          "4. Web applications without in-depth security testing – missing access controls, IDOR vulnerabilities, weak authentication mechanisms",
+          "5. No tested backup and recovery strategy – backups never restored, no offline backups, unclear recovery time objectives"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Why These Gaps Are So Critical",
+        "content": "Each of these five vulnerabilities can have catastrophic consequences on its own. Combined – and attackers routinely combine them – they create attack chains that can lead from initial phishing to full ransomware encryption in just hours.",
+        "statistics": {
+          "title": "Real-World Figures",
+          "averageCost": {
+            "value": "€200,000+",
+            "label": "Average damage per ransomware attack on SMEs"
+          },
+          "identificationTime": {
+            "value": "287 days",
+            "label": "Average dwell time before an attacker is detected"
+          },
+          "multipleBreaches": {
+            "value": "80%",
+            "label": "of AD environments have critical misconfigurations"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "What You Can Do Right Now",
+        "content": "The good news: all five vulnerabilities are fixable. The first step is always a realistic assessment – a professional penetration test reveals where you are actually vulnerable, not just where you suspect it.",
+        "essentialPractices": {
+          "title": "Immediate Actions for SMEs",
+          "items": [
+            "Active Directory: conduct a rights audit, disable legacy protocols (NTLMv1, SMBv1)",
+            "External attack surface: inventory open ports, keep VPN software up to date",
+            "Email security: correctly configure SPF, DKIM, and DMARC, set DMARC to 'reject'",
+            "Web applications: regularly audit access controls and authentication mechanisms",
+            "Backups: perform recovery test at least once a year, maintain an offline copy",
+            "Awareness: run regular phishing simulations for employees",
+            "Pentest: commission an external penetration test at least once a year"
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Our Pilot Program – Get Tested for Free",
+        "content1": "As part of our market launch, we are currently offering selected Berlin SMEs a full penetration test at no cost – including Active Directory analysis, phishing simulation, and management report.",
+        "content2": "Only 2 of 7 spots remaining. Apply now at sodusecure.com/berlin-kmu-pilot and find out where your attack surface really lies – before an attacker does."
+      }
+    },
+    "tags": [
+      "Pentest SME",
+      "Pentest Berlin",
+      "IT Security SME",
+      "Active Directory",
+      "Phishing Simulation",
+      "Cybersecurity SME",
+      "Ransomware Protection"
+    ],
+    "cta": {
+      "title": "Where are your security gaps?",
+      "description": "Apply for our free SME pilot program and receive a full penetration test – only 2 spots remaining.",
+      "emailPlaceholder": "Enter your email",
+      "buttonText": "Secure Your Pilot Spot",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "GDPR & Penetration Testing: How They Work Together",
+          "description": "Why a pentest is the strongest proof of GDPR compliance.",
+          "category": "COMPLIANCE",
+          "readTime": "12 min read",
+          "readMore": "Read article →"
+        },
+        {
+          "title": "Active Directory: The Most Common Attack Paths",
+          "description": "Kerberoasting, Pass-the-Hash, and how attackers become Domain Admin.",
+          "category": "INFRASTRUCTURE",
+          "readTime": "14 min read",
+          "readMore": "Read article →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "CEO & Offensive Security, SODU Secure GmbH",
+      "bio": "Computer Science student at TU Berlin, founder of SODU Secure. Specialized in red teaming, penetration testing, and SME security in Berlin."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Was this article helpful?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request free pentest"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "Consultation request functionality is not implemented yet.",
+      "saveNotImplemented": "Save functionality is not implemented yet.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Sending failed. Please try again."
+    }
+  },
   "caseStudies": {
     "hero": {
       "badge": "CASE STUDIES & BLOGS",
@@ -3686,6 +3815,7 @@
       "categories": [
         "All",
         "Pentest",
+        "KMU Security",
         "Cyber News",
         "Vulnerabilities",
         "Guides"
@@ -3774,6 +3904,13 @@
           "description": "GDPR requires appropriate technical measures—penetration tests prove they work. Learn how pentests support Article 32, reduce breach risk, and make data protection real.",
           "author": "Sodu Secure Team",
           "readTime": "12 min"
+        },
+        {
+          "category": "KMU SECURITY",
+          "title": "5 Security Gaps We Find at Almost Every SME",
+          "description": "Cyber attacks no longer only target large corporations. Which 5 critical vulnerabilities most commonly endanger SMEs – and how to protect yourself before it gets expensive.",
+          "author": "Kerim K.",
+          "readTime": "10 min"
         }
       ]
     }

@@ -144,6 +144,18 @@ export const blogPosts = [
     image: '/images/blogs/dsgvo-image-blog-pentest.jpg',
     keywords: ['GDPR', 'DSGVO', 'penetration testing', 'data protection', 'Article 32', 'compliance'],
   },
+  {
+    id: 13,
+    slug: '13',
+    title: '5 Sicherheitslücken, die wir bei nahezu jedem KMU finden',
+    description: 'Cyberangriffe treffen längst nicht mehr nur Konzerne. Welche 5 kritischen Sicherheitslücken wir bei nahezu jedem KMU entdecken – und wie Sie sich schützen können, bevor es teuer wird.',
+    category: 'KMU Security',
+    author: 'Kerim K.',
+    date: '2026-02-26',
+    readTime: '10 min read',
+    image: '/images/blogs/image9.png',
+    keywords: ['Pentest KMU', 'Pentest Berlin', 'IT Security KMU', 'Cybersecurity KMU', 'Active Directory Sicherheit', 'Phishing KMU', 'Ransomware KMU', 'KMU Sicherheitslücken', 'Penetrationstest Berlin'],
+  },
 ];
 
 export function getBlogById(id: number | string) {

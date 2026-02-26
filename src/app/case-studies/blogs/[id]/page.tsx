@@ -35,7 +35,8 @@ export default function BlogArticleDetail() {
       9: 'smePentestDetail',
       10: 'owaspTop10_2026Detail',
       11: 'oscpPathDetail',
-      12: 'gdprPentestDetail'
+      12: 'gdprPentestDetail',
+      13: 'kmuSicherheitslueckenDetail',
     };
     return mapping[id] || 'blogDetail';
   };

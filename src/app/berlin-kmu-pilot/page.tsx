@@ -24,6 +24,7 @@ import {
   Star,
   Building2,
   UserCheck,
+  Download,
 } from "lucide-react";
 
 /* ─────────────────────────────────────────────
@@ -54,7 +55,7 @@ const PHONE_HREF = "tel:+4917923962949";
 const EMAIL = "sodusecure@gmail.com";
 const EMAIL_HREF = "mailto:sodusecure@gmail.com";
 const TOTAL_SPOTS = 7;
-const TAKEN_SPOTS = 1;
+const TAKEN_SPOTS = 5;
 const DEADLINE = "31. März 2026";
 
 const SERVICES = [
@@ -615,7 +616,7 @@ export default function BerlinKMUPilotPage() {
                   <Phone className="w-5 h-5 text-red-400" />
                   {PHONE}
                 </a>
-                <p className="text-gray-500 text-xs mt-1">Persönlicher Ansprechpartner: Kerim Koc, Geschäftsführer</p>
+                <p className="text-gray-500 text-xs mt-1">Persönlicher Ansprechpartner: Kerim K., Geschäftsführer</p>
               </div>
             </div>
           </div>
@@ -633,6 +634,60 @@ export default function BerlinKMUPilotPage() {
                 <div className="text-gray-400 text-xs sm:text-sm leading-relaxed">{s.label}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FREE PDF DOWNLOAD ────────────────────── */}
+      <section className="py-14 sm:py-16 bg-gradient-to-r from-red-700 via-red-600 to-red-700 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.07]"
+          style={{
+            backgroundImage: `radial-gradient(circle, #fff 1px, transparent 1px)`,
+            backgroundSize: "24px 24px",
+          }}
+        />
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+            <div className="flex-shrink-0 flex items-center justify-center">
+              <div className="w-24 h-28 bg-white rounded-xl shadow-2xl flex flex-col items-center justify-center gap-2 p-3">
+                <FileText className="w-10 h-10 text-red-600" />
+                <span className="text-xs font-bold text-red-600 text-center leading-tight">PDF<br />Kostenlos</span>
+              </div>
+            </div>
+            <div className="flex-1 text-white text-center lg:text-left">
+              <span className="inline-flex items-center gap-1.5 bg-white/20 border border-white/30 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-3">
+                <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+                Kostenloser Leitfaden
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black mb-3 leading-tight">
+                5 Sicherheitslücken, die wir bei nahezu jedem KMU finden
+              </h2>
+              <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-6 max-w-2xl">
+                Ransomware, AD-Übernahmen, Phishing – in diesem kostenlosen PDF zeigen wir,
+                welche kritischen Schwachstellen wir regelmäßig bei Berliner KMUs entdecken
+                und was Sie konkret dagegen tun können. Sofort umsetzbare Erkenntnisse aus echten Pentests.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                <a
+                  href="/pdf/5_Sicherheitsluecken_KMU.pdf"
+                  download="5_Sicherheitsluecken_KMU.pdf"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-red-700 hover:bg-red-50 font-black px-8 py-4 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg text-base"
+                >
+                  <Download className="w-5 h-5" />
+                  Jetzt kostenlos herunterladen
+                </a>
+                <a
+                  href="/pdf/5_Sicherheitsluecken_KMU.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white hover:bg-white/10 font-semibold px-6 py-4 rounded-xl transition-all duration-200 hover:scale-105 text-sm"
+                >
+                  <FileText className="w-4 h-4" />
+                  Im Browser öffnen
+                </a>
+              </div>
+              <p className="text-white/50 text-xs mt-4">Kein Formular · Kein Login · Direkt herunterladen</p>
+            </div>
           </div>
         </div>
       </section>
@@ -833,17 +888,17 @@ export default function BerlinKMUPilotPage() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
               {
-                name: "Kerim Koc",
+                name: "Kerim K.",
                 role: "Geschäftsführer & Offensive Security",
                 bio: "Informatikstudent TU Berlin, Gründer, Fokus auf Red Teaming und Penetration Testing.",
               },
               {
-                name: "Team Member 2",
+                name: "Burak S.",
                 role: "Active Directory & Infrastructure",
                 bio: "Spezialist für Windows-Infrastrukturen, Active Directory und interne Netzwerksicherheit.",
               },
               {
-                name: "Team Member 3",
+                name: "Markus F.",
                 role: "Phishing & Social Engineering",
                 bio: "Experte für Human-Layer Security, Phishing-Kampagnen und Security Awareness.",
               },
@@ -941,7 +996,7 @@ export default function BerlinKMUPilotPage() {
               {PHONE}
             </a>
             <p className="text-gray-400 text-sm mt-1">
-              Kerim Koc · Geschäftsführer · SODU Secure GmbH
+              Kerim K. · Geschäftsführer · SODU Secure GmbH
             </p>
             <a href={EMAIL_HREF} className="mt-2 text-gray-500 hover:text-red-600 transition-colors text-sm flex items-center justify-center gap-1">
               <Mail className="w-4 h-4" />

@@ -3,35 +3,42 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'KMU Sicherheitspaket | Pentest & Phishing ab 8.000 € | SODU Secure',
+  title: 'KMU Sicherheitspaket | Pentest KMU ab 8.000 € | Pentest Berlin | SODU Secure',
   description:
-    'Professioneller Pentest für KMUs in Deutschland. Externer Pentest, Phishing-Kampagne & Active Directory Analyse ab 8.000 €. Maßgeschneidert für Unternehmen mit 20–150 Mitarbeitern. Jetzt anfragen.',
+    'Professioneller Pentest für KMUs in Berlin und ganz Deutschland. Externer Pentest, Phishing-Kampagne & Active Directory Analyse ab 8.000 €. Pentest Kosten transparent, Pentest Angebot sofort anfragen.',
   keywords: [
-    // Primary German KMU/Pentest terms
+    // Primary
+    'Pentest KMU',
+    'Pentest Berlin',
+    // Secondary keywords from brief
+    'Hacker Angriff Simulation',
+    'IT Security KMU',
+    'Cyberangriff simulieren',
+    'Cybersecurity Schulung',
+    'IT Security Schulung',
+    'Pentest Kosten',
+    'Pentest konfigurieren',
+    'Pentest Angebot',
+    'Pentest Web',
+    'Pentest Firma',
+    'Phishing Simulation',
+    'Phishing Kampagne',
+    'Cybersecurity KMU',
+    // Service-specific
     'KMU Pentest',
     'Pentest KMU Deutschland',
     'KMU Cybersecurity Paket',
     'IT-Sicherheit KMU',
     'Pentest Mittelstand',
-    'Pentest Berlin',
     'Penetrationstest KMU',
-    'Penetrationstest Mittelstand',
-    'Cybersecurity Paket KMU',
-    'Sicherheitscheck KMU',
-    // Service-specific
     'Externer Pentest Deutschland',
-    'Phishing Simulation KMU',
     'Active Directory Pentest',
     'Interner Pentest KMU',
     'Web Application Pentest KMU',
-    // Commercial intent
-    'Pentest Kosten KMU',
-    'Pentest Preis Mittelstand',
+    'Pentest Preis',
     'IT-Sicherheitsaudit KMU',
     'Schwachstellenanalyse KMU',
-    // Brand
     'SODU Secure',
-    'sodusecure.com',
   ],
   openGraph: {
     title: 'KMU Sicherheitspaket – Pentest & Phishing ab 8.000 € | SODU Secure',
