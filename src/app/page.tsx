@@ -14,10 +14,10 @@ export default function Home() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'sodusecure',
+    name: 'SODU Secure GmbH',
     url: baseUrl,
     logo: `${baseUrl}/images/logo.png`,
-    description: 'Professional penetration testing and cybersecurity services',
+    description: 'Professioneller Pentest in Berlin und Deutschland. Penetrationstest, Active Directory Analyse, Phishing-Simulation und IT-Sicherheitsberatung für KMUs.',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+49-179-2396294',
@@ -27,11 +27,11 @@ export default function Home() {
     },
     address: {
       '@type': 'PostalAddress',
+      addressLocality: 'Berlin',
+      addressRegion: 'Berlin',
       addressCountry: 'DE',
     },
-    sameAs: [
-      // Add your social media profiles here
-    ],
+    sameAs: [],
   };
 
   // Service Schema
@@ -39,14 +39,27 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: 'Penetration Testing',
+    name: 'Pentest Berlin – Penetrationstest für Unternehmen',
+    description: 'Professioneller Pentest in Berlin: Externer Penetrationstest, Active Directory Analyse, Phishing-Simulation und umfassende IT-Sicherheitsaudits für KMUs und Unternehmen.',
     provider: {
       '@type': 'Organization',
-      name: 'sodusecure',
+      name: 'SODU Secure GmbH',
+      url: baseUrl,
     },
-    areaServed: {
-      '@type': 'Country',
-      name: ['Germany', 'Europe'],
-    },
+    areaServed: [
+      {
+        '@type': 'City',
+        name: 'Berlin',
+      },
+      {
+        '@type': 'State',
+        name: 'Brandenburg',
+      },
+      {
+        '@type': 'Country',
+        name: 'Germany',
+      },
+    ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Penetration Testing Services',
@@ -96,7 +109,7 @@ export default function Home() {
             🔐 Neu
           </span>
           <span className="text-white text-sm font-medium text-center">
-            Berlin KMU Cybersecurity Pilotprogramm 2026 &ndash; Nur noch 2 von 7 Plätzen frei
+            Pentest Berlin – KMU Cybersecurity Pilotprogramm 2026 &ndash; Nur noch 2 von 7 Plätzen frei
           </span>
           <span className="text-red-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0">
             Jetzt bewerben →

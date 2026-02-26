@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  allowedDevOrigins: ['192.168.2.202'],
 };
 
 export default withNextIntl(nextConfig);

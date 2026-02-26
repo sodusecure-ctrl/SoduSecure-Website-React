@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ⚠️ Update these dates whenever you make meaningful content changes
   const staticRoutes: { path: string; lastModified: string; changeFreq: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number }[] = [
     { path: '',                    lastModified: '2026-02-26', changeFreq: 'weekly',  priority: 1.0  },
-    { path: '/berlin-kmu-pilot',   lastModified: '2026-02-26', changeFreq: 'weekly',  priority: 1.0  },
+    { path: '/berlin-kmu-pilot',   lastModified: '2026-02-27', changeFreq: 'daily',   priority: 1.0  },
     { path: '/services/sme-packages', lastModified: '2026-02-26', changeFreq: 'weekly',  priority: 0.98 },
     { path: '/request-pentest',    lastModified: '2026-02-26', changeFreq: 'monthly', priority: 0.92  },
     { path: '/about',              lastModified: '2026-02-26', changeFreq: 'monthly', priority: 0.82  },

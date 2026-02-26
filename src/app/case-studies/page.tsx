@@ -235,6 +235,28 @@ export default function CaseStudiesPage() {
       date: "Feb 11, 2026",
       readTime: t('blogs.items.11.readTime'),
       categoryColor: "text-red-500"
+    },
+    {
+      id: 13,
+      image: "/images/blogs/image9.png",
+      category: t('blogs.items.12.category'),
+      title: t('blogs.items.12.title'),
+      description: t('blogs.items.12.description'),
+      author: t('blogs.items.12.author'),
+      date: "Feb 26, 2026",
+      readTime: t('blogs.items.12.readTime'),
+      categoryColor: "text-teal-500"
+    },
+    {
+      id: 14,
+      image: "/images/blogs/image9.png",
+      category: t('blogs.items.13.category'),
+      title: t('blogs.items.13.title'),
+      description: t('blogs.items.13.description'),
+      author: t('blogs.items.13.author'),
+      date: "Feb 26, 2026",
+      readTime: t('blogs.items.13.readTime'),
+      categoryColor: "text-teal-600"
     }
   ].reverse();
 

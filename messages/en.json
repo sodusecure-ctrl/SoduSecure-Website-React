@@ -786,18 +786,63 @@
             "title": "WebApp Pentest",
             "des": "Choose the testing scope that matches your application complexity",
             "variantList": [
-              { "name": "Small", "price": "€1,499", "duration": "5 days", "features": ["Static application", "Black-box"] },
-              { "name": "Medium", "price": "€7,000", "duration": "4 weeks", "type": "popular", "features": ["Dynamic application", "Black + Grey box", "2-4 user roles"] },
-              { "name": "Large", "price": "€10,000", "duration": "4 weeks", "features": ["Dynamic application", "5+ user roles", "Critical systems"] }
+              {
+                "name": "Small",
+                "price": "€1,499",
+                "duration": "5 days",
+                "features": [
+                  "Static application",
+                  "Black-box"
+                ]
+              },
+              {
+                "name": "Medium",
+                "price": "€7,000",
+                "duration": "4 weeks",
+                "type": "popular",
+                "features": [
+                  "Dynamic application",
+                  "Black + Grey box",
+                  "2-4 user roles"
+                ]
+              },
+              {
+                "name": "Large",
+                "price": "€10,000",
+                "duration": "4 weeks",
+                "features": [
+                  "Dynamic application",
+                  "5+ user roles",
+                  "Critical systems"
+                ]
+              }
             ]
           },
           "addOns": {
             "title": "Select Add-ons (Optional)",
             "des": "Enhance your penetration test with these additional services",
             "addOnList": [
-              { "id": 1, "name": "Code-Assisted Review", "des": "White-box testing with source code access for deeper vulnerability analysis", "price": "€1,500", "type": "premium" },
-              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "€0", "type": "free" },
-              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "€500", "type": "premium" }
+              {
+                "id": 1,
+                "name": "Code-Assisted Review",
+                "des": "White-box testing with source code access for deeper vulnerability analysis",
+                "price": "€1,500",
+                "type": "premium"
+              },
+              {
+                "id": 2,
+                "name": "Free Retest",
+                "des": "Verify fixes after remediation at no additional cost",
+                "price": "€0",
+                "type": "free"
+              },
+              {
+                "id": 3,
+                "name": "On-site Final Presentation",
+                "des": "In-person presentation of findings to your team",
+                "price": "€500",
+                "type": "premium"
+              }
             ]
           }
         },
@@ -814,18 +859,67 @@
             "title": "API Pentest",
             "des": "Choose the testing scope that matches your application complexity",
             "variantList": [
-              { "name": "Small", "price": "€1,499", "duration": "2 weeks", "features": ["Static application", "Black-box testing", "Single user role", "OWASP Top 10"] },
-              { "name": "Medium", "price": "€7,000", "duration": "4 weeks", "type": "popular", "features": ["Dynamic application", "Black + Grey box", "2-4 user roles", "Comprehensive testing"] },
-              { "name": "Large", "price": "€10,000", "duration": "6 weeks", "features": ["Dynamic application", "Full spectrum testing", "5+ user roles", "Critical systems"] }
+              {
+                "name": "Small",
+                "price": "€1,499",
+                "duration": "2 weeks",
+                "features": [
+                  "Static application",
+                  "Black-box testing",
+                  "Single user role",
+                  "OWASP Top 10"
+                ]
+              },
+              {
+                "name": "Medium",
+                "price": "€7,000",
+                "duration": "4 weeks",
+                "type": "popular",
+                "features": [
+                  "Dynamic application",
+                  "Black + Grey box",
+                  "2-4 user roles",
+                  "Comprehensive testing"
+                ]
+              },
+              {
+                "name": "Large",
+                "price": "€10,000",
+                "duration": "6 weeks",
+                "features": [
+                  "Dynamic application",
+                  "Full spectrum testing",
+                  "5+ user roles",
+                  "Critical systems"
+                ]
+              }
             ]
           },
           "addOns": {
             "title": "Select Add-ons (Optional)",
             "des": "Enhance your penetration test with these additional services",
             "addOnList": [
-              { "id": 1, "name": "Code-Assisted Review", "des": "White-box testing with source code access for deeper vulnerability analysis", "price": "€1,500", "type": "premium" },
-              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "€0", "type": "free" },
-              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "€500", "type": "premium" }
+              {
+                "id": 1,
+                "name": "Code-Assisted Review",
+                "des": "White-box testing with source code access for deeper vulnerability analysis",
+                "price": "€1,500",
+                "type": "premium"
+              },
+              {
+                "id": 2,
+                "name": "Free Retest",
+                "des": "Verify fixes after remediation at no additional cost",
+                "price": "€0",
+                "type": "free"
+              },
+              {
+                "id": 3,
+                "name": "On-site Final Presentation",
+                "des": "In-person presentation of findings to your team",
+                "price": "€500",
+                "type": "premium"
+              }
             ]
           }
         },
@@ -842,18 +936,63 @@
             "title": "Infrastructure Pentest",
             "des": "Choose the testing scope that matches your environment size",
             "variantList": [
-              { "name": "Small", "price": "€2,500", "system": "5", "features": ["Network & host vulnerability assessment", "Privilege escalation testing", "Executive summary & technical report"] },
-              { "name": "Medium", "price": "€10,000", "system": "100", "type": "popular", "features": ["Misconfiguration & exposure analysis", "Risk-rated findings"] },
-              { "name": "Large", "price": "€20,000", "system": "250", "features": ["Comprehensive penetration testing", "Custom attack scenarios", "Executive summary & technical report"] }
+              {
+                "name": "Small",
+                "price": "€2,500",
+                "system": "5",
+                "features": [
+                  "Network & host vulnerability assessment",
+                  "Privilege escalation testing",
+                  "Executive summary & technical report"
+                ]
+              },
+              {
+                "name": "Medium",
+                "price": "€10,000",
+                "system": "100",
+                "type": "popular",
+                "features": [
+                  "Misconfiguration & exposure analysis",
+                  "Risk-rated findings"
+                ]
+              },
+              {
+                "name": "Large",
+                "price": "€20,000",
+                "system": "250",
+                "features": [
+                  "Comprehensive penetration testing",
+                  "Custom attack scenarios",
+                  "Executive summary & technical report"
+                ]
+              }
             ]
           },
           "addOns": {
             "title": "Select Add-ons (Optional)",
             "des": "Enhance your penetration test with these additional services",
             "addOnList": [
-              { "id": 1, "name": "Extended Scope", "des": "Additional IP ranges or subnets included in testing", "price": "€2,000", "type": "premium" },
-              { "id": 2, "name": "Free Retest", "des": "Verify fixes after remediation at no additional cost", "price": "€0", "type": "free" },
-              { "id": 3, "name": "On-site Final Presentation", "des": "In-person presentation of findings to your team", "price": "€500", "type": "premium" }
+              {
+                "id": 1,
+                "name": "Extended Scope",
+                "des": "Additional IP ranges or subnets included in testing",
+                "price": "€2,000",
+                "type": "premium"
+              },
+              {
+                "id": 2,
+                "name": "Free Retest",
+                "des": "Verify fixes after remediation at no additional cost",
+                "price": "€0",
+                "type": "free"
+              },
+              {
+                "id": 3,
+                "name": "On-site Final Presentation",
+                "des": "In-person presentation of findings to your team",
+                "price": "€500",
+                "type": "premium"
+              }
             ]
           }
         },
@@ -870,18 +1009,64 @@
             "title": "Awareness & Phishing",
             "des": "Choose the training and simulation depth for your teams",
             "variantList": [
-              { "name": "Starter", "price": "€2,000", "duration": "2 weeks", "features": ["Baseline phishing campaign", "Awareness training session", "Executive summary report"] },
-              { "name": "Professional", "price": "€4,500", "duration": "4 weeks", "type": "popular", "features": ["Multiple phishing campaigns", "Role-based training", "Metrics & improvement plan"] },
-              { "name": "Enterprise", "price": "€8,000", "duration": "6 weeks", "features": ["Advanced red team phishing", "Custom training content", "Executive & technical reporting"] }
+              {
+                "name": "Starter",
+                "price": "€2,000",
+                "duration": "2 weeks",
+                "features": [
+                  "Baseline phishing campaign",
+                  "Awareness training session",
+                  "Executive summary report"
+                ]
+              },
+              {
+                "name": "Professional",
+                "price": "€4,500",
+                "duration": "4 weeks",
+                "type": "popular",
+                "features": [
+                  "Multiple phishing campaigns",
+                  "Role-based training",
+                  "Metrics & improvement plan"
+                ]
+              },
+              {
+                "name": "Enterprise",
+                "price": "€8,000",
+                "duration": "6 weeks",
+                "features": [
+                  "Advanced red team phishing",
+                  "Custom training content",
+                  "Executive & technical reporting"
+                ]
+              }
             ]
           },
           "addOns": {
             "title": "Select Add-ons (Optional)",
             "des": "Enhance your engagement with additional services",
             "addOnList": [
-              { "id": 1, "name": "Executive Workshop", "des": "C-level briefing and tabletop exercise", "price": "€1,200", "type": "premium" },
-              { "id": 2, "name": "Free Retest", "des": "Follow-up phishing campaign to verify improvements", "price": "€0", "type": "free" },
-              { "id": 3, "name": "On-site Training", "des": "In-person training sessions for your teams", "price": "€1,800", "type": "premium" }
+              {
+                "id": 1,
+                "name": "Executive Workshop",
+                "des": "C-level briefing and tabletop exercise",
+                "price": "€1,200",
+                "type": "premium"
+              },
+              {
+                "id": 2,
+                "name": "Free Retest",
+                "des": "Follow-up phishing campaign to verify improvements",
+                "price": "€0",
+                "type": "free"
+              },
+              {
+                "id": 3,
+                "name": "On-site Training",
+                "des": "In-person training sessions for your teams",
+                "price": "€1,800",
+                "type": "premium"
+              }
             ]
           }
         },
@@ -898,18 +1083,72 @@
             "title": "Configure SME Package",
             "des": "Choose the right security package for your company",
             "variantList": [
-              { "name": "Basic", "price": "€8,000", "duration": "3–4 weeks", "features": ["External pentest", "Phishing campaign", "Web presence quick test", "Management summary", "Technical report"] },
-              { "name": "Basic + Internal", "price": "€10,500", "duration": "4–5 weeks", "type": "popular", "features": ["External pentest", "Phishing campaign", "Web presence quick test", "Internal pentest / Active Directory", "Management summary", "Technical report"] },
-              { "name": "Complete", "price": "€13,000", "duration": "5–6 weeks", "features": ["External pentest", "Phishing campaign", "Full web application pentest", "Internal pentest / Active Directory", "Management summary", "Technical report"] }
+              {
+                "name": "Basic",
+                "price": "€8,000",
+                "duration": "3–4 weeks",
+                "features": [
+                  "External pentest",
+                  "Phishing campaign",
+                  "Web presence quick test",
+                  "Management summary",
+                  "Technical report"
+                ]
+              },
+              {
+                "name": "Basic + Internal",
+                "price": "€10,500",
+                "duration": "4–5 weeks",
+                "type": "popular",
+                "features": [
+                  "External pentest",
+                  "Phishing campaign",
+                  "Web presence quick test",
+                  "Internal pentest / Active Directory",
+                  "Management summary",
+                  "Technical report"
+                ]
+              },
+              {
+                "name": "Complete",
+                "price": "€13,000",
+                "duration": "5–6 weeks",
+                "features": [
+                  "External pentest",
+                  "Phishing campaign",
+                  "Full web application pentest",
+                  "Internal pentest / Active Directory",
+                  "Management summary",
+                  "Technical report"
+                ]
+              }
             ]
           },
           "addOns": {
             "title": "Select Add-ons (Optional)",
             "des": "Enhance your SME package with additional services",
             "addOnList": [
-              { "id": 1, "name": "Final Presentation", "des": "Live presentation of findings for management and IT team", "price": "€0", "type": "free" },
-              { "id": 2, "name": "Post-remediation Retest", "des": "Verification testing after fixes have been applied", "price": "€0", "type": "free" },
-              { "id": 3, "name": "Security Awareness Training", "des": "Supplementary employee training following the phishing campaign", "price": "€1,500", "type": "premium" }
+              {
+                "id": 1,
+                "name": "Final Presentation",
+                "des": "Live presentation of findings for management and IT team",
+                "price": "€0",
+                "type": "free"
+              },
+              {
+                "id": 2,
+                "name": "Post-remediation Retest",
+                "des": "Verification testing after fixes have been applied",
+                "price": "€0",
+                "type": "free"
+              },
+              {
+                "id": 3,
+                "name": "Security Awareness Training",
+                "des": "Supplementary employee training following the phishing campaign",
+                "price": "€1,500",
+                "type": "premium"
+              }
             ]
           }
         }
@@ -2426,7 +2665,7 @@
           "desc": "iOS & Android application testing"
         }
       ],
-      "learnMore": "Learn More \u2192"
+      "learnMore": "Learn More →"
     }
   },
   "oscpPathDetail": {
@@ -3751,6 +3990,155 @@
       "emailFailed": "Sending failed. Please try again."
     }
   },
+  "pilotOfferDetail": {
+    "backToBlog": "Back to blog",
+    "shareArticle": "Share article",
+    "bookmarkArticle": "Bookmark article",
+    "category": "PENTEST BERLIN",
+    "date": "Feb 26, 2026",
+    "title": "Pentest Berlin: Free Penetration Test for Berlin SMEs – Apply Now",
+    "description": "Professional penetration test in Berlin – completely free for selected SMEs. Learn what our pentest covers, why Berlin businesses need it, and how to secure your spot.",
+    "author": "Sodu Secure Team",
+    "readTime": "8 min read",
+    "tableOfContents": "Table of contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Pentest Berlin – Why Every SME Needs a Penetration Test",
+        "content": "Cyberattacks on Berlin businesses are surging. In 2025 alone, 68% of German SMEs fell victim to at least one attack. As a specialist provider for pentesting in Berlin, we are inviting seven selected small and medium-sized enterprises to receive a complete, independent penetration test at zero cost. Our goal: Berlin SMEs get a realistic assessment of their IT security posture – with real attack simulations, not just automated scans. Download our detailed guide covering the most common vulnerabilities as a free PDF.",
+        "keyTakeaway": {
+          "title": "Key Takeaway",
+          "content": "A professional pentest in Berlin uncovers vulnerabilities before attackers find them. 80% of SME networks have critical Active Directory misconfigurations – a single successful attack can shut down operations for weeks."
+        },
+        "quote": "We show Berlin businesses exactly where they are vulnerable – with real attack techniques, not theories."
+      },
+      "commonAttackVectors": {
+        "title": "What Our Pentest in Berlin Covers",
+        "items": [
+          "Full external penetration test: Public IPs, web applications, cloud exposure and network perimeter – how a real attacker sees your business from outside",
+          "Active Directory analysis: Privilege escalation, Kerberoasting, Pass-the-Hash and lateral movement – the most common entry points in Windows networks",
+          "Phishing simulation: Realistic email campaign with detailed click-rate analysis and individual awareness assessment for your employees",
+          "Management report: Executive summary for leadership, technical deep-dive for IT, and prioritized action plan – all in one pentest report",
+          "100% free for you – limited to the first seven qualifying Berlin SMEs",
+          "Fast delivery: From kick-off to final report in just 2–3 weeks"
+        ]
+      },
+      "impactAnalysis": {
+        "title": "What Your Pentest Report Reveals",
+        "content": "After completing our penetration test, you will receive a detailed risk analysis of your entire IT infrastructure. The report does not just show where vulnerabilities exist – it rates each one by criticality and exploitability. You will know exactly which gaps an attacker would target first, enabling you to respond strategically rather than investing blindly.",
+        "statistics": {
+          "title": "Pentest Berlin – Numbers That Speak",
+          "averageCost": {
+            "value": "€0",
+            "label": "Cost of the pentest for pilot participants"
+          },
+          "identificationTime": {
+            "value": "2–3 weeks",
+            "label": "From kick-off to final pentest report"
+          },
+          "multipleBreaches": {
+            "value": "100%",
+            "label": "of tested SMEs had at least one critical vulnerability"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "After the Pentest: Your Roadmap to Secure IT",
+        "content": "A penetration test in Berlin is just the beginning. After receiving your report, you will know exactly which measures need immediate implementation and which will improve your security posture long-term. Our team explains every finding personally and helps you develop a realistic action plan.",
+        "essentialPractices": {
+          "title": "Immediate Actions After the Pentest",
+          "items": [
+            "Review the pentest report with your IT team and a security expert together",
+            "Patch or isolate critical vulnerabilities within 72 hours",
+            "Enable multi-factor authentication (MFA) for all admin accounts and VPN access",
+            "Train employees specifically on phishing and social engineering attacks",
+            "Set up regular, automated backups and run recovery tests",
+            "Harden Active Directory: remove unnecessary permissions, implement tiering model",
+            "Document an incident response plan and practice it at least once annually",
+            "Schedule annual follow-up pentests to catch new vulnerabilities early"
+          ]
+        }
+      },
+      "whyWeOffer": {
+        "title": "Why We Offer Free Pentests in Berlin",
+        "content": "As a Berlin-based cybersecurity company, we know that trust is built through results, not promises. That is why we offer selected SMEs in Berlin and Brandenburg a complete penetration test at no cost. We want to demonstrate what a professional pentest in Berlin can deliver – while building references in the SME sector. Many small and medium-sized businesses in Berlin underestimate their risk because they have never been tested. Our pilot program changes that: independent, transparent, and with no hidden costs."
+      },
+      "whyYouNeedIt": {
+        "title": "5 Reasons Your Berlin SME Needs a Pentest",
+        "items": [
+          "100% free: Professional penetration test worth €8,000–15,000 – no financial barrier for your business",
+          "Custom report: No generic scan results – manually verified vulnerabilities with specific recommendations for your infrastructure",
+          "Berlin expertise: We know the typical IT structures of local SMEs – from medical practices in Mitte to trade businesses in Spandau",
+          "Independent external analysis: No internal blind spots – our pentest team tests your systems using the same methods as real attackers",
+          "GDPR compliance: A documented pentest in Berlin is an important building block for your accountability obligations under Art. 32 GDPR"
+        ]
+      },
+      "howToApply": {
+        "title": "How to Secure Your Pentest in Berlin",
+        "content": "Only 2 of 7 spots remain – and demand is growing. Visit sodusecure.com/berlin-kmu-pilot, fill out the application form, and our team will contact you personally within 48 hours. Application deadline is March 31, 2026. Each SME goes through a brief qualification call to ensure the pentest delivers maximum value."
+      },
+      "conclusion": {
+        "title": "Conclusion: Pentest Berlin – Put Your IT Security to the Test",
+        "content1": "A professional penetration test is the most effective way to evaluate your company actual security posture. Our free pilot program gives Berlin SMEs a rare opportunity to do exactly that without risk – with a complete pentest that normally costs up to €15,000.",
+        "content2": "Download the free PDF guide to learn about the 5 most common vulnerabilities in Berlin SMEs – and secure one of the last spots for our pentest in Berlin."
+      }
+    },
+    "tags": [
+      "Pentest Berlin",
+      "Penetration Test Berlin",
+      "SME Pentest",
+      "Free Pentest Berlin",
+      "IT Security Berlin",
+      "Cybersecurity Berlin SME"
+    ],
+    "cta": {
+      "title": "Ready for Your Pentest in Berlin?",
+      "description": "Apply now for the free pilot program and receive a professional penetration test – including Active Directory analysis, phishing simulation and management report.",
+      "emailPlaceholder": "Enter your email",
+      "buttonText": "Secure Pentest Spot",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security & Penetration Testing",
+      "bio": "Our team of certified penetration testers specializes in manual security analysis for Berlin SMEs. We combine offensive techniques with practical advice so you know not just where your vulnerabilities are, but how to close them."
+    },
+    "relatedArticles": {
+      "title": "More Articles on Pentest Berlin",
+      "articles": [
+        {
+          "title": "5 Security Gaps We Find at Almost Every Berlin SME",
+          "slug": "13",
+          "description": "The 5 critical security gaps we find at almost every Berlin SME – and how to protect yourself.",
+          "category": "PENTEST BERLIN",
+          "readTime": "10 min read",
+          "readMore": "Read article →"
+        },
+        {
+          "title": "Penetration Testing for SMEs: When a Pentest Is Truly Necessary",
+          "description": "The practical guide for Berlin SMEs – when a penetration test becomes essential, what types exist, and how it demonstrably protects your business.",
+          "category": "PENTEST BERLIN",
+          "readTime": "13 min read",
+          "readMore": "Read article →"
+        }
+      ]
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Did you find this article helpful?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request Pentest"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The consultation request feature is not yet implemented.",
+      "saveNotImplemented": "Save feature is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Sending failed. Please try again."
+    }
+  },
   "caseStudies": {
     "hero": {
       "badge": "CASE STUDIES & BLOGS",
@@ -3911,6 +4299,13 @@
           "description": "Cyber attacks no longer only target large corporations. Which 5 critical vulnerabilities most commonly endanger SMEs – and how to protect yourself before it gets expensive.",
           "author": "Kerim K.",
           "readTime": "10 min"
+        },
+        {
+          "category": "PENTEST",
+          "title": "Free SME Pentest Berlin: Our Offer and Why You Should Join",
+          "description": "Learn why we’re giving free penetration tests to SMEs in Berlin, what’s included, and how to claim one of the remaining slots. Includes a PDF download link.",
+          "author": "Sodu Secure Team",
+          "readTime": "7 min"
         }
       ]
     }
@@ -3965,19 +4360,27 @@
         {
           "name": "Kerim K.",
           "role": "Penetration Tester",
-          "certifications": ["OSCP", "Comptia Security +"],
+          "certifications": [
+            "OSCP",
+            "Comptia Security +"
+          ],
           "image": "/images/teams/kerim-koc.jpeg"
         },
         {
           "name": "Markus F.",
           "role": "Application Security Expert",
-          "certifications": ["OSCP"],
+          "certifications": [
+            "OSCP"
+          ],
           "image": ""
         },
         {
           "name": "Burak S.",
           "role": "Cloud Security Specialist",
-          "certifications": ["AWS Security", "Azure Security"],
+          "certifications": [
+            "AWS Security",
+            "Azure Security"
+          ],
           "image": "/images/teams/burak-s.jpeg"
         }
       ]

@@ -541,7 +541,7 @@ export default function BerlinKMUPilotPage() {
           <div className={`flex justify-center lg:justify-start mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             <span className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">
               <Shield className="w-3.5 h-3.5" />
-              Berlin KMU Cybersecurity Pilotprogramm 2026
+              Pentest Berlin – KMU Cybersecurity Pilotprogramm 2026
             </span>
           </div>
 
@@ -549,13 +549,13 @@ export default function BerlinKMUPilotPage() {
             {/* Left */}
             <div className={`space-y-6 text-center lg:text-left transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
-                Wie angreifbar ist Ihr Unternehmen{" "}
-                <span className="text-red-500">wirklich?</span>
+                Pentest Berlin:{" "}
+                <span className="text-red-500">Wie sicher ist Ihr KMU wirklich?</span>
               </h1>
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                SODU Secure validiert Ihre gesamte IT-Infrastruktur – extern, intern und organizatorisch.
+                SODU Secure führt professionelle Penetrationstests in Berlin durch – extern, intern und organisatorisch.
                 Vollständiger Pentest, Active Directory Analyse und Phishing-Simulation für{" "}
-                <span className="text-white font-semibold">ausgewählte Berliner KMUs.</span>
+                <span className="text-white font-semibold">ausgewählte Berliner KMUs – 100 % kostenfrei.</span>
               </p>
 
               {/* Value badges */}
@@ -754,10 +754,10 @@ export default function BerlinKMUPilotPage() {
       <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-red-600 font-semibold text-sm uppercase tracking-wider">Das Pilotprogramm</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Was wir testen</h2>
+            <span className="text-red-600 font-semibold text-sm uppercase tracking-wider">Pentest Berlin – Das Pilotprogramm</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Was unser Pentest in Berlin umfasst</h2>
             <p className="mt-3 text-gray-500 max-w-xl mx-auto">
-              Ein vollständiges KMU Security Komplettpaket – manuell durchgeführt von zertifizierten Experten.
+              Ein vollständiger Pentest für Berliner KMUs – manuell durchgeführt von zertifizierten Penetrationstestern.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1033,7 +1033,7 @@ export default function BerlinKMUPilotPage() {
           <Lock className="w-12 h-12 text-red-500 mx-auto mb-4" />
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             Sicherheit ist kein Gefühl –<br />
-            <span className="text-red-400">sie ist messbar.</span>
+            <span className="text-red-400">Ihr Pentest in Berlin macht sie messbar.</span>
           </h2>
           <p className="text-gray-300 mb-2 leading-relaxed">
             Bewerben Sie sich jetzt für einen der{" "}

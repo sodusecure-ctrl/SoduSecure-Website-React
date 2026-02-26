@@ -23,10 +23,10 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "sodusecure - Professional Penetration Testing Services",
-    template: "%s | sodusecure"
+    default: "SODU Secure – Pentest Berlin & Penetration Testing Services",
+    template: "%s | SODU Secure"
   },
-  description: "Comprehensive penetration testing services to identify and remediate security vulnerabilities. Expert cybersecurity team protecting your digital assets with OWASP Top 10 testing, API security, and infrastructure audits.",
+  description: "Pentest Berlin: Professionelle Penetrationstests, Active Directory Analyse und Phishing-Simulationen. SODU Secure schützt Berliner KMUs und Unternehmen mit OWASP Top 10 Testing, API Security und Infrastruktur-Audits.",
   keywords: [
     'penetration testing',
     'cybersecurity',
@@ -38,6 +38,10 @@ export const metadata: Metadata = {
     'network security',
     'VAPT',
     'security audit',
+    'Pentest Berlin',
+    'Penetrationstest Berlin',
+    'IT-Sicherheit Berlin',
+    'Pentest KMU',
   ],
   authors: [{ name: 'sodusecure' }],
   creator: 'sodusecure',
@@ -49,11 +53,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'de_DE',
     url: baseUrl,
-    title: 'sodusecure - Professional Penetration Testing Services',
-    description: 'Comprehensive penetration testing services to identify and remediate security vulnerabilities. Expert cybersecurity team protecting your digital assets.',
-    siteName: 'sodusecure',
+    title: 'SODU Secure – Pentest Berlin & Penetration Testing',
+    description: 'Pentest Berlin: Professionelle Penetrationstests für KMUs und Unternehmen. Schwachstellen finden, bevor Angreifer es tun.',
+    siteName: 'SODU Secure',
     images: [
       {
         url: `${baseUrl}/images/og-image.jpg`,
@@ -65,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'sodusecure - Professional Penetration Testing Services',
-    description: 'Comprehensive penetration testing services to identify and remediate security vulnerabilities.',
+    title: 'SODU Secure – Pentest Berlin & Penetration Testing',
+    description: 'Pentest Berlin: Professionelle Penetrationstests, Active Directory Analyse und Phishing-Simulation für Berliner KMUs.',
     images: [`${baseUrl}/images/twitter-image.jpg`],
     creator: '@sodusecure',
   },

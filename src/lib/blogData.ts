@@ -154,7 +154,19 @@ export const blogPosts = [
     date: '2026-02-26',
     readTime: '10 min read',
     image: '/images/blogs/image9.png',
-    keywords: ['Pentest KMU', 'Pentest Berlin', 'IT Security KMU', 'Cybersecurity KMU', 'Active Directory Sicherheit', 'Phishing KMU', 'Ransomware KMU', 'KMU Sicherheitslücken', 'Penetrationstest Berlin'],
+    keywords: ['Pentest Berlin', 'Pentest KMU', 'IT Security KMU Berlin', 'Cybersecurity KMU Berlin', 'Active Directory Sicherheit', 'Phishing KMU Berlin', 'Ransomware KMU', 'KMU Sicherheitslücken Berlin', 'Penetrationstest Berlin', 'IT-Sicherheit Berlin'],
+  },
+  {
+    id: 14,
+    slug: '14',
+    title: 'Pentest Berlin: Kostenloser Penetrationstest für Berliner KMUs – Jetzt bewerben',
+    description: 'Professioneller Pentest in Berlin – völlig kostenfrei für ausgewählte KMUs. Erfahren Sie, was unser Penetrationstest umfasst, warum Berliner Unternehmen ihn brauchen und wie Sie sich Ihren Platz sichern.',
+    category: 'Pentest Berlin',
+    author: 'Sodu Secure Team',
+    date: '2026-02-27',
+    readTime: '8 min read',
+    image: '/images/blogs/image9.png',
+    keywords: ['Pentest Berlin', 'Penetrationstest Berlin', 'KMU Pentest Berlin', 'Kostenloser Pentest Berlin', 'IT-Sicherheit Berlin', 'Cybersecurity Berlin', 'Pentest Anbieter Berlin', 'Pentest Kosten', 'Pentest KMU'],
   },
 ];
 
