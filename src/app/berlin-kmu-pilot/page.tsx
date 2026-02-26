@@ -226,7 +226,7 @@ function QuickForm() {
         )}
       </button>
       <p className="text-white/40 text-xs text-center">
-        Wir melden uns innerhalb von 24–48 Stunden.
+        Wir melden uns innerhalb von 24 Stunden.
       </p>
     </form>
   );
