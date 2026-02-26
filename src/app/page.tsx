@@ -96,7 +96,7 @@ export default function Home() {
             🔐 Neu
           </span>
           <span className="text-white text-sm font-medium text-center">
-            Berlin KMU Cybersecurity Pilotprogramm 2026 &ndash; 6 kostenfreie Plätze verfügbar
+            Berlin KMU Cybersecurity Pilotprogramm 2026 &ndash; Nur noch 2 von 7 Plätzen frei
           </span>
           <span className="text-red-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0">
             Jetzt bewerben →
