@@ -8,7 +8,7 @@ import { ArrowRight, Calendar, Clock, Filter, Search, User } from 'lucide-react'
 import Image from 'next/image';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { blogPosts } from '@/lib/blogData';
+import { blogPosts, getBlogById } from '@/lib/blogData';
 
 export default function CaseStudiesPage() {
   const t = useTranslations('caseStudies');
@@ -245,7 +245,7 @@ export default function CaseStudiesPage() {
       author: t('blogs.items.12.author'),
       date: "Feb 26, 2026",
       readTime: t('blogs.items.12.readTime'),
-      categoryColor: "text-teal-500"
+      categoryColor: "text-orange-500"
     },
     {
       id: 14,
@@ -254,9 +254,20 @@ export default function CaseStudiesPage() {
       title: t('blogs.items.13.title'),
       description: t('blogs.items.13.description'),
       author: t('blogs.items.13.author'),
-      date: "Feb 26, 2026",
+      date: "Feb 27, 2026",
       readTime: t('blogs.items.13.readTime'),
-      categoryColor: "text-teal-600"
+      categoryColor: "text-red-600"
+    },
+    {
+      id: 15,
+      image: "/images/blogs/image9.png",
+      category: t('blogs.items.14.category'),
+      title: t('blogs.items.14.title'),
+      description: t('blogs.items.14.description'),
+      author: t('blogs.items.14.author'),
+      date: "Feb 27, 2026",
+      readTime: t('blogs.items.14.readTime'),
+      categoryColor: "text-orange-600"
     }
   ].reverse();
 
@@ -308,7 +319,8 @@ export default function CaseStudiesPage() {
     if (type === 'case') {
       window.location.href = `/case-studies/study/${id}`;
     } else {
-      window.location.href = `/case-studies/blogs/${id}`;
+      const blog = getBlogById(id);
+      window.location.href = `/case-studies/blogs/${blog?.slug ?? id}`;
     }
   };
 

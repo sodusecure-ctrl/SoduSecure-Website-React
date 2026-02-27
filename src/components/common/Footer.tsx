@@ -14,7 +14,9 @@ export default function Footer() {
     { label: serviceLabels?.[1], href: '/services/web-application-testing' },
     { label: serviceLabels?.[2], href: '/services/mobile-app-testing' },
     { label: serviceLabels?.[3], href: '/services/api-security-testing' },
-    { label: serviceLabels?.[4], href: '/services/cloud-devops-testing' }
+    { label: serviceLabels?.[4], href: '/services/cloud-devops-testing' },
+    { label: 'Pentest Berlin', href: '/pentest-berlin' },
+    { label: 'Berlin KMU Pilotprogramm', href: '/berlin-kmu-pilot' },
   ];
 
   const companyLinks = [

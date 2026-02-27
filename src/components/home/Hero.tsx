@@ -86,7 +86,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 border border-red-200 bg-red-50 hover:bg-red-100 text-red-700 font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-200 hover:scale-105 group"
               >
                 <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse flex-shrink-0" />
-                🔐 Pentest Berlin – KMU Pilotprogramm – 2 von 7 Plätze frei
+                🔐 Gratis KMU-Pentest Berlin – 2 Plätze frei
                 <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
               </button>
             </div>

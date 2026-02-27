@@ -17,10 +17,11 @@ export default function BlogArticleDetail() {
   const [ctaEmail, setCtaEmail] = useState('');
   const router = useRouter();
   const params = useParams();
-  const blogId = params?.id ? parseInt(params.id as string, 10) : 1;
+  const paramId = (params?.id ?? '1') as string;
 
-  // Get blog metadata for JSON-LD
-  const blogData = getBlogById(blogId);
+  // Get blog metadata for JSON-LD (handles numeric ids AND keyword slugs)
+  const blogData = getBlogById(paramId);
+  const blogId = blogData?.id ?? 1;
 
   const getBlogTranslationKey = (id: number): string => {
     const mapping: Record<number, string> = {
@@ -37,7 +38,8 @@ export default function BlogArticleDetail() {
       11: 'oscpPathDetail',
       12: 'gdprPentestDetail',
       13: 'kmuSicherheitslueckenDetail',
-      14: 'pilotOfferDetail',
+      14: 'pentestBerlinDetail',
+      15: 'pentestAblaufDetail',
     };
     return mapping[id] || 'blogDetail';
   };

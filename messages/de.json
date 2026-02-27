@@ -786,63 +786,18 @@
             "title": "WebApp-Pentest",
             "des": "Wählen Sie den Testumfang passend zur Komplexität Ihrer Anwendung",
             "variantList": [
-              {
-                "name": "Klein",
-                "price": "€1,499",
-                "duration": "5 Tage",
-                "features": [
-                  "Statische Anwendung",
-                  "Black-box"
-                ]
-              },
-              {
-                "name": "Mittel",
-                "price": "€7,000",
-                "duration": "4 Wochen",
-                "type": "popular",
-                "features": [
-                  "Dynamische Anwendung",
-                  "Black + Grey Box",
-                  "2-4 Benutzerrollen"
-                ]
-              },
-              {
-                "name": "Groß",
-                "price": "€10,000",
-                "duration": "4 Wochen",
-                "features": [
-                  "Dynamische Anwendung",
-                  "5+ Benutzerrollen",
-                  "Kritische Systeme"
-                ]
-              }
+              { "name": "Klein", "price": "€1,499", "duration": "5 Tage", "features": ["Statische Anwendung", "Black-box"] },
+              { "name": "Mittel", "price": "€7,000", "duration": "4 Wochen", "type": "popular", "features": ["Dynamische Anwendung", "Black + Grey Box", "2-4 Benutzerrollen"] },
+              { "name": "Groß", "price": "€10,000", "duration": "4 Wochen", "features": ["Dynamische Anwendung", "5+ Benutzerrollen", "Kritische Systeme"] }
             ]
           },
           "addOns": {
             "title": "Add-ons auswählen (optional)",
             "des": "Erweitern Sie Ihren Pentest mit diesen zusätzlichen Services",
             "addOnList": [
-              {
-                "id": 1,
-                "name": "Code-unterstützter Review",
-                "des": "White-box-Testing mit Code-Zugriff für tiefere Analysen",
-                "price": "€1,500",
-                "type": "premium"
-              },
-              {
-                "id": 2,
-                "name": "Kostenloser Retest",
-                "des": "Überprüfung der Fixes nach der Behebung ohne Mehrkosten",
-                "price": "€0",
-                "type": "free"
-              },
-              {
-                "id": 3,
-                "name": "Onsite-Abschlusspräsentation",
-                "des": "Vor-Ort-Präsentation der Ergebnisse für Ihr Team",
-                "price": "€500",
-                "type": "premium"
-              }
+              { "id": 1, "name": "Code-unterstützter Review", "des": "White-box-Testing mit Code-Zugriff für tiefere Analysen", "price": "€1,500", "type": "premium" },
+              { "id": 2, "name": "Kostenloser Retest", "des": "Überprüfung der Fixes nach der Behebung ohne Mehrkosten", "price": "€0", "type": "free" },
+              { "id": 3, "name": "Onsite-Abschlusspräsentation", "des": "Vor-Ort-Präsentation der Ergebnisse für Ihr Team", "price": "€500", "type": "premium" }
             ]
           }
         },
@@ -859,67 +814,18 @@
             "title": "API-Pentest",
             "des": "Wählen Sie den Testumfang passend zur Komplexität Ihrer Anwendung",
             "variantList": [
-              {
-                "name": "Klein",
-                "price": "€1,499",
-                "duration": "2 Wochen",
-                "features": [
-                  "Statische Anwendung",
-                  "Black-box-Testing",
-                  "Eine Benutzerrolle",
-                  "OWASP Top 10"
-                ]
-              },
-              {
-                "name": "Mittel",
-                "price": "€7,000",
-                "duration": "4 Wochen",
-                "type": "popular",
-                "features": [
-                  "Dynamische Anwendung",
-                  "Black + Grey Box",
-                  "2-4 Benutzerrollen",
-                  "Umfassende Tests"
-                ]
-              },
-              {
-                "name": "Groß",
-                "price": "€10,000",
-                "duration": "6 Wochen",
-                "features": [
-                  "Dynamische Anwendung",
-                  "Vollständige Testabdeckung",
-                  "5+ Benutzerrollen",
-                  "Kritische Systeme"
-                ]
-              }
+              { "name": "Klein", "price": "€1,499", "duration": "2 Wochen", "features": ["Statische Anwendung", "Black-box-Testing", "Eine Benutzerrolle", "OWASP Top 10"] },
+              { "name": "Mittel", "price": "€7,000", "duration": "4 Wochen", "type": "popular", "features": ["Dynamische Anwendung", "Black + Grey Box", "2-4 Benutzerrollen", "Umfassende Tests"] },
+              { "name": "Groß", "price": "€10,000", "duration": "6 Wochen", "features": ["Dynamische Anwendung", "Vollständige Testabdeckung", "5+ Benutzerrollen", "Kritische Systeme"] }
             ]
           },
           "addOns": {
             "title": "Add-ons auswählen (optional)",
             "des": "Erweitern Sie Ihren Pentest mit diesen zusätzlichen Services",
             "addOnList": [
-              {
-                "id": 1,
-                "name": "Code-unterstützter Review",
-                "des": "White-box-Testing mit Code-Zugriff für tiefere Analysen",
-                "price": "€1,500",
-                "type": "premium"
-              },
-              {
-                "id": 2,
-                "name": "Kostenloser Retest",
-                "des": "Überprüfung der Fixes nach der Behebung ohne Mehrkosten",
-                "price": "€0",
-                "type": "free"
-              },
-              {
-                "id": 3,
-                "name": "Onsite-Abschlusspräsentation",
-                "des": "Vor-Ort-Präsentation der Ergebnisse für Ihr Team",
-                "price": "€500",
-                "type": "premium"
-              }
+              { "id": 1, "name": "Code-unterstützter Review", "des": "White-box-Testing mit Code-Zugriff für tiefere Analysen", "price": "€1,500", "type": "premium" },
+              { "id": 2, "name": "Kostenloser Retest", "des": "Überprüfung der Fixes nach der Behebung ohne Mehrkosten", "price": "€0", "type": "free" },
+              { "id": 3, "name": "Onsite-Abschlusspräsentation", "des": "Vor-Ort-Präsentation der Ergebnisse für Ihr Team", "price": "€500", "type": "premium" }
             ]
           }
         },
@@ -936,63 +842,18 @@
             "title": "Infrastruktur-Pentest",
             "des": "Wählen Sie den Testumfang passend zur Größe Ihrer Umgebung",
             "variantList": [
-              {
-                "name": "Klein",
-                "price": "€2,500",
-                "system": "5",
-                "features": [
-                  "Netzwerk- & Host-Schwachstellenanalyse",
-                  "Privilege Escalation-Tests",
-                  "Management- und Technikbericht"
-                ]
-              },
-              {
-                "name": "Mittel",
-                "price": "€10,000",
-                "system": "100",
-                "type": "popular",
-                "features": [
-                  "Analyse von Fehlkonfigurationen & Exponierungen",
-                  "Risikobewertete Findings"
-                ]
-              },
-              {
-                "name": "Groß",
-                "price": "€20,000",
-                "system": "250",
-                "features": [
-                  "Umfassende Penetrationstests",
-                  "Individuelle Angriffsszenarien",
-                  "Management- und Technikbericht"
-                ]
-              }
+              { "name": "Klein", "price": "€2,500", "system": "5", "features": ["Netzwerk- & Host-Schwachstellenanalyse", "Privilege Escalation-Tests", "Management- und Technikbericht"] },
+              { "name": "Mittel", "price": "€10,000", "system": "100", "type": "popular", "features": ["Analyse von Fehlkonfigurationen & Exponierungen", "Risikobewertete Findings"] },
+              { "name": "Groß", "price": "€20,000", "system": "250", "features": ["Umfassende Penetrationstests", "Individuelle Angriffsszenarien", "Management- und Technikbericht"] }
             ]
           },
           "addOns": {
             "title": "Add-ons auswählen (optional)",
             "des": "Erweitern Sie Ihren Pentest mit diesen zusätzlichen Services",
             "addOnList": [
-              {
-                "id": 1,
-                "name": "Erweiterter Umfang",
-                "des": "Zusätzliche IP-Bereiche oder Subnetze im Test enthalten",
-                "price": "€2,000",
-                "type": "premium"
-              },
-              {
-                "id": 2,
-                "name": "Kostenloser Retest",
-                "des": "Überprüfung der Fixes nach der Behebung ohne Mehrkosten",
-                "price": "€0",
-                "type": "free"
-              },
-              {
-                "id": 3,
-                "name": "Onsite-Abschlusspräsentation",
-                "des": "Vor-Ort-Präsentation der Ergebnisse für Ihr Team",
-                "price": "€500",
-                "type": "premium"
-              }
+              { "id": 1, "name": "Erweiterter Umfang", "des": "Zusätzliche IP-Bereiche oder Subnetze im Test enthalten", "price": "€2,000", "type": "premium" },
+              { "id": 2, "name": "Kostenloser Retest", "des": "Überprüfung der Fixes nach der Behebung ohne Mehrkosten", "price": "€0", "type": "free" },
+              { "id": 3, "name": "Onsite-Abschlusspräsentation", "des": "Vor-Ort-Präsentation der Ergebnisse für Ihr Team", "price": "€500", "type": "premium" }
             ]
           }
         },
@@ -1009,64 +870,18 @@
             "title": "Awareness & Phishing",
             "des": "Wählen Sie die Trainings- und Simulations-Tiefe für Ihre Teams",
             "variantList": [
-              {
-                "name": "Starter",
-                "price": "€2,000",
-                "duration": "2 Wochen",
-                "features": [
-                  "Baseline-Phishing-Kampagne",
-                  "Awareness-Training",
-                  "Managementbericht"
-                ]
-              },
-              {
-                "name": "Professional",
-                "price": "€4,500",
-                "duration": "4 Wochen",
-                "type": "popular",
-                "features": [
-                  "Mehrere Phishing-Kampagnen",
-                  "Rollenbasierte Trainings",
-                  "Metriken & Verbesserungsplan"
-                ]
-              },
-              {
-                "name": "Enterprise",
-                "price": "€8,000",
-                "duration": "6 Wochen",
-                "features": [
-                  "Fortgeschrittenes Red-Team-Phishing",
-                  "Individuelle Trainingsinhalte",
-                  "Management- & Technikberichte"
-                ]
-              }
+              { "name": "Starter", "price": "€2,000", "duration": "2 Wochen", "features": ["Baseline-Phishing-Kampagne", "Awareness-Training", "Managementbericht"] },
+              { "name": "Professional", "price": "€4,500", "duration": "4 Wochen", "type": "popular", "features": ["Mehrere Phishing-Kampagnen", "Rollenbasierte Trainings", "Metriken & Verbesserungsplan"] },
+              { "name": "Enterprise", "price": "€8,000", "duration": "6 Wochen", "features": ["Fortgeschrittenes Red-Team-Phishing", "Individuelle Trainingsinhalte", "Management- & Technikberichte"] }
             ]
           },
           "addOns": {
             "title": "Add-ons auswählen (optional)",
             "des": "Erweitern Sie Ihr Engagement mit zusätzlichen Services",
             "addOnList": [
-              {
-                "id": 1,
-                "name": "Executive Workshop",
-                "des": "C-Level-Briefing und Tabletop-Übung",
-                "price": "€1,200",
-                "type": "premium"
-              },
-              {
-                "id": 2,
-                "name": "Kostenloser Retest",
-                "des": "Folge-Phishing-Kampagne zur Überprüfung der Verbesserungen",
-                "price": "€0",
-                "type": "free"
-              },
-              {
-                "id": 3,
-                "name": "Onsite-Training",
-                "des": "Vor-Ort-Trainings für Ihre Teams",
-                "price": "€1,800",
-                "type": "premium"
-              }
+              { "id": 1, "name": "Executive Workshop", "des": "C-Level-Briefing und Tabletop-Übung", "price": "€1,200", "type": "premium" },
+              { "id": 2, "name": "Kostenloser Retest", "des": "Folge-Phishing-Kampagne zur Überprüfung der Verbesserungen", "price": "€0", "type": "free" },
+              { "id": 3, "name": "Onsite-Training", "des": "Vor-Ort-Trainings für Ihre Teams", "price": "€1,800", "type": "premium" }
             ]
           }
         },
@@ -1083,72 +898,18 @@
             "title": "KMU Paket konfigurieren",
             "des": "Wählen Sie das passende Sicherheitspaket für Ihr Unternehmen",
             "variantList": [
-              {
-                "name": "Basis",
-                "price": "€8,000",
-                "duration": "3–4 Wochen",
-                "features": [
-                  "Externer Pentest",
-                  "Phishing-Kampagne",
-                  "Web-Präsenz Schnelltest",
-                  "Management Summary",
-                  "Technischer Report"
-                ]
-              },
-              {
-                "name": "Basis + Intern",
-                "price": "€10,500",
-                "duration": "4–5 Wochen",
-                "type": "popular",
-                "features": [
-                  "Externer Pentest",
-                  "Phishing-Kampagne",
-                  "Web-Präsenz Schnelltest",
-                  "Interner Pentest / Active Directory",
-                  "Management Summary",
-                  "Technischer Report"
-                ]
-              },
-              {
-                "name": "Komplett",
-                "price": "€13,000",
-                "duration": "5–6 Wochen",
-                "features": [
-                  "Externer Pentest",
-                  "Phishing-Kampagne",
-                  "Web Application Pentest (komplett)",
-                  "Interner Pentest / Active Directory",
-                  "Management Summary",
-                  "Technischer Report"
-                ]
-              }
+              { "name": "Basis", "price": "€8,000", "duration": "3–4 Wochen", "features": ["Externer Pentest", "Phishing-Kampagne", "Web-Präsenz Schnelltest", "Management Summary", "Technischer Report"] },
+              { "name": "Basis + Intern", "price": "€10,500", "duration": "4–5 Wochen", "type": "popular", "features": ["Externer Pentest", "Phishing-Kampagne", "Web-Präsenz Schnelltest", "Interner Pentest / Active Directory", "Management Summary", "Technischer Report"] },
+              { "name": "Komplett", "price": "€13,000", "duration": "5–6 Wochen", "features": ["Externer Pentest", "Phishing-Kampagne", "Web Application Pentest (komplett)", "Interner Pentest / Active Directory", "Management Summary", "Technischer Report"] }
             ]
           },
           "addOns": {
             "title": "Add-ons auswählen (optional)",
             "des": "Erweitern Sie Ihr KMU-Paket mit zusätzlichen Services",
             "addOnList": [
-              {
-                "id": 1,
-                "name": "Abschlusspräsentation",
-                "des": "Live-Präsentation der Ergebnisse für Geschäftsführung und IT-Team",
-                "price": "€0",
-                "type": "free"
-              },
-              {
-                "id": 2,
-                "name": "Retest nach Behebung",
-                "des": "Überprüfung der Fixes nach Abschluss der Remediation",
-                "price": "€0",
-                "type": "free"
-              },
-              {
-                "id": 3,
-                "name": "Security Awareness Training",
-                "des": "Ergänzendes Mitarbeiter-Training nach der Phishing-Kampagne",
-                "price": "€1,500",
-                "type": "premium"
-              }
+              { "id": 1, "name": "Abschlusspräsentation", "des": "Live-Präsentation der Ergebnisse für Geschäftsführung und IT-Team", "price": "€0", "type": "free" },
+              { "id": 2, "name": "Retest nach Behebung", "des": "Überprüfung der Fixes nach Abschluss der Remediation", "price": "€0", "type": "free" },
+              { "id": 3, "name": "Security Awareness Training", "des": "Ergänzendes Mitarbeiter-Training nach der Phishing-Kampagne", "price": "€1,500", "type": "premium" }
             ]
           }
         }
@@ -3990,145 +3751,261 @@
       "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
     }
   },
-  "pilotOfferDetail": {
+  "pentestAblaufDetail": {
     "backToBlog": "Zurück zum Blog",
     "shareArticle": "Artikel teilen",
     "bookmarkArticle": "Artikel speichern",
-    "category": "PENTEST BERLIN",
-    "date": "26. Feb 2026",
-    "title": "Pentest Berlin: Kostenloser Penetrationstest für Berliner KMUs – Jetzt bewerben",
-    "description": "Professioneller Pentest in Berlin – völlig kostenfrei für ausgewählte KMUs. Erfahren Sie, was unser Penetrationstest umfasst, warum Berliner Unternehmen ihn brauchen und wie Sie sich Ihren Platz sichern.",
-    "author": "Sodu Secure Team",
-    "readTime": "8 Min. Lesezeit",
+    "category": "PENTEST ABLAUF",
+    "date": "27. Feb 2026",
+    "title": "Pentest Ablauf: Wie läuft ein Penetrationstest wirklich ab? (2026)",
+    "description": "Schritt für Schritt erklärt: Wie läuft ein professioneller Penetrationstest ab? Von der Auftragsklärung über die aktive Testphase bis zum fertigen Report – der vollständige Pentest-Ablauf.",
+    "author": "Kerim K.",
+    "readTime": "12 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
     "share": "Teilen",
     "save": "Speichern",
     "sections": {
       "introduction": {
-        "title": "Pentest Berlin – Warum jedes KMU einen Penetrationstest braucht",
-        "content": "Cyberangriffe auf Berliner Unternehmen nehmen rasant zu. Allein 2025 wurden 68 % der deutschen KMUs Opfer mindestens eines Angriffs. Als spezialisierter Anbieter für Pentest in Berlin laden wir sieben ausgewählte kleine und mittlere Unternehmen ein, einen vollständigen, unabhängigen Penetrationstest kostenlos durchführen zu lassen. Unser Ziel: Berliner KMUs erhalten eine realistische Einschätzung ihrer IT-Sicherheitslage – mit echten Angriffssimulationen, nicht nur automatisierten Scans. Den ausführlichen Leitfaden mit den häufigsten Schwachstellen können Sie als PDF herunterladen.",
+        "title": "Was ist ein Penetrationstest – und warum ist der Ablauf entscheidend?",
+        "content": "Ein Penetrationstest – kurz Pentest – ist ein autorisierter, simulierter Angriff auf Ihre IT-Infrastruktur. Ziel ist es, Schwachstellen zu finden, bevor es ein echter Angreifer tut. Doch nicht der Tool-Einsatz macht einen guten Pentest aus – sondern der strukturierte Ablauf. Wer die Phasen kennt, weiß, was er bekommt, kann den Anbieter bewerten und versteht den Bericht. Dieser Artikel erklärt den vollständigen Pentest-Ablauf Schritt für Schritt.",
         "keyTakeaway": {
-          "title": "Kernaussage",
-          "content": "Ein professioneller Pentest in Berlin deckt Schwachstellen auf, bevor Angreifer sie finden. 80 % aller KMU-Netzwerke haben kritische Fehlkonfigurationen im Active Directory – ein einziger erfolgreicher Angriff kann den Betrieb wochenlang lahmlegen."
+          "title": "Das Wichtigste vorab",
+          "content": "Ein professioneller Pentest folgt einem definierten Ablauf in mehreren Phasen – von der Auftragsklärung über die aktive Exploitation bis zur Abschlusspräsentation. Jede Phase liefert spezifische Ergebnisse und baut auf der vorherigen auf."
         },
-        "quote": "Wir zeigen Berliner Unternehmen messbar, wo sie verwundbar sind – mit echten Angriffstechniken, nicht mit Theorien."
+        "quote": "Ein Pentest ohne klaren Ablauf ist kein Test – er ist ein Experiment auf Kosten Ihrer Infrastruktur."
       },
       "commonAttackVectors": {
-        "title": "Was unser Pentest in Berlin umfasst",
+        "title": "Die 8 Phasen des Penetrationstest-Ablaufs",
         "items": [
-          "Vollständiger externer Penetrationstest: Öffentliche IPs, Webanwendungen, Cloud-Exposition und Netzwerkperimeter – wie ein realer Angreifer Ihr Unternehmen von außen sieht",
-          "Active Directory Analyse: Privilegien-Eskalation, Kerberoasting, Pass-the-Hash und laterale Bewegungen – die häufigsten Einfallstore in Windows-Netzwerken",
-          "Phishing-Simulation: Realistische E-Mail-Kampagne mit detaillierter Klickrate-Auswertung und individueller Awareness-Bewertung Ihrer Mitarbeitenden",
-          "Management-Bericht: Executive Summary für die Geschäftsführung, technischer Deep-Dive für die IT und priorisierter Maßnahmenkatalog – alles in einem Pentest-Report",
-          "Für Sie 100 % kostenfrei – limitiert auf die ersten sieben Berliner KMUs, die sich qualifizieren",
-          "Schnelle Durchführung: Vom Kick-off bis zum fertigen Bericht in nur 2–3 Wochen"
+          "Phase 1 – Auftragsklärung & Scope-Definition: Gemeinsame Festlegung von Testgrenzen, Zielsystemen, Ansprechpartnern und Zeitfenster. Alles schriftlich im Pentest-Vertrag fixiert.",
+          "Phase 2 – Reconnaissance (Aufklärung): Passive und aktive Informationssammlung über das Ziel – OSINT, DNS-Analyse, Subdomains, öffentliche Leaks, Mitarbeiterdaten.",
+          "Phase 3 – Scanning & Enumeration: Systematisches Erfassen offener Ports, Dienste, Betriebssysteme und Softwareversionen mit manueller Verifizierung jedes Befundes.",
+          "Phase 4 – Schwachstellenanalyse: Identifikation ausnutzbarer Schwachstellen – CVEs, Fehlkonfigurationen, Business Logic Flaws, schwache Authentifizierung.",
+          "Phase 5 – Exploitation (Aktive Ausnutzung): Manueller Versuch, identifizierte Schwachstellen auszunutzen und nachzuweisen, dass sie real angreifbar sind – kein False-Positive-Reporting.",
+          "Phase 6 – Post-Exploitation & Lateral Movement: Nach erstem Zugriff: Privilege Escalation, Netzwerk-Pivoting, Domain-Admin-Versuch, Persistenz – wie weit kommt ein echter Angreifer?",
+          "Phase 7 – Reporting & Dokumentation: Technischer Bericht mit CVSS-Bewertung, Executive Summary, Proof-of-Concept-Screenshots und priorisierter Remediation-Roadmap.",
+          "Phase 8 – Abschlusspräsentation & Retest: Vorstellung der Ergebnisse vor IT und Geschäftsführung. Nach Behebung empfehlen wir einen kostenlosen Retest der kritischen Findings."
         ]
       },
       "impactAnalysis": {
-        "title": "Was Ihr Pentest-Bericht aufdeckt",
-        "content": "Nach Abschluss unseres Penetrationstests erhalten Sie eine detaillierte Risikoanalyse Ihrer gesamten IT-Infrastruktur. Der Bericht zeigt Ihnen nicht nur, wo Schwachstellen liegen, sondern bewertet jede einzelne nach Kritikalität und Ausnutzbarkeit. So wissen Sie exakt, welche Lücken ein Angreifer zuerst ausnutzen würde – und können gezielt reagieren, statt blind zu investieren.",
+        "title": "Wie lange dauert ein Penetrationstest?",
+        "content": "Die Dauer eines Pentests hängt stark vom Scope ab. Als grobe Orientierung gelten folgende Zeitrahmen – die aktive Testphase ist dabei nur ein Teil des Gesamtaufwands.",
         "statistics": {
-          "title": "Pentest Berlin – Zahlen, die überzeugen",
+          "title": "Typische Durchlaufzeiten nach Pentest-Typ",
           "averageCost": {
-            "value": "0 €",
-            "label": "Kosten des Pentests für Pilotteilnehmer"
+            "value": "3–5 Tage",
+            "label": "Focused Webapplikations-Pentest (1 Anwendung, definierter Scope)"
           },
           "identificationTime": {
-            "value": "2–3 Wochen",
-            "label": "Vom Kick-off bis zum fertigen Pentest-Report"
+            "value": "1–2 Wochen",
+            "label": "Externer Pentest (Netzwerk + Web + Cloud, KMU-Größe)"
           },
           "multipleBreaches": {
-            "value": "100 %",
-            "label": "der getesteten KMUs hatten mindestens eine kritische Schwachstelle"
+            "value": "2–4 Wochen",
+            "label": "Vollständiger KMU-Pentest (Extern + Active Directory + Phishing)"
           }
         }
       },
       "mitigationStrategies": {
-        "title": "Nach dem Pentest: Ihre Roadmap zur sicheren IT",
-        "content": "Ein Penetrationstest in Berlin ist nur der Anfang. Nach Erhalt Ihres Reports wissen Sie exakt, welche Maßnahmen sofort umgesetzt werden müssen und welche langfristig Ihre Sicherheitslage verbessern. Unser Team erklärt Ihnen jeden Befund persönlich und hilft Ihnen, einen realistischen Maßnahmenplan aufzustellen.",
+        "title": "Vorbereitung: Was Sie vor dem Pentest tun sollten",
+        "content": "Ein gut vorbereitetes Unternehmen bekommt mehr aus dem Pentest heraus. Diese Checkliste hilft Ihnen, den Ablauf optimal zu gestalten – und Ihre Infrastruktur gut aufgestellt in den Test zu schicken.",
         "essentialPractices": {
-          "title": "Sofortmaßnahmen nach dem Pentest",
+          "title": "Pentest-Vorbereitung: Checkliste für Unternehmen",
           "items": [
-            "Pentest-Report mit Ihrem IT-Team und einem Sicherheitsexperten gemeinsam durchgehen",
-            "Kritische Schwachstellen innerhalb von 72 Stunden patchen oder isolieren",
-            "Multi-Faktor-Authentifizierung (MFA) für alle Admin-Accounts und VPN-Zugänge aktivieren",
-            "Mitarbeitende gezielt für Phishing- und Social-Engineering-Angriffe sensibilisieren",
-            "Regelmäßige, automatisierte Backups einrichten und Wiederherstellungstests durchführen",
-            "Active Directory härten: unnötige Berechtigungen entfernen, Tiering-Modell einführen",
-            "Incident-Response-Plan dokumentieren und mindestens einmal jährlich üben",
-            "Jährlichen Folge-Pentest einplanen, um neue Schwachstellen frühzeitig zu erkennen"
+            "Schriftliche Autorisierung: Pentest-Vertrag mit expliziter Genehmigung – schützt beide Seiten rechtlich.",
+            "Ansprechpartner benennen: IT-Verantwortlichen und Notfall-Kontakt für den Testzeitraum festlegen.",
+            "Scope schriftlich definieren: IP-Ranges, Domains, Anwendungen und explizite Ausschlüsse dokumentieren.",
+            "Testzeitraum abstimmen: Störungsarme Zeiten wählen – Produktionssysteme nach Möglichkeit schützen.",
+            "Vollständige Backups sicherstellen: Alle Zielsysteme vor Testbeginn vollständig sichern.",
+            "Logging maximieren: SIEM/Logging-Tiefe für die Testphase erhöhen – wertvolles Lernmaterial.",
+            "Incident-Response-Plan bereithalten: Für den unwahrscheinlichen Fall echter Störungen während des Tests.",
+            "Retest einplanen: Zeit und Budget für Nachverifizierung der behobenen Befunde reservieren."
           ]
         }
       },
-      "whyWeOffer": {
-        "title": "Warum wir kostenlose Pentests in Berlin anbieten",
-        "content": "Als Berliner Cybersecurity-Unternehmen wissen wir: Vertrauen entsteht durch Ergebnisse, nicht durch Versprechen. Deshalb bieten wir ausgewählten KMUs in Berlin und Brandenburg einen vollständigen Penetrationstest kostenfrei an. Wir wollen zeigen, was ein professioneller Pentest in Berlin leisten kann – und gleichzeitig Referenzen im KMU-Bereich aufbauen. Viele kleine und mittlere Unternehmen in Berlin unterschätzen ihr Risiko, weil sie nie getestet wurden. Unser Pilotprogramm ändert das: unabhängig, transparent und ohne versteckte Kosten."
-      },
-      "whyYouNeedIt": {
-        "title": "5 Gründe, warum Ihr Berliner KMU einen Pentest braucht",
-        "items": [
-          "100 % kostenfrei: Professioneller Penetrationstest im Wert von 8.000–15.000 € – ohne finanzielle Hürde für Ihr Unternehmen",
-          "Maßgeschneiderter Report: Keine generischen Scan-Ergebnisse, sondern manuell geprüfte Schwachstellen mit konkreten Handlungsempfehlungen für Ihre spezifische Infrastruktur",
-          "Berliner Expertise: Wir kennen die typischen IT-Strukturen lokaler KMUs – von der Arztpraxis in Mitte bis zum Handwerksbetrieb in Spandau",
-          "Unabhängige externe Analyse: Keine internen Betriebsblindheiten – unser Pentest-Team prüft Ihre Systeme mit den gleichen Methoden wie echte Angreifer",
-          "DSGVO-Compliance: Ein dokumentierter Pentest in Berlin ist ein wichtiger Baustein für Ihre Nachweispflichten nach Art. 32 DSGVO"
-        ]
-      },
-      "howToApply": {
-        "title": "So sichern Sie sich Ihren Pentest in Berlin",
-        "content": "Nur noch 2 von 7 Plätzen sind verfügbar – und die Nachfrage steigt. Besuchen Sie sodusecure.com/berlin-kmu-pilot, füllen Sie das Bewerbungsformular aus und unser Team meldet sich innerhalb von 48 Stunden persönlich bei Ihnen. Bewerbungsschluss ist der 31. März 2026. Jedes KMU durchläuft ein kurzes Qualifizierungsgespräch, um sicherzustellen, dass der Pentest maximalen Mehrwert liefert."
-      },
       "conclusion": {
-        "title": "Fazit: Pentest Berlin – Ihre IT-Sicherheit auf dem Prüfstand",
-        "content1": "Ein professioneller Penetrationstest ist der wirksamste Weg, die tatsächliche Sicherheitslage Ihres Unternehmens zu bewerten. Unser kostenloses Pilotprogramm gibt Berliner KMUs die seltene Chance, genau das ohne Risiko zu tun – mit einem vollständigen Pentest, der normalerweise bis zu 15.000 € kostet.",
-        "content2": "Laden Sie jetzt den kostenlosen PDF-Leitfaden herunter, um die 5 häufigsten Schwachstellen bei Berliner KMUs kennenzulernen – und sichern Sie sich einen der letzten Plätze für unseren Pentest in Berlin."
+        "title": "Pentest beauftragen: Was jetzt zu tun ist",
+        "content1": "Wenn Sie den Ablauf eines Penetrationstests verstehen, können Sie gezielt den richtigen Anbieter auswählen, realistische Erwartungen setzen und den Test optimal vorbereiten. SODU Secure begleitet Sie durch alle 8 Phasen – transparent, strukturiert und mit nachvollziehbaren Ergebnissen.",
+        "content2": "Berliner KMUs können sich noch für unser kostenloses Pilotprogramm 2026 bewerben: vollständiger Pentest im Wert von bis zu 15.000 € kostenfrei. Nur 2 Plätze verfügbar. Jetzt bewerben unter sodusecure.com/berlin-kmu-pilot."
       }
     },
     "tags": [
+      "Pentest Ablauf",
+      "Penetrationstest Phasen",
+      "wie läuft ein Pentest ab",
+      "Pentest Vorbereitung",
       "Pentest Berlin",
-      "Penetrationstest Berlin",
-      "KMU Pentest",
-      "Kostenloser Pentest Berlin",
-      "IT-Sicherheit Berlin",
-      "Cybersecurity Berlin KMU"
+      "Pentest KMU",
+      "IT-Sicherheit"
     ],
     "cta": {
-      "title": "Bereit für Ihren Pentest in Berlin?",
-      "description": "Bewerben Sie sich jetzt für das kostenlose Pilotprogramm und erhalten Sie einen professionellen Penetrationstest – inklusive Active Directory Analyse, Phishing-Simulation und Management-Bericht.",
+      "title": "Pentest beauftragen",
+      "description": "Erhalten Sie innerhalb von 24 Stunden ein transparentes Festpreis-Angebot für Ihren Penetrationstest.",
       "emailPlaceholder": "E-Mail eingeben",
-      "buttonText": "Pentest-Platz sichern",
-      "disclaimer": "Kein Spam, jederzeit abbestellbar"
-    },
-    "authorBio": {
-      "name": "Sodu Secure Team",
-      "role": "Offensive Security & Penetration Testing",
-      "bio": "Unser Team aus zertifizierten Penetrationstestern ist auf manuelle Sicherheitsanalysen für Berliner KMUs spezialisiert. Wir kombinieren offensive Techniken mit praxisnaher Beratung, damit Sie nicht nur wissen, wo Ihre Schwachstellen liegen, sondern auch wie Sie sie schließen."
+      "buttonText": "Pentest anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
     },
     "relatedArticles": {
-      "title": "Weitere Artikel zum Thema Pentest Berlin",
+      "title": "Verwandte Artikel",
       "articles": [
         {
-          "title": "5 Sicherheitslücken, die wir bei nahezu jedem Berliner KMU finden",
-          "slug": "13",
-          "description": "Die 5 kritischen Sicherheitslücken, die wir bei fast jedem Berliner KMU finden – und wie Sie sich davor schützen.",
+          "title": "Pentest Berlin 2026: Der vollständige Leitfaden",
+          "description": "Was kostet ein Pentest in Berlin? Kosten, Ablauf und Anbieter-Auswahl kompakt erklärt.",
           "category": "PENTEST BERLIN",
-          "readTime": "10 Min. Lesezeit",
+          "readTime": "14 Min. Lesezeit",
           "readMore": "Artikel lesen →"
         },
         {
-          "title": "Penetrationstest für KMU: Wann ein Pentest wirklich notwendig ist",
-          "description": "Der praxisorientierte Leitfaden für Berliner KMUs – wann ein Penetrationstest unverzichtbar wird, welche Arten es gibt und wie er Ihr Unternehmen nachweisbar schützt.",
-          "category": "PENTEST BERLIN",
-          "readTime": "13 Min. Lesezeit",
+          "title": "5 Sicherheitslücken, die wir bei nahezu jedem KMU finden",
+          "description": "Welche kritischen Schwachstellen Berliner KMUs am häufigsten gefährden – und was dagegen hilft.",
+          "category": "KMU SECURITY",
+          "readTime": "10 Min. Lesezeit",
           "readMore": "Artikel lesen →"
         }
       ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "Geschäftsführer & Offensive Security, SODU Secure GmbH",
+      "bio": "Informatikstudent TU Berlin, Gründer von SODU Secure. Spezialisiert auf Penetration Testing, Red Teaming und KMU-Sicherheit in Berlin."
     },
     "mobileActions": {
       "enjoyedArticle": "War dieser Artikel hilfreich?",
       "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
       "getHelp": "Pentest anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "pentestBerlinDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "PENTEST BERLIN",
+    "date": "27. Feb 2026",
+    "title": "Pentest Berlin 2026: Der vollständige Leitfaden für Berliner Unternehmen",
+    "description": "Was kostet ein Pentest in Berlin? Welche Arten gibt es? Wann braucht ein Berliner Unternehmen einen Penetrationstest – und wie findet man den richtigen Anbieter? Der komplette Guide.",
+    "author": "Kerim K.",
+    "readTime": "14 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Warum Berliner Unternehmen jetzt einen Pentest brauchen",
+        "content": "Berlin ist Deutschlands führender Technologie- und Startup-Standort – und gleichzeitig eines der attraktivsten Ziele für Cyberkriminelle. Unternehmen jeder Größe verarbeiten sensible Kundendaten, betreiben kritische IT-Infrastruktur und sind über die Cloud mit der ganzen Welt verbunden. Gleichzeitig haben viele Berliner KMUs und Mittelständler keine vollständige Sicherheitsvalidierung ihrer eigenen Systeme durchgeführt. Ein Penetrationstest – kurz Pentest – schließt genau diese Lücke: Er zeigt, wo Ihre Infrastruktur wirklich angreifbar ist, bevor es ein echter Angreifer tut.",
+        "keyTakeaway": {
+          "title": "Das Wichtigste in Kürze",
+          "content": "Ein Pentest in Berlin ist keine Luxusmaßnahme für Konzerne – er ist ein realistisches Sicherheitsinstrument für jedes Unternehmen, das digitale Assets, Kundendaten oder kritische IT-Prozesse betreibt. Die Frage ist nicht ob Sie getestet werden sollten, sondern wann."
+        },
+        "quote": "Ein Angreifer braucht nur eine offene Tür. SODU Secure zeigt Ihnen, wo diese Türen sind – bevor jemand anderes es tut."
+      },
+      "commonAttackVectors": {
+        "title": "Was bei einem Pentest in Berlin getestet wird",
+        "items": [
+          "Externe Angriffsfläche: Öffentliche IPs, Domains, Cloud-Dienste, VPN-Gateways, exponierte Ports und Dienste – alles, was ein Angreifer vom Internet aus erreichen kann.",
+          "Webanwendungen: OWASP Top 10, Business Logic Flaws, Authentifizierungs-Bypasses, IDOR, XXE, SSRF – manuelle und tiefgehende Analyse Ihrer Web-Apps und APIs.",
+          "Active Directory & Interne Infrastruktur: Kerberoasting, Pass-the-Hash, AS-REP Roasting, GPO-Exploits, Lateral Movement – wie weit kommt ein Angreifer, der einmal im Netzwerk ist?",
+          "Phishing-Simulation: Realistische E-Mail-Kampagnen nach dem aktuellen Stand der Technik – mit Klickrate-Auswertung und Awareness-Analyse Ihrer Mitarbeitenden.",
+          "Cloud-Sicherheit: Azure, AWS, GCP – Fehlkonfigurationen, überprivilegierte Identitäten, unsichere Storage-Buckets und Cloud-native Angriffspfade.",
+          "Mobile & API: Mobile Apps (iOS/Android) und Backend-APIs – Authentication, Authorization, Datenlecks, unverschlüsselte Übertragung."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Pentest Berlin: Kosten, Dauer und Ablauf",
+        "content": "Einer der häufigsten Gründe, warum Berliner Unternehmen keinen Pentest beauftragen, sind Unsicherheiten über Kosten und Aufwand. Dabei ist ein gut strukturierter Pentest berechenbarer, als viele denken.",
+        "statistics": {
+          "title": "Typische Kosten für einen Pentest in Berlin",
+          "averageCost": {
+            "value": "2.500 – 5.000 €",
+            "label": "Focused Webapplikations-Pentest (1 App, 3–5 Tage Testing)"
+          },
+          "identificationTime": {
+            "value": "5.000 – 10.000 €",
+            "label": "Vollständiger externer Pentest (Netzwerk + Web + Cloud)"
+          },
+          "multipleBreaches": {
+            "value": "10.000 – 15.000 €",
+            "label": "Kompletter KMU-Pentest (Extern + AD + Phishing + Report)"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Wie man den richtigen Pentest-Anbieter in Berlin findet",
+        "content": "In Berlin gibt es eine wachsende Zahl von IT-Sicherheitsunternehmen – aber nicht alle bieten echtes manuelles Pentesting. Hier sind die wichtigsten Auswahlkriterien:",
+        "essentialPractices": {
+          "title": "Checkliste: Der richtige Pentest-Partner in Berlin",
+          "items": [
+            "Manuelles Testing statt reiner Scan-Reports: Fragen Sie explizit, ob Ihr Tester manuell Exploits entwickelt oder nur automatisierte Tools einsetzt.",
+            "Klarer Scope & Festpreis: Ein seriöser Anbieter definiert den Scope schriftlich und gibt einen Festpreis – keine Stundensatz-Überraschungen.",
+            "Vollständige Dokumentation: Der Report sollte Executive Summary, technische Details, CVSS-Bewertungen und priorisierte Remediation-Roadmap enthalten.",
+            "Vertragliche Absicherung: Pentest-Vertrag mit Autorisierung, Haftungsausschluss und Datenschutzregelung – schützt beide Seiten.",
+            "Retest inklusive: Gute Anbieter bieten nach der Behebung einen kostenfreien Retest der kritischen Findings an.",
+            "Transparenz über Methodik: PTES, OWASP Testing Guide, MITRE ATT&CK – seriöse Pentester arbeiten nach etablierten Frameworks.",
+            "Lokale Erreichbarkeit: Gerade für Abschlusspräsentationen und Notfall-Reaktionen ist ein Berliner Anbieter mit Vor-Ort-Option ein echter Vorteil.",
+            "Referenzen & Transparenz: Seriöse Berliner Pentest-Anbieter nennen Referenzprojekte oder stellen auf Anfrage anonymisierte Reports bereit – fragen Sie aktiv danach."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Jetzt Pentest in Berlin anfragen – oder kostenloses Pilotprogramm nutzen",
+        "content1": "SODU Secure ist Ihr Pentest-Partner in Berlin. Wir bieten manuelles Testing, transparente Festpreise und Reports, die tatsächlich gelesen werden – kein 200-Seiten-PDF voller False Positives.",
+        "content2": "Berliner KMUs mit 20–150 Mitarbeitern können sich noch für unser kostenloses Pilotprogramm 2026 bewerben: ein vollständiger Pentest im Wert von bis zu 15.000 € – kostenfrei für 2 ausgewählte Unternehmen. Nur noch 2 Plätze verfügbar. Details unter sodusecure.com/berlin-kmu-pilot."
+      }
+    },
+    "tags": [
+      "Pentest Berlin",
+      "Penetrationstest Berlin",
+      "IT-Sicherheit Berlin",
+      "Cybersecurity Berlin",
+      "Pentest KMU",
+      "Active Directory Pentest",
+      "Phishing Simulation Berlin",
+      "Web Application Pentest"
+    ],
+    "cta": {
+      "title": "Pentest in Berlin anfragen",
+      "description": "Erhalten Sie innerhalb von 24 Stunden ein transparentes Festpreis-Angebot für Ihren Penetrationstest in Berlin.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Pentest anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "5 Sicherheitslücken, die wir bei nahezu jedem KMU finden",
+          "description": "Welche kritischen Schwachstellen wir bei Berliner KMUs immer wieder entdecken – und was dagegen hilft.",
+          "category": "KMU SECURITY",
+          "readTime": "10 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "DSGVO & Penetrationstest: Wie Compliance und Sicherheit zusammenhängen",
+          "description": "Warum ein Pentest der stärkste Nachweis für DSGVO-Compliance nach Art. 32 ist.",
+          "category": "COMPLIANCE",
+          "readTime": "12 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "Geschäftsführer & Offensive Security, SODU Secure GmbH",
+      "bio": "Informatikstudent TU Berlin, Gründer von SODU Secure. Spezialisiert auf Penetration Testing, Red Teaming und KMU-Sicherheit in Berlin."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Pentest Berlin anfragen"
     },
     "toasts": {
       "linkCopied": "Link in die Zwischenablage kopiert!",
@@ -4301,11 +4178,18 @@
           "readTime": "10 Min"
         },
         {
-          "category": "PENTEST",
-          "title": "Gratis KMU-Pentest Berlin: Unser Angebot und warum Sie teilnehmen sollten",
-          "description": "Erfahren Sie, warum wir Berliner KMUs kostenlose Pentests anbieten, was Sie davon haben und wie Sie sich einen der verbleibenden Plätze sichern können. Mit PDF-Download-Link.",
-          "author": "Sodu Secure Team",
-          "readTime": "7 Min"
+          "category": "PENTEST BERLIN",
+          "title": "Pentest Berlin 2026: Der vollständige Leitfaden für Berliner Unternehmen",
+          "description": "Was kostet ein Pentest in Berlin? Welche Arten gibt es? Wann braucht ein Berliner Unternehmen einen Penetrationstest – und wie findet man den richtigen Anbieter? Der komplette Guide.",
+          "author": "Kerim K.",
+          "readTime": "14 Min"
+        },
+        {
+          "category": "PENTEST ABLAUF",
+          "title": "Pentest Ablauf: Wie läuft ein Penetrationstest wirklich ab? (2026)",
+          "description": "Schritt für Schritt: Wie läuft ein professioneller Penetrationstest ab? Von der Auftragsklärung über aktives Testing bis zum fertigen Report – der komplette Pentest-Ablauf erklärt.",
+          "author": "Kerim K.",
+          "readTime": "12 Min"
         }
       ]
     }
@@ -4360,27 +4244,19 @@
         {
           "name": "Kerim K.",
           "role": "Pentester",
-          "certifications": [
-            "OSCP+",
-            "Comptia Security +"
-          ],
+          "certifications": ["OSCP+", "Comptia Security +"],
           "image": "/images/teams/kerim-koc.jpeg"
         },
         {
           "name": "Markus F.",
           "role": "Application Security Expert",
-          "certifications": [
-            "OSCP+"
-          ],
+          "certifications": ["OSCP+"],
           "image": ""
         },
         {
           "name": "Burak S.",
           "role": "Cloud Security Spezialist",
-          "certifications": [
-            "AWS Security",
-            "Azure Security"
-          ],
+          "certifications": ["AWS Security", "Azure Security"],
           "image": "/images/teams/burak-s.jpeg"
         }
       ]

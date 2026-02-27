@@ -597,6 +597,12 @@ export default function BerlinKMUPilotPage() {
                   Direkt anrufen
                 </a>
               </div>
+              <p className="text-gray-400 text-sm text-center lg:text-left">
+                Kein Berliner KMU?{" "}
+                <Link href="/pentest-berlin" className="text-red-400 hover:text-red-300 underline underline-offset-2 transition-colors">
+                  Alle Pentest Berlin Leistungen &amp; Preise →
+                </Link>
+              </p>
 
               {/* Trust signals */}
               <div className="flex flex-wrap items-center gap-4 text-xs text-gray-400 justify-center lg:justify-start pt-2">
@@ -1021,6 +1027,45 @@ export default function BerlinKMUPilotPage() {
         </div>
       </section>
 
+      {/* ── RELATED CONTENT ─────────────────────── */}
+      <section className="py-12 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-lg font-bold text-gray-900 mb-6">Weiterführende Informationen</h2>
+          <div className="grid sm:grid-cols-2 gap-4">
+            <Link
+              href="/pentest-berlin"
+              className="group flex flex-col gap-2 bg-white border border-gray-200 rounded-xl p-5 hover:border-red-300 hover:shadow-sm transition-all"
+            >
+              <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">Pentest Berlin</span>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-red-600 transition-colors leading-snug">
+                Alle Pentest-Leistungen in Berlin – Preise, Ablauf &amp; Anbieter-Auswahl
+              </h3>
+              <p className="text-gray-500 text-xs leading-relaxed">
+                Was kostet ein Pentest in Berlin? Welche Arten gibt es? Alles auf einer Seite – inkl. Checkliste für den richtigen Anbieter.
+              </p>
+              <span className="mt-auto inline-flex items-center gap-1 text-xs text-red-500 font-medium">
+                Jetzt lesen <ArrowRight className="w-3 h-3" />
+              </span>
+            </Link>
+            <Link
+              href="/case-studies/blogs/pentest-berlin-leitfaden"
+              className="group flex flex-col gap-2 bg-white border border-gray-200 rounded-xl p-5 hover:border-red-300 hover:shadow-sm transition-all"
+            >
+              <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">Blog · Pentest Berlin</span>
+              <h3 className="font-bold text-gray-900 text-sm group-hover:text-red-600 transition-colors leading-snug">
+                Pentest Berlin 2026: Der vollständige Leitfaden für Berliner Unternehmen
+              </h3>
+              <p className="text-gray-500 text-xs leading-relaxed">
+                Kosten, Dauer, Ablauf und die häufigsten Fragen rund um den Penetrationstest in Berlin – kompakt erklärt.
+              </p>
+              <span className="mt-auto inline-flex items-center gap-1 text-xs text-red-500 font-medium">
+                Artikel lesen <ArrowRight className="w-3 h-3" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── FINAL CTA ───────────────────────────── */}
       <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.04]"
@@ -1070,6 +1115,8 @@ export default function BerlinKMUPilotPage() {
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs">
             <Link href="/" className="hover:text-white transition-colors">sodusecure.com</Link>
+            <Link href="/pentest-berlin" className="hover:text-white transition-colors">Pentest Berlin</Link>
+            <Link href="/case-studies/blogs/pentest-berlin-leitfaden" className="hover:text-white transition-colors">Pentest Berlin Guide</Link>
             <Link href="/privacy" className="hover:text-white transition-colors">Datenschutz</Link>
             <Link href="/impressum" className="hover:text-white transition-colors">Impressum</Link>
             <a href={EMAIL_HREF} className="hover:text-white transition-colors">{EMAIL}</a>

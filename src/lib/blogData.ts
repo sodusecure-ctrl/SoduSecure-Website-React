@@ -146,7 +146,7 @@ export const blogPosts = [
   },
   {
     id: 13,
-    slug: '13',
+    slug: '5-sicherheitsluecken-kmu',
     title: '5 Sicherheitslücken, die wir bei nahezu jedem KMU finden',
     description: 'Cyberangriffe treffen längst nicht mehr nur Konzerne. Welche 5 kritischen Sicherheitslücken wir bei nahezu jedem KMU entdecken – und wie Sie sich schützen können, bevor es teuer wird.',
     category: 'KMU Security',
@@ -168,11 +168,66 @@ export const blogPosts = [
     image: '/images/blogs/image9.png',
     keywords: ['Pentest Berlin', 'Penetrationstest Berlin', 'KMU Pentest Berlin', 'Kostenloser Pentest Berlin', 'IT-Sicherheit Berlin', 'Cybersecurity Berlin', 'Pentest Anbieter Berlin', 'Pentest Kosten', 'Pentest KMU'],
   },
+  {
+    id: 14,
+    slug: 'pentest-berlin-leitfaden',
+    title: 'Pentest Berlin 2026: Der vollständige Leitfaden für Berliner Unternehmen',
+    description: 'Was kostet ein Pentest in Berlin? Was testet man wie? Welche Berliner Unternehmen brauchen einen Penetrationstest – und warum jetzt? Der komplette Guide von SODU Secure.',
+    category: 'Pentest Berlin',
+    author: 'Kerim K.',
+    date: '2026-02-27',
+    readTime: '14 min read',
+    image: '/images/blogs/image9.png',
+    keywords: [
+      'Pentest Berlin',
+      'Penetrationstest Berlin',
+      'Penetration Testing Berlin',
+      'Pentest KMU Berlin',
+      'IT-Sicherheit Berlin',
+      'Pentest Kosten Berlin',
+      'Cybersecurity Berlin',
+      'Web Application Pentest Berlin',
+      'Active Directory Pentest Berlin',
+      'Pentest Anbieter Berlin',
+      'Ethical Hacking Berlin',
+    ],
+  },
+  {
+    id: 15,
+    slug: 'pentest-ablauf',
+    title: 'Pentest Ablauf: Wie läuft ein Penetrationstest wirklich ab? (2026)',
+    description: 'Schritt für Schritt erklärt: Wie läuft ein professioneller Penetrationstest ab? Von der Auftragsklärung über die aktive Testphase bis zum fertigen Report – der vollständige Pentest-Ablauf.',
+    category: 'Pentest Ablauf',
+    author: 'Kerim K.',
+    date: '2026-02-27',
+    readTime: '12 min read',
+    image: '/images/blogs/image9.png',
+    keywords: [
+      'Pentest Ablauf',
+      'Penetrationstest Ablauf',
+      'wie läuft ein Pentest ab',
+      'Pentest Phasen',
+      'Pentest Schritte',
+      'Penetration Testing Ablauf',
+      'Pentest Vorbereitung',
+      'Pentest Report',
+      'Pentest Berlin',
+      'Pentest KMU',
+    ],
+  },
 ];
 
 export function getBlogById(id: number | string) {
-  const blogId = typeof id === 'string' ? parseInt(id, 10) : id;
-  return blogPosts.find(blog => blog.id === blogId);
+  if (typeof id === 'number') {
+    return blogPosts.find(blog => blog.id === id);
+  }
+  const numId = parseInt(id, 10);
+  if (!isNaN(numId)) {
+    const byId = blogPosts.find(blog => blog.id === numId);
+    if (byId) return byId;
+  }
+  // keyword slug fallback
+  return blogPosts.find(blog => blog.slug === id);
 }
 
 export function getAllBlogSlugs() {

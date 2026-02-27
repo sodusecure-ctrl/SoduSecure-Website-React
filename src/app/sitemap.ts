@@ -7,9 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static routes with real, stable last-modified dates
   // ⚠️ Update these dates whenever you make meaningful content changes
   const staticRoutes: { path: string; lastModified: string; changeFreq: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number }[] = [
-    { path: '',                    lastModified: '2026-02-26', changeFreq: 'weekly',  priority: 1.0  },
-    { path: '/berlin-kmu-pilot',   lastModified: '2026-02-27', changeFreq: 'daily',   priority: 1.0  },
-    { path: '/services/sme-packages', lastModified: '2026-02-26', changeFreq: 'weekly',  priority: 0.98 },
+    { path: '',                    lastModified: '2026-02-27', changeFreq: 'weekly',  priority: 1.0  },
+    { path: '/berlin-kmu-pilot',   lastModified: '2026-02-27', changeFreq: 'weekly',  priority: 1.0  },
+    { path: '/pentest-berlin',     lastModified: '2026-02-27', changeFreq: 'weekly',  priority: 1.0  },
+    { path: '/services/sme-packages', lastModified: '2026-02-27', changeFreq: 'weekly',  priority: 0.98 },
     { path: '/request-pentest',    lastModified: '2026-02-26', changeFreq: 'monthly', priority: 0.92  },
     { path: '/about',              lastModified: '2026-02-26', changeFreq: 'monthly', priority: 0.82  },
     { path: '/contact',            lastModified: '2026-02-26', changeFreq: 'monthly', priority: 0.82  },
@@ -56,8 +57,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog / Case-study article routes
   blogPosts.forEach((blog) => {
-    // Give extra priority to KMU-focused content
-    const isKmuPost = blog.id === 13 || blog.id === 12 || blog.id === 9;
+    // Give extra priority to KMU-focused and Berlin/Ablauf keyword content
+    const isKmuPost = blog.id === 15 || blog.id === 14 || blog.id === 13 || blog.id === 12 || blog.id === 9;
     routes.push({
       url: `${baseUrl}/case-studies/blogs/${blog.slug}`,
       lastModified: new Date(blog.date),
