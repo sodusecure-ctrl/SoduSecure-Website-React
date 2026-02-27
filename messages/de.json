@@ -4503,5 +4503,272 @@
         }
       }
     }
+  },
+  "itSecurityCheckFirmaDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "IT SECURITY CHECK",
+    "date": "27. Feb 2026",
+    "title": "IT Security Check Firma: Was ist ein IT-Sicherheitscheck für Unternehmen? (2026)",
+    "description": "Was umfasst ein IT Security Check für Unternehmen? Welche Bereiche werden geprüft, was kostet er und wann braucht Ihr Unternehmen einen IT-Sicherheitscheck? Der vollständige Praxisleitfaden von SODU Secure Berlin.",
+    "author": "Kerim K.",
+    "readTime": "13 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Was ist ein IT Security Check für Unternehmen?",
+        "content": "Ein IT Security Check – auch IT-Sicherheitscheck oder IT-Sicherheitsprüfung genannt – ist eine systematische Überprüfung der IT-Infrastruktur, Systeme und Prozesse eines Unternehmens auf Sicherheitslücken, Fehlkonfigurationen und Schwachstellen. Anders als ein reines Vulnerability Scanning oder ein automatisiertes Compliance-Audit kombiniert ein professioneller IT Security Check manuelle Testmethoden mit automatisierten Tools – und liefert damit ein realistisches Bild der tatsächlichen Angriffsfläche. Für Firmen jeder Größe – vom 20-Personen-KMU bis zum mittelständischen Betrieb – ist ein regelmäßiger IT-Sicherheitscheck heute keine Kür mehr, sondern Pflicht. Dieser Leitfaden erklärt, was genau geprüft wird, was ein IT Security Check kostet und wie Sie Ihr Unternehmen optimal vorbereiten.",
+        "keyTakeaway": {
+          "title": "Das Wichtigste in Kürze",
+          "content": "Ein IT Security Check für Unternehmen ist keine einmalige Maßnahme, sondern ein kontinuierlicher Prozess. Wer seine Schwachstellen kennt, kann gezielt und kostengünstig gegensteuern – bevor ein Angreifer die Lücken findet."
+        },
+        "quote": "Wer nicht weiß, wo er angreifbar ist, kann sich auch nicht schützen. Ein IT Security Check schafft Klarheit."
+      },
+      "commonAttackVectors": {
+        "title": "Was ein IT Security Check für Firmen umfasst",
+        "items": [
+          "Externe Angriffsfläche: Öffentlich erreichbare Dienste, IP-Adressen, Domains, Cloud-Dienste, VPN-Gateways und exponierte Ports – alles, was ein Angreifer ohne Zugangsdaten vom Internet aus sehen kann.",
+          "Interne Netzwerksicherheit & Active Directory: Fehlkonfigurationen in Windows-Domänen, überprivilegierte Konten, unsichere Gruppenrichtlinien, Legacy-Protokolle (NTLMv1, SMBv1) und laterale Bewegungsmöglichkeiten im Netzwerk.",
+          "Webanwendungen & APIs: Authentifizierungsschwächen, fehlende Zugriffskontrollen, Injection-Angriffe (SQL, LDAP, Command Injection), IDOR und andere OWASP Top 10 Schwachstellen in firmeninternen oder öffentlichen Web-Apps.",
+          "E-Mail-Sicherheit & Phishing-Anfälligkeit: Fehlende oder falsch konfigurierte SPF-, DKIM- und DMARC-Einträge; Phishing-Simulation zur Bewertung der Mitarbeiter-Awareness.",
+          "Cloud-Sicherheit (Azure, Microsoft 365, AWS): Fehlkonfigurationen in Cloud-Diensten, überprivilegierte Service-Accounts, unsichere Storage-Konfigurationen und schwache Multi-Faktor-Authentifizierung.",
+          "Endpunktsicherheit & Patch-Status: Nicht gepatchte Betriebssysteme und Applikationen, fehlende EDR-Lösungen, unsichere lokale Administrator-Konfigurationen.",
+          "Backup & Notfallwiederherstellung: Werden Backups regelmäßig erstellt und – entscheidend – auch tatsächlich wiederhergestellt und getestet? Gibt es Offline-Kopien?",
+          "Organisatorische Maßnahmen: IT-Sicherheitsrichtlinien, Zugriffsmanagement, Onboarding/Offboarding-Prozesse, Schulungsstand der Mitarbeitenden."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Warum jede Firma einen IT-Sicherheitscheck braucht",
+        "content": "Die Bedrohungslage hat sich in den letzten Jahren dramatisch verändert. Ransomware, Phishing und gezielte Angriffe auf KMUs sind zur Normalität geworden – nicht mehr nur für Konzerne. Ein professioneller IT Security Check zeigt Ihnen konkret, wo Ihr Unternehmen heute steht.",
+        "statistics": {
+          "title": "Zahlen, die Sie kennen sollten",
+          "averageCost": {
+            "value": "43 %",
+            "label": "aller Cyberangriffe weltweit zielen auf kleine und mittelständische Unternehmen (Verizon DBIR)"
+          },
+          "identificationTime": {
+            "value": "287 Tage",
+            "label": "durchschnittliche Verweildauer eines Angreifers im Netzwerk, bis er entdeckt wird (IBM)"
+          },
+          "multipleBreaches": {
+            "value": "200.000 €+",
+            "label": "durchschnittlicher Schaden eines Ransomware-Angriffs bei KMUs – ohne Folgekosten"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "IT Security Check Firma: Was kostet das und wie läuft es ab?",
+        "content": "Die Kosten für einen IT Security Check hängen vom Umfang, der Größe der IT-Infrastruktur und der Tiefe der Prüfung ab. Hier eine realistische Übersicht für kleine und mittelständische Firmen in Deutschland:",
+        "essentialPractices": {
+          "title": "Typische Preisrahmen für einen IT-Sicherheitscheck",
+          "items": [
+            "Basis IT Security Check (automatisierter Scan + kurzer Bericht): 500 – 1.500 € – geeignet für sehr kleine Firmen als Erstüberblick, aber kein Ersatz für manuelles Testing.",
+            "Professioneller IT Security Check für KMU (manuell + automatisiert, externe Angriffsfläche): 2.000 – 5.000 € – realistisches Bild der externen Sicherheitslage.",
+            "Vollständiger IT Security Check incl. Interntest & AD: 5.000 – 12.000 € – umfasst externe + interne Prüfung, Active Directory Analyse, E-Mail-Sicherheit und Management-Report.",
+            "IT Security Check incl. Phishing-Simulation: 7.000 – 15.000 € – komplettes KMU-Sicherheitspaket mit Mitarbeiter-Awareness-Test.",
+            "Ablauf: Kick-off und Scope-Definition → Reconnaissance und OSINT → Aktive Tests (extern, intern, Phishing) → Report-Erstellung → Abschlusspräsentation → Empfehlungen umsetzen."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "IT Security Check Firma: Jetzt kostenlos für ausgewählte Berliner KMUs",
+        "content1": "SODU Secure bietet ausgewählten Berliner KMUs (20–150 Mitarbeiter, Microsoft-Infrastruktur) im Rahmen unseres Pilotprogramms 2026 einen vollständigen IT Security Check vollständig kostenlos an – im Wert von bis zu 15.000 €. Der Check umfasst externen Pentest, Active Directory Analyse, Phishing-Simulation und einen vollständigen Management-Report.",
+        "content2": "Nur 2 von 7 Plätzen sind noch verfügbar. Bewerben Sie sich jetzt unter sodusecure.com/berlin-kmu-pilot und erfahren Sie, wie sicher Ihre IT wirklich ist – bevor ein Angreifer es tut."
+      }
+    },
+    "tags": [
+      "IT Security Check Firma",
+      "IT Sicherheitscheck",
+      "IS Sicherheitsaudit",
+      "IT Security Audit",
+      "Pentest Berlin",
+      "IT-Sicherheit KMU",
+      "Cybersecurity Check",
+      "Active Directory Sicherheit",
+      "Schwachstellenanalyse"
+    ],
+    "cta": {
+      "title": "Jetzt kostenlosen IT Security Check anfragen",
+      "description": "Berliner KMU? Bewerben Sie sich für unseren kostenlosen IT Security Check – vollständiger Pentest im Wert von bis zu 15.000 € für ausgewählte Unternehmen.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Jetzt bewerben",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "IT Security Audit & IS Sicherheitsaudit: Der vollständige Leitfaden",
+          "description": "Was ist der Unterschied zwischen IT Security Check, Pentest und IT Security Audit? Alles erklärt.",
+          "category": "IT SECURITY AUDIT",
+          "readTime": "15 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "5 Sicherheitslücken, die wir bei nahezu jedem KMU finden",
+          "description": "Welche kritischen Schwachstellen wir bei Berliner KMUs immer wieder entdecken – und was dagegen hilft.",
+          "category": "KMU SECURITY",
+          "readTime": "10 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "Geschäftsführer & Offensive Security, SODU Secure GmbH",
+      "bio": "Informatikstudent TU Berlin, Gründer von SODU Secure. Spezialisiert auf IT Security Checks, Penetration Testing und KMU-Sicherheit in Berlin und Brandenburg."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "IT Security Check anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "itSecurityAuditDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "IT SECURITY AUDIT",
+    "date": "27. Feb 2026",
+    "title": "IT Security Audit & IS Sicherheitsaudit: Der vollständige Leitfaden für Unternehmen (2026)",
+    "description": "Was ist ein IT Security Audit? Was ist der Unterschied zum IS-Sicherheitsaudit? Wie läuft ein IT-Sicherheitsaudit ab, was kostet es – und wie bereitet sich Ihr Unternehmen optimal vor? Alles in einem Praxisleitfaden von SODU Secure.",
+    "author": "Kerim K.",
+    "readTime": "15 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "IT Security Audit vs. IS Sicherheitsaudit: Was ist der Unterschied?",
+        "content": "Im deutschen Unternehmensumfeld werden die Begriffe IT Security Audit, IT-Sicherheitsaudit und IS Sicherheitsaudit oft synonym verwendet – sie haben aber unterschiedliche Schwerpunkte. Ein IT Security Audit überprüft konkrete technische Sicherheitsmaßnahmen: Systeme, Netzwerke, Zugriffsrechte, Patch-Status und Konfigurationen. Es ist technikzentriert und oft der erste Schritt zu einem umfassenderen Sicherheitsprogramm. Ein IS Sicherheitsaudit (Informationssicherheitsaudit) ist breiter: Es prüft nicht nur Technik, sondern auch Prozesse, Richtlinien, Organisationsstrukturen und die Einhaltung von Standards wie ISO 27001, BSI IT-Grundschutz oder NIS2. Beide Formate sind für Unternehmen in Deutschland relevant – und ergänzen sich ideal mit einem Penetrationstest, der die Wirksamkeit der gefundenen Maßnahmen praktisch unter Beweis stellt.",
+        "keyTakeaway": {
+          "title": "Wichtige Unterscheidung",
+          "content": "IT Security Audit = technische Prüfung von Systemen und Konfigurationen. IS Sicherheitsaudit = ganzheitliche Prüfung inkl. Prozesse, Richtlinien, Compliance. Pentest = praktischer Angriffssimulation zur Validierung beider Ebenen."
+        },
+        "quote": "Ein IT-Sicherheitsaudit zeigt, ob Ihre Maßnahmen existieren. Ein Penetrationstest zeigt, ob sie auch wirken."
+      },
+      "commonAttackVectors": {
+        "title": "Was ein IT Security Audit für Unternehmen prüft",
+        "items": [
+          "Netzwerksicherheit & Segmentierung: Firewall-Regeln, VLAN-Konfigurationen, DMZ-Aufbau, Inter-VLAN-Routing-Risiken, unerlaubte Kommunikationspfade zwischen Netzwerksegmenten.",
+          "Identity & Access Management (IAM): Rollenkonzepte, Least-Privilege-Prinzip, Privileged Access Management, Stale Accounts (inaktive Konten mit aktiven Rechten), Service-Account-Sicherheit.",
+          "Active Directory & Windows-Infrastruktur: Konfiguration von Domänen, Gruppenrichtlinien (GPOs), Kerberos-Einstellungen, LAPS-Deployment, Delegation von Berechtigungen.",
+          "Patch-Management & Vulnerability-Status: Aktualität von Betriebssystemen, eingesetzter Software und Firmware; Bewertung offener CVEs; Patch-Zyklen und -Prioritäten.",
+          "Cloud-Sicherheitskonfiguration: Azure AD / Entra ID, Microsoft 365, AWS oder GCP – Security Score, Conditional Access Policies, MFA-Durchsetzung, Datenschutz-Einstellungen.",
+          "Backup & Business Continuity: Backup-Strategie (3-2-1-Regel), Verschlüsselung der Backups, Wiederherstellungstests (RTO/RPO), Ransomware-Resistenz der Backup-Infrastruktur.",
+          "Richtlinien & Organizational Controls: Vorhandensein und Aktualität von IT-Sicherheitsrichtlinien, Passwortrichtlinien, Acceptable-Use-Policy, Incident-Response-Prozessen.",
+          "Compliance-Prüfung (NIS2, DSGVO/DSGVO Art. 32, ISO 27001, BSI IT-Grundschutz): Bewertung der technischen und organisatorischen Maßnahmen (TOMs) und der Dokumentationspflichten."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Wann braucht ein Unternehmen ein IT Security Audit?",
+        "content": "Es gibt klare Situationen, in denen ein IT-Sicherheitsaudit nicht nur sinnvoll, sondern dringend notwendig ist. Gleichzeitig empfehlen Sicherheitsexperten, ein IT Security Audit als regelmäßige Maßnahme zu etablieren – ähnlich wie ein jährlicher Steuerprüfung.",
+        "statistics": {
+          "title": "Typische Auslöser für ein IT Security Audit",
+          "averageCost": {
+            "value": "NIS2 / DSGVO",
+            "label": "Regulatorische Pflicht: NIS2-Richtlinie, DSGVO Art. 32 und BSI IT-Grundschutz fordern regelmäßige Sicherheitsüberprüfungen"
+          },
+          "identificationTime": {
+            "value": "Angriff / Incident",
+            "label": "Nach einem Sicherheitsvorfall: Forensik, Schadensbewertung und Härtungsplan erfordern ein systematisches Audit"
+          },
+          "multipleBreaches": {
+            "value": "Wachstum / M&A",
+            "label": "Bei Unternehmensveränderungen: Neue Standorte, Übernahmen oder Systemmigrationen erhöhen die Angriffsfläche"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Ablauf und Kosten eines IT Security Audits in Deutschland",
+        "content": "Ein professionelles IT Security Audit folgt einem klaren Prozess. Die Dauer und die Kosten hängen vom Umfang, der Unternehmensgröße und dem Detailgrad ab. Hier ein realistischer Überblick:",
+        "essentialPractices": {
+          "title": "Phasen eines IT Security Audits",
+          "items": [
+            "Phase 1 – Scope & Kick-off: Definition des Prüfumfangs (in-scope / out-of-scope Systeme), Abstimmung der Methodik (technisch, organisatorisch oder beides), Terminplanung.",
+            "Phase 2 – Informationssammlung & OSINT: Passives Reconnaissance, DNS- und IP-Analyse, Überblick über die externe Angriffsfläche ohne aktive Tests.",
+            "Phase 3 – Technische Prüfung (Audit): Manuelle und automatisierte Analyse der in-scope Systeme – Netzwerke, Endpoints, AD, Cloud, Web-Apps, APIs.",
+            "Phase 4 – Organisatorische Prüfung: Interviews mit IT-Verantwortlichen, Sichtung von Richtlinien, Zugriffskonzepten, Backup-Dokumentation und Incident-Response-Plänen.",
+            "Phase 5 – Befundanalyse & Report: Konsolidierung aller Findings, CVSS-Bewertung, Priorisierung nach Risiko, Erstellung des Audit-Reports (Executive Summary + technischer Teil).",
+            "Phase 6 – Abschlusspräsentation: Vorstellung der Ergebnisse für Geschäftsführung und IT; priorisierte Roadmap für die Umsetzung von Maßnahmen.",
+            "Kosten Orientierung KMU (20–150 MA): Basis-Audit (technisch) 3.000–7.000 €; vollständiges IS-Sicherheitsaudit (technisch + organisatorisch) 8.000–20.000 €; kombiniert mit Pentest ab 10.000 €."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Jetzt IT Security Audit anfragen – oder kostenloses Pilotprogramm nutzen",
+        "content1": "SODU Secure führt IT Security Audits und IS Sicherheitsaudits für Unternehmen in Berlin und digital deutschlandweit durch. Wir kombinieren technische Tiefe mit verständlicher Kommunikation – unsere Reports werden gelesen und umgesetzt, nicht in der Schublade verschwinden.",
+        "content2": "Berliner KMUs (20–150 Mitarbeiter, Microsoft-basierte IT) können sich noch für unser kostenloses Pilotprogramm bewerben: vollständiger IT Security Check im Wert von bis zu 15.000 € – inklusive Pentest, AD-Analyse, Phishing-Simulation und Management-Report. Noch 2 Plätze frei. Jetzt bewerben: sodusecure.com/berlin-kmu-pilot"
+      }
+    },
+    "tags": [
+      "IT Security Audit",
+      "IS Sicherheitsaudit",
+      "IT Sicherheitsaudit",
+      "IT Security Check Firma",
+      "Informationssicherheitsaudit",
+      "Pentest Berlin",
+      "NIS2 Audit",
+      "DSGVO Sicherheitsaudit",
+      "ISO 27001 Audit",
+      "Active Directory Audit"
+    ],
+    "cta": {
+      "title": "IT Security Audit anfragen",
+      "description": "Erhalten Sie innerhalb von 24 Stunden ein transparentes Angebot für Ihr IT-Sicherheitsaudit – oder bewerben Sie sich für unser kostenloses KMU-Pilotprogramm.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Jetzt anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "IT Security Check Firma: Was wird geprüft und was kostet es?",
+          "description": "Der vollständige Praxisleitfaden für IT-Sicherheitschecks in Unternehmen – Umfang, Kosten und Ablauf.",
+          "category": "IT SECURITY CHECK",
+          "readTime": "13 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "Pentest Berlin 2026: Leitfaden für Berliner Unternehmen",
+          "description": "Was kostet ein Pentest in Berlin? Alles auf einen Blick – inkl. Anbieter-Checkliste.",
+          "category": "PENTEST BERLIN",
+          "readTime": "14 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "Geschäftsführer & Offensive Security, SODU Secure GmbH",
+      "bio": "Informatikstudent TU Berlin, Gründer von SODU Secure. Spezialisiert auf IT Security Audits, IS Sicherheitsaudits, Penetration Testing und KMU-Sicherheit in Berlin."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "IT Security Audit anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
   }
 }

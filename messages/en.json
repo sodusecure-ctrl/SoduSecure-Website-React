@@ -4503,5 +4503,271 @@
         }
       }
     }
+  },
+  "itSecurityCheckFirmaDetail": {
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share Article",
+    "bookmarkArticle": "Save Article",
+    "category": "IT SECURITY CHECK",
+    "date": "Feb 27, 2026",
+    "title": "IT Security Check for Companies: What Is an IT Security Assessment? (2026)",
+    "description": "What does an IT security check for companies involve? Which areas are examined, what does it cost, and when does your company need an IT security assessment? The complete practical guide from SODU Secure Berlin.",
+    "author": "Kerim K.",
+    "readTime": "13 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share This Article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "What Is an IT Security Check for Companies?",
+        "content": "An IT security check – also known as an IT security assessment or IT security review – is a systematic examination of a company's IT infrastructure, systems, and processes for security vulnerabilities, misconfigurations, and weaknesses. Unlike pure vulnerability scanning or automated compliance audits, a professional IT security check combines manual testing methods with automated tools – providing a realistic picture of the actual attack surface. For companies of all sizes – from 20-person SMEs to mid-sized businesses – a regular IT security check is no longer optional; it is essential. This guide explains exactly what is checked, what an IT security check costs, and how to optimally prepare your company.",
+        "keyTakeaway": {
+          "title": "Key Takeaway",
+          "content": "An IT security check for companies is not a one-time measure, but a continuous process. Knowing your vulnerabilities enables targeted and cost-effective countermeasures – before an attacker finds the gaps."
+        },
+        "quote": "Those who don't know where they are vulnerable cannot protect themselves. An IT security check creates clarity."
+      },
+      "commonAttackVectors": {
+        "title": "What an IT Security Check for Companies Covers",
+        "items": [
+          "External Attack Surface: Publicly accessible services, IP addresses, domains, cloud services, VPN gateways, and exposed ports – everything an attacker can see from the internet without credentials.",
+          "Internal Network Security & Active Directory: Misconfigurations in Windows domains, over-privileged accounts, insecure group policies, legacy protocols (NTLMv1, SMBv1), and lateral movement possibilities in the network.",
+          "Web Applications & APIs: Authentication weaknesses, missing access controls, injection attacks (SQL, LDAP, command injection), IDOR, and other OWASP Top 10 vulnerabilities in internal or public web apps.",
+          "Email Security & Phishing Susceptibility: Missing or misconfigured SPF, DKIM, and DMARC records; phishing simulation to assess employee awareness.",
+          "Cloud Security (Azure, Microsoft 365, AWS): Misconfigurations in cloud services, over-privileged service accounts, insecure storage configurations, and weak multi-factor authentication.",
+          "Endpoint Security & Patch Status: Unpatched operating systems and applications, missing EDR solutions, insecure local administrator configurations.",
+          "Backup & Disaster Recovery: Are backups regularly created and – critically – actually tested for restoration? Are there offline copies?",
+          "Organizational Measures: IT security policies, access management, onboarding/offboarding processes, employee training status."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Why Every Company Needs an IT Security Check",
+        "content": "The threat landscape has changed dramatically in recent years. Ransomware, phishing, and targeted attacks on SMEs have become the norm – no longer just for large corporations. A professional IT security check shows you concretely where your company stands today.",
+        "statistics": {
+          "title": "Numbers You Should Know",
+          "averageCost": {
+            "value": "43%",
+            "label": "of all cyberattacks worldwide target small and medium-sized businesses (Verizon DBIR)"
+          },
+          "identificationTime": {
+            "value": "287 days",
+            "label": "average dwell time of an attacker in the network before detection (IBM)"
+          },
+          "multipleBreaches": {
+            "value": "€200,000+",
+            "label": "average damage from a ransomware attack at SMEs – excluding follow-up costs"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "IT Security Check for Companies: Costs and Process",
+        "content": "The costs for an IT security check depend on scope, infrastructure size, and depth of examination. Here is a realistic overview for small and medium-sized companies in Germany:",
+        "essentialPractices": {
+          "title": "Typical Price Ranges for an IT Security Check",
+          "items": [
+            "Basic IT security check (automated scan + short report): €500–1,500 – suitable for very small companies as a first overview, but no substitute for manual testing.",
+            "Professional IT security check for SMEs (manual + automated, external attack surface): €2,000–5,000 – realistic picture of the external security posture.",
+            "Full IT security check incl. internal test & AD: €5,000–12,000 – covers external + internal review, Active Directory analysis, email security, and management report.",
+            "IT security check incl. phishing simulation: €7,000–15,000 – complete SME security package with employee awareness testing.",
+            "Process: Kick-off & scope definition → Reconnaissance & OSINT → Active tests (external, internal, phishing) → Report creation → Final presentation → Remediation recommendations."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "IT Security Check: Now Free for Selected Berlin SMEs",
+        "content1": "SODU Secure offers selected Berlin SMEs (20–150 employees, Microsoft infrastructure) a complete IT security check entirely free of charge as part of our 2026 pilot program – valued at up to €15,000. The check includes external pentesting, Active Directory analysis, phishing simulation, and a full management report.",
+        "content2": "Only 2 of 7 spots remain available. Apply now at sodusecure.com/berlin-kmu-pilot and find out how secure your IT really is – before an attacker does."
+      }
+    },
+    "tags": [
+      "IT Security Check",
+      "IT Security Assessment",
+      "IS Security Audit",
+      "IT Security Audit",
+      "Pentest Berlin",
+      "SME IT Security",
+      "Cybersecurity Check",
+      "Active Directory Security",
+      "Vulnerability Assessment"
+    ],
+    "cta": {
+      "title": "Request a Free IT Security Check",
+      "description": "Berlin SME? Apply for our free IT security check – full pentest valued at up to €15,000 for selected companies.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Apply Now",
+      "disclaimer": "No spam, unsubscribe at any time"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "IT Security Audit & IS Security Audit: The Complete Guide",
+          "description": "What is the difference between an IT security check, pentest, and IT security audit? Everything explained.",
+          "category": "IT SECURITY AUDIT",
+          "readTime": "15 min read",
+          "readMore": "Read article →"
+        },
+        {
+          "title": "5 Security Vulnerabilities We Find at Almost Every SME",
+          "description": "Which critical vulnerabilities we repeatedly discover at Berlin SMEs – and what helps against them.",
+          "category": "SME SECURITY",
+          "readTime": "10 min read",
+          "readMore": "Read article →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "CEO & Offensive Security, SODU Secure GmbH",
+      "bio": "Computer science student at TU Berlin, founder of SODU Secure. Specialized in IT security checks, penetration testing, and SME security in Berlin and Brandenburg."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Was this article helpful?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request IT security check"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The consultation request feature is not yet implemented.",
+      "saveNotImplemented": "Save feature is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thank you! Your request has been sent.",
+      "emailFailed": "Sending failed. Please try again."
+    }
+  },
+  "itSecurityAuditDetail": {
+    "backToBlog": "Back to Blog",
+    "shareArticle": "Share Article",
+    "bookmarkArticle": "Save Article",
+    "category": "IT SECURITY AUDIT",
+    "date": "Feb 27, 2026",
+    "title": "IT Security Audit & IS Security Audit: The Complete Guide for Companies (2026)",
+    "description": "What is an IT security audit? What distinguishes an IT security audit from an IS security audit? How does an audit work, what does it cost – and how does your company prepare optimally? Everything in one guide from SODU Secure.",
+    "author": "Kerim K.",
+    "readTime": "15 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share This Article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "IT Security Audit vs. IS Security Audit: What Is the Difference?",
+        "content": "In the German business environment, the terms IT security audit, IT-Sicherheitsaudit, and IS Sicherheitsaudit are often used interchangeably – but they have different emphases. An IT security audit reviews concrete technical security measures: systems, networks, access rights, patch status, and configurations. It is technology-centric and often the first step toward a more comprehensive security program. An IS security audit (information security audit) is broader: it examines not just technology, but also processes, policies, organizational structures, and compliance with standards such as ISO 27001, BSI IT-Grundschutz, or NIS2. Both formats are relevant for companies in Germany – and ideally complement a penetration test, which practically validates the effectiveness of the measures found.",
+        "keyTakeaway": {
+          "title": "Key Distinction",
+          "content": "IT security audit = technical review of systems and configurations. IS security audit = holistic review including processes, policies, compliance. Pentest = practical attack simulation to validate both levels."
+        },
+        "quote": "An IT security audit shows whether your measures exist. A penetration test shows whether they actually work."
+      },
+      "commonAttackVectors": {
+        "title": "What an IT Security Audit for Companies Examines",
+        "items": [
+          "Network Security & Segmentation: Firewall rules, VLAN configurations, DMZ structure, inter-VLAN routing risks, unauthorized communication paths between network segments.",
+          "Identity & Access Management (IAM): Role concepts, least-privilege principle, privileged access management, stale accounts (inactive accounts with active rights), service account security.",
+          "Active Directory & Windows Infrastructure: Domain configuration, group policies (GPOs), Kerberos settings, LAPS deployment, delegation of permissions.",
+          "Patch Management & Vulnerability Status: Currency of operating systems, software, and firmware; assessment of open CVEs; patch cycles and priorities.",
+          "Cloud Security Configuration: Azure AD / Entra ID, Microsoft 365, AWS or GCP – security score, conditional access policies, MFA enforcement, privacy settings.",
+          "Backup & Business Continuity: Backup strategy (3-2-1 rule), backup encryption, recovery tests (RTO/RPO), ransomware resilience of backup infrastructure.",
+          "Policies & Organizational Controls: Existence and currency of IT security policies, password policies, acceptable use policy, incident response processes.",
+          "Compliance Review (NIS2, GDPR Art. 32, ISO 27001, BSI IT-Grundschutz): Assessment of technical and organizational measures (TOMs) and documentation obligations."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "When Does a Company Need an IT Security Audit?",
+        "content": "There are clear situations where an IT security audit is not just sensible but urgently necessary. Security experts also recommend establishing an IT security audit as a regular measure – similar to an annual financial audit.",
+        "statistics": {
+          "title": "Typical Triggers for an IT Security Audit",
+          "averageCost": {
+            "value": "NIS2 / GDPR",
+            "label": "Regulatory obligation: NIS2 directive, GDPR Art. 32, and BSI IT-Grundschutz require regular security reviews"
+          },
+          "identificationTime": {
+            "value": "Attack / Incident",
+            "label": "After a security incident: forensics, damage assessment, and hardening plan require a systematic audit"
+          },
+          "multipleBreaches": {
+            "value": "Growth / M&A",
+            "label": "During business changes: new locations, acquisitions, or system migrations increase the attack surface"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Process and Costs of an IT Security Audit in Germany",
+        "content": "A professional IT security audit follows a clear process. Duration and costs depend on scope, company size, and level of detail. Here is a realistic overview:",
+        "essentialPractices": {
+          "title": "Phases of an IT Security Audit",
+          "items": [
+            "Phase 1 – Scope & Kick-off: Definition of the audit scope (in-scope / out-of-scope systems), methodology agreement (technical, organizational, or both), scheduling.",
+            "Phase 2 – Information Gathering & OSINT: Passive reconnaissance, DNS and IP analysis, overview of the external attack surface without active tests.",
+            "Phase 3 – Technical Review (Audit): Manual and automated analysis of in-scope systems – networks, endpoints, AD, cloud, web apps, APIs.",
+            "Phase 4 – Organizational Review: Interviews with IT managers, review of policies, access concepts, backup documentation, and incident response plans.",
+            "Phase 5 – Finding Analysis & Report: Consolidation of all findings, CVSS scoring, risk-based prioritization, creation of the audit report (executive summary + technical section).",
+            "Phase 6 – Final Presentation: Presentation of results for management and IT; prioritized roadmap for implementing measures.",
+            "Cost Guide for SMEs (20–150 employees): Basic technical audit €3,000–7,000; full IS security audit (technical + organizational) €8,000–20,000; combined with pentest from €10,000."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Request an IT Security Audit Now – or Use Our Free Pilot Program",
+        "content1": "SODU Secure conducts IT security audits and IS security audits for companies in Berlin and digitally throughout Germany. We combine technical depth with clear communication – our reports get read and implemented, not filed away.",
+        "content2": "Berlin SMEs (20–150 employees, Microsoft-based IT) can still apply for our free pilot program: a complete IT security check valued at up to €15,000 – including pentest, AD analysis, phishing simulation, and management report. Only 2 spots left. Apply now: sodusecure.com/berlin-kmu-pilot"
+      }
+    },
+    "tags": [
+      "IT Security Audit",
+      "IS Security Audit",
+      "IT Security Check",
+      "Information Security Audit",
+      "Pentest Berlin",
+      "NIS2 Audit",
+      "GDPR Security Audit",
+      "ISO 27001 Audit",
+      "Active Directory Audit"
+    ],
+    "cta": {
+      "title": "Request IT Security Audit",
+      "description": "Receive a transparent quote for your IT security audit within 24 hours – or apply for our free SME pilot program.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Request Now",
+      "disclaimer": "No spam, unsubscribe at any time"
+    },
+    "relatedArticles": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "IT Security Check for Companies: What Is Checked and What Does It Cost?",
+          "description": "The complete practical guide for IT security checks in companies – scope, costs, and process.",
+          "category": "IT SECURITY CHECK",
+          "readTime": "13 min read",
+          "readMore": "Read article →"
+        },
+        {
+          "title": "Pentest Berlin 2026: Guide for Berlin Companies",
+          "description": "What does a pentest in Berlin cost? Everything at a glance – including a provider checklist.",
+          "category": "PENTEST BERLIN",
+          "readTime": "14 min read",
+          "readMore": "Read article →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "CEO & Offensive Security, SODU Secure GmbH",
+      "bio": "Computer science student at TU Berlin, founder of SODU Secure. Specialized in IT security audits, IS security audits, penetration testing, and SME security in Berlin."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Was this article helpful?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request IT security audit"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The consultation request feature is not yet implemented.",
+      "saveNotImplemented": "Save feature is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thank you! Your request has been sent.",
+      "emailFailed": "Sending failed. Please try again."
+    }
   }
 }

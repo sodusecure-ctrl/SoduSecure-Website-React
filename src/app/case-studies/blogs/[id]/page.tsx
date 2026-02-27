@@ -40,6 +40,8 @@ export default function BlogArticleDetail() {
       13: 'kmuSicherheitslueckenDetail',
       14: 'pentestBerlinDetail',
       15: 'pentestAblaufDetail',
+      16: 'itSecurityCheckFirmaDetail',
+      17: 'itSecurityAuditDetail',
     };
     return mapping[id] || 'blogDetail';
   };
