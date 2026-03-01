@@ -18,6 +18,8 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isBerlinDropdownOpen, setIsBerlinDropdownOpen] = useState(false);
+  const [isMobileBerlinOpen, setIsMobileBerlinOpen] = useState(false);
   const [currentLocale, setCurrentLocale] = useState<string>("de");
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
@@ -101,10 +103,17 @@ export default function Header() {
     },
   ];
 
+  const berlinLinks = [
+    { name: 'Pentest Berlin – Übersicht', path: '/pentest-berlin' },
+    { name: 'Was kostet ein Pentest?', path: '/pentest-berlin/kosten' },
+    { name: 'Pentest für KMU Berlin', path: '/pentest-berlin/kmu' },
+    { name: 'Interner vs. Externer Pentest', path: '/pentest-berlin/intern-extern' },
+    { name: 'ISO 27001 Pentest Berlin', path: '/pentest-berlin/iso-27001' },
+  ];
+
   const navLinks = [
     { name: t('about'), path: '/about' },
     { name: t('caseStudiesBlogs'), path: '/case-studies' },
-    { name: 'Pentest Berlin', path: '/pentest-berlin' },
     { name: t('careers'), path: '/careers' },
     { name: t('contact'), path: '/contact' },
   ];
@@ -185,6 +194,40 @@ export default function Header() {
                     }}
                   >
                     <span>{service.name}</span>
+                    <ChevronRight className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" />
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <DropdownMenu open={isBerlinDropdownOpen} onOpenChange={setIsBerlinDropdownOpen}>
+              <DropdownMenuTrigger className="flex items-center gap-1 focus:outline-none border-none cursor-pointer select-none text-white hover:text-gray-300 transition-colors text-sm xl:text-base">
+                Pentest Berlin
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                className="bg-[#1a1f2e] border border-gray-700 rounded-lg p-4 min-w-[280px] xl:min-w-[320px] shadow-xl animate-in slide-in-from-top-2 fade-in-0"
+                onCloseAutoFocus={(e) => e.preventDefault()}
+                sideOffset={5}
+              >
+                <div className="pb-3 mb-3 border-b border-gray-700">
+                  <h3 className="text-red-500 font-bold text-base xl:text-lg">Pentest Berlin</h3>
+                </div>
+                {berlinLinks.map((link, index) => (
+                  <DropdownMenuItem
+                    key={index}
+                    className={`
+                      flex items-center justify-between py-2 px-3 cursor-pointer
+                      rounded-md transition-colors group text-sm xl:text-base
+                      ${isServiceActive(link.path)
+                        ? 'bg-gray-800 text-red-500'
+                        : 'text-white hover:bg-gray-800'
+                      }
+                    `}
+                    onClick={() => { setIsBerlinDropdownOpen(false); router.push(link.path); }}
+                    onSelect={(e) => e.preventDefault()}
+                  >
+                    <span>{link.name}</span>
                     <ChevronRight className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" />
                   </DropdownMenuItem>
                 ))}
@@ -292,6 +335,40 @@ export default function Header() {
                       `}
                     >
                       <span>{service.name}</span>
+                      <ChevronRight className="w-4 h-4 opacity-60" />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Berlin Dropdown */}
+            <div className="mb-4">
+              <button
+                onClick={() => setIsMobileBerlinOpen(!isMobileBerlinOpen)}
+                className="flex items-center justify-between w-full py-3 px-4 text-white hover:bg-gray-800 rounded-lg transition-colors text-left"
+              >
+                <span className="text-base font-medium">Pentest Berlin</span>
+                <ChevronRight
+                  className={`w-5 h-5 transition-transform duration-200 ${isMobileBerlinOpen ? 'rotate-90' : ''}`}
+                />
+              </button>
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileBerlinOpen ? 'max-h-[400px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                <div className="space-y-1 pl-4">
+                  {berlinLinks.map((link, index) => (
+                    <button
+                      key={index}
+                      onClick={() => { setIsMobileMenuOpen(false); setIsMobileBerlinOpen(false); router.push(link.path); }}
+                      className={`
+                        flex items-center justify-between w-full py-3 px-4
+                        rounded-lg transition-colors text-left text-sm
+                        ${isServiceActive(link.path)
+                          ? 'bg-gray-800 text-red-500'
+                          : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                        }
+                      `}
+                    >
+                      <span>{link.name}</span>
                       <ChevronRight className="w-4 h-4 opacity-60" />
                     </button>
                   ))}
