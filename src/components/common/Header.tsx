@@ -112,9 +112,8 @@ export default function Header() {
   ];
 
   const navLinks = [
-    { name: t('about'), path: '/about' },
     { name: t('caseStudiesBlogs'), path: '/case-studies' },
-    { name: t('careers'), path: '/careers' },
+    { name: t('about'), path: '/about' },
     { name: t('contact'), path: '/contact' },
   ];
 
