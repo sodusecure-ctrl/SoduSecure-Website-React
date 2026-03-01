@@ -9,6 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: { path: string; lastModified: string; changeFreq: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number }[] = [
     { path: '',                    lastModified: '2026-03-01', changeFreq: 'weekly',  priority: 1.0  },
     { path: '/pentest-berlin',     lastModified: '2026-03-01', changeFreq: 'weekly',  priority: 1.0  },
+    { path: '/pentest-berlin/kosten',      lastModified: '2026-03-01', changeFreq: 'monthly', priority: 0.95 },
+    { path: '/pentest-berlin/kmu',         lastModified: '2026-03-01', changeFreq: 'monthly', priority: 0.95 },
+    { path: '/pentest-berlin/intern-extern', lastModified: '2026-03-01', changeFreq: 'monthly', priority: 0.95 },
+    { path: '/pentest-berlin/iso-27001',   lastModified: '2026-03-01', changeFreq: 'monthly', priority: 0.95 },
     { path: '/berlin-kmu-pilot',   lastModified: '2026-03-01', changeFreq: 'weekly',  priority: 0.99 },
     { path: '/services/sme-packages', lastModified: '2026-03-01', changeFreq: 'weekly',  priority: 0.98 },
     { path: '/request-pentest',    lastModified: '2026-03-01', changeFreq: 'monthly', priority: 0.92  },

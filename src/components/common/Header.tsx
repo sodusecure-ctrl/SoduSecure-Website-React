@@ -104,6 +104,7 @@ export default function Header() {
   const navLinks = [
     { name: t('about'), path: '/about' },
     { name: t('caseStudiesBlogs'), path: '/case-studies' },
+    { name: 'Pentest Berlin', path: '/pentest-berlin' },
     { name: t('careers'), path: '/careers' },
     { name: t('contact'), path: '/contact' },
   ];
