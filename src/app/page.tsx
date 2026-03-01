@@ -7,7 +7,7 @@ import TestimonialsCarousel from '../components/home/TestimonialsCarousel';
 import WhyChooseSection from '../components/home/WhyChooseSection';
 import Link from 'next/link';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 export default function Home() {
   // Organization Schema
@@ -118,6 +118,26 @@ export default function Home() {
       </Link>
       <Hero />
       <SecurityServices />
+
+      {/* ── Pentest Berlin Geo-Banner ── */}
+      <Link
+        href="/pentest-berlin"
+        className="block w-full bg-gray-900 hover:bg-gray-800 transition-colors duration-200 group border-y border-gray-800"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse flex-shrink-0" />
+            <span className="text-white text-sm sm:text-base font-medium">
+              🏙️ <span className="font-bold">Berliner Unternehmen?</span>
+              {' '}Erfahren Sie, warum Pentests für KMUs, Startups und den Mittelstand unverzichtbar sind.
+            </span>
+          </div>
+          <span className="inline-flex items-center gap-1.5 text-red-400 font-semibold text-sm group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0 whitespace-nowrap">
+            Pentest Berlin entdecken →
+          </span>
+        </div>
+      </Link>
+
       <WhyChooseSection />
       <HowItWorksSection />
       <CertificationsToolsSection />

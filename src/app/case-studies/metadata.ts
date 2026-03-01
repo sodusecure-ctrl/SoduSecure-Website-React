@@ -1,6 +1,6 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Case Studies & Security Blog - Real-World Pentesting Insights',
@@ -24,9 +24,5 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${baseUrl}/case-studies`,
-    languages: {
-      en: `${baseUrl}/en/case-studies`,
-      de: `${baseUrl}/de/case-studies`,
-    },
   },
 };

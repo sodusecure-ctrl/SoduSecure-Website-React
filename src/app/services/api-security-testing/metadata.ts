@@ -1,6 +1,6 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'API Security Testing - REST, GraphQL & SOAP',
@@ -21,9 +21,5 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${baseUrl}/services/api-security-testing`,
-    languages: {
-      en: `${baseUrl}/en/services/api-security-testing`,
-      de: `${baseUrl}/de/services/api-security-testing`,
-    },
   },
 };

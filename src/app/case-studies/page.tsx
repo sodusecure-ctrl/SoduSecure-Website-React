@@ -21,18 +21,18 @@ export default function CaseStudiesPage() {
     '@type': 'Blog',
     name: 'sodusecure Security Blog',
     description: 'Cybersecurity insights, penetration testing guides, and security best practices',
-    url: 'https://sodusecure.com/case-studies',
+    url: 'https://www.sodusecure.com/case-studies',
     blogPost: blogPosts.map(blog => ({
       '@type': 'BlogPosting',
       headline: blog.title,
       description: blog.description,
-      image: `https://sodusecure.com${blog.image}`,
+      image: `https://www.sodusecure.com${blog.image}`,
       datePublished: blog.date,
       author: {
         '@type': 'Person',
         name: blog.author,
       },
-      url: `https://sodusecure.com/case-studies/blogs/${blog.slug}`,
+      url: `https://www.sodusecure.com/case-studies/blogs/${blog.slug}`,
     })),
   };
   const [selectedBlogCategory, setSelectedBlogCategory] = useState('All');

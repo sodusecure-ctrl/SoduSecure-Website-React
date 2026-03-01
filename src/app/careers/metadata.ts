@@ -1,6 +1,6 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Careers - Join Our Cybersecurity Team',
@@ -19,9 +19,5 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${baseUrl}/careers`,
-    languages: {
-      en: `${baseUrl}/en/careers`,
-      de: `${baseUrl}/de/careers`,
-    },
   },
 };

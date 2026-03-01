@@ -1,6 +1,6 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Web Application Penetration Testing - OWASP Top 10',
@@ -22,9 +22,5 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${baseUrl}/services/web-application-testing`,
-    languages: {
-      en: `${baseUrl}/en/services/web-application-testing`,
-      de: `${baseUrl}/de/services/web-application-testing`,
-    },
   },
 };

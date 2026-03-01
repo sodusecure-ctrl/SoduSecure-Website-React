@@ -31,7 +31,7 @@
       },
       "subtitle": "Manual security assessments, certified testers, clear results and remediation support.",
       "cta": {
-        "requestPentest": "Request a Pentest",
+        "requestPentest": "Configure Pentest",
         "contactUs": "Contact Us"
       },
       "trustedCertified": "Trusted & Certified",
@@ -158,7 +158,7 @@
       "heading": "Schedule a Free Consultation",
       "description": "Discuss your security needs with our experts. Get a customized testing plan and transparent pricing, no obligation.",
       "bookCall": "Contact Now",
-      "requestPentest": "Request a Pentest",
+      "requestPentest": "Pentest Price Calculator",
       "responseTime": "Typical response time: within 24 hours"
     },
     "certificationsTools": {

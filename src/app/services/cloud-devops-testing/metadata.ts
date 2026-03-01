@@ -1,6 +1,6 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Cloud & DevOps Security Testing - AWS, Azure, GCP',
@@ -22,9 +22,5 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${baseUrl}/services/cloud-devops-testing`,
-    languages: {
-      en: `${baseUrl}/en/services/cloud-devops-testing`,
-      de: `${baseUrl}/de/services/cloud-devops-testing`,
-    },
   },
 };

@@ -31,7 +31,7 @@
       },
       "subtitle": "Manuelle Sicherheitsprüfungen, zertifizierte Tester – klare Ergebnisse und Unterstützung bei der Behebung.",
       "cta": {
-        "requestPentest": "Pentest anfragen",
+        "requestPentest": "Pentest Konfigurieren",
         "contactUs": "Kontakt aufnehmen"
       },
       "trustedCertified": "Vertrauenswürdig & Zertifiziert",
@@ -158,7 +158,7 @@
       "heading": "Kostenlose Beratung vereinbaren",
       "description": "Besprechen Sie Ihre Sicherheitsanforderungen mit unseren Experten. Erhalten Sie einen individuellen Testplan und transparente Preise, unverbindlich.",
       "bookCall": "Jetzt kontaktieren",
-      "requestPentest": "Pentest anfragen",
+      "requestPentest": "Pentest Preis Rechner",
       "responseTime": "Typische Reaktionszeit: innerhalb von 24 Stunden"
     },
     "certificationsTools": {

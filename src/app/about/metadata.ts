@@ -1,6 +1,6 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'About Us - Expert Penetration Testing Team',
@@ -21,9 +21,5 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${baseUrl}/about`,
-    languages: {
-      en: `${baseUrl}/en/about`,
-      de: `${baseUrl}/de/about`,
-    },
   },
 };

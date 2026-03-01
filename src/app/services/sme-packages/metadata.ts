@@ -1,6 +1,6 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'KMU Sicherheitspaket | Pentest KMU ab 8.000 € | Pentest Berlin | SODU Secure',
@@ -66,10 +66,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${baseUrl}/services/sme-packages`,
-    languages: {
-      de: `${baseUrl}/de/services/sme-packages`,
-      en: `${baseUrl}/en/services/sme-packages`,
-    },
   },
   robots: {
     index: true,

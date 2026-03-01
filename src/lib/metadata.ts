@@ -1,6 +1,6 @@
 ﻿import { Metadata } from 'next';
 
-const baseUrl = 'https://sodusecure.com'; // Update with your actual domain
+const baseUrl = 'https://www.sodusecure.com'; // Update with your actual domain
 
 interface PageMetadata {
   title: string;

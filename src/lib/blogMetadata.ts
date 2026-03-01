@@ -1,7 +1,7 @@
 ﻿import { Metadata } from 'next';
 import { getBlogById } from '@/lib/blogData';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 interface GenerateBlogMetadataParams {
   params: { id: string };

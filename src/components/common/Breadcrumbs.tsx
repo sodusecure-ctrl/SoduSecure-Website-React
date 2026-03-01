@@ -46,13 +46,13 @@ export default function Breadcrumbs() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://sodusecure.com',
+        item: 'https://www.sodusecure.com',
       },
       ...breadcrumbs.map((crumb, index) => ({
         '@type': 'ListItem',
         position: index + 2,
         name: crumb.label,
-        item: `https://sodusecure.com${crumb.href}`,
+        item: `https://www.sodusecure.com${crumb.href}`,
       })),
     ],
   };

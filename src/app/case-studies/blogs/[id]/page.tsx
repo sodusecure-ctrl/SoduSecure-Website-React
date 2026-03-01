@@ -54,7 +54,7 @@ export default function BlogArticleDetail() {
     '@type': 'BlogPosting',
     headline: blogData.title,
     description: blogData.description,
-    image: `https://sodusecure.com${blogData.image}`,
+    image: `https://www.sodusecure.com${blogData.image}`,
     datePublished: blogData.date,
     dateModified: blogData.date,
     author: {
@@ -66,7 +66,7 @@ export default function BlogArticleDetail() {
       name: 'SoduSecure',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://sodusecure.com/images/logo.png',
+        url: 'https://www.sodusecure.com/images/logo.png',
       },
     },
     keywords: blogData.keywords.join(', '),
@@ -155,8 +155,8 @@ export default function BlogArticleDetail() {
           description={blogData.description}
           keywords={blogData.keywords}
           author={blogData.author}
-          image={`https://sodusecure.com${blogData.image}`}
-          url={`https://sodusecure.com/case-studies/blogs/${blogData.slug}`}
+          image={`https://www.sodusecure.com${blogData.image}`}
+          url={`https://www.sodusecure.com/case-studies/blogs/${blogData.slug}`}
           type="article"
           publishedTime={blogData.date}
         />

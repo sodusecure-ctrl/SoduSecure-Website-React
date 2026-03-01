@@ -1,6 +1,6 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 
-const baseUrl = 'https://sodusecure.com';
+const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Mobile App Penetration Testing - iOS & Android Security',
@@ -21,9 +21,5 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: `${baseUrl}/services/mobile-app-testing`,
-    languages: {
-      en: `${baseUrl}/en/services/mobile-app-testing`,
-      de: `${baseUrl}/de/services/mobile-app-testing`,
-    },
   },
 };

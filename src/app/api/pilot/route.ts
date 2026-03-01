@@ -116,7 +116,7 @@ export async function POST(request: NextRequest) {
               <p style="color:#333;font-size:16px;margin:0 0 10px;font-weight:600;">SODU Secure GmbH</p>
               <p style="color:#888;font-size:13px;margin:15px 0 0;line-height:1.5;">
                 🔒 Ihre Cybersecurity-Experten aus Berlin<br/>
-                <a href="https://sodusecure.com" style="color:#dc2626;text-decoration:none;">www.sodusecure.com</a>
+                <a href="https://www.sodusecure.com" style="color:#dc2626;text-decoration:none;">www.sodusecure.com</a>
               </p>
             </div>
           </div>
