@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Cloud Pentest – AWS, Azure & GCP | SODU Secure',
-    description: 'IAM-Eskalation, S3-Fehlkonfigs & CI/CD-Secrets – zertifizierte Pentester. Festpreis, jetzt konfigurieren.',,
+    description: 'IAM-Eskalation, S3-Fehlkonfigs & CI/CD-Secrets – zertifizierte Pentester. Festpreis, jetzt konfigurieren.',
     url: `${baseUrl}/services/cloud-devops-testing`,
     type: 'website',
   },

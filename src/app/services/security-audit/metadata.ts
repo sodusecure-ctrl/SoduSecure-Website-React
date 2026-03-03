@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Security Audit – NIS2 & ISO 27001 | SODU Secure',
-    description: 'NIS2 & ISO 27001 konform. Zertifizierte Pentester, transparenter Festpreis inkl. Bericht. Jetzt Preis berechnen.',,
+    description: 'NIS2 & ISO 27001 konform. Zertifizierte Pentester, transparenter Festpreis inkl. Bericht. Jetzt Preis berechnen.',
     url: `${baseUrl}/services/security-audit`,
     type: 'website',
   },

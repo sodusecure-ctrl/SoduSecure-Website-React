@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Über uns – Zertifizierte Pentester | SODU Secure',
-    description: 'Zertifizierte Pentester, OSCP-Methodik & MITRE ATT&CK. Transparente Preise – Pentest sofort konfigurieren.',,
+    description: 'Zertifizierte Pentester, OSCP-Methodik & MITRE ATT&CK. Transparente Preise – Pentest sofort konfigurieren.',
     url: `${baseUrl}/about`,
     type: 'website',
   },

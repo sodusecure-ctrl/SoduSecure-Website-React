@@ -435,7 +435,7 @@ export default function PenetrationTestingPage() {
                 <h4 className="text-sm font-semibold text-blue-300 mb-1">NIS2-Betroffenheitsprüfung</h4>
                 <p className="text-sm text-gray-400">
                   NIS2 betrifft nicht nur kritische Infrastrukturen, sondern über die Kategorie
-                  „wichtige Einrichtungen" auch mittelgroße Unternehmen in Produktion, Lebensmittel,
+                  {'\u201ewichtige Einrichtungen"'} auch mittelgroße Unternehmen in Produktion, Lebensmittel,
                   Chemie, Post und digitale Dienste. Das{" "}
                   <a href="https://www.bsi.bund.de/DE/Themen/Regulierter-Bereich/NIS-2/nis-2_node.html"
                     target="_blank" rel="noopener noreferrer"

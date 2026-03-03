@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'API Security Testing – REST, GraphQL & SOAP | SODU Secure',
-    description: 'OWASP API Top 10, Auth-Fehler & Injection – manuell validiert, zertifizierte Pentester. Jetzt konfigurieren.',,
+    description: 'OWASP API Top 10, Auth-Fehler & Injection – manuell validiert, zertifizierte Pentester. Jetzt konfigurieren.',
     url: `${baseUrl}/services/api-security-testing`,
     type: 'website',
   },

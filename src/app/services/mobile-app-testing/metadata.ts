@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Mobile App Pentest – iOS & Android | SODU Secure',
-    description: 'OWASP MASVS, Reverse Engineering & Datenschutz-Checks. Zertifizierte Pentester. Festpreis, Preis jetzt berechnen.',,
+    description: 'OWASP MASVS, Reverse Engineering & Datenschutz-Checks. Zertifizierte Pentester. Festpreis, Preis jetzt berechnen.',
     url: `${baseUrl}/services/mobile-app-testing`,
     type: 'website',
   },

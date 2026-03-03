@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Pentest anfragen – Kostenlose Beratung | SODU Secure',
-    description: 'Kostenlose Erstberatung & Festpreis-Angebot in 24h. Zertifizierte Pentester. Pentest direkt konfigurieren.',,
+    description: 'Kostenlose Erstberatung & Festpreis-Angebot in 24h. Zertifizierte Pentester. Pentest direkt konfigurieren.',
     url: `${baseUrl}/contact`,
     type: 'website',
   },

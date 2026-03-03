@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Infrastruktur Pentest – Active Directory & Server | SODU Secure',
-    description: 'Kerberoasting, Pass-the-Hash & AD-Angriffe – zertifizierte Pentester. Festpreis, jetzt konfigurieren.',,
+    description: 'Kerberoasting, Pass-the-Hash & AD-Angriffe – zertifizierte Pentester. Festpreis, jetzt konfigurieren.',
     url: `${baseUrl}/services/infrastructure-testing`,
     type: 'website',
   },

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Netzwerk Pentest & Security Audit | SODU Secure',
-    description: 'Firewall, Segmentierung & exponierte Dienste – zertifizierte Pentester. Transparente Preise, jetzt konfigurieren.',,
+    description: 'Firewall, Segmentierung & exponierte Dienste – zertifizierte Pentester. Transparente Preise, jetzt konfigurieren.',
     url: `${baseUrl}/services/network-audit`,
     type: 'website',
   },

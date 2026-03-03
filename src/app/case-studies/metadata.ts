@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Pentest Case Studies & Security Blog | SODU Secure',
-    description: 'Echte Pentest-Befunde, OWASP Top 10 & AD-Angriffe. Von zertifizierten Pentestern – Praxis statt Theorie.',,
+    description: 'Echte Pentest-Befunde, OWASP Top 10 & AD-Angriffe. Von zertifizierten Pentestern – Praxis statt Theorie.',
     url: `${baseUrl}/case-studies`,
     type: 'website',
   },

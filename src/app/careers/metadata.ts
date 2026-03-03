@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Jobs bei SODU Secure – Pentester & Security-Experten gesucht',
-    description: 'Zertifizierte Pentester gesucht: Web, AD & Cloud-Projekte. Remote & faire Vergütung. Jetzt bewerben.',,
+    description: 'Zertifizierte Pentester gesucht: Web, AD & Cloud-Projekte. Remote & faire Vergütung. Jetzt bewerben.',
     url: `${baseUrl}/careers`,
     type: 'website',
   },

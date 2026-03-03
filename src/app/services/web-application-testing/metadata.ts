@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Web Application Pentest – OWASP Top 10 | SODU Secure',
-    description: 'OWASP Top 10, SQL Injection, Auth-Bypasses – manuell getestet, zertifizierte Pentester. Festpreis ab 2.500 €.',,
+    description: 'OWASP Top 10, SQL Injection, Auth-Bypasses – manuell getestet, zertifizierte Pentester. Festpreis ab 2.500 €.',
     url: `${baseUrl}/services/web-application-testing`,
     type: 'website',
   },

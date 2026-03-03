@@ -200,7 +200,7 @@ export default function PenetrationTestingAnbieterPage() {
               <span className="text-blue-400">typischer Pentest Anbieter</span>
             </h2>
             <p className="text-gray-300 leading-relaxed mb-6">
-              Viele Anbieter versprechen „Penetrationstest", liefern aber automatisierte
+              Viele Anbieter versprechen {'\u201ePenetrationstest"'}, liefern aber automatisierte
               Scan-Reports. Was SODU Secure als Pentest Anbieter konkret unterscheidet:
             </p>
             <div className="space-y-3">
