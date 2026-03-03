@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Web Application Penetration Testing - OWASP Top 10',
-  description: 'Professional web application security testing. Identify SQL injection, XSS, CSRF, and other OWASP Top 10 vulnerabilities. Comprehensive web app pentesting services.',
+  title: 'Web Application Pentest – OWASP Top 10 | Zertifizierte Pentester | SODU Secure',
+  description: 'Web Application Pentest: OWASP Top 10, SQL Injection, Auth-Bypasses – manuell getestet von zertifizierten Pentestern. Transparenter Festpreis. Jetzt Preis berechnen – ab 2.500 €.',
   keywords: [
     'web app pentesting',
     'OWASP testing',
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
     'application penetration testing',
   ],
   openGraph: {
-    title: 'Web Application Penetration Testing - sodusecure',
-    description: 'Professional web application security testing to identify and fix vulnerabilities.',
+    title: 'Web Application Pentest – OWASP Top 10 | SODU Secure',
+    description: 'OWASP Top 10, SQL Injection, Auth-Bypasses – manuell getestet, zertifizierte Pentester. Festpreis ab 2.500 €.',,
     url: `${baseUrl}/services/web-application-testing`,
     type: 'website',
   },

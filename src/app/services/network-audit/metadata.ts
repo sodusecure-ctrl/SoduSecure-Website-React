@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Network Security Audit & Penetration Testing',
-  description: 'Complete network security audits to identify vulnerabilities in your network infrastructure. Network penetration testing to protect against external and internal threats.',
+  title: 'Netzwerk Pentest & Security Audit | Zertifizierte Pentester | SODU Secure',
+  description: 'Netzwerk Pentest: Firewall, Segmentierung & exponierte Dienste – systematisch geprüft von zertifizierten Pentestern. Transparente Preise. Jetzt Pentest konfigurieren.',
   keywords: [
     'network security audit',
     'network pentesting',
@@ -13,8 +13,8 @@ export const metadata: Metadata = {
     'network penetration testing',
   ],
   openGraph: {
-    title: 'Network Security Audit - sodusecure',
-    description: 'Professional network security audits and penetration testing.',
+    title: 'Netzwerk Pentest & Security Audit | SODU Secure',
+    description: 'Firewall, Segmentierung & exponierte Dienste – zertifizierte Pentester. Transparente Preise, jetzt konfigurieren.',,
     url: `${baseUrl}/services/network-audit`,
     type: 'website',
   },

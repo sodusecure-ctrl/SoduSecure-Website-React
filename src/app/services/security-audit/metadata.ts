@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Comprehensive Security Audit Services',
-  description: 'Full-scale security audits covering all aspects of your digital infrastructure. Identify risks, get compliance reports, and actionable remediation plans.',
+  title: 'Security Audit – NIS2 & ISO 27001 konform | Zertifizierte Pentester | SODU Secure',
+  description: 'Security Audit: NIS2 & ISO 27001 konform. Zertifizierte Pentester prüfen Ihre IT vollständig. Transparenter Festpreis, Bericht inkl. Jetzt Preis berechnen.',
   keywords: [
     'security audit',
     'compliance audit',
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     'compliance testing',
   ],
   openGraph: {
-    title: 'Comprehensive Security Audit - sodusecure',
-    description: 'Professional security audits covering all aspects of your infrastructure.',
+    title: 'Security Audit – NIS2 & ISO 27001 | SODU Secure',
+    description: 'NIS2 & ISO 27001 konform. Zertifizierte Pentester, transparenter Festpreis inkl. Bericht. Jetzt Preis berechnen.',,
     url: `${baseUrl}/services/security-audit`,
     type: 'website',
   },

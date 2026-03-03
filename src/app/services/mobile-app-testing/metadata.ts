@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Mobile App Penetration Testing - iOS & Android Security',
-  description: 'Comprehensive mobile application security testing for iOS and Android apps. Identify vulnerabilities in mobile apps before attackers do. OWASP MASVS compliant testing.',
+  title: 'Mobile App Pentest – iOS & Android | Zertifizierte Pentester | SODU Secure',
+  description: 'Mobile App Pentest für iOS & Android: OWASP MASVS, Reverse Engineering & Datenschutz-Checks. Zertifizierte Pentester, transparenter Festpreis. Preis jetzt berechnen.',
   keywords: [
     'mobile app pentesting',
     'iOS security testing',
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     'mobile penetration testing',
   ],
   openGraph: {
-    title: 'Mobile App Penetration Testing - sodusecure',
-    description: 'Professional mobile application security testing for iOS and Android.',
+    title: 'Mobile App Pentest – iOS & Android | SODU Secure',
+    description: 'OWASP MASVS, Reverse Engineering & Datenschutz-Checks. Zertifizierte Pentester. Festpreis, Preis jetzt berechnen.',,
     url: `${baseUrl}/services/mobile-app-testing`,
     type: 'website',
   },

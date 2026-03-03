@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Contact Us - Get Your Free Security Consultation',
-  description: 'Contact sodusecure for professional penetration testing services. Get a free consultation and quote for your security needs. Available in English and German.',
+  title: 'Pentest anfragen – Kostenlose Beratung | SODU Secure',
+  description: 'Pentest anfragen: Kostenlose Erstberatung & Festpreis-Angebot in 24h. Zertifizierte Pentester, transparente Kosten. Oder direkt Pentest konfigurieren & Preis berechnen.',
   keywords: [
     'contact cybersecurity',
     'penetration testing quote',
@@ -12,8 +12,8 @@ export const metadata: Metadata = {
     'get pentest quote',
   ],
   openGraph: {
-    title: 'Contact sodusecure - Get Your Free Security Consultation',
-    description: 'Contact us for professional penetration testing services. Free consultation available.',
+    title: 'Pentest anfragen – Kostenlose Beratung | SODU Secure',
+    description: 'Kostenlose Erstberatung & Festpreis-Angebot in 24h. Zertifizierte Pentester. Pentest direkt konfigurieren.',,
     url: `${baseUrl}/contact`,
     type: 'website',
   },

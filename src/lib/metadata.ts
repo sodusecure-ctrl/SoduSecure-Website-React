@@ -86,54 +86,54 @@ export function generatePageMetadata({
 
 export const homeMetadata = {
   title: 'Professional Penetration Testing Services',
-  description: 'Comprehensive penetration testing services to identify and remediate security vulnerabilities. Expert cybersecurity team protecting your digital assets with advanced security testing.',
+  description: 'Transparente Pentest Preise ohne Wartezeit. Web, API & Mobile Security Audits inkl. Bericht. Jetzt Pentest konfigurieren oder kostenlos beraten lassen. Zertifizierte Pentester – Festpreis ab 2.500 €.',
   keywords: ['ethical hacking', 'security audit', 'VAPT', 'cyber security services'],
 };
 
 export const serviceMetadata = {
   webAppTesting: {
     title: 'Web Application Penetration Testing',
-    description: 'Professional web application security testing to identify vulnerabilities in your web apps. OWASP Top 10 testing, SQL injection, XSS, and more.',
+    description: 'Web Application Pentest: OWASP Top 10, SQL Injection, Auth-Bypasses – manuell getestet von zertifizierten Pentestern. Transparenter Festpreis. Jetzt Preis berechnen – ab 2.500 €.',
     keywords: ['web app pentesting', 'OWASP testing', 'web security', 'application security'],
   },
   mobileAppTesting: {
     title: 'Mobile Application Security Testing',
-    description: 'Comprehensive mobile app penetration testing for iOS and Android applications. Identify security flaws before attackers do.',
+    description: 'Mobile App Pentest für iOS & Android: OWASP MASVS, Reverse Engineering & Datenschutz-Checks. Zertifizierte Pentester, transparenter Festpreis. Preis sofort berechnen – ab 2.500 €.',
     keywords: ['mobile pentesting', 'iOS security', 'Android security', 'mobile app security'],
   },
   apiSecurity: {
     title: 'API Security Testing',
-    description: 'Secure your APIs with comprehensive security testing. REST API, GraphQL, and SOAP testing to protect your backend services.',
+    description: 'API Security Testing: OWASP API Top 10, Auth-Fehler & Injection – manuell validiert. Zertifizierte Pentester, transparenter Festpreis. Jetzt API Pentest konfigurieren.',
     keywords: ['API security', 'REST API testing', 'GraphQL security', 'API pentesting'],
   },
   networkAudit: {
     title: 'Network Security Audit',
-    description: 'Complete network security audits to identify vulnerabilities in your network infrastructure. Protect against network attacks.',
+    description: 'Netzwerk Pentest: Firewall, Segmentierung & exponierte Dienste – systematisch geprüft von zertifizierten Pentestern. Transparente Preise. Jetzt Pentest konfigurieren.',
     keywords: ['network security', 'network pentesting', 'infrastructure audit', 'network vulnerability'],
   },
   infrastructureTesting: {
     title: 'Infrastructure Penetration Testing',
-    description: 'Comprehensive infrastructure security testing including servers, databases, and internal systems.',
+    description: 'Infrastruktur Pentest: Active Directory, Server & Datenbanken – Kerberoasting, Pass-the-Hash & mehr. Zertifizierte Pentester. Preis sofort berechnen.',
     keywords: ['infrastructure security', 'server pentesting', 'database security', 'internal security'],
   },
   cloudDevOps: {
     title: 'Cloud & DevOps Security Testing',
-    description: 'Secure your cloud infrastructure and DevOps pipelines. AWS, Azure, GCP security testing and CI/CD pipeline security.',
+    description: 'Cloud Pentest: AWS, Azure & GCP – IAM-Eskalation, Fehlkonfigs & CI/CD-Secrets. Zertifizierte Pentester, Festpreis. Jetzt Cloud Pentest konfigurieren & Preis berechnen.',
     keywords: ['cloud security', 'DevOps security', 'AWS pentesting', 'Azure security', 'GCP security'],
   },
   securityAudit: {
     title: 'Comprehensive Security Audit',
-    description: 'Full-scale security audits covering all aspects of your digital infrastructure. Identify risks and get actionable remediation plans.',
+    description: 'Security Audit: NIS2 & ISO 27001 konform. Zertifizierte Pentester prüfen Ihre IT vollständig. Transparenter Festpreis, Bericht inkl. Jetzt Preis berechnen.',
     keywords: ['security audit', 'compliance audit', 'security assessment', 'risk assessment'],
   },
   vulnerabilityAssessment: {
     title: 'Vulnerability Assessment Services',
-    description: 'Professional vulnerability assessment to identify security weaknesses. Automated and manual testing for comprehensive coverage.',
+    description: 'Vulnerability Assessment: Automatisiert + manuell validiert von zertifizierten Pentestern. CVSS-Bericht & Remediation-Roadmap. Transparente Preise – jetzt konfigurieren.',
     keywords: ['vulnerability scanning', 'security assessment', 'vulnerability management', 'security scan'],
   },
   smePackages: {
     title: 'SME Security Packages',
-    description: 'Affordable penetration testing packages designed for small and medium enterprises. Professional security testing within your budget.',
+    description: 'KMU Pentest ab 8.000 €: Externer Pentest, Active Directory & Phishing-Simulation. Zertifizierte Pentester, transparenter Festpreis. Jetzt KMU Pentest konfigurieren.',
     keywords: ['SME security', 'affordable pentesting', 'small business security', 'budget security testing'],
   },
 };

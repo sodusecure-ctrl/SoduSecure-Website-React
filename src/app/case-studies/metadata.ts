@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Case Studies & Security Blog - Real-World Pentesting Insights',
-  description: 'Explore our cybersecurity case studies and blog posts. Learn from real penetration testing projects, security vulnerabilities, and expert insights on web security, API testing, and more.',
+  title: 'Pentest Case Studies & Security Blog | SODU Secure',
+  description: 'Pentest Case Studies & Security Blog: Echte Befunde, OWASP Top 10, AD-Angriffe & Cloud-Risiken. Von zertifizierten Pentestern – Praxis statt Theorie.',
   keywords: [
     'security blog',
     'case studies',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     'API security',
   ],
   openGraph: {
-    title: 'Case Studies & Security Blog - sodusecure',
-    description: 'Real-world penetration testing case studies and expert cybersecurity blog posts.',
+    title: 'Pentest Case Studies & Security Blog | SODU Secure',
+    description: 'Echte Pentest-Befunde, OWASP Top 10 & AD-Angriffe. Von zertifizierten Pentestern – Praxis statt Theorie.',,
     url: `${baseUrl}/case-studies`,
     type: 'website',
   },

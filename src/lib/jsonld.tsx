@@ -13,7 +13,7 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
       name: 'SoduSecure',
       url: baseUrl,
       logo: `${baseUrl}/images/logo.png`,
-      description: 'Professional penetration testing and cybersecurity services',
+      description: 'Transparente Pentest Preise ohne Wartezeit. Zertifizierte Pentester – Web, API, AD & Cloud. Festpreise ab 2.500 €. Jetzt Pentest konfigurieren & Preis berechnen.',
       address: {
         '@type': 'PostalAddress',
         addressCountry: 'DE',

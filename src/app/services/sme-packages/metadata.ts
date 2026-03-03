@@ -5,7 +5,7 @@ const baseUrl = 'https://www.sodusecure.com';
 export const metadata: Metadata = {
   title: 'KMU Sicherheitspaket | Pentest KMU ab 8.000 € | Pentest Berlin | SODU Secure',
   description:
-    'Professioneller Pentest für KMUs in Berlin und ganz Deutschland. Externer Pentest, Phishing-Kampagne & Active Directory Analyse ab 8.000 €. Pentest Kosten transparent, Pentest Angebot sofort anfragen.',
+    'KMU Pentest ab 8.000 €: Externer Pentest, Active Directory & Phishing-Simulation. Zertifizierte Pentester, transparenter Festpreis. Jetzt KMU Pentest konfigurieren & Preis berechnen.',
   keywords: [
     // Primary
     'Pentest KMU',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'KMU Sicherheitspaket – Pentest & Phishing ab 8.000 € | SODU Secure',
     description:
-      'Vollständiges IT-Sicherheitspaket für KMUs: Externer Pentest, Phishing-Kampagne & Active Directory Analyse. Ab 8.000 €, 3–6 Wochen Laufzeit.',
+      'KMU Pentest ab 8.000 €: Externer Pentest, Active Directory & Phishing-Simulation. Zertifizierte Pentester, transparenter Festpreis. Jetzt KMU Pentest konfigurieren.',
     url: `${baseUrl}/services/sme-packages`,
     type: 'website',
     siteName: 'SODU Secure',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'KMU Sicherheitspaket – Pentest & Phishing ab 8.000 €',
     description:
-      'Externer Pentest, Phishing-Kampagne & Active Directory Analyse für KMUs. 3–6 Wochen Laufzeit.',
+      'KMU Pentest ab 8.000 €: Externer Pentest, Active Directory & Phishing-Simulation. Zertifizierte Pentester, Festpreis. Jetzt konfigurieren.',
     images: [`${baseUrl}/images/og-sme-packages.jpg`],
   },
   alternates: {

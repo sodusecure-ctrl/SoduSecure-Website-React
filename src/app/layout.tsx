@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: "SODU Secure – Pentest Berlin & Penetration Testing Services",
     template: "%s | SODU Secure"
   },
-  description: "Pentest Berlin: Professionelle Penetrationstests, Active Directory Analyse und Phishing-Simulationen. SODU Secure schützt Berliner KMUs und Unternehmen mit OWASP Top 10 Testing, API Security und Infrastruktur-Audits.",
+  description: "Transparente Pentest Preise ohne Wartezeit. Web, API & Mobile Security Audits inkl. Bericht. Jetzt Pentest konfigurieren oder kostenlos beraten lassen. Zertifizierte Pentester – Festpreis ab 2.500 €.",
   keywords: [
     'penetration testing',
     'cybersecurity',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     locale: 'de_DE',
     url: baseUrl,
     title: 'SODU Secure – Pentest Berlin & Penetration Testing',
-    description: 'Pentest Berlin: Professionelle Penetrationstests für KMUs und Unternehmen. Schwachstellen finden, bevor Angreifer es tun.',
+    description: 'Transparente Pentest Preise ohne Wartezeit. Zertifizierte Pentester. Web, API & Active Directory – Festpreis ab 2.500 €. Jetzt Pentest konfigurieren & Preis berechnen.',
     siteName: 'SODU Secure',
     images: [
       {
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'SODU Secure – Pentest Berlin & Penetration Testing',
-    description: 'Pentest Berlin: Professionelle Penetrationstests, Active Directory Analyse und Phishing-Simulation für Berliner KMUs.',
+    description: 'Zertifizierte Pentester – transparente Festpreise ab 2.500 €. Pentest sofort konfigurieren & Preis berechnen. Web, API, AD & Cloud.',
     images: [`${baseUrl}/images/twitter-image.jpg`],
     creator: '@sodusecure',
   },

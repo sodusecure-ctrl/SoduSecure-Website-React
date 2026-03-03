@@ -17,6 +17,18 @@ export default function Footer() {
     { label: serviceLabels?.[4], href: '/services/cloud-devops-testing' },
     { label: 'Pentest Berlin', href: '/pentest-berlin' },
     { label: 'Berlin KMU Pilotprogramm', href: '/berlin-kmu-pilot' },
+    { label: 'Penetrationstest', href: '/penetration-testing' },
+    { label: 'Pentesting Service', href: '/pentesting-service' },
+    { label: 'Penetration Testing Service', href: '/penetration-testing-service' },
+    { label: 'Pentest Angebot', href: '/pentest-angebot' },
+    { label: 'Pentest Zertifizierung', href: '/pentest-certification' },
+    { label: 'Pentest Anbieter', href: '/penetration-testing-anbieter' },
+    { label: 'IT Sicherheitscheck', href: '/it-sicherheitscheck' },
+    { label: 'Cybersecurity Audit', href: '/cybersecurity-audit' },
+    { label: 'Hacker Simulation', href: '/hacker-simulation' },
+    { label: 'IT Sicherheit testen', href: '/it-sicherheit-testen' },
+    { label: 'Schwachstellenanalyse', href: '/schwachstellenanalyse' },
+    { label: 'Sicherheitsaudit', href: '/sicherheitsaudit' },
   ];
 
   const companyLinks = [

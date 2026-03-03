@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'About Us - Expert Penetration Testing Team',
-  description: 'Meet our team of certified penetration testers and cybersecurity experts. Years of experience in identifying and fixing security vulnerabilities across industries.',
+  title: 'Über uns – Zertifizierte Pentester | SODU Secure',
+  description: 'Lernen Sie unser Team zertifizierter Pentester kennen. OSCP-Methodik, OWASP & MITRE ATT&CK. Transparente Preise – Pentest sofort konfigurieren & Preis berechnen.',
   keywords: [
     'cybersecurity team',
     'penetration testing experts',
@@ -14,8 +14,8 @@ export const metadata: Metadata = {
     'CEH',
   ],
   openGraph: {
-    title: 'About sodusecure - Expert Penetration Testing Team',
-    description: 'Meet our team of certified penetration testers and cybersecurity experts.',
+    title: 'Über uns – Zertifizierte Pentester | SODU Secure',
+    description: 'Zertifizierte Pentester, OSCP-Methodik & MITRE ATT&CK. Transparente Preise – Pentest sofort konfigurieren.',,
     url: `${baseUrl}/about`,
     type: 'website',
   },
