@@ -1,9 +1,13 @@
-﻿import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+﻿"use client";
+
+import { useState } from 'react';
+import { ChevronDown, ChevronUp, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const [servicesExpanded, setServicesExpanded] = useState(false);
   const t = useTranslations('footer');
   const serviceLabels = t.raw('sections.services.links') as string[];
   const companyLabels = t.raw('sections.company.links') as string[];
@@ -15,6 +19,17 @@ export default function Footer() {
     { label: serviceLabels?.[2], href: '/services/mobile-app-testing' },
     { label: serviceLabels?.[3], href: '/services/api-security-testing' },
     { label: serviceLabels?.[4], href: '/services/cloud-devops-testing' },
+    { label: 'Pentest', href: '/pentest' },
+    { label: 'Pentest Kosten', href: '/pentest-kosten' },
+    { label: 'Pentest Preis', href: '/pentest-preis' },
+    { label: 'Pentest Konfigurator', href: '/pentest-konfigurator' },
+    { label: 'Pentest Preis Rechner', href: '/pentest-preis-rechner' },
+    { label: 'Cyber Security Check', href: '/cyber-security-check' },
+    { label: 'Cyber Security Check Kosten', href: '/cyber-security-check-kosten' },
+    { label: 'Cyber Security Check Preis', href: '/cyber-security-check-preis' },
+    { label: 'Phishing Simulation', href: '/phishing-simulation' },
+    { label: 'Vulnerability Assessment', href: '/vulnerability-assessment' },
+    { label: 'Red Team Assessment', href: '/red-team-assessment' },
     { label: 'Pentest Berlin', href: '/pentest-berlin' },
     { label: 'Berlin KMU Pilotprogramm', href: '/berlin-kmu-pilot' },
     { label: 'Penetrationstest', href: '/penetration-testing' },
@@ -30,6 +45,9 @@ export default function Footer() {
     { label: 'Schwachstellenanalyse', href: '/schwachstellenanalyse' },
     { label: 'Sicherheitsaudit', href: '/sicherheitsaudit' },
   ];
+
+  const VISIBLE_COUNT = 5;
+  const visibleLinks = servicesExpanded ? serviceLinks : serviceLinks.slice(0, VISIBLE_COUNT);
 
   const companyLinks = [
     { label: companyLabels?.[0], href: '/about' },
@@ -98,7 +116,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-base lg:text-lg mb-4 lg:mb-6">{t('sections.services.title')}</h3>
             <ul className="space-y-2 lg:space-y-3">
-              {serviceLinks.map((item, index) => (
+              {visibleLinks.map((item, index) => (
                 <li key={index}>
                   <Link
                     href={item.href}
@@ -109,6 +127,16 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <button
+              onClick={() => setServicesExpanded(!servicesExpanded)}
+              className="mt-3 flex items-center gap-1 text-red-400 hover:text-red-300 transition-colors text-xs font-medium"
+            >
+              {servicesExpanded ? (
+                <><ChevronUp className="w-3.5 h-3.5" />Weniger anzeigen</>
+              ) : (
+                <><ChevronDown className="w-3.5 h-3.5" />Alle {serviceLinks.length} Services</>
+              )}
+            </button>
           </div>
 
           {/* Company */}
