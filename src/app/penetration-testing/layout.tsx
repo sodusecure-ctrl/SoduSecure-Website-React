@@ -3,9 +3,9 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Penetrationstest & Pentesting – Zertifizierte Experten | SODU Secure',
+  title: 'Penetrationstest Berlin – Preis sofort berechnen | Zertifizierte Experten',
   description:
-    'Penetrationstest professionell durchführen lassen. SODU Secure bietet manuelles Pentesting für Web, API, Active Directory & Netzwerke. Zertifizierte Pentester – Festpreis ab 2.500 €. Jetzt konfigurieren.',
+    'Ist Ihre Website hackbar? Jetzt testen lassen. Manueller Penetrationstest für Web, API, AD & Netzwerke – OSCP-zertifiziert. Preis sofort im Online-Konfigurator berechnen. Festpreis ab 2.500 €.',
   keywords: [
     'Penetrationstest',
     'Penetration Testing',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     'Red Team Test',
   ],
   openGraph: {
-    title: 'Penetrationstest & Pentesting – Zertifizierte Pentester | SODU Secure',
+    title: 'Penetrationstest Berlin – Preis sofort berechnen | Zertifizierte Experten',
     description:
-      'Manuelles Pentesting für Web-Apps, Netzwerke, APIs & Active Directory. Echter Angriffssimulation – priorisierte Befunde – umsetzbare Maßnahmen. Festpreis-Angebot in 24 Stunden.',
+      'Ist Ihre Website hackbar? Jetzt testen lassen. Manueller Pentest für Web, API, AD & Netzwerke. Preis sofort im Online-Konfigurator berechnen. Festpreis ab 2.500 €.',
     url: `${baseUrl}/penetration-testing`,
     type: 'website',
     siteName: 'SODU Secure',

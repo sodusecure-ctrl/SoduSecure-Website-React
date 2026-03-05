@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hacker Simulation & Ethical Hacking Firma – Angriff simulieren | SODU Secure',
-  description: 'Hacker Angriff für Ihr Unternehmen simulieren. SODU Secure führt realistische Hacker-Simulationen (Ethical Hacking) durch – OSCP-zertifiziert, Festpreis, schnelle Abwicklung. Angebot in 24 h.',
+  title: 'Hacker-Simulation – Angriff sofort simulieren lassen | SODU Secure',
+  description: 'Testen Sie jetzt, ob Ihr Unternehmen einem echten Hackerangriff stannhält. Realistische Hacker-Simulation (Ethical Hacking) – OSCP-zertifiziert. Preis sofort online berechnen. Angebot in 24 h.',
   keywords: 'Hacker Simulation, Hacker Angriff simulieren, Ethical Hacking Firma, Hacking Test Unternehmen, simulierter Hackerangriff, Cyberangriff simulieren',
   robots: {
     index: true,
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://www.sodusecure.com/hacker-simulation' },
   openGraph: {
-    title: 'Hacker Simulation & Ethical Hacking Firma – Angriff simulieren | SODU Secure',
-    description: 'Hacker Angriff für Ihr Unternehmen simulieren. SODU Secure führt realistische Hacker-Simulationen durch – OSCP-zertifiziert, Festpreis, schnelle Abwicklung.',
+    title: 'Hacker-Simulation – Angriff sofort simulieren lassen | SODU Secure',
+    description: 'Jetzt testen, ob Ihr Unternehmen einem echten Hackerangriff stannhält. OSCP-zertifiziert. Preis sofort online berechnen. Festpreis ab 2.500 €.',
     url: 'https://www.sodusecure.com/hacker-simulation',
     siteName: 'SODU Secure',
     locale: 'de_DE',

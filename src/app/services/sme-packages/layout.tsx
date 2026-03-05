@@ -74,11 +74,54 @@ export default function SMEPackagesLayout({ children }: { children: React.ReactN
     },
   };
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Was ist im KMU Pentest-Paket enthalten?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Das KMU Pentest-Paket von SODU Secure umfasst je nach Paket: Externer Penetrationstest, Phishing-Simulation, Web-Applikations-Pentest und/oder Active Directory Analyse. Transparenter Festpreis – kein Tageshonorar.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ab welchem Preis gibt es ein KMU Pentest-Paket?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Das Basis-Paket für KMUs startet ab 8.000 € und beinhaltet Externer Pentest + Phishing-Kampagne + Web-Präsenz Schnelltest. Alle Preise können Sie sofort online mit dem Pentest-Konfigurator berechnen.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie lange dauert ein KMU Pentest?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ein KMU Komplett-Pentest dauert typischerweise 5–10 Werktage. SODU Secure liefert den finalen Bericht inkl. Remediation-Empfehlungen innerhalb von 48 Stunden nach Testabschluss.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Für welche KMU-Größen ist das Paket geeignet?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Die KMU Pentest-Pakete von SODU Secure sind für Unternehmen mit 20–150 Mitarbeitern konzipiert. Sie decken alle relevanten Angriffsvektoren ab und sind NIS2- sowie ISO 27001-konform.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {children}
     </>

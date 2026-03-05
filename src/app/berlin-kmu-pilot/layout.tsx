@@ -3,8 +3,8 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Pentest Berlin KMU Pilotprogramm 2026 – Kostenloser Pentest | SODU Secure',
-  description: 'Kostenloser Pentest für Berliner KMUs. Externer Pentest, Active Directory Analyse und Phishing-Simulation im Wert von bis zu 15.000 € – kostenfrei für 2 ausgewählte Unternehmen. Jetzt bewerben.',
+  title: 'Kostenloser Pentest Berlin – KMU Pilotprogramm 2026 | Nur 2 Plätze frei',
+  description: 'Berliner KMU? Jetzt kostenlos bewerben und Pentest im Wert von 15.000 € sichern. Vollständiger Sicherheitscheck: Externer Pentest + Active Directory + Phishing-Simulation. Nur 2 Plätze verfügbar.',
   keywords: [
     'Pentest Berlin',
     'Pentest KMU',
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     'Cybersecurity KMU Berlin',
   ],
   openGraph: {
-    title: 'Berlin KMU Pilotprogramm 2026 – Kostenloser Pentest – Nur 2 Plätze frei',
-    description: 'Vollständiger Pentest, Active Directory Analyse & Phishing-Simulation für Berliner KMUs. Wert bis 15.000 € – kostenfrei für 2 ausgewählte Unternehmen.',
+    title: 'Kostenloser Pentest Berlin KMU 2026 – Nur 2 Plätze frei | SODU Secure',
+    description: 'Berliner KMU? Kostenloser Pentest im Wert von bis zu 15.000 €. Vollständiger Sicherheitscheck für 2 ausgewählte Unternehmen. Jetzt bewerben!',
     url: `${baseUrl}/berlin-kmu-pilot`,
     type: 'website',
     siteName: 'SODU Secure',

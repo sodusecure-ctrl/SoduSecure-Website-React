@@ -92,11 +92,51 @@ export default function Home() {
     },
   };
 
+  // FAQ Schema
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Was kostet ein Pentest?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ein Penetrationstest bei SODU Secure beginnt ab 1.200 € für API-Tests bzw. ab 2.500 € für Web-Applikationen und Netzwerke. Den genauen Preis können Sie sofort online mit unserem Pentest-Konfigurator berechnen.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Wie lange dauert ein Penetrationstest?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ein Penetrationstest dauert typischerweise 2–5 Werktage, abhängig vom Umfang. SODU Secure liefert den fertigen Bericht innerhalb von 48 Stunden nach Abschluss der Tests.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Ist ein Pentest Pflicht?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Unter NIS2, ISO 27001 und DORA ist ein regelmäßiger Penetrationstest für viele Unternehmen de facto Pflicht. SODU Secure erstellt compliance-konforme Berichte, die Sie bei Prüfungen vorlegen können.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Gibt es einen kostenlosen Pentest?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Für Berliner KMUs bietet SODU Secure im Rahmen des KMU Pilotprogramms 2026 einen kostenlosen Pentest im Wert von bis zu 15.000 € an. Nur 2 Plätze verfügbar – jetzt unter sodusecure.com/berlin-kmu-pilot bewerben.',
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"

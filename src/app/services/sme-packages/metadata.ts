@@ -3,9 +3,9 @@ import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'KMU Sicherheitspaket | Pentest KMU ab 8.000 € | Pentest Berlin | SODU Secure',
+  title: 'KMU Pentest-Paket – Komplett ab 8.000 € | Jetzt online konfigurieren',
   description:
-    'KMU Pentest ab 8.000 €: Externer Pentest, Active Directory & Phishing-Simulation. Zertifizierte Pentester, transparenter Festpreis. Jetzt KMU Pentest konfigurieren & Preis berechnen.',
+    'Alles-inklusive Pentest für KMUs: Externer Pentest + Phishing + Active Directory. Kein Tageshonorar – transparenter Festpreis ab 8.000 €. Jetzt online konfigurieren & Preis sofort berechnen.',
   keywords: [
     // Primary
     'Pentest KMU',
@@ -41,9 +41,9 @@ export const metadata: Metadata = {
     'SODU Secure',
   ],
   openGraph: {
-    title: 'KMU Sicherheitspaket – Pentest & Phishing ab 8.000 € | SODU Secure',
+    title: 'KMU Pentest-Paket – Komplett ab 8.000 € | Jetzt konfigurieren',
     description:
-      'KMU Pentest ab 8.000 €: Externer Pentest, Active Directory & Phishing-Simulation. Zertifizierte Pentester, transparenter Festpreis. Jetzt KMU Pentest konfigurieren.',
+      'Alles-inklusive KMU Pentest: Externer Pentest + Phishing + Active Directory. Kein Tageshonorar. Jetzt online konfigurieren – Preis sofort berechnen.',
     url: `${baseUrl}/services/sme-packages`,
     type: 'website',
     siteName: 'SODU Secure',
