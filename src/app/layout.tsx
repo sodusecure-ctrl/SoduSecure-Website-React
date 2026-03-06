@@ -5,6 +5,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
+import { GOOGLE_ADS_ID } from "@/lib/gtag";
 import "./globals.css";
 import LayoutContent from './LayoutContent';
 
@@ -165,6 +167,19 @@ export default async function RootLayout({
           <LayoutContent>{children}</LayoutContent>
           <Toaster />
         </NextIntlClientProvider>
+        {/* Google Ads – Basis-Tag */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_ADS_ID}');
+          `}
+        </Script>
         <Analytics />
         <SpeedInsights />
       </body>

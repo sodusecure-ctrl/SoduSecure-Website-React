@@ -11,6 +11,7 @@ import toast from 'react-hot-toast';
 import { useTranslations } from 'next-intl';
 import { getBlogById } from '@/lib/blogData';
 import DynamicMetaTags from '@/components/common/DynamicMetaTags';
+import { trackConversion } from '@/lib/gtag';
 
 export default function BlogArticleDetail() {
   const [showMobileTOC, setShowMobileTOC] = useState(false);
@@ -109,6 +110,7 @@ export default function BlogArticleDetail() {
       }
 
       toast.success(t('toasts.emailSent'));
+      trackConversion();
       setCtaEmail('');
     } catch {
       toast.error(t('toasts.emailFailed'));

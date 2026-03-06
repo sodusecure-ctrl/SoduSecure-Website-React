@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { trackConversion } from "@/lib/gtag";
 import {
   Shield,
   Phone,
@@ -171,6 +172,7 @@ function QuickForm() {
       });
       if (!res.ok) throw new Error();
       setStep("success");
+      trackConversion();
     } catch {
       setError("Fehler beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.");
     } finally {
@@ -287,6 +289,7 @@ function FullApplicationForm() {
       });
       if (!res.ok) throw new Error();
       setStep("success");
+      trackConversion();
     } catch {
       setError("Fehler beim Senden. Bitte rufen Sie uns direkt an: " + PHONE);
     } finally {

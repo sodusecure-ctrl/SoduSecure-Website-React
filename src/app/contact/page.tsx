@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { AlertCircle, Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { FormEvent, useState } from 'react';
+import { trackConversion } from '@/lib/gtag';
 
 // Define types for form data
 interface FormData {
@@ -135,6 +136,7 @@ export default function ContactSection() {
         privacyAccepted: false
       });
       setSubmitSuccess(true);
+      trackConversion();
 
       // Hide success message after 5 seconds
       setTimeout(() => setSubmitSuccess(false), 5000);
