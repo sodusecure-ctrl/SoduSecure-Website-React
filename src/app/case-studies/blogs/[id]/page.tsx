@@ -111,6 +111,7 @@ export default function BlogArticleDetail() {
 
       toast.success(t('toasts.emailSent'));
       trackConversion();
+      router.push('/ifudhuhdksjhfoiadfh');
       setCtaEmail('');
     } catch {
       toast.error(t('toasts.emailFailed'));

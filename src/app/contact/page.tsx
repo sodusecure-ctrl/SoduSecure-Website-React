@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { AlertCircle, Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { FormEvent, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { trackConversion } from '@/lib/gtag';
 
 // Define types for form data
@@ -30,6 +31,7 @@ interface FormErrors {
 
 export default function ContactSection() {
   const t = useTranslations('contact');
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     fullName: '',
     company: '',
@@ -135,11 +137,8 @@ export default function ContactSection() {
         message: '',
         privacyAccepted: false
       });
-      setSubmitSuccess(true);
       trackConversion();
-
-      // Hide success message after 5 seconds
-      setTimeout(() => setSubmitSuccess(false), 5000);
+      router.push('/ifudhuhdksjhfoiadfh');
 
     } catch (error) {
       console.error('Form submission error:', error);

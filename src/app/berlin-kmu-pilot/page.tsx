@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { trackConversion } from "@/lib/gtag";
 import {
   Shield,
@@ -158,6 +159,7 @@ function QuickForm() {
   const [step, setStep] = useState<"form" | "success">("form");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -173,6 +175,7 @@ function QuickForm() {
       if (!res.ok) throw new Error();
       setStep("success");
       trackConversion();
+      router.push('/ifudhuhdksjhfoiadfh');
     } catch {
       setError("Fehler beim Senden. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an.");
     } finally {
@@ -272,6 +275,7 @@ function FullApplicationForm() {
   const [step, setStep] = useState<"form" | "success">("form");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -290,6 +294,7 @@ function FullApplicationForm() {
       if (!res.ok) throw new Error();
       setStep("success");
       trackConversion();
+      router.push('/ifudhuhdksjhfoiadfh');
     } catch {
       setError("Fehler beim Senden. Bitte rufen Sie uns direkt an: " + PHONE);
     } finally {
