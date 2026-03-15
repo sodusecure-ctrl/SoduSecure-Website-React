@@ -27,6 +27,21 @@ import {
   Star,
   Info,
 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Penetration Testing – Professionelle Penetrationstests | SODU Secure",
+  description: "Penetration Testing Services: Web-App, API, Netzwerk, Cloud & Active Directory. OSCP-zertifiziert, manuell, DSGVO-konform. Penetrationstest ab 1.200 €.",
+  keywords: [
+    "penetration testing",
+    "penetrationstest",
+    "penetration testing service",
+    "penetration testing anbieter",
+    "penetration testing kosten",
+    "penetration testing berlin",
+    "penetration testing deutschland"
+  ],
+};
 
 const PHONE = "+49 179 239 6294";
 const PHONE_HREF = "tel:+4917923962949";
@@ -185,7 +200,7 @@ export default function PenetrationTestingPage() {
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
             SODU Secure führt professionelle Penetrationstests für Web-Apps, Netzwerke, APIs,
             Active Directory und Cloud-Infrastrukturen durch. Zertifizierte Pentester –
-            Festpreise ab 2.500 € – Angebot in 24 Stunden.
+            Festpreise ab 2.500 € – Angebot in 24 Stunden. Erfahren Sie mehr über Penetration Testing und Pentest Services.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">

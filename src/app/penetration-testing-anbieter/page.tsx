@@ -24,6 +24,21 @@ import {
   BookOpen,
   ExternalLink,
 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Pentest Anbieter - Professionelle Penetration Testing Dienstleister | SODU Secure",
+  description: "Finden Sie den richtigen Pentest-Anbieter. OSCP-zertifiziert, DSGVO-konform, Festpreis-Modelle. Warum SODU Secure der beste Pentest Anbieter für Ihr Unternehmen ist.",
+  keywords: [
+    "pentest anbieter",
+    "penetration testing anbieter",
+    "pentest dienstleister",
+    "pentest service",
+    "pentest firma",
+    "cybersecurity anbieter",
+    "pentest berlin anbieter"
+  ],
+};
 
 const PHONE = "+49 179 239 6294";
 const PHONE_HREF = "tel:+4917923962949";
@@ -120,19 +135,19 @@ export default function PenetrationTestingAnbieterPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-white">Penetration Testing Anbieter –</span>
+            <span className="text-white">Pentest Anbieter –</span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Zertifiziert. Transparent.
+              Penetration Testing Dienstleister.
             </span>
             <br />
-            <span className="text-white">Aus Berlin.</span>
+            <span className="text-white">Zertifiziert. Transparent. Aus Berlin.</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-            SODU Secure ist ein zertifizierter Penetration Testing Anbieter mit Sitz in Berlin.
+            SODU Secure ist ein zertifizierter Pentest Anbieter mit Sitz in Berlin.
             OSCP- und CEH-zertifizierte Pentester. Festpreise ab 2.500 €. Manuelles Testing –
-            keine Scan-Reports. Angebot in 24 Stunden.
+            keine Scan-Reports. Angebot in 24 Stunden. Erfahren Sie mehr über Pentest Dienstleister und Penetration Testing Services.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -140,7 +155,7 @@ export default function PenetrationTestingAnbieterPage() {
               className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-red-900/40 hover:scale-105">
               <Calculator className="w-5 h-5" />Pentest Angebot einholen
             </Link>
-            <Link href="/pentest-certification"
+            <Link href="/request-pentest"
               className="inline-flex items-center gap-2 border border-blue-500/30 hover:border-blue-500/60 text-blue-400 hover:text-blue-300 font-semibold px-8 py-4 rounded-xl transition-all duration-200">
               <Award className="w-4 h-4" />Unsere Zertifizierungen
             </Link>
