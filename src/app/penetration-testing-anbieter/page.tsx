@@ -24,21 +24,6 @@ import {
   BookOpen,
   ExternalLink,
 } from "lucide-react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Pentest Anbieter - Professionelle Penetration Testing Dienstleister | SODU Secure",
-  description: "Finden Sie den richtigen Pentest-Anbieter. OSCP-zertifiziert, DSGVO-konform, Festpreis-Modelle. Warum SODU Secure der beste Pentest Anbieter für Ihr Unternehmen ist.",
-  keywords: [
-    "pentest anbieter",
-    "penetration testing anbieter",
-    "pentest dienstleister",
-    "pentest service",
-    "pentest firma",
-    "cybersecurity anbieter",
-    "pentest berlin anbieter"
-  ],
-};
 
 const PHONE = "+49 179 239 6294";
 const PHONE_HREF = "tel:+4917923962949";
