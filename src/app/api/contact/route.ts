@@ -1,8 +1,6 @@
 ﻿import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
   try {
     const { fullName, company, email, phone, message } = await request.json();
@@ -25,6 +23,7 @@ export async function POST(request: NextRequest) {
     }
 
     const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Send email to admin
     console.log('Sending admin email to:', adminEmail);
