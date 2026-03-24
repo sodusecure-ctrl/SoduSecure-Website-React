@@ -56,9 +56,9 @@ const PHONE = "+49 179 239 6294";
 const PHONE_HREF = "tel:+4917923962949";
 const EMAIL = "sodusecure@gmail.com";
 const EMAIL_HREF = "mailto:sodusecure@gmail.com";
-const TOTAL_SPOTS = 7;
-const TAKEN_SPOTS = 5;
-const DEADLINE = "31. März 2026";
+const TOTAL_SPOTS = 0;
+const TAKEN_SPOTS = 7;
+const DEADLINE = "Ausgelaufen";
 
 const SERVICES = [
   {
@@ -104,19 +104,19 @@ const REQUIREMENTS = [
 
 const FAQS = [
   {
-    q: "Ist das wirklich vollständig kostenfrei?",
-    a: "Ja. Es entstehen für Sie keine Kosten. Im Gegenzug bitten wir Sie um ehrliches Feedback, ein Testimonial bei Zufriedenheit sowie die Erlaubnis, Ihr Logo als Referenz zu nutzen.",
+    q: "Ist das Pilotprogramm noch verfügbar?",
+    a: "Das kostenlose Pilotprogramm ist ausgelaufen. Wir haben erfolgreich 7 KMUs unterstützt und freuen uns über deren Zufriedenheit. Jetzt bieten wir bezahlte Pentest-Dienstleistungen für KMUs an – kontaktieren Sie uns für ein individuelles Angebot.",
   },
   {
     q: "Gibt es versteckte Verpflichtungen oder Folgeverkäufe?",
-    a: "Nein. Es gibt keine Verpflichtung, weitere Leistungen zu kaufen. Wir präsentieren Ihnen nach dem Test unsere Ergebnisse – was Sie damit machen, entscheiden Sie.",
+    a: "Nein. Bei unseren bezahlten Dienstleistungen gibt es keine versteckten Kosten. Wir präsentieren Ihnen nach dem Test unsere Ergebnisse – was Sie damit machen, entscheiden Sie.",
   },
   {
     q: "Wird der Betrieb durch den Test beeinträchtigt?",
     a: "Alle Tests werden vorab mit Ihnen abgestimmt. Zeitpunkt, Umfang und Vorgehensweise werden gemeinsam festgelegt. Produktionssysteme werden niemals ohne Freigabe getestet.",
   },
   {
-    q: "Wie lange dauert das Pilotprojekt?",
+    q: "Wie lange dauert das Projekt?",
     a: "Von Kick-off bis Abschlusspräsentation rechnen Sie mit 2–4 Wochen, abhängig von der Größe Ihrer Infrastruktur.",
   },
   {
@@ -134,21 +134,18 @@ const FAQS = [
 ───────────────────────────────────────────── */
 
 function SpotsCounter() {
-  const remaining = TOTAL_SPOTS - TAKEN_SPOTS;
   return (
     <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
       <div className="flex gap-1">
-        {Array.from({ length: TOTAL_SPOTS }).map((_, i) => (
+        {Array.from({ length: 7 }).map((_, i) => (
           <div
             key={i}
-            className={`w-4 h-4 rounded-sm ${
-              i < TAKEN_SPOTS ? "bg-red-500" : "bg-white/20 border border-white/30"
-            }`}
+            className="w-4 h-4 rounded-sm bg-green-500"
           />
         ))}
       </div>
       <span className="text-sm text-white/80">
-        <span className="text-red-400 font-bold">{remaining} von {TOTAL_SPOTS}</span> Plätzen frei
+        <span className="text-green-400 font-bold">7 von 7</span> Plätzen vergeben
       </span>
     </div>
   );
@@ -518,13 +515,12 @@ export default function BerlinKMUPilotPage() {
         </div>
       </div>
 
-      {/* ── URGENCY BANNER ──────────────────────── */}
       <div className="bg-red-600 text-white py-2.5 px-4">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2 text-sm">
             <Clock className="w-4 h-4 flex-shrink-0" />
             <span>
-              <strong>Bewerbungsschluss: {DEADLINE}</strong> · Nur limitierte Plätze verfügbar
+              <strong>Pilotprogramm ausgelaufen</strong> · 7 KMUs erfolgreich unterstützt
             </span>
           </div>
           <SpotsCounter />
@@ -546,12 +542,10 @@ export default function BerlinKMUPilotPage() {
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
           {/* Badge */}
-          <div className={`flex justify-center lg:justify-start mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
             <span className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">
               <Shield className="w-3.5 h-3.5" />
-              Pentest Berlin – KMU Cybersecurity Pilotprogramm 2026
+              Pentest Berlin – KMU Cybersecurity (Pilotprogramm ausgelaufen)
             </span>
-          </div>
 
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left */}
@@ -563,23 +557,23 @@ export default function BerlinKMUPilotPage() {
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 SODU Secure führt professionelle Penetrationstests in Berlin durch – extern, intern und organisatorisch.
                 Vollständiger Pentest, Active Directory Analyse und Phishing-Simulation für{" "}
-                <span className="text-white font-semibold">ausgewählte Berliner KMUs – 100 % kostenfrei.</span>
+                <span className="text-white font-semibold">KMUs – jetzt als bezahlte Dienstleistung.</span>
               </p>
 
               {/* Value badges */}
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 {[
                   "Regulärer Wert: 8.000–15.000 €",
-                  "Für Pilotteilnehmer: 0 €",
-                  "Nur 7 Plätze",
+                  "Pilotprogramm: Ausgelaufen",
+                  "7 zufriedene KMU-Kunden",
                 ].map((badge, i) => (
                   <span
                     key={i}
                     className={`text-xs font-medium px-3 py-1.5 rounded-full ${
                       i === 1
-                        ? "bg-green-500/20 border border-green-500/30 text-green-400"
+                        ? "bg-gray-500/20 border border-gray-500/30 text-gray-400"
                         : i === 2
-                        ? "bg-red-500/20 border border-red-500/30 text-red-400"
+                        ? "bg-green-500/20 border border-green-500/30 text-green-400"
                         : "bg-white/10 border border-white/20 text-gray-300"
                     }`}
                   >
@@ -595,7 +589,7 @@ export default function BerlinKMUPilotPage() {
                   className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-red-600/25 flex items-center justify-center gap-2"
                 >
                   <Lock className="w-5 h-5" />
-                  Jetzt bewerben
+                  Jetzt Pentest anfragen
                 </button>
                 <a
                   href={PHONE_HREF}
@@ -681,7 +675,6 @@ export default function BerlinKMUPilotPage() {
                 welche kritischen Schwachstellen wir regelmäßig bei Berliner KMUs entdecken
                 und was Sie konkret dagegen tun können. Sofort umsetzbare Erkenntnisse aus echten Pentests.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <a
                   href="/pdf/5_Sicherheitsluecken_KMU.pdf"
                   download="5_Sicherheitsluecken_KMU.pdf"
@@ -699,7 +692,6 @@ export default function BerlinKMUPilotPage() {
                   <FileText className="w-4 h-4" />
                   Im Browser öffnen
                 </a>
-              </div>
               <p className="text-white/50 text-xs mt-4">Kein Formular · Kein Login · Direkt herunterladen</p>
             </div>
           </div>
@@ -930,10 +922,10 @@ export default function BerlinKMUPilotPage() {
 
           <div className="grid sm:grid-cols-4 gap-6 text-center">
             {[
-              { val: "3", label: "Monate als GmbH" },
+              { val: "7", label: "Zufriedene KMU-Kunden" },
               { val: "3", label: "Zertifizierte Experten" },
               { val: "100%", label: "Berliner Fokus" },
-              { val: "0€", label: "Für Pilotteilnehmer" },
+              { val: "0€", label: "Pilotprogramm war gratis" },
             ].map((s, i) => (
               <div key={i}>
                 <div className="text-3xl font-black text-red-500 mb-1">{s.val}</div>

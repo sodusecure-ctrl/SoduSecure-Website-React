@@ -142,39 +142,34 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      {/* Pilot Program Announcement Banner */}
-      <Link href="/berlin-kmu-pilot" className="block w-full bg-gray-900 hover:bg-gray-800 transition-colors duration-200 group">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-center gap-3 flex-wrap">
-          <span className="inline-flex items-center gap-1.5 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full flex-shrink-0">
-            🔐 Neu
-          </span>
-          <span className="text-white text-sm font-medium text-center">
-            Pentest Berlin – KMU Cybersecurity Pilotprogramm 2026 &ndash; Nur noch 2 von 7 Plätzen frei
-          </span>
-          <span className="text-red-400 text-sm font-semibold group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0">
-            Jetzt bewerben →
-          </span>
-        </div>
-      </Link>
       <Hero />
       <SecurityServices />
 
-      {/* ── Pentest Berlin Geo-Banner ── */}
-      <Link
-        href="/pentest-berlin"
-        className="block w-full bg-gray-900 hover:bg-gray-800 transition-colors duration-200 group border-y border-gray-800"
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse flex-shrink-0" />
-            <span className="text-white text-sm sm:text-base font-medium">
-              🏙️ <span className="font-bold">Berliner Unternehmen?</span>
-              {' '}Erfahren Sie, warum Pentests für KMUs, Startups und den Mittelstand unverzichtbar sind.
-            </span>
+      {/* ── PHISHING CAMPAIGN PROMOTION ── */}
+      <Link href="/phishing" className="block w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 transition-all duration-300 group overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-start gap-4 flex-1">
+              <div className="text-4xl sm:text-5xl">🚨</div>
+              <div>
+                <div className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2">
+                  ⚡ Jetzt aktuell
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                  Gratis Phishing-Kampagne
+                </h2>
+                <p className="text-white/90 text-sm sm:text-base leading-relaxed max-w-2xl">
+                  Testen Sie, wie anfällig Ihre Mitarbeiter für Phishing-Angriffe sind. Professionelle Awareness-Kampagne mit vollständigem Bericht – kostenlos verfügbar für begrenzte Zeit.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 flex-shrink-0 group-hover:translate-x-2 transition-transform duration-300">
+              <span className="hidden sm:inline text-white font-semibold">Jetzt starten</span>
+              <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                <span className="text-white font-bold text-lg">→</span>
+              </div>
+            </div>
           </div>
-          <span className="inline-flex items-center gap-1.5 text-red-400 font-semibold text-sm group-hover:translate-x-1 transition-transform duration-200 flex-shrink-0 whitespace-nowrap">
-            Pentest Berlin entdecken →
-          </span>
         </div>
       </Link>
 

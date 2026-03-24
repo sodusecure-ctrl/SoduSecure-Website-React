@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/pentest-berlin/intern-extern', lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.95 },
     { path: '/pentest-berlin/iso-27001',   lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.95 },
     { path: '/berlin-kmu-pilot',   lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.99 },
+    { path: '/phishing', lastModified: '2026-03-24', changeFreq: 'weekly', priority: 0.99 },
     { path: '/services/sme-packages', lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.98 },
     { path: '/request-pentest',    lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.92  },
     { path: '/about',              lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.82  },
