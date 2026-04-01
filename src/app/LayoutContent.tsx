@@ -9,12 +9,13 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const isAuthRoute = pathname?.startsWith('/auth');
   const isDashboardRoute = pathname?.startsWith('/my-dashboard');
   const isLandingPage = pathname?.startsWith('/berlin-kmu-pilot');
+  const isAdsPage = pathname?.startsWith('/request-pentest-ads');
 
   return (
     <>
-      {!isAuthRoute && !isDashboardRoute && !isLandingPage && <Header />}
+      {!isAuthRoute && !isDashboardRoute && !isLandingPage && !isAdsPage && <Header />}
       {children}
-      {!isAuthRoute && !isDashboardRoute && !isLandingPage && <Footer />}
+      {!isAuthRoute && !isDashboardRoute && !isLandingPage && !isAdsPage && <Footer />}
     </>
   );
 }
