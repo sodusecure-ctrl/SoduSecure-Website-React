@@ -10,12 +10,15 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const isDashboardRoute = pathname?.startsWith('/my-dashboard');
   const isLandingPage = pathname?.startsWith('/berlin-kmu-pilot');
   const isAdsPage = pathname?.startsWith('/request-pentest-ads');
+  const isVerifyPage = pathname?.startsWith('/verify');
+
+  const hideChrome = isAuthRoute || isDashboardRoute || isLandingPage || isAdsPage || isVerifyPage;
 
   return (
     <>
-      {!isAuthRoute && !isDashboardRoute && !isLandingPage && !isAdsPage && <Header />}
+      {!hideChrome && <Header />}
       {children}
-      {!isAuthRoute && !isDashboardRoute && !isLandingPage && !isAdsPage && <Footer />}
+      {!hideChrome && <Footer />}
     </>
   );
 }
