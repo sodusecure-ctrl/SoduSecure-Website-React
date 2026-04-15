@@ -740,11 +740,11 @@ export default function SMESecurityPackagesPage() {
               Paket anfragen
             </button>
             <a
-              href="tel:+4917923962949"
+              href="tel:+491777750985"
               className="border-2 border-gray-200 text-gray-700 hover:border-gray-900 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
-              +49 179 239 6294
+              (+49) 01777750985
             </a>
           </div>
         </div>

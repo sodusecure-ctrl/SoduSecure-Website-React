@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -74,11 +74,11 @@ export default function ThankYouPage() {
             <span className="text-base sm:text-xl font-extrabold">0177 7750985</span>
           </a>
           <a
-            href="mailto:sodusecure@gmail.com"
+            href="mailto:info@sodusecure.com"
             className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-xl px-4 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm transition"
           >
             <Mail className="w-4 h-4 text-red-400" />
-            sodusecure@gmail.com
+            info@sodusecure.com
           </a>
         </div>
 

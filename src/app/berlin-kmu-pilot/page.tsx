@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -52,10 +52,10 @@ interface FullFormData {
 /* ─────────────────────────────────────────────
    Constants
 ───────────────────────────────────────────── */
-const PHONE = "+49 179 239 6294";
-const PHONE_HREF = "tel:+4917923962949";
-const EMAIL = "sodusecure@gmail.com";
-const EMAIL_HREF = "mailto:sodusecure@gmail.com";
+const PHONE = "(+49) 01777750985";
+const PHONE_HREF = "tel:+491777750985";
+const EMAIL = "info@sodusecure.com";
+const EMAIL_HREF = "mailto:info@sodusecure.com";
 const TOTAL_SPOTS = 0;
 const TAKEN_SPOTS = 7;
 const DEADLINE = "Ausgelaufen";

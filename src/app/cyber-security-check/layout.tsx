@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 const baseUrl = 'https://www.sodusecure.com';
 export const metadata: Metadata = {
   title: 'Cyber Security Check – IT-Sicherheitscheck für Unternehmen | SODU Secure',
@@ -10,6 +10,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const jsonLd = { '@context': 'https://schema.org', '@type': 'ProfessionalService', name: 'SODU Secure – Cyber Security Check', url: `${baseUrl}/cyber-security-check`, logo: `${baseUrl}/icons/logo.png`, address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' }, telephone: '+49-179-239-6294', email: 'sodusecure@gmail.com', priceRange: '€€', areaServed: ['Germany', 'Austria', 'Switzerland'] };
+  const jsonLd = { '@context': 'https://schema.org', '@type': 'ProfessionalService', name: 'SODU Secure – Cyber Security Check', url: `${baseUrl}/cyber-security-check`, logo: `${baseUrl}/icons/logo.png`, address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' }, telephone: '+49-177-7750985', email: 'info@sodusecure.com', priceRange: '€€', areaServed: ['Germany', 'Austria', 'Switzerland'] };
   return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />{children}</>);
 }

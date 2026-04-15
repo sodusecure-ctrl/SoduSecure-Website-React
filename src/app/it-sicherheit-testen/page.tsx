@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -24,10 +24,10 @@ import {
   RotateCcw,
 } from "lucide-react";
 
-const PHONE = "+49 179 239 6294";
-const PHONE_HREF = "tel:+4917923962949";
-const EMAIL = "sodusecure@gmail.com";
-const EMAIL_HREF = "mailto:sodusecure@gmail.com";
+const PHONE = "(+49) 01777750985";
+const PHONE_HREF = "tel:+491777750985";
+const EMAIL = "info@sodusecure.com";
+const EMAIL_HREF = "mailto:info@sodusecure.com";
 
 const TESTBEREICHE = [
   { icon: Globe, title: "Web-App Sicherheitstest", desc: "OWASP Top 10: SQLi, XSS, IDOR, CSRF, SSRF, Auth Bypasses, File Upload – manuell + Proof-of-Concept.", link: "/services/web-application-testing", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20" },

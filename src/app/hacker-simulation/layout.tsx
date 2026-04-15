@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Hacker-Simulation – Angriff sofort simulieren lassen | SODU Secure',
@@ -32,8 +32,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             name: 'SODU Secure – Hacker Simulation & Ethical Hacking',
             description: 'Realistische Hacker-Simulation (Ethical Hacking) für Unternehmen. OSCP-zertifizierte Experten simulieren echte Cyberangriffe. Festpreis ab 2.500 €.',
             url: 'https://www.sodusecure.com/hacker-simulation',
-            telephone: '+4917923962949',
-            email: 'sodusecure@gmail.com',
+            telephone: '+491777750985',
+            email: 'info@sodusecure.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
             areaServed: 'DE',
             priceRange: '€€',

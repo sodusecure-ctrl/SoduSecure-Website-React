@@ -1,4 +1,4 @@
-{
+﻿{
   "header": {
     "brand": "Sodu Secure",
     "services": "Services",
@@ -227,8 +227,8 @@
     "brand": "Sodu Secure",
     "tagline": "Professional penetration testing and security assessments for modern businesses.",
     "contact": {
-      "email": "sodusecure@gmail.com",
-      "phone": "+49 179 2396294",
+      "email": "info@sodusecure.com",
+      "phone": "(+49) 01777750985",
       "location": "Berlin, Germany",
       "needHelp": "Need immediate security assistance?",
       "emergency": "Emergency Contact"
@@ -761,7 +761,7 @@
       "emailAddress": "Email address",
       "emailPlaceholder": "you@example.com",
       "phoneNumber": "Phone number",
-      "phonePlaceholder": "+49 179 2396294",
+      "phonePlaceholder": "(+49) 01777750985",
       "companySize": "Company size",
       "additionalInfo": "Additional information",
       "additionalInfoPlaceholder": "Share any context, goals, or timelines...",
@@ -4329,7 +4329,7 @@
         },
         "phone": {
           "label": "Phone Number",
-          "placeholder": "+49 179 2396294"
+          "placeholder": "(+49) 01777750985"
         },
         "message": {
           "label": "Message",
@@ -4361,11 +4361,11 @@
       },
       "email": {
         "title": "Email",
-        "value": "sodusecure@gmail.com"
+        "value": "info@sodusecure.com"
       },
       "phone": {
         "title": "Phone",
-        "value": "+49 179 2396294"
+        "value": "(+49) 01777750985"
       },
       "hours": {
         "title": "Support Hours",
@@ -4377,15 +4377,15 @@
       "title": "Quick Contact",
       "email": {
         "title": "Email Us",
-        "value": "sodusecure@gmail.com"
+        "value": "info@sodusecure.com"
       },
       "call": {
         "title": "Call Us",
-        "value": "+49 179 2396294"
+        "value": "(+49) 01777750985"
       },
       "emergency": {
         "title": "Emergency Hotline",
-        "number": "+49 179 2396294",
+        "number": "(+49) 01777750985",
         "note": "Available 24/7 for urgent matters"
       },
       "chat": {
@@ -4480,7 +4480,7 @@
     "cta": {
       "title": "Interested?",
       "description": "Send your application to:",
-      "email": "careers@sodusecure.com"
+      "email": "info@sodusecure.com"
     },
     "applicationProcess": {
       "title": "Our Application Process",

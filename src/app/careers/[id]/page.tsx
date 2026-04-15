@@ -122,10 +122,10 @@ export default function JobDetailPage() {
               <h3 className="text-lg font-bold mb-2">Interessiert?</h3>
               <p className="text-sm mb-4 opacity-90">Sende deine Bewerbung an:</p>
               <a 
-                href="mailto:careers@sodusecure.com"
+                href="mailto:info@sodusecure.com"
                 className="block w-full bg-white text-red-600 hover:bg-gray-100 font-semibold py-6 text-base rounded-lg text-center transition-colors"
               >
-                careers@sodusecure.com
+                info@sodusecure.com
               </a>
             </div>
           </div>
@@ -140,10 +140,10 @@ export default function JobDetailPage() {
                   Sende deine Bewerbung an:
                 </p>
                 <a 
-                  href="mailto:careers@sodusecure.com"
+                  href="mailto:info@sodusecure.com"
                   className="block w-full bg-white text-red-600 hover:bg-gray-100 font-semibold py-4 sm:py-6 text-sm sm:text-base rounded-lg text-center transition-colors"
                 >
-                  careers@sodusecure.com
+                  info@sodusecure.com
                 </a>
               </div>
 
@@ -202,10 +202,10 @@ export default function JobDetailPage() {
                   Contact our recruitment team for more information.
                 </p>
                 <a
-                  href="mailto:careers@sodusecure.com"
+                  href="mailto:info@sodusecure.com"
                   className="text-red-600 hover:text-red-700 text-sm sm:text-base font-medium"
                 >
-                  careers@sodusecure.com
+                  info@sodusecure.com
                 </a>
               </div>
             </div>
@@ -222,7 +222,7 @@ export default function JobDetailPage() {
               <p className="text-gray-600 text-xs">Full-time • Berlin / Remote</p>
             </div>
             <a 
-              href="mailto:careers@sodusecure.com"
+              href="mailto:info@sodusecure.com"
               className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 text-sm rounded-lg transition-colors"
             >
               Bewerben

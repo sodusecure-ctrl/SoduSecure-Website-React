@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
 const baseUrl = 'https://www.sodusecure.com';
 
@@ -73,8 +73,8 @@ export default function BerlinKMUPilotLayout({ children }: { children: React.Rea
     },
     areaServed: ['Berlin', 'Brandenburg', 'Deutschland'],
     serviceType: ['Pentest Berlin', 'Pentest KMU', 'Penetrationstest', 'Phishing Simulation', 'Active Directory Analyse'],
-    telephone: '+49-179-239-6294',
-    email: 'sodusecure@gmail.com',
+    telephone: '+49-177-7750985',
+    email: 'info@sodusecure.com',
     priceRange: '0€ (Pilotprogramm)',
     sameAs: [
       `${baseUrl}`,

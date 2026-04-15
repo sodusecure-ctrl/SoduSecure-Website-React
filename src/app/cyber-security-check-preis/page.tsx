@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
 import { Shield, CheckCircle, ChevronDown, ChevronUp, Phone, Mail, Euro } from "lucide-react";
 
-const PHONE_HREF = "tel:+4917923962949";
-const EMAIL_HREF = "mailto:sodusecure@gmail.com";
+const PHONE_HREF = "tel:+491777750985";
+const EMAIL_HREF = "mailto:info@sodusecure.com";
 
 const PRICE_LIST = [
   { service: "Security Quick Check", priceFrom: "800 €", priceTo: "1.500 €", time: "1–2 Tage" },

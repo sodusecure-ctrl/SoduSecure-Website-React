@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -8,8 +8,8 @@ import {
   AlertTriangle, FileText, Users, Swords, Radio, Layers,
 } from "lucide-react";
 
-const PHONE_HREF = "tel:+4917923962949";
-const EMAIL_HREF = "mailto:sodusecure@gmail.com";
+const PHONE_HREF = "tel:+491777750985";
+const EMAIL_HREF = "mailto:info@sodusecure.com";
 
 const ATTACK_PHASES = [
   { icon: Eye, title: "Reconnaissance", desc: "OSINT, passive & aktive Aufklärung. Wir sammeln alle öffentlich verfügbaren Informationen über Ihre Organisation – genau wie ein echter Angreifer.", color: "text-blue-400 bg-blue-500/10 border-blue-500/20" },
@@ -244,10 +244,10 @@ export default function RedTeamAssessmentPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg font-semibold transition-colors text-lg">
-              <Phone className="w-5 h-5" />+49 179 239 6294
+              <Phone className="w-5 h-5" />(+49) 01777750985
             </a>
             <a href={EMAIL_HREF} className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-gray-700 text-white px-10 py-4 rounded-lg font-semibold transition-colors">
-              <Mail className="w-5 h-5" />sodusecure@gmail.com
+              <Mail className="w-5 h-5" />info@sodusecure.com
             </a>
           </div>
           <p className="text-gray-500 text-sm">

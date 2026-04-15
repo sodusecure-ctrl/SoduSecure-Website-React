@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'IT Sicherheitscheck – Sofort Preis berechnen | Ergebnis in 2–5 Tagen',
@@ -32,8 +32,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             name: 'SODU Secure – IT Sicherheitscheck',
             description: 'IT Sicherheitscheck für Unternehmen. Manuelles Pentesting durch OSCP-zertifizierte Experten. Festpreis ab 2.500 €.',
             url: 'https://www.sodusecure.com/it-sicherheitscheck',
-            telephone: '+4917923962949',
-            email: 'sodusecure@gmail.com',
+            telephone: '+491777750985',
+            email: 'info@sodusecure.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
             areaServed: 'DE',
             priceRange: '€€',

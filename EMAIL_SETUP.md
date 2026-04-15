@@ -82,7 +82,7 @@ EMAIL_PASS=dein-passwort
   "fullName": "Max Mustermann",
   "company": "Test GmbH",
   "email": "max@example.com",
-  "phone": "+49 123 456789",
+  "phone": "(+49) 01777750985",
   "message": "Ich interessiere mich für..."
 }
 ```
@@ -93,7 +93,7 @@ EMAIL_PASS=dein-passwort
   "fullName": "Max Mustermann",
   "companyName": "Test GmbH",
   "email": "max@example.com",
-  "phone": "+49 123 456789",
+  "phone": "(+49) 01777750985",
   "companySize": "Medium",
   "additionalInfo": "...",
   "selectedCategory": "0",

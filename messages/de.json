@@ -1,4 +1,4 @@
-{
+﻿{
   "header": {
     "brand": "Sodu Secure",
     "services": "Dienstleistungen",
@@ -227,8 +227,8 @@
     "brand": "Sodu Secure",
     "tagline": "Professionelle Penetrationstests und Sicherheitsbewertungen für moderne Unternehmen.",
     "contact": {
-      "email": "sodusecure@gmail.com",
-      "phone": "+49 179 2396294",
+      "email": "info@sodusecure.com",
+      "phone": "(+49) 01777750985",
       "location": "Berlin, Germany",
       "needHelp": "Brauchen Sie sofortige Sicherheitsunterstützung?",
       "emergency": "Notfallkontakt"
@@ -761,7 +761,7 @@
       "emailAddress": "E-Mail-Adresse",
       "emailPlaceholder": "sie@beispiel.de",
       "phoneNumber": "Telefonnummer",
-      "phonePlaceholder": "+49 179 2396294",
+      "phonePlaceholder": "(+49) 01777750985",
       "companySize": "Unternehmensgröße",
       "additionalInfo": "Weitere Informationen",
       "additionalInfoPlaceholder": "Teilen Sie Kontext, Ziele oder Zeitpläne...",
@@ -4329,7 +4329,7 @@
         },
         "phone": {
           "label": "Telefonnummer",
-          "placeholder": "+49 (30) 123-4567"
+          "placeholder": "(+49) 01777750985"
         },
         "message": {
           "label": "Nachricht",
@@ -4361,11 +4361,11 @@
       },
       "email": {
         "title": "E-Mail",
-        "value": "sodusecure@gmail.com"
+        "value": "info@sodusecure.com"
       },
       "phone": {
         "title": "Telefon",
-        "value": "+49 179 2396294"
+        "value": "(+49) 01777750985"
       },
       "hours": {
         "title": "Supportzeiten",
@@ -4377,15 +4377,15 @@
       "title": "Schnellkontakt",
       "email": {
         "title": "E-Mail an uns",
-        "value": "sodusecure@gmail.com"
+        "value": "info@sodusecure.com"
       },
       "call": {
         "title": "Rufen Sie uns an",
-        "value": "+49 179 2396294"
+        "value": "(+49) 01777750985"
       },
       "emergency": {
         "title": "Notfall-Hotline",
-        "number": "+49 179 2396294",
+        "number": "(+49) 01777750985",
         "note": "24/7 für dringende Angelegenheiten verfügbar"
       },
       "chat": {
@@ -4480,7 +4480,7 @@
     "cta": {
       "title": "Interessiert?",
       "description": "Sende deine Bewerbung an:",
-      "email": "sodusecure@gmail.com"
+      "email": "info@sodusecure.com"
     },
     "applicationProcess": {
       "title": "Unser Bewerbungsprozess",

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cybersecurity Audit Unternehmen – Manuell & Compliant | SODU Secure',
@@ -32,8 +32,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             name: 'SODU Secure – Cybersecurity Audit',
             description: 'Manueller Cybersecurity Audit für Unternehmen. NIS2-, ISO 27001- und DORA-konforme Berichte. Festpreis ab 2.500 €.',
             url: 'https://www.sodusecure.com/cybersecurity-audit',
-            telephone: '+4917923962949',
-            email: 'sodusecure@gmail.com',
+            telephone: '+491777750985',
+            email: 'info@sodusecure.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
             areaServed: 'DE',
             priceRange: '€€',

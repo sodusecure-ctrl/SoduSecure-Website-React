@@ -1,4 +1,4 @@
-import { Resend } from 'resend';
+﻿import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
@@ -103,8 +103,8 @@ export async function POST(request: NextRequest) {
                 </p>
               </div>
               <div style="background:#f8f9fa;padding:20px;border-radius:8px;margin:25px 0;text-align:center;">
-                <p style="color:#333;font-weight:600;margin:0 0 8px;font-size:15px;">📞 +49 179 239 6294</p>
-                <p style="color:#666;font-size:14px;margin:0;">sodusecure@gmail.com</p>
+                <p style="color:#333;font-weight:600;margin:0 0 8px;font-size:15px;">📞 (+49) 01777750985</p>
+                <p style="color:#666;font-size:14px;margin:0;">info@sodusecure.com</p>
               </div>
               <p style="color:#555;font-size:15px;margin:25px 0 0;line-height:1.6;">
                 Mit freundlichen Grüßen,<br/>

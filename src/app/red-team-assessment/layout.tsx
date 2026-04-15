@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
 const baseUrl = 'https://www.sodusecure.com';
 
@@ -53,8 +53,8 @@ export default function RedTeamAssessmentLayout({ children }: { children: React.
     address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
     areaServed: ['Germany', 'Austria', 'Switzerland', 'Europe'],
     serviceType: ['Red Team Assessment', 'Red Teaming', 'APT Simulation', 'TLPT'],
-    telephone: '+49-179-239-6294',
-    email: 'sodusecure@gmail.com',
+    telephone: '+49-177-7750985',
+    email: 'info@sodusecure.com',
     priceRange: '€€€',
   };
   return (

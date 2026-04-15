@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
 import { Shield, CheckCircle, ChevronDown, ChevronUp, Phone, Mail, Euro, Info } from "lucide-react";
 
-const PHONE_HREF = "tel:+4917923962949";
-const EMAIL_HREF = "mailto:sodusecure@gmail.com";
+const PHONE_HREF = "tel:+491777750985";
+const EMAIL_HREF = "mailto:info@sodusecure.com";
 
 const PRICE_TABLE = [
   { name: "Security Quick Check", price: "ab 800 €", duration: "1–2 Tage", scope: "Kleine Umgebungen", features: ["Automatisierter Scan", "Manuelle Validierung", "Kurzbericht", "Top-10 Findings"] },

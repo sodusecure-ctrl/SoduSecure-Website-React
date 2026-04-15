@@ -90,7 +90,7 @@ export default function Footer() {
 
             <div className="space-y-2 lg:space-y-3">
               <a
-                href="mailto:sodusecure@gmail.com"
+                href="mailto:info@sodusecure.com"
                 className="flex items-center gap-2 lg:gap-3 text-gray-400 hover:text-white transition-colors text-sm group"
               >
                 <Mail className="w-4 h-4 flex-shrink-0" />
@@ -98,7 +98,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="tel:+4917923962949"
+                href="tel:+491777750985"
                 className="flex items-center gap-2 lg:gap-3 text-gray-400 hover:text-white transition-colors text-sm"
               >
                 <Phone className="w-4 h-4 flex-shrink-0" />
@@ -253,7 +253,7 @@ export default function Footer() {
               {t('contact.needHelp')}
             </p>
             <a
-              href="tel:+4917923962949"
+              href="tel:+491777750985"
               className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-sm"
             >
               <Phone className="w-4 h-4 mr-2" />

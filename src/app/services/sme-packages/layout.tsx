@@ -1,4 +1,4 @@
-import { metadata as smeMetadata } from './metadata';
+﻿import { metadata as smeMetadata } from './metadata';
 export { smeMetadata as metadata };
 
 export default function SMEPackagesLayout({ children }: { children: React.ReactNode }) {
@@ -15,7 +15,7 @@ export default function SMEPackagesLayout({ children }: { children: React.ReactN
       logo: 'https://www.sodusecure.com/icons/logo.png',
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+49-179-239-6294',
+        telephone: '+49-177-7750985',
         contactType: 'sales',
         availableLanguage: ['German', 'English'],
         areaServed: 'DE',

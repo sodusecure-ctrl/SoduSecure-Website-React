@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
 const baseUrl = 'https://www.sodusecure.com';
 
@@ -59,8 +59,8 @@ export default function PenetrationTestingAnbieterLayout({ children }: { childre
     address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressRegion: 'Berlin', addressCountry: 'DE' },
     areaServed: ['Germany', 'Austria', 'Switzerland', 'Europe'],
     serviceType: ['Penetration Testing', 'Pentesting', 'Security Audit', 'Red Team Testing'],
-    telephone: '+49-179-239-6294',
-    email: 'sodusecure@gmail.com',
+    telephone: '+49-177-7750985',
+    email: 'info@sodusecure.com',
     priceRange: '€€',
     sameAs: ['https://www.sodusecure.com'],
   };

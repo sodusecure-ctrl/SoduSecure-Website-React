@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -7,8 +7,8 @@ import {
   Phone, Mail, Search, AlertTriangle, FileText, Target, Zap, Network, Globe, Lock,
 } from "lucide-react";
 
-const PHONE_HREF = "tel:+4917923962949";
-const EMAIL_HREF = "mailto:sodusecure@gmail.com";
+const PHONE_HREF = "tel:+491777750985";
+const EMAIL_HREF = "mailto:info@sodusecure.com";
 
 const CHECK_TYPES = [
   { icon: Globe, title: "Web & App Security Check", desc: "Überprüfung Ihrer Web-Anwendungen auf OWASP Top 10, Auth-Schwachstellen und Business-Logic-Fehler.", color: "text-red-400" },

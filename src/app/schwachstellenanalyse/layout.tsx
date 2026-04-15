@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Schwachstellenanalyse – Sofort alle Sicherheitslücken finden | SODU Secure',
@@ -32,8 +32,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             name: 'SODU Secure – Schwachstellenanalyse',
             description: 'Professionelle Schwachstellenanalyse (Vulnerability Assessment) für Unternehmen. CVSS 3.1 Scoring, Proof-of-Concepts, Festpreis ab 2.500 €.',
             url: 'https://www.sodusecure.com/schwachstellenanalyse',
-            telephone: '+4917923962949',
-            email: 'sodusecure@gmail.com',
+            telephone: '+491777750985',
+            email: 'info@sodusecure.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
             areaServed: 'DE',
             priceRange: '€€',

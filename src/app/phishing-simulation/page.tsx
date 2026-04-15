@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -8,8 +8,8 @@ import {
   FileText, Target, Zap, BookOpen, Eye, TrendingUp, Lock,
 } from "lucide-react";
 
-const PHONE_HREF = "tel:+4917923962949";
-const EMAIL_HREF = "mailto:sodusecure@gmail.com";
+const PHONE_HREF = "tel:+491777750985";
+const EMAIL_HREF = "mailto:info@sodusecure.com";
 
 const SIMULATION_TYPES = [
   {
@@ -295,10 +295,10 @@ export default function PhishingSimulationPage() {
           <p className="text-gray-400 text-lg mb-8">Kostenlose Erstberatung · Festpreisangebot in 24h · DSGVO-konform</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg font-semibold transition-colors text-lg">
-              <Phone className="w-5 h-5" />+49 179 239 6294
+              <Phone className="w-5 h-5" />(+49) 01777750985
             </a>
             <a href={EMAIL_HREF} className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-gray-700 text-white px-10 py-4 rounded-lg font-semibold transition-colors">
-              <Mail className="w-5 h-5" />sodusecure@gmail.com
+              <Mail className="w-5 h-5" />info@sodusecure.com
             </a>
           </div>
           <p className="text-gray-500 text-sm">

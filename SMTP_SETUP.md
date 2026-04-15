@@ -18,7 +18,7 @@ Gmail App-Passwörter benötigen 2-Faktor-Authentifizierung. Dein Account hat di
 
 ### Schritt 3: .env.local aktualisieren
 ```env
-NEXT_PUBLIC_ADMIN_EMAIL=sodusecure@gmail.com
+NEXT_PUBLIC_ADMIN_EMAIL=info@sodusecure.com
 EMAIL_HOST=mail.smtp2go.com
 EMAIL_PORT=2525
 EMAIL_USER=dein-smtp2go-username

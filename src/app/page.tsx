@@ -20,9 +20,9 @@ export default function Home() {
     description: 'Professioneller Pentest in Berlin und Deutschland. Penetrationstest, Active Directory Analyse, Phishing-Simulation und IT-Sicherheitsberatung für KMUs.',
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+49-179-2396294',
+      telephone: '+49-177-7750985',
       contactType: 'Customer Service',
-      email: 'sodusecure@gmail.com',
+      email: 'info@sodusecure.com',
       availableLanguage: ['English', 'German'],
     },
     address: {

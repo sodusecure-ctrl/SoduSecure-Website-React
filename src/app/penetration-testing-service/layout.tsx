@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
 const baseUrl = 'https://www.sodusecure.com';
 
@@ -100,8 +100,8 @@ export default function PenetrationTestingServiceLayout({
       'Phishing Simulation',
       'Red Team Engagement',
     ],
-    telephone: '+49-179-239-6294',
-    email: 'sodusecure@gmail.com',
+    telephone: '+49-177-7750985',
+    email: 'info@sodusecure.com',
     priceRange: '€€',
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -24,10 +24,10 @@ import {
   ClipboardList,
 } from "lucide-react";
 
-const PHONE = "+49 179 239 6294";
-const PHONE_HREF = "tel:+4917923962949";
-const EMAIL = "sodusecure@gmail.com";
-const EMAIL_HREF = "mailto:sodusecure@gmail.com";
+const PHONE = "(+49) 01777750985";
+const PHONE_HREF = "tel:+491777750985";
+const EMAIL = "info@sodusecure.com";
+const EMAIL_HREF = "mailto:info@sodusecure.com";
 
 const AUDIT_UMFANG = [
   { icon: Layers, title: "Technisches Sicherheitsaudit", desc: "Manueller Penetrationstest aller relevanten Systeme – Web, Netzwerk, Active Directory, Cloud, APIs.", badge: "Kernleistung", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20" },

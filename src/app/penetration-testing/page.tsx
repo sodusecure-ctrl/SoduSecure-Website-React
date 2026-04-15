@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -28,10 +28,10 @@ import {
   Info,
 } from "lucide-react";
 
-const PHONE = "+49 179 239 6294";
-const PHONE_HREF = "tel:+4917923962949";
-const EMAIL = "sodusecure@gmail.com";
-const EMAIL_HREF = "mailto:sodusecure@gmail.com";
+const PHONE = "(+49) 01777750985";
+const PHONE_HREF = "tel:+491777750985";
+const EMAIL = "info@sodusecure.com";
+const EMAIL_HREF = "mailto:info@sodusecure.com";
 
 const PENTEST_TYPES = [
   {
