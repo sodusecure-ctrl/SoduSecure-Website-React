@@ -43,6 +43,9 @@ export default function BlogArticleDetail() {
       15: 'pentestAblaufDetail',
       16: 'itSecurityCheckFirmaDetail',
       17: 'itSecurityAuditDetail',
+      18: 'bsiTr03161EinfachErklaertDetail',
+      19: 'tr03161ZertifizierungVorbereitungDetail',
+      20: 'mobileAppSecurityGesundheitswesenDetail',
     };
     return mapping[id] || 'blogDetail';
   };

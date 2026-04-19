@@ -4770,5 +4770,382 @@
       "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
       "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
     }
+  },
+  "tr03161Form": {
+    "title": "Anfrage senden",
+    "subtitle": "Füllen Sie das Formular aus – wir melden uns innerhalb von 1–2 Werktagen.",
+    "fields": {
+      "fullName": "Name",
+      "company": "Unternehmen",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer (optional)",
+      "applicationType": "Art der Anwendung",
+      "developmentStage": "Entwicklungsstand",
+      "message": "Was möchten Sie testen lassen / Was ist Ihr konkretes Anliegen?",
+      "privacyText": "Ich habe die Datenschutzerklärung gelesen und akzeptiere diese.",
+      "privacyLink": "Datenschutzerklärung"
+    },
+    "placeholders": {
+      "fullName": "Ihr vollständiger Name",
+      "company": "Ihr Unternehmen",
+      "email": "ihre@email.de",
+      "phone": "+49 ...",
+      "applicationType": "Bitte wählen...",
+      "developmentStage": "Bitte wählen...",
+      "message": "Beschreiben Sie kurz Ihre Anwendung und Ihr Anliegen..."
+    },
+    "applicationTypes": {
+      "mobileApp": "Mobile App (iOS/Android)",
+      "webApp": "Web-Anwendung",
+      "backendApi": "Backend/API",
+      "combination": "Kombination mehrerer Komponenten",
+      "unsure": "Weiß ich noch nicht"
+    },
+    "developmentStages": {
+      "inDevelopment": "In Entwicklung",
+      "finishedUnpublished": "Fertig entwickelt, noch nicht veröffentlicht",
+      "inDigaRegistry": "Bereits im DiGA-Verzeichnis / in Zulassung",
+      "other": "Sonstiges"
+    },
+    "errors": {
+      "fullName": "Bitte geben Sie Ihren Namen ein (mind. 2 Zeichen).",
+      "company": "Bitte geben Sie Ihr Unternehmen ein.",
+      "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "phone": "Bitte geben Sie eine gültige Telefonnummer ein.",
+      "privacy": "Bitte akzeptieren Sie die Datenschutzerklärung.",
+      "submitFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    },
+    "success": {
+      "title": "Vielen Dank für Ihre Anfrage!",
+      "message": "Wir haben Ihre Nachricht erhalten und melden uns innerhalb von 1–2 Werktagen bei Ihnen."
+    },
+    "submit": "Anfrage absenden",
+    "submitting": "Wird gesendet..."
+  },
+  "bsiTr03161": {
+    "pageTitle": "BSI TR-03161 Sicherheitsprüfung"
+  },
+  "bsiTr03161EinfachErklaertDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "BSI TR-03161",
+    "date": "19. Apr 2026",
+    "title": "BSI TR-03161 einfach erklärt: Was DiGA-Hersteller jetzt wissen müssen",
+    "description": "Die BSI TR-03161 ist seit 2025 Pflicht für DiGA-Hersteller. Erfahren Sie was die Richtlinie bedeutet, welche drei Teile sie umfasst und was passiert wenn Sie die Anforderungen nicht erfüllen.",
+    "author": "Kerim K.",
+    "readTime": "10 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Was ist die BSI TR-03161?",
+        "content": "Die Technische Richtlinie BSI TR-03161 wurde vom Bundesamt für Sicherheit in der Informationstechnik (BSI) entwickelt und definiert verbindliche Sicherheitsanforderungen für digitale Gesundheitsanwendungen (DiGA). Sie legt fest, welche technischen Sicherheitsmaßnahmen Hersteller umsetzen müssen, damit ihre Anwendung in das DiGA-Verzeichnis des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM) aufgenommen werden kann. Die Richtlinie gliedert sich in drei Teile: Teil 1 für Mobile Anwendungen, Teil 2 für Web-Anwendungen und Teil 3 für Hintergrundsysteme (Backends und APIs). Sie baut maßgeblich auf etablierten OWASP-Standards auf – insbesondere dem OWASP MASVS (Mobile Application Security Verification Standard) und dem OWASP ASVS (Application Security Verification Standard).",
+        "keyTakeaway": {
+          "title": "Kernaussage",
+          "content": "Die BSI TR-03161 ist die verbindliche Sicherheitsrichtlinie für DiGA und DiPA. Ohne Konformitätsnachweis keine Aufnahme ins DiGA-Verzeichnis und keine Erstattungsfähigkeit durch Krankenkassen."
+        },
+        "quote": "Die TR-03161 ist keine Empfehlung – sie ist die Eintrittskarte ins DiGA-Verzeichnis."
+      },
+      "commonAttackVectors": {
+        "title": "Die drei Teile der TR-03161",
+        "items": [
+          "Teil 1 – Mobile Anwendungen: Sicherheitsanforderungen für native und hybride Mobile Apps. Prüfaspekte umfassen Datenspeicherung, Kryptographie, Authentifizierung, Netzwerkkommunikation, Plattform-Interaktion und Code-Qualität – basierend auf OWASP MASVS und dem Mobile Security Testing Guide (MASTG).",
+          "Teil 2 – Web-Anwendungen: Anforderungen an browserbasierte Gesundheitsanwendungen. Fokus auf Authentifizierung, Session-Management, Input-Validierung, Content Security Policy und sichere Kommunikation – basierend auf OWASP ASVS.",
+          "Teil 3 – Hintergrundsysteme: Sicherheitsanforderungen an Backend-Systeme, APIs und Datenbanken. Prüfaspekte sind Autorisierung, Datenhaltung, Kryptographie, sichere Konfiguration und Logging.",
+          "Bedrohungsszenarien: Jeder Teil definiert spezifische Bedrohungsszenarien, die bei der Sicherheitsprüfung berücksichtigt werden müssen. Diese orientieren sich an realen Angriffsmustern im Gesundheitswesen.",
+          "Prüfaspekte: Die Richtlinie beschreibt konkrete Prüfaspekte, die ein Prüfer bei der Zertifizierung bewerten muss – von der sicheren Schlüsselspeicherung bis zur Resistenz gegen Reverse Engineering."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Warum ist das ab 2025 gesetzliche Pflicht?",
+        "content": "Die regulatorische Grundlage bildet die Digitale-Gesundheitsanwendungen-Verordnung (DiGAV) in Verbindung mit § 139e SGB V. Seit 2025 müssen DiGA-Hersteller die Konformität mit der BSI TR-03161 nachweisen, um in das DiGA-Verzeichnis aufgenommen zu werden. Ohne diese Aufnahme ist eine Erstattung durch die gesetzlichen Krankenkassen nicht möglich.",
+        "statistics": {
+          "title": "Was passiert ohne TR-03161-Konformität?",
+          "items": [
+            {"label": "Keine Aufnahme ins DiGA-Verzeichnis", "value": "Gesperrt"},
+            {"label": "Keine Erstattung durch Krankenkassen", "value": "Kein Umsatz"},
+            {"label": "Verzögerung der Markteinführung", "value": "Monate"},
+            {"label": "Nachbesserungskosten nach abgelehnter Prüfung", "value": "Hoch"}
+          ]
+        }
+      },
+      "protectionStrategies": {
+        "title": "Was bedeutet das konkret für Hersteller?",
+        "content": "Als DiGA-Hersteller müssen Sie sicherstellen, dass Ihre Anwendung die Prüfaspekte der TR-03161 erfüllt – und zwar für alle Komponenten: Mobile App, Web-Frontend und Backend. Die offizielle Zertifizierung erfolgt durch eine vom BSI anerkannte Prüfstelle. Eine vorbereitende Sicherheitsprüfung durch einen spezialisierten Anbieter wie Sodu Secure identifiziert Schwachstellen frühzeitig und spart Zeit und Kosten.",
+        "strategies": [
+          {"title": "Gap-Analyse durchführen", "description": "Lassen Sie frühzeitig prüfen, wo Ihre Anwendung die Anforderungen der TR-03161 bereits erfüllt und wo noch Handlungsbedarf besteht."},
+          {"title": "Security by Design", "description": "Integrieren Sie Sicherheitsanforderungen der TR-03161 bereits in die Entwicklungsphase – nicht erst kurz vor der Zertifizierung."},
+          {"title": "Vorbereitenden Pentest durchführen", "description": "Ein Penetrationstest nach den Prüfaspekten der TR-03161 deckt technische Schwachstellen auf, bevor die offizielle Prüfstelle sie findet."},
+          {"title": "Dokumentation vorbereiten", "description": "Die Zertifizierung erfordert umfangreiche Dokumentation. Bereiten Sie Sicherheitskonzepte, Risikoanalysen und Testberichte frühzeitig vor."}
+        ]
+      },
+      "conclusion": {
+        "title": "Fazit: Frühzeitig vorbereiten zahlt sich aus",
+        "content": "Die BSI TR-03161 ist keine bürokratische Hürde, sondern ein sinnvoller Sicherheitsstandard für Anwendungen, die mit sensiblen Gesundheitsdaten arbeiten. Wer sich frühzeitig vorbereitet, spart Kosten und Zeit bei der offiziellen Zertifizierung."
+      }
+    },
+    "cta": {
+      "title": "Bereit für die TR-03161-Vorbereitung?",
+      "description": "Lassen Sie Ihre Anwendung von unseren Experten prüfen.",
+      "button": "Kostenlose Erstberatung anfragen",
+      "emailPlaceholder": "Ihre E-Mail-Adresse"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "So bereiten Sie Ihre Gesundheitsanwendung auf die TR-03161-Zertifizierung vor",
+          "description": "Praxisorientierter Leitfaden: Schritte, Stolpersteine und warum ein vorbereitender Pentest sinnvoll ist.",
+          "category": "BSI TR-03161",
+          "readTime": "12 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "Mobile App Security im Gesundheitswesen: Die häufigsten Schwachstellen",
+          "description": "Technischer Überblick über typische Sicherheitsprobleme in Gesundheits-Apps nach TR-03161.",
+          "category": "BSI TR-03161",
+          "readTime": "11 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "Geschäftsführer & Offensive Security, SODU Secure GmbH",
+      "bio": "Informatikstudent TU Berlin, Gründer von SODU Secure. Spezialisiert auf Penetration Testing, BSI TR-03161 Sicherheitsprüfungen und IT-Sicherheit für Gesundheitsanwendungen."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "TR-03161 Beratung anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "tr03161ZertifizierungVorbereitungDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "BSI TR-03161",
+    "date": "19. Apr 2026",
+    "title": "So bereiten Sie Ihre Gesundheitsanwendung auf die TR-03161-Zertifizierung vor",
+    "description": "Praxisorientierter Leitfaden für DiGA-Hersteller: Welche Schritte sind nötig, welche Stolpersteine gibt es und warum ist ein vorbereitender Pentest sinnvoll?",
+    "author": "Kerim K.",
+    "readTime": "12 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Der Weg zur TR-03161-Zertifizierung",
+        "content": "Die Zertifizierung nach BSI TR-03161 ist für DiGA-Hersteller seit 2025 Pflicht. Doch der Weg dorthin muss nicht kompliziert sein, wenn Sie ihn strukturiert angehen. In diesem Artikel zeigen wir Ihnen die konkreten Schritte, typische Stolpersteine und warum eine vorbereitende Sicherheitsprüfung den Unterschied machen kann. Die Zertifizierung wird durch eine vom BSI anerkannte Prüfstelle durchgeführt. Doch bevor Sie dort anklopfen, sollten Sie sicherstellen, dass Ihre Anwendung die Prüfaspekte der TR-03161 tatsächlich erfüllt. Genau hier setzen wir an.",
+        "keyTakeaway": {
+          "title": "Wichtig zu wissen",
+          "content": "Eine gründliche Vorbereitung reduziert das Risiko, bei der offiziellen Zertifizierung durchzufallen – und spart damit Zeit, Geld und Nerven."
+        },
+        "quote": "Die beste Vorbereitung auf eine Prüfung ist, sie vorher schon einmal bestanden zu haben – unter realistischen Bedingungen."
+      },
+      "commonAttackVectors": {
+        "title": "Die Schritte zur Zertifizierung",
+        "items": [
+          "Schritt 1 – Anforderungen verstehen: Machen Sie sich mit den drei Teilen der TR-03161 vertraut. Identifizieren Sie, welche Teile für Ihre Anwendung relevant sind (Mobile, Web, Backend oder alle drei).",
+          "Schritt 2 – Interne Bestandsaufnahme: Prüfen Sie intern, welche Sicherheitsmaßnahmen bereits umgesetzt sind. Dokumentieren Sie den Ist-Zustand systematisch.",
+          "Schritt 3 – Gap-Analyse: Lassen Sie eine professionelle Gap-Analyse durchführen. Ein spezialisierter Dienstleister vergleicht Ihren Ist-Zustand mit den Anforderungen der TR-03161 und zeigt konkret, wo Handlungsbedarf besteht.",
+          "Schritt 4 – Schwachstellen beheben: Arbeiten Sie die identifizierten Lücken ab. Priorisieren Sie nach Kritikalität – kritische Findings zuerst.",
+          "Schritt 5 – Vorbereitender Pentest: Lassen Sie einen Penetrationstest nach den Prüfaspekten der TR-03161 durchführen. So erkennen Sie Schwachstellen, die in der Gap-Analyse nicht sichtbar waren.",
+          "Schritt 6 – Dokumentation vorbereiten: Die offizielle Prüfstelle benötigt umfangreiche Dokumentation: Sicherheitskonzept, Risikoanalyse, Testberichte, Architektur-Dokumentation.",
+          "Schritt 7 – Offizielle Zertifizierung: Beauftragen Sie eine vom BSI anerkannte Prüfstelle mit der offiziellen Zertifizierung. Mit guter Vorbereitung bestehen Sie beim ersten Anlauf."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Typische Stolpersteine",
+        "content": "Aus unserer Erfahrung mit Gesundheitsanwendungen wissen wir: Es gibt wiederkehrende Probleme, die Hersteller bei der TR-03161-Vorbereitung überraschen.",
+        "statistics": {
+          "title": "Häufige Probleme bei der Vorbereitung",
+          "items": [
+            {"label": "Unverschlüsselte lokale Datenspeicherung", "value": "Sehr häufig"},
+            {"label": "Fehlendes Certificate Pinning", "value": "Häufig"},
+            {"label": "Unzureichende API-Autorisierung", "value": "Häufig"},
+            {"label": "Fehlende oder veraltete Dokumentation", "value": "Fast immer"}
+          ]
+        }
+      },
+      "protectionStrategies": {
+        "title": "Warum ein vorbereitender Pentest sinnvoll ist",
+        "content": "Ein Penetrationstest vor der offiziellen Zertifizierung ist keine Pflicht – aber eine der sinnvollsten Investitionen, die Sie tätigen können. Er simuliert die Prüfsituation unter realistischen Bedingungen.",
+        "strategies": [
+          {"title": "Schwachstellen vor dem Audit finden", "description": "Ein Pentest deckt technische Schwachstellen auf, die bei einer Gap-Analyse auf Dokumentenbasis nicht sichtbar werden."},
+          {"title": "Kosten sparen", "description": "Ein durchgefallenes Zertifizierungsaudit kostet nicht nur die Wiederholungsgebühr, sondern auch wertvolle Zeit bis zur erneuten Prüfung."},
+          {"title": "Entwicklern konkrete Fixes liefern", "description": "Unser Prüfbericht enthält nicht nur Findings, sondern auch konkrete Handlungsempfehlungen und Code-Level-Fixes."},
+          {"title": "Vertrauen aufbauen", "description": "Gegenüber der Prüfstelle und dem BfArM demonstrieren Sie, dass Sie Sicherheit ernst nehmen und professionell vorbereitet sind."}
+        ]
+      },
+      "conclusion": {
+        "title": "Fazit: Strukturierte Vorbereitung ist der Schlüssel",
+        "content": "Die TR-03161-Zertifizierung ist machbar, wenn Sie den Prozess strukturiert angehen. Eine professionelle Gap-Analyse und ein vorbereitender Penetrationstest sind die effektivsten Maßnahmen, um beim offiziellen Audit zu bestehen."
+      }
+    },
+    "cta": {
+      "title": "Starten Sie Ihre TR-03161-Vorbereitung",
+      "description": "Kostenlose Erstberatung – wir zeigen Ihnen, wo Sie stehen.",
+      "button": "Erstberatung anfragen",
+      "emailPlaceholder": "Ihre E-Mail-Adresse"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "BSI TR-03161 einfach erklärt: Was DiGA-Hersteller jetzt wissen müssen",
+          "description": "Einführungsartikel zur BSI TR-03161 – die drei Teile, die Pflicht und was bei Nicht-Erfüllung passiert.",
+          "category": "BSI TR-03161",
+          "readTime": "10 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "Mobile App Security im Gesundheitswesen: Die häufigsten Schwachstellen",
+          "description": "Technischer Überblick über typische Sicherheitsprobleme in mobilen Gesundheitsanwendungen.",
+          "category": "BSI TR-03161",
+          "readTime": "11 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "Geschäftsführer & Offensive Security, SODU Secure GmbH",
+      "bio": "Informatikstudent TU Berlin, Gründer von SODU Secure. Spezialisiert auf Penetration Testing, BSI TR-03161 Sicherheitsprüfungen und IT-Sicherheit für Gesundheitsanwendungen."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "TR-03161 Beratung anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "mobileAppSecurityGesundheitswesenDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "BSI TR-03161",
+    "date": "19. Apr 2026",
+    "title": "Mobile App Security im Gesundheitswesen: Die häufigsten Schwachstellen nach BSI TR-03161",
+    "description": "Technischer Überblick über die häufigsten Sicherheitsprobleme in mobilen Gesundheitsanwendungen – und wie eine Prüfung nach BSI TR-03161 hilft, diese zu identifizieren.",
+    "author": "Kerim K.",
+    "readTime": "11 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Warum Mobile App Security im Gesundheitswesen besonders kritisch ist",
+        "content": "Mobile Gesundheitsanwendungen verarbeiten besonders schützenswerte Daten: Diagnosen, Therapieverläufe, Medikationspläne und persönliche Gesundheitsinformationen. Diese Daten gehören nach DSGVO Art. 9 zu den besonderen Kategorien personenbezogener Daten und unterliegen einem erhöhten Schutzbedarf. Die BSI TR-03161 Teil 1 adressiert genau diese Risiken. Sie definiert Sicherheitsanforderungen, die auf dem OWASP Mobile Application Security Verification Standard (MASVS) und dem OWASP Mobile Application Security Testing Guide (MASTG) basieren. In unserer Praxis als Sicherheitsprüfer sehen wir bei Gesundheitsanwendungen wiederkehrende Schwachstellen, die wir in diesem Artikel vorstellen.",
+        "keyTakeaway": {
+          "title": "Erhöhter Schutzbedarf",
+          "content": "Gesundheitsdaten zählen zu den besonderen Kategorien nach DSGVO Art. 9. Eine Sicherheitslücke kann nicht nur finanzielle, sondern auch gesundheitliche Folgen haben."
+        },
+        "quote": "Bei Gesundheitsdaten geht es nicht nur um Datenschutz – es geht um das Vertrauen von Patienten in digitale Medizin."
+      },
+      "commonAttackVectors": {
+        "title": "Die häufigsten Schwachstellen nach TR-03161 Teil 1",
+        "items": [
+          "Unsichere lokale Datenspeicherung: Gesundheitsdaten werden unverschlüsselt in Shared Preferences (Android) oder im Dateisystem gespeichert. Auch SQLite-Datenbanken ohne Encryption-at-Rest sind ein häufiges Finding. Die TR-03161 fordert explizit die Verschlüsselung sensibler Daten auf dem Gerät.",
+          "Fehlendes oder fehlerhaftes Certificate Pinning: Ohne Certificate Pinning kann ein Angreifer mit einem manipulierten Zertifikat die TLS-Verbindung zwischen App und Backend abhören (Man-in-the-Middle-Angriff). Besonders kritisch, wenn Gesundheitsdaten übertragen werden.",
+          "Unzureichende Authentifizierung: Schwache Passwort-Policies, fehlendes Multi-Faktor-Verfahren oder unsichere biometrische Implementierungen. Die TR-03161 fordert robuste Authentifizierungsmechanismen, die dem Schutzbedarf der Daten entsprechen.",
+          "Sensible Daten in Logs und Backups: Debug-Logs, die Gesundheitsdaten enthalten, können über ADB (Android) oder iTunes-Backups (iOS) ausgelesen werden. Auch Screenshots der App können sensible Informationen preisgeben.",
+          "Unsichere API-Kommunikation: Fehlende Autorisierungsprüfungen an API-Endpunkten, IDOR-Schwachstellen (Insecure Direct Object Reference), die den Zugriff auf Gesundheitsdaten anderer Nutzer ermöglichen.",
+          "Schwache Kryptographie-Implementierungen: Verwendung veralteter Algorithmen (MD5, SHA1), hardcodierte Schlüssel im Quellcode, unsichere Zufallszahlengenerierung oder fehlerhafte Key-Derivation-Funktionen.",
+          "Fehlende Resilienz gegen Reverse Engineering: Ohne Code-Obfuscation, Root/Jailbreak-Detection und Tampering-Schutz kann ein Angreifer die App analysieren, manipulieren und Sicherheitsmechanismen umgehen.",
+          "Unsichere Inter-Process Communication: Exported Activities, Content Provider ohne Zugriffsbeschränkung oder unsichere Deep Links können von anderen Apps auf dem Gerät missbraucht werden."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Auswirkungen dieser Schwachstellen",
+        "content": "Die Konsequenzen einer Sicherheitslücke in einer Gesundheitsanwendung gehen über einen normalen Datenschutzvorfall hinaus. Neben den regulatorischen Folgen (Bußgelder nach DSGVO, Ausschluss aus dem DiGA-Verzeichnis) besteht das Risiko, dass Patienten das Vertrauen in die digitale Gesundheitsversorgung verlieren.",
+        "statistics": {
+          "title": "Risikobewertung nach Schwachstellentyp",
+          "items": [
+            {"label": "Unsichere Datenspeicherung", "value": "CVSS 7.5–9.0"},
+            {"label": "Fehlendes Certificate Pinning", "value": "CVSS 5.9–7.4"},
+            {"label": "Broken Authentication", "value": "CVSS 7.5–9.8"},
+            {"label": "IDOR an API-Endpunkten", "value": "CVSS 6.5–8.6"}
+          ]
+        }
+      },
+      "protectionStrategies": {
+        "title": "Wie wir helfen: Prüfung nach TR-03161-Maßstäben",
+        "content": "Bei Sodu Secure führen wir Sicherheitsprüfungen durch, die sich an den Prüfaspekten und Bedrohungsszenarien der BSI TR-03161 orientieren. Unsere Methodik umfasst:",
+        "strategies": [
+          {"title": "Statische Analyse (SAST)", "description": "Analyse des Quellcodes oder der kompilierten App auf hardcodierte Schlüssel, unsichere API-Calls, Kryptographie-Schwächen und Konfigurationsfehler."},
+          {"title": "Dynamische Analyse (DAST)", "description": "Laufzeitanalyse der App: Netzwerkverkehr, Datenspeicherung, IPC-Kommunikation, Authentifizierungs-Flows und Session-Handling."},
+          {"title": "Manueller Penetrationstest", "description": "Gezielte Angriffssimulation durch erfahrene Pentester: Exploitation von identifizierten Schwachstellen mit Proof-of-Concept."},
+          {"title": "Detaillierter Prüfbericht", "description": "Alle Findings mit CVSS-Bewertung, Reproduktionsschritten, Screenshots und konkreten Handlungsempfehlungen für Ihre Entwickler."}
+        ]
+      },
+      "conclusion": {
+        "title": "Fazit: Frühzeitige Prüfung schützt Patienten und Ihr Unternehmen",
+        "content": "Die häufigsten Schwachstellen in mobilen Gesundheitsanwendungen sind bekannt und vermeidbar. Eine frühzeitige Sicherheitsprüfung nach den Maßstäben der BSI TR-03161 identifiziert diese Probleme, bevor sie bei der offiziellen Zertifizierung oder – schlimmer noch – im Produktivbetrieb auffallen."
+      }
+    },
+    "cta": {
+      "title": "Mobile App auf TR-03161 prüfen lassen?",
+      "description": "Wir identifizieren Schwachstellen, bevor es die Prüfstelle tut.",
+      "button": "Pentest anfragen",
+      "emailPlaceholder": "Ihre E-Mail-Adresse"
+    },
+    "relatedArticles": {
+      "title": "Verwandte Artikel",
+      "articles": [
+        {
+          "title": "BSI TR-03161 einfach erklärt: Was DiGA-Hersteller jetzt wissen müssen",
+          "description": "Einführungsartikel zur BSI TR-03161 – die Richtlinie, die Pflicht und was bei Nicht-Erfüllung passiert.",
+          "category": "BSI TR-03161",
+          "readTime": "10 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        },
+        {
+          "title": "So bereiten Sie Ihre Gesundheitsanwendung auf die TR-03161-Zertifizierung vor",
+          "description": "Praxisorientierter Leitfaden: Schritte, Stolpersteine und warum ein vorbereitender Pentest sinnvoll ist.",
+          "category": "BSI TR-03161",
+          "readTime": "12 Min. Lesezeit",
+          "readMore": "Artikel lesen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Kerim K.",
+      "role": "Geschäftsführer & Offensive Security, SODU Secure GmbH",
+      "bio": "Informatikstudent TU Berlin, Gründer von SODU Secure. Spezialisiert auf Penetration Testing, Mobile App Security und BSI TR-03161 Sicherheitsprüfungen."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Mobile App Pentest anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
   }
 }

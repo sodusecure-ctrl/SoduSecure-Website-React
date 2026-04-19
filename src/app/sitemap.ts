@@ -32,6 +32,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/pentest-berlin/iso-27001',   lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.95 },
     { path: '/berlin-kmu-pilot',   lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.99 },
     { path: '/phishing', lastModified: '2026-03-24', changeFreq: 'weekly', priority: 0.99 },
+    { path: '/bsi-tr-03161',                    lastModified: '2026-04-19', changeFreq: 'weekly',  priority: 0.95 },
+    { path: '/pentest-gesundheitsanwendungen',   lastModified: '2026-04-19', changeFreq: 'weekly',  priority: 0.95 },
+    { path: '/anfrage-tr03161',                  lastModified: '2026-04-19', changeFreq: 'monthly', priority: 0.85 },
     { path: '/services/sme-packages', lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.98 },
     { path: '/request-pentest',    lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.92  },
     { path: '/about',              lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.82  },
@@ -81,11 +84,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   blogPosts.forEach((blog) => {
     // Give extra priority to KMU-focused and Berlin/Ablauf keyword content
     const isKmuPost = blog.id === 15 || blog.id === 14 || blog.id === 13 || blog.id === 12 || blog.id === 9;
+    const isTR03161Post = blog.id === 18 || blog.id === 19 || blog.id === 20;
     routes.push({
       url: `${baseUrl}/case-studies/blogs/${blog.slug}`,
       lastModified: new Date(blog.date),
       changeFrequency: 'monthly',
-      priority: isKmuPost ? 0.85 : 0.7,
+      priority: isKmuPost ? 0.85 : isTR03161Post ? 0.85 : 0.7,
     });
   });
 

@@ -20,6 +20,8 @@ export default function Header() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isBerlinDropdownOpen, setIsBerlinDropdownOpen] = useState(false);
   const [isMobileBerlinOpen, setIsMobileBerlinOpen] = useState(false);
+  const [isTR03161DropdownOpen, setIsTR03161DropdownOpen] = useState(false);
+  const [isMobileTR03161Open, setIsMobileTR03161Open] = useState(false);
   const [currentLocale, setCurrentLocale] = useState<string>("de");
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
@@ -109,6 +111,12 @@ export default function Header() {
     { name: 'Pentest für KMU Berlin', path: '/pentest-berlin/kmu' },
     { name: 'Interner vs. Externer Pentest', path: '/pentest-berlin/intern-extern' },
     { name: 'ISO 27001 Pentest Berlin', path: '/pentest-berlin/iso-27001' },
+  ];
+
+  const tr03161Links = [
+    { name: 'BSI TR-03161 Sicherheitsprüfung', path: '/bsi-tr-03161' },
+    { name: 'Pentest für Gesundheitsanwendungen', path: '/pentest-gesundheitsanwendungen' },
+    { name: 'TR-03161 Anfrage', path: '/anfrage-tr03161' },
   ];
 
   const navLinks = [
@@ -224,6 +232,40 @@ export default function Header() {
                       }
                     `}
                     onClick={() => { setIsBerlinDropdownOpen(false); router.push(link.path); }}
+                    onSelect={(e) => e.preventDefault()}
+                  >
+                    <span>{link.name}</span>
+                    <ChevronRight className="w-4 h-4 opacity-60 group-hover:opacity-100 transition-opacity" />
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <DropdownMenu open={isTR03161DropdownOpen} onOpenChange={setIsTR03161DropdownOpen}>
+              <DropdownMenuTrigger className="flex items-center gap-1 focus:outline-none border-none cursor-pointer select-none text-white hover:text-gray-300 transition-colors text-sm xl:text-base">
+                BSI TR-03161
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                className="bg-[#1a1f2e] border border-gray-700 rounded-lg p-4 min-w-[280px] xl:min-w-[320px] shadow-xl animate-in slide-in-from-top-2 fade-in-0"
+                onCloseAutoFocus={(e) => e.preventDefault()}
+                sideOffset={5}
+              >
+                <div className="pb-3 mb-3 border-b border-gray-700">
+                  <h3 className="text-red-500 font-bold text-base xl:text-lg">BSI TR-03161</h3>
+                </div>
+                {tr03161Links.map((link, index) => (
+                  <DropdownMenuItem
+                    key={index}
+                    className={`
+                      flex items-center justify-between py-2 px-3 cursor-pointer
+                      rounded-md transition-colors group text-sm xl:text-base
+                      ${isServiceActive(link.path)
+                        ? 'bg-gray-800 text-red-500'
+                        : 'text-white hover:bg-gray-800'
+                      }
+                    `}
+                    onClick={() => { setIsTR03161DropdownOpen(false); router.push(link.path); }}
                     onSelect={(e) => e.preventDefault()}
                   >
                     <span>{link.name}</span>
@@ -358,6 +400,40 @@ export default function Header() {
                     <button
                       key={index}
                       onClick={() => { setIsMobileMenuOpen(false); setIsMobileBerlinOpen(false); router.push(link.path); }}
+                      className={`
+                        flex items-center justify-between w-full py-3 px-4
+                        rounded-lg transition-colors text-left text-sm
+                        ${isServiceActive(link.path)
+                          ? 'bg-gray-800 text-red-500'
+                          : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                        }
+                      `}
+                    >
+                      <span>{link.name}</span>
+                      <ChevronRight className="w-4 h-4 opacity-60" />
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile TR-03161 Dropdown */}
+            <div className="mb-4">
+              <button
+                onClick={() => setIsMobileTR03161Open(!isMobileTR03161Open)}
+                className="flex items-center justify-between w-full py-3 px-4 text-white hover:bg-gray-800 rounded-lg transition-colors text-left"
+              >
+                <span className="text-base font-medium">BSI TR-03161</span>
+                <ChevronRight
+                  className={`w-5 h-5 transition-transform duration-200 ${isMobileTR03161Open ? 'rotate-90' : ''}`}
+                />
+              </button>
+              <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileTR03161Open ? 'max-h-[400px] opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                <div className="space-y-1 pl-4">
+                  {tr03161Links.map((link, index) => (
+                    <button
+                      key={index}
+                      onClick={() => { setIsMobileMenuOpen(false); setIsMobileTR03161Open(false); router.push(link.path); }}
                       className={`
                         flex items-center justify-between w-full py-3 px-4
                         rounded-lg transition-colors text-left text-sm
