@@ -72,7 +72,7 @@ export default function Impressum() {
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Umsatzsteuer-Identifikationsnummer</h2>
             <p className="text-gray-700">
               Gemäß § 27a Umsatzsteuergesetz:{' '}
-              <span className="font-medium">137/537/50397</span>
+              <span className="font-medium">37/537/50397</span>
             </p>
           </section>
 
