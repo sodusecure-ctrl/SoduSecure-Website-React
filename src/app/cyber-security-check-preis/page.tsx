@@ -18,7 +18,7 @@ const PRICE_LIST = [
 ];
 
 const FAQS = [
-  { q: "Was ist im Preis enthalten?", a: "Im Standardpreis enthalten: Scoping-Gespräch, manuelles Assessment, priorisierter Bericht (DE/EN), Executive Summary und 1 kostenloser Retest." },
+  { q: "Was ist im Preis enthalten?", a: "Im Standardpreis enthalten: Scoping-Gespräch, manuelles Assessment, priorisierter Bericht (Deutsch), Executive Summary und 1 kostenloser Retest." },
   { q: "Wie unterscheiden sich Preis und Kosten?", a: "Der Preis ist das Festpreisangebot; Kosten umfassen auch interne Aufwände für Koordination und Maßnahmenumsetzung." },
   { q: "Kann ich Preise vergleichen?", a: "Ja, achten Sie beim Vergleich auf: manuelle vs. automatisierte Checks, Zertifizierungen der Tester, Berichtsqualität und enthaltene Retests." },
 ];
@@ -83,7 +83,7 @@ export default function CyberSecurityCheckPreisPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-center mb-8">In jedem Preis enthalten</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {["Kostenloses Scoping-Gespräch", "Manuelles Assessment durch zertifizierte Experten", "Priorisierter Sicherheitsbericht (DE/EN)", "Executive Summary für Management", "Technischer Bericht mit PoC", "1 kostenloser Retest", "Remediation Guidance", "Persönliches Abschlussgespräch"].map((item) => (
+            {["Kostenloses Scoping-Gespräch", "Manuelles Assessment durch zertifizierte Experten", "Priorisierter Sicherheitsbericht (Deutsch)", "Executive Summary für Management", "Technischer Bericht mit PoC", "1 kostenloser Retest", "Remediation Guidance", "Persönliches Abschlussgespräch"].map((item) => (
               <div key={item} className="flex items-start gap-3 bg-[#131927] border border-gray-800 rounded-lg p-4">
                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-gray-300">{item}</span>

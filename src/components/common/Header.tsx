@@ -12,7 +12,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useEffect, useState, useTransition } from 'react';
+import { useState } from 'react';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,50 +22,9 @@ export default function Header() {
   const [isMobileBerlinOpen, setIsMobileBerlinOpen] = useState(false);
   const [isTR03161DropdownOpen, setIsTR03161DropdownOpen] = useState(false);
   const [isMobileTR03161Open, setIsMobileTR03161Open] = useState(false);
-  const [currentLocale, setCurrentLocale] = useState<string>("de");
-  const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations('header');
-
-  // Get locale from cookie
-  useEffect(() => {
-    const getLocale = () => {
-      if (typeof document !== "undefined") {
-        const cookies = document.cookie.split(";");
-        const localeCookie = cookies.find((cookie) =>
-          cookie.trim().startsWith("SODUSECURE_LOCALE=")
-        );
-        if (localeCookie) {
-          const locale = localeCookie.split("=")[1]?.trim();
-          if (locale === "de" || locale === "en") {
-            return locale;
-          }
-        }
-      }
-      return "de";
-    };
-    const locale = getLocale();
-    setCurrentLocale(locale);
-  }, []);
-
-  // Language toggle handler (WITHOUT page reload)
-  const handleLanguageToggle = () => {
-    const newLocale = currentLocale === "de" ? "en" : "de";
-
-    // 1. Update state
-    setCurrentLocale(newLocale);
-
-    // 2. Set cookie
-    if (typeof document !== "undefined") {
-      document.cookie = `SODUSECURE_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
-    }
-
-    // 3. Trigger re-render by forcing router refresh (without full page reload)
-    startTransition(() => {
-      router.refresh();
-    });
-  };
 
   const handleServiceClick = (path: string) => {
     setIsServicesDropdownOpen(false);
@@ -288,34 +247,6 @@ export default function Header() {
 
           {/* Right Section */}
           <div className="flex items-center gap-2 sm:gap-4">
-            {/* Language Selector */}
-            <div className="flex items-center gap-2">
-              <label className="language-switch relative inline-block w-20 h-8 cursor-pointer" htmlFor="language">
-                <input
-                  id="language"
-                  type="checkbox"
-                  checked={currentLocale === "de"}
-                  onChange={handleLanguageToggle}
-                  disabled={isPending}
-                  className="hidden"
-                />
-                <span className="switch-track absolute top-0 left-0 right-0 bottom-0 bg-gray-800 rounded-full transition-colors duration-300">
-                  <span className="language-option absolute left-2 top-1/2 transform -translate-y-1/2 text-xs font-medium text-white">
-                    EN
-                  </span>
-                  <span className="language-option absolute right-2 top-1/2 transform -translate-y-1/2 text-xs font-medium text-white">
-                    DE
-                  </span>
-                  <span className="switch-thumb absolute top-1 left-1 w-6 h-6 bg-red-600 rounded-full transition-transform duration-300 transform"
-                    style={{ transform: currentLocale === "de" ? 'translateX(32px)' : 'translateX(0)' }}>
-                    <span className="absolute inset-0 flex items-center justify-center text-xs font-medium text-white">
-                      {currentLocale === "de" ? "DE" : "EN"}
-                    </span>
-                  </span>
-                </span>
-              </label>
-            </div>
-
             {/* Request Pentest Button */}
             <Button
               onClick={() => router.push("/request-pentest")}
@@ -475,37 +406,6 @@ export default function Header() {
               ))}
             </div>
 
-            {/* Mobile Language Selector */}
-            <div className="mt-8 pt-6 border-t border-gray-700">
-              <h3 className="text-white font-medium mb-4 pl-2">{t('language')}</h3>
-              <div className="flex items-center justify-between">
-                <span className="text-gray-300 text-sm">{t('selectLanguage')}</span>
-                <label className="language-switch relative inline-block w-16 h-8 cursor-pointer" htmlFor="language-mobile">
-                  <input
-                    id="language-mobile"
-                    type="checkbox"
-                    checked={currentLocale === "de"}
-                    onChange={handleLanguageToggle}
-                    disabled={isPending}
-                    className="hidden"
-                  />
-                  <span className="switch-track absolute top-0 left-0 right-0 bottom-0 bg-gray-800 rounded-full transition-colors duration-300">
-                    <span className="language-option absolute left-2 top-1/2 transform -translate-y-1/2 text-xs font-medium text-white">
-                      EN
-                    </span>
-                    <span className="language-option absolute right-2 top-1/2 transform -translate-y-1/2 text-xs font-medium text-white">
-                      DE
-                    </span>
-                    <span className="switch-thumb absolute top-1 left-1 w-6 h-6 bg-red-600 rounded-full transition-transform duration-300 transform"
-                      style={{ transform: currentLocale === "de" ? 'translateX(32px)' : 'translateX(0)' }}>
-                      <span className="absolute inset-0 flex items-center justify-center text-xs font-medium text-white">
-                        {currentLocale === "de" ? "DE" : "EN"}
-                      </span>
-                    </span>
-                  </span>
-                </label>
-              </div>
-            </div>
           </div>
         </div>
       </div>

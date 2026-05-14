@@ -16,12 +16,9 @@ export default function Breadcrumbs() {
   const generateBreadcrumbs = (): BreadcrumbItem[] => {
     const paths = pathname.split('/').filter(Boolean);
     const breadcrumbs: BreadcrumbItem[] = [];
-    
-    // Remove locale from path if present
-    const locale = ['en', 'de'].includes(paths[0]) ? paths.shift() : null;
-    
+
     paths.forEach((path, index) => {
-      const href = `/${locale ? locale + '/' : ''}${paths.slice(0, index + 1).join('/')}`;
+      const href = `/${paths.slice(0, index + 1).join('/')}`;
       const label = path
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))

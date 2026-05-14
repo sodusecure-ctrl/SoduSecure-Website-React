@@ -1,7 +1,7 @@
 ﻿import createMiddleware from 'next-intl/middleware';
 
 export default createMiddleware({
-  locales: ['en', 'de'],
+  locales: ['de'],
   defaultLocale: 'de',
   localePrefix: 'never',
   localeDetection: false, // Prevents locale-based redirects that cause Googlebot indexing errors

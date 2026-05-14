@@ -29,8 +29,7 @@ export async function generateMetadata({ params }: GenerateBlogMetadataParams): 
     alternates: {
       canonical: blogUrl,
       languages: {
-        en: `${baseUrl}/en/case-studies/blogs/${blog.slug}`,
-        de: `${baseUrl}/de/case-studies/blogs/${blog.slug}`,
+        de: blogUrl,
       },
     },
     openGraph: {

@@ -24,7 +24,7 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
         telephone: data.phone || '+49-177-7750985',
         contactType: 'Customer Service',
         email: data.email || 'info@sodusecure.com',
-        availableLanguage: ['en', 'de'],
+        availableLanguage: ['de'],
       },
       sameAs: data.socialMedia || [
         // Add your social media links
@@ -57,7 +57,7 @@ export function generateJsonLd({ type, data }: JsonLdProps) {
       name: data.name,
       description: data.description,
       url: data.url,
-      inLanguage: data.locale || 'en',
+      inLanguage: data.locale || 'de',
       isPartOf: {
         '@type': 'WebSite',
         name: 'SoduSecure',

@@ -23,7 +23,7 @@ export default function Home() {
       telephone: '+49-177-7750985',
       contactType: 'Customer Service',
       email: 'info@sodusecure.com',
-      availableLanguage: ['English', 'German'],
+      availableLanguage: ['German'],
     },
     address: {
       '@type': 'PostalAddress',

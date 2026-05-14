@@ -15,7 +15,7 @@ export function generatePageMetadata({
   description,
   keywords = [],
   path,
-  locale = 'en',
+  locale = 'de',
 }: PageMetadata): Metadata {
   const fullTitle = `${title} | sodusecure - Professional Penetration Testing`;
   const url = `${baseUrl}${path}`;
@@ -38,13 +38,12 @@ export function generatePageMetadata({
     alternates: {
       canonical: url,
       languages: {
-        en: `${baseUrl}/en${path}`,
-        de: `${baseUrl}/de${path}`,
+        de: url,
       },
     },
     openGraph: {
       type: 'website',
-      locale: locale === 'en' ? 'en_US' : 'de_DE',
+      locale: 'de_DE',
       url,
       title: fullTitle,
       description,
