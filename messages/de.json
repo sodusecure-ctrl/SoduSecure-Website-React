@@ -389,6 +389,7 @@
       }
     },
     "signUp": {
+      "title": "Konto erstellen",
       "createAccount": "Konto erstellen",
       "signUp": "Registrieren",
       "fullNameLabel": "Vollständiger Name",
@@ -400,7 +401,10 @@
       "confirmPasswordLabel": "Passwort bestätigen",
       "confirmPasswordPlaceholder": "Passwort bestätigen",
       "acceptTerms": "Ich akzeptiere die Bedingungen und Datenschutzrichtlinie",
+      "termsLabel": "Ich akzeptiere die",
+      "termsLink": "Bedingungen und Datenschutzrichtlinie",
       "signUpButton": "Registrieren",
+      "continueWithGoogle": "Mit Google fortfahren",
       "haveAccount": "Sie haben bereits ein Konto?",
       "signInLink": "Anmelden",
       "validation": {
@@ -415,8 +419,13 @@
       }
     },
     "forgotPassword": {
+      "title": "Passwort vergessen",
       "forgotPassword": "Passwort vergessen",
+      "subtitle": "Geben Sie Ihre E-Mail ein, um Ihr Passwort zurückzusetzen",
       "emailSubtitle": "Geben Sie Ihre E-Mail ein, um Ihr Passwort zurückzusetzen",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "E-Mail",
+      "nextButton": "Weiter",
       "sendButton": "Zurücksetzen Link senden",
       "backToSignIn": "Zurück zur Anmeldung",
       "validation": {
@@ -426,11 +435,18 @@
       "success": "Wenn ein Konto mit dieser E-Mail existiert, erhalten Sie einen Passwort-Zurücksetzen-Link"
     },
     "createNewPassword": {
+      "title": "Neues Passwort erstellen",
+      "description": "Legen Sie ein neues Passwort für Ihr Konto fest",
       "createNewPassword": "Neues Passwort erstellen",
+      "newPasswordLabel": "Neues Passwort",
       "passwordLabel": "Neues Passwort",
+      "newPasswordPlaceholder": "Neues Passwort eingeben",
       "passwordPlaceholder": "Neues Passwort eingeben",
+      "confirmNewPasswordLabel": "Passwort bestätigen",
       "confirmPasswordLabel": "Passwort bestätigen",
+      "confirmNewPasswordPlaceholder": "Passwort bestätigen",
       "confirmPasswordPlaceholder": "Passwort bestätigen",
+      "changePasswordButton": "Passwort ändern",
       "resetButton": "Passwort zurücksetzen",
       "validation": {
         "passwordRequired": "Passwort ist erforderlich",
@@ -441,11 +457,16 @@
       "success": "Passwort erfolgreich zurückgesetzt"
     },
     "verifyOtp": {
+      "title": "E-Mail verifizieren",
+      "description": "Bitte bestätigen Sie Ihre E-Mail-Adresse mit dem Verifizierungscode",
       "verifyEmail": "E-Mail verifizieren",
+      "codeTitle": "Bestätigungscode",
       "enterCode": "Geben Sie den 6-stelligen Code ein, der an Ihre E-Mail gesendet wurde",
+      "codeDescription": "Geben Sie den 6-stelligen Code ein, den wir Ihnen gesendet haben",
       "codeLabel": "Bestätigungscode",
       "codePlaceholder": "000000",
       "verifyButton": "Verifizieren",
+      "noCode": "Keinen Code erhalten?",
       "resendCode": "Code nicht erhalten?",
       "resendButton": "Code erneut senden",
       "validation": {
@@ -454,11 +475,16 @@
       }
     },
     "verifyEmailForgotPassword": {
+      "title": "E-Mail für Passwort-Reset verifizieren",
+      "description": "Bitte bestätigen Sie den Verifizierungscode, um fortzufahren",
       "verifyEmail": "E-Mail verifizieren",
+      "codeTitle": "Bestätigungscode",
       "enterCode": "Geben Sie den 6-stelligen Code ein, der an Ihre E-Mail gesendet wurde",
+      "codeDescription": "Geben Sie den 6-stelligen Code ein, den wir Ihnen gesendet haben",
       "codeLabel": "Bestätigungscode",
       "codePlaceholder": "000000",
       "verifyButton": "Verifizieren",
+      "noCode": "Keinen Code erhalten?",
       "resendCode": "Code nicht erhalten?",
       "resendButton": "Code erneut senden",
       "validation": {
