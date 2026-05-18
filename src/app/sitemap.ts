@@ -63,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services/cloud-devops-testing',     lastModified: '2026-03-01' },
     { path: '/services/security-audit',           lastModified: '2026-03-01' },
     { path: '/services/vulnerability-assessment', lastModified: '2026-03-01' },
+    { path: '/services/iso-27001',                lastModified: '2026-05-18' },
   ];
 
   const routes: MetadataRoute.Sitemap = [];

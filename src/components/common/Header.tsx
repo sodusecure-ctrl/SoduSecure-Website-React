@@ -62,6 +62,10 @@ export default function Header() {
       name: t('servicesList.smePackages'),
       path: '/services/sme-packages'
     },
+    {
+      name: t('servicesList.iso27001Service'),
+      path: '/services/iso-27001'
+    },
   ];
 
   const berlinLinks = [

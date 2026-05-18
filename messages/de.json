@@ -19,7 +19,8 @@
       "apiSecurityTesting": "API-Sicherheitstests",
       "cloudDevopsTesting": "Cloud- & DevOps-Sicherheitstests",
       "networkAudit": "Netzwerk-Sicherheits-Audit",
-      "smePackages": "KMU / Small Business Sicherheitspakete"
+      "smePackages": "KMU / Small Business Sicherheitspakete",
+      "iso27001Service": "ISO 27001 Beratung & Pentest"
     }
   },
   "home": {
