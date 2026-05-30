@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { ChevronRight, Home } from 'lucide-react';
 import Link from 'next/link';
@@ -65,7 +65,7 @@ export default function Breadcrumbs() {
           <li>
             <Link
               href="/"
-              className="flex items-center text-gray-600 hover:text-red-600 transition-colors"
+              className="flex items-center text-gray-600 hover:text-[#FF3B30] transition-colors"
               aria-label="Home"
             >
               <Home className="w-4 h-4" />
@@ -81,7 +81,7 @@ export default function Breadcrumbs() {
               ) : (
                 <Link
                   href={crumb.href}
-                  className="text-gray-600 hover:text-red-600 transition-colors"
+                  className="text-gray-600 hover:text-[#FF3B30] transition-colors"
                 >
                   {crumb.label}
                 </Link>

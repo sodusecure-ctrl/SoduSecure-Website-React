@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -20,7 +20,7 @@ export default function CertificationsToolsSection() {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 bg-[#16141A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
           {/* Certifications & Compliance Section */}
@@ -42,9 +42,9 @@ export default function CertificationsToolsSection() {
             {/* Certifications Grid */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
               {certifications.map((cert, index) => (
-                <Card key={index} className="bg-gray-50 border-gray-200 hover:border-gray-300 transition-colors">
+                <Card key={index} className="bg-gray-50 border-white/10 hover:border-white/12 transition-colors">
                   <CardContent className="p-3 sm:p-4 flex items-center gap-2 sm:gap-3">
-                    <div className="text-red-600"><Shield className="w-4 h-4 sm:w-5 sm:h-5" /></div>
+                    <div className="text-[#FF3B30]"><Shield className="w-4 h-4 sm:w-5 sm:h-5" /></div>
                     <span className="font-medium text-gray-900 text-sm sm:text-base">{cert}</span>
                   </CardContent>
                 </Card>
@@ -54,9 +54,9 @@ export default function CertificationsToolsSection() {
             {/* Compliance Grid */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
               {compliance.map((item, index) => (
-                <Card key={index} className="bg-gray-50 border-gray-200 hover:border-gray-300 transition-colors">
+                <Card key={index} className="bg-gray-50 border-white/10 hover:border-white/12 transition-colors">
                   <CardContent className="p-3 sm:p-4 flex items-center gap-2 sm:gap-3">
-                    <div className="text-red-600"><FileText className="w-4 h-4 sm:w-5 sm:h-5" /></div>
+                    <div className="text-[#FF3B30]"><FileText className="w-4 h-4 sm:w-5 sm:h-5" /></div>
                     <span className="font-medium text-gray-900 text-sm sm:text-base">{item}</span>
                   </CardContent>
                 </Card>
@@ -64,7 +64,7 @@ export default function CertificationsToolsSection() {
             </div>
 
             {/* Confidentiality Notice */}
-            <Card className="bg-gray-50 border-gray-200 mb-6 sm:mb-8">
+            <Card className="bg-gray-50 border-white/10 mb-6 sm:mb-8">
               <CardContent className="p-4 sm:p-6">
                 <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
                   {t('confidentiality')}
@@ -75,7 +75,7 @@ export default function CertificationsToolsSection() {
             {/* Download Button */}
             <Button
               variant="outline"
-              className="w-full sm:w-auto border-gray-300 text-gray-900 hover:bg-gray-50 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
+              className="w-full sm:w-auto border-white/12 text-gray-900 hover:bg-white/5 text-sm sm:text-base px-4 sm:px-6 py-2 sm:py-3"
               onClick={handleDownloadReport}
             >
               <Download className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
@@ -124,7 +124,7 @@ export default function CertificationsToolsSection() {
                 <ul className="space-y-3 sm:space-y-4">
                   {methodologies.map((method, index) => (
                     <li key={index} className="flex items-start gap-2 sm:gap-3">
-                      <span className="text-red-600 mt-0.5 sm:mt-1 flex-shrink-0">▸</span>
+                      <span className="text-[#FF3B30] mt-0.5 sm:mt-1 flex-shrink-0">▸</span>
                       <span className="text-gray-300 text-sm sm:text-base">{method}</span>
                     </li>
                   ))}

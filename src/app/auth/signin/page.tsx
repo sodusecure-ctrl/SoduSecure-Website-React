@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -34,8 +34,8 @@ export default function SignInForm() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  const [acceptTerms, setAcceptTerms] = useState<boolean>(false);
-  const [touched, setTouched] = useState<TouchedFields>({});
+const[acceptTerms, setAcceptTerms] = useState<boolean>(false);
+const [touched, setTouched] = useState<TouchedFields>({});
   const [termsError, setTermsError] = useState<string>('');
 
   const router = useRouter();
@@ -107,8 +107,8 @@ export default function SignInForm() {
   return (
     <div className="min-h-screen flex">
       {/* Left side - Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center sm:p-8 p-0 bg-white">
-        <div className="w-full max-w-lg shadow-sm border border-gray-100 sm:p-10 p-4 rounded-xl">
+      <div className="w-full lg:w-1/2 flex items-center justify-center sm:p-8 p-0 bg-[#16141A]">
+        <div className="w-full max-w-lg shadow-sm border border-white/8 sm:p-10 p-4 rounded-xl">
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <div className="w-16 h-16 rounded-xl flex items-center justify-center">
@@ -209,7 +209,7 @@ export default function SignInForm() {
             <Button
               type="button"
               variant="outline"
-              className="w-full py-6 rounded-lg border-gray-300 hover:bg-gray-50 transition-colors flex items-center justify-center gap-3"
+              className="w-full py-6 rounded-lg border-white/12 hover:bg-white/5 transition-colors flex items-center justify-center gap-3"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
                 <path

@@ -193,7 +193,7 @@ export const CERTIFICATES: Certificate[] = [
     findingsInfo: 1,
     allCriticalFixed: true,
     description:
-      "Vollständiger Pentest der Web-App, mobilen iOS/Android-Apps, REST-API und Cloud-Infrastruktur (AWS). Das Unternehmen verfügt bereits über ein internes Bug-Bounty-Programm, regelmäßige Code-Reviews und automatisierte SAST/DAST-Pipelines — daher Ausgezeichnet+.",
+      "Vollständiger Pentest der Web-App, mobilen iOS/Android-Apps, REST-API und Cloud-Infrastruktur (AWS). Das Unternehmen verfügt bereits über ein internes Bug-Bounty-Programm, regelmäßige Code-Reviews und automatisierte SAST/DAST-Pipelines - daher Ausgezeichnet+.",
   },
   {
     id: "SS-2026-0004",

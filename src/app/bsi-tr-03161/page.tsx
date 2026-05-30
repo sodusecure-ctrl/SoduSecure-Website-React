@@ -188,7 +188,7 @@ export default function BSITR03161Page() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#anfrage"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-red-600 hover:premium-cta text-white font-semibold rounded-lg transition-colors"
               >
                 Kostenlose Erstberatung anfragen
                 <ArrowRight className="w-5 h-5" />

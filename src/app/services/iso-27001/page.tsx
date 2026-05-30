@@ -141,7 +141,7 @@ export default function ISO27001ServicePage() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
               href="/request-pentest"
-              className="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-7 py-3.5 font-semibold text-white hover:bg-red-700"
+              className="inline-flex items-center justify-center gap-2 rounded-lg bg-red-600 px-7 py-3.5 font-semibold text-white hover:premium-cta"
             >
               <Phone className="h-5 w-5" />
               Kostenlose Beratung anfordern
@@ -262,7 +262,7 @@ export default function ISO27001ServicePage() {
             Lassen Sie Ihr ISMS, Ihre technischen Kontrollen und Ihre Audit-Nachweise professionell aufsetzen. Wir unterstuetzen Sie pragmatisch und messbar.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href="/request-pentest" className="rounded-lg bg-red-600 px-8 py-3.5 font-semibold hover:bg-red-700">
+            <Link href="/request-pentest" className="rounded-lg bg-red-600 px-8 py-3.5 font-semibold hover:premium-cta">
               Beratung starten
             </Link>
             <Link href="/iso-27001" className="rounded-lg border border-gray-700 bg-white/5 px-8 py-3.5 font-semibold hover:bg-white/10">

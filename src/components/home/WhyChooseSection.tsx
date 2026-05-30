@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Award, FileText, HandMetal, Zap } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -47,10 +47,10 @@ export default function WhyChooseSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="text-center bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2"
+              className="text-center bg-[#16141A] rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2"
             >
               {/* Icon */}
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-red-50 text-red-600 mb-4 sm:mb-6 transition-all duration-300 group-hover:scale-110">
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-[#FF3B30]/10 text-[#FF3B30] mb-4 sm:mb-6 transition-all duration-300 group-hover:scale-110">
                 <div className="group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
@@ -72,7 +72,7 @@ export default function WhyChooseSection() {
         {/* Optional CTA */}
         <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
           <div className="inline-block bg-gradient-to-r from-red-600 to-red-700 rounded-xl sm:rounded-2xl p-1 shadow-lg">
-            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6">
+            <div className="bg-[#16141A] rounded-xl sm:rounded-2xl p-4 sm:p-6">
               <p className="text-sm sm:text-base lg:text-lg text-gray-800 mb-3 sm:mb-4 font-medium">
                 {t('cta.title')}
               </p>

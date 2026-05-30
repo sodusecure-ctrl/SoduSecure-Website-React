@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -63,10 +63,10 @@ export default function WebAppPentestLanding() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button onClick={() => router.push("/request-pentest")} className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-base">
+              <Button onClick={() => router.push("/request-pentest")} className="bg-red-600 hover:premium-cta text-white px-8 py-6 text-base">
                 {t('hero.requestPentest')}
               </Button>
-              <Button onClick={() => router.push("/contact")} variant="outline" className="border-white text-white bg-black hover:bg-gray-100 hover:text-black px-8 py-6 text-base">
+              <Button onClick={() => router.push("/contact")} variant="outline" className="border-white text-white bg-black hover:bg-white/10 hover:text-black px-8 py-6 text-base">
                 {t('hero.scheduleConsultation')}
               </Button>
             </div>
@@ -75,7 +75,7 @@ export default function WebAppPentestLanding() {
       </div>
 
       {/* What's Included Section */}
-      <div className="bg-white text-black px-6 py-16 md:px-12 lg:px-24">
+      <div className="bg-[#16141A] text-black px-6 py-16 md:px-12 lg:px-24">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl font-bold mb-2">{t('whatsIncluded.title')}</h2>
           <div className="w-16 h-1 bg-red-600 mb-12"></div>
@@ -103,7 +103,7 @@ export default function WebAppPentestLanding() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {scopeItems.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg">
+              <div key={index} className="bg-[#16141A] p-6 rounded-lg">
                 <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
@@ -116,14 +116,14 @@ export default function WebAppPentestLanding() {
       </div>
 
       {/* Deliverables Section */}
-      <div className="bg-white text-black px-6 py-16 md:px-12 lg:px-24">
+      <div className="bg-[#16141A] text-black px-6 py-16 md:px-12 lg:px-24">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl font-bold mb-2">{t('deliverables.title')}</h2>
           <div className="w-16 h-1 bg-red-600 mb-12"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {deliverables.map((item, index) => (
-              <Card key={index} className="border-2 border-gray-200 hover:border-red-600 transition-colors">
+              <Card key={index} className="border-2 border-white/10 hover:border-red-600 transition-colors">
                 <CardContent className="p-6">
                   <item.icon className="w-12 h-12 mb-4" strokeWidth={1.5} />
                   <h3 className="font-bold text-lg mb-3">{item.title}</h3>

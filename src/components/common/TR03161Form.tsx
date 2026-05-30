@@ -314,7 +314,7 @@ export default function TR03161Form() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-red-600 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors text-base"
+        className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-red-600 hover:premium-cta disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors text-base"
       >
         {isSubmitting ? (
           <>

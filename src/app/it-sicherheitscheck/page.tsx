@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -36,7 +36,7 @@ const BEREICHE = [
   { icon: Server, title: "Active Directory", desc: "Kerberoasting, Pass-the-Hash, DCSync, GPO Abuse, Privilege Escalation", badge: "ab 3 Tagen", color: "text-purple-400", bg: "bg-purple-500/10 border-purple-500/20" },
   { icon: Cloud, title: "Cloud (AWS/Azure/GCP)", desc: "IAM-Eskalation, S3/Blob-Fehlkonfigurationen, Secrets Management", badge: "ab 3 Tagen", color: "text-cyan-400", bg: "bg-cyan-500/10 border-cyan-500/20" },
   { icon: Lock, title: "API Security", desc: "OWASP API Top 10, REST/GraphQL-Angriffe, Auth-Tokens, Rate Limiting", badge: "ab 2 Tagen", color: "text-orange-400", bg: "bg-orange-500/10 border-orange-500/20" },
-  { icon: FileText, title: "Compliance-Check", desc: "NIS2 Art. 21, ISO 27001 Annex A, DSGVO Art. 32, DORA", badge: "ab 1 Tag", color: "text-red-400", bg: "bg-red-500/10 border-red-500/20" },
+  { icon: FileText, title: "Compliance-Check", desc: "NIS2 Art. 21, ISO 27001 Annex A, DSGVO Art. 32, DORA", badge: "ab 1 Tag", color: "text-[#FF3B30]", bg: "bg-[#FF3B30]/10 border-[#FF3B30]/20" },
 ];
 
 const ABLAUF = [
@@ -59,15 +59,15 @@ export default function ITSicherheitscheckPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <main className="bg-[#0a0a0f] text-white min-h-screen">
+    <main className="bg-[#0A0A0B] text-white min-h-screen">
       {/* ── HERO ──────────────────────────────────────────────────────────────── */}
-      <section className="relative py-24 sm:py-32 text-center overflow-hidden">
+      <section className="premium-hero py-24 sm:py-32 text-center">
         <div className="absolute inset-0 bg-gradient-to-b from-green-900/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-8">
+          <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
             <Link href="/" className="hover:text-white transition-colors">SODU Secure</Link>
             <span>/</span>
-            <span className="text-gray-300">IT Sicherheitscheck</span>
+            <span className="text-white/70">IT Sicherheitscheck</span>
           </nav>
 
           <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-1.5 text-sm text-green-400 mb-6">
@@ -83,7 +83,7 @@ export default function ITSicherheitscheckPage() {
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">
             Lassen Sie Ihre IT-Sicherheit von OSCP-zertifizierten Experten prüfen.
             Web-Apps, Netzwerke, Active Directory und Cloud – manuell getestet,
             Bericht in 48 Stunden. Kein Tagessatz, kein Überraschungsbudget.
@@ -103,7 +103,7 @@ export default function ITSicherheitscheckPage() {
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
             {["Ergebnis in 2–5 Tagen", "Festpreis – keine Tagessätze", "OSCP-zertifiziert", "Bericht in 48 h"].map((s) => (
               <div key={s} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /><span>{s}</span>
@@ -125,7 +125,7 @@ export default function ITSicherheitscheckPage() {
             ].map((s) => (
               <div key={s.label}>
                 <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">{s.value}</div>
-                <div className="text-xs text-gray-500">{s.label}</div>
+                <div className="text-xs text-white/50">{s.label}</div>
               </div>
             ))}
           </div>
@@ -139,7 +139,7 @@ export default function ITSicherheitscheckPage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Was prüft ein IT Sicherheitscheck?
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+            <p className="text-white/60 max-w-2xl mx-auto text-sm">
               Je nach Paket umfasst der IT Sicherheitscheck einzelne oder alle Bereiche –
               genau auf Ihre Infrastruktur zugeschnitten.
             </p>
@@ -154,12 +154,12 @@ export default function ITSicherheitscheckPage() {
                   <h3 className="font-semibold text-white text-sm">{b.title}</h3>
                   <span className={`text-xs px-2 py-0.5 rounded-full border ${b.bg} ${b.color}`}>{b.badge}</span>
                 </div>
-                <p className="text-xs text-gray-400 leading-relaxed">{b.desc}</p>
+                <p className="text-xs text-white/60 leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
           <div className="mt-8 p-5 bg-green-500/5 border border-green-500/20 rounded-2xl text-center">
-            <p className="text-sm text-gray-300 mb-3">Nicht sicher, welche Bereiche geprüft werden sollten?</p>
+            <p className="text-sm text-white/70 mb-3">Nicht sicher, welche Bereiche geprüft werden sollten?</p>
             <Link href="/request-pentest"
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105">
               <Calculator className="w-4 h-4" />Scope im Konfigurator festlegen <ArrowRight className="w-4 h-4" />
@@ -174,7 +174,7 @@ export default function ITSicherheitscheckPage() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             IT Sicherheitscheck – So läuft es ab
           </h2>
-          <p className="text-gray-400 text-sm max-w-xl mx-auto">
+          <p className="text-white/60 text-sm max-w-xl mx-auto">
             Von der Anfrage bis zum Bericht in 4 einfachen Schritten.
             Schnell, klar und ohne unnötige Bürokratie.
           </p>
@@ -187,7 +187,7 @@ export default function ITSicherheitscheckPage() {
                 <step.icon className="w-5 h-5 text-green-400" />
               </div>
               <h3 className="font-semibold text-white mb-2 text-sm">{step.title}</h3>
-              <p className="text-xs text-gray-400 leading-relaxed">{step.desc}</p>
+              <p className="text-xs text-white/60 leading-relaxed">{step.desc}</p>
             </div>
           ))}
         </div>
@@ -198,7 +198,7 @@ export default function ITSicherheitscheckPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">IT Sicherheitscheck Preise</h2>
-            <p className="text-gray-400 text-sm">Transparente Festpreise – kein Tagessatz, keine versteckten Kosten.</p>
+            <p className="text-white/60 text-sm">Transparente Festpreise – kein Tagessatz, keine versteckten Kosten.</p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
@@ -209,17 +209,17 @@ export default function ITSicherheitscheckPage() {
               <div key={pkg.name} className={`relative rounded-2xl p-8 border ${pkg.highlight ? 'bg-green-950/20 border-green-500/30' : 'bg-white/[0.03] border-white/10'}`}>
                 {pkg.highlight && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-600 text-white text-xs font-bold px-4 py-1 rounded-full">Beliebtestes Paket</div>}
                 <h3 className="font-bold text-white text-lg mb-1">{pkg.name}</h3>
-                <p className="text-xs text-gray-500 mb-3">{pkg.duration}</p>
+                <p className="text-xs text-white/50 mb-3">{pkg.duration}</p>
                 <div className={`text-2xl font-bold mb-6 ${pkg.highlight ? 'text-green-400' : 'text-white'}`}>{pkg.price}</div>
                 <ul className="space-y-2 mb-6">
                   {pkg.items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-sm text-gray-300">
+                    <li key={item} className="flex items-start gap-2 text-sm text-white/70">
                       <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />{item}
                     </li>
                   ))}
                 </ul>
                 <Link href="/request-pentest"
-                  className={`w-full inline-flex items-center justify-center gap-2 font-semibold py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105 ${pkg.highlight ? 'bg-green-600 hover:bg-green-500 text-white' : 'border border-white/20 hover:border-white/40 text-gray-300 hover:text-white'}`}>
+                  className={`w-full inline-flex items-center justify-center gap-2 font-semibold py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105 ${pkg.highlight ? 'bg-green-600 hover:bg-green-500 text-white' : 'border border-white/20 hover:border-white/40 text-white/70 hover:text-white'}`}>
                   <Calculator className="w-4 h-4" />Preis berechnen
                 </Link>
               </div>
@@ -235,7 +235,7 @@ export default function ITSicherheitscheckPage() {
             <Star className="w-3.5 h-3.5" /><span>Nur noch 2 Plätze verfügbar</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">IT Sicherheitscheck gratis – Berliner KMU Pilot 2026</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-6 text-sm">
+          <p className="text-white/70 max-w-2xl mx-auto mb-6 text-sm">
             Berliner KMUs mit 20–150 Mitarbeitern erhalten einen subventionierten
             IT Sicherheitscheck im Wert von bis zu 15.000 € – kostenlos.
           </p>
@@ -250,7 +250,7 @@ export default function ITSicherheitscheckPage() {
       <section className="py-20 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">IT Sicherheitscheck – FAQ</h2>
-          <p className="text-gray-400 text-sm">Häufige Fragen zum IT Sicherheitscheck, Ablauf und Kosten.</p>
+          <p className="text-white/60 text-sm">Häufige Fragen zum IT Sicherheitscheck, Ablauf und Kosten.</p>
         </div>
         <div className="space-y-3">
           {FAQS.map((faq, i) => (
@@ -259,10 +259,10 @@ export default function ITSicherheitscheckPage() {
                 className="w-full text-left flex items-center justify-between px-6 py-5 gap-4 hover:bg-white/[0.03] transition-colors"
                 aria-expanded={openFaq === i}>
                 <span className="font-medium text-white text-sm sm:text-base">{faq.q}</span>
-                {openFaq === i ? <ChevronUp className="w-5 h-5 text-green-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />}
+                {openFaq === i ? <ChevronUp className="w-5 h-5 text-green-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
               </button>
               {openFaq === i && (
-                <div className="px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
+                <div className="px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
               )}
             </div>
           ))}
@@ -270,9 +270,9 @@ export default function ITSicherheitscheckPage() {
       </section>
 
       {/* ── EXTERNE QUELLEN ───────────────────────────────────────────────────── */}
-      <section className="py-10 bg-[#131927] border-t border-gray-800">
+      <section className="py-10 bg-[#0A0A0B] border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4" />Externe Quellen & Weiterführendes</h2>
+          <h2 className="text-sm font-semibold text-white/60 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4" />Externe Quellen & Weiterführendes</h2>
           <div className="grid sm:grid-cols-2 gap-2">
             {[
               { label: "OWASP Testing Guide v4.2 – Web Security Check", href: "https://owasp.org/www-project-web-security-testing-guide/" },
@@ -281,9 +281,9 @@ export default function ITSicherheitscheckPage() {
               { label: "CVSS 3.1 Scoring – NIST", href: "https://nvd.nist.gov/vuln-metrics/cvss" },
             ].map((src) => (
               <a key={src.label} href={src.href} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 p-2.5 rounded-lg hover:bg-white/5 transition-colors group">
-                <ExternalLink className="w-3.5 h-3.5 text-gray-500 group-hover:text-gray-400 flex-shrink-0" />
-                <span className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors">{src.label}</span>
+                className="flex items-center gap-2 p-2.5 rounded-2xl hover:bg-white/5 transition-colors group">
+                <ExternalLink className="w-3.5 h-3.5 text-white/50 group-hover:text-white/60 flex-shrink-0" />
+                <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">{src.label}</span>
               </a>
             ))}
           </div>
@@ -298,7 +298,7 @@ export default function ITSicherheitscheckPage() {
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
           Jetzt IT Sicherheitscheck starten
         </h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+        <p className="text-white/60 mb-8 max-w-2xl mx-auto">
           Festpreisangebot per Konfigurator in unter 2 Minuten. OSCP-zertifizierte Pentester.
           Ergebnis in 2–5 Tagen.
         </p>
@@ -307,14 +307,14 @@ export default function ITSicherheitscheckPage() {
             className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
             <Calculator className="w-5 h-5" />IT Sicherheitscheck konfigurieren <ArrowRight className="w-5 h-5" />
           </Link>
-          <a href={PHONE_HREF} className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
+          <a href={PHONE_HREF} className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
             <Phone className="w-4 h-4" />{PHONE}
           </a>
-          <a href={EMAIL_HREF} className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
+          <a href={EMAIL_HREF} className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
             <Mail className="w-4 h-4" />{EMAIL}
           </a>
         </div>
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-white/50">
           {["OSCP-zertifiziert", "Festpreis", "Bericht in 48 h", "DSGVO-konform"].map((t) => (
             <span key={t} className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-green-400" />{t}</span>
           ))}

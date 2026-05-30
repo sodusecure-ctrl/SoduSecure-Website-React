@@ -1,14 +1,19 @@
-﻿"use client";
+"use client";
 
 import { useState } from 'react';
 import { ChevronDown, ChevronUp, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+import { isEnglishPath, localizeHref } from '@/lib/localeRouting';
 
 export default function Footer() {
   const [servicesExpanded, setServicesExpanded] = useState(false);
+  const pathname = usePathname();
+  const isEnglish = isEnglishPath(pathname);
   const t = useTranslations('footer');
+  const toLocalizedPath = (path: string) => localizeHref(path, isEnglish);
   const serviceLabels = t.raw('sections.services.links') as string[];
   const companyLabels = t.raw('sections.company.links') as string[];
   const resourceLabels = t.raw('sections.resources.links') as string[];
@@ -48,6 +53,29 @@ export default function Footer() {
     { label: 'IT Sicherheit testen', href: '/it-sicherheit-testen' },
     { label: 'Schwachstellenanalyse', href: '/schwachstellenanalyse' },
     { label: 'Sicherheitsaudit', href: '/sicherheitsaudit' },
+    // AuditAI · SEO landing pages
+    { label: 'Claude Mythos Alternative', href: '/claude-mythos-alternative' },
+    { label: 'Claude Mythos im Abo', href: '/claude-mythos-im-abo' },
+    { label: 'Claude Mythos für KMU', href: '/claude-mythos-fuer-kmu' },
+    { label: 'Claude Mythos für Softwareentwicklung', href: '/claude-mythos-fuer-softwareentwicklung' },
+    { label: 'Claude Mythos für Software-Team', href: '/claude-mythos-fuer-software-team' },
+    { label: 'Claude Mythos für Software-Sicherheit', href: '/claude-mythos-fuer-software-sicherheit' },
+    { label: 'Claude Code Review', href: '/claude-code-review' },
+    { label: 'Claude Security Audit', href: '/claude-security-audit' },
+    { label: 'Claude AI Pentest', href: '/claude-ai-pentest' },
+    { label: 'Claude Opus Security Review', href: '/claude-opus-security-review' },
+    { label: 'Claude Sonnet Code Audit', href: '/claude-sonnet-code-audit' },
+    { label: 'Powered by Claude · Security', href: '/powered-by-claude-security' },
+    { label: 'Claude vs Snyk', href: '/claude-vs-snyk' },
+    { label: 'Claude Pentest Deutschland', href: '/claude-pentest-deutschland' },
+    { label: 'KI Code Review Deutschland', href: '/ai-code-review-deutschland' },
+    { label: 'Automatisiertes Code-Audit', href: '/automatisiertes-code-audit' },
+    { label: 'Wöchentlicher Security-Bericht', href: '/wochentlicher-security-bericht' },
+    { label: 'Secure Coding as a Service', href: '/secure-coding-as-a-service' },
+    { label: 'GitHub Security Scanner', href: '/github-security-scanner' },
+    { label: 'DevSecOps für KMU', href: '/devsecops-fuer-kmu' },
+    { label: 'KI Code Audit ab 99 €', href: '/ki-code-audit-99-euro' },
+    { label: 'Code Review für Startups', href: '/code-review-startup-security' },
   ];
 
   const VISIBLE_COUNT = 5;
@@ -123,7 +151,7 @@ export default function Footer() {
               {visibleLinks.map((item, index) => (
                 <li key={index}>
                   <Link
-                    href={item.href}
+                    href={toLocalizedPath(item.href)}
                     className="text-gray-400 hover:text-white transition-colors text-sm block py-1"
                   >
                     {item.label}
@@ -150,7 +178,7 @@ export default function Footer() {
               {companyLinks.map((item, index) => (
                 <li key={index}>
                   <Link
-                    href={item.href}
+                    href={toLocalizedPath(item.href)}
                     className="text-gray-400 hover:text-white transition-colors text-sm block py-1"
                   >
                     {item.label}
@@ -167,7 +195,7 @@ export default function Footer() {
               {resourceLinks.map((item, index) => (
                 <li key={index}>
                   <Link
-                    href={item.href}
+                    href={toLocalizedPath(item.href)}
                     className="text-gray-400 hover:text-white transition-colors text-sm block py-1"
                   >
                     {item.label}
@@ -186,19 +214,19 @@ export default function Footer() {
           {/* Legal Links - Stack on mobile, row on md+ */}
           <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
             <Link
-              href="/privacy"
+              href={toLocalizedPath('/privacy')}
               className="text-gray-400 hover:text-white transition-colors text-xs lg:text-sm py-1"
             >
               {t('legal.privacy')}
             </Link>
             <Link
-              href="/terms"
+              href={toLocalizedPath('/terms')}
               className="text-gray-400 hover:text-white transition-colors text-xs lg:text-sm py-1"
             >
               {t('legal.terms')}
             </Link>
             <Link
-              href="/impressum"
+              href={toLocalizedPath('/impressum')}
               className="text-gray-400 hover:text-white transition-colors text-xs lg:text-sm py-1"
             >
               Impressum
@@ -258,7 +286,7 @@ export default function Footer() {
             </p>
             <a
               href="tel:+491777750985"
-              className="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-sm"
+              className="inline-flex items-center justify-center bg-red-600 hover:premium-cta text-white px-6 py-3 rounded-lg font-medium transition-colors text-sm"
             >
               <Phone className="w-4 h-4 mr-2" />
               {t('contact.emergency')}

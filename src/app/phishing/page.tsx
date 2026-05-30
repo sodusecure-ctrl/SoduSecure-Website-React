@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -121,13 +121,13 @@ function SpotsCounter() {
           <div
             key={i}
             className={`w-4 h-4 rounded-sm ${
-              i < TAKEN_SPOTS ? "bg-red-500" : "bg-white/20 border border-white/30"
+              i < TAKEN_SPOTS ? "bg-[#FF3B30]" : "bg-white/20 border border-white/30"
             }`}
           />
         ))}
       </div>
       <span className="text-sm text-white/80">
-        <span className="text-red-400 font-bold">{remaining} von {TOTAL_SPOTS}</span> Plätzen frei
+        <span className="text-[#FF3B30] font-bold">{remaining} von {TOTAL_SPOTS}</span> Plätzen frei
       </span>
     </div>
   );
@@ -176,16 +176,16 @@ function PhishingGame() {
           <div className="text-6xl mb-4">
             {percentage >= 80 ? '🏆' : percentage >= 60 ? '🎖️' : percentage >= 40 ? '👍' : '🤔'}
           </div>
-          <h3 className="text-3xl font-bold text-gray-900 mb-2">Dein Ergebnis: {score} von {PHISHING_EXAMPLES.length}</h3>
-          <p className="text-gray-600 text-lg mb-4">{percentage}% richtig</p>
+          <h3 className="text-3xl font-bold text-white mb-2">Dein Ergebnis: {score} von {PHISHING_EXAMPLES.length}</h3>
+          <p className="text-white/70 text-lg mb-4">{percentage}% richtig</p>
           <div className="flex justify-center mb-4">
             {Array.from({ length: 5 }).map((_, i) => (
-              <span key={i} className={`text-2xl ${i < Math.round(score / PHISHING_EXAMPLES.length * 5) ? 'text-yellow-400' : 'text-gray-300'}`}>
+              <span key={i} className={`text-2xl ${i < Math.round(score / PHISHING_EXAMPLES.length * 5) ? 'text-yellow-400' : 'text-white/70'}`}>
                 ⭐
               </span>
             ))}
           </div>
-          <p className="text-gray-700 mb-6 max-w-md mx-auto">
+          <p className="text-white mb-6 max-w-md mx-auto">
             {percentage >= 80 ? "Ausgezeichnet! Du hast ein scharfes Auge für Phishing." : 
              percentage >= 60 ? "Gut gemacht! Aber es gibt noch Raum für Verbesserung." : 
              percentage >= 40 ? "Nicht schlecht, aber Phishing kann gefährlich sein." : 
@@ -214,14 +214,14 @@ function PhishingGame() {
   const progress = ((currentQuestion + 1) / PHISHING_EXAMPLES.length) * 100;
 
   return (
-    <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100">
+    <div className="bg-[#16141A] rounded-3xl p-8 shadow-2xl border border-white/8">
       {/* Progress Bar */}
       <div className="mb-6">
-        <div className="flex justify-between text-sm text-gray-600 mb-2">
+        <div className="flex justify-between text-sm text-white/70 mb-2">
           <span>Frage {currentQuestion + 1} von {PHISHING_EXAMPLES.length}</span>
           <span>{Math.round(progress)}% fertig</span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-3">
+        <div className="w-full bg-[#EEEEEE] rounded-full h-3">
           <div 
             className="bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full transition-all duration-500 ease-out"
             style={{ width: `${progress}%` }}
@@ -229,21 +229,21 @@ function PhishingGame() {
         </div>
       </div>
 
-      <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">🕵️‍♂️ Phishing-Detektiv: Ist diese E-Mail sicher?</h3>
+      <h3 className="text-2xl font-bold text-white mb-6 text-center">🕵️‍♂️ Phishing-Detektiv: Ist diese E-Mail sicher?</h3>
       
-      <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl mb-6 border border-gray-200 shadow-inner">
+      <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-2xl mb-6 border border-white/10 shadow-inner">
         <div className="space-y-3 text-sm">
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-gray-700">Von:</span>
-            <span className="text-gray-900 bg-white px-2 py-1 rounded border">{example.email.from}</span>
+            <span className="font-semibold text-white">Von:</span>
+            <span className="text-white bg-transparent px-2 py-1 rounded border">{example.email.from}</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="font-semibold text-gray-700">Betreff:</span>
-            <span className="text-gray-900 bg-white px-2 py-1 rounded border flex-1">{example.email.subject}</span>
+            <span className="font-semibold text-white">Betreff:</span>
+            <span className="text-white bg-transparent px-2 py-1 rounded border flex-1">{example.email.subject}</span>
           </div>
           <div className="mt-4">
-            <span className="font-semibold text-gray-700 block mb-2">Nachricht:</span>
-            <div className="bg-white p-4 rounded-lg border text-gray-800 whitespace-pre-line text-sm leading-relaxed shadow-sm">
+            <span className="font-semibold text-white block mb-2">Nachricht:</span>
+            <div className="bg-[#16141A] p-4 rounded-2xl border text-white whitespace-pre-line text-sm leading-relaxed shadow-sm">
               {example.email.body}
             </div>
           </div>
@@ -254,13 +254,13 @@ function PhishingGame() {
         <div className={`p-6 rounded-2xl mb-6 border-2 shadow-lg transition-all duration-500 ${
           selectedAnswer === example.isFake 
             ? 'bg-green-50 border-green-300 text-green-800' 
-            : 'bg-red-50 border-red-300 text-red-800'
+            : 'bg-[#FEE4E4] border-[#FF3B30]/40 text-[#A02520]'
         }`}>
           <div className="flex items-center gap-3 mb-3">
             {selectedAnswer === example.isFake ? (
               <CheckCircle className="w-8 h-8 text-green-600" />
             ) : (
-              <X className="w-8 h-8 text-red-600" />
+              <X className="w-8 h-8 text-[#FF3B30]" />
             )}
             <h4 className="text-xl font-bold">
               {selectedAnswer === example.isFake ? 'Richtig!' : 'Falsch!'}
@@ -271,7 +271,7 @@ function PhishingGame() {
         </div>
       ) : (
         <div className="text-center">
-          <p className="text-gray-700 mb-6 text-lg">Ist diese E-Mail ein Phishing-Versuch?</p>
+          <p className="text-white mb-6 text-lg">Ist diese E-Mail ein Phishing-Versuch?</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => handleAnswer(true)}
@@ -342,7 +342,7 @@ function QuickForm() {
         placeholder="Firmenname *"
         value={form.company}
         onChange={(e) => setForm({ ...form, company: e.target.value })}
-        className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-400 transition"
+        className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-[#FF3B30]/60 transition"
       />
       <input
         required
@@ -350,7 +350,7 @@ function QuickForm() {
         placeholder="Ansprechpartner *"
         value={form.contactName}
         onChange={(e) => setForm({ ...form, contactName: e.target.value })}
-        className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-400 transition"
+        className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-[#FF3B30]/60 transition"
       />
       <input
         required
@@ -358,13 +358,13 @@ function QuickForm() {
         placeholder="E-Mail-Adresse *"
         value={form.email}
         onChange={(e) => setForm({ ...form, email: e.target.value })}
-        className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-red-400 transition"
+        className="w-full bg-white/10 border border-white/20 text-white placeholder-white/40 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:border-[#FF3B30]/60 transition"
       />
-      {error && <p className="text-red-400 text-xs">{error}</p>}
+      {error && <p className="text-[#FF3B30] text-xs">{error}</p>}
       <button
         type="submit"
         disabled={loading}
-        className="w-full bg-red-600 hover:bg-red-700 disabled:opacity-60 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 hover:scale-[1.02] text-sm flex items-center justify-center gap-2"
+        className="w-full premium-cta disabled:opacity-60 text-white font-bold py-3 px-6 rounded-2xl transition-all duration-200 hover:scale-[1.02] text-sm flex items-center justify-center gap-2"
       >
         {loading ? "Wird gesendet..." : (
           <>Platz sichern <ArrowRight className="w-4 h-4" /></>
@@ -394,9 +394,9 @@ export default function BerlinKMUPhishingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-transparent font-sans">
       {/* ── LOGO NAV ────────────────────────────── */}
-      <nav className="sticky top-0 z-50 bg-gray-900/95 backdrop-blur border-b border-white/10">
+      <nav className="sticky top-0 z-50 bg-white/[0.04]/95 backdrop-blur border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-start">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-9 h-9 rounded-2xl overflow-hidden flex items-center justify-center">
@@ -408,7 +408,7 @@ export default function BerlinKMUPhishingPage() {
                 className="w-full h-full object-contain rounded shadow"
               />
             </div>
-            <span className="text-white text-lg font-semibold group-hover:text-red-400 transition-colors hidden sm:block">
+            <span className="text-white text-lg font-semibold group-hover:text-[#FF3B30] transition-colors hidden sm:block">
               SODU Secure
             </span>
           </Link>
@@ -416,7 +416,7 @@ export default function BerlinKMUPhishingPage() {
       </nav>
 
       {/* ── URGENCY BANNER ──────────────────────── */}
-      <div className="bg-red-600 text-white py-2.5 px-4">
+      <div className="bg-[#FF3B30] text-white py-2.5 px-4">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2 text-sm">
             <Clock className="w-4 h-4 flex-shrink-0" />
@@ -436,12 +436,12 @@ export default function BerlinKMUPhishingPage() {
             backgroundSize: "48px 48px",
           }}
         />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#FF3B30]/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
           <div className={`flex justify-center lg:justify-start mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}>
-            <span className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">
+            <span className="inline-flex items-center gap-2 bg-[#FF3B30]/20 border border-[#FF3B30]/30 text-[#FF3B30] text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full">
               <Shield className="w-3.5 h-3.5" />
               Phishing-Kampagne – Social Engineering Test
             </span>
@@ -451,9 +451,9 @@ export default function BerlinKMUPhishingPage() {
             <div className={`space-y-6 text-center lg:text-left transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
                 Phishing-Kampagne:{" "}
-                <span className="text-red-500">Wie anfällig sind Ihre Mitarbeiter wirklich?</span>
+                <span className="text-[#FF3B30]">Wie anfällig sind Ihre Mitarbeiter wirklich?</span>
               </h1>
-              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              <p className="text-white/70 text-base sm:text-lg leading-relaxed">
                 SODU Secure führt professionelle Social Engineering Tests durch – Phishing, Vishing und Smishing.
                 Vollständige Awareness-Kampagne für{" "}
                 <span className="text-white font-semibold">Unternehmen – jetzt kostenlos testen.</span>
@@ -471,8 +471,8 @@ export default function BerlinKMUPhishingPage() {
                       i === 1
                         ? "bg-green-500/20 border border-green-500/30 text-green-400"
                         : i === 2
-                        ? "bg-red-500/20 border border-red-500/30 text-red-400"
-                        : "bg-white/10 border border-white/20 text-gray-300"
+                        ? "bg-[#FF3B30]/20 border border-[#FF3B30]/30 text-[#FF3B30]"
+                        : "bg-white/10 border border-white/20 text-white/70"
                     }`}
                   >
                     {badge}
@@ -483,7 +483,7 @@ export default function BerlinKMUPhishingPage() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                 <button
                   onClick={scrollToForm}
-                  className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-red-600/25 flex items-center justify-center gap-2"
+                  className="premium-cta text-white font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-red-600/25 flex items-center justify-center gap-2"
                 >
                   <Lock className="w-5 h-5" />
                   Jetzt bewerben
@@ -497,14 +497,14 @@ export default function BerlinKMUPhishingPage() {
                 </a>
               </div>
 
-              <p className="text-gray-400 text-sm text-center lg:text-left">
+              <p className="text-white/60 text-sm text-center lg:text-left">
                 Kein Berliner KMU?{" "}
-                <Link href="/phishing-simulation" className="text-red-400 hover:text-red-300 underline underline-offset-2 transition-colors">
+                <Link href="/phishing-simulation" className="text-[#FF3B30] hover:text-[#FF6B61] underline underline-offset-2 transition-colors">
                   Alle Phishing-Kampagnen &amp; Preise →
                 </Link>
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 text-xs text-gray-400 justify-center lg:justify-start pt-2">
+              <div className="flex flex-wrap items-center gap-4 text-xs text-white/60 justify-center lg:justify-start pt-2">
                 <span className="flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5 text-green-400" /> Berliner GmbH</span>
                 <span className="flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5 text-green-400" /> Zertifizierte Experten</span>
                 <span className="flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5 text-green-400" /> DSGVO-konform</span>
@@ -516,11 +516,11 @@ export default function BerlinKMUPhishingPage() {
               <QuickForm />
               <div className="mt-4 text-center">
                 <p className="text-white/40 text-xs mb-2">Oder direkt sprechen:</p>
-                <a href={PHONE_HREF} className="text-white font-bold text-lg hover:text-red-400 transition-colors flex items-center justify-center gap-2">
-                  <Phone className="w-5 h-5 text-red-400" />
+                <a href={PHONE_HREF} className="text-white font-bold text-lg hover:text-[#FF3B30] transition-colors flex items-center justify-center gap-2">
+                  <Phone className="w-5 h-5 text-[#FF3B30]" />
                   {PHONE}
                 </a>
-                <p className="text-gray-500 text-xs mt-1">Persönlicher Ansprechpartner: Kerim K., Geschäftsführer</p>
+                <p className="text-white/50 text-xs mt-1">Persönlicher Ansprechpartner: Kerim K., Geschäftsführer</p>
               </div>
             </div>
           </div>
@@ -528,12 +528,12 @@ export default function BerlinKMUPhishingPage() {
       </section>
 
       {/* ── WHY PHISHING MATTERS ────────────────── */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-[#16141A]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-red-600 font-semibold text-sm uppercase tracking-wider">Warum Phishing-Kampagnen wichtig sind</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Warum Ihr KMU eine Phishing-Kampagne braucht</h2>
-            <p className="mt-3 text-gray-500 max-w-2xl mx-auto">
+            <span className="text-[#FF3B30] font-semibold text-sm uppercase tracking-wider">Warum Phishing-Kampagnen wichtig sind</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Warum Ihr KMU eine Phishing-Kampagne braucht</h2>
+            <p className="mt-3 text-white/50 max-w-2xl mx-auto">
               Phishing ist der häufigste Einstiegspunkt für Cyberangriffe. Erfahren Sie, warum regelmäßige Tests entscheidend sind.
             </p>
           </div>
@@ -557,29 +557,29 @@ export default function BerlinKMUPhishingPage() {
               },
             ].map((item, i) => (
               <div key={i} className="text-center">
-                <div className="w-16 h-16 bg-red-50 border border-red-200 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <item.icon className="w-8 h-8 text-red-600" />
+                <div className="w-16 h-16 bg-[#FEE4E4] border border-[#FF3B30]/30 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="w-8 h-8 text-[#FF3B30]" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
+                <h3 className="font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-white/70 text-sm">{item.desc}</p>
               </div>
             ))}
           </div>
 
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Testen Sie Ihr Wissen!</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">Testen Sie Ihr Wissen!</h3>
             <PhishingGame />
           </div>
         </div>
       </section>
 
       {/* ── WHAT WE DO ──────────────────────────── */}
-      <section className="py-16 sm:py-20 bg-gray-50">
+      <section className="py-16 sm:py-20 bg-white/[0.02]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-red-600 font-semibold text-sm uppercase tracking-wider">Unsere Phishing-Kampagne</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Was unsere Kampagne umfasst</h2>
-            <p className="mt-3 text-gray-500 max-w-xl mx-auto">
+            <span className="text-[#FF3B30] font-semibold text-sm uppercase tracking-wider">Unsere Phishing-Kampagne</span>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Was unsere Kampagne umfasst</h2>
+            <p className="mt-3 text-white/50 max-w-xl mx-auto">
               Eine vollständige Social Engineering Kampagne für Berliner KMUs – manuell durchgeführt von Sicherheitsexperten.
             </p>
           </div>
@@ -613,12 +613,12 @@ export default function BerlinKMUPhishingPage() {
             ].map((s) => {
               const Icon = s.icon;
               return (
-                <div key={s.title} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${s.color === 'red' ? 'bg-red-50 text-red-600' : s.color === 'blue' ? 'bg-blue-50 text-blue-600' : s.color === 'amber' ? 'bg-amber-50 text-amber-600' : 'bg-green-50 text-green-600'}`}>
+                <div key={s.title} className="bg-[#16141A] rounded-2xl p-6 shadow-sm border border-white/8 hover:shadow-md transition-shadow">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${s.color === 'red' ? 'bg-[#FEE4E4] text-[#FF3B30]' : s.color === 'blue' ? 'bg-blue-50 text-blue-600' : s.color === 'amber' ? 'bg-amber-50 text-amber-600' : 'bg-green-50 text-green-600'}`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+                  <h3 className="font-bold text-white mb-2">{s.title}</h3>
+                  <p className="text-white/50 text-sm leading-relaxed">{s.desc}</p>
                 </div>
               );
             })}
@@ -627,12 +627,12 @@ export default function BerlinKMUPhishingPage() {
       </section>
 
       {/* ── FORM SECTION ────────────────────────── */}
-      <section id="bewerben" className="py-16 sm:py-20 bg-gray-900 text-white">
+      <section id="bewerben" className="py-16 sm:py-20 bg-white/[0.04] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <span className="text-red-400 font-semibold text-sm uppercase tracking-wider">Jetzt bewerben</span>
+            <span className="text-[#FF3B30] font-semibold text-sm uppercase tracking-wider">Jetzt bewerben</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold">Testen Sie Ihre Firma – Kostenlos!</h2>
-            <p className="mt-3 text-gray-300 max-w-2xl mx-auto">
+            <p className="mt-3 text-white/70 max-w-2xl mx-auto">
               Sichern Sie sich einen der 7 Plätze für unsere gratis Phishing-Kampagne. Erfahren Sie, wie sicher Ihre Mitarbeiter wirklich sind.
             </p>
           </div>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -117,7 +117,7 @@ export default function ThankYouPage() {
             <button
               onClick={sendFeedback}
               disabled={feedbackSending || (!rating && !feedback.trim())}
-              className="mt-2 w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold px-4 py-2 rounded-lg text-sm transition"
+              className="mt-2 w-full flex items-center justify-center gap-2 bg-red-600 hover:premium-cta disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold px-4 py-2 rounded-lg text-sm transition"
             >
               {feedbackSending ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
@@ -131,7 +131,7 @@ export default function ThankYouPage() {
         {/* CTA back to site */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-sm sm:text-base"
+          className="inline-flex items-center gap-2 bg-red-600 hover:premium-cta text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-sm sm:text-base"
         >
           Zurück zur Startseite
           <ArrowRight className="w-4 h-4" />

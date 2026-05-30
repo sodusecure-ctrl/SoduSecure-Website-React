@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Card, CardContent } from '@/components/ui/card';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -57,7 +57,7 @@ export default function TestimonialsCarousel() {
         </div>
 
         {/* Testimonial Card */}
-        <Card className={`bg-white shadow-sm sm:shadow-md lg:shadow-lg border-gray-200 transition-opacity duration-300 ${isAnimating ? 'opacity-90' : 'opacity-100'}`}>
+        <Card className={`bg-[#16141A] shadow-sm sm:shadow-md lg:shadow-lg border-white/10 transition-opacity duration-300 ${isAnimating ? 'opacity-90' : 'opacity-100'}`}>
           <CardContent className="p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12">
             {/* Stars */}
             <div className="flex gap-0.5 sm:gap-1 mb-4 sm:mb-5 lg:mb-6">
@@ -80,7 +80,7 @@ export default function TestimonialsCarousel() {
               <div className="flex items-center gap-3 sm:gap-4">
                 {/* Avatar */}
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-red-100 to-red-50 flex items-center justify-center">
-                  <span className="text-red-600 font-medium text-base sm:text-lg">
+                  <span className="text-[#FF3B30] font-medium text-base sm:text-lg">
                     {currentTestimonial.initial}
                   </span>
                 </div>
@@ -100,7 +100,7 @@ export default function TestimonialsCarousel() {
               <div className="flex gap-2">
                 <button
                   onClick={handlePrev}
-                  className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 hover:border-gray-300 active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                  className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 hover:border-white/12 active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500/20"
                   aria-label="Previous testimonial"
                   disabled={isAnimating}
                 >
@@ -108,7 +108,7 @@ export default function TestimonialsCarousel() {
                 </button>
                 <button
                   onClick={handleNext}
-                  className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 hover:border-gray-300 active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500/20"
+                  className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 hover:border-white/12 active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-red-500/20"
                   aria-label="Next testimonial"
                   disabled={isAnimating}
                 >

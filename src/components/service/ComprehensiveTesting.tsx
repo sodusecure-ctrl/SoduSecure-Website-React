@@ -1,4 +1,4 @@
-﻿import { AlertTriangle, ArrowRight, Cpu, FileText, Plus, Shield, Terminal, TrendingUp, X } from 'lucide-react';
+import { AlertTriangle, ArrowRight, Cpu, FileText, Plus, Shield, Terminal, TrendingUp, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { Button } from '../ui/button';
@@ -44,7 +44,7 @@ export default function ComprehensiveTesting() {
               <ul className="space-y-2 sm:space-y-3">
                 {(t.raw('testingApproach.manualTesting.items') as string[]).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-gray-300">
-                    <span className="text-red-600 mt-1">•</span>
+                    <span className="text-[#FF3B30] mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -54,7 +54,7 @@ export default function ComprehensiveTesting() {
             {/* Automated Scanning Card */}
             <div className="border border-gray-800 rounded-lg p-4 sm:p-6 bg-black">
               <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#16141A] rounded flex items-center justify-center flex-shrink-0">
                   <Cpu className="w-4 h-4 sm:w-5 sm:h-5 text-black" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold">{t('testingApproach.automatedScanning.title')}</h3>
@@ -63,7 +63,7 @@ export default function ComprehensiveTesting() {
               <ul className="space-y-2 sm:space-y-3">
                 {(t.raw('testingApproach.automatedScanning.items') as string[]).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-gray-300">
-                    <span className="text-red-600 mt-1">•</span>
+                    <span className="text-[#FF3B30] mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -75,26 +75,26 @@ export default function ComprehensiveTesting() {
           <div className="border border-gray-800 rounded-lg p-4 sm:p-6 bg-black">
             <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <div className="w-8 h-8 sm:w-10 sm:h-10 border-2 border-red-600 rounded flex items-center justify-center flex-shrink-0">
-                <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" />
+                <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30]" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold">{t('testingApproach.industryStandards.title')}</h3>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <div>
-                <h4 className="text-red-600 font-bold text-xs sm:text-sm mb-1 sm:mb-2">{t('testingApproach.industryStandards.owasp.title')}</h4>
+                <h4 className="text-[#FF3B30] font-bold text-xs sm:text-sm mb-1 sm:mb-2">{t('testingApproach.industryStandards.owasp.title')}</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
                   {t('testingApproach.industryStandards.owasp.description')}
                 </p>
               </div>
               <div>
-                <h4 className="text-red-600 font-bold text-xs sm:text-sm mb-1 sm:mb-2">{t('testingApproach.industryStandards.osstmm.title')}</h4>
+                <h4 className="text-[#FF3B30] font-bold text-xs sm:text-sm mb-1 sm:mb-2">{t('testingApproach.industryStandards.osstmm.title')}</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
                   {t('testingApproach.industryStandards.osstmm.description')}
                 </p>
               </div>
               <div className="sm:col-span-2 lg:col-span-1">
-                <h4 className="text-red-600 font-bold text-xs sm:text-sm mb-1 sm:mb-2">{t('testingApproach.industryStandards.nist.title')}</h4>
+                <h4 className="text-[#FF3B30] font-bold text-xs sm:text-sm mb-1 sm:mb-2">{t('testingApproach.industryStandards.nist.title')}</h4>
                 <p className="text-xs text-gray-400 leading-relaxed">
                   {t('testingApproach.industryStandards.nist.description')}
                 </p>
@@ -105,23 +105,23 @@ export default function ComprehensiveTesting() {
       </div>
 
       {/* Why This Test Matters Section */}
-      <div className="bg-white text-black px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">
+      <div className="bg-[#16141A] text-black px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2">{t('whyMatters.title')}</h2>
           <div className="w-12 sm:w-16 h-1 bg-red-600 mb-8 sm:mb-12"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
             {/* Business Impact Card */}
-            <div className="border-2 border-gray-200 rounded-lg p-4 sm:p-6 bg-white">
+            <div className="border-2 border-white/10 rounded-lg p-4 sm:p-6 bg-[#16141A]">
               <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
+                <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF3B30]" />
                 <h3 className="text-lg sm:text-xl font-bold">{t('whyMatters.businessImpact.title')}</h3>
               </div>
 
               <ul className="space-y-2 sm:space-y-3">
                 {(t.raw('whyMatters.businessImpact.items') as string[]).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm">
-                    <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4 text-red-600 mt-0.5 flex-shrink-0" />
+                    <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4 text-[#FF3B30] mt-0.5 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -131,14 +131,14 @@ export default function ComprehensiveTesting() {
             {/* Compliance Benefits Card */}
             <div className="border-2 border-gray-900 rounded-lg p-4 sm:p-6 bg-black text-white">
               <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
+                <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-[#FF3B30]" />
                 <h3 className="text-lg sm:text-xl font-bold">{t('whyMatters.complianceBenefits.title')}</h3>
               </div>
 
               <ul className="space-y-2 sm:space-y-3">
                 {(t.raw('whyMatters.complianceBenefits.items') as string[]).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-gray-300">
-                    <span className="text-red-600 mt-1">•</span>
+                    <span className="text-[#FF3B30] mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -158,7 +158,7 @@ export default function ComprehensiveTesting() {
             {faqItems.map((item, index) => (
               <div
                 key={index}
-                className="border border-gray-300 rounded-lg bg-white  transition-shadow"
+                className="border border-white/12 rounded-lg bg-[#16141A]  transition-shadow"
               >
                 <button
                   onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
@@ -217,7 +217,7 @@ export default function ComprehensiveTesting() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               onClick={() => router.push("/request-pentest")}
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-6 text-base font-medium transition-all duration-200 shadow-lg shadow-red-600/50 hover:shadow-red-600/70 group"
+              className="bg-red-600 hover:premium-cta text-white px-8 py-6 text-base font-medium transition-all duration-200 shadow-lg shadow-red-600/50 hover:shadow-red-600/70 group"
               size="lg"
             >
               {t('cta.requestPentest')}
@@ -226,7 +226,7 @@ export default function ComprehensiveTesting() {
 
             <Button
               variant="outline"
-              className="border border-white text-white bg-black hover:bg-white hover:text-black px-8 py-6 text-base font-medium transition-all duration-200"
+              className="border border-white text-white bg-black hover:bg-[#16141A] hover:text-black px-8 py-6 text-base font-medium transition-all duration-200"
               size="lg"
             >
               {t('cta.scheduleCall')}

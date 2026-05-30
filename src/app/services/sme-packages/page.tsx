@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import {
   AlertTriangle,
   ArrowRight,
@@ -226,7 +226,7 @@ export default function SMESecurityPackagesPage() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#16141A] text-gray-900">
 
       {/* ── HERO ──────────────────────────────── */}
       <div className="bg-black text-white relative overflow-hidden">
@@ -259,7 +259,7 @@ export default function SMESecurityPackagesPage() {
             <div className="flex flex-wrap gap-3">
               <button
                 onClick={() => router.push("/request-pentest")}
-                className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center gap-2"
+                className="bg-red-600 hover:premium-cta text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center gap-2"
               >
                 <Lock className="w-5 h-5" />
                 Jetzt Paket anfragen
@@ -276,7 +276,7 @@ export default function SMESecurityPackagesPage() {
       </div>
 
       {/* ── KMU QUALIFICATION ─────────────────── */}
-      <div className="bg-gray-50 border-b border-gray-200 py-8">
+      <div className="bg-gray-50 border-b border-white/10 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center gap-4 flex-wrap">
             <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider whitespace-nowrap">
@@ -295,7 +295,7 @@ export default function SMESecurityPackagesPage() {
       {/* ── PRICING PACKAGES ──────────────────── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="text-center mb-12">
-          <span className="text-red-600 font-semibold text-sm uppercase tracking-wider">Pakete & Preise</span>
+          <span className="text-[#FF3B30] font-semibold text-sm uppercase tracking-wider">Pakete & Preise</span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">
             Wählen Sie Ihr Sicherheitspaket
           </h2>
@@ -312,7 +312,7 @@ export default function SMESecurityPackagesPage() {
               className={`relative rounded-2xl border-2 flex flex-col ${
                 pkg.popular
                   ? "border-red-600 shadow-xl shadow-red-600/10"
-                  : "border-gray-200 shadow-sm"
+                  : "border-white/10 shadow-sm"
               }`}
             >
               {pkg.popular && (
@@ -323,8 +323,8 @@ export default function SMESecurityPackagesPage() {
                 </div>
               )}
 
-              <div className={`p-6 sm:p-8 rounded-t-2xl ${pkg.popular ? "bg-gray-900 text-white" : "bg-white"}`}>
-                <p className={`text-xs font-semibold uppercase tracking-wider mb-1 ${pkg.popular ? "text-red-400" : "text-red-600"}`}>
+              <div className={`p-6 sm:p-8 rounded-t-2xl ${pkg.popular ? "bg-gray-900 text-white" : "bg-[#16141A]"}`}>
+                <p className={`text-xs font-semibold uppercase tracking-wider mb-1 ${pkg.popular ? "text-red-400" : "text-[#FF3B30]"}`}>
                   {pkg.tagline}
                 </p>
                 <h3 className={`text-xl font-bold mb-1 ${pkg.popular ? "text-white" : "text-gray-900"}`}>
@@ -342,7 +342,7 @@ export default function SMESecurityPackagesPage() {
                   onClick={() => router.push("/request-pentest")}
                   className={`mt-5 w-full py-3 rounded-xl font-bold text-sm transition-all hover:scale-[1.02] flex items-center justify-center gap-2 ${
                     pkg.popular
-                      ? "bg-red-600 hover:bg-red-700 text-white"
+                      ? "bg-red-600 hover:premium-cta text-white"
                       : "bg-gray-900 hover:bg-gray-800 text-white"
                   }`}
                 >
@@ -351,14 +351,14 @@ export default function SMESecurityPackagesPage() {
                 </button>
               </div>
 
-              <div className="p-6 sm:p-8 bg-white rounded-b-2xl flex-1 flex flex-col gap-6">
+              <div className="p-6 sm:p-8 bg-[#16141A] rounded-b-2xl flex-1 flex flex-col gap-6">
                 {pkg.components.map((comp, ci) => {
                   const Icon = comp.icon;
                   return (
                     <div key={ci}>
                       <div className="flex items-center gap-2 mb-3">
-                        <div className="w-8 h-8 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Icon className="w-4 h-4 text-red-600" />
+                        <div className="w-8 h-8 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Icon className="w-4 h-4 text-[#FF3B30]" />
                         </div>
                         <h4 className="font-bold text-gray-900 text-sm">{comp.title}</h4>
                       </div>
@@ -375,7 +375,7 @@ export default function SMESecurityPackagesPage() {
                 })}
 
                 {pkg.notIncluded.length > 0 && (
-                  <div className="border-t border-gray-100 pt-4">
+                  <div className="border-t border-white/8 pt-4">
                     <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Nicht enthalten:</p>
                     {pkg.notIncluded.map((item, i) => (
                       <div key={i} className="flex items-center gap-2 text-xs text-gray-400 mb-1">
@@ -392,7 +392,7 @@ export default function SMESecurityPackagesPage() {
 
         <p className="text-center text-gray-400 text-sm mt-6">
           Alle Preise zzgl. MwSt. · individuelle Angebote möglich ·{" "}
-          <button onClick={() => router.push("/contact")} className="text-red-600 underline">
+          <button onClick={() => router.push("/contact")} className="text-[#FF3B30] underline">
             Kontakt für Sonderpreise
           </button>
         </p>
@@ -402,7 +402,7 @@ export default function SMESecurityPackagesPage() {
       <div className="bg-gray-50 py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-red-600 font-semibold text-sm uppercase tracking-wider">Was wir konkret testen</span>
+            <span className="text-[#FF3B30] font-semibold text-sm uppercase tracking-wider">Was wir konkret testen</span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">
               Jede Komponente erklärt
             </h2>
@@ -410,15 +410,15 @@ export default function SMESecurityPackagesPage() {
 
           <div className="space-y-6">
             {/* Externer Pentest */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
-                      <Globe className="w-6 h-6 text-red-600" />
+                    <div className="w-12 h-12 bg-[#FF3B30]/10 rounded-xl flex items-center justify-center">
+                      <Globe className="w-6 h-6 text-[#FF3B30]" />
                     </div>
                     <div>
-                      <p className="text-xs text-red-600 font-semibold uppercase tracking-wider">In allen Paketen</p>
+                      <p className="text-xs text-[#FF3B30] font-semibold uppercase tracking-wider">In allen Paketen</p>
                       <h3 className="font-bold text-xl text-gray-900">Externer Pentest</h3>
                     </div>
                   </div>
@@ -458,7 +458,7 @@ export default function SMESecurityPackagesPage() {
             </div>
 
             {/* Phishing */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -506,7 +506,7 @@ export default function SMESecurityPackagesPage() {
             </div>
 
             {/* Web Präsenz */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -545,7 +545,7 @@ export default function SMESecurityPackagesPage() {
             </div>
 
             {/* Web App Komplett (only in Komplett package) */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -584,7 +584,7 @@ export default function SMESecurityPackagesPage() {
             </div>
 
             {/* Interner Pentest / AD */}
-            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -601,10 +601,10 @@ export default function SMESecurityPackagesPage() {
                     Active Directory auf Fehlkonfigurationen, die Angreifern nach einem initialen Zugriff
                     ermöglichen, die vollständige Kontrolle über Ihre IT zu übernehmen.
                   </p>
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                  <div className="bg-[#FF3B30]/10 border border-[#FF3B30]/25 rounded-lg p-4">
                     <div className="flex items-start gap-2">
-                      <AlertTriangle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                      <p className="text-red-800 text-xs leading-relaxed">
+                      <AlertTriangle className="w-4 h-4 text-[#FF3B30] flex-shrink-0 mt-0.5" />
+                      <p className="text-[#FF6B61] text-xs leading-relaxed">
                         <strong>Kritisch:</strong> In über 80 % der Microsoft-Umgebungen finden wir
                         mindestens eine Schwachstelle, die zur vollständigen AD-Übernahme führt.
                       </p>
@@ -637,7 +637,7 @@ export default function SMESecurityPackagesPage() {
       {/* ── DELIVERABLES ──────────────────────── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="text-center mb-10">
-          <span className="text-red-600 font-semibold text-sm uppercase tracking-wider">Ergebnisse</span>
+          <span className="text-[#FF3B30] font-semibold text-sm uppercase tracking-wider">Ergebnisse</span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Was Sie erhalten</h2>
           <p className="mt-3 text-gray-500 max-w-xl mx-auto">In jedem Paket – unabhängig von der Variante.</p>
         </div>
@@ -645,7 +645,7 @@ export default function SMESecurityPackagesPage() {
           {DELIVERABLES.map((d, i) => {
             const Icon = d.icon;
             return (
-              <div key={i} className="bg-white border-2 border-gray-200 hover:border-red-600 rounded-2xl p-6 transition-colors hover:shadow-lg">
+              <div key={i} className="bg-[#16141A] border-2 border-white/10 hover:border-red-600 rounded-2xl p-6 transition-colors hover:shadow-lg">
                 <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-white" />
                 </div>
@@ -673,7 +673,7 @@ export default function SMESecurityPackagesPage() {
           </p>
           <Link
             href="/berlin-kmu-pilot"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-red-600 hover:premium-cta text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105"
           >
             Zum Pilotprogramm
             <ExternalLink className="w-4 h-4" />
@@ -682,7 +682,7 @@ export default function SMESecurityPackagesPage() {
       </div>
 
       {/* ── FREE PDF DOWNLOAD BANNER ──────── */}
-      <div className="bg-white border-t border-gray-100 py-12">
+      <div className="bg-[#16141A] border-t border-white/8 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-6">
             <div className="flex-shrink-0 w-16 h-20 bg-red-600/20 border border-red-600/30 rounded-xl flex flex-col items-center justify-center gap-1">
@@ -703,7 +703,7 @@ export default function SMESecurityPackagesPage() {
               <a
                 href="/pdf/5_Sicherheitsluecken_KMU.pdf"
                 download="5_Sicherheitsluecken_KMU.pdf"
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-xl transition-all hover:scale-105 text-sm whitespace-nowrap"
+                className="inline-flex items-center gap-2 bg-red-600 hover:premium-cta text-white font-bold px-6 py-3 rounded-xl transition-all hover:scale-105 text-sm whitespace-nowrap"
               >
                 <FileText className="w-4 h-4" />
                 Jetzt herunterladen
@@ -723,7 +723,7 @@ export default function SMESecurityPackagesPage() {
       </div>
 
       {/* ── FINAL CTA ─────────────────────────── */}
-      <div className="bg-white py-16 border-t border-gray-100">
+      <div className="bg-[#16141A] py-16 border-t border-white/8">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
             Bereit für Ihren Security-Check?
@@ -734,14 +734,14 @@ export default function SMESecurityPackagesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => router.push("/request-pentest")}
-              className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="bg-red-600 hover:premium-cta text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
               <Lock className="w-5 h-5" />
               Paket anfragen
             </button>
             <a
               href="tel:+491777750985"
-              className="border-2 border-gray-200 text-gray-700 hover:border-gray-900 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="border-2 border-white/10 text-gray-700 hover:border-gray-900 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
               (+49) 01777750985

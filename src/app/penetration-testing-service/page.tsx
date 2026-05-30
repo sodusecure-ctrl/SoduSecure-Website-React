@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import {
@@ -320,7 +320,7 @@ const COMPANY_TYPES = [
 ];
 
 const colorMap: Record<string, string> = {
-  red: "bg-red-500/10 text-red-400 border-red-500/20",
+  red: "bg-[#FF3B30]/10 text-[#FF3B30] border-[#FF3B30]/20",
   blue: "bg-blue-500/10 text-blue-400 border-blue-500/20",
   purple: "bg-purple-500/10 text-purple-400 border-purple-500/20",
   amber: "bg-amber-500/10 text-amber-400 border-amber-500/20",
@@ -335,9 +335,9 @@ const sizeColorMap: Record<string, { badge: string; border: string; icon: string
     icon: "text-amber-400",
   },
   red: {
-    badge: "bg-red-500/10 border-red-500/20 text-red-400",
-    border: "border-red-500/20 hover:border-red-500/40",
-    icon: "text-red-400",
+    badge: "bg-[#FF3B30]/10 border-[#FF3B30]/20 text-[#FF3B30]",
+    border: "border-[#FF3B30]/20 hover:border-[#FF3B30]/40",
+    icon: "text-[#FF3B30]",
   },
   blue: {
     badge: "bg-blue-500/10 border-blue-500/20 text-blue-400",
@@ -355,25 +355,25 @@ export default function PenetrationTestingServicePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-[#0a0a0f] text-white">
+    <main className="min-h-screen bg-[#0A0A0B] text-white">
 
       {/* ── HERO ──────────────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f] pt-24 pb-16">
+      <section className="premium-hero pt-24 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(220,38,38,0.08),transparent_60%)]" />
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Breadcrumb */}
           <nav
-            className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-6"
+            className="flex items-center justify-center gap-2 text-sm text-white/50 mb-6"
             aria-label="Breadcrumb"
           >
-            <Link href="/" className="hover:text-gray-300 transition-colors">
+            <Link href="/" className="hover:text-white/70 transition-colors">
               SODU Secure
             </Link>
             <span>/</span>
-            <span className="text-gray-300">Penetration Testing Service</span>
+            <span className="text-white/70">Penetration Testing Service</span>
           </nav>
 
-          <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-1.5 text-sm text-red-400 mb-6">
+          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 text-sm text-[#FF3B30] mb-6">
             <Shield className="w-3.5 h-3.5" />
             <span>Professioneller Pentest – OWASP · PTES · MITRE ATT&amp;CK</span>
           </div>
@@ -381,14 +381,14 @@ export default function PenetrationTestingServicePage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="text-white">Penetrationstest Service –</span>
             <br />
-            <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#ff7568] via-[#ff3b30] to-[#b8252e] bg-clip-text text-transparent">
               Professionelle Pentest-Dienstleistungen.
             </span>
             <br />
             <span className="text-white">Manuell. Methodisch. Wirkungsvoll.</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
             SODU Secure liefert professionelle Penetrationstests für Web-Applikationen, Netzwerke, APIs,
             Active Directory und Cloud-Infrastrukturen. Wir simulieren echte Angriffe – damit Sie Ihre
             Risiken kennen, bevor ein Angreifer sie ausnutzt. Erfahren Sie mehr über Penetrationstest Deutschland und Pentest Services.
@@ -397,21 +397,21 @@ export default function PenetrationTestingServicePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Link
               href="/request-pentest"
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-red-900/40 hover:scale-105"
+              className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-[#FF3B30]/30 hover:scale-105"
             >
               <Calculator className="w-5 h-5" />
               Pentest Kosten Berechnen
             </Link>
             <Link
               href="/request-pentest"
-              className="inline-flex items-center gap-2 border border-red-500/30 hover:border-red-500/60 text-red-400 hover:text-red-300 font-semibold px-8 py-4 rounded-xl transition-all duration-200"
+              className="inline-flex items-center gap-2 border border-[#FF3B30]/30 hover:border-[#FF3B30]/60 text-[#FF3B30] hover:text-[#FF6B61] font-semibold px-8 py-4 rounded-xl transition-all duration-200"
             >
               <Layers className="w-4 h-4" />
               Pentest Konfigurieren
             </Link>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
             {[
               "Festpreis – keine überraschenden Tagessätze",
               "Manuelles Testing – nicht nur Scanner-Output",
@@ -432,13 +432,13 @@ export default function PenetrationTestingServicePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {STATS.map((s) => (
               <div key={s.label} className="flex flex-col items-center">
-                <div className="text-3xl sm:text-4xl font-bold text-red-400 mb-1">{s.value}</div>
-                <div className="text-sm text-gray-400 mb-2 leading-snug">{s.label}</div>
+                <div className="text-3xl sm:text-4xl font-bold text-[#FF3B30] mb-1">{s.value}</div>
+                <div className="text-sm text-white/60 mb-2 leading-snug">{s.label}</div>
                 <a
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs text-gray-600 hover:text-gray-400 transition-colors"
+                  className="inline-flex items-center gap-1 text-xs text-white/70 hover:text-white/60 transition-colors"
                 >
                   <BookOpen className="w-3 h-3" />
                   {s.source}
@@ -454,21 +454,21 @@ export default function PenetrationTestingServicePage() {
       <section className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-1.5 text-sm text-red-400 mb-6">
+            <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 text-sm text-[#FF3B30] mb-6">
               <Search className="w-3.5 h-3.5" />
               <span>Was ist das?</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Was ist ein{" "}
-              <span className="text-red-400">Penetration Testing Service?</span>
+              <span className="text-[#FF3B30]">Penetration Testing Service?</span>
             </h2>
-            <p className="text-gray-300 leading-relaxed mb-4">
+            <p className="text-white/70 leading-relaxed mb-4">
               Ein Penetration Testing Service ist ein strukturierter, autorisierter Versuch, Ihre Systeme zu
               kompromittieren – genau wie ein echter Angreifer. Anders als automatisierte Schwachstellen-Scanner,
               die lange Listen theoretischer CVEs erzeugen, nutzt ein professioneller Pentest menschliche Expertise:
               Schwachstellen werden aktiv ausgenutzt, zu Angriffspfaden verknüpft und der reale Geschäftsschaden demonstriert.
             </p>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-white/60 leading-relaxed mb-6">
               Das Ergebnis ist kein roher Scan-Report – sondern eine validierte, priorisierte Liste echter Risiken
               mit Proof-of-Concept-Nachweisen, CVSS-Scores und konkreten Handlungsempfehlungen, zugeschnitten auf
               Ihre spezifische Umgebung.
@@ -482,7 +482,7 @@ export default function PenetrationTestingServicePage() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-300">{item}</span>
+                  <span className="text-sm text-white/70">{item}</span>
                 </div>
               ))}
             </div>
@@ -514,20 +514,20 @@ export default function PenetrationTestingServicePage() {
                   key={row.label}
                   className="flex items-center gap-3 text-sm py-1.5 border-b border-white/5 last:border-0"
                 >
-                  <span className="flex-1 text-gray-300">{row.label}</span>
+                  <span className="flex-1 text-white/70">{row.label}</span>
                   <div className="flex gap-6">
                     <div className="flex items-center gap-1 w-16 justify-center">
                       {row.pentest ? (
                         <CheckCircle className="w-4 h-4 text-green-400" />
                       ) : (
-                        <span className="w-4 h-4 flex items-center justify-center text-gray-600">✕</span>
+                        <span className="w-4 h-4 flex items-center justify-center text-white/70">✕</span>
                       )}
                     </div>
                     <div className="flex items-center gap-1 w-16 justify-center">
                       {row.scan ? (
                         <CheckCircle className="w-4 h-4 text-green-400" />
                       ) : (
-                        <span className="w-4 h-4 flex items-center justify-center text-gray-600">✕</span>
+                        <span className="w-4 h-4 flex items-center justify-center text-white/70">✕</span>
                       )}
                     </div>
                   </div>
@@ -535,8 +535,8 @@ export default function PenetrationTestingServicePage() {
               ))}
               <div className="flex justify-end gap-0 pt-2">
                 <div className="flex gap-6">
-                  <span className="text-xs text-red-400 font-semibold w-16 text-center">Pentest</span>
-                  <span className="text-xs text-gray-500 font-semibold w-16 text-center">Vuln-Scan</span>
+                  <span className="text-xs text-[#FF3B30] font-semibold w-16 text-center">Pentest</span>
+                  <span className="text-xs text-white/50 font-semibold w-16 text-center">Vuln-Scan</span>
                 </div>
               </div>
             </div>
@@ -548,14 +548,14 @@ export default function PenetrationTestingServicePage() {
       <section className="py-20 bg-white/[0.02] border-y border-white/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-1.5 text-sm text-red-400 mb-4">
+            <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 text-sm text-[#FF3B30] mb-4">
               <Layers className="w-3.5 h-3.5" />
               <span>Service Portfolio</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Our Penetration Testing Services
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+            <p className="text-white/60 max-w-2xl mx-auto text-sm">
               From a single web application to full red-team engagements – we test your entire attack
               surface following OWASP, PTES and MITRE ATT&amp;CK standards.
             </p>
@@ -566,18 +566,18 @@ export default function PenetrationTestingServicePage() {
               <Link
                 key={svc.title}
                 href={svc.href}
-                className="group relative bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-red-500/30 transition-all duration-200 hover:bg-white/[0.05]"
+                className="group relative bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-[#FF3B30]/30 transition-all duration-200 hover:bg-white/[0.05]"
               >
                 <div
                   className={`inline-flex items-center justify-center w-11 h-11 rounded-xl border mb-4 ${colorMap[svc.color]}`}
                 >
                   <svc.icon className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-white mb-2 group-hover:text-red-300 transition-colors">
+                <h3 className="font-semibold text-white mb-2 group-hover:text-[#FF6B61] transition-colors">
                   {svc.title}
                 </h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{svc.desc}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-xs text-red-400 group-hover:gap-2 transition-all">
+                <p className="text-sm text-white/60 leading-relaxed">{svc.desc}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-xs text-[#FF3B30] group-hover:gap-2 transition-all">
                   Learn more <ArrowRight className="w-3 h-3" />
                 </span>
               </Link>
@@ -585,11 +585,11 @@ export default function PenetrationTestingServicePage() {
           </div>
 
           {/* CTA block */}
-          <div className="mt-10 bg-gradient-to-r from-red-950/30 to-orange-950/20 border border-red-500/20 rounded-2xl p-6 sm:p-8">
+          <div className="mt-10 bg-gradient-to-r from-red-950/30 to-orange-950/20 border border-[#FF3B30]/20 rounded-2xl p-6 sm:p-8">
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-lg font-bold mb-1">Not sure which pentest you need?</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-white/60 text-sm">
                   Our Pentest Configurator walks you through scope, target type and company size –
                   and gives you an instant cost estimate in under 3 minutes.
                 </p>
@@ -597,7 +597,7 @@ export default function PenetrationTestingServicePage() {
               <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
                 <Link
                   href="/request-pentest"
-                  className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105"
                 >
                   <Calculator className="w-4 h-4" />
                   Configure &amp; Price
@@ -611,16 +611,16 @@ export default function PenetrationTestingServicePage() {
       {/* ── WHO NEEDS IT ──────────────────────────────────────────────────────── */}
       <section className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-1.5 text-sm text-red-400 mb-4">
+          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 text-sm text-[#FF3B30] mb-4">
             <ShieldAlert className="w-3.5 h-3.5" />
             <span>Evidence-Based Analysis</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Who Needs a Penetration Testing Service?
             <br />
-            <span className="text-red-400">Every Organisation with a Digital Footprint</span>
+            <span className="text-[#FF3B30]">Every Organisation with a Digital Footprint</span>
           </h2>
-          <p className="text-gray-400 max-w-3xl mx-auto text-sm sm:text-base">
+          <p className="text-white/60 max-w-3xl mx-auto text-sm sm:text-base">
             &ldquo;We&apos;re too small to be attacked&rdquo; is the most dangerous assumption in
             cybersecurity. Attackers use automated tools to scan the entire internet continuously –
             company size is not a protection factor.
@@ -643,31 +643,31 @@ export default function PenetrationTestingServicePage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{ct.type}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{ct.threat}</p>
+                    <p className="text-white/70 text-sm leading-relaxed">{ct.threat}</p>
                   </div>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4 mb-4">
                   <div className="bg-white/[0.03] rounded-xl p-4">
-                    <h4 className="text-xs uppercase tracking-wider text-gray-500 mb-3 font-semibold flex items-center gap-1.5">
-                      <AlertTriangle className="w-3 h-3 text-red-400" /> Risk Facts
+                    <h4 className="text-xs uppercase tracking-wider text-white/50 mb-3 font-semibold flex items-center gap-1.5">
+                      <AlertTriangle className="w-3 h-3 text-[#FF3B30]" /> Risk Facts
                     </h4>
                     <ul className="space-y-2">
                       {ct.riskFacts.map((fact) => (
                         <li
                           key={fact}
-                          className="text-sm text-gray-400 flex items-start gap-2"
+                          className="text-sm text-white/60 flex items-start gap-2"
                         >
-                          <span className="w-1.5 h-1.5 rounded-full bg-red-500 mt-1.5 flex-shrink-0" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#FF3B30] mt-1.5 flex-shrink-0" />
                           {fact}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="bg-white/[0.03] rounded-xl p-4">
-                    <h4 className="text-xs uppercase tracking-wider text-gray-500 mb-3 font-semibold flex items-center gap-1.5">
+                    <h4 className="text-xs uppercase tracking-wider text-white/50 mb-3 font-semibold flex items-center gap-1.5">
                       <CheckCircle className="w-3 h-3 text-green-400" /> Value of a Pentest
                     </h4>
-                    <p className="text-sm text-gray-400 leading-relaxed">{ct.pentestValue}</p>
+                    <p className="text-sm text-white/60 leading-relaxed">{ct.pentestValue}</p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -677,7 +677,7 @@ export default function PenetrationTestingServicePage() {
                       href={src.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-3 py-1 text-xs text-gray-400 hover:text-gray-200 transition-colors"
+                      className="inline-flex items-center gap-1.5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full px-3 py-1 text-xs text-white/60 hover:text-white/85 transition-colors"
                     >
                       <BookOpen className="w-3 h-3" />
                       {src.label}
@@ -693,13 +693,13 @@ export default function PenetrationTestingServicePage() {
         <div className="mt-12 text-center">
           <Link
             href="/request-pentest"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
           >
             <Calculator className="w-5 h-5" />
             Calculate Your Pentest Cost
             <ArrowRight className="w-5 h-5" />
           </Link>
-          <p className="mt-3 text-sm text-gray-500">
+          <p className="mt-3 text-sm text-white/50">
             Fixed-price quote within 24 hours – no commitment required
           </p>
         </div>
@@ -716,7 +716,7 @@ export default function PenetrationTestingServicePage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Penetration Testing &amp; Compliance Requirements
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+            <p className="text-white/60 max-w-2xl mx-auto text-sm">
               Penetration tests are not just best practice – they are increasingly mandated by
               law, standards and insurance requirements.
             </p>
@@ -729,7 +729,7 @@ export default function PenetrationTestingServicePage() {
                 className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 flex flex-col"
               >
                 <h3 className="font-semibold text-white mb-3 text-sm leading-snug">{c.name}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed flex-1 mb-4">{c.desc}</p>
+                <p className="text-white/60 text-sm leading-relaxed flex-1 mb-4">{c.desc}</p>
                 <a
                   href={c.href}
                   target="_blank"
@@ -751,7 +751,7 @@ export default function PenetrationTestingServicePage() {
                 <h4 className="text-sm font-semibold text-blue-300 mb-1">
                   NIS2 Scope Check
                 </h4>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-white/60">
                   NIS2 extends beyond critical infrastructure operators. Through the
                   &ldquo;important entities&rdquo; category it covers mid-sized companies in
                   manufacturing, food, chemicals, postal services and digital services. The{" "}
@@ -777,7 +777,7 @@ export default function PenetrationTestingServicePage() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Our Penetration Testing Methodology
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+          <p className="text-white/60 max-w-2xl mx-auto text-sm">
             No proprietary gut-feeling assessments – reproducible, audit-ready methodology aligned
             with international standards.
           </p>
@@ -789,7 +789,7 @@ export default function PenetrationTestingServicePage() {
               name: "OWASP Testing Guide v4.2",
               desc: "Foundation of all web and API pentests. Covers 90+ test areas from authentication flaws to injection vulnerabilities with a structured, reproducible approach.",
               href: "https://owasp.org/www-project-web-security-testing-guide/",
-              color: "text-red-400",
+              color: "text-[#FF3B30]",
             },
             {
               name: "PTES (Penetration Testing Execution Standard)",
@@ -809,12 +809,12 @@ export default function PenetrationTestingServicePage() {
               className="bg-white/[0.03] border border-white/10 rounded-2xl p-6"
             >
               <h3 className={`font-bold mb-3 text-sm ${m.color}`}>{m.name}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-4">{m.desc}</p>
+              <p className="text-white/60 text-sm leading-relaxed mb-4">{m.desc}</p>
               <a
                 href={m.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs text-white/50 hover:text-white/70 transition-colors"
               >
                 <ExternalLink className="w-3 h-3" />
                 Official Documentation
@@ -832,11 +832,11 @@ export default function PenetrationTestingServicePage() {
               key={p.step}
               className="relative bg-white/[0.03] border border-white/10 rounded-2xl p-6"
             >
-              <div className="text-5xl font-black text-red-500/20 mb-3 leading-none">
+              <div className="text-5xl font-black text-[#FF3B30]/20 mb-3 leading-none">
                 {p.step}
               </div>
               <h3 className="font-semibold text-white mb-2">{p.title}</h3>
-              <p className="text-sm text-gray-400">{p.desc}</p>
+              <p className="text-sm text-white/60">{p.desc}</p>
             </div>
           ))}
         </div>
@@ -849,7 +849,7 @@ export default function PenetrationTestingServicePage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Why Choose SODU Secure as Your Penetration Testing Partner?
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+            <p className="text-white/60 max-w-2xl mx-auto text-sm">
               You don&apos;t need an anonymous IT vendor – you need a partner that delivers results
               that actually reduce your risk.
             </p>
@@ -860,11 +860,11 @@ export default function PenetrationTestingServicePage() {
                 key={item.title}
                 className="bg-white/[0.03] border border-white/10 rounded-2xl p-6"
               >
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-red-500/10 border border-red-500/20 rounded-xl mb-4">
-                  <item.icon className="w-5 h-5 text-red-400" />
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-xl mb-4">
+                  <item.icon className="w-5 h-5 text-[#FF3B30]" />
                 </div>
                 <h3 className="font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-400">{item.desc}</p>
+                <p className="text-sm text-white/60">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -881,7 +881,7 @@ export default function PenetrationTestingServicePage() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Penetration Testing Service Costs – What to Expect
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+          <p className="text-white/60 max-w-2xl mx-auto text-sm">
             Pentest costs depend heavily on scope, number of targets and test depth. SODU Secure
             offers fair, transparent fixed prices – no hidden day rates.
           </p>
@@ -915,7 +915,7 @@ export default function PenetrationTestingServicePage() {
                 "Close-out presentation",
                 "Retest of critical findings",
               ],
-              color: "border-red-500/30",
+              color: "border-[#FF3B30]/30",
               badge: "Most Popular",
             },
             {
@@ -939,19 +939,19 @@ export default function PenetrationTestingServicePage() {
               className={`bg-white/[0.03] border ${pkg.color} rounded-2xl p-6 flex flex-col`}
             >
               {pkg.badge && (
-                <div className="inline-flex items-center gap-1.5 bg-red-500/10 border border-red-500/20 rounded-full px-3 py-1 text-xs text-red-400 mb-3 self-start">
+                <div className="inline-flex items-center gap-1.5 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-3 py-1 text-xs text-[#FF3B30] mb-3 self-start">
                   <Star className="w-3 h-3" />
                   {pkg.badge}
                 </div>
               )}
               <h3 className="font-bold text-white text-lg mb-1">{pkg.name}</h3>
-              <div className="text-2xl font-black text-red-400 mb-1">{pkg.price}</div>
-              <p className="text-xs text-gray-500 mb-4">{pkg.desc}</p>
+              <div className="text-2xl font-black text-[#FF3B30] mb-1">{pkg.price}</div>
+              <p className="text-xs text-white/50 mb-4">{pkg.desc}</p>
               <ul className="space-y-2 flex-1 mb-6">
                 {pkg.items.map((item) => (
                   <li
                     key={item}
-                    className="text-sm text-gray-400 flex items-start gap-2"
+                    className="text-sm text-white/60 flex items-start gap-2"
                   >
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
                     {item}
@@ -960,7 +960,7 @@ export default function PenetrationTestingServicePage() {
               </ul>
               <Link
                 href="/request-pentest"
-                className="inline-flex items-center justify-center gap-2 border border-red-500/30 hover:bg-red-600 hover:border-red-600 text-white font-medium px-5 py-2.5 rounded-xl transition-all duration-200 text-sm"
+                className="inline-flex items-center justify-center gap-2 border border-[#FF3B30]/30 hover:bg-[#FF3B30] hover:border-[#FF3B30] text-white font-medium px-5 py-2.5 rounded-xl transition-all duration-200 text-sm"
               >
                 <Calculator className="w-4 h-4" />
                 Calculate Price
@@ -970,15 +970,15 @@ export default function PenetrationTestingServicePage() {
         </div>
 
         {/* Big cost calculator CTA */}
-        <div className="bg-gradient-to-r from-red-950/40 via-[#0a0a0f] to-orange-950/30 border border-red-500/25 rounded-2xl p-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-red-500/10 border border-red-500/20 rounded-full px-4 py-1.5 text-sm text-red-400 mb-4">
+        <div className="bg-gradient-to-r from-red-950/40 via-[#0A0A0B] to-orange-950/30 border border-[#FF3B30]/25 rounded-2xl p-8 text-center">
+          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 text-sm text-[#FF3B30] mb-4">
             <Calculator className="w-3.5 h-3.5" />
             <span>Pentest Cost Calculator &amp; Configurator</span>
           </div>
           <h3 className="text-2xl sm:text-3xl font-bold mb-3">
             Get Your Fixed-Price Quote in 3 Minutes
           </h3>
-          <p className="text-gray-400 text-sm max-w-xl mx-auto mb-6">
+          <p className="text-white/60 text-sm max-w-xl mx-auto mb-6">
             Use our interactive Pentest Configurator to define your scope, select target types,
             company size and desired test depth – and receive an instant cost estimate plus a
             personalised proposal within 24 hours.
@@ -986,7 +986,7 @@ export default function PenetrationTestingServicePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/request-pentest"
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-10 py-5 rounded-xl transition-all duration-200 shadow-lg shadow-red-900/40 hover:scale-105 text-lg"
+              className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-10 py-5 rounded-xl transition-all duration-200 shadow-lg shadow-[#FF3B30]/30 hover:scale-105 text-lg"
             >
               <Calculator className="w-6 h-6" />
               Calculate Pentest Cost Now
@@ -994,36 +994,36 @@ export default function PenetrationTestingServicePage() {
             </Link>
             <Link
               href="/request-pentest"
-              className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-5 rounded-xl transition-all duration-200"
+              className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-5 rounded-xl transition-all duration-200"
             >
               <GitBranch className="w-5 h-5" />
               Configure Your Pentest
             </Link>
           </div>
-          <p className="mt-4 text-xs text-gray-600">
+          <p className="mt-4 text-xs text-white/70">
             No commitment required · Fixed price guaranteed · Quote within 24h
           </p>
         </div>
       </section>
 
       {/* ── PILOT PROGRAMME CTA ───────────────────────────────────────────────── */}
-      <section className="py-12 bg-gradient-to-r from-red-950/40 to-orange-950/40 border-y border-red-500/20">
+      <section className="py-12 bg-gradient-to-r from-red-950/40 to-orange-950/40 border-y border-[#FF3B30]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-red-500/20 border border-red-500/30 rounded-full px-4 py-1.5 text-sm text-red-300 mb-4">
+          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/20 border border-[#FF3B30]/30 rounded-full px-4 py-1.5 text-sm text-[#FF6B61] mb-4">
             <Star className="w-3.5 h-3.5" />
             <span>Only 2 spots remaining</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Berlin KMU Pilot Programme 2026 – Free Pentest
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-6 text-sm sm:text-base">
+          <p className="text-white/70 max-w-2xl mx-auto mb-6 text-sm sm:text-base">
             Berlin-based SMEs with 20–150 employees, Microsoft infrastructure (M365 / Active Directory)
             and a Berlin/Brandenburg location can apply for a fully subsidised penetration test
             worth up to €15,000.
           </p>
           <Link
             href="/berlin-kmu-pilot"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
           >
             Apply for Free Pentest
             <ArrowRight className="w-5 h-5" />
@@ -1038,7 +1038,7 @@ export default function PenetrationTestingServicePage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Penetration Testing Service – FAQ
             </h2>
-            <p className="text-gray-400 text-sm">
+            <p className="text-white/60 text-sm">
               Common questions about penetration testing, cost, process and compliance.
             </p>
           </div>
@@ -1055,13 +1055,13 @@ export default function PenetrationTestingServicePage() {
                 >
                   <span className="font-medium text-white text-sm sm:text-base">{faq.q}</span>
                   {openFaq === i ? (
-                    <ChevronUp className="w-5 h-5 text-red-400 flex-shrink-0" />
+                    <ChevronUp className="w-5 h-5 text-[#FF3B30] flex-shrink-0" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
+                    <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />
                   )}
                 </button>
                 {openFaq === i && (
-                  <div className="px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                  <div className="px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4">
                     {faq.a}
                   </div>
                 )}
@@ -1072,12 +1072,12 @@ export default function PenetrationTestingServicePage() {
       </section>
 
       {/* ── RELATED CONTENT CLUSTER ───────────────────────────────────────────── */}
-      <section className="py-16 bg-[#131927] border-t border-gray-800">
+      <section className="py-16 bg-[#0A0A0B] border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-xl sm:text-2xl font-bold text-white text-center mb-3">
             Explore Our Penetration Testing Resources
           </h2>
-          <p className="text-gray-400 text-center text-sm mb-10 max-w-xl mx-auto">
+          <p className="text-white/60 text-center text-sm mb-10 max-w-xl mx-auto">
             Guides on pentest types, costs, methodology, compliance and service-specific deep dives.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
@@ -1087,7 +1087,7 @@ export default function PenetrationTestingServicePage() {
                 title: "Pentest Berlin",
                 desc: "Local penetration testing service in Berlin – short response times, personal contact.",
                 badge: "Local",
-                badgeColor: "bg-red-600",
+                badgeColor: "bg-[#FF3B30]",
               },
               {
                 href: "/pentest-berlin/kosten",
@@ -1142,7 +1142,7 @@ export default function PenetrationTestingServicePage() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="bg-[#0d1117] border border-gray-800 rounded-xl p-5 hover:border-red-500/50 transition-colors group flex flex-col"
+                className="bg-[#0A0A0B] border border-white/10 rounded-xl p-5 hover:border-[#FF3B30]/50 transition-colors group flex flex-col"
               >
                 <div className="flex items-center justify-between mb-3">
                   <span
@@ -1150,20 +1150,20 @@ export default function PenetrationTestingServicePage() {
                   >
                     {item.badge}
                   </span>
-                  <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-red-400 transition-colors" />
+                  <ArrowRight className="w-4 h-4 text-white/70 group-hover:text-[#FF3B30] transition-colors" />
                 </div>
-                <h3 className="font-semibold text-white text-sm mb-2 group-hover:text-red-400 transition-colors">
+                <h3 className="font-semibold text-white text-sm mb-2 group-hover:text-[#FF3B30] transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-xs text-gray-400 leading-relaxed flex-1">{item.desc}</p>
+                <p className="text-xs text-white/60 leading-relaxed flex-1">{item.desc}</p>
               </Link>
             ))}
           </div>
 
           {/* External sources */}
           <div className="bg-white/[0.02] border border-white/10 rounded-2xl p-6">
-            <h3 className="text-sm font-semibold text-gray-300 mb-4 flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-gray-400" />
+            <h3 className="text-sm font-semibold text-white/70 mb-4 flex items-center gap-2">
+              <BookOpen className="w-4 h-4 text-white/60" />
               External Sources &amp; Further Reading
             </h3>
             <div className="grid sm:grid-cols-2 gap-2">
@@ -1206,10 +1206,10 @@ export default function PenetrationTestingServicePage() {
                   href={src.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 p-2.5 rounded-lg hover:bg-white/5 transition-colors group"
+                  className="flex items-center gap-2 p-2.5 rounded-2xl hover:bg-white/5 transition-colors group"
                 >
-                  <ExternalLink className="w-3.5 h-3.5 text-gray-500 group-hover:text-gray-400 flex-shrink-0" />
-                  <span className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors">
+                  <ExternalLink className="w-3.5 h-3.5 text-white/50 group-hover:text-white/60 flex-shrink-0" />
+                  <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">
                     {src.label}
                   </span>
                 </a>
@@ -1224,14 +1224,14 @@ export default function PenetrationTestingServicePage() {
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
           Ready to Start Your Penetration Test?
         </h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+        <p className="text-white/60 mb-8 max-w-2xl mx-auto">
           Describe your infrastructure and objectives – we respond within 24 hours with a
           transparent fixed-price proposal, no hidden costs.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <Link
             href="/request-pentest"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
+            className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
           >
             <Calculator className="w-5 h-5" />
             Calculate Pentest Cost
@@ -1239,20 +1239,20 @@ export default function PenetrationTestingServicePage() {
           </Link>
           <a
             href={PHONE_HREF}
-            className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200"
+            className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200"
           >
             <Phone className="w-4 h-4" />
             {PHONE}
           </a>
           <a
             href={EMAIL_HREF}
-            className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200"
+            className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200"
           >
             <Mail className="w-4 h-4" />
             {EMAIL}
           </a>
         </div>
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-white/50">
           {[
             "Fixed price – no surprise invoices",
             "NDA on request",
@@ -1265,11 +1265,11 @@ export default function PenetrationTestingServicePage() {
             </span>
           ))}
         </div>
-        <p className="mt-6 text-sm text-gray-500">
+        <p className="mt-6 text-sm text-white/50">
           Or apply for our{" "}
           <Link
             href="/berlin-kmu-pilot"
-            className="text-red-400 hover:text-red-300 underline underline-offset-2"
+            className="text-[#FF3B30] hover:text-[#FF6B61] underline underline-offset-2"
           >
             free KMU Pilot Programme
           </Link>{" "}

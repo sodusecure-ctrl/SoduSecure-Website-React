@@ -4381,6 +4381,7 @@
     },
     "info": {
       "title": "Kontaktinformationen",
+      "mapRoute": "Route in Google Maps öffnen",
       "address": {
         "title": "Adresse",
         "line1": "Riemannstr 8",

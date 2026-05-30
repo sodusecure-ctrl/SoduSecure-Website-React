@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Lock, Phone } from 'lucide-react';
@@ -51,7 +51,7 @@ export default function Hero() {
                   style={{ animationDelay: '0.2s' }}>
                   {t('title.line3')}
                 </span>
-                <span className="text-red-600 text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-bounce-slow inline-block ml-1">.</span>
+                <span className="text-[#FF3B30] text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-bounce-slow inline-block ml-1">.</span>
               </h1>
 
               <p className="text-gray-600 text-base sm:text-lg leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -64,7 +64,7 @@ export default function Hero() {
               <Button
                 onClick={() => router.push("/request-pentest")}
                 size="lg"
-                className="bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center"
+                className="bg-red-600 hover:premium-cta text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto justify-center"
               >
                 {t('cta.requestPentest')}
               </Button>
@@ -81,7 +81,7 @@ export default function Hero() {
 
             {/* Certifications */}
             <div className="space-y-3 sm:space-y-4 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-              <h3 className="text-red-600 font-semibold text-xs sm:text-sm uppercase tracking-wider">
+              <h3 className="text-[#FF3B30] font-semibold text-xs sm:text-sm uppercase tracking-wider">
                 {t('trustedCertified')}
               </h3>
               <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -117,7 +117,7 @@ export default function Hero() {
               </div>
 
               {/* Main Logo */}
-              <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl sm:shadow-2xl hover:shadow-red-500/20 transition-all duration-500 hover:scale-105 group">
+              <div className="bg-[#16141A] rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl sm:shadow-2xl hover:shadow-red-500/20 transition-all duration-500 hover:scale-105 group">
                 <div className="flex items-center gap-3 sm:gap-4">
                   <div className="relative">
                     <div className="absolute inset-0  rounded-xl sm:rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -33,8 +33,8 @@ export default function CreateNewPassword() {
   const t = useTranslations('auth.createNewPassword');
   const [errors, setErrors] = useState<FormErrors>({});
   const [showPassword, setShowPassword] = useState<boolean>(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false);
-  const [touched, setTouched] = useState<TouchedFields>({});
+const[showConfirmPassword, setShowConfirmPassword] = useState<boolean>(false);
+const [touched, setTouched] = useState<TouchedFields>({});
   const router = useRouter();
 
   const validateField = (name: keyof FormData, value: string): string => {
@@ -107,8 +107,8 @@ export default function CreateNewPassword() {
   return (
     <div className="min-h-screen flex">
       {/* Left side - Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white">
-        <div className="w-full max-w-lg shadow-sm border border-gray-100 sm:p-10 p-4 rounded-xl">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-[#16141A]">
+        <div className="w-full max-w-lg shadow-sm border border-white/8 sm:p-10 p-4 rounded-xl">
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <div className="w-16 h-16 rounded-xl flex items-center justify-center">

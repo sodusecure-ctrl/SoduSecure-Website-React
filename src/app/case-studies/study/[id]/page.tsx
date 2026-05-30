@@ -22,7 +22,7 @@ export default function CaseStudyDetail() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#16141A]">
       {/* Hero Section */}
       <div className="bg-black text-white">
         <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
@@ -63,7 +63,7 @@ export default function CaseStudyDetail() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8 sm:space-y-12">
             {/* Client Overview Section */}
-            <section className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">{t('sections.clientOverview.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-6">
                 {t('sections.clientOverview.content')}
@@ -87,7 +87,7 @@ export default function CaseStudyDetail() {
             </section>
 
             {/* Our Approach Section */}
-            <section className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">{t('sections.ourApproach.title')}</h2>
 
               <div className="space-y-6 sm:space-y-8">
@@ -98,7 +98,7 @@ export default function CaseStudyDetail() {
                 })).map((phase, index) => (
                   <div key={index} className="border-l-4 border-red-500 pl-4 sm:pl-6">
                     <div className="flex items-start gap-3 sm:gap-4">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-100 text-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FF3B30]/15 text-[#FF3B30] rounded-lg flex items-center justify-center flex-shrink-0">
                         <phase.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                       </div>
                       <div className="flex-1">
@@ -115,10 +115,10 @@ export default function CaseStudyDetail() {
 
             {/* Key Findings - Mobile Accordion */}
             <div className="lg:hidden">
-              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+              <div className="bg-[#16141A] border border-white/10 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setIsExpanded(!isExpanded)}
-                  className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  className="w-full p-4 sm:p-6 text-left flex items-center justify-between hover:bg-white/5 transition-colors"
                 >
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900">{t('sections.keyFindings.title')}</h3>
                   <svg
@@ -132,7 +132,7 @@ export default function CaseStudyDetail() {
                 </button>
 
                 {isExpanded && (
-                  <div className="p-4 sm:p-6 border-t border-gray-200 space-y-4">
+                  <div className="p-4 sm:p-6 border-t border-white/10 space-y-4">
                     {[
                       "Critical SQL injection in payment processing module",
                       "Broken authentication allowing bypass of 2FA",
@@ -141,7 +141,7 @@ export default function CaseStudyDetail() {
                       "Cross-site scripting (XSS) in customer portal"
                     ].map((finding, index) => (
                       <div key={index} className="flex items-start gap-3">
-                        <div className="w-5 h-5 bg-red-100 text-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div className="w-5 h-5 bg-[#FF3B30]/15 text-[#FF3B30] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                           <span className="text-xs font-bold">{index + 1}</span>
                         </div>
                         <span className="text-gray-700 text-sm sm:text-base">{finding}</span>
@@ -179,7 +179,7 @@ export default function CaseStudyDetail() {
                     &ldquo;{t('testimonials.quote')}&rdquo;
                   </p>
                   <cite className="text-gray-400 text-sm not-italic">
-                    — {t('testimonials.author')}
+                    - {t('testimonials.author')}
                   </cite>
                 </blockquote>
               </div>
@@ -188,7 +188,7 @@ export default function CaseStudyDetail() {
             {/* Mobile CTA Button */}
             <div className="lg:hidden">
               <Button
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-6 text-base"
+                className="w-full bg-red-600 hover:premium-cta text-white font-semibold py-6 text-base"
                 onClick={handleRequestPentest}
               >
                 {t('cta.buttonText')}
@@ -200,7 +200,7 @@ export default function CaseStudyDetail() {
           <div className="lg:col-span-1">
             <div className="sticky top-6 space-y-4 sm:space-y-6">
               {/* Project Details Card */}
-              <Card className="border-gray-200">
+              <Card className="border-white/10">
                 <CardContent className="p-4 sm:p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-3 sm:mb-4">Project Details</h3>
 
@@ -210,22 +210,22 @@ export default function CaseStudyDetail() {
                       <div className="text-gray-900 font-semibold">{t('category')}</div>
                     </div>
 
-                    <div className="border-t border-gray-200 pt-3 sm:pt-4">
+                    <div className="border-t border-white/10 pt-3 sm:pt-4">
                       <div className="text-gray-500 mb-1">Service Type</div>
                       <div className="text-gray-900 font-semibold">Web Application Security</div>
                     </div>
 
-                    <div className="border-t border-gray-200 pt-3 sm:pt-4">
+                    <div className="border-t border-white/10 pt-3 sm:pt-4">
                       <div className="text-gray-500 mb-1">Project Duration</div>
                       <div className="text-gray-900 font-semibold">{t('duration')}</div>
                     </div>
 
-                    <div className="border-t border-gray-200 pt-3 sm:pt-4">
+                    <div className="border-t border-white/10 pt-3 sm:pt-4">
                       <div className="text-gray-500 mb-1">Year Completed</div>
                       <div className="text-gray-900 font-semibold">2024</div>
                     </div>
 
-                    <div className="border-t border-gray-200 pt-3 sm:pt-4">
+                    <div className="border-t border-white/10 pt-3 sm:pt-4">
                       <div className="text-gray-500 mb-1">Compliance</div>
                       <div className="text-gray-900 font-semibold">PCI DSS, ISO 27001</div>
                     </div>
@@ -235,7 +235,7 @@ export default function CaseStudyDetail() {
 
               {/* Key Findings - Desktop */}
               <div className="hidden lg:block">
-                <Card className="border-gray-200">
+                <Card className="border-white/10">
                   <CardContent className="p-6">
                     <h3 className="text-lg font-bold text-gray-900 mb-4">{t('sections.keyFindings.title')}</h3>
                     <ul className="space-y-3">
@@ -247,7 +247,7 @@ export default function CaseStudyDetail() {
                         t('sections.keyFindings.high.items.1')
                       ].map((finding, index) => (
                         <li key={index} className="flex items-start gap-3">
-                          <div className="w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-6 h-6 bg-[#FF3B30]/15 text-[#FF3B30] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                             <span className="text-xs font-bold">{index + 1}</span>
                           </div>
                           <span className="text-gray-700 text-sm">{finding}</span>
@@ -259,7 +259,7 @@ export default function CaseStudyDetail() {
               </div>
 
               {/* Tools & Technologies Card */}
-              <Card className="border-gray-200">
+              <Card className="border-white/10">
                 <CardContent className="p-4 sm:p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-3 sm:mb-4">Tools & Technologies</h3>
                   <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -284,7 +284,7 @@ export default function CaseStudyDetail() {
                     {t('cta.description')}
                   </p>
                   <Button
-                    className="w-full bg-white text-red-600 hover:bg-gray-100 font-semibold py-3 sm:py-4 text-sm sm:text-base"
+                    className="w-full bg-[#16141A] text-[#FF3B30] hover:bg-white/10 font-semibold py-3 sm:py-4 text-sm sm:text-base"
                     onClick={handleRequestPentest}
                   >
                     {t('cta.buttonText')}
@@ -304,11 +304,11 @@ export default function CaseStudyDetail() {
               { title: t('relatedServices.services.1.title'), desc: t('relatedServices.services.1.desc'), route: "/services/cloud-devops-testing" },
               { title: t('relatedServices.services.2.title'), desc: t('relatedServices.services.2.desc'), route: "/services/mobile-app-testing" },
             ].map((service, index) => (
-              <Card key={index} className="border-gray-200 hover:border-red-300 transition-colors">
+              <Card key={index} className="border-white/10 hover:border-[#FF3B30]/30 transition-colors">
                 <CardContent className="p-4 sm:p-6">
                   <h4 className="font-bold text-gray-900 mb-2 text-lg">{service.title}</h4>
                   <p className="text-gray-600 text-sm sm:text-base mb-4">{service.desc}</p>
-                  <Button onClick={() => router.push(service.route)} variant="link" className="text-red-600 hover:text-red-700 p-0 text-sm sm:text-base">
+                  <Button onClick={() => router.push(service.route)} variant="link" className="text-[#FF3B30] hover:text-[#FF6B61] p-0 text-sm sm:text-base">
                     {t('relatedServices.learnMore')}
                   </Button>
                 </CardContent>
@@ -319,14 +319,14 @@ export default function CaseStudyDetail() {
       </div>
 
       {/* Floating CTA for Mobile */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#16141A] border-t border-white/10 p-4 shadow-lg">
         <div className="flex items-center justify-between gap-4">
           <div className="flex-1">
             <p className="font-semibold text-sm">Ready to secure your application?</p>
             <p className="text-gray-600 text-xs">Get a comprehensive security assessment</p>
           </div>
           <Button
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2.5 text-sm"
+            className="bg-red-600 hover:premium-cta text-white font-semibold px-4 py-2.5 text-sm"
             onClick={handleRequestPentest}
           >
             Request Now

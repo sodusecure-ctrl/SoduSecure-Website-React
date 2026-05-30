@@ -243,21 +243,21 @@ export default function BlogArticleDetail() {
           <div className="lg:hidden">
             <button
               onClick={() => setShowMobileTOC(!showMobileTOC)}
-              className="w-full flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+              className="w-full flex items-center justify-between p-4 bg-[#16141A] border border-white/10 rounded-lg hover:bg-white/5 transition-colors"
             >
               <span className="font-semibold text-gray-900">{t('tableOfContents')}</span>
               <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${showMobileTOC ? 'rotate-180' : ''}`} />
             </button>
 
             {showMobileTOC && (
-              <div className="mt-3 bg-white border border-gray-200 rounded-lg p-4">
+              <div className="mt-3 bg-[#16141A] border border-white/10 rounded-lg p-4">
                 <nav className="space-y-2">
                   {tocItems.map((item) => (
                     <a
                       key={item.id}
                       href={`#${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                       className={`block text-sm py-1.5 transition-colors ${item.active
-                        ? 'text-red-600 font-semibold'
+                        ? 'text-[#FF3B30] font-semibold'
                         : 'text-gray-600 hover:text-gray-900'
                         }`}
                       onClick={() => setShowMobileTOC(false)}
@@ -273,7 +273,7 @@ export default function BlogArticleDetail() {
           {/* Desktop Sidebar - Table of Contents */}
           <div className="hidden lg:block lg:col-span-1">
             <div className="sticky top-6 space-y-4">
-              <Card className="border-gray-200">
+              <Card className="border-white/10">
                 <CardContent className="p-4 sm:p-6">
                   <h3 className="text-sm font-bold text-gray-900 mb-3 sm:mb-4">{t('tableOfContents')}</h3>
                   <nav className="space-y-2">
@@ -282,7 +282,7 @@ export default function BlogArticleDetail() {
                         key={item.id}
                         href={`#${item.title.toLowerCase().replace(/\s+/g, '-')}`}
                         className={`block text-sm py-1.5 transition-colors ${item.active
-                          ? 'text-red-600 font-semibold'
+                          ? 'text-[#FF3B30] font-semibold'
                           : 'text-gray-600 hover:text-gray-900'
                           }`}
                       >
@@ -294,7 +294,7 @@ export default function BlogArticleDetail() {
               </Card>
 
               {/* Desktop Actions */}
-              <Card className="border-gray-200">
+              <Card className="border-white/10">
                 <CardContent className="p-4 sm:p-6">
                   <h3 className="text-sm font-bold text-gray-900 mb-3">{t('shareThisArticle')}</h3>
                   <div className="flex flex-wrap gap-2">
@@ -326,7 +326,7 @@ export default function BlogArticleDetail() {
           {/* Main Content */}
           <div className="lg:col-span-3 space-y-6 sm:space-y-8">
             {/* Introduction */}
-            <section id="introduction" className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section id="introduction" className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.introduction.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4">
                 {t('sections.introduction.content')}
@@ -347,7 +347,7 @@ export default function BlogArticleDetail() {
             </section>
 
             {/* Common Attack Vectors */}
-            <section className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.commonAttackVectors.title')}</h2>
               <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                 {Array.from({ length: 6 }, (_, i) => t(`sections.commonAttackVectors.items.${i}`)).map((item, index) => (
@@ -360,7 +360,7 @@ export default function BlogArticleDetail() {
             </section>
 
             {/* Impact Analysis */}
-            <section id="impact-analysis" className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section id="impact-analysis" className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.impactAnalysis.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
                 {t('sections.impactAnalysis.content')}
@@ -390,7 +390,7 @@ export default function BlogArticleDetail() {
             </section>
 
             {/* Mitigation Strategies */}
-            <section id="mitigation-strategies" className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section id="mitigation-strategies" className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.mitigationStrategies.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
                 {t('sections.mitigationStrategies.content')}
@@ -409,7 +409,7 @@ export default function BlogArticleDetail() {
             </section>
 
             {/* Conclusion */}
-            <section id="conclusion" className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section id="conclusion" className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.conclusion.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4">
                 {t('sections.conclusion.content1')}
@@ -439,7 +439,7 @@ export default function BlogArticleDetail() {
                   <div className="max-w-md mx-auto">
                     <Input
                       placeholder={t('cta.emailPlaceholder')}
-                      className="bg-white text-gray-900 border-0 mb-3 text-sm sm:text-base"
+                      className="bg-[#16141A] text-gray-900 border-0 mb-3 text-sm sm:text-base"
                       value={ctaEmail}
                       onChange={(event) => setCtaEmail(event.target.value)}
                     />
@@ -469,7 +469,7 @@ export default function BlogArticleDetail() {
                   readTime: t(`relatedArticles.articles.${i}.readTime`),
                   readMore: t(`relatedArticles.articles.${i}.readMore`)
                 })).map((article, index) => (
-                  <Card key={index} className="border-gray-200 hover:border-red-300 transition-colors cursor-pointer">
+                  <Card key={index} className="border-white/10 hover:border-[#FF3B30]/30 transition-colors cursor-pointer">
                     <CardContent className="p-4 sm:p-6">
                       <div className="flex items-center gap-2 mb-2">
                         <Badge variant="outline" className="text-red-500 border-red-500 text-xs">
@@ -483,7 +483,7 @@ export default function BlogArticleDetail() {
                       <p className="text-gray-600 text-sm sm:text-base line-clamp-2">
                         {article.desc}
                       </p>
-                      <Button onClick={() => router.push(article.route)} variant="link" className="text-red-600 hover:text-red-700 p-0 mt-2 text-sm sm:text-base">
+                      <Button onClick={() => router.push(article.route)} variant="link" className="text-[#FF3B30] hover:text-[#FF6B61] p-0 mt-2 text-sm sm:text-base">
                         {article.readMore}
                       </Button>
                     </CardContent>
@@ -493,11 +493,11 @@ export default function BlogArticleDetail() {
             </div>
 
             {/* Author Bio */}
-            <Card className="border-gray-200 mt-6 sm:mt-8">
+            <Card className="border-white/10 mt-6 sm:mt-8">
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <User className="w-6 h-6 sm:w-8 sm:h-8 text-red-600" />
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-[#FF3B30]/15 rounded-full flex items-center justify-center flex-shrink-0">
+                    <User className="w-6 h-6 sm:w-8 sm:h-8 text-[#FF3B30]" />
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{t('authorBio.name')}</h3>
@@ -514,7 +514,7 @@ export default function BlogArticleDetail() {
       </div>
 
       {/* Floating Mobile Actions */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#16141A] border-t border-white/10 p-4 shadow-lg">
         <div className="container mx-auto">
           <div className="flex items-center justify-between gap-4">
             <div className="flex-1">
@@ -525,14 +525,14 @@ export default function BlogArticleDetail() {
               <Button
                 size="sm"
                 variant="outline"
-                className="border-gray-300"
+                className="border-white/12"
                 onClick={handleShare}
               >
                 <Share2 className="w-4 h-4" />
               </Button>
               <Button
                 size="sm"
-                className="bg-red-600 hover:bg-red-700"
+                className="bg-red-600 hover:premium-cta"
                 onClick={handleRequestConsultation}
               >
                 {t('mobileActions.getHelp')}

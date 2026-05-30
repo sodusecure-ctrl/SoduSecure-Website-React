@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -34,7 +34,7 @@ const AUDIT_UMFANG = [
   { icon: ClipboardList, title: "Prozess & Policy Audit", desc: "Prüfung von Sicherheitsrichtlinien, Zugriffskonzepten, Incident Response Plans und Change Management.", badge: "", color: "text-purple-400", bg: "bg-purple-500/10 border-purple-500/20" },
   { icon: Building2, title: "Organisatorisches Audit", desc: "Bewertung der Sicherheitsorganisation, Rollen & Verantwortlichkeiten, Security Awareness-Maßnahmen.", badge: "", color: "text-green-400", bg: "bg-green-500/10 border-green-500/20" },
   { icon: FileText, title: "Compliance Audit (NIS2/ISO 27001)", desc: "Gap-Analyse gegen NIS2 Art. 21, ISO 27001 Annex A, DSGVO Art. 32 mit priorisierten Maßnahmen.", badge: "Pflicht für NIS2", color: "text-orange-400", bg: "bg-orange-500/10 border-orange-500/20" },
-  { icon: BarChart3, title: "Risikobewertung & Roadmap", desc: "CVSS 3.1-Scoring aller Findings, Risk-Matrix, priorisierte Maßnahmen-Roadmap mit Quick Wins.", badge: "", color: "text-red-400", bg: "bg-red-500/10 border-red-500/20" },
+  { icon: BarChart3, title: "Risikobewertung & Roadmap", desc: "CVSS 3.1-Scoring aller Findings, Risk-Matrix, priorisierte Maßnahmen-Roadmap mit Quick Wins.", badge: "", color: "text-[#FF3B30]", bg: "bg-[#FF3B30]/10 border-[#FF3B30]/20" },
   { icon: Award, title: "Zertifizierungs-vorbereitung", desc: "Sicherheitsaudit als Vorbereitung für ISO 27001-Zertifizierung – konform mit den Anforderungen akkreditierter Zertifizierungsstellen.", badge: "ISO 27001", color: "text-cyan-400", bg: "bg-cyan-500/10 border-cyan-500/20" },
 ];
 
@@ -78,15 +78,15 @@ export default function SicherheitsauditPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <main className="bg-[#0a0a0f] text-white min-h-screen">
+    <main className="bg-[#0A0A0B] text-white min-h-screen">
       {/* ── HERO ──────────────────────────────────────────────────────────────── */}
-      <section className="relative py-24 sm:py-32 text-center overflow-hidden">
+      <section className="premium-hero py-24 sm:py-32 text-center">
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-900/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-8">
+          <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
             <Link href="/" className="hover:text-white transition-colors">SODU Secure</Link>
             <span>/</span>
-            <span className="text-gray-300">Sicherheitsaudit</span>
+            <span className="text-white/70">Sicherheitsaudit</span>
           </nav>
 
           <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full px-4 py-1.5 text-sm text-cyan-400 mb-6">
@@ -102,7 +102,7 @@ export default function SicherheitsauditPage() {
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">
             SODU Secure führt manuelle IT Sicherheitsaudits durch –
             technisches Pentesting plus Compliance-Prüfung (NIS2, ISO 27001, DSGVO).
             OSCP-zertifiziert, Festpreis, schnelle Abwicklung.
@@ -122,7 +122,7 @@ export default function SicherheitsauditPage() {
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
             {["OSCP-zertifiziert", "NIS2 & ISO 27001 konform", "Festpreis – kein Tagessatz", "Bericht in 48 h"].map((s) => (
               <div key={s} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /><span>{s}</span>
@@ -137,7 +137,7 @@ export default function SicherheitsauditPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Was umfasst ein Sicherheitsaudit?</h2>
-            <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+            <p className="text-white/60 text-sm max-w-2xl mx-auto">
               Ein vollständiger IT Sicherheitsaudit geht über technisches Testing hinaus –
               er prüft Ihre gesamte Sicherheitslage.
             </p>
@@ -152,7 +152,7 @@ export default function SicherheitsauditPage() {
                   <h3 className="font-semibold text-white text-sm">{u.title}</h3>
                   {u.badge && <span className={`text-xs px-2 py-0.5 rounded-full border ${u.bg} ${u.color}`}>{u.badge}</span>}
                 </div>
-                <p className="text-xs text-gray-400 leading-relaxed">{u.desc}</p>
+                <p className="text-xs text-white/60 leading-relaxed">{u.desc}</p>
               </div>
             ))}
           </div>
@@ -163,25 +163,25 @@ export default function SicherheitsauditPage() {
       <section className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Sicherheitsaudit Preise & Pakete</h2>
-          <p className="text-gray-400 text-sm">Transparente Festpreise – kein Tagessatz, keine versteckten Kosten.</p>
+          <p className="text-white/60 text-sm">Transparente Festpreise – kein Tagessatz, keine versteckten Kosten.</p>
         </div>
         <div className="grid sm:grid-cols-3 gap-6">
           {PAKETE.map((pkg) => (
             <div key={pkg.name} className={`relative rounded-2xl p-8 border ${pkg.highlight ? 'bg-cyan-950/20 border-cyan-500/30' : 'bg-white/[0.03] border-white/10'}`}>
               {pkg.highlight && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-cyan-600 text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">Beliebtestes Paket</div>}
               <h3 className="font-bold text-white text-lg mb-1">{pkg.name}</h3>
-              <p className="text-xs text-gray-500 mb-1">{pkg.duration}</p>
+              <p className="text-xs text-white/50 mb-1">{pkg.duration}</p>
               <p className="text-xs text-cyan-500/70 mb-3">{pkg.focus}</p>
               <div className={`text-2xl font-bold mb-6 ${pkg.highlight ? 'text-cyan-400' : 'text-white'}`}>{pkg.price}</div>
               <ul className="space-y-2 mb-6">
                 {pkg.items.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-gray-300">
+                  <li key={item} className="flex items-start gap-2 text-sm text-white/70">
                     <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />{item}
                   </li>
                 ))}
               </ul>
               <Link href="/request-pentest"
-                className={`w-full inline-flex items-center justify-center gap-2 font-semibold py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105 ${pkg.highlight ? 'bg-cyan-600 hover:bg-cyan-500 text-white' : 'border border-white/20 hover:border-white/40 text-gray-300 hover:text-white'}`}>
+                className={`w-full inline-flex items-center justify-center gap-2 font-semibold py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105 ${pkg.highlight ? 'bg-cyan-600 hover:bg-cyan-500 text-white' : 'border border-white/20 hover:border-white/40 text-white/70 hover:text-white'}`}>
                 <Calculator className="w-4 h-4" />Preis berechnen
               </Link>
             </div>
@@ -197,33 +197,33 @@ export default function SicherheitsauditPage() {
               <h2 className="text-3xl font-bold mb-6">Warum SODU Secure für Ihren Sicherheitsaudit?</h2>
               <div className="space-y-4">
                 {[
-                  { icon: Award, title: "OSCP & CEH-zertifiziert", desc: "Nachgewiesene technische Expertise – keine Scan-Reseller.", color: "text-red-400" },
+                  { icon: Award, title: "OSCP & CEH-zertifiziert", desc: "Nachgewiesene technische Expertise – keine Scan-Reseller.", color: "text-[#FF3B30]" },
                   { icon: Zap, title: "Schneller Abschluss", desc: "Angebot 24 h, Teststart innerhalb 1 Woche, Bericht 48 h nach Test.", color: "text-yellow-400" },
                   { icon: Calculator, title: "Sofortiger Festpreis", desc: "Online-Konfigurator – Preis in 2 Minuten, kein Vertriebsgespräch.", color: "text-green-400" },
                   { icon: FileText, title: "Compliance-ready Berichte", desc: "NIS2, ISO 27001, DSGVO Art. 32, DORA – direkt einsetzbar.", color: "text-blue-400" },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4">
-                    <div className="w-8 h-8 bg-white/5 border border-white/10 rounded-lg flex-shrink-0 flex items-center justify-center">
+                    <div className="w-8 h-8 bg-white/5 border border-white/10 rounded-2xl flex-shrink-0 flex items-center justify-center">
                       <item.icon className={`w-4 h-4 ${item.color}`} />
                     </div>
                     <div>
                       <p className="font-semibold text-white text-sm">{item.title}</p>
-                      <p className="text-xs text-gray-400">{item.desc}</p>
+                      <p className="text-xs text-white/60">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
             <div className="bg-gradient-to-b from-cyan-950/30 to-teal-950/20 border border-cyan-500/20 rounded-2xl p-8 text-center">
-              <p className="text-sm text-gray-400 mb-2">Kostenlos & unverbindlich</p>
+              <p className="text-sm text-white/60 mb-2">Kostenlos & unverbindlich</p>
               <h3 className="text-xl font-bold mb-4">Festpreisangebot in 24 h</h3>
-              <p className="text-xs text-gray-400 mb-6">Kein Tagessatz. Kein Überbudget. Direkter Kontakt zum Pentester – kein Vertriebsumweg.</p>
+              <p className="text-xs text-white/60 mb-6">Kein Tagessatz. Kein Überbudget. Direkter Kontakt zum Pentester – kein Vertriebsumweg.</p>
               <Link href="/request-pentest"
                 className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105 w-full justify-center mb-3">
                 <Calculator className="w-4 h-4" />Sicherheitsaudit konfigurieren
               </Link>
               <a href={PHONE_HREF}
-                className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-200 w-full justify-center">
+                className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-200 w-full justify-center">
                 <Phone className="w-4 h-4" />{PHONE}
               </a>
             </div>
@@ -238,7 +238,7 @@ export default function SicherheitsauditPage() {
             <Star className="w-3.5 h-3.5" /><span>Nur 2 Plätze – Berlin KMU Pilot 2026</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Sicherheitsaudit gratis für Berliner KMUs</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-6 text-sm">
+          <p className="text-white/70 max-w-2xl mx-auto mb-6 text-sm">
             Berliner KMUs erhalten einen vollständigen IT Sicherheitsaudit inkl. Penetrationstest
             und Compliance-Bericht – kostenlos, im Wert von bis zu 15.000 €.
           </p>
@@ -261,10 +261,10 @@ export default function SicherheitsauditPage() {
                 className="w-full text-left flex items-center justify-between px-6 py-5 gap-4 hover:bg-white/[0.03] transition-colors"
                 aria-expanded={openFaq === i}>
                 <span className="font-medium text-white text-sm sm:text-base">{faq.q}</span>
-                {openFaq === i ? <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />}
+                {openFaq === i ? <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
               </button>
               {openFaq === i && (
-                <div className="px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
+                <div className="px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
               )}
             </div>
           ))}
@@ -272,9 +272,9 @@ export default function SicherheitsauditPage() {
       </section>
 
       {/* ── EXTERNE QUELLEN ───────────────────────────────────────────────────── */}
-      <section className="py-10 bg-[#131927] border-t border-gray-800">
+      <section className="py-10 bg-[#0A0A0B] border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4" />Externe Quellen</h2>
+          <h2 className="text-sm font-semibold text-white/60 mb-4 flex items-center gap-2"><BookOpen className="w-4 h-4" />Externe Quellen</h2>
           <div className="grid sm:grid-cols-2 gap-2">
             {[
               { label: "BSI IT-Grundschutz – Sicherheitsaudits", href: "https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/it-grundschutz_node.html" },
@@ -283,9 +283,9 @@ export default function SicherheitsauditPage() {
               { label: "DORA – ICT Risk Management Anforderungen", href: "https://www.eba.europa.eu/regulation-and-policy/operational-resilience/dora" },
             ].map((src) => (
               <a key={src.label} href={src.href} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 p-2.5 rounded-lg hover:bg-white/5 transition-colors group">
-                <ExternalLink className="w-3.5 h-3.5 text-gray-500 group-hover:text-gray-400 flex-shrink-0" />
-                <span className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors">{src.label}</span>
+                className="flex items-center gap-2 p-2.5 rounded-2xl hover:bg-white/5 transition-colors group">
+                <ExternalLink className="w-3.5 h-3.5 text-white/50 group-hover:text-white/60 flex-shrink-0" />
+                <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">{src.label}</span>
               </a>
             ))}
           </div>
@@ -298,7 +298,7 @@ export default function SicherheitsauditPage() {
           <Clock className="w-3.5 h-3.5" />Angebot in 24 h – Festpreis, kostenlos & unverbindlich
         </div>
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">Jetzt Sicherheitsaudit beauftragen</h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+        <p className="text-white/60 mb-8 max-w-2xl mx-auto">
           OSCP-zertifiziert, NIS2- & ISO 27001-konform, Festpreis per Konfigurator, Bericht in 48 h.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -306,14 +306,14 @@ export default function SicherheitsauditPage() {
             className="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
             <Calculator className="w-5 h-5" />Sicherheitsaudit konfigurieren <ArrowRight className="w-5 h-5" />
           </Link>
-          <a href={PHONE_HREF} className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
+          <a href={PHONE_HREF} className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
             <Phone className="w-4 h-4" />{PHONE}
           </a>
-          <a href={EMAIL_HREF} className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
+          <a href={EMAIL_HREF} className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
             <Mail className="w-4 h-4" />{EMAIL}
           </a>
         </div>
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-white/50">
           {["OSCP-zertifiziert", "NIS2 & ISO 27001", "Festpreis", "Bericht 48 h"].map((t) => (
             <span key={t} className="flex items-center gap-1.5"><CheckCircle className="w-4 h-4 text-green-400" />{t}</span>
           ))}

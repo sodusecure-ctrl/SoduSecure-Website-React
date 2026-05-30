@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Mail } from 'lucide-react';
@@ -38,7 +38,7 @@ export default function ConsultationCTA() {
       </div>
 
       {/* Decorative Element at Top */}
-      <div className="absolute top-4 sm:top-6 lg:top-8 xl:top-12 left-1/2 transform -translate-x-1/2 w-32 h-4 sm:w-48 sm:h-6 lg:w-64 lg:h-8 bg-white rounded-full opacity-20"></div>
+      <div className="absolute top-4 sm:top-6 lg:top-8 xl:top-12 left-1/2 transform -translate-x-1/2 w-32 h-4 sm:w-48 sm:h-6 lg:w-64 lg:h-8 bg-[#16141A] rounded-full opacity-20"></div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Heading */}
@@ -59,7 +59,7 @@ export default function ConsultationCTA() {
           <Button
             size="lg"
             onClick={handleBookCall}
-            className="bg-white text-red-600 hover:bg-gray-100 font-semibold px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-sm sm:text-base lg:text-lg rounded-lg sm:rounded-xl min-w-[140px] sm:min-w-[180px] lg:min-w-[200px] w-full sm:w-auto justify-center transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            className="bg-[#16141A] text-[#FF3B30] hover:bg-white/10 font-semibold px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6 text-sm sm:text-base lg:text-lg rounded-lg sm:rounded-xl min-w-[140px] sm:min-w-[180px] lg:min-w-[200px] w-full sm:w-auto justify-center transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <Mail className="w-4 h-4 sm:w-5 sm:h-5 mr-1 sm:mr-2" />
             {t('bookCall')}

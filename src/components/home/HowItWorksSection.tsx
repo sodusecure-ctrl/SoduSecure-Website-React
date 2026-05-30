@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { ClipboardList, FileText, RotateCcw, Search } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -98,7 +98,7 @@ export default function HowItWorksSection() {
                 <ul className="space-y-2 sm:space-y-3">
                   {step.items.map((item: string, itemIndex: number) => (
                     <li key={itemIndex} className="flex items-start gap-2 sm:gap-3 text-sm sm:text-base text-gray-400">
-                      <span className="text-red-600 mt-1 flex-shrink-0">▸</span>
+                      <span className="text-[#FF3B30] mt-1 flex-shrink-0">▸</span>
                       <span>{item}</span>
                     </li>
                   ))}

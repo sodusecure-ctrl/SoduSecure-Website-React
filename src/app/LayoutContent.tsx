@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Footer from '../components/common/Footer';
 import Header from '../components/common/Header';
+import { BrandProvider } from '../components/landing/BrandContext';
 
 function LayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -15,11 +16,11 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const hideChrome = isAuthRoute || isDashboardRoute || isLandingPage || isAdsPage || isVerifyPage;
 
   return (
-    <>
+    <BrandProvider>
       {!hideChrome && <Header />}
       {children}
       {!hideChrome && <Footer />}
-    </>
+    </BrandProvider>
   );
 }
 

@@ -133,5 +133,324 @@ html {
 
   body {
     @apply bg-background text-foreground;
+    background-color: #100E12;
+    color: #ECECEE;
+  }
+  /* Page-wide ambient glow — dark-red haze with subtle silver mid */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background:
+      radial-gradient(60% 45% at 12% 6%, rgba(180, 30, 28, 0.18), transparent 60%),
+      radial-gradient(50% 38% at 88% 25%, rgba(170, 170, 175, 0.05), transparent 60%),
+      radial-gradient(70% 50% at 50% 100%, rgba(255, 59, 48, 0.10), transparent 60%);
+    filter: blur(70px);
+  }
+  /* Vignette — cinematic edge darkening */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(ellipse 110% 90% at 50% 50%, transparent 50%, rgba(0,0,0,0.5) 100%);
   }
 }
+
+/* ======= Premium design utilities (Revolut/Phantom/aikido style) ======= */
+
+/* Subtle animated noise/grain — adds tactile premium feel on dark hero */
+.premium-noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+/* Aurora glow for hero backgrounds */
+.premium-aurora {
+  position: absolute;
+  inset: -10% -10% auto -10%;
+  height: 80%;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.55;
+  background:
+    radial-gradient(40% 50% at 18% 30%, rgba(255, 59, 48, 0.45), transparent 60%),
+    radial-gradient(40% 50% at 80% 20%, rgba(170, 170, 175, 0.25), transparent 60%),
+    radial-gradient(40% 50% at 60% 80%, rgba(255, 59, 48, 0.20), transparent 60%);
+}
+
+/* Self-contained premium hero section — no extra divs needed.
+   Apply to any <section className="premium-hero ..."> and it gets aurora + grid + noise via pseudo-elements. */
+.premium-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #0A0A0B;
+  color: #fff;
+}
+.premium-hero > * { position: relative; z-index: 1; }
+.premium-hero::before {
+  content: "";
+  position: absolute;
+  inset: -10% -10% auto -10%;
+  height: 80%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(80px);
+  opacity: 0.55;
+  background:
+    radial-gradient(40% 50% at 18% 30%, rgba(255, 59, 48, 0.45), transparent 60%),
+    radial-gradient(40% 50% at 80% 20%, rgba(170, 170, 175, 0.25), transparent 60%),
+    radial-gradient(40% 50% at 60% 80%, rgba(255, 59, 48, 0.20), transparent 60%);
+}
+.premium-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 35%, transparent 75%);
+          mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 35%, transparent 75%);
+}
+
+/* Silver gradient text — slowly shimmering for hero headlines */
+@keyframes premium-silver-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.premium-silver {
+  background: linear-gradient(110deg, #ffffff 0%, #f8f8f9 25%, #d6d6d9 50%, #f8f8f9 75%, #ffffff 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: premium-silver-shimmer 8s ease-in-out infinite;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Red→silver gradient text accent — animated */
+@keyframes premium-accent-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.premium-headline-accent {
+  background: linear-gradient(110deg, #ffffff 0%, #ff7568 25%, #ff3b30 50%, #ff7568 75%, #ffffff 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: premium-accent-shimmer 6s ease-in-out infinite;
+}
+
+/* Silver hairline border (1px gradient ring) */
+.premium-ring {
+  position: relative;
+  isolation: isolate;
+}
+.premium-ring::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04) 30%, rgba(255,255,255,0) 60%, rgba(255,59,48,0.18));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Premium CTA — red with subtle inner highlight + shadow */
+.premium-cta {
+  background: linear-gradient(180deg, #ff5247 0%, #ff3b30 50%, #e5332a 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.30),
+    inset 0 -1px 0 rgba(0,0,0,0.20),
+    0 10px 30px -8px rgba(255, 59, 48, 0.55),
+    0 2px 6px -1px rgba(0,0,0,0.30);
+  transition: transform .2s ease, box-shadow .25s ease, filter .2s ease;
+}
+.premium-cta:hover {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    inset 0 -1px 0 rgba(0,0,0,0.20),
+    0 14px 36px -8px rgba(255, 59, 48, 0.65),
+    0 2px 8px -1px rgba(0,0,0,0.30);
+}
+
+/* Glass surface */
+.premium-glass {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+/* Faint grid pattern for dark sections */
+.premium-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 35%, transparent 75%);
+          mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 35%, transparent 75%);
+}
+
+/* Shine sweep for trust strip / featured cards */
+@keyframes premium-shine {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(220%); }
+}
+.premium-shine {
+  position: relative;
+  overflow: hidden;
+}
+.premium-shine::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 40%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.10) 50%, transparent 100%);
+  animation: premium-shine 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Marquee for trust logos */
+@keyframes premium-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.premium-marquee {
+  animation: premium-marquee 35s linear infinite;
+}
+
+/* Tabular numerals (premium stats) */
+.premium-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum", "ss01";
+}
+
+/* ============== DARK PREMIUM v2 — full-page luxury layer ============== */
+
+/* Glass section: replaces white/light section backgrounds */
+.premium-section {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.018), rgba(255,255,255,0.008));
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.premium-section-glow {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.premium-section-glow::before {
+  content: "";
+  position: absolute;
+  inset: -20% 0 auto 0;
+  height: 60%;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(100px);
+  opacity: 0.35;
+  background:
+    radial-gradient(50% 60% at 20% 30%, rgba(255, 59, 48, 0.18), transparent 60%),
+    radial-gradient(40% 50% at 80% 70%, rgba(170, 170, 175, 0.10), transparent 60%);
+}
+.premium-section-glow > * { position: relative; z-index: 1; }
+
+/* Premium card: glass-morphism replacement for white cards */
+.premium-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1), border-color 220ms ease, background 220ms ease, box-shadow 220ms ease;
+}
+.premium-card:hover {
+  border-color: rgba(255, 59, 48, 0.28);
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  box-shadow:
+    0 0 0 1px rgba(255, 59, 48, 0.12),
+    0 30px 60px -20px rgba(255, 59, 48, 0.25),
+    0 8px 24px -8px rgba(0,0,0,0.6);
+  transform: translateY(-2px);
+}
+
+/* Glow divider — replaces hard borders between sections */
+.premium-divider {
+  position: relative;
+  height: 1px;
+  border: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 59, 48, 0.45) 50%, transparent 100%);
+  opacity: 0.5;
+}
+
+/* Headline shimmer — slow gradient sweep for hero H1 */
+@keyframes premium-headline-shimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.premium-headline-shimmer {
+  background: linear-gradient(110deg, #FFFFFF 0%, #F5F5F7 25%, #FF3B30 45%, #FF6B61 55%, #F5F5F7 75%, #FFFFFF 100%);
+  background-size: 280% 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: premium-headline-shimmer 7s ease-in-out infinite;
+}
+
+/* CTA glow — pulsing soft halo on primary buttons */
+@keyframes premium-cta-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.35), 0 12px 32px -8px rgba(255, 59, 48, 0.55); }
+  50%      { box-shadow: 0 0 0 12px rgba(255, 59, 48, 0.0), 0 16px 40px -8px rgba(255, 59, 48, 0.7); }
+}
+.premium-cta-glow {
+  animation: premium-cta-pulse 2.6s ease-in-out infinite;
+}
+
+/* Inner-stroke pill — for badges + pills on dark surfaces */
+.premium-pill {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 59, 48, 0.35);
+  color: #fff;
+}
+::-moz-selection {
+  background: rgba(255, 59, 48, 0.35);
+  color: #fff;
+}
+
+/* Scrollbar — slim premium dark */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #0A0A0B; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+  border-radius: 999px;
+  border: 2px solid #0A0A0B;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 59, 48, 0.4); }

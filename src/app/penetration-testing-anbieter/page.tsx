@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -103,15 +103,15 @@ export default function PenetrationTestingAnbieterPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <main className="bg-[#0a0a0f] text-white min-h-screen">
+    <main className="bg-[#0A0A0B] text-white min-h-screen">
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
-      <section className="relative py-24 sm:py-32 text-center overflow-hidden">
+      <section className="premium-hero py-24 sm:py-32 text-center">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-8">
+          <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
             <Link href="/" className="hover:text-white transition-colors">SODU Secure</Link>
             <span>/</span>
-            <span className="text-gray-300">Penetration Testing Anbieter</span>
+            <span className="text-white/70">Penetration Testing Anbieter</span>
           </nav>
 
           <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-sm text-blue-400 mb-6">
@@ -129,7 +129,7 @@ export default function PenetrationTestingAnbieterPage() {
             <span className="text-white">Zertifiziert. Transparent. Aus Berlin.</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
             SODU Secure ist ein zertifizierter Pentest Anbieter mit Sitz in Berlin.
             OSCP- und CEH-zertifizierte Pentester. Festpreise ab 2.500 €. Manuelles Testing –
             keine Scan-Reports. Angebot in 24 Stunden. Erfahren Sie mehr über Pentest Dienstleister und Penetration Testing Services.
@@ -137,7 +137,7 @@ export default function PenetrationTestingAnbieterPage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <Link href="/request-pentest"
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-red-900/40 hover:scale-105">
+              className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-[#FF3B30]/30 hover:scale-105">
               <Calculator className="w-5 h-5" />Pentest Angebot einholen
             </Link>
             <Link href="/request-pentest"
@@ -146,7 +146,7 @@ export default function PenetrationTestingAnbieterPage() {
             </Link>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
             {["OSCP- & CEH-zertifiziert", "100 % manuelles Testing", "Festpreis – keine Tagessätze"].map((s) => (
               <div key={s} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /><span>{s}</span>
@@ -167,7 +167,7 @@ export default function PenetrationTestingAnbieterPage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Wie wählt man den richtigen Pentest Anbieter?
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+            <p className="text-white/60 max-w-2xl mx-auto text-sm">
               Der Markt ist unübersichtlich. Diese 6 Kriterien helfen Ihnen, seriöse
               Penetration Testing Anbieter von Scan-Resellern zu unterscheiden.
             </p>
@@ -180,10 +180,10 @@ export default function PenetrationTestingAnbieterPage() {
                   <item.icon className="w-5 h-5 text-blue-400" />
                 </div>
                 <h3 className="font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-3">{item.desc}</p>
-                <div className="flex items-start gap-2 bg-red-500/5 border border-red-500/15 rounded-lg px-3 py-2">
-                  <AlertTriangle className="w-3.5 h-3.5 text-red-400 flex-shrink-0 mt-0.5" />
-                  <p className="text-xs text-red-300/70">{item.warnsignal}</p>
+                <p className="text-sm text-white/60 leading-relaxed mb-3">{item.desc}</p>
+                <div className="flex items-start gap-2 bg-[#FF3B30]/5 border border-[#FF3B30]/15 rounded-2xl px-3 py-2">
+                  <AlertTriangle className="w-3.5 h-3.5 text-[#FF3B30] flex-shrink-0 mt-0.5" />
+                  <p className="text-xs text-[#FF6B61]/70">{item.warnsignal}</p>
                 </div>
               </div>
             ))}
@@ -199,7 +199,7 @@ export default function PenetrationTestingAnbieterPage() {
               SODU Secure vs.{" "}
               <span className="text-blue-400">typischer Pentest Anbieter</span>
             </h2>
-            <p className="text-gray-300 leading-relaxed mb-6">
+            <p className="text-white/70 leading-relaxed mb-6">
               Viele Anbieter versprechen {'\u201ePenetrationstest"'}, liefern aber automatisierte
               Scan-Reports. Was SODU Secure als Pentest Anbieter konkret unterscheidet:
             </p>
@@ -213,7 +213,7 @@ export default function PenetrationTestingAnbieterPage() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-300">{item}</span>
+                  <span className="text-sm text-white/70">{item}</span>
                 </div>
               ))}
             </div>
@@ -227,13 +227,13 @@ export default function PenetrationTestingAnbieterPage() {
               {VERGLEICH.map((row) => (
                 <div key={row.kriterium}
                   className="flex items-center gap-3 text-sm py-1.5 border-b border-white/5 last:border-0">
-                  <span className="flex-1 text-gray-300 text-xs">{row.kriterium}</span>
+                  <span className="flex-1 text-white/70 text-xs">{row.kriterium}</span>
                   <div className="flex gap-6">
                     <div className="flex items-center gap-1 w-16 justify-center">
-                      {row.sodu ? <CheckCircle className="w-4 h-4 text-green-400" /> : <span className="w-4 h-4 flex items-center justify-center text-gray-600">✕</span>}
+                      {row.sodu ? <CheckCircle className="w-4 h-4 text-green-400" /> : <span className="w-4 h-4 flex items-center justify-center text-white/70">✕</span>}
                     </div>
                     <div className="flex items-center gap-1 w-16 justify-center">
-                      {row.typisch ? <CheckCircle className="w-4 h-4 text-green-400" /> : <span className="w-4 h-4 flex items-center justify-center text-gray-600">✕</span>}
+                      {row.typisch ? <CheckCircle className="w-4 h-4 text-green-400" /> : <span className="w-4 h-4 flex items-center justify-center text-white/70">✕</span>}
                     </div>
                   </div>
                 </div>
@@ -241,7 +241,7 @@ export default function PenetrationTestingAnbieterPage() {
               <div className="flex justify-end pt-2">
                 <div className="flex gap-6">
                   <span className="text-xs text-green-400 font-semibold w-16 text-center">SODU</span>
-                  <span className="text-xs text-gray-500 font-semibold w-16 text-center">Typisch</span>
+                  <span className="text-xs text-white/50 font-semibold w-16 text-center">Typisch</span>
                 </div>
               </div>
             </div>
@@ -256,7 +256,7 @@ export default function PenetrationTestingAnbieterPage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Leistungen von SODU Secure als Pentest Anbieter
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+            <p className="text-white/60 max-w-2xl mx-auto text-sm">
               Als vollständiger Penetration Testing Anbieter decken wir alle relevanten
               Testbereiche ab – von der Web-App bis zum Red Team Engagement.
             </p>
@@ -266,7 +266,7 @@ export default function PenetrationTestingAnbieterPage() {
               <Link key={svc.title} href={svc.href}
                 className="group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-200">
                 <h3 className="font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">{svc.title}</h3>
-                <p className="text-sm text-gray-400 mb-3">{svc.desc}</p>
+                <p className="text-sm text-white/60 mb-3">{svc.desc}</p>
                 <span className="inline-flex items-center gap-1 text-xs text-blue-400 group-hover:gap-2 transition-all">
                   Mehr erfahren <ArrowRight className="w-3 h-3" />
                 </span>
@@ -275,7 +275,7 @@ export default function PenetrationTestingAnbieterPage() {
           </div>
           <div className="mt-10 text-center">
             <Link href="/request-pentest"
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
+              className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
               <Calculator className="w-5 h-5" />Pentest Angebot von diesem Anbieter einholen<ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -288,7 +288,7 @@ export default function PenetrationTestingAnbieterPage() {
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             SODU Secure – Ihr Penetration Testing Anbieter aus Berlin
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-sm">
+          <p className="text-white/60 max-w-2xl mx-auto text-sm">
             Berliner Unternehmen vertrauen uns als ihren lokalen Pentest Anbieter –
             mit persönlichem Service, schnellen Reaktionszeiten und zertifizierten Experten.
           </p>
@@ -296,7 +296,7 @@ export default function PenetrationTestingAnbieterPage() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {[
-            { icon: Award, title: "OSCP-zertifiziert", desc: "Höchste praktische Pentest-Zertifizierung – weltweit anerkannt.", color: "text-red-400", bg: "bg-red-500/10 border-red-500/20" },
+            { icon: Award, title: "OSCP-zertifiziert", desc: "Höchste praktische Pentest-Zertifizierung – weltweit anerkannt.", color: "text-[#FF3B30]", bg: "bg-[#FF3B30]/10 border-[#FF3B30]/20" },
             { icon: BarChart3, title: "Festpreis ab 2.500 €", desc: "Keine Tagessatz-Überraschungen. Kalkulierbarkeit vor Beginn.", color: "text-green-400", bg: "bg-green-500/10 border-green-500/20" },
             { icon: Clock, title: "Angebot in 24h", desc: "Transparentes Festpreis-Angebot innerhalb von 24 Stunden.", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20" },
             { icon: MapPin, title: "Standort Berlin", desc: "Vor Ort oder remote – schnelle Reaktionszeiten in der Region.", color: "text-purple-400", bg: "bg-purple-500/10 border-purple-500/20" },
@@ -306,7 +306,7 @@ export default function PenetrationTestingAnbieterPage() {
                 <item.icon className={`w-6 h-6 ${item.color}`} />
               </div>
               <h3 className="font-bold text-white mb-1">{item.title}</h3>
-              <p className="text-xs text-gray-400">{item.desc}</p>
+              <p className="text-xs text-white/60">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -315,7 +315,7 @@ export default function PenetrationTestingAnbieterPage() {
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="flex-1">
               <h3 className="text-xl font-bold mb-2">Kostenlos beraten lassen</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-white/60 text-sm">
                 Unsicher, welchen Pentest Anbieter Sie wählen sollen? Sprechen Sie mit uns –
                 wir beraten Sie kostenlos und unverbindlich zu Scope, Kosten und dem richtigen
                 Testansatz für Ihre Infrastruktur.
@@ -323,11 +323,11 @@ export default function PenetrationTestingAnbieterPage() {
             </div>
             <div className="flex flex-col gap-3 flex-shrink-0">
               <Link href="/request-pentest"
-                className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105">
+                className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105">
                 <Calculator className="w-4 h-4" />Pentest konfigurieren
               </Link>
               <a href={PHONE_HREF}
-                className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 text-sm justify-center">
+                className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 text-sm justify-center">
                 <Phone className="w-4 h-4" />{PHONE}
               </a>
             </div>
@@ -336,20 +336,20 @@ export default function PenetrationTestingAnbieterPage() {
       </section>
 
       {/* ── PILOT ─────────────────────────────────────────────────────────────── */}
-      <section className="py-12 bg-gradient-to-r from-red-950/40 to-orange-950/40 border-y border-red-500/20">
+      <section className="py-12 bg-gradient-to-r from-red-950/40 to-orange-950/40 border-y border-[#FF3B30]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-red-500/20 border border-red-500/30 rounded-full px-4 py-1.5 text-sm text-red-300 mb-4">
+          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/20 border border-[#FF3B30]/30 rounded-full px-4 py-1.5 text-sm text-[#FF6B61] mb-4">
             <Star className="w-3.5 h-3.5" /><span>Nur noch 2 Plätze</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">
             Als Pentest Anbieter für Berliner KMUs – Pilotprogramm 2026
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-6 text-sm sm:text-base">
+          <p className="text-white/70 max-w-2xl mx-auto mb-6 text-sm sm:text-base">
             Berliner KMUs mit 20–150 Mitarbeitern und Microsoft-Infrastruktur erhalten
             einen vollständig subventionierten Pentest im Wert von bis zu 15.000 €.
           </p>
           <Link href="/berlin-kmu-pilot"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
+            className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
             Jetzt bewerben<ArrowRight className="w-5 h-5" />
           </Link>
         </div>
@@ -362,7 +362,7 @@ export default function PenetrationTestingAnbieterPage() {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
               Penetration Testing Anbieter – FAQ
             </h2>
-            <p className="text-gray-400 text-sm">Häufige Fragen zur Anbieterwahl, Zertifizierungen und zum Angebotsprozess.</p>
+            <p className="text-white/60 text-sm">Häufige Fragen zur Anbieterwahl, Zertifizierungen und zum Angebotsprozess.</p>
           </div>
           <div className="space-y-3">
             {FAQS.map((faq, i) => (
@@ -371,10 +371,10 @@ export default function PenetrationTestingAnbieterPage() {
                   className="w-full text-left flex items-center justify-between px-6 py-5 gap-4 hover:bg-white/[0.03] transition-colors"
                   aria-expanded={openFaq === i}>
                   <span className="font-medium text-white text-sm sm:text-base">{faq.q}</span>
-                  {openFaq === i ? <ChevronUp className="w-5 h-5 text-red-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />}
+                  {openFaq === i ? <ChevronUp className="w-5 h-5 text-[#FF3B30] flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
                 </button>
                 {openFaq === i && (
-                  <div className="px-6 pb-5 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
+                  <div className="px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
                 )}
               </div>
             ))}
@@ -383,9 +383,9 @@ export default function PenetrationTestingAnbieterPage() {
       </section>
 
       {/* ── EXTERNE QUELLEN ───────────────────────────────────────────────────── */}
-      <section className="py-10 bg-[#131927] border-t border-gray-800">
+      <section className="py-10 bg-[#0A0A0B] border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-sm font-semibold text-gray-400 mb-4 flex items-center gap-2">
+          <h2 className="text-sm font-semibold text-white/60 mb-4 flex items-center gap-2">
             <BookOpen className="w-4 h-4" />Externe Quellen
           </h2>
           <div className="grid sm:grid-cols-2 gap-2">
@@ -396,9 +396,9 @@ export default function PenetrationTestingAnbieterPage() {
               { label: "MITRE ATT&CK Framework", href: "https://attack.mitre.org/" },
             ].map((src) => (
               <a key={src.label} href={src.href} target="_blank" rel="noopener noreferrer"
-                className="flex items-center gap-2 p-2.5 rounded-lg hover:bg-white/5 transition-colors group">
-                <ExternalLink className="w-3.5 h-3.5 text-gray-500 group-hover:text-gray-400 flex-shrink-0" />
-                <span className="text-xs text-gray-500 group-hover:text-gray-300 transition-colors">{src.label}</span>
+                className="flex items-center gap-2 p-2.5 rounded-2xl hover:bg-white/5 transition-colors group">
+                <ExternalLink className="w-3.5 h-3.5 text-white/50 group-hover:text-white/60 flex-shrink-0" />
+                <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">{src.label}</span>
               </a>
             ))}
           </div>
@@ -410,25 +410,25 @@ export default function PenetrationTestingAnbieterPage() {
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
           SODU Secure als Ihren Pentest Anbieter wählen
         </h2>
-        <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+        <p className="text-white/60 mb-8 max-w-2xl mx-auto">
           Zertifiziert. Transparent. Aus Berlin. Festpreis-Angebot innerhalb von 24 Stunden –
           kostenlos und unverbindlich.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <Link href="/request-pentest"
-            className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-500 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
+            className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
             <Calculator className="w-5 h-5" />Pentest Angebot einholen<ArrowRight className="w-5 h-5" />
           </Link>
           <a href={PHONE_HREF}
-            className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
+            className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
             <Phone className="w-4 h-4" />{PHONE}
           </a>
           <a href={EMAIL_HREF}
-            className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
+            className="inline-flex items-center gap-2 border border-white/20 hover:border-white/40 text-white/70 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200">
             <Mail className="w-4 h-4" />{EMAIL}
           </a>
         </div>
-        <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
+        <div className="flex flex-wrap justify-center gap-4 text-sm text-white/50">
           {["OSCP-zertifiziert", "Festpreis", "DSGVO-konform", "Berliner Standort"].map((t) => (
             <span key={t} className="flex items-center gap-1.5">
               <CheckCircle className="w-4 h-4 text-green-400" />{t}

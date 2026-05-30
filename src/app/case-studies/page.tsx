@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -256,7 +256,7 @@ export default function CaseStudiesPage() {
       author: t('blogs.items.13.author'),
       date: "Feb 27, 2026",
       readTime: t('blogs.items.13.readTime'),
-      categoryColor: "text-red-600"
+      categoryColor: "text-[#FF3B30]"
     },
     {
       id: 15,
@@ -350,7 +350,7 @@ export default function CaseStudiesPage() {
             <Button
               onClick={() => setActiveTab('blogs')}
               className={`py-4 sm:py-6 sm:w-6/12 text-sm sm:text-base lg:text-lg font-semibold ${activeTab === 'blogs'
-                ? 'bg-red-600 hover:bg-red-700'
+                ? 'bg-red-600 hover:premium-cta'
                 : 'bg-gray-800 hover:bg-gray-700'
                 }`}
             >
@@ -359,7 +359,7 @@ export default function CaseStudiesPage() {
             <Button
               onClick={() => setActiveTab('cases')}
               className={`py-4 sm:py-6 sm:w-6/12 text-sm sm:text-base lg:text-lg font-semibold ${activeTab === 'cases'
-                ? 'bg-red-600 hover:bg-red-700'
+                ? 'bg-red-600 hover:premium-cta'
                 : 'bg-gray-800 hover:bg-gray-700'
                 }`}
             >
@@ -399,8 +399,8 @@ export default function CaseStudiesPage() {
                   variant={selectedCaseCategory === category ? "default" : "outline"}
                   size="sm"
                   className={`whitespace-nowrap text-xs sm:text-sm ${selectedCaseCategory === category
-                    ? 'bg-red-600 hover:bg-red-700'
-                    : 'bg-transparent border-gray-100 hover:bg-gray-50'
+                    ? 'bg-red-600 hover:premium-cta'
+                    : 'bg-transparent border-white/8 hover:bg-white/5'
                     }`}
                   onClick={() => setSelectedCaseCategory(category)}
                 >
@@ -508,8 +508,8 @@ export default function CaseStudiesPage() {
                   variant={selectedBlogCategory === category ? "default" : "outline"}
                   size="sm"
                   className={`whitespace-nowrap text-xs text-white sm:text-sm ${selectedBlogCategory === category
-                    ? 'bg-red-600 hover:bg-red-700'
-                    : 'bg-transparent border-gray-100 hover:bg-gray-50'
+                    ? 'bg-red-600 hover:premium-cta'
+                    : 'bg-transparent border-white/8 hover:bg-white/5'
                     }`}
                   onClick={() => setSelectedBlogCategory(category)}
                 >
@@ -613,7 +613,7 @@ export default function CaseStudiesPage() {
                     placeholder="Enter your email"
                     className="bg-gray-800 border-gray-700 flex-1"
                   />
-                  <Button className="bg-red-600 hover:bg-red-700">
+                  <Button className="bg-red-600 hover:premium-cta">
                     Subscribe
                   </Button>
                 </div>
@@ -635,7 +635,7 @@ export default function CaseStudiesPage() {
               placeholder="Your email"
               className="bg-gray-800 border-gray-700 text-sm"
             />
-            <Button className="bg-red-600 hover:bg-red-700 text-sm">
+            <Button className="bg-red-600 hover:premium-cta text-sm">
               Subscribe
             </Button>
           </div>

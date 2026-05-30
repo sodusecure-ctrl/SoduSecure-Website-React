@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Award, Building2, CheckCircle, Eye, Headphones, Lock, Shield, Target, TrendingUp, Users } from 'lucide-react';
 import { useTranslations } from 'next-intl';
@@ -86,7 +86,7 @@ export default function AboutSection() {
       {/* Hero Section */}
       <div className="bg-black text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <button className="border border-red-600 text-red-600 px-4 sm:px-6 py-2 rounded hover:bg-red-600 hover:text-white transition-colors mb-4 sm:mb-6 text-xs sm:text-sm font-medium">
+          <button className="border border-red-600 text-[#FF3B30] px-4 sm:px-6 py-2 rounded hover:bg-red-600 hover:text-white transition-colors mb-4 sm:mb-6 text-xs sm:text-sm font-medium">
             {t('hero.badge')}
           </button>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
@@ -99,23 +99,23 @@ export default function AboutSection() {
       </div>
 
       {/* Stats Section */}
-      <div className="bg-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
+      <div className="bg-[#16141A] py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-red-600 mb-1 sm:mb-2">10+</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">10+</div>
               <div className="text-gray-600 text-xs sm:text-sm">{t('stats.years')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-red-600 mb-1 sm:mb-2">500+</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">500+</div>
               <div className="text-gray-600 text-xs sm:text-sm">{t('stats.tests')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-red-600 mb-1 sm:mb-2">10+</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">10+</div>
               <div className="text-gray-600 text-xs sm:text-sm">{t('stats.countries')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-red-600 mb-1 sm:mb-2">OSCP</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">OSCP</div>
               <div className="text-gray-600 text-xs sm:text-sm">{t('stats.satisfaction')}</div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function AboutSection() {
       </div>
 
       {/* Who We Are Section */}
-      <div className="bg-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
+      <div className="bg-[#16141A] py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
@@ -149,7 +149,7 @@ export default function AboutSection() {
                 {/* Shield Icon */}
                 <div className="relative z-10 flex flex-col items-center gap-3 sm:gap-4">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-32 lg:h-32 rounded-full border-2 sm:border-3 lg:border-4 border-red-600 flex items-center justify-center">
-                    <Building2 className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 text-red-600" />
+                    <Building2 className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 text-[#FF3B30]" />
                   </div>
                   <p className="text-white text-center text-xs sm:text-sm max-w-xs px-4">
                     {t('whoWeAre.imageAlt')}
@@ -182,7 +182,7 @@ export default function AboutSection() {
             {/* Integrity */}
             <div className="text-center group">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 sm:mb-6 border border-red-600 rounded-lg flex items-center justify-center group-hover:bg-red-600 transition-colors">
-                <Shield className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-red-600 group-hover:text-white transition-colors" />
+                <Shield className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-[#FF3B30] group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{t('mission.values.integrity.title')}</h3>
               <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
@@ -193,7 +193,7 @@ export default function AboutSection() {
             {/* Accuracy */}
             <div className="text-center group">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 sm:mb-6 border border-red-600 rounded-lg flex items-center justify-center group-hover:bg-red-600 transition-colors">
-                <Target className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-red-600 group-hover:text-white transition-colors" />
+                <Target className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-[#FF3B30] group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{t('mission.values.accuracy.title')}</h3>
               <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
@@ -204,7 +204,7 @@ export default function AboutSection() {
             {/* Transparency */}
             <div className="text-center group">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 sm:mb-6 border border-red-600 rounded-lg flex items-center justify-center group-hover:bg-red-600 transition-colors">
-                <Eye className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-red-600 group-hover:text-white transition-colors" />
+                <Eye className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-[#FF3B30] group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{t('mission.values.transparency.title')}</h3>
               <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
@@ -215,7 +215,7 @@ export default function AboutSection() {
             {/* Security First */}
             <div className="text-center group">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 sm:mb-6 border border-red-600 rounded-lg flex items-center justify-center group-hover:bg-red-600 transition-colors">
-                <Lock className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-red-600 group-hover:text-white transition-colors" />
+                <Lock className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-[#FF3B30] group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{t('mission.values.securityFirst.title')}</h3>
               <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
@@ -227,7 +227,7 @@ export default function AboutSection() {
       </div>
 
       {/* Team Section */}
-      <div id='#team' className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 bg-white">
+      <div id='#team' className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 bg-[#16141A]">
         <div className="container mx-auto max-w-7xl">
           {/* Header */}
           <div className="mb-8 sm:mb-12 text-center">
@@ -243,7 +243,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 lg:mb-16">
             {teamMembers.map((member, index) => (
               <div key={index} className="group">
-                <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="bg-[#16141A] border border-white/10 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                   <div className="aspect-square overflow-hidden bg-gray-100">
                     {member.image ? (
                       <Image
@@ -266,7 +266,7 @@ export default function AboutSection() {
                       {member.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-gray-200"
+                          className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-white/10"
                         >
                           {tag}
                         </span>
@@ -295,7 +295,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 sm:mb-6 text-red-600 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 sm:mb-6 text-[#FF3B30] group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{feature.title}</h3>
@@ -321,7 +321,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
             {certifications.map((cert, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 hover:shadow-lg transition-shadow">
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-1 sm:mb-2">{cert.name}</div>
                   <div className="text-xs text-gray-500">{cert.subtitle}</div>
                 </div>
@@ -342,7 +342,7 @@ export default function AboutSection() {
           </p>
           <Link href="/request-pentest">
             <Button
-              className="bg-white text-red-600 hover:bg-gray-100 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-lg w-full sm:w-auto"
+              className="bg-[#16141A] text-[#FF3B30] hover:bg-white/10 px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg font-semibold rounded-lg w-full sm:w-auto"
             >
               {t('cta.button')}
             </Button>

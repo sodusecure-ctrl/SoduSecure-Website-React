@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,12 +10,12 @@ import { useTranslations } from 'next-intl';
 
 export default function AccountRecovery() {
   const [otp, setOtp] = useState<string[]>(['', '', '', '']);
-  const [error, setError] = useState<string>('');
-  const t = useTranslations('auth.verifyEmailForgotPassword');
-  const inputRefs = useRef<(HTMLInputElement | null)[]>(Array(4).fill(null));
-  const router = useRouter();
+const [error, setError] = useState<string>('');
+const t = useTranslations('auth.verifyEmailForgotPassword');
+const inputRefs = useRef<(HTMLInputElement | null)[]>(Array(4).fill(null));
+const router = useRouter();
 
-  const handleChange = (index: number, e: ChangeEvent<HTMLInputElement>) => {
+const handleChange = (index: number, e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
 
     // Only allow single digit
@@ -85,8 +85,8 @@ export default function AccountRecovery() {
   return (
     <div className="min-h-screen flex">
       {/* Left side - Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-white">
-        <div className="w-full max-w-lg shadow-sm border border-gray-100 sm:p-10 p-4 rounded-xl">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 bg-[#16141A]">
+        <div className="w-full max-w-lg shadow-sm border border-white/8 sm:p-10 p-4 rounded-xl">
           {/* Logo */}
           <div className="flex justify-center mb-8">
             <div className="w-16 h-16 rounded-xl flex items-center justify-center">

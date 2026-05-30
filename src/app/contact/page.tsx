@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -174,7 +174,7 @@ export default function ContactSection() {
       {/* Hero Section */}
       <div className="bg-black text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <button className="border border-red-600 text-red-600 px-4 sm:px-6 py-2 rounded hover:bg-red-600 hover:text-white transition-colors mb-4 sm:mb-6 text-xs sm:text-sm font-medium">
+          <button className="border border-red-600 text-[#FF3B30] px-4 sm:px-6 py-2 rounded hover:bg-red-600 hover:text-white transition-colors mb-4 sm:mb-6 text-xs sm:text-sm font-medium">
             {t('hero.badge')}
           </button>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
@@ -187,7 +187,7 @@ export default function ContactSection() {
       </div>
 
       {/* Main Content */}
-      <div className="bg-white py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
+      <div className="bg-[#16141A] py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
           <div>
@@ -214,10 +214,10 @@ export default function ContactSection() {
 
             {/* Error Message */}
             {submitError && (
-              <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-red-50 border border-red-200 rounded-lg">
+              <div className="mb-4 sm:mb-6 p-3 sm:p-4 bg-[#FF3B30]/10 border border-[#FF3B30]/25 rounded-lg">
                 <div className="flex items-center gap-2 sm:gap-3">
-                  <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 flex-shrink-0" />
-                  <p className="text-red-800 text-sm sm:text-base">{submitError}</p>
+                  <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30] flex-shrink-0" />
+                  <p className="text-[#FF6B61] text-sm sm:text-base">{submitError}</p>
                 </div>
               </div>
             )}
@@ -226,7 +226,7 @@ export default function ContactSection() {
               {/* Full Name Field */}
               <div data-error={!!errors.fullName}>
                 <label className="block text-sm font-medium mb-1.5 sm:mb-2">
-                  {t('form.fields.fullName.label')} <span className="text-red-600">*</span>
+                  {t('form.fields.fullName.label')} <span className="text-[#FF3B30]">*</span>
                 </label>
                 <Input
                   type="text"
@@ -238,7 +238,7 @@ export default function ContactSection() {
                   disabled={isSubmitting}
                 />
                 {errors.fullName && (
-                  <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-red-600 flex items-center gap-1">
+                  <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-[#FF3B30] flex items-center gap-1">
                     <AlertCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                     {errors.fullName}
                   </p>
@@ -262,7 +262,7 @@ export default function ContactSection() {
                 {/* Email Field */}
                 <div data-error={!!errors.email}>
                   <label className="block text-sm font-medium mb-1.5 sm:mb-2">
-                    {t('form.fields.email.label')} <span className="text-red-600">*</span>
+                    {t('form.fields.email.label')} <span className="text-[#FF3B30]">*</span>
                   </label>
                   <Input
                     type="email"
@@ -274,7 +274,7 @@ export default function ContactSection() {
                     disabled={isSubmitting}
                   />
                   {errors.email && (
-                    <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-red-600 flex items-center gap-1">
+                    <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-[#FF3B30] flex items-center gap-1">
                       <AlertCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                       {errors.email}
                     </p>
@@ -293,7 +293,7 @@ export default function ContactSection() {
                     disabled={isSubmitting}
                   />
                   {errors.phone && (
-                    <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-red-600 flex items-center gap-1">
+                    <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-[#FF3B30] flex items-center gap-1">
                       <AlertCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                       {errors.phone}
                     </p>
@@ -304,7 +304,7 @@ export default function ContactSection() {
               {/* Message Field */}
               <div data-error={!!errors.message}>
                 <label className="block text-sm font-medium mb-1.5 sm:mb-2">
-                  {t('form.fields.message.label')} <span className="text-red-600">*</span>
+                  {t('form.fields.message.label')} <span className="text-[#FF3B30]">*</span>
                 </label>
                 <Textarea
                   placeholder={t('form.fields.message.placeholder')}
@@ -316,12 +316,12 @@ export default function ContactSection() {
                 />
                 <div className="flex justify-between items-center mt-1.5">
                   {errors.message && (
-                    <p className="text-xs sm:text-sm text-red-600 flex items-center gap-1">
+                    <p className="text-xs sm:text-sm text-[#FF3B30] flex items-center gap-1">
                       <AlertCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                       {errors.message}
                     </p>
                   )}
-                  <span className={`text-xs ${formData.message.length > 1000 ? 'text-red-600' : 'text-gray-500'}`}>
+                  <span className={`text-xs ${formData.message.length > 1000 ? 'text-[#FF3B30]' : 'text-gray-500'}`}>
                     {formData.message.length}/1000
                   </span>
                 </div>
@@ -342,7 +342,7 @@ export default function ContactSection() {
                 </label>
               </div>
               {errors.privacyAccepted && (
-                <p className="text-xs sm:text-sm text-red-600 flex items-center gap-1 ml-8 sm:ml-9">
+                <p className="text-xs sm:text-sm text-[#FF3B30] flex items-center gap-1 ml-8 sm:ml-9">
                   <AlertCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" />
                   {errors.privacyAccepted}
                 </p>
@@ -351,7 +351,7 @@ export default function ContactSection() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-red-700 text-white py-4 sm:py-6 text-sm sm:text-base lg:text-lg font-medium flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-red-600 hover:premium-cta text-white py-4 sm:py-6 text-sm sm:text-base lg:text-lg font-medium flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -391,7 +391,7 @@ export default function ContactSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
                 <span className="text-white font-semibold text-sm sm:text-base flex items-center gap-2">
                   <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Route in Google Maps öffnen
+                  {t('info.mapRoute')}
                 </span>
               </div>
             </a>
@@ -403,9 +403,9 @@ export default function ContactSection() {
               </h3>
 
               <div className="space-y-3 sm:space-y-4">
-                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-gray-200 rounded-lg">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" />
+                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-white/10 rounded-lg">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30]" />
                   </div>
                   <div>
                     <p className="font-semibold text-sm sm:text-base mb-1">{t('info.address.title')}</p>
@@ -414,9 +414,9 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-gray-200 rounded-lg">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" />
+                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-white/10 rounded-lg">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30]" />
                   </div>
                   <div>
                     <p className="font-semibold text-sm sm:text-base mb-1">{t('info.email.title')}</p>
@@ -424,9 +424,9 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-gray-200 rounded-lg">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" />
+                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-white/10 rounded-lg">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30]" />
                   </div>
                   <div>
                     <p className="font-semibold text-sm sm:text-base mb-1">{t('info.phone.title')}</p>
@@ -434,9 +434,9 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-gray-200 rounded-lg">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" />
+                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-white/10 rounded-lg">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30]" />
                   </div>
                   <div>
                     <p className="font-semibold text-sm sm:text-base mb-1">{t('info.hours.title')}</p>
@@ -454,17 +454,17 @@ export default function ContactSection() {
               </h3>
 
               <div className="space-y-3 sm:space-y-4">
-                <div className="p-3 sm:p-4 border border-gray-200 rounded-lg">
+                <div className="p-3 sm:p-4 border border-white/10 rounded-lg">
                   <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
-                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 flex-shrink-0" />
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30] flex-shrink-0" />
                     <p className="font-semibold text-sm sm:text-base">{t('quickContact.email.title')}</p>
                   </div>
                   <p className="text-xs sm:text-sm text-gray-600 break-all">{t('quickContact.email.value')}</p>
                 </div>
 
-                <div className="p-3 sm:p-4 border border-gray-200 rounded-lg">
+                <div className="p-3 sm:p-4 border border-white/10 rounded-lg">
                   <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
-                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 flex-shrink-0" />
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30] flex-shrink-0" />
                     <p className="font-semibold text-sm sm:text-base">{t('quickContact.call.title')}</p>
                   </div>
                   <p className="text-xs sm:text-sm text-gray-600">{t('quickContact.call.value')}</p>
@@ -481,9 +481,9 @@ export default function ContactSection() {
                   </p>
                 </div>
 
-                <div className="p-3 sm:p-4 border border-gray-200 rounded-lg">
+                <div className="p-3 sm:p-4 border border-white/10 rounded-lg">
                   <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
-                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 flex-shrink-0" />
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30] flex-shrink-0" />
                     <p className="font-semibold text-sm sm:text-base">{t('quickContact.chat.title')}</p>
                   </div>
                   <p className="text-xs sm:text-sm text-gray-600">{t('quickContact.chat.value')}</p>

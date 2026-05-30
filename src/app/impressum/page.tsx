@@ -1,4 +1,4 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Impressum – SODU Secure GmbH',
@@ -16,7 +16,7 @@ export default function Impressum() {
           <p className="text-gray-500 text-sm">Angaben gemäß § 5 TMG</p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 divide-y divide-gray-100">
+        <div className="bg-[#16141A] rounded-2xl shadow-sm border border-white/10 divide-y divide-white/8">
 
           {/* Anbieter */}
           <section className="p-6 sm:p-8">
@@ -35,13 +35,13 @@ export default function Impressum() {
             <div className="text-gray-700 space-y-2">
               <p>
                 <span className="font-medium">Telefon:</span>{' '}
-                <a href="tel:+491777750985" className="text-red-600 hover:underline">
+                <a href="tel:+491777750985" className="text-[#FF3B30] hover:underline">
                   (+49) 01777750985
                 </a>
               </p>
               <p>
                 <span className="font-medium">E-Mail:</span>{' '}
-                <a href="mailto:info@sodusecure.com" className="text-red-600 hover:underline">
+                <a href="mailto:info@sodusecure.com" className="text-[#FF3B30] hover:underline">
                   info@sodusecure.com
                 </a>
               </p>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { ArrowRight, Briefcase, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
@@ -58,11 +58,11 @@ export default function CareersPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#16141A]">
       {/* Hero Section */}
       <div className="bg-black text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <button className="border border-red-600 text-red-600 px-4 sm:px-6 py-2 rounded hover:bg-red-600 hover:text-white transition-colors mb-4 sm:mb-6 text-xs sm:text-sm font-medium">
+          <button className="border border-red-600 text-[#FF3B30] px-4 sm:px-6 py-2 rounded hover:bg-red-600 hover:text-white transition-colors mb-4 sm:mb-6 text-xs sm:text-sm font-medium">
             {t('hero.badge')}
           </button>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 leading-tight">
@@ -90,7 +90,7 @@ export default function CareersPage() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-white p-4 sm:p-6 lg:p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+                className="bg-[#16141A] p-4 sm:p-6 lg:p-8 rounded-lg border border-white/10 hover:shadow-lg transition-shadow"
               >
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 leading-snug">
                   {benefit.title}
@@ -112,7 +112,7 @@ export default function CareersPage() {
               {t('openPositions.title')}
             </h2>
             <p className="text-gray-600 text-sm sm:text-base">
-              <span className="font-semibold text-red-600">{positions.length}</span> {t('openPositions.description')}
+              <span className="font-semibold text-[#FF3B30]">{positions.length}</span> {t('openPositions.description')}
             </p>
           </div>
 
@@ -120,13 +120,13 @@ export default function CareersPage() {
             {positions.map((position) => (
               <div
                 key={position._id}
-                className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-shadow"
+                className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8 hover:shadow-xl transition-shadow"
               >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
                   <h3 className="text-lg sm:text-xl lg:text-2xl font-bold leading-tight">
                     {position.title}
                   </h3>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 w-fit sm:w-auto">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#FF3B30]/15 text-[#FF6B61] w-fit sm:w-auto">
                     {position.type}
                   </span>
                 </div>
@@ -148,7 +148,7 @@ export default function CareersPage() {
 
                 <button
                   onClick={() => router.push(`/careers/${position._id}`)}
-                  className="text-red-600 cursor-pointer font-semibold text-sm sm:text-base flex items-center gap-1.5 sm:gap-2 hover:gap-3 transition-all group w-fit"
+                  className="text-[#FF3B30] cursor-pointer font-semibold text-sm sm:text-base flex items-center gap-1.5 sm:gap-2 hover:gap-3 transition-all group w-fit"
                   aria-label={`View details for ${position.title}`}
                 >
                   <span>{t('openPositions.viewDetails')}</span>
@@ -171,7 +171,7 @@ export default function CareersPage() {
           </p>
           <a 
             href={`mailto:${t('cta.email')}`}
-            className="inline-block bg-red-600 hover:bg-red-700 text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base lg:text-lg font-semibold rounded-lg transition-colors"
+            className="inline-block bg-red-600 hover:premium-cta text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base lg:text-lg font-semibold rounded-lg transition-colors"
           >
             {t('cta.email')}
           </a>
@@ -181,13 +181,13 @@ export default function CareersPage() {
       {/* Additional Info Section for Mobile */}
       <div className="lg:hidden bg-gray-50 py-6 sm:py-8 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="bg-white border border-gray-200 rounded-lg p-4 sm:p-6">
+          <div className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6">
             <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-gray-800">
               {t('applicationProcess.title')}
             </h3>
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-red-100 text-red-600 text-xs font-bold flex items-center justify-center flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-[#FF3B30]/15 text-[#FF3B30] text-xs font-bold flex items-center justify-center flex-shrink-0">
                   1
                 </div>
                 <div>
@@ -196,7 +196,7 @@ export default function CareersPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-red-100 text-red-600 text-xs font-bold flex items-center justify-center flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-[#FF3B30]/15 text-[#FF3B30] text-xs font-bold flex items-center justify-center flex-shrink-0">
                   2
                 </div>
                 <div>
@@ -205,7 +205,7 @@ export default function CareersPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-red-100 text-red-600 text-xs font-bold flex items-center justify-center flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-[#FF3B30]/15 text-[#FF3B30] text-xs font-bold flex items-center justify-center flex-shrink-0">
                   3
                 </div>
                 <div>
@@ -214,7 +214,7 @@ export default function CareersPage() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-red-100 text-red-600 text-xs font-bold flex items-center justify-center flex-shrink-0">
+                <div className="w-6 h-6 rounded-full bg-[#FF3B30]/15 text-[#FF3B30] text-xs font-bold flex items-center justify-center flex-shrink-0">
                   4
                 </div>
                 <div>
