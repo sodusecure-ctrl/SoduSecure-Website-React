@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Check, FileText, GitBranch, Lock, Shield, Sparkles, Workflow, Zap } from 'lucide-react';
-import { SectionLabel, SectionLabelDark } from './ui';
+import { SectionLabel } from './ui';
 
 export type AuditAILandingCopy = {
   eyebrow: string;
@@ -47,7 +47,10 @@ export default function AuditAILanding({ c }: { c: AuditAILandingCopy }) {
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-16 lg:pt-28 lg:pb-20">
-          <SectionLabelDark>{c.eyebrow}</SectionLabelDark>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12px] font-semibold tracking-[0.02em] text-white/85">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#FF3B30]" />
+            {c.eyebrow}
+          </span>
           <h1 className="mt-6 max-w-4xl text-[40px] font-semibold leading-[1.04] tracking-[-0.03em] md:text-6xl lg:text-7xl">
             <span className="premium-silver">{c.h1Top}</span>
             <br />

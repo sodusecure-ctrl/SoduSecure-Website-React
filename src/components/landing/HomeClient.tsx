@@ -108,7 +108,7 @@ type SharedCopy = {
 };
 
 const sharedDe: SharedCopy = {
-  productEyebrow: 'Sodu Secure',
+  productEyebrow: 'Sodu',
   toggle: { pentest: '/Pentest', auditai: '/AuditAI' },
   twoProductsLabel: 'Made in Germany · In Berlin gehärtet',
   twoProductsHeadlineA: 'Made in Germany. ',
@@ -144,7 +144,7 @@ const sharedDe: SharedCopy = {
 };
 
 const sharedEn: SharedCopy = {
-  productEyebrow: 'Sodu Secure',
+  productEyebrow: 'Sodu',
   toggle: { pentest: '/Pentest', auditai: '/AuditAI' },
   twoProductsLabel: 'Made in Germany · Hardened in Berlin',
   twoProductsHeadlineA: 'Made in Germany. ',
@@ -585,7 +585,7 @@ export default function HomeClient() {
 
         <div className="relative mx-auto max-w-7xl px-6 pt-14 pb-28 lg:pt-20 lg:pb-36">
           {/* Eyebrow */}
-          <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.22em] text-white/55">
+          <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
             <span>{s.productEyebrow} {isPentest ? s.toggle.pentest : s.toggle.auditai}</span>
           </div>

@@ -1,10 +1,29 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Check, X } from 'lucide-react';
 import { useLocale } from 'next-intl';
-import { SectionLabel, SectionLabelDark } from '@/components/landing/ui';
+import { SectionLabel } from '@/components/landing/ui';
 import { useBrand } from '@/components/landing/BrandContext';
+
+const ANNUAL_DISCOUNT = 0.10;
+
+function discountPrice(price: string): string {
+  // Match the first number (with optional thousand separators , or .)
+  const match = price.match(/(\d+(?:[.,]\d{3})*(?:[.,]\d+)?)/);
+  if (!match) return price;
+  const raw = match[1];
+  const numeric = parseFloat(raw.replace(/\./g, '').replace(',', '.'));
+  if (Number.isNaN(numeric)) return price;
+  const discounted = Math.round(numeric * (1 - ANNUAL_DISCOUNT));
+  // Detect German formatting (uses '.' as thousand sep or ',' decimal, or starts with digits then ' €')
+  const isGerman = /€\s*$/.test(price) || / €/.test(price);
+  const formatted = isGerman
+    ? discounted.toLocaleString('de-DE')
+    : discounted.toLocaleString('en-US');
+  return price.replace(raw, formatted);
+}
 
 type Plan = {
   name: string;
@@ -43,7 +62,7 @@ type Copy = {
 
 // AuditAI - DE
 const auditaiDe: Copy = {
-  brandLabel: 'AuditAI · Wochenbericht',
+  brandLabel: 'Sodu /AuditAI · Wochenbericht',
   heroLabel: 'Preise',
   heroLine1: 'Klare Pläne.',
   heroLine2: 'Keine Überraschungen.',
@@ -106,7 +125,7 @@ const auditaiDe: Copy = {
 
 // AuditAI - EN
 const auditaiEn: Copy = {
-  brandLabel: 'AuditAI · Weekly review',
+  brandLabel: 'Sodu /AuditAI · Weekly review',
   heroLabel: 'Pricing',
   heroLine1: 'Simple plans.',
   heroLine2: 'No surprises.',
@@ -169,7 +188,7 @@ const auditaiEn: Copy = {
 
 // Pentest - DE
 const pentestDe: Copy = {
-  brandLabel: 'Pentest · Manuelles Testing',
+  brandLabel: 'Sodu /Pentest · Manuelles Testing',
   heroLabel: 'Preise',
   heroLine1: 'Festpreise.',
   heroLine2: 'Klarer Scope.',
@@ -252,7 +271,7 @@ const pentestDe: Copy = {
 
 // Pentest - EN
 const pentestEn: Copy = {
-  brandLabel: 'Pentest · Manual testing',
+  brandLabel: 'Sodu /Pentest · Manual testing',
   heroLabel: 'Pricing',
   heroLine1: 'Fixed prices.',
   heroLine2: 'Clear scope.',
@@ -337,9 +356,22 @@ export default function PricingClient() {
   const locale = useLocale();
   const isEn = locale === 'en';
   const { brand } = useBrand();
+  const [cycle, setCycle] = useState<'monthly' | 'annually'>('monthly');
 
   const c: Copy =
     brand === 'pentest' ? (isEn ? pentestEn : pentestDe) : isEn ? auditaiEn : auditaiDe;
+
+  const showCycleToggle = brand === 'auditai';
+  const isAnnual = showCycleToggle && cycle === 'annually';
+
+  const tCycle = {
+    monthly: isEn ? 'Monthly' : 'Monatlich',
+    annually: isEn ? 'Annually' : 'Jährlich',
+    save: isEn ? 'Save 10%' : '10% sparen',
+    annualNote: isEn
+      ? '10% discount applied. Billed annually, equivalent monthly price shown.'
+      : '10% Rabatt enthalten. Jährliche Abrechnung, angezeigt ist der äquivalente Monatspreis.',
+  };
 
   return (
     <main className="bg-transparent text-white">
@@ -349,7 +381,10 @@ export default function PricingClient() {
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-16 lg:pt-28 lg:pb-20">
-          <SectionLabelDark>{c.brandLabel} · {c.heroLabel}</SectionLabelDark>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[12px] font-semibold tracking-[0.02em] text-white/85">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#FF3B30]" />
+            {c.brandLabel} · {c.heroLabel}
+          </span>
           <h1 className="mt-6 max-w-4xl text-[44px] font-semibold leading-[1.02] tracking-[-0.03em] md:text-7xl lg:text-[80px]">
             <span className="premium-silver">{c.heroLine1}</span>
             <br />
@@ -361,8 +396,49 @@ export default function PricingClient() {
 
       {/* PLAN CARDS */}
       <section className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
+        {showCycleToggle && (
+          <div className="mb-10 flex flex-col items-center gap-3">
+            <div
+              role="tablist"
+              aria-label={isEn ? 'Billing cycle' : 'Abrechnungszyklus'}
+              className="relative inline-grid grid-cols-2 items-center rounded-full border border-white/10 bg-white/[0.04] p-1 text-[13px] font-semibold backdrop-blur-md"
+            >
+              <span
+                aria-hidden
+                className="absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] rounded-full bg-[#FF3B30] shadow-[0_4px_14px_rgba(255,59,48,0.45)] transition-transform duration-300 ease-out will-change-transform"
+                style={{ transform: cycle === 'monthly' ? 'translateX(0%)' : 'translateX(calc(100% + 8px))' }}
+              />
+              <button
+                type="button"
+                role="tab"
+                aria-selected={cycle === 'monthly'}
+                onClick={() => setCycle('monthly')}
+                className={
+                  'relative z-10 inline-flex items-center justify-center rounded-full px-6 py-2 transition-colors duration-200 ' +
+                  (cycle === 'monthly' ? 'text-white' : 'text-white/65 hover:text-white')
+                }
+              >
+                {tCycle.monthly}
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected={cycle === 'annually'}
+                onClick={() => setCycle('annually')}
+                className={
+                  'relative z-10 inline-flex items-center justify-center rounded-full px-6 py-2 transition-colors duration-200 ' +
+                  (cycle === 'annually' ? 'text-white' : 'text-white/65 hover:text-white')
+                }
+              >
+                {tCycle.annually}
+              </button>
+            </div>
+          </div>
+        )}
         <div className="grid gap-5 lg:grid-cols-3">
-          {c.plans.map((p) => (
+          {c.plans.map((p) => {
+            const displayPrice = isAnnual ? discountPrice(p.price) : p.price;
+            return (
             <article
               key={p.name}
               className={
@@ -379,7 +455,12 @@ export default function PricingClient() {
                 {p.name}
               </div>
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="premium-tabular text-5xl font-extrabold tracking-tight">{p.price}</span>
+                {isAnnual && p.price !== displayPrice && (
+                  <span className={'premium-tabular text-2xl font-semibold line-through ' + (p.highlight ? 'text-white/35' : 'text-[#9AA0A6]')}>
+                    {p.price}
+                  </span>
+                )}
+                <span className="premium-tabular text-5xl font-extrabold tracking-tight">{displayPrice}</span>
                 <span className={'text-sm ' + (p.highlight ? 'text-white/60' : 'text-[#6B7280]')}>{c.perMonth}</span>
               </div>
               <p className={'mt-2 text-sm ' + (p.highlight ? 'text-white/70' : 'text-[#525866]')}>{p.audience}</p>
@@ -394,7 +475,7 @@ export default function PricingClient() {
               </ul>
 
               <Link
-                href={p.cta.href}
+                href={p.cta.href + (isAnnual ? '?cycle=annually' : '')}
                 className={
                   'mt-10 inline-flex items-center justify-center gap-1.5 rounded-full px-5 py-3 text-sm font-semibold transition ' +
                   (p.highlight ? 'premium-cta text-white' : 'bg-[#0A0A0B] text-white hover:bg-black')
@@ -403,10 +484,13 @@ export default function PricingClient() {
                 {p.cta.label} <ArrowRight className="h-4 w-4" />
               </Link>
             </article>
-          ))}
+            );
+          })}
         </div>
 
-        <p className="mt-6 text-center text-xs text-[#6B7280]">{c.vatNote}</p>
+        <p className="mt-6 text-center text-xs text-[#6B7280]">
+          {isAnnual ? tCycle.annualNote : c.vatNote}
+        </p>
       </section>
 
       {/* COMPARE */}

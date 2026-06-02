@@ -104,19 +104,19 @@ export default function AboutSection() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">10+</div>
-              <div className="text-gray-600 text-xs sm:text-sm">{t('stats.years')}</div>
+              <div className="text-white/60 text-xs sm:text-sm">{t('stats.years')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">500+</div>
-              <div className="text-gray-600 text-xs sm:text-sm">{t('stats.tests')}</div>
+              <div className="text-white/60 text-xs sm:text-sm">{t('stats.tests')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">10+</div>
-              <div className="text-gray-600 text-xs sm:text-sm">{t('stats.countries')}</div>
+              <div className="text-white/60 text-xs sm:text-sm">{t('stats.countries')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">OSCP</div>
-              <div className="text-gray-600 text-xs sm:text-sm">{t('stats.satisfaction')}</div>
+              <div className="text-white/60 text-xs sm:text-sm">{t('stats.satisfaction')}</div>
             </div>
           </div>
         </div>
@@ -128,11 +128,11 @@ export default function AboutSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-4 sm:space-y-6 order-2 lg:order-1">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight">
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight text-white">
                 {t('whoWeAre.title')}
               </h2>
 
-              <div className="space-y-3 sm:space-y-4 text-gray-700 leading-relaxed text-sm sm:text-base">
+              <div className="space-y-3 sm:space-y-4 text-white/70 leading-relaxed text-sm sm:text-base">
                 {t.raw('whoWeAre.paragraphs').map((paragraph: string, index: number) => (
                   <p key={index}>
                     {paragraph}
@@ -232,9 +232,9 @@ export default function AboutSection() {
           {/* Header */}
           <div className="mb-8 sm:mb-12 text-center">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg mb-2 sm:mb-3">
-              <span className="font-semibold text-lg sm:text-xl lg:text-2xl">{t('team.title')}</span>
+              <span className="font-semibold text-lg sm:text-xl lg:text-2xl text-white">{t('team.title')}</span>
             </div>
-            <p className="text-gray-600 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
+            <p className="text-white/65 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
               {t('team.subtitle')}
             </p>
           </div>
@@ -244,7 +244,7 @@ export default function AboutSection() {
             {teamMembers.map((member, index) => (
               <div key={index} className="group">
                 <div className="bg-[#16141A] border border-white/10 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square overflow-hidden bg-gray-100">
+                  <div className="aspect-square overflow-hidden bg-[#0A0A0B]">
                     {member.image ? (
                       <Image
                         src={member.image}
@@ -254,19 +254,19 @@ export default function AboutSection() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-gray-200">
-                        <span className="text-2xl font-bold text-gray-500">{member.name}</span>
+                      <div className="w-full h-full flex items-center justify-center bg-[#0A0A0B]">
+                        <span className="text-2xl font-bold text-white/50">{member.name}</span>
                       </div>
                     )}
                   </div>
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold mb-1">{member.name}</h3>
-                    <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4">{member.role}</p>
+                    <h3 className="text-lg sm:text-xl font-bold mb-1 text-white">{member.name}</h3>
+                    <p className="text-white/60 text-xs sm:text-sm mb-3 sm:mb-4">{member.role}</p>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
                       {member.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-2 sm:px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full border border-white/10"
+                          className="px-2 sm:px-3 py-1 bg-white/5 text-white/75 text-xs rounded-full border border-white/10"
                         >
                           {tag}
                         </span>
@@ -309,11 +309,11 @@ export default function AboutSection() {
       </div>
 
       {/* Certifications Section */}
-      <div className="bg-gray-50 py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
+      <div className="bg-[#0A0A0B] py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">{t('certifications.title')}</h2>
-            <p className="text-gray-600 text-sm sm:text-base">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-white">{t('certifications.title')}</h2>
+            <p className="text-white/65 text-sm sm:text-base">
               {t('certifications.subtitle')}
             </p>
           </div>
@@ -321,9 +321,9 @@ export default function AboutSection() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8">
             {certifications.map((cert, index) => (
               <div key={index} className="text-center group">
-                <div className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 hover:shadow-lg transition-shadow">
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-1 sm:mb-2">{cert.name}</div>
-                  <div className="text-xs text-gray-500">{cert.subtitle}</div>
+                <div className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 hover:border-white/20 transition-colors">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 sm:mb-2">{cert.name}</div>
+                  <div className="text-xs text-white/55">{cert.subtitle}</div>
                 </div>
               </div>
             ))}
