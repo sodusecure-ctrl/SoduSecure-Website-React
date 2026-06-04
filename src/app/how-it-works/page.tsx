@@ -141,25 +141,64 @@ export default async function HowItWorksPage() {
       </section>
 
       {/* STEPS */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-        <ol className="grid gap-6 lg:grid-cols-2">
-          {c.steps.map((s) => (
-            <li key={s.n} className="relative overflow-hidden rounded-3xl border border-white/10 premium-card p-8">
+      <section className="relative mx-auto max-w-7xl px-6 py-20 lg:py-28">
+        {/* dezente vertikale Pfadlinie auf Desktop */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-1/2 top-24 hidden h-[calc(100%-12rem)] w-px -translate-x-1/2 lg:block"
+          style={{
+            background:
+              'linear-gradient(180deg, transparent 0%, rgba(255,59,48,0.35) 12%, rgba(255,59,48,0.35) 88%, transparent 100%)',
+          }}
+        />
+        <ol className="relative grid gap-6 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-10">
+          {c.steps.map((s, i) => (
+            <li
+              key={s.n}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 premium-card p-8"
+            >
+              {/* Akzent-Glow oben */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-x-0 top-0 h-px"
+                style={{
+                  background:
+                    'linear-gradient(90deg, transparent 0%, rgba(255,59,48,0.6) 50%, transparent 100%)',
+                }}
+              />
               <div className="flex items-center justify-between">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#0A0A0B] text-[#FF3B30]">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-[#FF3B30] transition group-hover:border-[#FF3B30]/40 group-hover:bg-[#FF3B30]/10">
                   {s.icon}
                 </div>
-                <span className="font-mono text-sm text-[#6B7280]">{s.n}</span>
+                <span className="font-mono text-sm font-semibold tracking-wider text-[#FF3B30]/80">
+                  {s.n}
+                </span>
               </div>
-              <h2 className="mt-6 text-2xl font-extrabold tracking-tight md:text-3xl">{s.t}</h2>
-              <p className="mt-3 text-[#525866]">{s.d}</p>
+              <h2 className="mt-6 text-2xl font-extrabold tracking-tight text-white md:text-3xl">
+                {s.t}
+              </h2>
+              <p className="mt-3 text-[15px] leading-relaxed text-white/70">{s.d}</p>
               <ul className="mt-6 flex flex-wrap gap-2 text-xs">
                 {s.bullets.map((b) => (
-                  <li key={b} className="rounded-full border border-white/10 bg-[#FAFAFA] px-3 py-1 text-white">
+                  <li
+                    key={b}
+                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-white/80"
+                  >
                     {b}
                   </li>
                 ))}
               </ul>
+              {/* Pfeil-Verbindung zum nächsten Schritt (nur Desktop) */}
+              {i < c.steps.length - 1 && (
+                <span
+                  aria-hidden
+                  className="absolute -bottom-9 left-1/2 hidden h-9 -translate-x-1/2 items-end justify-center lg:flex"
+                >
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#FF3B30]/40 bg-[#0A0A0B] text-[#FF3B30] shadow-[0_0_24px_rgba(255,59,48,0.35)]">
+                    <ArrowRight className="h-3.5 w-3.5 rotate-90" />
+                  </span>
+                </span>
+              )}
             </li>
           ))}
         </ol>

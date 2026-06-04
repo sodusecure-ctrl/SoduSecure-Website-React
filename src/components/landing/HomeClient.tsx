@@ -639,13 +639,13 @@ export default function HomeClient() {
           {/* SOCIAL PROOF STRIP */}
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-white/70">
             <div className="flex items-center gap-2">
-              <Users className="h-4 w-4 text-[#FF3B30]" />
-              <span><span className="premium-tabular font-semibold text-white">50k+</span> {locale === 'en' ? 'orgs trust us' : 'Orgs vertrauen uns'}</span>
+              <Shield className="h-4 w-4 text-[#FF3B30]" />
+              <span className="font-semibold text-white">{locale === 'en' ? 'ISO 27001 aligned' : 'ISO 27001-konform'}</span>
             </div>
             <span className="hidden h-4 w-px bg-white/15 sm:block" aria-hidden />
             <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-[#FF3B30]" />
-              <span><span className="premium-tabular font-semibold text-white">100k+</span> {locale === 'en' ? 'devs love it' : 'Devs lieben es'}</span>
+              <Lock className="h-4 w-4 text-[#FF3B30]" />
+              <span className="font-semibold text-white">{locale === 'en' ? 'GDPR · Made in Germany' : 'DSGVO · Made in Germany'}</span>
             </div>
             <span className="hidden h-4 w-px bg-white/15 sm:block" aria-hidden />
             <div className="flex items-center gap-2">
