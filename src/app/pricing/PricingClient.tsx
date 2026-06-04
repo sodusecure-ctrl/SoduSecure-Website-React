@@ -81,11 +81,11 @@ const auditaiDe: Copy = {
   popular: 'Am beliebtesten',
   plans: [
     {
-      name: 'Starter',
+      name: 'Startup-Paket',
       price: '99 €',
-      audience: 'Kleine Teams · bis 2 Entwickler',
-      features: ['1 Repository', 'Bis zu 2 Contributoren', 'Bericht alle 2 Wochen', 'DE & EN Lieferung', 'Fertige Fix-Vorschläge'],
-      cta: { label: 'Starter starten', href: '/get-started/starter' },
+      audience: 'Solo-Gründer & kleine Startups',
+      features: ['1 Repository', '1 Contributor', '1 Scan pro Monat', 'DE & EN Lieferung', 'Fertige Fix-Vorschläge'],
+      cta: { label: 'Startup-Paket starten', href: '/get-started/starter' },
     },
     {
       name: 'Studio',
@@ -105,8 +105,8 @@ const auditaiDe: Copy = {
   ],
   rows: [
     { label: 'Repositories', values: ['1', '1', 'Mehrere'] },
-    { label: 'Contributoren', values: ['bis 2', 'Unbegrenzt', 'Unbegrenzt'] },
-    { label: 'Berichts-Takt', values: ['Alle 2 Wochen', 'Wöchentlich', 'Wöchentlich'] },
+    { label: 'Contributoren', values: ['1', 'Unbegrenzt', 'Unbegrenzt'] },
+    { label: 'Berichts-Takt', values: ['1 Scan / Monat', 'Wöchentlich', 'Wöchentlich'] },
     { label: 'DE & EN Lieferung', values: [true, true, true] },
     { label: 'Fertige Fix-Vorschläge', values: [true, true, true] },
     { label: 'Trend-Historie & Triage', values: [false, true, true] },
@@ -144,11 +144,11 @@ const auditaiEn: Copy = {
   popular: 'Most popular',
   plans: [
     {
-      name: 'Starter',
+      name: 'Startup pack',
       price: '€99',
-      audience: 'Small teams · up to 2 developers',
-      features: ['1 repository', 'Up to 2 contributors', 'Report every 2 weeks', 'EN + DE deliverable', 'Paste-ready fix proposals'],
-      cta: { label: 'Start Starter', href: '/get-started/starter' },
+      audience: 'Solo founders & early startups',
+      features: ['1 repository', '1 contributor', '1 scan per month', 'EN + DE deliverable', 'Paste-ready fix proposals'],
+      cta: { label: 'Start Startup pack', href: '/get-started/starter' },
     },
     {
       name: 'Studio',
@@ -168,8 +168,8 @@ const auditaiEn: Copy = {
   ],
   rows: [
     { label: 'Repositories', values: ['1', '1', 'Multiple'] },
-    { label: 'Contributors', values: ['up to 2', 'Unlimited', 'Unlimited'] },
-    { label: 'Report cadence', values: ['Every 2 weeks', 'Weekly', 'Weekly'] },
+    { label: 'Contributors', values: ['1', 'Unlimited', 'Unlimited'] },
+    { label: 'Report cadence', values: ['1 scan / month', 'Weekly', 'Weekly'] },
     { label: 'EN + DE deliverable', values: [true, true, true] },
     { label: 'Paste-ready fixes', values: [true, true, true] },
     { label: 'Trend history & triage', values: [false, true, true] },

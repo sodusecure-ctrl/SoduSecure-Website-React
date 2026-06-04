@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 type Plan = 'starter' | 'studio' | 'pro';
 
 const PLAN_INFO: Record<Plan, { label: string; price: string; cadence: string }> = {
-  starter: { label: 'Starter', price: '99 €/Monat', cadence: 'Bericht alle 2 Wochen · bis 2 Contributoren' },
+  starter: { label: 'Startup-Paket', price: '99 €/Monat', cadence: '1 Scan pro Monat · 1 Contributor' },
   studio: { label: 'Studio', price: '199 €/Monat', cadence: 'Wöchentlicher Bericht · 1 Repo · unbegrenzte Contributoren' },
   pro: { label: 'Pro+', price: '449 €/Monat', cadence: 'Wöchentlicher Bericht · mehrere Repos · quartalsweise Voll-Pentest' },
 };

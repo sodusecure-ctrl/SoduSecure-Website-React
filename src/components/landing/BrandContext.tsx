@@ -9,10 +9,10 @@ type Ctx = {
   setBrand: (b: Brand) => void;
 };
 
-const BrandContext = createContext<Ctx>({ brand: 'pentest', setBrand: () => {} });
+const BrandContext = createContext<Ctx>({ brand: 'auditai', setBrand: () => {} });
 
 export function BrandProvider({ children }: { children: ReactNode }) {
-  const [brand, setBrandState] = useState<Brand>('pentest');
+  const [brand, setBrandState] = useState<Brand>('auditai');
 
   useEffect(() => {
     const stored = (typeof window !== 'undefined' && (localStorage.getItem('sodu-brand') as Brand | null)) || null;

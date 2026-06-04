@@ -38,7 +38,7 @@ export default function Page() {
         stepsLabel: 'Startup-Pfad',
         stepsHeadline: 'Von MVP bis Series A.',
         steps: [
-          { n: '01', t: 'Pre-Seed', d: 'Starter 99 €. Bericht alle 2 Wochen. Genug für die ersten Iterationen.' },
+          { n: '01', t: 'Pre-Seed', d: 'Starter 99 €. 1 Scan pro Monat. Genug für die ersten Iterationen.' },
           { n: '02', t: 'Seed', d: 'Studio 199 €. Wöchentlich. Erste Enterprise-Kunden? Bericht zeigen, fertig.' },
           { n: '03', t: 'Series A', d: 'Pro+ 449 €. Multi-Repo plus quartalsweise Pentest. Due Diligence ohne Drama.' },
           { n: '04', t: 'Wachstum', d: 'Bei Bedarf: dedizierter Ansprechpartner und individuelle Compliance-Mappings.' },

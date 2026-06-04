@@ -38,7 +38,7 @@ export default function Page() {
         stepsLabel: 'So funktioniert die Abrechnung',
         stepsHeadline: 'Klare Preise. Keine Überraschungen.',
         steps: [
-          { n: '01', t: '99 €', d: 'Starter: 1 Repo, Bericht alle 2 Wochen, bis 2 Contributoren.' },
+          { n: '01', t: '99 €', d: 'Startup-Paket: 1 Repo, 1 Scan pro Monat, 1 Contributor.' },
           { n: '02', t: '199 €', d: 'Studio: 1 Repo, wöchentlicher Bericht, unbegrenzte Contributoren.' },
           { n: '03', t: '449 €', d: 'Pro+: Multi-Repo, wöchentlich, plus quartalsweise Voll-Pentest.' },
           { n: '04', t: 'Kündbar', d: 'Monatliche Abrechnung. Vor nächster Verlängerung kündigen, fertig.' },

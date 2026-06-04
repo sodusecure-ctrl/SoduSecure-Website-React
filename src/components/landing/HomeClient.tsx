@@ -440,7 +440,7 @@ if (!user || !user.roles.includes('admin')) {
         pricingPrimaryHref: '/pricing',
         pricingSecondary: 'Mit Sales sprechen',
         pricingPlans: [
-          ['Starter', '99 €', 'Solo & kleine Teams'],
+          ['Startup-Paket', '99 €', 'Solo-Gründer & kleine Startups'],
           ['Studio', '199 €', 'Agenturen & mehrere Repos'],
           ['Pro+', '449 €', 'Scale-ups & kritische Produkte'],
         ],
@@ -535,7 +535,7 @@ if (!user || !user.roles.includes('admin')) {
         pricingPrimaryHref: '/pricing',
         pricingSecondary: 'Talk to sales',
         pricingPlans: [
-          ['Starter', '€99', 'Solo & small teams'],
+          ['Startup pack', '€99', 'Solo founders & early startups'],
           ['Studio', '€199', 'Agencies & multi-repo'],
           ['Pro+', '€449', 'Scale-ups & critical products'],
         ],

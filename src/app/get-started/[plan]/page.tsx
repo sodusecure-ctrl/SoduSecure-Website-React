@@ -44,11 +44,11 @@ const de: PageCopy = {
   trust: ['Antwort in 24h', 'Read-only Zugriff', 'DSGVO-konform', 'Jederzeit kündbar'],
   plans: {
     starter: {
-      name: 'Starter',
+      name: 'Startup-Paket',
       price: '99 €',
       perMonth: '/Monat',
-      audience: 'Kleine Teams · bis 2 Entwickler',
-      features: ['1 Repository', 'Bis zu 2 Contributoren', 'Bericht alle 2 Wochen', 'DE & EN Lieferung', 'Fertige Fix-Vorschläge'],
+      audience: 'Solo-Gründer & kleine Startups',
+      features: ['1 Repository', '1 Contributor', '1 Scan pro Monat', 'DE & EN Lieferung', 'Fertige Fix-Vorschläge'],
     },
     studio: {
       name: 'Studio',
@@ -100,11 +100,11 @@ const en: PageCopy = {
   trust: ['24h reply', 'Read-only access', 'GDPR-aware', 'Cancel anytime'],
   plans: {
     starter: {
-      name: 'Starter',
+      name: 'Startup pack',
       price: '€99',
       perMonth: '/mo',
-      audience: 'Small teams · up to 2 developers',
-      features: ['1 repository', 'Up to 2 contributors', 'Report every 2 weeks', 'EN + DE deliverable', 'Paste-ready fix proposals'],
+      audience: 'Solo founders & early startups',
+      features: ['1 repository', '1 contributor', '1 scan per month', 'EN + DE deliverable', 'Paste-ready fix proposals'],
     },
     studio: {
       name: 'Studio',
