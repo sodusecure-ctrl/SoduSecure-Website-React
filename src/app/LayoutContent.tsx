@@ -12,8 +12,9 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const isLandingPage = pathname?.startsWith('/berlin-kmu-pilot');
   const isAdsPage = pathname?.startsWith('/request-pentest-ads');
   const isVerifyPage = pathname?.startsWith('/verify');
+  const isSoduAuditAiPage = pathname?.startsWith('/sodu-audit-ai');
 
-  const hideChrome = isAuthRoute || isDashboardRoute || isLandingPage || isAdsPage || isVerifyPage;
+  const hideChrome = isAuthRoute || isDashboardRoute || isLandingPage || isAdsPage || isVerifyPage || isSoduAuditAiPage;
 
   return (
     <BrandProvider>
