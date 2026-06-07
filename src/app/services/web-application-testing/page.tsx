@@ -75,7 +75,7 @@ export default function WebAppPentestLanding() {
       </div>
 
       {/* What's Included Section */}
-      <div className="bg-[#16141A] text-black px-6 py-16 md:px-12 lg:px-24">
+      <div className="bg-[#0a0a0a] text-white border-y border-zinc-900 px-6 py-16 md:px-12 lg:px-24">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl font-bold mb-2">{t('whatsIncluded.title')}</h2>
           <div className="w-16 h-1 bg-red-600 mb-12"></div>
@@ -96,19 +96,19 @@ export default function WebAppPentestLanding() {
       </div>
 
       {/* Scope Coverage Section */}
-      <div className="bg-gray-50 text-black px-6 py-16 md:px-12 lg:px-24">
+      <div className="bg-black text-white px-6 py-16 md:px-12 lg:px-24">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl font-bold mb-2">{t('scopeCoverage.title')}</h2>
           <div className="w-16 h-1 bg-red-600 mb-12"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {scopeItems.map((item, index) => (
-              <div key={index} className="bg-[#16141A] p-6 rounded-lg">
-                <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-white" />
+              <div key={index} className="bg-[#16141A] border border-zinc-800 hover:border-red-600/60 transition-all p-6 rounded-lg">
+                <div className="w-12 h-12 bg-red-600/10 border border-red-600/30 rounded-lg flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-red-500" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.desc}</p>
+                <h3 className="font-bold text-lg mb-2 text-white">{item.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -116,18 +116,18 @@ export default function WebAppPentestLanding() {
       </div>
 
       {/* Deliverables Section */}
-      <div className="bg-[#16141A] text-black px-6 py-16 md:px-12 lg:px-24">
+      <div className="bg-[#0a0a0a] text-white border-t border-zinc-900 px-6 py-16 md:px-12 lg:px-24">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl font-bold mb-2">{t('deliverables.title')}</h2>
           <div className="w-16 h-1 bg-red-600 mb-12"></div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {deliverables.map((item, index) => (
-              <Card key={index} className="border-2 border-white/10 hover:border-red-600 transition-colors">
+              <Card key={index} className="border border-zinc-800 hover:border-red-600 transition-all bg-[#16141A] shadow-none">
                 <CardContent className="p-6">
-                  <item.icon className="w-12 h-12 mb-4" strokeWidth={1.5} />
-                  <h3 className="font-bold text-lg mb-3">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                  <item.icon className="w-12 h-12 mb-4 text-red-500" strokeWidth={1.5} />
+                  <h3 className="font-bold text-lg mb-3 text-white">{item.title}</h3>
+                  <p className="text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}

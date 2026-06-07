@@ -73,7 +73,7 @@ export default function NetworkSecurityAuditLanding() {
       </div>
 
       {/* What's Included Section */}
-      <div className="bg-[#16141A] text-black px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">
+      <div className="bg-[#0a0a0a] text-white border-y border-zinc-900 px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">{t('whatsIncluded.title')}</h2>
           <div className="w-12 sm:w-16 h-1 bg-red-600 mb-8 sm:mb-12"></div>
@@ -94,20 +94,20 @@ export default function NetworkSecurityAuditLanding() {
       </div>
 
       {/* Scope Coverage Section */}
-      <div className="bg-gray-50 text-black px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">
+      <div className="bg-black text-white px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">{t('scopeCoverage.title')}</h2>
           <div className="w-12 sm:w-16 h-1 bg-red-600 mb-8 sm:mb-12"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {scopeItems.map((item, index) => (
-              <Card key={index} className="border-none shadow-sm hover:shadow-md transition-shadow h-full bg-[#16141A]">
+              <Card key={index} className="border border-zinc-800 hover:border-red-600/60 transition-all h-full bg-[#16141A] hover:bg-zinc-900/80 shadow-none">
                 <CardContent className="p-4 sm:p-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-black rounded-lg flex items-center justify-center mb-3 sm:mb-4">
-                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-red-600/10 border border-red-600/30 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-red-500" />
                   </div>
-                  <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2">{item.title}</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">{item.desc}</p>
+                  <h3 className="font-bold text-base sm:text-lg mb-1 sm:mb-2 text-white">{item.title}</h3>
+                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -116,18 +116,18 @@ export default function NetworkSecurityAuditLanding() {
       </div>
 
       {/* Deliverables Section */}
-      <div className="bg-[#16141A] text-black px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">
+      <div className="bg-[#0a0a0a] text-white border-t border-zinc-900 px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">{t('deliverables.title')}</h2>
           <div className="w-12 sm:w-16 h-1 bg-red-600 mb-8 sm:mb-12"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {deliverables.map((item, index) => (
-              <Card key={index} className="border-2 border-white/10 hover:border-red-600 transition-colors h-full hover:shadow-lg">
+              <Card key={index} className="border border-zinc-800 hover:border-red-600 transition-all h-full bg-[#16141A] shadow-none">
                 <CardContent className="p-4 sm:p-6">
-                  <item.icon className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mb-3 sm:mb-4" strokeWidth={1.5} />
-                  <h3 className="font-bold text-base sm:text-lg mb-2 sm:mb-3">{item.title}</h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                  <item.icon className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 mb-3 sm:mb-4 text-red-500" strokeWidth={1.5} />
+                  <h3 className="font-bold text-base sm:text-lg mb-2 sm:mb-3 text-white">{item.title}</h3>
+                  <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}

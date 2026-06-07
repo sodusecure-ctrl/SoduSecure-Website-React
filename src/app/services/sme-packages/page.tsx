@@ -226,7 +226,7 @@ export default function SMESecurityPackagesPage() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen bg-[#16141A] text-gray-900">
+    <div className="min-h-screen bg-black text-white">
 
       {/* ── HERO ──────────────────────────────── */}
       <div className="bg-black text-white relative overflow-hidden">
@@ -276,14 +276,14 @@ export default function SMESecurityPackagesPage() {
       </div>
 
       {/* ── KMU QUALIFICATION ─────────────────── */}
-      <div className="bg-gray-50 border-b border-white/10 py-8">
+      <div className="bg-[#0a0a0a] border-y border-zinc-900 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center gap-4 flex-wrap">
-            <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider whitespace-nowrap">
+            <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider whitespace-nowrap">
               Qualifikation:
             </span>
             {QUALIFICATION.map((q, i) => (
-              <div key={i} className="flex items-center gap-2 text-sm text-gray-700">
+              <div key={i} className="flex items-center gap-2 text-sm text-gray-300">
                 <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                 {q}
               </div>
@@ -296,10 +296,10 @@ export default function SMESecurityPackagesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="text-center mb-12">
           <span className="text-[#FF3B30] font-semibold text-sm uppercase tracking-wider">Pakete & Preise</span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">
             Wählen Sie Ihr Sicherheitspaket
           </h2>
-          <p className="mt-3 text-gray-500 max-w-xl mx-auto">
+          <p className="mt-3 text-gray-400 max-w-xl mx-auto">
             Alle Pakete enthalten Management Summary, technischen Report und Abschlusspräsentation.
             Preise gelten für KMUs mit bis zu 150 Mitarbeitern.
           </p>
@@ -309,10 +309,10 @@ export default function SMESecurityPackagesPage() {
           {PACKAGES.map((pkg) => (
             <div
               key={pkg.id}
-              className={`relative rounded-2xl border-2 flex flex-col ${
+              className={`relative rounded-2xl border flex flex-col overflow-hidden ${
                 pkg.popular
                   ? "border-red-600 shadow-xl shadow-red-600/10"
-                  : "border-white/10 shadow-sm"
+                  : "border-zinc-800 hover:border-red-600/40 transition-colors"
               }`}
             >
               {pkg.popular && (
@@ -323,19 +323,19 @@ export default function SMESecurityPackagesPage() {
                 </div>
               )}
 
-              <div className={`p-6 sm:p-8 rounded-t-2xl ${pkg.popular ? "bg-gray-900 text-white" : "bg-[#16141A]"}`}>
+              <div className={`p-6 sm:p-8 ${pkg.popular ? "bg-zinc-900" : "bg-[#16141A]"}`}>
                 <p className={`text-xs font-semibold uppercase tracking-wider mb-1 ${pkg.popular ? "text-red-400" : "text-[#FF3B30]"}`}>
                   {pkg.tagline}
                 </p>
-                <h3 className={`text-xl font-bold mb-1 ${pkg.popular ? "text-white" : "text-gray-900"}`}>
+                <h3 className="text-xl font-bold mb-1 text-white">
                   {pkg.name}
                 </h3>
                 <div className="flex items-baseline gap-1 mt-3">
-                  <span className={`text-4xl font-black ${pkg.popular ? "text-white" : "text-gray-900"}`}>
+                  <span className="text-4xl font-black text-white">
                     {pkg.price}
                   </span>
                 </div>
-                <p className={`text-sm mt-1 ${pkg.popular ? "text-gray-400" : "text-gray-500"}`}>
+                <p className="text-sm mt-1 text-gray-400">
                   Projektlaufzeit: {pkg.duration}
                 </p>
                 <button
@@ -343,7 +343,7 @@ export default function SMESecurityPackagesPage() {
                   className={`mt-5 w-full py-3 rounded-xl font-bold text-sm transition-all hover:scale-[1.02] flex items-center justify-center gap-2 ${
                     pkg.popular
                       ? "bg-red-600 hover:premium-cta text-white"
-                      : "bg-gray-900 hover:bg-gray-800 text-white"
+                      : "bg-zinc-800 hover:bg-zinc-700 text-white"
                   }`}
                 >
                   {pkg.cta}
@@ -351,7 +351,7 @@ export default function SMESecurityPackagesPage() {
                 </button>
               </div>
 
-              <div className="p-6 sm:p-8 bg-[#16141A] rounded-b-2xl flex-1 flex flex-col gap-6">
+              <div className="p-6 sm:p-8 bg-[#16141A] border-t border-zinc-800 flex-1 flex flex-col gap-6">
                 {pkg.components.map((comp, ci) => {
                   const Icon = comp.icon;
                   return (
@@ -360,11 +360,11 @@ export default function SMESecurityPackagesPage() {
                         <div className="w-8 h-8 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
                           <Icon className="w-4 h-4 text-[#FF3B30]" />
                         </div>
-                        <h4 className="font-bold text-gray-900 text-sm">{comp.title}</h4>
+                        <h4 className="font-bold text-white text-sm">{comp.title}</h4>
                       </div>
                       <ul className="space-y-1.5 pl-10">
                         {comp.details.map((d, di) => (
-                          <li key={di} className="flex items-start gap-2 text-xs text-gray-600">
+                          <li key={di} className="flex items-start gap-2 text-xs text-gray-300">
                             <CheckCircle className="w-3.5 h-3.5 text-green-500 flex-shrink-0 mt-0.5" />
                             {d}
                           </li>
@@ -375,11 +375,11 @@ export default function SMESecurityPackagesPage() {
                 })}
 
                 {pkg.notIncluded.length > 0 && (
-                  <div className="border-t border-white/8 pt-4">
-                    <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Nicht enthalten:</p>
+                  <div className="border-t border-zinc-800 pt-4">
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Nicht enthalten:</p>
                     {pkg.notIncluded.map((item, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-gray-400 mb-1">
-                        <span className="w-3.5 h-3.5 flex-shrink-0 text-gray-300">✕</span>
+                      <div key={i} className="flex items-center gap-2 text-xs text-gray-500 mb-1">
+                        <span className="w-3.5 h-3.5 flex-shrink-0 text-gray-600">✕</span>
                         {item}
                       </div>
                     ))}
@@ -399,18 +399,18 @@ export default function SMESecurityPackagesPage() {
       </div>
 
       {/* ── COMPONENT DEEP-DIVE ───────────────── */}
-      <div className="bg-gray-50 py-16 sm:py-20">
+      <div className="bg-[#0a0a0a] border-y border-zinc-900 py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-[#FF3B30] font-semibold text-sm uppercase tracking-wider">Was wir konkret testen</span>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">
+            <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">
               Jede Komponente erklärt
             </h2>
           </div>
 
           <div className="space-y-6">
             {/* Externer Pentest */}
-            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-zinc-800 hover:border-red-600/40 transition-colors p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
@@ -419,18 +419,18 @@ export default function SMESecurityPackagesPage() {
                     </div>
                     <div>
                       <p className="text-xs text-[#FF3B30] font-semibold uppercase tracking-wider">In allen Paketen</p>
-                      <h3 className="font-bold text-xl text-gray-900">Externer Pentest</h3>
+                      <h3 className="font-bold text-xl text-white">Externer Pentest</h3>
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                     Wir testen Ihre gesamte externe Angriffsfläche wie ein realer Angreifer – ohne vorherige
                     Informationen über Ihre Infrastruktur (Black-Box). Ziel ist es, alle exponierten Dienste,
                     Schwachstellen und Fehlkonfigurationen zu identifizieren, bevor es ein Angreifer tut.
                   </p>
-                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                  <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-4">
                     <div className="flex items-start gap-2">
-                      <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                      <p className="text-amber-800 text-xs leading-relaxed">
+                      <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                      <p className="text-amber-200 text-xs leading-relaxed">
                         <strong>Typischer Befund:</strong> Exponierte Admin-Interfaces, veraltete Software-Versionen
                         mit bekannten CVEs, unsichere Cloud-Storage-Konfigurationen.
                       </p>
@@ -448,7 +448,7 @@ export default function SMESecurityPackagesPage() {
                     "Cloud-Exposure (S3, Azure Blobs, öffentliche APIs)",
                     "DNS-Konfiguration & Zone Transfer",
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                    <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
                       <ChevronRight className="w-4 h-4 text-red-500 flex-shrink-0 mt-0.5" />
                       {item}
                     </div>
@@ -458,27 +458,27 @@ export default function SMESecurityPackagesPage() {
             </div>
 
             {/* Phishing */}
-            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-zinc-800 hover:border-red-600/40 transition-colors p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center">
+                      <Mail className="w-6 h-6 text-blue-400" />
                     </div>
                     <div>
-                      <p className="text-xs text-blue-600 font-semibold uppercase tracking-wider">In allen Paketen</p>
-                      <h3 className="font-bold text-xl text-gray-900">Phishing-Kampagne (komplett)</h3>
+                      <p className="text-xs text-blue-400 font-semibold uppercase tracking-wider">In allen Paketen</p>
+                      <h3 className="font-bold text-xl text-white">Phishing-Kampagne (komplett)</h3>
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                     Wir simulieren realistische Phishing-Angriffe auf Ihre Mitarbeitenden – angepasst an Ihre
                     Branche und Ihr Unternehmensbranding. Dabei messen wir Klickraten, Credential-Eingaben
                     und liefern eine detaillierte Auswertung nach Abteilung.
                   </p>
-                  <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                  <div className="bg-amber-500/10 border border-amber-500/30 rounded-lg p-4">
                     <div className="flex items-start gap-2">
-                      <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                      <p className="text-amber-800 text-xs leading-relaxed">
+                      <AlertTriangle className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                      <p className="text-amber-200 text-xs leading-relaxed">
                         <strong>Typischer Befund:</strong> 35–55 % der Mitarbeitenden klicken auf die Phishing-Mail.
                         15–30 % geben ihre Zugangsdaten ein.
                       </p>
@@ -496,8 +496,8 @@ export default function SMESecurityPackagesPage() {
                     "Awareness-Report mit Maßnahmenplan",
                     "Empfehlungen für Security-Awareness-Training",
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                      <ChevronRight className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                    <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <ChevronRight className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
                       {item}
                     </div>
                   ))}
@@ -506,19 +506,19 @@ export default function SMESecurityPackagesPage() {
             </div>
 
             {/* Web Präsenz */}
-            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-zinc-800 hover:border-red-600/40 transition-colors p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center">
-                      <Monitor className="w-6 h-6 text-green-600" />
+                    <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center">
+                      <Monitor className="w-6 h-6 text-green-400" />
                     </div>
                     <div>
-                      <p className="text-xs text-green-600 font-semibold uppercase tracking-wider">Basis & Basis+Intern</p>
-                      <h3 className="font-bold text-xl text-gray-900">Web-Präsenz Schnelltest</h3>
+                      <p className="text-xs text-green-400 font-semibold uppercase tracking-wider">Basis & Basis+Intern</p>
+                      <h3 className="font-bold text-xl text-white">Web-Präsenz Schnelltest</h3>
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                     Ein gezielter OWASP Top 10 Check Ihrer wichtigsten Webanwendung (z. B. Firmenwebsite,
                     Kundenportal). Keine vollständige manuelle Analyse, aber ein effizienter Überblick über
                     die kritischsten Schwachstellen.
@@ -535,8 +535,8 @@ export default function SMESecurityPackagesPage() {
                     "Admin-Bereiche & Backup-Dateien",
                     "Zusammenfassung im Executive Report",
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                      <ChevronRight className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                    <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <ChevronRight className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
                       {item}
                     </div>
                   ))}
@@ -545,19 +545,19 @@ export default function SMESecurityPackagesPage() {
             </div>
 
             {/* Web App Komplett (only in Komplett package) */}
-            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-zinc-800 hover:border-red-600/40 transition-colors p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-purple-600" />
+                    <div className="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center">
+                      <Shield className="w-6 h-6 text-purple-400" />
                     </div>
                     <div>
-                      <p className="text-xs text-purple-600 font-semibold uppercase tracking-wider">Nur im Komplett-Paket</p>
-                      <h3 className="font-bold text-xl text-gray-900">Web Application Pentest (komplett)</h3>
+                      <p className="text-xs text-purple-400 font-semibold uppercase tracking-wider">Nur im Komplett-Paket</p>
+                      <h3 className="font-bold text-xl text-white">Web Application Pentest (komplett)</h3>
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                     Vollständiger manueller Pentest Ihrer Webanwendung nach OWASP WSTG-Methodik.
                     Wir testen systematisch alle Funktionen, Rollen und Schnittstellen – nicht nur
                     automatisiert, sondern mit echter Exploit-Entwicklung.
@@ -574,8 +574,8 @@ export default function SMESecurityPackagesPage() {
                     "Multi-Rollen-Testing (User / Admin / API)",
                     "Vollständiger technischer WebApp-Report mit PoC",
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                      <ChevronRight className="w-4 h-4 text-purple-500 flex-shrink-0 mt-0.5" />
+                    <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <ChevronRight className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
                       {item}
                     </div>
                   ))}
@@ -584,19 +584,19 @@ export default function SMESecurityPackagesPage() {
             </div>
 
             {/* Interner Pentest / AD */}
-            <div className="bg-[#16141A] rounded-2xl border border-white/8 shadow-sm p-6 sm:p-8">
+            <div className="bg-[#16141A] rounded-2xl border border-zinc-800 hover:border-red-600/40 transition-colors p-6 sm:p-8">
               <div className="grid md:grid-cols-2 gap-8 items-start">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center">
-                      <Network className="w-6 h-6 text-orange-600" />
+                    <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center">
+                      <Network className="w-6 h-6 text-orange-400" />
                     </div>
                     <div>
-                      <p className="text-xs text-orange-600 font-semibold uppercase tracking-wider">Basis+Intern & Komplett</p>
-                      <h3 className="font-bold text-xl text-gray-900">Interner Pentest / Active Directory</h3>
+                      <p className="text-xs text-orange-400 font-semibold uppercase tracking-wider">Basis+Intern & Komplett</p>
+                      <h3 className="font-bold text-xl text-white">Interner Pentest / Active Directory</h3>
                     </div>
                   </div>
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                     Der kritischste Bestandteil für Unternehmen mit Windows-Infrastruktur. Wir analysieren
                     Active Directory auf Fehlkonfigurationen, die Angreifern nach einem initialen Zugriff
                     ermöglichen, die vollständige Kontrolle über Ihre IT zu übernehmen.
@@ -622,8 +622,8 @@ export default function SMESecurityPackagesPage() {
                     "Domain Admin Privilege Escalation",
                     "GPO-Missbrauch & DCShadow / DCSync Simulation",
                   ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                      <ChevronRight className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
+                    <div key={i} className="flex items-start gap-2 text-sm text-gray-300">
+                      <ChevronRight className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" />
                       {item}
                     </div>
                   ))}
@@ -638,19 +638,19 @@ export default function SMESecurityPackagesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="text-center mb-10">
           <span className="text-[#FF3B30] font-semibold text-sm uppercase tracking-wider">Ergebnisse</span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900">Was Sie erhalten</h2>
-          <p className="mt-3 text-gray-500 max-w-xl mx-auto">In jedem Paket – unabhängig von der Variante.</p>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Was Sie erhalten</h2>
+          <p className="mt-3 text-gray-400 max-w-xl mx-auto">In jedem Paket – unabhängig von der Variante.</p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {DELIVERABLES.map((d, i) => {
             const Icon = d.icon;
             return (
-              <div key={i} className="bg-[#16141A] border-2 border-white/10 hover:border-red-600 rounded-2xl p-6 transition-colors hover:shadow-lg">
-                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-white" />
+              <div key={i} className="bg-[#16141A] border border-zinc-800 hover:border-red-600 rounded-2xl p-6 transition-colors">
+                <div className="w-12 h-12 bg-red-600/10 border border-red-600/30 rounded-xl flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6 text-red-500" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{d.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{d.desc}</p>
+                <h3 className="font-bold text-white mb-2">{d.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{d.desc}</p>
               </div>
             );
           })}
@@ -723,12 +723,12 @@ export default function SMESecurityPackagesPage() {
       </div>
 
       {/* ── FINAL CTA ─────────────────────────── */}
-      <div className="bg-[#16141A] py-16 border-t border-white/8">
+      <div className="bg-[#16141A] py-16 border-t border-zinc-900">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
             Bereit für Ihren Security-Check?
           </h3>
-          <p className="text-gray-500 mb-8">
+          <p className="text-gray-400 mb-8">
             Paket aussuchen, Formular ausfüllen – wir melden uns innerhalb von 24 Stunden.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -741,7 +741,7 @@ export default function SMESecurityPackagesPage() {
             </button>
             <a
               href="tel:+491777750985"
-              className="border-2 border-white/10 text-gray-700 hover:border-gray-900 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="border-2 border-zinc-700 text-white hover:border-red-600 hover:bg-white/5 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
               (+49) 01777750985
