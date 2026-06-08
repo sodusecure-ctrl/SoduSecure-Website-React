@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getLocale } from 'next-intl/server';
 import { ArrowRight, Download, ExternalLink, FileText, GitBranch } from 'lucide-react';
@@ -72,7 +72,7 @@ const de: Copy = {
   fixLabel: 'Fertiger Fix',
   ctaHeadline: 'Wollen Sie das für Ihr Repo?',
   ctaSub: 'Anfrage schicken, wir übernehmen Setup und ersten Bericht.',
-  ctaButton: 'Demo anfragen',
+  ctaButton: 'Jetzt starten',
   findings: [
     { id: 'A-2026-014', title: 'Broken Access Control im Admin-Endpoint', severity: 'High', cwe: 'CWE-284', note: 'Neu diese Woche · betrifft /api/admin/*' },
     { id: 'A-2026-015', title: 'Token im Klartext im Local Storage', severity: 'Medium', cwe: 'CWE-922', note: 'Regression · wieder eingeführt in Commit 4f9e3b1' },

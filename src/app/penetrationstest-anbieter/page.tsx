@@ -29,35 +29,35 @@ const CERTIFICATIONS = [
   {
     name: "OSCP",
     org: "Offensive Security",
-    desc: "Offensive Security Certified Professional â€“ Gold Standard fÃ¼r Penetrationstests. Beweis echten praktischen KÃ¶nnens.",
+    desc: "Offensive Security Certified Professional – Gold Standard für Penetrationstests. Beweis echten praktischen Könnens.",
     level: "Essential",
     color: "red",
   },
   {
     name: "CEH",
     org: "EC-Council",
-    desc: "Certified Ethical Hacker â€“ Breit anerkannte Zertifizierung. Zeigt fundiertes Security-Wissen.",
+    desc: "Certified Ethical Hacker – Breit anerkannte Zertifizierung. Zeigt fundiertes Security-Wissen.",
     level: "Important",
     color: "orange",
   },
   {
     name: "CISSP",
     org: "ISCÂ²",
-    desc: "Certified Information Systems Security Professional â€“ Senior-Level Zertifizierung mit 5+ Jahren Erfahrung.",
+    desc: "Certified Information Systems Security Professional – Senior-Level Zertifizierung mit 5+ Jahren Erfahrung.",
     level: "Important",
     color: "blue",
   },
   {
     name: "GPEN",
     org: "GIAC",
-    desc: "GIAC Penetration Tester â€“ Hochwertiger Standard, vergleichbar mit OSCP.",
+    desc: "GIAC Penetration Tester – Hochwertiger Standard, vergleichbar mit OSCP.",
     level: "Important",
     color: "green",
   },
   {
     name: "eJPT",
     org: "Offensive Security",
-    desc: "eLearnSecurity Junior Penetration Tester â€“ Entry-Level. Besser kein Zertifikat als nur eJPT.",
+    desc: "eLearnSecurity Junior Penetration Tester – Entry-Level. Besser kein Zertifikat als nur eJPT.",
     level: "Junior",
     color: "gray",
   },
@@ -66,8 +66,8 @@ const CERTIFICATIONS = [
 const RED_FLAGS = [
   {
     icon: XCircle,
-    title: "GÃ¼nstige Pauschalpreise",
-    desc: "â‚¬500 fÃ¼r einen Pentest? Vorsicht! SeriÃ¶se Pentester arbeiten nach Scope & Aufwand.",
+    title: "Günstige Pauschalpreise",
+    desc: "€500 für einen Pentest? Vorsicht! Seriöse Pentester arbeiten nach Scope & Aufwand.",
   },
   {
     icon: AlertTriangle,
@@ -82,7 +82,7 @@ const RED_FLAGS = [
   {
     icon: AlertTriangle,
     title: "Kein Retest angeboten",
-    desc: "Nach Behebung sollte kostenlos retestet werden. Wenn nicht: Keine QualitÃ¤tskontrolle.",
+    desc: "Nach Behebung sollte kostenlos retestet werden. Wenn nicht: Keine Qualitätskontrolle.",
   },
   {
     icon: XCircle,
@@ -99,7 +99,7 @@ const RED_FLAGS = [
 const WHAT_TO_LOOK_FOR = [
   {
     icon: Award,
-    title: "Zertifizierungen prÃ¼fen",
+    title: "Zertifizierungen prüfen",
     desc: "OSCP, CEH oder GPEN sind Minimum. CISSP zeigt seniore Expertise. Junior-Zertifizierungen (eJPT) sind Warnsignal.",
   },
   {
@@ -110,7 +110,7 @@ const WHAT_TO_LOOK_FOR = [
   {
     icon: Users,
     title: "Referenzen & Kundenaussagen",
-    desc: "Fragen Sie nach Referenzen oder Case Studies. SeriÃ¶se Pentester haben reale Kunden & Testimonials.",
+    desc: "Fragen Sie nach Referenzen oder Case Studies. Seriöse Pentester haben reale Kunden & Testimonials.",
   },
   {
     icon: Target,
@@ -120,7 +120,7 @@ const WHAT_TO_LOOK_FOR = [
   {
     icon: Zap,
     title: "Manuelle Expertise nachvollziehen",
-    desc: "Fragen Sie: 'Was findet ein Mensch, was Tools nicht finden?' â€“ Der beste Pentester erklÃ¤rt das gerne.",
+    desc: "Fragen Sie: 'Was findet ein Mensch, was Tools nicht finden?' – Der beste Pentester erklärt das gerne.",
   },
   {
     icon: Shield,
@@ -133,27 +133,27 @@ const OUR_STRENGTHS = [
   {
     icon: Award,
     title: "Zertifizierte Pentester",
-    desc: "OSCP, CEH, CISSP â€“ unsere Experten sind offiziell zertifiziert. Keine Junior-Tester.",
+    desc: "OSCP, CEH, CISSP – unsere Experten sind offiziell zertifiziert. Keine Junior-Tester.",
   },
   {
     icon: Target,
     title: "Manuelle Exploits",
-    desc: "Wir benutzen Tools als Hilfe, aber finden Schwachstellen durch echtes Denken & KreativitÃ¤t.",
+    desc: "Wir benutzen Tools als Hilfe, aber finden Schwachstellen durch echtes Denken & Kreativität.",
   },
   {
     icon: FileText,
     title: "Audit-Ready Reports",
-    desc: "Nicht nur Scan-Ergebnisse. Professionelle Reports mit PoCs, GeschÃ¤ftskontexte, Remediation-Guides.",
+    desc: "Nicht nur Scan-Ergebnisse. Professionelle Reports mit PoCs, Geschäftskontexte, Remediation-Guides.",
   },
   {
     icon: Zap,
     title: "ISO 27001 & Compliance",
-    desc: "Wir verstehen A.12.6, NIS2, BSI-Grundschutz, DSGVO â€“ und mappen Findings automatisch.",
+    desc: "Wir verstehen A.12.6, NIS2, BSI-Grundschutz, DSGVO – und mappen Findings automatisch.",
   },
   {
     icon: Users,
     title: "Partnerschaftlicher Ansatz",
-    desc: "Wir arbeiten mit euch zusammen â€“ nicht gegen euch. Klare Kommunikation, regelmÃ¤ÃŸige Updates.",
+    desc: "Wir arbeiten mit euch zusammen – nicht gegen euch. Klare Kommunikation, regelmäßige Updates.",
   },
   {
     icon: Shield,
@@ -167,60 +167,60 @@ const PENTEST_TYPES_COMPARISON = [
     type: "Automated Vulnerability Scan",
     automation: "90%",
     manual: "10%",
-    cost: "â‚¬500â€“â‚¬1.500",
-    timeframe: "1â€“2 Tage",
+    cost: "€500–€1.500",
+    timeframe: "1–2 Tage",
     best_for: "Schneller Security-Check, Compliance-Start",
   },
   {
     type: "Internal Penetration Test",
     automation: "30%",
     manual: "70%",
-    cost: "â‚¬2.000â€“â‚¬6.000",
-    timeframe: "3â€“10 Tage",
+    cost: "€2.000–€6.000",
+    timeframe: "3–10 Tage",
     best_for: "Interne Systeme, Netzwerk-Security",
   },
   {
     type: "External Penetration Test",
     automation: "20%",
     manual: "80%",
-    cost: "â‚¬3.000â€“â‚¬12.000",
-    timeframe: "5â€“14 Tage",
+    cost: "€3.000–€12.000",
+    timeframe: "5–14 Tage",
     best_for: "Web-Apps, APIs, Public-Facing Systems",
   },
   {
     type: "Red Team Assessment",
     automation: "10%",
     manual: "90%",
-    cost: "â‚¬8.000â€“â‚¬25.000+",
-    timeframe: "2â€“4 Wochen",
+    cost: "€8.000–€25.000+",
+    timeframe: "2–4 Wochen",
     best_for: "Enterprise, realistische Angriffssimulation",
   },
 ];
 
 const FAQS = [
   {
-    q: "Wie viel kostet ein seriÃ¶ser Penetrationstest?",
-    a: "Es kommt auf den Scope an. Ein Web-App Pentest: ab â‚¬1.500. Netzwerk-Pentest: ab â‚¬2.500. Enterprise-Pentest: â‚¬6.000+. Billiger = meist unseriÃ¶s oder unzureichend.",
+    q: "Wie viel kostet ein seriöser Penetrationstest?",
+    a: "Es kommt auf den Scope an. Ein Web-App Pentest: ab €1.500. Netzwerk-Pentest: ab €2.500. Enterprise-Pentest: €6.000+. Billiger = meist unseriös oder unzureichend.",
   },
   {
     q: "Was ist der Unterschied zwischen interner und externer Penetrationtest?",
-    a: "Extern: Angriff von auÃŸen (Internet). Intern: Angriff von innerhalb des Netzwerks. Intern findet oft mehr Probleme, weil der Attacker schon 'ins Netzwerk gekommen' ist.",
+    a: "Extern: Angriff von außen (Internet). Intern: Angriff von innerhalb des Netzwerks. Intern findet oft mehr Probleme, weil der Attacker schon 'ins Netzwerk gekommen' ist.",
   },
   {
-    q: "Wie prÃ¼fe ich, ob ein Pentester wirklich kompetent ist?",
-    a: "Fragen: (1) Welche Zertifizierungen? (2) Sample-Reports? (3) Referenzen? (4) Beschreibt die Methodik â€“ OWASP, PTES? (5) Findet manuell, nicht nur mit Tools?",
+    q: "Wie prüfe ich, ob ein Pentester wirklich kompetent ist?",
+    a: "Fragen: (1) Welche Zertifizierungen? (2) Sample-Reports? (3) Referenzen? (4) Beschreibt die Methodik – OWASP, PTES? (5) Findet manuell, nicht nur mit Tools?",
   },
   {
     q: "Brauche ich einen Pentester mit Branchenerfahrung?",
-    a: "Nicht unbedingt, aber hilfreich. Fin-Tech Pentest ist anders als Healthcare Pentest. Mit Branchenerfahrung: bessere Findings, weniger MissverstÃ¤ndnisse.",
+    a: "Nicht unbedingt, aber hilfreich. Fin-Tech Pentest ist anders als Healthcare Pentest. Mit Branchenerfahrung: bessere Findings, weniger Missverständnisse.",
   },
   {
     q: "Kann ich meinen eigenen IT-Admin einen Pentest machen lassen?",
-    a: "Theoretisch ja, praktisch nein. IT-Admin kennt die Infrastruktur â€“ kann nicht 'angreifen' wie ein AuÃŸenstehender. Zudem: externe Auditor*innen bevorzugen externe Pentester (unabhÃ¤ngiger).",
+    a: "Theoretisch ja, praktisch nein. IT-Admin kennt die Infrastruktur – kann nicht 'angreifen' wie ein Außenstehender. Zudem: externe Auditor*innen bevorzugen externe Pentester (unabhängiger).",
   },
   {
-    q: "Wie lange sind Pentest-Ergebnisse 'gÃ¼ltig'?",
-    a: "Nicht lange! Nach 3â€“6 Monaten sollte ein Retest durchgefÃ¼hrt werden, da neue Schwachstellen entstehen. Nach grÃ¶ÃŸeren Ã„nderungen: sofort retest.",
+    q: "Wie lange sind Pentest-Ergebnisse 'gültig'?",
+    a: "Nicht lange! Nach 3–6 Monaten sollte ein Retest durchgeführt werden, da neue Schwachstellen entstehen. Nach größeren Änderungen: sofort retest.",
   },
 ];
 
@@ -235,26 +235,26 @@ export default function PenetrationstestAnbieterPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="inline-flex items-center gap-2 bg-purple-600/10 border border-purple-600/20 rounded-full px-4 py-1.5 mb-6">
             <Shield className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-400 text-sm font-medium">Penetrationstest Anbieter Â· SeriÃ¶se Pentester Â· OSCP Certified</span>
+            <span className="text-purple-400 text-sm font-medium">Penetrationstest Anbieter · Seriöse Pentester · OSCP Certified</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Der richtige Penetrationstest Anbieter â€“<br />
-            <span className="text-purple-500">Wie man QualitÃ¤t erkennt</span>
+            Der richtige Penetrationstest Anbieter –<br />
+            <span className="text-purple-500">Wie man Qualität erkennt</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-3xl mx-auto mb-10">
-            Wie unterscheidest du zwischen seriÃ¶sen Pentestern und unzureichenden Anbietern? Dieser Guide zeigt dir, worauf du achten musst â€“ und was SODU Secure macht, um deine Sicherheit zu garantieren.
+            Wie unterscheidest du zwischen seriösen Pentestern und unzureichenden Anbietern? Dieser Guide zeigt dir, worauf du achten musst – und was SODU Secure macht, um deine Sicherheit zu garantieren.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
-              <Phone className="w-5 h-5" />SeriÃ¶sen Pentester buchen
+              <Phone className="w-5 h-5" />Seriösen Pentester buchen
             </Link>
             <Link href="/penetration-testing" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
-              Pentest Ãœbersicht <ArrowRight className="w-5 h-5" />
+              Pentest Übersicht <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
           {/* Trust bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
-            {[["500+", "Erfolgreiche Pentests"], ["OSCP Â· CEH Â· CISSP", "Zertifizierungen"], ["100%", "Kundenzufriedenheit"], ["24h", "Angebots-Response"]].map(([stat, label]) => (
+            {[["500+", "Erfolgreiche Pentests"], ["OSCP · CEH · CISSP", "Zertifizierungen"], ["100%", "Kundenzufriedenheit"], ["24h", "Angebots-Response"]].map(([stat, label]) => (
               <div key={stat} className="bg-[#0A0A0B] border border-white/10 rounded-xl py-3 px-2 text-center">
                 <div className="text-xl font-bold text-purple-400">{stat}</div>
                 <div className="text-white/50 text-xs mt-0.5">{label}</div>
@@ -312,8 +312,8 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">6 Punkte: Das solltest du prÃ¼fen</h2>
-            <p className="text-white/60">Wie man einen seriÃ¶sen Pentester von einem unseriÃ¶sen unterscheidet.</p>
+            <h2 className="text-3xl font-bold mb-4">6 Punkte: Das solltest du prüfen</h2>
+            <p className="text-white/60">Wie man einen seriösen Pentester von einem unseriösen unterscheidet.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {WHAT_TO_LOOK_FOR.map((item, i) => {
@@ -339,7 +339,7 @@ export default function PenetrationstestAnbieterPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">6 Rote Flaggen</h2>
-            <p className="text-white/60">Warnsignale fÃ¼r unseriÃ¶se Pentester.</p>
+            <p className="text-white/60">Warnsignale für unseriöse Pentester.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {RED_FLAGS.map((flag, i) => {
@@ -358,12 +358,12 @@ export default function PenetrationstestAnbieterPage() {
         </div>
       </section>
 
-      {/* Unsere StÃ¤rken */}
+      {/* Unsere Stärken */}
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Das macht SODU Secure unterschiedlich</h2>
-            <p className="text-white/60">Warum wir der Partner fÃ¼r seriÃ¶se Sicherheit sind.</p>
+            <p className="text-white/60">Warum wir der Partner für seriöse Sicherheit sind.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {OUR_STRENGTHS.map((strength) => {
@@ -389,7 +389,7 @@ export default function PenetrationstestAnbieterPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Pentest-Typen im Vergleich</h2>
-            <p className="text-white/60">Welche Pentest ist fÃ¼r wen geeignet?</p>
+            <p className="text-white/60">Welche Pentest ist für wen geeignet?</p>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -424,7 +424,7 @@ export default function PenetrationstestAnbieterPage() {
           <AlertTriangle className="w-7 h-7 text-purple-400 mx-auto mb-3" />
           <h3 className="text-lg font-bold mb-2">Billig = Schlecht? Nicht immer, aber fast immer!</h3>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
-            â‚¬500 fÃ¼r einen &apos;Pentest&apos;? Das ist ein Scan. Ein echte manueller Pentest mit zertifizierten Experten kostet ab â‚¬1.500. QualitÃ¤t hat ihren Preis â€“ aber den lohnt sich.
+            €500 für einen &apos;Pentest&apos;? Das ist ein Scan. Ein echte manueller Pentest mit zertifizierten Experten kostet ab €1.500. Qualität hat ihren Preis – aber den lohnt sich.
           </p>
         </div>
       </section>
@@ -432,7 +432,7 @@ export default function PenetrationstestAnbieterPage() {
       {/* FAQ */}
       <section className="py-16 lg:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-10">HÃ¤ufige Fragen zu Penetrationstest Anbietern</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">Häufige Fragen zu Penetrationstest Anbietern</h2>
           <div className="space-y-3">
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-[#0A0A0B] border border-white/10 rounded-xl overflow-hidden">
@@ -451,9 +451,9 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-[#0A0A0B] to-[#0A0A0B] border-t border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Shield className="w-14 h-14 text-purple-500 mx-auto mb-4" />
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">SeriÃ¶se Pentester beauftragen</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Seriöse Pentester beauftragen</h2>
           <p className="text-white/60 text-lg mb-8">
-            OSCP Certified Â· Zertifizierte Experten Â· Audit-Ready Reports Â· Kostenlos Retest
+            OSCP Certified · Zertifizierte Experten · Audit-Ready Reports · Kostenlos Retest
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 rounded-2xl font-semibold transition-colors text-lg">

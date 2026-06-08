@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function Page() {
         heroSub:
           'Pre-Series-A heißt: drei Devs, ein CTO, kein Budget für einen Security-Hire. AuditAI gibt Ihnen Senior-Security-Niveau ab Tag eins - jede Woche, ab 99 €. Damit der nächste Pentest, das nächste Audit oder die nächste Due Diligence ohne Drama läuft.',
         heroPills: ['Pre-Series-A tauglich', 'Ab 99 € / Monat', 'Due-Diligence-ready', 'Made in Germany'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Startup-tauglich · Due-Diligence-ready · Powered by Claude',
@@ -53,7 +53,7 @@ export default function Page() {
         ],
         ctaH2: 'Security ab Tag eins. Ohne Hire.',
         ctaSub: 'Anfrage schicken, erster Bericht in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

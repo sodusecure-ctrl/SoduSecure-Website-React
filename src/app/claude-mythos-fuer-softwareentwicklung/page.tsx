@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Anthropic hat im Mai 2026 mit Claude Mythos gezeigt, was KI in Sachen Schwachstellen-Discovery leisten kann - und das Modell wegen der Gefahr unter Verschluss gestellt. Wir bringen dieselbe Reasoning-Klasse defensiv in Ihren Entwicklungs-Workflow: Pull-Request-aware, Diff-bewusst, mit fertigen Code-Patches. Ihre Devs commiten weiter, wir liefern jeden Montag den Sicherheits-Befund.',
         heroPills: ['Diff-aware', 'PR-tauglich', 'Fertige Code-Patches', 'Wöchentliches PDF'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Anthropic-API-Kunde · Defensiv eingesetzt · DSGVO · Frankfurt-Hosting · AVV vor Start',
@@ -59,7 +59,7 @@ export default function Page() {
         ],
         ctaH2: 'KI-Security im Dev-Workflow.',
         ctaSub: 'Anfrage schicken - wir setzen Onboarding und ersten Lauf auf. Erstes PDF in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

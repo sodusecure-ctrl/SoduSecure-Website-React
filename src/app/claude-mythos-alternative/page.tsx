@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Anthropic hat im Mai 2026 angekündigt, dass ihr neues Modell "Claude Mythos" Tausende unbekannter Schwachstellen finden kann - und es deshalb der Öffentlichkeit nicht freigibt. Genau diese Klasse von Code-Reasoning bauen wir seit Monaten in Sodu AuditAI: KI, die Ihren Code wie ein Senior-Security-Engineer liest. Defensiv eingesetzt. Wöchentlicher Bericht. Made in Germany.',
         heroPills: ['KI-Code-Audit im Abo', 'Defensiv. Wöchentlich.', 'Berliner Hacker-Triage', 'DSGVO + AVV'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Defensiv eingesetzt · Hacker-kuratiert · Frankfurt-Hosting · DSGVO · AVV vor Start',
@@ -60,7 +60,7 @@ export default function Page() {
         ],
         ctaH2: 'Wenn die Angreifer aufrüsten, müssen Sie das auch.',
         ctaSub: 'Anfrage schicken - wir setzen Onboarding und ersten Lauf für Sie auf. Erstes PDF in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

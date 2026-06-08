@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -76,8 +76,8 @@ const auditaiDe: Copy = {
   faqHeadline: 'Antworten zu den Preisen.',
   ctaHeadline: 'Anfrage schicken. Wir machen den Rest.',
   ctaSub: 'Setup in 5 Minuten. Wöchentlicher Bericht ab Tag 7.',
-  ctaButton: 'Demo anfragen',
-  ctaHref: '/contact',
+  ctaButton: 'Jetzt starten',
+  ctaHref: '/sodu-audit-ai',
   popular: 'Am beliebtesten',
   plans: [
     {
@@ -85,7 +85,7 @@ const auditaiDe: Copy = {
       price: '99 €',
       audience: 'Solo-Gründer & kleine Startups',
       features: ['1 Repository', '1 Contributor', '1 Scan pro Monat', 'DE & EN Lieferung', 'Fertige Fix-Vorschläge'],
-      cta: { label: 'Startup-Paket starten', href: '/get-started/starter' },
+      cta: { label: 'Startup-Paket starten', href: '/sodu-audit-ai?plan=starter' },
     },
     {
       name: 'Studio',
@@ -93,14 +93,14 @@ const auditaiDe: Copy = {
       audience: 'Produkt-Teams · 1 Repo, jede Woche',
       features: ['1 Repository', 'Unbegrenzte Contributoren', 'Wöchentlicher Bericht', 'Trend-Historie & Triage', 'Priority-Support per E-Mail + Chat'],
       highlight: true,
-      cta: { label: 'Studio wählen', href: '/get-started/studio' },
+      cta: { label: 'Studio wählen', href: '/sodu-audit-ai?plan=studio' },
     },
     {
       name: 'Pro+',
       price: '449 €',
       audience: 'Scale-ups · mehrere Repos + Pentest',
       features: ['Mehrere Repositories', 'Unbegrenzte Contributoren', 'Wöchentlicher Bericht', 'Quartalsweise Voll-Pentest (1 Repo)', 'Dedizierter Ansprechpartner'],
-      cta: { label: 'Pro+ anfragen', href: '/get-started/pro' },
+      cta: { label: 'Pro+ anfragen', href: '/sodu-audit-ai?plan=pro' },
     },
   ],
   rows: [
@@ -148,7 +148,7 @@ const auditaiEn: Copy = {
       price: '€99',
       audience: 'Solo founders & early startups',
       features: ['1 repository', '1 contributor', '1 scan per month', 'EN + DE deliverable', 'Paste-ready fix proposals'],
-      cta: { label: 'Start Startup pack', href: '/get-started/starter' },
+      cta: { label: 'Start Startup pack', href: '/sodu-audit-ai?plan=starter' },
     },
     {
       name: 'Studio',
@@ -156,14 +156,14 @@ const auditaiEn: Copy = {
       audience: 'Product teams · 1 repo, weekly',
       features: ['1 repository', 'Unlimited contributors', 'Weekly report', 'Trend history & triage view', 'Priority email + chat support'],
       highlight: true,
-      cta: { label: 'Choose Studio', href: '/get-started/studio' },
+      cta: { label: 'Choose Studio', href: '/sodu-audit-ai?plan=studio' },
     },
     {
       name: 'Pro+',
       price: '€449',
       audience: 'Scale-ups · multi-repo + pentest',
       features: ['Multiple repositories', 'Unlimited contributors', 'Weekly report', 'Quarterly full pentest (1 repo)', 'Dedicated point of contact'],
-      cta: { label: 'Request Pro+', href: '/get-started/pro' },
+      cta: { label: 'Request Pro+', href: '/sodu-audit-ai?plan=pro' },
     },
   ],
   rows: [

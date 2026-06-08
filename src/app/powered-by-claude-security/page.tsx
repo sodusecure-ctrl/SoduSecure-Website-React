@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Anthropics Claude ist heute das stärkste Modell für Code-Reasoning. Wir kombinieren es mit eigener Multi-Pass-Pipeline, adversarialer Verifikation und manueller Triage durch echte Pentester. Was Sie bekommen: ein wöchentliches Security-PDF, das Sie an Investoren, Auditoren und Geschäftsleitung weiterreichen können.',
         heroPills: ['Powered by Claude', 'Adversarial Verifiziert', 'Hacker-kuratiert', 'DSGVO'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Powered by Claude (Anthropic API) · Hacker-kuratiert · DSGVO · Frankfurt-Hosting',
@@ -59,7 +59,7 @@ export default function Page() {
         ],
         ctaH2: 'Powered by Claude. Verifiziert von Menschen.',
         ctaSub: 'Anfrage schicken, wir machen den Rest. Erstes PDF in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

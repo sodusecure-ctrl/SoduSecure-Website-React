@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Mai 2026: Anthropic kündigt Claude Mythos an - eine KI, die Tausende unbekannter Schwachstellen findet. Zu gefährlich, sagt der Hersteller, deshalb nicht öffentlich. Sie können nicht warten, bis ein vergleichbares Tool auf der Angreiferseite leakt. Wir bieten KI-Code-Audit mit Frontier-Reasoning der Claude-Klasse, defensiv eingesetzt, als wöchentliches Abo.',
         heroPills: ['Frontier-Reasoning defensiv', 'Wöchentliches PDF', 'Hacker-kuratiert', 'DSGVO + AVV'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Anthropic-API-Kunde · Defensiv eingesetzt · Berliner Hacker · DSGVO · Frankfurt',
@@ -59,7 +59,7 @@ export default function Page() {
         ],
         ctaH2: 'Frontier-Reasoning. Defensiv. Im Abo.',
         ctaSub: 'Anfrage schicken - wir setzen Onboarding und ersten Lauf für Sie auf. Erstes PDF in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

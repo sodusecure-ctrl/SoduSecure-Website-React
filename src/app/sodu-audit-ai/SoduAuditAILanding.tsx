@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import {
   ArrowRight,
   ArrowLeft,
@@ -11,6 +12,7 @@ import {
   Lock,
   FileText,
   Github,
+  GitBranch,
   Workflow,
   Mail,
   Phone,
@@ -18,6 +20,8 @@ import {
   Building2,
   ChevronDown,
   CircleCheckBig,
+  CreditCard,
+  XCircle,
 } from "lucide-react";
 import { trackConversion } from "@/lib/gtag";
 
@@ -145,15 +149,29 @@ const FAQ = [
   },
 ];
 
+type Provider = "github" | "gitlab";
+
 export default function SoduAuditAILanding() {
-  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(null);
-  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const searchParams = useSearchParams();
+  const status = searchParams?.get("status");
+  const planParam = searchParams?.get("plan");
+  const initialPlan: Plan | null =
+    planParam === "starter" || planParam === "studio" || planParam === "pro"
+      ? planParam
+      : null;
+
+  const [selectedPlan, setSelectedPlan] = useState<Plan | null>(initialPlan);
+  const [step, setStep] = useState<1 | 2 | 3 | 4>(
+    status === "success" ? 3 : status === "cancelled" ? 4 : initialPlan ? 2 : 1
+  );
 
   // Form state
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
+  const [provider, setProvider] = useState<Provider | null>(null);
+  const [repoUrl, setRepoUrl] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -166,17 +184,24 @@ export default function SoduAuditAILanding() {
   );
 
   useEffect(() => {
-    if (step === 2 && formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-    if (step === 3 && formRef.current) {
+    if (formRef.current && (step === 2 || step === 3 || step === 4)) {
       formRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [step]);
 
+  useEffect(() => {
+    if (status === "success") {
+      trackConversion();
+    }
+  }, [status]);
+
   function handlePlanSelect(plan: Plan) {
     setSelectedPlan(plan);
     setStep(2);
+    // Even if step was already 2, force a scroll to the form.
+    setTimeout(() => {
+      formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
   }
 
   function scrollToPlans() {
@@ -199,10 +224,18 @@ export default function SoduAuditAILanding() {
       setError("Bitte geben Sie Ihren Namen oder Ihre Firma an.");
       return;
     }
+    if (!provider) {
+      setError("Bitte wählen Sie GitHub oder GitLab.");
+      return;
+    }
+    if (!repoUrl.trim()) {
+      setError("Bitte Repository-URL oder Namen angeben.");
+      return;
+    }
 
     setSubmitting(true);
     try {
-      const res = await fetch("/api/get-started", {
+      const res = await fetch("/api/checkout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -211,19 +244,25 @@ export default function SoduAuditAILanding() {
           name: name.trim() || undefined,
           company: company.trim() || undefined,
           phone: phone.trim() || undefined,
+          provider,
+          repoUrl: repoUrl.trim(),
         }),
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        setError(data.error || "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.");
+        setError(data.error || "Checkout konnte nicht gestartet werden. Bitte erneut versuchen.");
         setSubmitting(false);
         return;
       }
-      trackConversion();
-      setStep(3);
+      const data = (await res.json()) as { url?: string };
+      if (data.url) {
+        window.location.href = data.url;
+        return;
+      }
+      setError("Checkout-URL fehlt. Bitte erneut versuchen.");
+      setSubmitting(false);
     } catch {
       setError("Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.");
-    } finally {
       setSubmitting(false);
     }
   }
@@ -461,12 +500,19 @@ export default function SoduAuditAILanding() {
         </div>
       </section>
 
-      {/* CONTACT FORM / SUCCESS */}
+      {/* CONTACT FORM / SUCCESS / CANCELLED */}
       <section ref={formRef} id="form" className="relative">
         <div className="premium-divider mx-auto max-w-6xl" />
         <div className="mx-auto max-w-5xl px-6 py-16 lg:py-24">
           {step === 3 ? (
             <SuccessState planName={selectedPlanData?.name ?? ""} email={email} />
+          ) : step === 4 ? (
+            <CancelledState
+              onRetry={() => {
+                setStep(selectedPlan ? 2 : 1);
+                if (!selectedPlan) scrollToPlans();
+              }}
+            />
           ) : (
             <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
               {/* Selected plan summary */}
@@ -555,10 +601,11 @@ export default function SoduAuditAILanding() {
               {/* Form */}
               <div>
                 <h2 className="text-3xl font-semibold tracking-[-0.02em] text-white md:text-4xl">
-                  Ihre Daten - dann melden wir uns.
+                  Ihre Daten - dann zur sicheren Zahlung.
                 </h2>
                 <p className="mt-3 max-w-xl text-[15px] text-white/60">
-                  E-Mail genügt. Alles andere hilft uns, Ihren Onboarding-Slot in 24 h vorzubereiten.
+                  E-Mail, Firma und Repository - mehr brauchen wir nicht. Bezahlung läuft
+                  verschlüsselt über Stripe, monatlich kündbar.
                 </p>
 
                 <form onSubmit={handleSubmit} className="mt-8 space-y-5" noValidate>
@@ -628,6 +675,89 @@ export default function SoduAuditAILanding() {
                     />
                   </Field>
 
+                  {/* Provider selector */}
+                  <div className="space-y-2.5">
+                    <span className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
+                      <span className="text-white/70"><GitBranch className="h-4 w-4" /></span>
+                      Repository-Provider <span className="text-[#FF6B61]">*</span>
+                    </span>
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {([
+                        { id: "github" as Provider, label: "GitHub", hint: "github.com / GHE" },
+                        { id: "gitlab" as Provider, label: "GitLab", hint: "gitlab.com / self-hosted" },
+                      ]).map((p) => {
+                        const active = provider === p.id;
+                        return (
+                          <button
+                            key={p.id}
+                            type="button"
+                            onClick={() => setProvider(p.id)}
+                            disabled={!selectedPlan}
+                            aria-pressed={active}
+                            className={[
+                              "group flex items-center justify-between rounded-2xl border px-4 py-3.5 text-left transition disabled:cursor-not-allowed disabled:opacity-40",
+                              active
+                                ? "border-[#FF3B30]/55 bg-[#FF3B30]/10 shadow-[0_0_0_1px_rgba(255,59,48,0.4)]"
+                                : "border-white/10 bg-white/[0.03] hover:border-white/25 hover:bg-white/[0.05]",
+                            ].join(" ")}
+                          >
+                            <span className="flex items-center gap-3">
+                              <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/[0.06] text-white ring-1 ring-white/10">
+                                {p.id === "github" ? (
+                                  <Github className="h-4 w-4" />
+                                ) : (
+                                  <GitBranch className="h-4 w-4" />
+                                )}
+                              </span>
+                              <span>
+                                <span className="block text-[14px] font-semibold text-white">{p.label}</span>
+                                <span className="block text-[11px] text-white/50">{p.hint}</span>
+                              </span>
+                            </span>
+                            <span
+                              className={[
+                                "inline-flex h-6 w-6 items-center justify-center rounded-full border transition",
+                                active
+                                  ? "border-[#FF3B30] bg-[#FF3B30] text-white"
+                                  : "border-white/15 bg-white/[0.04] text-transparent",
+                              ].join(" ")}
+                              aria-hidden
+                            >
+                              <Check className="h-3 w-3" />
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <Field
+                    icon={<GitBranch className="h-4 w-4" />}
+                    label={
+                      provider === "gitlab"
+                        ? "GitLab Repository (URL oder Pfad)"
+                        : "GitHub Repository (URL oder owner/repo)"
+                    }
+                    required
+                  >
+                    <input
+                      type="text"
+                      value={repoUrl}
+                      onChange={(e) => setRepoUrl(e.target.value)}
+                      placeholder={
+                        provider === "gitlab"
+                          ? "https://gitlab.com/acme/payments-api"
+                          : "https://github.com/acme/payments-api oder acme/payments-api"
+                      }
+                      autoComplete="off"
+                      autoCorrect="off"
+                      autoCapitalize="off"
+                      spellCheck={false}
+                      disabled={!selectedPlan}
+                      className="w-full bg-transparent text-[15px] text-white placeholder:text-white/35 focus:outline-none disabled:opacity-40"
+                    />
+                  </Field>
+
                   {error && (
                     <div className="rounded-2xl border border-[#FF3B30]/30 bg-[#FF3B30]/10 px-4 py-3 text-sm text-[#FF8077]">
                       {error}
@@ -639,20 +769,31 @@ export default function SoduAuditAILanding() {
                     disabled={submitting || !selectedPlan}
                     className="premium-cta inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    {submitting
-                      ? "Wird gesendet…"
-                      : selectedPlan
-                      ? `Anfrage absenden · ${selectedPlanData?.name}`
-                      : "Bitte zuerst einen Plan wählen"}
-                    {!submitting && <ArrowRight className="h-4 w-4" />}
+                    {submitting ? (
+                      "Weiterleitung zu Stripe…"
+                    ) : selectedPlan ? (
+                      <>
+                        <CreditCard className="h-4 w-4" />
+                        Jetzt buchen · {selectedPlanData?.name} {selectedPlanData?.price}
+                        {selectedPlanData?.perMonth}
+                      </>
+                    ) : (
+                      "Bitte zuerst einen Plan wählen"
+                    )}
+                    {!submitting && selectedPlan && <ArrowRight className="h-4 w-4" />}
                   </button>
 
                   <p className="text-center text-[12px] text-white/45">
-                    Mit dem Absenden stimmen Sie unserer{" "}
+                    Sichere Zahlung über Stripe. SEPA, Kreditkarte und Apple/Google Pay. Mit dem
+                    Absenden stimmen Sie unserer{" "}
                     <Link href="/privacy" className="underline-offset-4 hover:underline">
                       Datenschutzerklärung
                     </Link>{" "}
-                    zu. Keine Verträge, keine Kreditkarte.
+                    und den{" "}
+                    <Link href="/terms" className="underline-offset-4 hover:underline">
+                      AGB
+                    </Link>{" "}
+                    zu. Monatlich kündbar.
                   </p>
                 </form>
               </div>
@@ -719,6 +860,121 @@ export default function SoduAuditAILanding() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* COMPARISON TABLE */}
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-24">
+        <div className="text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#FF3B30]" />
+            Plan-Vergleich
+          </span>
+          <h2 className="mt-5 text-3xl font-semibold tracking-[-0.025em] text-white md:text-5xl">
+            Alle Pläne im Detail.
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-[15px] text-white/60">
+            Was steckt drin? Was nicht? Hier sehen Sie es Zeile für Zeile.
+          </p>
+        </div>
+
+        <div className="mt-12 overflow-x-auto rounded-3xl border border-white/10 bg-white/[0.02]">
+          <table className="w-full min-w-[720px] text-left text-sm">
+            <thead>
+              <tr className="border-b border-white/10 text-[11px] uppercase tracking-[0.18em] text-white/55">
+                <th className="px-6 py-5 font-medium">Feature</th>
+                <th className="px-6 py-5 font-medium text-white">
+                  Starter
+                  <div className="mt-1 text-[13px] font-semibold normal-case tracking-normal text-white/70">
+                    99 €<span className="text-white/40">/Monat</span>
+                  </div>
+                </th>
+                <th className="relative px-6 py-5 font-medium text-white">
+                  <span className="absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full bg-[#FF3B30] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_4px_14px_rgba(255,59,48,0.45)]">
+                    Beliebt
+                  </span>
+                  Studio
+                  <div className="mt-1 text-[13px] font-semibold normal-case tracking-normal text-white/70">
+                    199 €<span className="text-white/40">/Monat</span>
+                  </div>
+                </th>
+                <th className="px-6 py-5 font-medium text-white">
+                  Pro+
+                  <div className="mt-1 text-[13px] font-semibold normal-case tracking-normal text-white/70">
+                    449 €<span className="text-white/40">/Monat</span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody className="text-white/75">
+              {[
+                { f: "Repositories", s: "1", st: "1", p: "bis zu 5" },
+                { f: "Contributoren", s: "1", st: "Unbegrenzt", p: "Unbegrenzt" },
+                { f: "Audit-Cadence", s: "Monatlich", st: "Wöchentlich", p: "Wöchentlich" },
+                { f: "Audit-Bericht (DE & EN)", s: true, st: true, p: true },
+                { f: "Fertige Code-Fix-Vorschläge", s: true, st: true, p: true },
+                { f: "OWASP Top 10 + CWE-Mapping", s: true, st: true, p: true },
+                { f: "Trend-Historie & Triage", s: false, st: true, p: true },
+                { f: "Priority-Support (24h SLA)", s: false, st: true, p: true },
+                { f: "Slack/Teams-Integration", s: false, st: true, p: true },
+                { f: "Quartals-Pentest (manuell, OSCP)", s: false, st: false, p: true },
+                { f: "ISO 27001 / TR-03161 Auditpaket", s: false, st: false, p: true },
+                { f: "Dedicated Security Lead", s: false, st: false, p: true },
+                { f: "Monatlich kündbar", s: true, st: true, p: true },
+              ].map((row, i) => (
+                <tr
+                  key={row.f}
+                  className={
+                    "border-t border-white/5 " +
+                    (i % 2 === 0 ? "bg-transparent" : "bg-white/[0.015]")
+                  }
+                >
+                  <td className="px-6 py-4 text-white/85">{row.f}</td>
+                  {([row.s, row.st, row.p] as Array<boolean | string>).map((cell, idx) => (
+                    <td
+                      key={idx}
+                      className={
+                        "px-6 py-4 " + (idx === 1 ? "bg-[#FF3B30]/[0.04]" : "")
+                      }
+                    >
+                      {typeof cell === "boolean" ? (
+                        cell ? (
+                          <Check className="h-5 w-5 text-[#FF6B61]" strokeWidth={2.5} />
+                        ) : (
+                          <span className="text-white/25">—</span>
+                        )
+                      ) : (
+                        <span className="font-medium text-white">{cell}</span>
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+              <tr className="border-t border-white/10 bg-white/[0.02]">
+                <td className="px-6 py-5"></td>
+                {(["starter", "studio", "pro"] as Plan[]).map((p) => (
+                  <td
+                    key={p}
+                    className={"px-6 py-5 " + (p === "studio" ? "bg-[#FF3B30]/[0.04]" : "")}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => handlePlanSelect(p)}
+                      className={
+                        "inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[13px] font-semibold transition " +
+                        (p === "studio"
+                          ? "premium-cta text-white"
+                          : "border border-white/15 bg-white/[0.03] text-white hover:border-white/30 hover:bg-white/[0.06]")
+                      }
+                    >
+                      {p === "starter" ? "Starter" : p === "studio" ? "Studio" : "Pro+"} wählen
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </button>
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -828,20 +1084,18 @@ function SuccessState({ planName, email }: { planName: string; email: string }) 
         <CircleCheckBig className="h-8 w-8" />
       </div>
       <h2 className="mt-7 text-3xl font-semibold tracking-[-0.02em] text-white md:text-4xl">
-        <span className="premium-silver">Danke. Wir sind dran.</span>
+        <span className="premium-silver">Zahlung erfolgreich. Willkommen.</span>
       </h2>
       <p className="mt-4 text-[15px] text-white/65">
-        Ihre Anfrage für den{" "}
-        <span className="font-semibold text-white">{planName}-Plan</span> ist bei uns angekommen.
-        Eine Bestätigung haben wir an{" "}
-        <span className="font-semibold text-white">{email}</span> geschickt - innerhalb von
-        24 Stunden hören Sie persönlich von uns.
+        Ihr{planName ? ` ${planName}-` : " "}Plan ist aktiv. Stripe hat eine Quittung an{" "}
+        <span className="font-semibold text-white">{email || "Ihre E-Mail"}</span> geschickt -
+        wir melden uns innerhalb von 24 Stunden mit den Onboarding-Schritten für Ihr Repository.
       </p>
 
       <div className="mt-10 grid gap-3 text-left sm:grid-cols-3">
         {[
-          { t: "1 · Bestätigung", d: "Check Ihres Posteingangs (auch Spam) für die Eingangsbestätigung." },
-          { t: "2 · Onboarding", d: "Wir melden uns mit einem Slot für 5 Minuten Repo-Anbindung." },
+          { t: "1 · Quittung", d: "Stripe-Beleg in Ihrem Posteingang. Rechnungs-PDF folgt mit dem ersten Abrechnungslauf." },
+          { t: "2 · Repo-Zugang", d: "Wir senden den GitHub-/GitLab-App-Link, Read-only, Setup in 5 Minuten." },
           { t: "3 · Erster Bericht", d: "PDF in DE & EN, typischerweise innerhalb von 7 Tagen." },
         ].map((s) => (
           <div
@@ -862,6 +1116,42 @@ function SuccessState({ planName, email }: { planName: string; email: string }) 
       >
         Zurück zur Startseite
       </Link>
+    </div>
+  );
+}
+
+function CancelledState({ onRetry }: { onRetry: () => void }) {
+  return (
+    <div className="mx-auto max-w-2xl text-center">
+      <div className="mx-auto inline-flex h-16 w-16 items-center justify-center rounded-full border border-white/15 bg-white/[0.04] text-white/85">
+        <XCircle className="h-8 w-8" />
+      </div>
+      <h2 className="mt-7 text-3xl font-semibold tracking-[-0.02em] text-white md:text-4xl">
+        <span className="premium-silver">Checkout abgebrochen.</span>
+      </h2>
+      <p className="mt-4 text-[15px] text-white/65">
+        Keine Zahlung erfolgt. Sie können den Vorgang jederzeit erneut starten - oder uns einfach
+        eine Mail an{" "}
+        <a href="mailto:hello@sodusecure.com" className="font-semibold text-white underline-offset-4 hover:underline">
+          hello@sodusecure.com
+        </a>{" "}
+        schreiben.
+      </p>
+      <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+        <button
+          type="button"
+          onClick={onRetry}
+          className="premium-cta inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-semibold text-white"
+        >
+          Erneut versuchen <ArrowRight className="h-4 w-4" />
+        </button>
+        <Link
+          href="/contact"
+          className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-6 py-4 text-sm font-semibold text-white/85 transition hover:border-white/30 hover:bg-white/[0.07] hover:text-white"
+        >
+          Kontakt aufnehmen
+        </Link>
+      </div>
     </div>
   );
 }

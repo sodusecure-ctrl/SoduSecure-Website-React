@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function Page() {
         heroSub:
           'Der Sodu-AuditAI-Wochenbericht ist das, was ein Senior-Security-Engineer Ihnen jede Woche geben würde - nur ohne 80.000 € Gehalt. Executive Summary oben, technische Details unten, fertige Fixes überall.',
         heroPills: ['Ein PDF pro Woche', 'DE & EN', 'Trend-Tracking', 'Read-only'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht ansehen',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Sicherheits-Wochenbericht · Made in Germany · DSGVO-konform',
@@ -53,7 +53,7 @@ export default function Page() {
         ],
         ctaH2: 'Jeden Montag. Ein PDF. Fertig.',
         ctaSub: 'Anfrage schicken, erster Bericht in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

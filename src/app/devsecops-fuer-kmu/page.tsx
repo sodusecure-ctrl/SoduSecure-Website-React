@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function Page() {
         heroSub:
           'Enterprise-DevSecOps ist teuer, kompliziert und für KMU oft unbezahlbar. AuditAI bringt das gleiche Sicherheitsniveau in Ihre Pipeline - als wöchentlicher Bericht, ohne dass Sie ein eigenes Security-Team aufbauen müssen.',
         heroPills: ['Für KMU optimiert', 'Ohne eigenes Team', 'Ab 99 € / Monat', 'NIS2-aware'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Preise',
         secondaryHref: '/pricing',
         trustEyebrow: 'KMU-tauglich · NIS2-aware · DSGVO-konform · Made in Germany',
@@ -53,7 +53,7 @@ export default function Page() {
         ],
         ctaH2: 'KMU-Sicherheit. Ohne CISO.',
         ctaSub: 'Anfrage schicken, erster Bericht in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

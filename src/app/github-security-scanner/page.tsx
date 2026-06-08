@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function Page() {
         heroSub:
           'Verbinden Sie Ihr GitHub-Repository in 5 Minuten. Sodu AuditAI scannt jede Woche mit Multi-File-Datenfluss-Analyse, mappt auf OWASP und CWE und liefert fertige Patches - ohne neues Tool, ohne Pipeline-Änderung.',
         heroPills: ['GitHub-App', 'Read-only Token', 'OWASP/CWE Mapping', 'Multi-Repo'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'GitHub-App · OAuth · OWASP · CWE · CVSS 3.1',
@@ -53,7 +53,7 @@ export default function Page() {
         ],
         ctaH2: 'Echtes Code-Review. Aus GitHub.',
         ctaSub: 'Anfrage schicken, erster Bericht in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function Page() {
         heroSub:
           'Sicherheitsbewusstes Code Review für deutsche Entwicklerteams. State-of-the-Art KI, gehostet in Deutschland, AVV verfügbar, DSGVO-konform. Sie bekommen jede Woche einen Bericht, den Devs und Geschäftsleitung gleichermaßen lesen können.',
         heroPills: ['Made in Germany', 'DSGVO & NIS2', 'AVV verfügbar', 'DE & EN Bericht'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Made in Germany · DSGVO-konform · AVV · ISO 27001 · BSI TR-03161',
@@ -29,7 +29,7 @@ export default function Page() {
           'KI ist großartig. KI auf US-Servern mit dem CLOUD Act im Hintergrund ist ein Compliance-Problem. Wir lösen das mit deutschem Hosting und klaren Verträgen.',
         features: [
           { icon: 'shield', title: 'Hosting in Deutschland', text: 'Verarbeitung und Worker-Infrastruktur in Frankfurt. Keine US-Datenübertragung außer den notwendigen API-Calls.' },
-          { icon: 'lock', title: 'AVV vor Start', text: 'Standard-Auftragsverarbeitungs­vertrag bekommen Sie vor dem ersten Lauf. Keine Diskussion.' },
+          { icon: 'lock', title: 'AVV vor Start', text: 'Standard-AuftragsverarbeitungsÂ­vertrag bekommen Sie vor dem ersten Lauf. Keine Diskussion.' },
           { icon: 'file', title: 'DE & EN Lieferung', text: 'Bericht in beiden Sprachen - Geschäftsleitung liest deutsch, Dev-Team gemischt. Beides geliefert.' },
           { icon: 'sparkles', title: 'NIS2 & DSGVO Art. 32', text: 'Befunde werden auf NIS2-Anforderungen und DSGVO Art. 32 ("Stand der Technik") gemappt.' },
           { icon: 'workflow', title: 'Berliner Hacker', text: 'Trainiert von echten Pentestern aus Berlin. Keine Silicon-Valley-Dashboards, sondern Findings in handfester Sprache.' },
@@ -53,7 +53,7 @@ export default function Page() {
         ],
         ctaH2: 'KI-Sicherheit. Aus Berlin.',
         ctaSub: 'Demo ohne Karte. Anfrage schicken, wir machen den Rest.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

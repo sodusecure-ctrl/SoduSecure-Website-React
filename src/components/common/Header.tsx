@@ -74,7 +74,7 @@ export default function Header() {
 
   const cta = isPentest
     ? { label: isEnglish ? 'Request pentest' : 'Pentest anfragen', href: '/request-pentest' }
-    : { label: isEnglish ? 'Request demo' : 'Demo anfragen', href: '/contact' };
+    : { label: isEnglish ? 'Get started' : 'Jetzt starten', href: '/sodu-audit-ai' };
 
   const navLinks = [
     priceLink,

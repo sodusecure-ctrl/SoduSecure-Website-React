@@ -30,25 +30,25 @@ const ISO_SECTIONS = [
   {
     icon: Shield,
     title: "Internationale Information Security Norm",
-    desc: "ISO 27001 ist die weltweit anerkannteste Norm fÃ¼r Informationssicherheitsmanagementsysteme (ISMS). Sie ist Grundlage fÃ¼r alle anderen ISO 27000er Standards.",
+    desc: "ISO 27001 ist die weltweit anerkannteste Norm für Informationssicherheitsmanagementsysteme (ISMS). Sie ist Grundlage für alle anderen ISO 27000er Standards.",
     color: "blue",
   },
   {
     icon: CheckCircle,
-    title: "Zertifizierbar & ÃœberprÃ¼fbar",
-    desc: "ISO 27001 ist die einzige zertifizierbare Norm der ISO 27000er Serie. UnabhÃ¤ngige Auditor*innen prÃ¼fen die Einhaltung und stellen Zertifikate aus.",
+    title: "Zertifizierbar & Überprüfbar",
+    desc: "ISO 27001 ist die einzige zertifizierbare Norm der ISO 27000er Serie. Unabhängige Auditor*innen prüfen die Einhaltung und stellen Zertifikate aus.",
     color: "green",
   },
   {
     icon: Lock,
     title: "Alle Sicherheitsaspekte abdeckend",
-    desc: "Von Access-Control Ã¼ber Kryptographie bis hin zu Incident Management: ISO 27001 hat 114 KontrollmaÃŸnahmen in 14 Kategorien.",
+    desc: "Von Access-Control über Kryptographie bis hin zu Incident Management: ISO 27001 hat 114 Kontrollmaßnahmen in 14 Kategorien.",
     color: "purple",
   },
   {
     icon: Zap,
     title: "Risiko-Basiert",
-    desc: "ISO 27001 folgt einem Risk-Management-Ansatz: Identifizieren â†’ Bewerten â†’ Behandeln â†’ Ãœberwachen. Kontinuierliche Verbesserung ist zentral.",
+    desc: "ISO 27001 folgt einem Risk-Management-Ansatz: Identifizieren â†’ Bewerten â†’ Behandeln â†’ Überwachen. Kontinuierliche Verbesserung ist zentral.",
     color: "orange",
   },
 ];
@@ -66,22 +66,22 @@ const WHY_CERTIFIED = [
   {
     icon: Target,
     title: "Wettbewerbsvorteil",
-    desc: "Kund*innen und Partner*innen vertrauen ISO 27001 Zertifizierung. FÃ¼r B2B-Unternehmen ist es oft eine Voraussetzung bei Ausschreibungen.",
+    desc: "Kund*innen und Partner*innen vertrauen ISO 27001 Zertifizierung. Für B2B-Unternehmen ist es oft eine Voraussetzung bei Ausschreibungen.",
   },
   {
     icon: Lock,
     title: "Gesetzliche Anforderungen",
-    desc: "DSGVO, NIS2, BSI-Grundschutz â€“ viele Regulierungen erfordern ISO 27001 oder ISO 27001 Ã¤quivalente MaÃŸnahmen.",
+    desc: "DSGVO, NIS2, BSI-Grundschutz – viele Regulierungen erfordern ISO 27001 oder ISO 27001 äquivalente Maßnahmen.",
   },
   {
     icon: Zap,
     title: "Brechen von Cyberangriffen minimieren",
-    desc: "Die 114 Kontrollen schlieÃŸen systematisch SicherheitslÃ¼cken. Mit ISO 27001 ist man deutlich weniger anfÃ¤llig fÃ¼r Hackerattacken.",
+    desc: "Die 114 Kontrollen schließen systematisch Sicherheitslücken. Mit ISO 27001 ist man deutlich weniger anfällig für Hackerattacken.",
   },
   {
     icon: Users,
     title: "Vertrauen der Stakeholder",
-    desc: "Investor*innen, Aufsichtsrat, Mitarbeitende â€“ das Zertifikat zeigt: Ihre Daten sind hier sicher.",
+    desc: "Investor*innen, Aufsichtsrat, Mitarbeitende – das Zertifikat zeigt: Ihre Daten sind hier sicher.",
   },
   {
     icon: BookOpen,
@@ -91,7 +91,7 @@ const WHY_CERTIFIED = [
   {
     icon: Cloud,
     title: "Skalierbar",
-    desc: "Ob Start-up oder GroÃŸkonzern, ob On-Premise oder Cloud â€“ ISO 27001 ist branchenÃ¼bergreifend anwendbar.",
+    desc: "Ob Start-up oder Großkonzern, ob On-Premise oder Cloud – ISO 27001 ist branchenübergreifend anwendbar.",
   },
 ];
 
@@ -99,105 +99,105 @@ const AUDIT_PHASES = [
   {
     step: "1",
     title: "Initialisierung",
-    desc: "Befragung der GeschÃ¤ftsfÃ¼hrung, Risikoanalyse, Scope-Definition.",
+    desc: "Befragung der Geschäftsführung, Risikoanalyse, Scope-Definition.",
   },
   {
     step: "2",
     title: "Hauptaudit",
-    desc: "Vor-Ort Audit: PrÃ¼fung aller 114 Kontrollen, Interviews, DokumentprÃ¼fung.",
+    desc: "Vor-Ort Audit: Prüfung aller 114 Kontrollen, Interviews, Dokumentprüfung.",
   },
   {
     step: "3",
     title: "Abweichungsbericht",
-    desc: "Auditoren berichten Abweichungen. Sie haben Zeit zur Behebung (abhÃ¤ngig von Schweregrad).",
+    desc: "Auditoren berichten Abweichungen. Sie haben Zeit zur Behebung (abhängig von Schweregrad).",
   },
   {
     step: "4",
     title: "Zertifikat-Erteilung",
-    desc: "Bei ErfÃ¼llung aller Anforderungen: Zertifikat mit 3-jÃ¤hriger GÃ¼ltigkeit.",
+    desc: "Bei Erfüllung aller Anforderungen: Zertifikat mit 3-jähriger Gültigkeit.",
   },
   {
     step: "5",
-    title: "Ãœberwachungsaudits",
-    desc: "JÃ¤hrliche Folge-Audits (Surveillance Audits) zur Aufrechterhaltung der Zertifizierung.",
+    title: "Überwachungsaudits",
+    desc: "Jährliche Folge-Audits (Surveillance Audits) zur Aufrechterhaltung der Zertifizierung.",
   },
 ];
 
 const PENTEST_ROLE = [
   {
     title: "A.12.6 Penetration Testing",
-    desc: "Diese ISO 27001 Anforderung besagt: 'Es sollten regelmÃ¤ÃŸig Penetrationstests durchgefÃ¼hrt werden, um die Wirksamkeit von technischen und nicht-technischen Kontrollen nachzuweisen.'",
+    desc: "Diese ISO 27001 Anforderung besagt: 'Es sollten regelmäßig Penetrationstests durchgeführt werden, um die Wirksamkeit von technischen und nicht-technischen Kontrollen nachzuweisen.'",
     highlight: true,
   },
   {
     title: "Evidenznachweis",
-    desc: "Der Pentest-Bericht dient als Beweis gegenÃ¼ber dem Auditor: Ihre SicherheitsmaÃŸnahmen funktionieren in der Praxis.",
+    desc: "Der Pentest-Bericht dient als Beweis gegenüber dem Auditor: Ihre Sicherheitsmaßnahmen funktionieren in der Praxis.",
   },
   {
     title: "Nachweis von Remediation",
-    desc: "Nach Behebung von Schwachstellen: Retest zeigt dem Auditor, dass MaÃŸnahmen implementiert wurden.",
+    desc: "Nach Behebung von Schwachstellen: Retest zeigt dem Auditor, dass Maßnahmen implementiert wurden.",
   },
   {
-    title: "Compliance-ErfÃ¼llung",
-    desc: "Auditor*innen und Zertifizierungsstellen akzeptieren unabhÃ¤ngige Pentest-Berichte als Nachweis fÃ¼r A.12.6.",
+    title: "Compliance-Erfüllung",
+    desc: "Auditor*innen und Zertifizierungsstellen akzeptieren unabhängige Pentest-Berichte als Nachweis für A.12.6.",
   },
 ];
 
 const FAQS = [
   {
     q: "Kostet ISO 27001 zu viel? - Warum lohnt sich die Investition?",
-    a: "Nein. Zwar kostet die Implementierung und Zertifizierung (meist 8.000â€“40.000 â‚¬), aber: (1) Sie vermeiden Sicherheitsverletzungen, die Millionen kosten. (2) Sie gewinnen Kund*innen durch Vertrauen. (3) Versicherungen gewÃ¤hren Rabatte. (4) Sie erfÃ¼llen Compliance-Anforderungen automatisch.",
+    a: "Nein. Zwar kostet die Implementierung und Zertifizierung (meist 8.000–40.000 €), aber: (1) Sie vermeiden Sicherheitsverletzungen, die Millionen kosten. (2) Sie gewinnen Kund*innen durch Vertrauen. (3) Versicherungen gewähren Rabatte. (4) Sie erfüllen Compliance-Anforderungen automatisch.",
   },
   {
     q: "Muss mein Unternehmen ISO 27001 haben?",
-    a: "Das hÃ¤ngt von Ihrer Branche ab: Im Finanzsektor, in der Medizin, der Ã¶ffentlichen Verwaltung und fÃ¼r groÃŸe Unternehmen ist es oft Anforderung. Kleine Unternehmen ohne kritische Daten kÃ¶nnen oft mit ISO 27002 oder BSI-Grundschutz starten.",
+    a: "Das hängt von Ihrer Branche ab: Im Finanzsektor, in der Medizin, der öffentlichen Verwaltung und für große Unternehmen ist es oft Anforderung. Kleine Unternehmen ohne kritische Daten können oft mit ISO 27002 oder BSI-Grundschutz starten.",
   },
   {
     q: "Wie lange dauert die ISO 27001 Zertifizierung?",
-    a: "Typischerweise 6â€“12 Monate. Das hÃ¤ngt vom Reifegrad Ihrer bestehenden Sicherheit ab. Unternehmen mit bereits guter Infrastruktur brauchen 4â€“6 Monate, andere 12â€“18 Monate.",
+    a: "Typischerweise 6–12 Monate. Das hängt vom Reifegrad Ihrer bestehenden Sicherheit ab. Unternehmen mit bereits guter Infrastruktur brauchen 4–6 Monate, andere 12–18 Monate.",
   },
   {
-    q: "Wer darf ISO 27001 Audits durchfÃ¼hren?",
-    a: "Nur akkreditierte Zertifizierungsstellen (z.B. TÃœV, DEKRA, DQS). Diese erhalten Akkreditierung durch DAkkS (Deutsche Akkreditierungsstelle). Berater sind NICHT zertifizierungsbefugt.",
+    q: "Wer darf ISO 27001 Audits durchführen?",
+    a: "Nur akkreditierte Zertifizierungsstellen (z.B. TÜV, DEKRA, DQS). Diese erhalten Akkreditierung durch DAkkS (Deutsche Akkreditierungsstelle). Berater sind NICHT zertifizierungsbefugt.",
   },
   {
-    q: "Wie oft muss ich ein Pentest fÃ¼r ISO 27001 machen?",
-    a: "Die Norm fordert 'regelmÃ¤ÃŸig' â€“ das bedeutet normalerweise 1x pro Jahr. Kritischere Systeme kÃ¶nnen 2x pro Jahr geprÃ¼ft werden. BÃ¼ndung mit Audit-Zyklus ist sinnvoll.",
+    q: "Wie oft muss ich ein Pentest für ISO 27001 machen?",
+    a: "Die Norm fordert 'regelmäßig' – das bedeutet normalerweise 1x pro Jahr. Kritischere Systeme können 2x pro Jahr geprüft werden. Bündung mit Audit-Zyklus ist sinnvoll.",
   },
   {
-    q: "Gilt ISO 27001 auch fÃ¼r kleine Unternehmen?",
-    a: "Ja, formell auch. Allerdings: ISO 27002 ist weniger rigide und fÃ¼r KMU oft besser geeignet. Und: ISO/IEC 27036 fÃ¼r Supplier-Risiko kann fÃ¼r grÃ¶ÃŸere Lieferanten ausreichend sein.",
+    q: "Gilt ISO 27001 auch für kleine Unternehmen?",
+    a: "Ja, formell auch. Allerdings: ISO 27002 ist weniger rigide und für KMU oft besser geeignet. Und: ISO/IEC 27036 für Supplier-Risiko kann für größere Lieferanten ausreichend sein.",
   },
   {
     q: "Kann ich ISO 27001 auch ohne Zertifizierung implementieren?",
-    a: "Ja, das ist mÃ¶glich â€“ wird aber von Partner*innen und Kund*innen nicht anerkennt. Das Zertifikat ist der Beweis, dass eine unabhÃ¤ngige dritte Partei die Einhaltung Ã¼berprÃ¼ft hat.",
+    a: "Ja, das ist möglich – wird aber von Partner*innen und Kund*innen nicht anerkennt. Das Zertifikat ist der Beweis, dass eine unabhängige dritte Partei die Einhaltung überprüft hat.",
   },
 ];
 
 const COMPLIANCE_FRAMEWORKS = [
   {
     name: "DSGVO / GDPR",
-    desc: "Art. 32 verlangt 'geeignete technische und organisatorische MaÃŸnahmen'. ISO 27001 erfÃ¼llt diesen Standard.",
+    desc: "Art. 32 verlangt 'geeignete technische und organisatorische Maßnahmen'. ISO 27001 erfüllt diesen Standard.",
   },
   {
     name: "NIS2 Richtlinie",
-    desc: "Gilt ab 2025 fÃ¼r kritische Infrastrukturen. ISO 27001 ist Nachweis fÃ¼r erforderliche SicherheitsmaÃŸnahmen.",
+    desc: "Gilt ab 2025 für kritische Infrastrukturen. ISO 27001 ist Nachweis für erforderliche Sicherheitsmaßnahmen.",
   },
   {
     name: "BSI IT-Grundschutz",
-    desc: "Deutsches Ã„quivalent. ISO 27001 und BSI-GS sind in Anforderungen und Geist deckungsgleich.",
+    desc: "Deutsches Äquivalent. ISO 27001 und BSI-GS sind in Anforderungen und Geist deckungsgleich.",
   },
   {
     name: "SOC 2 Type II",
-    desc: "Verlangt Sicherheitstests u. Compliance-Ãœberwachung. ISO 27001 ist Basis fÃ¼r SOC 2.",
+    desc: "Verlangt Sicherheitstests u. Compliance-Überwachung. ISO 27001 ist Basis für SOC 2.",
   },
   {
     name: "PCI DSS",
-    desc: "FÃ¼r Payment Card Industry â€“ Penetrationstests sind PCI DSS Req. 11.3. ISO 27001 erweitert PCI DSS.",
+    desc: "Für Payment Card Industry – Penetrationstests sind PCI DSS Req. 11.3. ISO 27001 erweitert PCI DSS.",
   },
   {
     name: "ISO 20000",
-    desc: "IT Service Management Norm â€“ ISO 27001 ist ErgÃ¤nzung fÃ¼r Sicherheitsaspekte.",
+    desc: "IT Service Management Norm – ISO 27001 ist Ergänzung für Sicherheitsaspekte.",
   },
 ];
 
@@ -212,14 +212,14 @@ export default function ISO27001Page() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="inline-flex items-center gap-2 bg-blue-600/10 border border-blue-600/20 rounded-full px-4 py-1.5 mb-6">
             <Shield className="w-4 h-4 text-blue-400" />
-            <span className="text-blue-400 text-sm font-medium">ISO 27001 Compliance Â· ISMS Â· Zertifizierung</span>
+            <span className="text-blue-400 text-sm font-medium">ISO 27001 Compliance · ISMS · Zertifizierung</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            ISO 27001 â€“<br />
-            <span className="text-blue-500">Der internationale Standard fÃ¼r Informationssicherheit</span>
+            ISO 27001 –<br />
+            <span className="text-blue-500">Der internationale Standard für Informationssicherheit</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-3xl mx-auto mb-10">
-            SchÃ¼tzen Sie Ihr Unternehmen mit ISO 27001. Der weltweit anerkannteste Standard fÃ¼r Informationssicherheitsmanagementsysteme. Zertifizierung, Compliance, Penetrationstests â€“ alles aus einer Hand.
+            Schützen Sie Ihr Unternehmen mit ISO 27001. Der weltweit anerkannteste Standard für Informationssicherheitsmanagementsysteme. Zertifizierung, Compliance, Penetrationstests – alles aus einer Hand.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
@@ -231,7 +231,7 @@ export default function ISO27001Page() {
           </div>
           {/* Trust bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
-            {[["200+", "Zertifizierungen unterstÃ¼tzt"], ["10+", "Jahre Erfahrung"], ["ISO/IEC 27001", "Akkreditiert"], ["24h", "Beratung-Response"]].map(([stat, label]) => (
+            {[["200+", "Zertifizierungen unterstützt"], ["10+", "Jahre Erfahrung"], ["ISO/IEC 27001", "Akkreditiert"], ["24h", "Beratung-Response"]].map(([stat, label]) => (
               <div key={stat} className="bg-[#0A0A0B] border border-white/10 rounded-xl py-3 px-2 text-center">
                 <div className="text-xl font-bold text-blue-400">{stat}</div>
                 <div className="text-white/50 text-xs mt-0.5">{label}</div>
@@ -270,7 +270,7 @@ export default function ISO27001Page() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Warum ISO 27001?</h2>
-            <p className="text-white/60">6 GrÃ¼nde, warum Ihre Organisation ISO 27001 braucht.</p>
+            <p className="text-white/60">6 Gründe, warum Ihre Organisation ISO 27001 braucht.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {WHY_CERTIFIED.map((item) => {
@@ -295,8 +295,8 @@ export default function ISO27001Page() {
       <section className="py-16 lg:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Pentest fÃ¼r ISO 27001</h2>
-            <p className="text-white/60">Warum Penetrationstests zentral fÃ¼r ISO 27001 sind.</p>
+            <h2 className="text-3xl font-bold mb-4">Pentest für ISO 27001</h2>
+            <p className="text-white/60">Warum Penetrationstests zentral für ISO 27001 sind.</p>
           </div>
           <div className="space-y-4">
             {PENTEST_ROLE.map((item, i) => (
@@ -333,7 +333,7 @@ export default function ISO27001Page() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold mb-4">ISO 27001 & andere Compliance-Standards</h2>
-            <p className="text-white/60">ISO 27001 ist Basis fÃ¼r viele andere Regulierungen.</p>
+            <p className="text-white/60">ISO 27001 ist Basis für viele andere Regulierungen.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {COMPLIANCE_FRAMEWORKS.map((c) => (
@@ -355,7 +355,7 @@ export default function ISO27001Page() {
           <AlertTriangle className="w-7 h-7 text-orange-400 mx-auto mb-3" />
           <h3 className="text-lg font-bold mb-2">NIS2 & BSI-Grundschutz verpflichtend</h3>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
-            Ab 2025 mÃ¼ssen Tausende deutsche Unternehmen NIS2 erfÃ¼llen. ISO 27001 ist der schnellste Weg zur Compliance. SODU Secure berÃ¤t Sie zur Umsetzung.
+            Ab 2025 müssen Tausende deutsche Unternehmen NIS2 erfüllen. ISO 27001 ist der schnellste Weg zur Compliance. SODU Secure berät Sie zur Umsetzung.
           </p>
         </div>
       </section>
@@ -363,7 +363,7 @@ export default function ISO27001Page() {
       {/* FAQ */}
       <section className="py-16 lg:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-10">HÃ¤ufige Fragen zu ISO 27001</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">Häufige Fragen zu ISO 27001</h2>
           <div className="space-y-3">
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-[#0A0A0B] border border-white/10 rounded-xl overflow-hidden">
@@ -381,9 +381,9 @@ export default function ISO27001Page() {
       {/* Zertifizierungskosten */}
       <section className="py-14 bg-[#0A0A0B]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-center mb-8">ISO 27001 Kosten â€“ Ãœberblick</h2>
+          <h2 className="text-2xl font-bold text-center mb-8">ISO 27001 Kosten – Überblick</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[["Consulting & Implementierung", "â‚¬ 8.000 â€“ 40.000"], ["Erstzertifizierung", "â‚¬ 3.000 â€“ 8.000"], ["JÃ¤hrliche Audits", "â‚¬ 1.500 â€“ 3.000"]].map(([type, cost]) => (
+            {[["Consulting & Implementierung", "€ 8.000 – 40.000"], ["Erstzertifizierung", "€ 3.000 – 8.000"], ["Jährliche Audits", "€ 1.500 – 3.000"]].map(([type, cost]) => (
               <div key={type} className="bg-[#0A0A0B] border border-white/10 rounded-xl p-6 text-center">
                 <div className="text-sm text-white/60 mb-2">{type}</div>
                 <div className="font-bold text-blue-400 text-lg">{cost}</div>
@@ -391,7 +391,7 @@ export default function ISO27001Page() {
             ))}
           </div>
           <div className="text-center mt-6 text-sm text-white/50">
-            *Kosten variieren je nach UnternehmensgrÃ¶ÃŸe, Branche und aktuellem Reifegrad
+            *Kosten variieren je nach Unternehmensgröße, Branche und aktuellem Reifegrad
           </div>
         </div>
       </section>
@@ -400,9 +400,9 @@ export default function ISO27001Page() {
       <section className="py-20 bg-gradient-to-br from-blue-900/20 via-[#0A0A0B] to-[#0A0A0B] border-t border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Shield className="w-14 h-14 text-blue-500 mx-auto mb-4" />
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">ISO 27001 â€“ Starten Sie jetzt!</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">ISO 27001 – Starten Sie jetzt!</h2>
           <p className="text-white/60 text-lg mb-8">
-            Kostenlose Erstberatung Â· Roadmap in 48 Stunden Â· Zertifizierte Berater
+            Kostenlose Erstberatung · Roadmap in 48 Stunden · Zertifizierte Berater
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-semibold transition-colors text-lg">

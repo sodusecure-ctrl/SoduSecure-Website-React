@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function Page() {
         heroSub:
           'Sie bekommen einen vollwertigen Security-Engineer für Ihr Entwicklerteam - ohne Recruiting, ohne Onboarding-Halbjahr, ohne 80.000 € Jahresgehalt. AuditAI prüft jede Woche Ihren Code und liefert genau das, was ein Senior-Reviewer liefern würde.',
         heroPills: ['Wie ein Senior-Engineer', 'Ohne Recruiting', 'Ab 99 € / Monat', 'Kündbar'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Preise',
         secondaryHref: '/pricing',
         trustEyebrow: 'Senior-Niveau · Powered by Claude · Made in Germany',
@@ -53,7 +53,7 @@ export default function Page() {
         ],
         ctaH2: 'Senior-Reviews. Junior-Preis.',
         ctaSub: 'Anfrage schicken, erster Bericht in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

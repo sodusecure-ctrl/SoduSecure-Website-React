@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Software-Sicherheit war bisher ein Projekt: jährlicher Pentest, ad-hoc Code-Audit, Compliance-Sprint vor dem Auditor-Termin. Mit Modellen der Claude-Klasse wird daraus ein kontinuierlicher Prozess. Wir liefern jeden Montag ein PDF, das OWASP, CWE, CVSS, NIS2 und ISO 27001 abdeckt - defensiv, mit Berliner Hacker-Triage, AVV vor Start.',
         heroPills: ['OWASP + CWE + CVSS', 'NIS2 + DSGVO Art. 32', 'ISO 27001 A.14', 'BSI TR-03161-aware'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Anthropic-API-Kunde · Hacker-kuratiert · DSGVO · ISO 27001-aware · BSI TR-03161-aware',
@@ -60,7 +60,7 @@ export default function Page() {
         ],
         ctaH2: 'Software-Sicherheit als Prozess. Nicht als Projekt.',
         ctaSub: 'Anfrage schicken - wir setzen alles auf. Erstes auditor-fähiges PDF in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

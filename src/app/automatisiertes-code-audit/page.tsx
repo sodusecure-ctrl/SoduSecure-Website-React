@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function Page() {
         heroSub:
           'Ein wöchentlich automatisiertes Code-Audit für Ihr GitHub-Repository. Sie verbinden das Repo, wir liefern jeden Montag ein PDF mit OWASP-Mapping, CVSS-Scores und fertigen Patches. Keine Pipeline, kein Tooling-Stack, kein neues Dashboard.',
         heroPills: ['GitHub Native', 'OWASP / CWE', 'Fertige Fixes', 'Read-only'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'OWASP · CWE · CVSS 3.1 · ISO 27001 · DSGVO',
@@ -53,7 +53,7 @@ export default function Page() {
         ],
         ctaH2: 'Audit. Automatisch. Jede Woche.',
         ctaSub: 'Anfrage schicken, erster Lauf in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

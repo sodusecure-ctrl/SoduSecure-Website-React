@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Snyk, SonarQube und GitHub Advanced Security finden, was sich als Pattern beschreiben lässt. Logic-Bugs, IDOR-Ketten und Auth-Bypasses bleiben liegen. Claude versteht Datenfluss und Geschäftslogik - und findet die Bugs, die Auditoren wirklich interessieren.',
         heroPills: ['Logic-Bugs', 'IDOR-Detection', 'Auth-Bypass', 'Niedrige FP-Rate'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Powered by Claude · Pattern-frei · Hacker-kuratiert · DSGVO',

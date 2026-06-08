@@ -30,7 +30,7 @@ const TIMELINE = [
   {
     step: "Woche 1-4",
     title: "Assessment & Gap Analysis",
-    desc: "SODU-Berater prÃ¼ft Ihre aktuelle Sicherheit gegen ISO 27001 (114 Kontrollen). Identifikation von LÃ¼cken und PrioritÃ¤ten.",
+    desc: "SODU-Berater prüft Ihre aktuelle Sicherheit gegen ISO 27001 (114 Kontrollen). Identifikation von Lücken und Prioritäten.",
     icon: Target,
   },
   {
@@ -42,25 +42,25 @@ const TIMELINE = [
   {
     step: "Woche 13-16",
     title: "Penetrationstests",
-    desc: "ISO-konformer Pentest als Nachweis fÃ¼r A.12.6. Findings werden in Audit-Reports gemappt.",
+    desc: "ISO-konformer Pentest als Nachweis für A.12.6. Findings werden in Audit-Reports gemappt.",
     icon: Shield,
   },
   {
     step: "Woche 17-20",
     title: "Audit-Vorbereitung",
-    desc: "Finale Gap-Checks. Alle Dokumentationen bereit. Mock-Audits durchfÃ¼hren. Risiken minimieren.",
+    desc: "Finale Gap-Checks. Alle Dokumentationen bereit. Mock-Audits durchführen. Risiken minimieren.",
     icon: CheckCircle,
   },
   {
     step: "Woche 21",
     title: "Hauptaudit",
-    desc: "Akkreditierte Zertifizierungsstelle prÃ¼ft vor Ort. Alle 114 Kontrollen werden durchgeprÃ¼ft.",
+    desc: "Akkreditierte Zertifizierungsstelle prüft vor Ort. Alle 114 Kontrollen werden durchgeprüft.",
     icon: Users,
   },
   {
     step: "Woche 22-24",
     title: "Zertifikat-Erteilung",
-    desc: "Bei ErfÃ¼llung: ISO 27001 Zertifikat mit 3-jÃ¤hriger GÃ¼ltigkeit. Ã–ffentliche Anerkennung.",
+    desc: "Bei Erfüllung: ISO 27001 Zertifikat mit 3-jähriger Gültigkeit. Öffentliche Anerkennung.",
     icon: Trophy,
   },
 ];
@@ -71,23 +71,23 @@ const AUDIT_CHECKLIST = [
     items: [
       "Information Security Policy schriftlich dokumentiert",
       "ISMS-Scope klar definiert",
-      "Risk Assessment durchgefÃ¼hrt & dokumentiert",
-      "Risk Treatment Plan mit KontrollmaÃŸnahmen",
+      "Risk Assessment durchgeführt & dokumentiert",
+      "Risk Treatment Plan mit Kontrollmaßnahmen",
     ],
   },
   {
     category: "Technische Kontrollen",
     items: [
       "Access Control implementiert",
-      "Kryptographie fÃ¼r kritische Daten",
+      "Kryptographie für kritische Daten",
       "Firewall & IDS/IPS konfiguriert",
-      "Penetrationstest durchgefÃ¼hrt (A.12.6)",
+      "Penetrationstest durchgeführt (A.12.6)",
     ],
   },
   {
-    category: "Organisatorische MaÃŸnahmen",
+    category: "Organisatorische Maßnahmen",
     items: [
-      "Security Awareness Training fÃ¼r alle Mitarbeiter",
+      "Security Awareness Training für alle Mitarbeiter",
       "Incident Response Plan",
       "Supplier/Third-Party Risk Management",
       "Kontinuierliches Monitoring",
@@ -98,8 +98,8 @@ const AUDIT_CHECKLIST = [
     items: [
       "Alle Prozesse dokumentiert",
       "Audit Logs und Monitoring",
-      "Interne Audits durchgefÃ¼hrt",
-      "Management Review durchgefÃ¼hrt",
+      "Interne Audits durchgeführt",
+      "Management Review durchgeführt",
     ],
   },
 ];
@@ -113,27 +113,27 @@ const BENEFITS_CERTIFIED = [
   {
     icon: Lock,
     title: "Reduktion von Cyberrisiken",
-    desc: "Die 114 Kontrollen schlieÃŸen SicherheitslÃ¼cken systematisch. Hacking-Risiko sinkt messbar.",
+    desc: "Die 114 Kontrollen schließen Sicherheitslücken systematisch. Hacking-Risiko sinkt messbar.",
   },
   {
     icon: FileText,
     title: "Compliance & Regulierung",
-    desc: "DSGVO, NIS2, BSI-Grundschutz, SOC 2 â€“ ISO 27001 erfÃ¼llt alle. RÃ¼ckgrat des Compliance-Portfolios.",
+    desc: "DSGVO, NIS2, BSI-Grundschutz, SOC 2 – ISO 27001 erfüllt alle. Rückgrat des Compliance-Portfolios.",
   },
   {
     icon: Users,
     title: "Mitarbeiter-Vertrauen",
-    desc: "Ihre Mitarbeiter sehen: Die Daten hier sind sicher. HÃ¶here Zufriedenheit, niedrigere Fehlerquote.",
+    desc: "Ihre Mitarbeiter sehen: Die Daten hier sind sicher. Höhere Zufriedenheit, niedrigere Fehlerquote.",
   },
   {
     icon: AlertTriangle,
     title: "Versicherung & Haftung",
-    desc: "Manche Cyber-Versicherungen geben Rabatte fÃ¼r ISO 27001. Im Schadensfall: Besserer Haftungsschutz.",
+    desc: "Manche Cyber-Versicherungen geben Rabatte für ISO 27001. Im Schadensfall: Besserer Haftungsschutz.",
   },
   {
     icon: Shield,
     title: "Kontinuierliche Verbesserung",
-    desc: "ISO 27001 zwingt zu jÃ¤hrlichen ÃœberprÃ¼fungen. Security wird zur Daueraufgabe, nicht zu Ad-hoc-AktivitÃ¤t.",
+    desc: "ISO 27001 zwingt zu jährlichen Überprüfungen. Security wird zur Daueraufgabe, nicht zu Ad-hoc-Aktivität.",
   },
 ];
 
@@ -144,24 +144,24 @@ const COMMON_FINDINGS = [
     solution: "Implementierung von Least Privilege, Multi-Factor Authentication, Role-Based Access Control.",
   },
   {
-    name: "Fehlende oder schwache VerschlÃ¼sselung",
+    name: "Fehlende oder schwache Verschlüsselung",
     severity: "High",
-    solution: "TLS 1.2+, AES-256 fÃ¼r Ruhendaten, Key Management System.",
+    solution: "TLS 1.2+, AES-256 für Ruhendaten, Key Management System.",
   },
   {
     name: "Ungepatcht Systeme",
     severity: "High",
-    solution: "Patch Management Policy, regelmÃ¤ÃŸige Updates, Security Scanning.",
+    solution: "Patch Management Policy, regelmäßige Updates, Security Scanning.",
   },
   {
     name: "Unzureichende Incident Response",
     severity: "Medium",
-    solution: "Incident Response Plan, Rollen & Verantwortlichkeiten, KrisenÃ¼bungen.",
+    solution: "Incident Response Plan, Rollen & Verantwortlichkeiten, Krisenübungen.",
   },
   {
     name: "Schwaches Passwort-Management",
     severity: "High",
-    solution: "Password Policy mit KomplexitÃ¤tsanforderungen, Password Manager, Schulungen.",
+    solution: "Password Policy mit Komplexitätsanforderungen, Password Manager, Schulungen.",
   },
   {
     name: "Fehlende Disaster Recovery",
@@ -173,31 +173,31 @@ const COMMON_FINDINGS = [
 const FAQS = [
   {
     q: "Wie lange dauert ISO 27001 Zertifizierung?",
-    a: "Typischerweise 6â€“12 Monate, je nach Reifegrad Ihrer vorhandenen Sicherheit. Unternehmen mit bereits etablierter Sicherheit: 4â€“6 Monate. Komplexe, regulierte Organisationen: 12â€“18 Monate.",
+    a: "Typischerweise 6–12 Monate, je nach Reifegrad Ihrer vorhandenen Sicherheit. Unternehmen mit bereits etablierter Sicherheit: 4–6 Monate. Komplexe, regulierte Organisationen: 12–18 Monate.",
   },
   {
     q: "Was kostet ISO 27001 Zertifizierung?",
-    a: "Gesamtbudget: â‚¬8.000â€“â‚¬40.000. Consulting & Implementierung: â‚¬5.000â€“â‚¬30.000. Erstzertifizierung (Audithonorar): â‚¬3.000â€“â‚¬8.000. JÃ¤hrliche Folgeaudits: â‚¬1.500â€“â‚¬3.000.",
+    a: "Gesamtbudget: €8.000–€40.000. Consulting & Implementierung: €5.000–€30.000. Erstzertifizierung (Audithonorar): €3.000–€8.000. Jährliche Folgeaudits: €1.500–€3.000.",
   },
   {
-    q: "Brauchen wir einen externen Berater oder kÃ¶nnen wir es intern machen?",
-    a: "Beides ist mÃ¶glich. Intern ist gÃ¼nstiger, aber zeitaufwendig (ca. 500â€“1.000 Stunden). Extern ist teurer, aber schneller und garantiert Audit-Ready. Idealerweise: Mischansatz â€“ wir coachen Ihr Team.",
+    q: "Brauchen wir einen externen Berater oder können wir es intern machen?",
+    a: "Beides ist möglich. Intern ist günstiger, aber zeitaufwendig (ca. 500–1.000 Stunden). Extern ist teurer, aber schneller und garantiert Audit-Ready. Idealerweise: Mischansatz – wir coachen Ihr Team.",
   },
   {
     q: "Ist ISO 27001 in unserer Branche verpflichtend?",
-    a: "Das hÃ¤ngt von Ihrer Branche ab: Finanzsektor â€“ meist ja. Medizin/Gesundheit â€“ oft ja. Ã–ffentliche Verwaltung â€“ ja. Tech-Unternehmen â€“ eher nicht, aber ein Wettbewerbsvorteil. KMU â€“ optional, aber empfohlen.",
+    a: "Das hängt von Ihrer Branche ab: Finanzsektor – meist ja. Medizin/Gesundheit – oft ja. Öffentliche Verwaltung – ja. Tech-Unternehmen – eher nicht, aber ein Wettbewerbsvorteil. KMU – optional, aber empfohlen.",
   },
   {
-    q: "Wie oft mÃ¼ssen wir rezertifizieren?",
-    a: "Das Zertifikat ist 3 Jahre gÃ¼ltig. In dieser Zeit: 2 jÃ¤hrliche Surveillance Audits. Nach 3 Jahren: Rezertifizierung (Ã¤hnlich wie Erstzertifizierung).",
+    q: "Wie oft müssen wir rezertifizieren?",
+    a: "Das Zertifikat ist 3 Jahre gültig. In dieser Zeit: 2 jährliche Surveillance Audits. Nach 3 Jahren: Rezertifizierung (ähnlich wie Erstzertifizierung).",
   },
   {
     q: "Was passiert, wenn Auditor*innen Abweichungen finden?",
-    a: "Non-Conformities (Abweichungen) werden klassifiziert: Major (kritisch) oder Minor (leicht zu beheben). Majors mÃ¼ssen in 2 Wochen behoben werden, Minor in 3 Monaten. Nach Behebung: BestÃ¤tigungsaudit.",
+    a: "Non-Conformities (Abweichungen) werden klassifiziert: Major (kritisch) oder Minor (leicht zu beheben). Majors müssen in 2 Wochen behoben werden, Minor in 3 Monaten. Nach Behebung: Bestätigungsaudit.",
   },
   {
     q: "Kann ich ISO 27001 + andere Standards (SOC 2, BSI-GS) kombinieren?",
-    a: "Ja! ISO 27001 ist modular und kombinierbar. Viele Kontrollen Ã¼berlappen. Mit guter Planung: ISO 27001 + BSI-Grundschutz + SOC 2 in einer Implementierung mÃ¶glich â€“ spart Zeit und Kosten.",
+    a: "Ja! ISO 27001 ist modular und kombinierbar. Viele Kontrollen überlappen. Mit guter Planung: ISO 27001 + BSI-Grundschutz + SOC 2 in einer Implementierung möglich – spart Zeit und Kosten.",
   },
 ];
 
@@ -220,14 +220,14 @@ export default function ISO27001CertificationPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="inline-flex items-center gap-2 bg-green-600/10 border border-green-600/20 rounded-full px-4 py-1.5 mb-6">
             <Shield className="w-4 h-4 text-green-400" />
-            <span className="text-green-400 text-sm font-medium">ISO 27001 Zertifizierung Â· ISMS Â· Compliance</span>
+            <span className="text-green-400 text-sm font-medium">ISO 27001 Zertifizierung · ISMS · Compliance</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             ISO 27001<br />
-            <span className="text-green-500">Zertifizierung â€“ Sicher zur Zertifizierung</span>
+            <span className="text-green-500">Zertifizierung – Sicher zur Zertifizierung</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-3xl mx-auto mb-10">
-            Von der Analyse Ã¼ber Implementierung bis zum Zertifikat. Wir begleiten Sie Schritt fÃ¼r Schritt â€“ inklusive Penetrationstests, Audit-Vorbereitung und Expert-Coaching.
+            Von der Analyse über Implementierung bis zum Zertifikat. Wir begleiten Sie Schritt für Schritt – inklusive Penetrationstests, Audit-Vorbereitung und Expert-Coaching.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
@@ -254,7 +254,7 @@ export default function ISO27001CertificationPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">6-Phase Zertifizierungs-Roadmap</h2>
-            <p className="text-white/60 max-w-2xl mx-auto">Von der Analyse zum Zertifikat â€“ unser bewÃ¤hrter Prozess.</p>
+            <p className="text-white/60 max-w-2xl mx-auto">Von der Analyse zum Zertifikat – unser bewährter Prozess.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {TIMELINE.map((phase, i) => {
@@ -282,8 +282,8 @@ export default function ISO27001CertificationPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Audit Checklist â€“ Das erwartet Sie</h2>
-            <p className="text-white/60">4 Bereiche, die Auditor*innen genau prÃ¼fen werden.</p>
+            <h2 className="text-3xl font-bold mb-4">Audit Checklist – Das erwartet Sie</h2>
+            <p className="text-white/60">4 Bereiche, die Auditor*innen genau prüfen werden.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {AUDIT_CHECKLIST.map((category, i) => (
@@ -333,8 +333,8 @@ export default function ISO27001CertificationPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Typische Audit-Findings & LÃ¶sungen</h2>
-            <p className="text-white/60">Was Auditor*innen hÃ¤ufig finden â€“ und wie man es behebt.</p>
+            <h2 className="text-3xl font-bold mb-4">Typische Audit-Findings & Lösungen</h2>
+            <p className="text-white/60">Was Auditor*innen häufig finden – und wie man es behebt.</p>
           </div>
           <div className="space-y-4">
             {COMMON_FINDINGS.map((finding, i) => (
@@ -346,7 +346,7 @@ export default function ISO27001CertificationPage() {
                   </span>
                 </div>
                 <p className="text-white/60 text-sm mb-2">
-                  <span className="font-semibold text-white/70">LÃ¶sung:</span> {finding.solution}
+                  <span className="font-semibold text-white/70">Lösung:</span> {finding.solution}
                 </p>
               </div>
             ))}
@@ -358,9 +358,9 @@ export default function ISO27001CertificationPage() {
       <section className="py-10 bg-green-900/10 border-y border-green-800/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AlertTriangle className="w-7 h-7 text-green-400 mx-auto mb-3" />
-          <h3 className="text-lg font-bold mb-2">ISO 27001 + NIS2 = VollstÃ¤ndige Compliance</h3>
+          <h3 className="text-lg font-bold mb-2">ISO 27001 + NIS2 = Vollständige Compliance</h3>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
-            Viele deutsche Unternehmen mÃ¼ssen 2025 NIS2 erfÃ¼llen. ISO 27001 ist der schnellste Weg â€“ 80% der NIS2 Anforderungen sind damit automatisch erfÃ¼llt.
+            Viele deutsche Unternehmen müssen 2025 NIS2 erfüllen. ISO 27001 ist der schnellste Weg – 80% der NIS2 Anforderungen sind damit automatisch erfüllt.
           </p>
         </div>
       </section>
@@ -368,7 +368,7 @@ export default function ISO27001CertificationPage() {
       {/* FAQ */}
       <section className="py-16 lg:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-10">HÃ¤ufige Fragen zur ISO 27001 Zertifizierung</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">Häufige Fragen zur ISO 27001 Zertifizierung</h2>
           <div className="space-y-3">
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-[#0A0A0B] border border-white/10 rounded-xl overflow-hidden">
@@ -391,17 +391,17 @@ export default function ISO27001CertificationPage() {
             {[
               {
                 title: "Consulting & Impl.",
-                price: "â‚¬5.000â€“â‚¬30.000",
+                price: "€5.000–€30.000",
                 desc: "Gap Analysis, Richtlinien, Prozesse, Schulungen",
               },
               {
                 title: "Erstzertifizierung",
-                price: "â‚¬3.000â€“â‚¬8.000",
+                price: "€3.000–€8.000",
                 desc: "Haupt-Audit der akkreditierten Zertifizierungsstelle",
               },
               {
-                title: "JÃ¤hrliche Audits (3 Jahre)",
-                price: "â‚¬1.500â€“â‚¬3.000",
+                title: "Jährliche Audits (3 Jahre)",
+                price: "€1.500–€3.000",
                 desc: "2 Surveillance Audits pro Jahr zur Aufrechterhaltung",
               },
             ].map((item) => (
@@ -413,7 +413,7 @@ export default function ISO27001CertificationPage() {
             ))}
           </div>
           <div className="text-center mt-6 text-sm text-white/50">
-            *Kosten variieren je nach UnternehmensgrÃ¶ÃŸe (Mitarbeiter, KomplexitÃ¤t, Infrastruktur)
+            *Kosten variieren je nach Unternehmensgröße (Mitarbeiter, Komplexität, Infrastruktur)
           </div>
         </div>
       </section>
@@ -424,7 +424,7 @@ export default function ISO27001CertificationPage() {
           <Shield className="w-14 h-14 text-green-500 mx-auto mb-4" />
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Starten Sie jetzt Ihre Zertifizierung!</h2>
           <p className="text-white/60 text-lg mb-8">
-            Kostenlose Initialberatung Â· Roadmap in 48h Â· Zertifizierte Experten begleiten Sie
+            Kostenlose Initialberatung · Roadmap in 48h · Zertifizierte Experten begleiten Sie
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-10 py-4 rounded-2xl font-semibold transition-colors text-lg">

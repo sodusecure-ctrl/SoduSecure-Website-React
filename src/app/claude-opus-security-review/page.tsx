@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Wir geben Anthropics Top-Reasoning-Modell vollen Multi-File-Kontext, Datenfluss-Tracking und adversariale Verifikation. Was rauskommt: ein wöchentlicher PDF-Bericht, der Schwachstellen findet, die Snyk und SonarQube grundsätzlich übersehen.',
         heroPills: ['Claude Opus im Kern', 'Multi-Pass Reasoning', 'Read-only ephemer', 'Made in Germany'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Powered by Claude Opus · Anthropic API · DSGVO · Frankfurt-Hosting · AVV vor Start',
@@ -58,7 +58,7 @@ export default function Page() {
         ],
         ctaH2: 'Frontier-Reasoning für Ihren Code.',
         ctaSub: 'Anfrage schicken, wir setzen Opus auf Ihr Repo. Erster Bericht in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

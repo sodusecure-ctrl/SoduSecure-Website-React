@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function Page() {
         heroSub:
           'Ein vollwertiges Code-Security-Audit, durchgeführt von Claude unter der Haube und versendet als sauberes PDF jeden Montag. Schneller als ein klassisches Audit, günstiger als ein Senior-Engineer und konsistent statt einmal im Jahr.',
         heroPills: ['Claude unter der Haube', 'Wöchentliches Audit', 'OWASP / CWE Mapping', 'DSGVO-konform'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Powered by Claude · OWASP · CWE · ISO 27001 · BSI TR-03161 · NIS2',
@@ -53,7 +53,7 @@ export default function Page() {
         ],
         ctaH2: 'Audit jede Woche. Nicht jedes Jahr.',
         ctaSub: 'Anfrage schicken, wir liefern den ersten Audit-Bericht in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Ein Senior-Security-Engineer kostet 120-160 k € pro Jahr und ist sechs Monate lang nicht zu finden. Wir liefern KI-gestütztes Security-Reviewing der Claude-Klasse als Abo - mit Berliner Hacker-Triage. Ihr Team bekommt jeden Montag den Bericht, den ein interner Staff-Engineer schreiben würde - ohne Recruiting, ohne Stack, ohne Onboarding-Phase.',
         heroPills: ['Senior-Niveau Reviews', 'Kein Recruiting', 'Hacker-kuratiert', 'Made in Berlin'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Was kostet das',
         secondaryHref: '/pricing',
         trustEyebrow: 'Anthropic-API-Kunde · Berliner Hacker · DSGVO · Frankfurt-Hosting · AVV vor Start',
@@ -59,7 +59,7 @@ export default function Page() {
         ],
         ctaH2: 'Senior-Backup für Ihr Team. Im Abo.',
         ctaSub: 'Anfrage schicken - wir setzen alles auf. Sie sehen das erste PDF in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

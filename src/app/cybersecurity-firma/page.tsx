@@ -31,21 +31,21 @@ const SERVICES = [
   {
     icon: Target,
     title: "Penetrationstests",
-    desc: "Web, Netzwerk, API, Cloud, Active Directory â€“ manuelle Pentests von zertifizierten Experten.",
+    desc: "Web, Netzwerk, API, Cloud, Active Directory – manuelle Pentests von zertifizierten Experten.",
     slug: "/penetration-testing",
     color: "red",
   },
   {
     icon: AlertTriangle,
     title: "Vulnerability Assessment",
-    desc: "Schnelle Schwachstellenanalyse mit automatisierten Tools. Basis fÃ¼r tiefere Assessments.",
+    desc: "Schnelle Schwachstellenanalyse mit automatisierten Tools. Basis für tiefere Assessments.",
     slug: "/vulnerability-assessment-service",
     color: "orange",
   },
   {
     icon: Lock,
     title: "ISO 27001 Beratung & Zertifizierung",
-    desc: "Implementierung der internationalen Informationssicherheitsnorm. Audit-ready in 6â€“12 Monaten.",
+    desc: "Implementierung der internationalen Informationssicherheitsnorm. Audit-ready in 6–12 Monaten.",
     slug: "/iso-27001",
     color: "green",
   },
@@ -85,27 +85,27 @@ const EXPERTISE = [
   {
     icon: Award,
     title: "Zertifizierte Pentester & Auditor*innen",
-    desc: "OSCP, CEH, CISSP â€“ unsere Experten sind offiziell zertifiziert. StÃ¤ndige Weiterbildung.",
+    desc: "OSCP, CEH, CISSP – unsere Experten sind offiziell zertifiziert. Ständige Weiterbildung.",
   },
   {
     icon: Briefcase,
     title: "10+ Jahre Erfahrung",
-    desc: "Seit 2013 unterstÃ¼tzen wir Unternehmen mit praxisnaher Cybersecurity. Start-ups bis DAX-Konzerne.",
+    desc: "Seit 2013 unterstützen wir Unternehmen mit praxisnaher Cybersecurity. Start-ups bis DAX-Konzerne.",
   },
   {
     icon: Target,
     title: "Branchenkompetenz",
-    desc: "Fintech, Healthcare, E-Commerce, Industrie 4.0 â€“ Wir verstehen Ihre branchenspezifischen Anforderungen.",
+    desc: "Fintech, Healthcare, E-Commerce, Industrie 4.0 – Wir verstehen Ihre branchenspezifischen Anforderungen.",
   },
   {
     icon: Globe,
-    title: "Deutschlandweit tÃ¤tig",
-    desc: "Von Berlin bis MÃ¼nchen: On-site Pentests, Audits, Schulungen in Ihrem BÃ¼ro.",
+    title: "Deutschlandweit tätig",
+    desc: "Von Berlin bis München: On-site Pentests, Audits, Schulungen in Ihrem Büro.",
   },
   {
     icon: Zap,
     title: "Schnelle Response",
-    desc: "Kostenlose Initialberatung innerhalb 24h. Angebot in 2â€“3 Tagen. Keine langwierigen Prozesse.",
+    desc: "Kostenlose Initialberatung innerhalb 24h. Angebot in 2–3 Tagen. Keine langwierigen Prozesse.",
   },
   {
     icon: Lock,
@@ -122,8 +122,8 @@ const EXPERIENCE = [
   },
   {
     industry: "Healthcare & Pharma",
-    examples: "KrankenhÃ¤user, Arztpraxen, Pharmaunternehmen, medizinische GerÃ¤te",
-    challenges: "Datenschutz, FDA-Compliance, MedizingerÃ¤te-Sicherheit",
+    examples: "Krankenhäuser, Arztpraxen, Pharmaunternehmen, medizinische Geräte",
+    challenges: "Datenschutz, FDA-Compliance, Medizingeräte-Sicherheit",
   },
   {
     industry: "E-Commerce & Retail",
@@ -136,9 +136,9 @@ const EXPERIENCE = [
     challenges: "OT-Sicherheit, ICS/SCADA, BSI-Grundschutz, Kritische Infrastrukturen",
   },
   {
-    industry: "Ã–ffentliche Verwaltung",
-    examples: "BehÃ¶rden, Kommunen, Ã¶ffentliche Dienste",
-    challenges: "BSI-Grundschutz, DSGVO, IT-Grundschutzprofil (ITSEC), Audit-KonformitÃ¤t",
+    industry: "Öffentliche Verwaltung",
+    examples: "Behörden, Kommunen, öffentliche Dienste",
+    challenges: "BSI-Grundschutz, DSGVO, IT-Grundschutzprofil (ITSEC), Audit-Konformität",
   },
   {
     industry: "Tech & SaaS",
@@ -160,49 +160,49 @@ const WHAT_DIFFERENTIATES = [
   {
     icon: Users,
     title: "Menschen, nicht nur Tools",
-    desc: "Unsere Pentester denken wie echte Hacker. Automatisierte Scans ersetzen keine KreativitÃ¤t und Expertise.",
+    desc: "Unsere Pentester denken wie echte Hacker. Automatisierte Scans ersetzen keine Kreativität und Expertise.",
   },
   {
     icon: FileText,
     title: "Audit-Ready Reports",
-    desc: "Nicht nur Technologie, sondern auch GeschÃ¤ftskontext. Executive Summary fÃ¼r CxOs, technische Details fÃ¼r IT-Teams.",
+    desc: "Nicht nur Technologie, sondern auch Geschäftskontext. Executive Summary für CxOs, technische Details für IT-Teams.",
   },
   {
     icon: Zap,
     title: "Partnerschaftlicher Ansatz",
-    desc: "Wir sind kein externes Audit-Unternehmen, das 'Probleme findet'. Wir helfen Ihnen, sie zu lÃ¶sen.",
+    desc: "Wir sind kein externes Audit-Unternehmen, das 'Probleme findet'. Wir helfen Ihnen, sie zu lösen.",
   },
   {
     icon: Target,
     title: "Langzeitpartnerschaft",
-    desc: "Nicht nur Pentest, dann vorbei. Wir unterstÃ¼tzen Sie Ã¼ber Jahre: Riskmanagement, Compliance, Verbesserungen.",
+    desc: "Nicht nur Pentest, dann vorbei. Wir unterstützen Sie über Jahre: Riskmanagement, Compliance, Verbesserungen.",
   },
 ];
 
 const FAQS = [
   {
     q: "Wie viel kostet ein Cybersecurity Audit?",
-    a: "Das hÃ¤ngt vom Scope ab: Schnell-Assessment: â‚¬2.000â€“â‚¬5.000. VollstÃ¤ndiger Pentest: â‚¬5.000â€“â‚¬15.000. ISO 27001 Implementierung: â‚¬10.000â€“â‚¬40.000. Wir bieten Kostenlose Initialberatung.",
+    a: "Das hängt vom Scope ab: Schnell-Assessment: €2.000–€5.000. Vollständiger Pentest: €5.000–€15.000. ISO 27001 Implementierung: €10.000–€40.000. Wir bieten Kostenlose Initialberatung.",
   },
   {
-    q: "Brauche ich eine Cybersecurity Firma fÃ¼r kleinere Unternehmen?",
-    a: "Ja, auch KMU sind gehÃ¤ckt. Sogar kleine Unternehmen mÃ¼ssen DSGVO erfÃ¼llen. Ein grundlegender Pentest (â‚¬3.000) ist sinnvoller als gar nichts.",
+    q: "Brauche ich eine Cybersecurity Firma für kleinere Unternehmen?",
+    a: "Ja, auch KMU sind gehäckt. Sogar kleine Unternehmen müssen DSGVO erfüllen. Ein grundlegender Pentest (€3.000) ist sinnvoller als gar nichts.",
   },
   {
-    q: "Wie lange dauert ein vollstÃ¤ndiger Security Assessment?",
-    a: "Scope-abhÃ¤ngig: Web-App: 3â€“5 Tage. Netzwerk: 5â€“10 Tage. Enterprise: 2â€“4 Wochen. Bericht: 72 Stunden nach Abschluss.",
+    q: "Wie lange dauert ein vollständiger Security Assessment?",
+    a: "Scope-abhängig: Web-App: 3–5 Tage. Netzwerk: 5–10 Tage. Enterprise: 2–4 Wochen. Bericht: 72 Stunden nach Abschluss.",
   },
   {
-    q: "KÃ¶nnte meine interne IT das auch machen?",
-    a: "Teilweise ja, aber: (1) UnabhÃ¤ngigkeit ist wichtig â€“ interne IT kennt die Infrastruktur. (2) Externe Auditor*innen bevorzugen externe Pentester. (3) Externe haben oft mehr Erfahrung.",
+    q: "Könnte meine interne IT das auch machen?",
+    a: "Teilweise ja, aber: (1) Unabhängigkeit ist wichtig – interne IT kennt die Infrastruktur. (2) Externe Auditor*innen bevorzugen externe Pentester. (3) Externe haben oft mehr Erfahrung.",
   },
   {
-    q: "Wie oft sollten Penetrationstests durchgefÃ¼hrt werden?",
-    a: "Mindestens 1x pro Jahr. Nach grÃ¶ÃŸeren SystemÃ¤nderungen, Deployments oder neuen Services: zeitnah retest. ISO 27001 & Compliance verlangt regelmÃ¤ÃŸige Tests.",
+    q: "Wie oft sollten Penetrationstests durchgeführt werden?",
+    a: "Mindestens 1x pro Jahr. Nach größeren Systemänderungen, Deployments oder neuen Services: zeitnah retest. ISO 27001 & Compliance verlangt regelmäßige Tests.",
   },
   {
     q: "Was ist der Unterschied zwischen uns und anderen Cybersecurity Firmen?",
-    a: "Manche sind Berater (wenig Hands-On), manche sind reine Tech-Dienstleister (wenig Strategie). Wir sind beides: Technische Expertise + GeschÃ¤ftsverstÃ¤ndnis + Langzeitpartnerschaft.",
+    a: "Manche sind Berater (wenig Hands-On), manche sind reine Tech-Dienstleister (wenig Strategie). Wir sind beides: Technische Expertise + Geschäftsverständnis + Langzeitpartnerschaft.",
   },
 ];
 
@@ -217,21 +217,21 @@ export default function CybersecurityFirmaPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 mb-6">
             <Shield className="w-4 h-4 text-[#FF3B30]" />
-            <span className="text-[#FF3B30] text-sm font-medium">Cybersecurity Firma Â· Pentest Â· ISO 27001 Â· Consulting</span>
+            <span className="text-[#FF3B30] text-sm font-medium">Cybersecurity Firma · Pentest · ISO 27001 · Consulting</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            SODU Secure â€“<br />
+            SODU Secure –<br />
             <span className="text-[#FF3B30]">Ihre Cybersecurity Partneragentur</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-3xl mx-auto mb-10">
-            Penetrationstests, Vulnerability Assessments, ISO 27001 Zertifizierung, Red Team Assessments â€“ alles von einer erfahrenen, zertifizierten Cybersecurity Firma.
+            Penetrationstests, Vulnerability Assessments, ISO 27001 Zertifizierung, Red Team Assessments – alles von einer erfahrenen, zertifizierten Cybersecurity Firma.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               <Phone className="w-5 h-5" />Kostenlose Beratung
             </Link>
             <Link href="/penetration-testing" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
-              Services Ãœbersicht <ArrowRight className="w-5 h-5" />
+              Services Übersicht <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
           {/* Trust bar */}
@@ -251,7 +251,7 @@ export default function CybersecurityFirmaPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">Unsere Cybersecurity Services</h2>
-            <p className="text-white/60 max-w-2xl mx-auto">VollstÃ¤ndiges Portfolio fÃ¼r Ihre Informationssicherheit.</p>
+            <p className="text-white/60 max-w-2xl mx-auto">Vollständiges Portfolio für Ihre Informationssicherheit.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((service) => {
@@ -377,7 +377,7 @@ export default function CybersecurityFirmaPage() {
           <AlertTriangle className="w-7 h-7 text-[#FF3B30] mx-auto mb-3" />
           <h3 className="text-lg font-bold mb-2">Compliance ist nicht optional</h3>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
-            DSGVO, NIS2, BSI-Grundschutz, ISO 27001 â€“ Ihre Compliance ist unsere Mission. Mit SODU Secure: Audit-ready in Monaten, nicht Jahren.
+            DSGVO, NIS2, BSI-Grundschutz, ISO 27001 – Ihre Compliance ist unsere Mission. Mit SODU Secure: Audit-ready in Monaten, nicht Jahren.
           </p>
         </div>
       </section>
@@ -385,7 +385,7 @@ export default function CybersecurityFirmaPage() {
       {/* FAQ */}
       <section className="py-16 lg:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-10">HÃ¤ufige Fragen zu unserer Cybersecurity Firma</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">Häufige Fragen zu unserer Cybersecurity Firma</h2>
           <div className="space-y-3">
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-[#0A0A0B] border border-white/10 rounded-xl overflow-hidden">
@@ -406,7 +406,7 @@ export default function CybersecurityFirmaPage() {
           <Shield className="w-14 h-14 text-[#FF3B30] mx-auto mb-4" />
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Starten Sie jetzt mit SODU Secure</h2>
           <p className="text-white/60 text-lg mb-8">
-            Kostenlose Erstberatung Â· Festpreisangebote Â· Zertifizierte Experten
+            Kostenlose Erstberatung · Festpreisangebote · Zertifizierte Experten
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 premium-cta text-white px-10 py-4 rounded-2xl font-semibold transition-colors text-lg">

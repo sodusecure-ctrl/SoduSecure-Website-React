@@ -373,8 +373,8 @@ function getAuditAiCopy(de: boolean): BrandCopy {
         heroH1Top: 'Ihr Security-Spezialist.',
         heroH1Bottom: 'Für 99 € im Monat.',
         heroSub: 'Sodu /AuditAI ist wie ein vollwertiger IT-Security- und Code-Review-Spezialist, der jede Woche Ihren Code prüft - State-of-the-Art KI, trainiert von echten Hackern. Sie bekommen Enterprise-Sicherheitsstandards zum Bruchteil eines Gehalts. Anfrage schicken, wir machen den Rest. Ihre Software-Entwicklung wird Woche für Woche sicherer.',
-        heroPrimaryCta: 'Anfrage schicken',
-        heroPrimaryHref: '/contact',
+        heroPrimaryCta: 'Jetzt absichern',
+        heroPrimaryHref: '/sodu-audit-ai',
         heroSecondaryCta: 'So funktioniert es',
         heroSecondaryHref: '/how-it-works',
         heroFootnote: 'Jede Woche einen Schritt sicherer. Ab 99 € / Repo. Made in Germany.',
@@ -460,16 +460,16 @@ if (!user || !user.roles.includes('admin')) {
           </>
         ),
         ctaSub: 'Anfrage schicken, wir machen den Rest. 5-Minuten-Setup, wöchentlicher Bericht, null Schmerz.',
-        ctaPrimary: 'Anfrage schicken',
-        ctaPrimaryHref: '/contact',
+        ctaPrimary: 'Jetzt buchen',
+        ctaPrimaryHref: '/sodu-audit-ai',
         ctaSwitch: 'Oder zu /Pentest wechseln',
       }
     : {
         heroH1Top: 'Your security specialist.',
         heroH1Bottom: 'For €99 a month.',
         heroSub: 'Sodu /AuditAI is like a full-time IT security and code review specialist auditing your code every week - state-of-the-art AI, trained by real hackers. You get enterprise-grade security standards for a fraction of one salary. Send a request, we handle the rest. Your software development gets safer week by week.',
-        heroPrimaryCta: 'Request demo',
-        heroPrimaryHref: '/contact',
+        heroPrimaryCta: 'Secure my code',
+        heroPrimaryHref: '/sodu-audit-ai',
         heroSecondaryCta: 'How it works',
         heroSecondaryHref: '/how-it-works',
         heroFootnote: 'One step safer every week. From €99 / repo. Made in Germany.',
@@ -555,8 +555,8 @@ if (!user || !user.roles.includes('admin')) {
           </>
         ),
         ctaSub: 'Send a request, we handle the rest. Five-minute setup, weekly report, zero pain.',
-        ctaPrimary: 'Request demo',
-        ctaPrimaryHref: '/contact',
+        ctaPrimary: 'Buy now',
+        ctaPrimaryHref: '/sodu-audit-ai',
         ctaSwitch: 'Or switch to /Pentest',
       };
 }

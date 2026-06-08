@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Anthropic hält Claude Mythos zurück - zu gefährlich, sagt der Hersteller. Aber Modelle dieser Klasse werden auf der Angreiferseite kommen. Mittelständler ohne Security-Team haben dann ein Problem. Wir liefern KI-Code-Audit als Abo, ohne Tooling-Stack, ohne Recruiting, ohne Setup-Schmerz.',
         heroPills: ['Kein Security-Team nötig', 'Wöchentlicher Bericht', 'NIS2-tauglich', 'Ab 99 €'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Was kostet das',
         secondaryHref: '/pricing',
         trustEyebrow: 'Defensiv eingesetzt · NIS2-aware · DSGVO · Frankfurt-Hosting · Made in Berlin',
@@ -59,7 +59,7 @@ export default function Page() {
         ],
         ctaH2: 'Bevor die Angreifer aufrüsten.',
         ctaSub: 'Anfrage schicken, wir setzen alles auf. Sie sehen das erste PDF in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

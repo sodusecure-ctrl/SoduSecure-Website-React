@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function Page() {
         heroSub:
           'Ein vollwertiges KI-Code-Audit für 99 € pro Repository und Monat. Sie bekommen genau das, was ein Senior-Security-Engineer liefern würde - nur jede Woche und ohne Gehalt. Jederzeit kündbar, keine Mindestlaufzeit.',
         heroPills: ['Ab 99 € / Monat', 'Pro Repository', 'Jederzeit kündbar', 'Made in Germany'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Preise',
         secondaryHref: '/pricing',
         trustEyebrow: 'Transparenter Preis · Keine Mindestlaufzeit · Made in Germany',
@@ -54,7 +54,7 @@ export default function Page() {
         ],
         ctaH2: 'Senior-Reviews. 99 €. Klar.',
         ctaSub: 'Anfrage schicken, erster Bericht in 7 Tagen.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Anthropics Sonnet-Modell ist der Sweet-Spot zwischen Tiefe und Geschwindigkeit. Wir setzen es auf Ihr Repo, kombinieren mit Multi-Pass-Pipeline und liefern montags das PDF, das Snyk niemals schreiben würde.',
         heroPills: ['Claude Sonnet', 'Multi-Pass Audit', 'Diff-aware', 'Made in Germany'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Powered by Claude Sonnet · Anthropic API · Frankfurt · AVV vor Start',
@@ -58,7 +58,7 @@ export default function Page() {
         ],
         ctaH2: 'Sonnet-Speed. Senior-Tiefe.',
         ctaSub: 'Anfrage schicken - wir setzen das Audit auf, Sie sehen das erste PDF in einer Woche.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );

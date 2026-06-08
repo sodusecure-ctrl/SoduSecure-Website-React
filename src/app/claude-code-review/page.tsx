@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
@@ -23,8 +23,8 @@ export default function Page() {
         heroSub:
           'Sodu AuditAI nutzt Claude im Hintergrund, um Ihr Repository wie ein Senior-Security-Engineer zu lesen: Datenfluss, Auth-Pfade, Secret-Handling und Business-Logik. Sie bekommen jeden Montag ein PDF mit priorisierten Befunden und fertigen Code-Fixes.',
         heroPills: ['Powered by Claude', 'Wöchentlicher Bericht', 'Read-only Zugriff', 'Made in Germany'],
-        primaryCta: 'Demo anfragen',
-        primaryHref: '/contact',
+        primaryCta: 'Jetzt starten',
+        primaryHref: '/sodu-audit-ai',
         secondaryCta: 'Beispielbericht',
         secondaryHref: '/sample-report',
         trustEyebrow: 'Powered by Claude · Von Hackern trainiert · DSGVO-konform · Made in Germany',
@@ -59,7 +59,7 @@ export default function Page() {
         ],
         ctaH2: 'Claude liest Ihren Code. Jede Woche.',
         ctaSub: 'Demo ohne Karte. Anfrage schicken, wir machen den Rest.',
-        ctaButton: 'Demo anfragen',
+        ctaButton: 'Jetzt starten',
       }}
     />
   );
