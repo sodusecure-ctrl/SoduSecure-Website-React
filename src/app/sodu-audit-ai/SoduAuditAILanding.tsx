@@ -1809,7 +1809,7 @@ function SuccessState({
           <>
             Your{planName ? ` ${planName} ` : " "}plan is active. Stripe has sent a receipt to{" "}
             <span className="font-semibold text-white">{email || "your e-mail"}</span> —
-            we'll be in touch within 24 hours with the onboarding steps for your repository.
+            we&apos;ll be in touch within 24 hours with the onboarding steps for your repository.
           </>
         ) : (
           <>
