@@ -22,16 +22,32 @@ import {
   CircleCheckBig,
   CreditCard,
   XCircle,
+  Plus,
+  Trash2,
 } from "lucide-react";
 import { trackConversion } from "@/lib/gtag";
 
 type Plan = "starter" | "studio" | "pro";
+type BillingInterval = "month" | "year";
+
+const MAX_REPOS_BY_PLAN: Record<Plan, number> = {
+  starter: 1,
+  studio: 1,
+  pro: 4,
+};
+
+type PriceVariant = {
+  price: string;
+  per: string;
+  effective?: string;
+  savings?: string;
+};
 
 type PlanCopy = {
   id: Plan;
   name: string;
-  price: string;
-  perMonth: string;
+  monthly: PriceVariant;
+  yearly: PriceVariant;
   tagline: string;
   audience: string;
   features: string[];
@@ -43,8 +59,13 @@ const PLANS: PlanCopy[] = [
   {
     id: "starter",
     name: "Starter",
-    price: "99 €",
-    perMonth: "/Monat",
+    monthly: { price: "99 €", per: "/Monat" },
+    yearly: {
+      price: "1.068 €",
+      per: "/Jahr",
+      effective: "89 € / Monat effektiv",
+      savings: "Spare 120 €",
+    },
     tagline: "Der Einstieg in defensive KI.",
     audience: "Solo-Gründer & frühe Startups",
     features: [
@@ -58,8 +79,13 @@ const PLANS: PlanCopy[] = [
   {
     id: "studio",
     name: "Studio",
-    price: "199 €",
-    perMonth: "/Monat",
+    monthly: { price: "199 €", per: "/Monat" },
+    yearly: {
+      price: "2.148 €",
+      per: "/Jahr",
+      effective: "179 € / Monat effektiv",
+      savings: "Spare 240 €",
+    },
     tagline: "Wöchentlich. Eine Codebasis. Voll im Griff.",
     audience: "Produkt-Teams, 1 Repo",
     features: [
@@ -75,12 +101,17 @@ const PLANS: PlanCopy[] = [
   {
     id: "pro",
     name: "Pro+",
-    price: "449 €",
-    perMonth: "/Monat",
-    tagline: "Multi-Repo plus quartalsweise Voll-Pentest.",
+    monthly: { price: "449 €", per: "/Monat" },
+    yearly: {
+      price: "4.848 €",
+      per: "/Jahr",
+      effective: "404 € / Monat effektiv",
+      savings: "Spare 540 €",
+    },
+    tagline: "Bis zu 4 Repos plus quartalsweise Voll-Pentest.",
     audience: "Scale-ups, Series A & ISO 27001",
     features: [
-      "Mehrere Repositories",
+      "Bis zu 4 Repositories (1 Projekt)",
       "Unbegrenzte Contributoren",
       "Wöchentlicher Bericht",
       "Quartalsweise Voll-Pentest (1 Repo)",
@@ -88,6 +119,16 @@ const PLANS: PlanCopy[] = [
     ],
   },
 ];
+
+function priceFor(plan: PlanCopy, interval: BillingInterval): PriceVariant {
+  return interval === "year" ? plan.yearly : plan.monthly;
+}
+
+const SETUP_FEE_LABEL_MONTHLY = "+ 500 € einmalige Setup-Gebühr";
+const SETUP_FEE_LABEL_YEARLY = "Setup & Onboarding inklusive";
+const SETUP_FEE_DETAIL =
+  "Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration & Onboarding-Call.";
+const VAT_NOTE = "Alle Preise zzgl. 19 % MwSt.";
 
 const HERO_PILLS = [
   "Made in Germany",
@@ -136,8 +177,16 @@ const FAQ = [
     a: "Innerhalb von 24 Stunden nach Anfrage erhalten Sie einen Onboarding-Slot. GitHub-Anbindung in 5 Minuten, erster Bericht meist in 7 Tagen.",
   },
   {
+    q: "Sind die Preise mit oder ohne MwSt.?",
+    a: "Alle ausgewiesenen Preise sind Nettopreise. Auf jede Rechnung kommen 19 % deutsche Umsatzsteuer obendrauf - Stripe weist die MwSt. korrekt auf der Rechnung aus.",
+  },
+  {
+    q: "Was kostet das Onboarding?",
+    a: "Im Monats-Abo zahlen Sie eine einmalige Setup- und Onboarding-Gebühr von 500 € netto mit der ersten Rechnung (Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration und Onboarding-Call). Im Jahres-Abo ist das Setup & Onboarding inklusive.",
+  },
+  {
     q: "Kann ich jederzeit kündigen?",
-    a: "Ja. Monatliche Abrechnung, keine Mindestlaufzeit. Vor der nächsten Verlängerung kündigen, fertig.",
+    a: "Ja. Im Monats-Abo kündigen Sie zur nächsten Abrechnung — keine Mindestlaufzeit. Im Jahres-Abo kündigen Sie zum Laufzeitende und sparen ~10 %.",
   },
   {
     q: "Was passiert mit meinem Code?",
@@ -161,6 +210,7 @@ export default function SoduAuditAILanding() {
       : null;
 
   const [selectedPlan, setSelectedPlan] = useState<Plan | null>(initialPlan);
+  const [billingInterval, setBillingInterval] = useState<BillingInterval>("month");
   const [step, setStep] = useState<1 | 2 | 3 | 4>(
     status === "success" ? 3 : status === "cancelled" ? 4 : initialPlan ? 2 : 1
   );
@@ -171,7 +221,7 @@ export default function SoduAuditAILanding() {
   const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
   const [provider, setProvider] = useState<Provider | null>(null);
-  const [repoUrl, setRepoUrl] = useState("");
+  const [repoUrls, setRepoUrls] = useState<string[]>([""]);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -182,6 +232,21 @@ export default function SoduAuditAILanding() {
     () => PLANS.find((p) => p.id === selectedPlan) ?? null,
     [selectedPlan]
   );
+
+  const selectedPrice = useMemo(
+    () => (selectedPlanData ? priceFor(selectedPlanData, billingInterval) : null),
+    [selectedPlanData, billingInterval]
+  );
+
+  const maxRepos = selectedPlan ? MAX_REPOS_BY_PLAN[selectedPlan] : 1;
+
+  // Trim repoUrls down when switching from Pro+ to a single-repo plan
+  useEffect(() => {
+    setRepoUrls((prev) => {
+      if (prev.length <= maxRepos) return prev;
+      return prev.slice(0, maxRepos);
+    });
+  }, [maxRepos]);
 
   useEffect(() => {
     if (formRef.current && (step === 2 || step === 3 || step === 4)) {
@@ -228,8 +293,18 @@ export default function SoduAuditAILanding() {
       setError("Bitte wählen Sie GitHub oder GitLab.");
       return;
     }
-    if (!repoUrl.trim()) {
-      setError("Bitte Repository-URL oder Namen angeben.");
+
+    const cleanRepos = repoUrls.map((r) => r.trim()).filter((r) => r.length > 0);
+    if (cleanRepos.length === 0) {
+      setError("Bitte mindestens eine Repository-URL oder einen Repo-Namen angeben.");
+      return;
+    }
+    if (cleanRepos.length > maxRepos) {
+      setError(
+        selectedPlan === "pro"
+          ? `Maximal ${maxRepos} Repositories pro Pro+-Abo (alle müssen zum selben Projekt gehören).`
+          : `Dieser Plan unterstützt nur ${maxRepos} Repository.`
+      );
       return;
     }
 
@@ -240,12 +315,13 @@ export default function SoduAuditAILanding() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           plan: selectedPlan,
+          billingInterval,
           email: email.trim(),
           name: name.trim() || undefined,
           company: company.trim() || undefined,
           phone: phone.trim() || undefined,
           provider,
-          repoUrl: repoUrl.trim(),
+          repoUrls: cleanRepos,
         }),
       });
       if (!res.ok) {
@@ -265,6 +341,25 @@ export default function SoduAuditAILanding() {
       setError("Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.");
       setSubmitting(false);
     }
+  }
+
+  function updateRepoUrl(index: number, value: string) {
+    setRepoUrls((prev) => {
+      const next = [...prev];
+      next[index] = value;
+      return next;
+    });
+  }
+
+  function addRepoField() {
+    setRepoUrls((prev) => (prev.length >= maxRepos ? prev : [...prev, ""]));
+  }
+
+  function removeRepoField(index: number) {
+    setRepoUrls((prev) => {
+      if (prev.length <= 1) return prev;
+      return prev.filter((_, i) => i !== index);
+    });
   }
 
   return (
@@ -393,7 +488,7 @@ export default function SoduAuditAILanding() {
       {/* PLAN SELECTOR */}
       <section ref={planRef} id="plans" className="relative">
         <div className="mx-auto max-w-7xl px-6 pb-12 pt-2 lg:pb-20">
-          <div className="flex items-end justify-between gap-6">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#FF3B30]" />
@@ -404,15 +499,57 @@ export default function SoduAuditAILanding() {
                 <span className="premium-headline-accent">Eine Entscheidung.</span>
               </h2>
               <p className="mt-4 max-w-xl text-[15px] text-white/65">
-                Keine Set-up-Gebühr, keine Mindestlaufzeit. Wählen Sie den Plan, der zu Ihrer
-                Codebasis passt - upgraden oder kündigen jederzeit.
+                Keine Mindestlaufzeit beim Monats-Abo. Wählen Sie den Plan, der zu Ihrer Codebasis
+                passt - upgraden oder kündigen jederzeit. Im Jahres-Abo ist Setup & Onboarding
+                inklusive.
               </p>
+            </div>
+
+            {/* Billing interval toggle */}
+            <div className="inline-flex shrink-0 items-center gap-1 rounded-full border border-white/10 bg-white/[0.03] p-1 backdrop-blur-sm">
+              {(
+                [
+                  { id: "month" as BillingInterval, label: "Monatlich" },
+                  { id: "year" as BillingInterval, label: "Jährlich", hint: "−10 %" },
+                ]
+              ).map((opt) => {
+                const active = billingInterval === opt.id;
+                return (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    onClick={() => setBillingInterval(opt.id)}
+                    aria-pressed={active}
+                    className={[
+                      "relative inline-flex items-center gap-2 rounded-full px-4 py-2 text-[12px] font-semibold transition",
+                      active
+                        ? "bg-white text-[#0A0A0B] shadow-[0_4px_14px_rgba(255,255,255,0.18)]"
+                        : "text-white/70 hover:text-white",
+                    ].join(" ")}
+                  >
+                    {opt.label}
+                    {opt.hint && (
+                      <span
+                        className={[
+                          "rounded-full px-2 py-0.5 text-[10px] font-bold tracking-tight",
+                          active
+                            ? "bg-[#FF3B30] text-white"
+                            : "bg-[#FF3B30]/15 text-[#FF6B61]",
+                        ].join(" ")}
+                      >
+                        {opt.hint}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-3">
             {PLANS.map((p) => {
               const isSelected = selectedPlan === p.id;
+              const variant = priceFor(p, billingInterval);
               return (
                 <button
                   key={p.id}
@@ -460,9 +597,34 @@ export default function SoduAuditAILanding() {
 
                   <div className="mt-6 flex items-baseline gap-1.5">
                     <span className="premium-tabular text-5xl font-extrabold tracking-tight text-white">
-                      {p.price}
+                      {variant.price}
                     </span>
-                    <span className="text-sm text-white/55">{p.perMonth}</span>
+                    <span className="text-sm text-white/55">{variant.per}</span>
+                  </div>
+                  {billingInterval === "year" && variant.effective && (
+                    <div className="mt-1 flex flex-wrap items-center gap-2 text-[12px]">
+                      <span className="text-white/55">{variant.effective}</span>
+                      {variant.savings && (
+                        <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 font-semibold text-emerald-300 ring-1 ring-emerald-500/30">
+                          {variant.savings}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                  <div
+                    className={[
+                      "mt-1.5 text-[11px] font-medium",
+                      billingInterval === "year"
+                        ? "text-emerald-300/90"
+                        : "text-white/55",
+                    ].join(" ")}
+                  >
+                    {billingInterval === "year"
+                      ? SETUP_FEE_LABEL_YEARLY
+                      : SETUP_FEE_LABEL_MONTHLY}
+                  </div>
+                  <div className="mt-0.5 text-[10px] text-white/40">
+                    zzgl. 19 % MwSt.
                   </div>
                   <p className="mt-2 text-[13px] text-white/70">{p.tagline}</p>
                   <p className="mt-1 text-[12px] text-white/45">{p.audience}</p>
@@ -495,7 +657,16 @@ export default function SoduAuditAILanding() {
           </div>
 
           <p className="mt-6 text-center text-[12px] text-white/45">
-            Alle Preise zzgl. MwSt. · Monatlich kündbar · Read-only Zugriff
+            {VAT_NOTE} ·{" "}
+            {billingInterval === "year"
+              ? "Jährlich vorab, kündbar zum Laufzeitende"
+              : "Monatlich kündbar"}{" "}
+            · Read-only Zugriff
+          </p>
+          <p className="mt-1.5 text-center text-[11px] text-white/40">
+            {billingInterval === "year"
+              ? `Im Jahres-Abo ist Setup & Onboarding inklusive. ${SETUP_FEE_DETAIL}`
+              : `Zzgl. einmaliger Setup-Gebühr von 500 € (mit der ersten Rechnung). ${SETUP_FEE_DETAIL}`}
           </p>
         </div>
       </section>
@@ -532,18 +703,65 @@ export default function SoduAuditAILanding() {
                       Schritt 2 · Ihre Daten
                     </span>
 
-                    {selectedPlanData ? (
+                    {selectedPlanData && selectedPrice ? (
                       <>
                         <div className="mt-6 flex items-baseline gap-2">
                           <span className="premium-tabular text-5xl font-extrabold tracking-tight text-white">
-                            {selectedPlanData.price}
+                            {selectedPrice.price}
                           </span>
-                          <span className="text-sm text-white/55">{selectedPlanData.perMonth}</span>
+                          <span className="text-sm text-white/55">{selectedPrice.per}</span>
                         </div>
-                        <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-[#FF3B30]/30 bg-[#FF3B30]/10 px-3 py-1 text-xs font-semibold tracking-tight text-[#FF6B61]">
-                          {selectedPlanData.name}
+                        {billingInterval === "year" && selectedPrice.effective && (
+                          <div className="mt-1 flex flex-wrap items-center gap-2 text-[12px]">
+                            <span className="text-white/55">{selectedPrice.effective}</span>
+                            {selectedPrice.savings && (
+                              <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 font-semibold text-emerald-300 ring-1 ring-emerald-500/30">
+                                {selectedPrice.savings}
+                              </span>
+                            )}
+                          </div>
+                        )}
+                        <div className="mt-3 inline-flex flex-wrap items-center gap-2">
+                          <span className="rounded-full border border-[#FF3B30]/30 bg-[#FF3B30]/10 px-3 py-1 text-xs font-semibold tracking-tight text-[#FF6B61]">
+                            {selectedPlanData.name}
+                          </span>
+                          <span className="rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold tracking-tight text-white/70">
+                            {billingInterval === "year" ? "Jährlich" : "Monatlich"}
+                          </span>
                         </div>
                         <p className="mt-3 text-sm text-white/65">{selectedPlanData.audience}</p>
+
+                        <div className="mt-5 rounded-2xl border border-white/10 bg-white/[0.025] p-4">
+                          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/55">
+                            Heute fällig
+                          </div>
+                          <dl className="mt-3 space-y-1.5 text-[13px]">
+                            <div className="flex items-center justify-between text-white/80">
+                              <dt>
+                                {selectedPlanData.name} ·{" "}
+                                {billingInterval === "year" ? "Jahr" : "Monat"}
+                              </dt>
+                              <dd className="premium-tabular font-semibold text-white">
+                                {selectedPrice.price}
+                              </dd>
+                            </div>
+                            {billingInterval === "month" ? (
+                              <div className="flex items-center justify-between text-white/80">
+                                <dt>Setup & Onboarding (einmalig)</dt>
+                                <dd className="premium-tabular font-semibold text-white">500 €</dd>
+                              </div>
+                            ) : (
+                              <div className="flex items-center justify-between text-emerald-300/85">
+                                <dt>Setup & Onboarding</dt>
+                                <dd className="premium-tabular font-semibold">inklusive</dd>
+                              </div>
+                            )}
+                          </dl>
+                          <p className="mt-3 border-t border-white/10 pt-2.5 text-[11px] text-white/50">
+                            Anschließend nur noch {selectedPrice.price}
+                            {selectedPrice.per}. Zzgl. 19 % MwSt.
+                          </p>
+                        </div>
 
                         <div className="my-6 h-px bg-white/10" />
 
@@ -735,28 +953,72 @@ export default function SoduAuditAILanding() {
                     icon={<GitBranch className="h-4 w-4" />}
                     label={
                       provider === "gitlab"
-                        ? "GitLab Repository (URL oder Pfad)"
-                        : "GitHub Repository (URL oder owner/repo)"
+                        ? selectedPlan === "pro"
+                          ? "GitLab Repositories (URL oder Pfad · max. 4)"
+                          : "GitLab Repository (URL oder Pfad)"
+                        : selectedPlan === "pro"
+                          ? "GitHub Repositories (URL oder owner/repo · max. 4)"
+                          : "GitHub Repository (URL oder owner/repo)"
                     }
                     required
                   >
-                    <input
-                      type="text"
-                      value={repoUrl}
-                      onChange={(e) => setRepoUrl(e.target.value)}
-                      placeholder={
-                        provider === "gitlab"
-                          ? "https://gitlab.com/acme/payments-api"
-                          : "https://github.com/acme/payments-api oder acme/payments-api"
-                      }
-                      autoComplete="off"
-                      autoCorrect="off"
-                      autoCapitalize="off"
-                      spellCheck={false}
-                      disabled={!selectedPlan}
-                      className="w-full bg-transparent text-[15px] text-white placeholder:text-white/35 focus:outline-none disabled:opacity-40"
-                    />
+                    <div className="space-y-2.5">
+                      {repoUrls.map((value, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <input
+                            type="text"
+                            value={value}
+                            onChange={(e) => updateRepoUrl(idx, e.target.value)}
+                            placeholder={
+                              provider === "gitlab"
+                                ? `https://gitlab.com/acme/service-${idx + 1}`
+                                : `https://github.com/acme/service-${idx + 1} oder acme/service-${idx + 1}`
+                            }
+                            autoComplete="off"
+                            autoCorrect="off"
+                            autoCapitalize="off"
+                            spellCheck={false}
+                            disabled={!selectedPlan}
+                            className="w-full bg-transparent text-[15px] text-white placeholder:text-white/35 focus:outline-none disabled:opacity-40"
+                          />
+                          {repoUrls.length > 1 && (
+                            <button
+                              type="button"
+                              onClick={() => removeRepoField(idx)}
+                              disabled={!selectedPlan}
+                              aria-label={`Repository ${idx + 1} entfernen`}
+                              className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/55 transition hover:border-white/25 hover:text-white disabled:opacity-40"
+                            >
+                              <Trash2 className="h-3.5 w-3.5" />
+                            </button>
+                          )}
+                        </div>
+                      ))}
+                    </div>
                   </Field>
+
+                  {selectedPlan === "pro" && (
+                    <div className="-mt-2 flex flex-col gap-2 px-1 sm:flex-row sm:items-center sm:justify-between">
+                      <p className="text-[11px] text-white/55">
+                        Pro+ erlaubt bis zu <span className="font-semibold text-white/85">4 Repositories</span> —{" "}
+                        <span className="text-white/70">alle müssen zum selben Projekt / Produkt gehören</span>{" "}
+                        (siehe{" "}
+                        <Link href="/terms" className="underline-offset-4 hover:underline">
+                          AGB
+                        </Link>
+                        ).
+                      </p>
+                      <button
+                        type="button"
+                        onClick={addRepoField}
+                        disabled={repoUrls.length >= maxRepos}
+                        className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-[11px] font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.07] disabled:cursor-not-allowed disabled:opacity-40"
+                      >
+                        <Plus className="h-3 w-3" />
+                        Weiteres Repo ({repoUrls.length}/{maxRepos})
+                      </button>
+                    </div>
+                  )}
 
                   {error && (
                     <div className="rounded-2xl border border-[#FF3B30]/30 bg-[#FF3B30]/10 px-4 py-3 text-sm text-[#FF8077]">
@@ -771,11 +1033,11 @@ export default function SoduAuditAILanding() {
                   >
                     {submitting ? (
                       "Weiterleitung zu Stripe…"
-                    ) : selectedPlan ? (
+                    ) : selectedPlan && selectedPrice ? (
                       <>
                         <CreditCard className="h-4 w-4" />
-                        Jetzt buchen · {selectedPlanData?.name} {selectedPlanData?.price}
-                        {selectedPlanData?.perMonth}
+                        Jetzt buchen · {selectedPlanData?.name} {selectedPrice.price}
+                        {selectedPrice.per}
                       </>
                     ) : (
                       "Bitte zuerst einen Plan wählen"
@@ -793,7 +1055,19 @@ export default function SoduAuditAILanding() {
                     <Link href="/terms" className="underline-offset-4 hover:underline">
                       AGB
                     </Link>{" "}
-                    zu. Monatlich kündbar.
+                    zu. Alle Preise zzgl. 19 % MwSt.{" "}
+                    {billingInterval === "year" ? (
+                      <>
+                        <span className="font-semibold text-white/70">Setup & Onboarding inklusive</span>{" "}
+                        im Jahres-Abo. Jahresabo, kündbar zum Laufzeitende.
+                      </>
+                    ) : (
+                      <>
+                        Mit der ersten Rechnung wird die einmalige{" "}
+                        <span className="font-semibold text-white/70">Setup-Gebühr von 500 €</span>{" "}
+                        fällig. Danach monatlich kündbar.
+                      </>
+                    )}
                   </p>
                 </form>
               </div>
@@ -883,34 +1157,59 @@ export default function SoduAuditAILanding() {
             <thead>
               <tr className="border-b border-white/10 text-[11px] uppercase tracking-[0.18em] text-white/55">
                 <th className="px-6 py-5 font-medium">Feature</th>
-                <th className="px-6 py-5 font-medium text-white">
-                  Starter
-                  <div className="mt-1 text-[13px] font-semibold normal-case tracking-normal text-white/70">
-                    99 €<span className="text-white/40">/Monat</span>
-                  </div>
-                </th>
-                <th className="relative px-6 py-5 font-medium text-white">
-                  <span className="absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full bg-[#FF3B30] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_4px_14px_rgba(255,59,48,0.45)]">
-                    Beliebt
-                  </span>
-                  Studio
-                  <div className="mt-1 text-[13px] font-semibold normal-case tracking-normal text-white/70">
-                    199 €<span className="text-white/40">/Monat</span>
-                  </div>
-                </th>
-                <th className="px-6 py-5 font-medium text-white">
-                  Pro+
-                  <div className="mt-1 text-[13px] font-semibold normal-case tracking-normal text-white/70">
-                    449 €<span className="text-white/40">/Monat</span>
-                  </div>
-                </th>
+                {(["starter", "studio", "pro"] as Plan[]).map((pid) => {
+                  const plan = PLANS.find((x) => x.id === pid)!;
+                  const v = priceFor(plan, billingInterval);
+                  const isHighlight = pid === "studio";
+                  return (
+                    <th
+                      key={pid}
+                      className={
+                        "relative px-6 py-5 font-medium text-white" +
+                        (isHighlight ? "" : "")
+                      }
+                    >
+                      {isHighlight && (
+                        <span className="absolute -top-3 left-6 inline-flex items-center gap-1 rounded-full bg-[#FF3B30] px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_4px_14px_rgba(255,59,48,0.45)]">
+                          Beliebt
+                        </span>
+                      )}
+                      {plan.name}
+                      <div className="mt-1 text-[13px] font-semibold normal-case tracking-normal text-white/70">
+                        {v.price}
+                        <span className="text-white/40">{v.per}</span>
+                      </div>
+                      <div className="text-[10px] font-normal normal-case tracking-normal text-white/40">
+                        zzgl. 19 % MwSt.
+                      </div>
+                      {billingInterval === "year" && v.savings && (
+                        <div className="mt-0.5 text-[11px] font-semibold normal-case tracking-normal text-emerald-300/90">
+                          {v.savings}
+                        </div>
+                      )}
+                    </th>
+                  );
+                })}
               </tr>
             </thead>
             <tbody className="text-white/75">
               {[
-                { f: "Repositories", s: "1", st: "1", p: "bis zu 5" },
+                { f: "Repositories", s: "1", st: "1", p: "bis zu 4 (1 Projekt)" },
                 { f: "Contributoren", s: "1", st: "Unbegrenzt", p: "Unbegrenzt" },
                 { f: "Audit-Cadence", s: "Monatlich", st: "Wöchentlich", p: "Wöchentlich" },
+                billingInterval === "year"
+                  ? {
+                      f: "Setup & Onboarding (einmalig)",
+                      s: "Inklusive",
+                      st: "Inklusive",
+                      p: "Inklusive",
+                    }
+                  : {
+                      f: "Setup & Onboarding (einmalig)",
+                      s: "500 €",
+                      st: "500 €",
+                      p: "500 €",
+                    },
                 { f: "Audit-Bericht (DE & EN)", s: true, st: true, p: true },
                 { f: "Fertige Code-Fix-Vorschläge", s: true, st: true, p: true },
                 { f: "OWASP Top 10 + CWE-Mapping", s: true, st: true, p: true },
@@ -920,7 +1219,7 @@ export default function SoduAuditAILanding() {
                 { f: "Quartals-Pentest (manuell, OSCP)", s: false, st: false, p: true },
                 { f: "ISO 27001 / TR-03161 Auditpaket", s: false, st: false, p: true },
                 { f: "Dedicated Security Lead", s: false, st: false, p: true },
-                { f: "Monatlich kündbar", s: true, st: true, p: true },
+                { f: "Monatlich oder jährlich (−10 %)", s: true, st: true, p: true },
               ].map((row, i) => (
                 <tr
                   key={row.f}

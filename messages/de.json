@@ -632,6 +632,21 @@
         "title": "Benutzerkonten",
         "content": "Wenn Sie ein Konto bei uns erstellen, müssen Sie genaue, vollständige und aktuelle Informationen angeben. Eine Nichterfüllung stellt einen Verstoß gegen die Bedingungen dar und kann zur sofortigen Kündigung Ihres Kontos führen."
       },
+      "auditAi": {
+        "title": "Sodu /AuditAI – Abonnement-Bedingungen",
+        "intro": "Für das Sodu /AuditAI-Abonnement (Starter, Studio, Pro+) gelten zusätzlich die folgenden Regelungen:",
+        "items": {
+          "scope": "Starter und Studio decken jeweils ein (1) Repository ab. Pro+ deckt bis zu vier (4) Repositories ab.",
+          "singleProject": "Beim Pro+ Plan müssen alle hinterlegten Repositories zum selben Produkt bzw. Projekt der Kund:in gehören (z. B. Frontend, Backend, Mobile-App und Infrastructure desselben Produkts). Eine Aufteilung mehrerer voneinander unabhängiger Produkte oder Mandanten auf ein einzelnes Pro+ Abo ist nicht zulässig.",
+          "verification": "Sodu Secure ist berechtigt, die Projektzugehörigkeit der angemeldeten Repositories zu prüfen. Bei begründetem Verdacht eines Verstoßes können wir den/die betroffenen Audit-Lauf/Läufe pausieren und Sie zur Klarstellung kontaktieren; ein Anspruch auf Erstattung wegen daraus resultierender Verzögerungen besteht nicht.",
+          "addOns": "Zusätzliche Repositories außerhalb dieses Rahmens (z. B. weitere Produkte, weitere Mandanten) erfordern ein separates Abonnement oder ein individuelles Angebot.",
+          "setupFee": "Im Monats-Abo (Starter, Studio, Pro+) wird mit der ersten Rechnung eine einmalige Setup- und Onboarding-Gebühr in Höhe von 500 € (zzgl. MwSt.) fällig. Sie deckt die Anbindung der Repositories, das Baseline-Audit, die Slack-/Teams-Integration sowie den Onboarding-Call ab. Im Jahres-Abo ist das Setup & Onboarding bereits inklusive und wird nicht zusätzlich berechnet. Die Setup-Gebühr ist nicht erstattungsfähig, sobald das Onboarding begonnen hat.",
+          "vat": "Alle in diesen Bedingungen sowie auf der Bestellseite ausgewiesenen Preise sind Nettopreise und verstehen sich zuzüglich der gesetzlichen Umsatzsteuer (in Deutschland 19 %). Stripe weist die Umsatzsteuer auf der Rechnung gesondert aus. Bei Bestellungen aus dem EU-Ausland mit gültiger USt-IdNr. greift gegebenenfalls das Reverse-Charge-Verfahren.",
+          "billing": "Die Abrechnung erfolgt im gewählten Intervall (monatlich oder jährlich) im Voraus per SEPA, Kreditkarte oder Apple/Google Pay über unseren Zahlungsdienstleister Stripe. Auf alle Beträge wird die gesetzliche Umsatzsteuer aufgeschlagen.",
+          "cancellation": "Monats-Abos können jederzeit zum Ende des laufenden Abrechnungsmonats gekündigt werden. Jahres-Abos können zum Ende der vereinbarten 12-monatigen Laufzeit gekündigt werden; ohne fristgerechte Kündigung verlängert sich das Jahres-Abo um weitere 12 Monate. Bereits geleistete Zahlungen sind nicht anteilig erstattungsfähig.",
+          "access": "Wir greifen ausschließlich read-only auf die hinterlegten Repositories zu. Klone werden nach jedem Audit-Lauf vollständig gelöscht."
+        }
+      },
       "privacy": {
         "title": "Datenschutzrichtlinie",
         "content": "Ihre Nutzung unseres Services unterliegt auch unserer Datenschutzrichtlinie. Bitte lesen Sie unsere Datenschutzrichtlinie, die auch die Website regelt und Benutzer über unsere Datenerfassungspraktiken informiert."

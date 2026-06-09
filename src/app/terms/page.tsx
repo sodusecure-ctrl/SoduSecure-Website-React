@@ -61,6 +61,28 @@ export default function TermsAndConditions() {
 
           <Card>
             <CardHeader>
+              <CardTitle>{t('sections.auditAi.title')}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-gray-700 mb-4">
+                {t('sections.auditAi.intro')}
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <li>{t('sections.auditAi.items.scope')}</li>
+                <li>{t('sections.auditAi.items.singleProject')}</li>
+                <li>{t('sections.auditAi.items.verification')}</li>
+                <li>{t('sections.auditAi.items.addOns')}</li>
+                <li>{t('sections.auditAi.items.setupFee')}</li>
+                <li>{t('sections.auditAi.items.vat')}</li>
+                <li>{t('sections.auditAi.items.billing')}</li>
+                <li>{t('sections.auditAi.items.cancellation')}</li>
+                <li>{t('sections.auditAi.items.access')}</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
               <CardTitle>{t('sections.privacy.title')}</CardTitle>
             </CardHeader>
             <CardContent>

@@ -632,6 +632,21 @@
         "title": "User accounts",
         "content": "When you create an account with us, you must provide accurate, complete, and current information.Failure to do so constitutes a breach of the Terms and may result in immediate termination of your account."
       },
+      "auditAi": {
+        "title": "Sodu /AuditAI – Subscription Terms",
+        "intro": "The following additional terms apply to the Sodu /AuditAI subscription (Starter, Studio, Pro+):",
+        "items": {
+          "scope": "Starter and Studio each cover one (1) repository. Pro+ covers up to four (4) repositories.",
+          "singleProject": "On the Pro+ plan, all enrolled repositories must belong to the same product or project of the customer (e.g. frontend, backend, mobile app and infrastructure of the same product). Spreading multiple independent products or unrelated tenants across a single Pro+ subscription is not permitted.",
+          "verification": "Sodu Secure may verify whether the enrolled repositories belong to the same project. If we have reasonable cause to suspect a violation, we may pause the affected audit runs and contact you for clarification; you have no right to a refund for delays resulting from such verification.",
+          "addOns": "Additional repositories outside this scope (e.g. further products or further tenants) require a separate subscription or an individual quote.",
+          "setupFee": "On the monthly subscription (Starter, Studio, Pro+) a one-time setup and onboarding fee of 500 € (plus VAT) is charged together with the first invoice. It covers repository onboarding, the baseline audit, Slack/Teams integration, and the onboarding call. On the annual subscription, setup and onboarding are already included and are not charged separately. The setup fee is non-refundable once onboarding has begun.",
+          "vat": "All prices stated in these terms and on the checkout page are net prices and are understood plus the statutory value-added tax (19 % in Germany). Stripe shows the VAT separately on the invoice. For orders from other EU countries with a valid VAT ID, the reverse-charge procedure may apply.",
+          "billing": "Billing takes place upfront at the selected interval (monthly or annual) via SEPA, credit card, or Apple/Google Pay through our payment processor Stripe. Statutory VAT is added on top of all amounts.",
+          "cancellation": "Monthly subscriptions may be cancelled at any time effective at the end of the current billing month. Annual subscriptions may be cancelled effective at the end of the agreed 12-month term; without timely cancellation, the annual subscription renews for another 12 months. Payments already made are not refundable on a pro-rata basis.",
+          "access": "We access enrolled repositories on a read-only basis only. Clones are fully deleted after each audit run."
+        }
+      },
       "privacy": {
         "title": "Privacy Policy",
         "content": "Your use of our Service is also governed by our Privacy Policy.Please read our Privacy Policy, which also governs the Site and informs users of our data collection practices."
