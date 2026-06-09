@@ -81,6 +81,44 @@ export default function TermsAndConditions() {
             </CardContent>
           </Card>
 
+          <Card id="auditai-agb">
+            <CardHeader>
+              <CardTitle>{t('sections.auditAiFull.title')}</CardTitle>
+              <p className="text-sm text-gray-500 mt-1">
+                {t('sections.auditAiFull.subtitle')}
+              </p>
+            </CardHeader>
+            <CardContent>
+              <Alert className="mb-6">
+                <AlertDescription>{t('sections.auditAiFull.disclaimer')}</AlertDescription>
+              </Alert>
+
+              <div className="mb-6">
+                <h3 className="font-semibold text-gray-900 mb-2">
+                  {t('sections.auditAiFull.provider.title')}
+                </h3>
+                <p className="text-gray-700 whitespace-pre-line">
+                  {t('sections.auditAiFull.provider.body')}
+                </p>
+              </div>
+
+              {(['1','2','3','4','5','6','7','8','9','10','11','12','13'] as const).map((id, idx) => (
+                <div key={id} className="mb-6">
+                  <h3 className="font-semibold text-gray-900 mb-2">
+                    {t(`sections.auditAiFull.paragraphs.${idx}.title`)}
+                  </h3>
+                  <p className="text-gray-700 whitespace-pre-line leading-relaxed">
+                    {t(`sections.auditAiFull.paragraphs.${idx}.body`)}
+                  </p>
+                </div>
+              ))}
+
+              <p className="mt-6 text-sm italic text-gray-600">
+                {t('sections.auditAiFull.closing')}
+              </p>
+            </CardContent>
+          </Card>
+
           <Card>
             <CardHeader>
               <CardTitle>{t('sections.privacy.title')}</CardTitle>

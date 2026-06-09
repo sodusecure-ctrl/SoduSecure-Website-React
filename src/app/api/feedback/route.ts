@@ -1,5 +1,5 @@
-import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
+import { sendMail } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,15 +14,13 @@ export async function POST(request: NextRequest) {
     }
 
     const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
-    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const ratingEmojis = ['😡', '😕', '😐', '🙂', '😄'];
     const ratingDisplay = rating
       ? `${ratingEmojis[rating - 1]} ${rating}/5`
       : 'Nicht bewertet';
 
-    await resend.emails.send({
-      from: 'Sodu Secure <onboarding@resend.dev>',
+    const result = await sendMail({
       to: adminEmail,
       subject: `Website Feedback – Bewertung: ${ratingDisplay}`,
       html: `
@@ -35,6 +33,13 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    if (!result.ok) {
+      console.error('[feedback] Mail failed:', result.error);
+      return NextResponse.json(
+        { error: 'Failed to send feedback', details: result.error },
+        { status: 502 },
+      );
+    }
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Feedback email error:', error);

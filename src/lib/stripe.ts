@@ -26,8 +26,8 @@ export const MAX_REPOS_PER_PLAN: Record<AuditPlan, number> = {
 };
 
 /** Einmalige Setup-/Onboarding-Gebühr (Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration). */
-export const SETUP_FEE_CENTS = 50000;
-export const SETUP_FEE_LABEL = '500 € einmalig';
+export const SETUP_FEE_CENTS = 49900;
+export const SETUP_FEE_LABEL = '499 € einmalig';
 
 type PlanPricing = {
   amountCents: number;

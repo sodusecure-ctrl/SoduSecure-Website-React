@@ -41,6 +41,10 @@ type PriceVariant = {
   per: string;
   effective?: string;
   savings?: string;
+  /** Bei Jahres-Tarifen: reduzierter Monatspreis (groß angezeigt). */
+  monthlyEquivalent?: string;
+  /** Bei Jahres-Tarifen: Label des Jahresgesamtpreises (klein darunter). */
+  totalLabel?: string;
 };
 
 type PlanCopy = {
@@ -63,6 +67,8 @@ const PLANS: PlanCopy[] = [
     yearly: {
       price: "1.068 €",
       per: "/Jahr",
+      monthlyEquivalent: "89 €",
+      totalLabel: "1.068 € im Jahr gesamt",
       effective: "89 € / Monat effektiv",
       savings: "Spare 120 €",
     },
@@ -83,6 +89,8 @@ const PLANS: PlanCopy[] = [
     yearly: {
       price: "2.148 €",
       per: "/Jahr",
+      monthlyEquivalent: "179 €",
+      totalLabel: "2.148 € im Jahr gesamt",
       effective: "179 € / Monat effektiv",
       savings: "Spare 240 €",
     },
@@ -105,6 +113,8 @@ const PLANS: PlanCopy[] = [
     yearly: {
       price: "4.848 €",
       per: "/Jahr",
+      monthlyEquivalent: "404 €",
+      totalLabel: "4.848 € im Jahr gesamt",
       effective: "404 € / Monat effektiv",
       savings: "Spare 540 €",
     },
@@ -124,10 +134,10 @@ function priceFor(plan: PlanCopy, interval: BillingInterval): PriceVariant {
   return interval === "year" ? plan.yearly : plan.monthly;
 }
 
-const SETUP_FEE_LABEL_MONTHLY = "+ 500 € einmalige Setup-Gebühr";
+const SETUP_FEE_LABEL_MONTHLY = "+ 499 € einmalige Setup-Gebühr";
 const SETUP_FEE_LABEL_YEARLY = "Setup & Onboarding inklusive";
 const SETUP_FEE_DETAIL =
-  "Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration & Onboarding-Call.";
+  "Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration & Onboarding.";
 const VAT_NOTE = "Alle Preise zzgl. 19 % MwSt.";
 
 const HERO_PILLS = [
@@ -162,7 +172,7 @@ const FEATURES = [
   {
     icon: <Github className="h-5 w-5" />,
     title: "Setup in 5 Minuten",
-    text: "GitHub-App oder Read-only Token. Onboarding-Call inklusive, ohne Pipeline-Umbau.",
+    text: "GitHub-App oder Read-only Token. Onboarding inklusive, ohne Pipeline-Umbau.",
   },
   {
     icon: <Shield className="h-5 w-5" />,
@@ -182,7 +192,7 @@ const FAQ = [
   },
   {
     q: "Was kostet das Onboarding?",
-    a: "Im Monats-Abo zahlen Sie eine einmalige Setup- und Onboarding-Gebühr von 500 € netto mit der ersten Rechnung (Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration und Onboarding-Call). Im Jahres-Abo ist das Setup & Onboarding inklusive.",
+    a: "Im Monats-Abo zahlen Sie eine einmalige Setup- und Onboarding-Gebühr von 499 € netto mit der ersten Rechnung (Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration und Onboarding). Im Jahres-Abo ist das Setup & Onboarding inklusive.",
   },
   {
     q: "Kann ich jederzeit kündigen?",
@@ -222,6 +232,7 @@ export default function SoduAuditAILanding() {
   const [phone, setPhone] = useState("");
   const [provider, setProvider] = useState<Provider | null>(null);
   const [repoUrls, setRepoUrls] = useState<string[]>([""]);
+  const [acceptTerms, setAcceptTerms] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -307,6 +318,10 @@ export default function SoduAuditAILanding() {
       );
       return;
     }
+    if (!acceptTerms) {
+      setError("Bitte bestätigen Sie die AGB und Datenschutzerklärung, um fortzufahren.");
+      return;
+    }
 
     setSubmitting(true);
     try {
@@ -322,6 +337,7 @@ export default function SoduAuditAILanding() {
           phone: phone.trim() || undefined,
           provider,
           repoUrls: cleanRepos,
+          acceptTerms,
         }),
       });
       if (!res.ok) {
@@ -488,7 +504,7 @@ export default function SoduAuditAILanding() {
       {/* PLAN SELECTOR */}
       <section ref={planRef} id="plans" className="relative">
         <div className="mx-auto max-w-7xl px-6 pb-12 pt-2 lg:pb-20">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div className="flex flex-col items-center gap-6 text-center">
             <div className="max-w-2xl">
               <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/70">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#FF3B30]" />
@@ -498,7 +514,7 @@ export default function SoduAuditAILanding() {
                 <span className="premium-silver">Drei Pläne.</span>{" "}
                 <span className="premium-headline-accent">Eine Entscheidung.</span>
               </h2>
-              <p className="mt-4 max-w-xl text-[15px] text-white/65">
+              <p className="mt-4 text-[15px] text-white/65">
                 Keine Mindestlaufzeit beim Monats-Abo. Wählen Sie den Plan, der zu Ihrer Codebasis
                 passt - upgraden oder kündigen jederzeit. Im Jahres-Abo ist Setup & Onboarding
                 inklusive.
@@ -597,13 +613,19 @@ export default function SoduAuditAILanding() {
 
                   <div className="mt-6 flex items-baseline gap-1.5">
                     <span className="premium-tabular text-5xl font-extrabold tracking-tight text-white">
-                      {variant.price}
+                      {billingInterval === "year" && variant.monthlyEquivalent
+                        ? variant.monthlyEquivalent
+                        : variant.price}
                     </span>
-                    <span className="text-sm text-white/55">{variant.per}</span>
+                    <span className="text-sm text-white/55">
+                      {billingInterval === "year" && variant.monthlyEquivalent
+                        ? "/Monat"
+                        : variant.per}
+                    </span>
                   </div>
-                  {billingInterval === "year" && variant.effective && (
+                  {billingInterval === "year" && variant.totalLabel && (
                     <div className="mt-1 flex flex-wrap items-center gap-2 text-[12px]">
-                      <span className="text-white/55">{variant.effective}</span>
+                      <span className="text-white/55">{variant.totalLabel}</span>
                       {variant.savings && (
                         <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 font-semibold text-emerald-300 ring-1 ring-emerald-500/30">
                           {variant.savings}
@@ -666,7 +688,7 @@ export default function SoduAuditAILanding() {
           <p className="mt-1.5 text-center text-[11px] text-white/40">
             {billingInterval === "year"
               ? `Im Jahres-Abo ist Setup & Onboarding inklusive. ${SETUP_FEE_DETAIL}`
-              : `Zzgl. einmaliger Setup-Gebühr von 500 € (mit der ersten Rechnung). ${SETUP_FEE_DETAIL}`}
+              : `Zzgl. einmaliger Setup-Gebühr von 499 € (mit der ersten Rechnung). ${SETUP_FEE_DETAIL}`}
           </p>
         </div>
       </section>
@@ -707,13 +729,19 @@ export default function SoduAuditAILanding() {
                       <>
                         <div className="mt-6 flex items-baseline gap-2">
                           <span className="premium-tabular text-5xl font-extrabold tracking-tight text-white">
-                            {selectedPrice.price}
+                            {billingInterval === "year" && selectedPrice.monthlyEquivalent
+                              ? selectedPrice.monthlyEquivalent
+                              : selectedPrice.price}
                           </span>
-                          <span className="text-sm text-white/55">{selectedPrice.per}</span>
+                          <span className="text-sm text-white/55">
+                            {billingInterval === "year" && selectedPrice.monthlyEquivalent
+                              ? "/Monat"
+                              : selectedPrice.per}
+                          </span>
                         </div>
-                        {billingInterval === "year" && selectedPrice.effective && (
+                        {billingInterval === "year" && selectedPrice.totalLabel && (
                           <div className="mt-1 flex flex-wrap items-center gap-2 text-[12px]">
-                            <span className="text-white/55">{selectedPrice.effective}</span>
+                            <span className="text-white/55">{selectedPrice.totalLabel}</span>
                             {selectedPrice.savings && (
                               <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 font-semibold text-emerald-300 ring-1 ring-emerald-500/30">
                                 {selectedPrice.savings}
@@ -748,7 +776,7 @@ export default function SoduAuditAILanding() {
                             {billingInterval === "month" ? (
                               <div className="flex items-center justify-between text-white/80">
                                 <dt>Setup & Onboarding (einmalig)</dt>
-                                <dd className="premium-tabular font-semibold text-white">500 €</dd>
+                                <dd className="premium-tabular font-semibold text-white">499 €</dd>
                               </div>
                             ) : (
                               <div className="flex items-center justify-between text-emerald-300/85">
@@ -1026,9 +1054,31 @@ export default function SoduAuditAILanding() {
                     </div>
                   )}
 
+                  <label className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-[12.5px] text-white/75 transition hover:border-white/20">
+                    <input
+                      type="checkbox"
+                      checked={acceptTerms}
+                      onChange={(e) => setAcceptTerms(e.target.checked)}
+                      required
+                      className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[#FF3B30]"
+                      aria-describedby="agb-hint"
+                    />
+                    <span id="agb-hint" className="leading-relaxed">
+                      Ich habe die{" "}
+                      <Link href="/terms#auditai-agb" target="_blank" rel="noopener" className="font-semibold text-white underline-offset-4 hover:underline">
+                        Allgemeinen Geschäftsbedingungen
+                      </Link>{" "}
+                      und die{" "}
+                      <Link href="/privacy" target="_blank" rel="noopener" className="font-semibold text-white underline-offset-4 hover:underline">
+                        Datenschutzerklärung
+                      </Link>{" "}
+                      gelesen und akzeptiere sie. <span className="text-[#FF8077]">*</span>
+                    </span>
+                  </label>
+
                   <button
                     type="submit"
-                    disabled={submitting || !selectedPlan}
+                    disabled={submitting || !selectedPlan || !acceptTerms}
                     className="premium-cta inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-4 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {submitting ? (
@@ -1064,7 +1114,7 @@ export default function SoduAuditAILanding() {
                     ) : (
                       <>
                         Mit der ersten Rechnung wird die einmalige{" "}
-                        <span className="font-semibold text-white/70">Setup-Gebühr von 500 €</span>{" "}
+                        <span className="font-semibold text-white/70">Setup-Gebühr von 499 €</span>{" "}
                         fällig. Danach monatlich kündbar.
                       </>
                     )}
@@ -1206,9 +1256,9 @@ export default function SoduAuditAILanding() {
                     }
                   : {
                       f: "Setup & Onboarding (einmalig)",
-                      s: "500 €",
-                      st: "500 €",
-                      p: "500 €",
+                      s: "499 €",
+                      st: "499 €",
+                      p: "499 €",
                     },
                 { f: "Audit-Bericht (DE & EN)", s: true, st: true, p: true },
                 { f: "Fertige Code-Fix-Vorschläge", s: true, st: true, p: true },

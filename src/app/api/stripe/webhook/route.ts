@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import type Stripe from 'stripe';
-import { Resend } from 'resend';
+import { sendMail } from '@/lib/mailer';
 import {
   AUDIT_PLAN_INFO,
   getPlanPricing,
@@ -39,7 +39,6 @@ async function sendEmails(session: Stripe.Checkout.Session) {
     console.warn('RESEND_API_KEY missing — skipping confirmation emails.');
     return;
   }
-  const resend = new Resend(process.env.RESEND_API_KEY);
   const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
   const meta = (session.metadata || {}) as Meta;
   const plan = isAuditPlan(meta.plan) ? meta.plan : null;
@@ -90,8 +89,7 @@ async function sendEmails(session: Stripe.Checkout.Session) {
   // 1) Admin notification
   if (adminEmail) {
     try {
-      await resend.emails.send({
-        from: 'Sodu Secure <onboarding@resend.dev>',
+      const adminRes = await sendMail({
         to: adminEmail,
         replyTo: customerEmail || undefined,
         subject: `✅ Bezahlt · ${info?.label || 'Sodu /AuditAI'} (${intervalLabel}) · ${customerName || customerEmail}`,
@@ -125,6 +123,7 @@ async function sendEmails(session: Stripe.Checkout.Session) {
           </body></html>
         `,
       });
+      if (!adminRes.ok) console.warn('[webhook] Admin-Bestätigung nicht zugestellt:', adminRes.error);
     } catch (err) {
       console.error('Admin confirmation email failed', err);
     }
@@ -133,8 +132,7 @@ async function sendEmails(session: Stripe.Checkout.Session) {
   // 2) Customer confirmation
   if (customerEmail) {
     try {
-      await resend.emails.send({
-        from: 'Sodu Secure <onboarding@resend.dev>',
+      const customerRes = await sendMail({
         to: customerEmail,
         replyTo: adminEmail || undefined,
         subject: `Willkommen bei Sodu /AuditAI · ${info?.label || 'Bestellung bestätigt'}`,
@@ -169,6 +167,7 @@ async function sendEmails(session: Stripe.Checkout.Session) {
           </body></html>
         `,
       });
+      if (!customerRes.ok) console.warn('[webhook] Kunden-Bestätigung nicht zugestellt:', customerRes.error);
     } catch (err) {
       console.error('Customer confirmation email failed', err);
     }

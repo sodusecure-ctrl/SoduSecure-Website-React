@@ -1,5 +1,5 @@
-import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
+import { sendMail } from '@/lib/mailer';
 
 type Plan = 'starter' | 'studio' | 'pro';
 
@@ -49,7 +49,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Email service not configured' }, { status: 500 });
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
     const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
     const info = PLAN_INFO[plan];
 
@@ -62,8 +61,7 @@ export async function POST(request: NextRequest) {
     const ePlanPrice = escapeHtml(info.price);
     const ePlanCadence = escapeHtml(info.cadence);
 
-    await resend.emails.send({
-      from: 'Sodu Secure <onboarding@resend.dev>',
+    const adminRes = await sendMail({
       to: adminEmail,
       replyTo: email,
       subject: `🚀 Neue ${info.label}-Anfrage · ${name || company || email}`,
@@ -91,10 +89,14 @@ export async function POST(request: NextRequest) {
         </body></html>
       `,
     });
+    if (!adminRes.ok) {
+      console.error('[get-started] Admin mail failed:', adminRes.error);
+      return NextResponse.json({ error: 'Internal error', details: adminRes.error }, { status: 502 });
+    }
 
-    await resend.emails.send({
-      from: 'Sodu Secure <onboarding@resend.dev>',
+    const userRes = await sendMail({
       to: email,
+      replyTo: adminEmail,
       subject: `✅ Ihre ${info.label}-Anfrage ist bei uns angekommen`,
       html: `
         <!DOCTYPE html>
@@ -124,6 +126,7 @@ export async function POST(request: NextRequest) {
         </body></html>
       `,
     });
+    if (!userRes.ok) console.warn('[get-started] User confirmation mail failed (non-blocking):', userRes.error);
 
     return NextResponse.json({ ok: true });
   } catch (err) {

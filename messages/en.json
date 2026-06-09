@@ -640,12 +640,91 @@
           "singleProject": "On the Pro+ plan, all enrolled repositories must belong to the same product or project of the customer (e.g. frontend, backend, mobile app and infrastructure of the same product). Spreading multiple independent products or unrelated tenants across a single Pro+ subscription is not permitted.",
           "verification": "Sodu Secure may verify whether the enrolled repositories belong to the same project. If we have reasonable cause to suspect a violation, we may pause the affected audit runs and contact you for clarification; you have no right to a refund for delays resulting from such verification.",
           "addOns": "Additional repositories outside this scope (e.g. further products or further tenants) require a separate subscription or an individual quote.",
-          "setupFee": "On the monthly subscription (Starter, Studio, Pro+) a one-time setup and onboarding fee of 500 € (plus VAT) is charged together with the first invoice. It covers repository onboarding, the baseline audit, Slack/Teams integration, and the onboarding call. On the annual subscription, setup and onboarding are already included and are not charged separately. The setup fee is non-refundable once onboarding has begun.",
+          "setupFee": "On the monthly subscription (Starter, Studio, Pro+) a one-time setup and onboarding fee of 499 € (plus VAT) is charged together with the first invoice. It covers repository onboarding, the baseline audit, Slack/Teams integration, and onboarding. On the annual subscription, setup and onboarding are already included and are not charged separately. The setup fee is non-refundable once onboarding has begun.",
           "vat": "All prices stated in these terms and on the checkout page are net prices and are understood plus the statutory value-added tax (19 % in Germany). Stripe shows the VAT separately on the invoice. For orders from other EU countries with a valid VAT ID, the reverse-charge procedure may apply.",
           "billing": "Billing takes place upfront at the selected interval (monthly or annual) via SEPA, credit card, or Apple/Google Pay through our payment processor Stripe. Statutory VAT is added on top of all amounts.",
           "cancellation": "Monthly subscriptions may be cancelled at any time effective at the end of the current billing month. Annual subscriptions may be cancelled effective at the end of the agreed 12-month term; without timely cancellation, the annual subscription renews for another 12 months. Payments already made are not refundable on a pro-rata basis.",
           "access": "We access enrolled repositories on a read-only basis only. Clones are fully deleted after each audit run."
         }
+      },
+      "auditAiFull": {
+        "title": "Sodu /AuditAI – Full Terms and Conditions",
+        "subtitle": "for the use of the sodu /AuditAI service of Sodu Secure GmbH",
+        "disclaimer": "Template. Have a lawyer review before production use. As of 2026-06-09, version 1.0.",
+        "provider": {
+          "title": "Provider",
+          "body": "Sodu Secure GmbH, Riemannstr. 8, 10961 Berlin, represented by the managing directors Kerim Koc and Burak Saridag, Local Court Charlottenburg (Berlin), HRB 284458 B, VAT ID: DE461988885, info@sodusecure.com (hereinafter the “Provider”)."
+        },
+        "paragraphs": [
+          {
+            "id": "1",
+            "title": "§ 1 Scope",
+            "body": "1.1 These terms apply to all contracts for the use of the “sodu /AuditAI” service between the Provider and the Customer.\n\n1.2 These terms apply exclusively to entrepreneurs, legal entities under public law and special funds under public law within the meaning of § 14 BGB.\n\n1.3 Conflicting or deviating terms of the Customer do not become part of the contract unless the Provider expressly agrees to them in text form."
+          },
+          {
+            "id": "2",
+            "title": "§ 2 Conclusion of Contract (Online)",
+            "body": "2.1 The presentation of plans and services does not constitute a binding offer by the Provider. The Provider submits a specific offer to the Customer in text form or via an online customer portal.\n\n2.2 The contract is concluded when the Customer accepts the offer, in particular through confirmation in the online customer portal (e.g. clicking “Accept offer”), through confirmation in text form by e-mail, or by starting to use the service. A handwritten signature is not required for the conclusion of the contract.\n\n2.3 By accepting the offer, the Customer acknowledges these terms as binding for the contractual relationship.\n\n2.4 The booked plan and remuneration result from the respective offer in conjunction with the service and price overview under § 4."
+          },
+          {
+            "id": "3",
+            "title": "§ 3 Subject Matter and Onboarding",
+            "body": "3.1 The sodu /AuditAI service is an AI-supported, continuous security analysis of the source code provided by the Customer. The Provider identifies potential vulnerabilities and provides the Customer with reports including concrete fix recommendations.\n\n3.2 Onboarding takes place by the Customer inviting the bot user “SoduAuditAi” (https://github.com/SoduAuditAi) with read-only access to the relevant repository/repositories. The Provider receives no write access at any time. Service delivery starts automatically upon acceptance of the invitation.\n\n3.3 The specific scope of services depends on the booked plan according to § 4."
+          },
+          {
+            "id": "4",
+            "title": "§ 4 Plans, Service and Price Overview",
+            "body": "A one-time setup fee of EUR 499.00 net per contract applies (included in the annual subscription). The monthly fee depends on the booked plan:\n\nStarter – EUR 99.00 net / month\n• 1 repository\n• Up to 2 contributors\n• Monthly scan and security report\n• Delivery in German and English\n• Concrete fix suggestions\n• Support via e-mail\n\nStudio – EUR 199.00 net / month\n• 1 repository\n• Unlimited contributors\n• Weekly security report\n• Trend history and triage of findings\n• Priority support via e-mail and chat\n• Delivery in German and English, concrete fix suggestions\n\nPro+ – EUR 449.00 net / month\n• Multiple repositories (scope per offer)\n• Unlimited contributors\n• Weekly security report\n• Quarterly full penetration test (1 repository)\n• Dedicated point of contact\n• Delivery in German and English, concrete fix suggestions\n\nAll prices are net plus applicable statutory VAT. A penetration test included in the plan is covered by the monthly fee."
+          },
+          {
+            "id": "5",
+            "title": "§ 5 Customer Obligations",
+            "body": "5.1 The Customer invites the bot user with read access and provides the repositories to be audited.\n\n5.2 The Customer names a contact person and keeps their contact data up to date.\n\n5.3 The Customer warrants that they are authorized to have the provided code analyzed by the Provider and that no third-party rights conflict with such analysis."
+          },
+          {
+            "id": "6",
+            "title": "§ 6 Remuneration and Payment",
+            "body": "6.1 The one-time setup fee (EUR 499.00 net) is due at the start of the contract (included in the annual subscription). The monthly fee depends on the booked plan (§ 4) and is invoiced upfront at the chosen interval (monthly or annual). All prices are net plus statutory VAT.\n\n6.2 Invoices are due within 14 days of the invoice date without deduction.\n\n6.3 Payment is made by bank transfer to: Sodu Secure GmbH, IBAN DE59 1009 0000 3099 0090 03, BIC BEVODEBB, Berliner Volksbank. Alternatively, payment may be made by SEPA direct debit or credit card via our payment processor Stripe; the Customer issues a corresponding mandate.\n\n6.4 In the event of payment default, the Provider is entitled to charge default interest at the statutory rate and to suspend the service after prior notice."
+          },
+          {
+            "id": "7",
+            "title": "§ 7 Term and Termination",
+            "body": "7.1 The contract starts upon acceptance of the offer or upon acceptance of the bot invitation, whichever occurs first. Monthly subscriptions run indefinitely; annual subscriptions run for 12 months from contract start.\n\n7.2 Monthly subscriptions may be terminated by either party at any time effective at the end of the current calendar month in text form. Annual subscriptions may be terminated effective at the end of the 12-month term; without timely termination, the annual subscription renews for another 12 months. The right to extraordinary termination for good cause remains unaffected.\n\n7.3 The one-time setup fee and services already rendered are not refunded. Upon contract end, the Customer revokes the bot user's access; the Provider deletes the data stored for service delivery within 30 days, unless statutory retention obligations apply."
+          },
+          {
+            "id": "8",
+            "title": "§ 8 Rights to Code, Confidentiality (NDA)",
+            "body": "8.1 The source code and all rights therein remain with the Customer. The Provider receives read-only access exclusively and uses it only for service delivery.\n\n8.2 Confidential information is any information one party discloses to the other, in particular source code, credentials, reports, identified vulnerabilities, as well as business, customer, and technical information.\n\n8.3 Both parties treat the other party's confidential information strictly confidentially, use it solely for the purpose of this contract, and only make it accessible to employees or commissioned third parties who need it for performance of the contract and have been bound to confidentiality.\n\n8.4 Excluded is information that is or becomes publicly known, was lawfully obtained from third parties, was already known, or must be disclosed due to legal or governmental order.\n\n8.5 The confidentiality obligation applies during the term and three years thereafter. The Provider processes code in isolated environments and stores no long-lived Customer credentials."
+          },
+          {
+            "id": "9",
+            "title": "§ 9 Data Protection",
+            "body": "9.1 To the extent the Provider processes personal data on behalf of the Customer, the parties conclude a data processing agreement pursuant to Art. 28 GDPR. Both parties comply with applicable data protection laws."
+          },
+          {
+            "id": "10",
+            "title": "§ 10 Quality of Service",
+            "body": "10.1 The Provider performs the analysis with the diligence of a competent provider according to the current state of the art.\n\n10.2 The Provider owes a diligent investigation but no specific result. It cannot be guaranteed that all vulnerabilities are detected. The service does not release the Customer from their own diligence and review obligations."
+          },
+          {
+            "id": "11",
+            "title": "§ 11 Liability",
+            "body": "11.1 The Provider is liable only in accordance with the following provisions. Any further liability is excluded.\n\n11.2 Mandatory liability for damages resulting from injury to life, body, or health, intent and gross negligence, and under the Product Liability Act, remains unaffected.\n\n11.3 For slightly negligent breach of an essential contractual obligation (cardinal obligation), liability is limited to the foreseeable damage typical for the contract. Liability for slight negligence is otherwise excluded.\n\n11.4 The Provider is in particular not liable for vulnerabilities or security incidents that are not, not fully, or not timely detected, nor for lost profits, data loss, business interruption, reputational damage, indirect or consequential damages, unless mandatorily liable under section 11.2.\n\n11.5 To the extent liability is not excluded, it is limited in amount to the remuneration paid in the twelve months preceding the event causing the damage."
+          },
+          {
+            "id": "12",
+            "title": "§ 12 Support",
+            "body": "12.1 The Customer addresses support requests to info@sodusecure.com. The scope of support depends on the booked plan. The Provider strives for timely processing during normal business hours."
+          },
+          {
+            "id": "13",
+            "title": "§ 13 Final Provisions",
+            "body": "13.1 Amendments and supplements require text form. This also applies to the amendment of this clause.\n\n13.2 Should individual provisions be or become invalid, the remainder of the contract remains valid.\n\n13.3 The law of the Federal Republic of Germany applies, excluding the UN Convention on Contracts for the International Sale of Goods.\n\n13.4 Exclusive place of jurisdiction is, insofar as the Customer is a merchant, legal entity under public law, or special fund under public law, Berlin. Place of performance is Berlin."
+          }
+        ],
+        "closing": "These terms become part of the contract upon acceptance of the offer by the Customer.",
+        "acceptanceLabel": "I have read and accept the Terms and Conditions.",
+        "acceptanceLink": "Open Terms"
       },
       "privacy": {
         "title": "Privacy Policy",
@@ -4484,7 +4563,7 @@
     "stats": {
       "years": "years of experience",
       "tests": "Tests carried out",
-      "countries": "Countries served",
+      "countries": "Customers in DACH region",
       "satisfaction": "Certified Pentesters"
     },
     "whoWeAre": {

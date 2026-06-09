@@ -640,12 +640,91 @@
           "singleProject": "Beim Pro+ Plan müssen alle hinterlegten Repositories zum selben Produkt bzw. Projekt der Kund:in gehören (z. B. Frontend, Backend, Mobile-App und Infrastructure desselben Produkts). Eine Aufteilung mehrerer voneinander unabhängiger Produkte oder Mandanten auf ein einzelnes Pro+ Abo ist nicht zulässig.",
           "verification": "Sodu Secure ist berechtigt, die Projektzugehörigkeit der angemeldeten Repositories zu prüfen. Bei begründetem Verdacht eines Verstoßes können wir den/die betroffenen Audit-Lauf/Läufe pausieren und Sie zur Klarstellung kontaktieren; ein Anspruch auf Erstattung wegen daraus resultierender Verzögerungen besteht nicht.",
           "addOns": "Zusätzliche Repositories außerhalb dieses Rahmens (z. B. weitere Produkte, weitere Mandanten) erfordern ein separates Abonnement oder ein individuelles Angebot.",
-          "setupFee": "Im Monats-Abo (Starter, Studio, Pro+) wird mit der ersten Rechnung eine einmalige Setup- und Onboarding-Gebühr in Höhe von 500 € (zzgl. MwSt.) fällig. Sie deckt die Anbindung der Repositories, das Baseline-Audit, die Slack-/Teams-Integration sowie den Onboarding-Call ab. Im Jahres-Abo ist das Setup & Onboarding bereits inklusive und wird nicht zusätzlich berechnet. Die Setup-Gebühr ist nicht erstattungsfähig, sobald das Onboarding begonnen hat.",
+          "setupFee": "Im Monats-Abo (Starter, Studio, Pro+) wird mit der ersten Rechnung eine einmalige Setup- und Onboarding-Gebühr in Höhe von 499 € (zzgl. MwSt.) fällig. Sie deckt die Anbindung der Repositories, das Baseline-Audit, die Slack-/Teams-Integration sowie das Onboarding ab. Im Jahres-Abo ist das Setup & Onboarding bereits inklusive und wird nicht zusätzlich berechnet. Die Setup-Gebühr ist nicht erstattungsfähig, sobald das Onboarding begonnen hat.",
           "vat": "Alle in diesen Bedingungen sowie auf der Bestellseite ausgewiesenen Preise sind Nettopreise und verstehen sich zuzüglich der gesetzlichen Umsatzsteuer (in Deutschland 19 %). Stripe weist die Umsatzsteuer auf der Rechnung gesondert aus. Bei Bestellungen aus dem EU-Ausland mit gültiger USt-IdNr. greift gegebenenfalls das Reverse-Charge-Verfahren.",
           "billing": "Die Abrechnung erfolgt im gewählten Intervall (monatlich oder jährlich) im Voraus per SEPA, Kreditkarte oder Apple/Google Pay über unseren Zahlungsdienstleister Stripe. Auf alle Beträge wird die gesetzliche Umsatzsteuer aufgeschlagen.",
           "cancellation": "Monats-Abos können jederzeit zum Ende des laufenden Abrechnungsmonats gekündigt werden. Jahres-Abos können zum Ende der vereinbarten 12-monatigen Laufzeit gekündigt werden; ohne fristgerechte Kündigung verlängert sich das Jahres-Abo um weitere 12 Monate. Bereits geleistete Zahlungen sind nicht anteilig erstattungsfähig.",
           "access": "Wir greifen ausschließlich read-only auf die hinterlegten Repositories zu. Klone werden nach jedem Audit-Lauf vollständig gelöscht."
         }
+      },
+      "auditAiFull": {
+        "title": "Sodu /AuditAI – Vollständige Allgemeine Geschäftsbedingungen",
+        "subtitle": "für die Nutzung des Dienstes sodu /AuditAI der Sodu Secure GmbH",
+        "disclaimer": "Mustervorlage. Vor produktivem Einsatz anwaltlich prüfen lassen. Stand: 09.06.2026, Version 1.0.",
+        "provider": {
+          "title": "Anbieter",
+          "body": "Sodu Secure GmbH, Riemannstr. 8, 10961 Berlin, vertreten durch die Geschäftsführer Kerim Koc und Burak Saridag, Amtsgericht Charlottenburg (Berlin), HRB 284458 B, USt-IdNr.: DE461988885, info@sodusecure.com (nachfolgend „Anbieter“)."
+        },
+        "paragraphs": [
+          {
+            "id": "1",
+            "title": "§ 1 Geltungsbereich",
+            "body": "1.1 Diese AGB gelten für alle Verträge über die Nutzung des Dienstes „sodu /AuditAI“ zwischen dem Anbieter und dem Kunden.\n\n1.2 Diese AGB gelten ausschließlich gegenüber Unternehmern, juristischen Personen des öffentlichen Rechts und öffentlich-rechtlichen Sondervermögen im Sinne des § 14 BGB.\n\n1.3 Entgegenstehende oder von diesen AGB abweichende Bedingungen des Kunden werden nicht Vertragsbestandteil, es sei denn, der Anbieter stimmt ihrer Geltung ausdrücklich in Textform zu."
+          },
+          {
+            "id": "2",
+            "title": "§ 2 Vertragsschluss (Online-Abschluss)",
+            "body": "2.1 Die Darstellung der Tarife und Leistungen stellt kein bindendes Angebot des Anbieters dar. Der Anbieter unterbreitet dem Kunden ein konkretes Angebot in Textform oder über ein Online-Kundencenter.\n\n2.2 Der Vertrag kommt zustande, indem der Kunde das Angebot annimmt, insbesondere durch Bestätigung im Online-Kundencenter (z. B. Klick auf „Angebot annehmen“), durch Bestätigung in Textform per E-Mail oder durch Aufnahme der Nutzung des Dienstes. Eine eigenhändige Unterschrift ist für den Vertragsschluss nicht erforderlich.\n\n2.3 Mit der Annahme des Angebots erkennt der Kunde diese AGB als für das Vertragsverhältnis verbindlich an.\n\n2.4 Der gebuchte Tarif sowie die Vergütung ergeben sich aus dem jeweiligen Angebot in Verbindung mit der Leistungs- und Preisübersicht nach § 4."
+          },
+          {
+            "id": "3",
+            "title": "§ 3 Leistungsgegenstand und Anbindung",
+            "body": "3.1 Der Dienst sodu /AuditAI ist eine KI-gestützte, kontinuierliche Sicherheitsanalyse des vom Kunden bereitgestellten Quellcodes. Der Anbieter identifiziert mögliche Schwachstellen und stellt dem Kunden Berichte mit konkreten Fix-Empfehlungen bereit.\n\n3.2 Die Anbindung erfolgt, indem der Kunde den Bot-Benutzer „SoduAuditAi“ (https://github.com/SoduAuditAi) mit ausschließlich lesendem Zugriff (Read-only) in das/die betroffene(n) Repository/Repositories einlädt. Der Anbieter erhält zu keinem Zeitpunkt Schreibzugriff. Die Leistungserbringung beginnt automatisiert mit Annahme der Einladung.\n\n3.3 Der konkrete Leistungsumfang richtet sich nach dem gebuchten Tarif gemäß § 4."
+          },
+          {
+            "id": "4",
+            "title": "§ 4 Tarife, Leistungs- und Preisübersicht",
+            "body": "Es gilt eine einmalige Startgebühr von 499,00 EUR netto je Vertrag (im Jahres-Abo ist die Startgebühr inklusive). Die monatliche Nutzungsgebühr richtet sich nach dem gebuchten Tarif:\n\nStarter – 99,00 EUR netto / Monat\n• 1 Repository\n• Bis zu 2 Contributoren\n• Monatlicher Scan und Sicherheitsbericht\n• Lieferung auf Deutsch und Englisch\n• Konkrete Fix-Vorschläge\n• Support per E-Mail\n\nStudio – 199,00 EUR netto / Monat\n• 1 Repository\n• Unbegrenzte Anzahl an Contributoren\n• Wöchentlicher Sicherheitsbericht\n• Trend-Historie und Triage der Findings\n• Priority-Support per E-Mail und Chat\n• Lieferung auf Deutsch und Englisch, konkrete Fix-Vorschläge\n\nPro+ – 449,00 EUR netto / Monat\n• Mehrere Repositories (Umfang gemäß Angebot)\n• Unbegrenzte Anzahl an Contributoren\n• Wöchentlicher Sicherheitsbericht\n• Quartalsweiser vollständiger Penetrationstest (1 Repository)\n• Dedizierter Ansprechpartner\n• Lieferung auf Deutsch und Englisch, konkrete Fix-Vorschläge\n\nAlle Preise verstehen sich zzgl. der jeweils geltenden gesetzlichen Umsatzsteuer. Ein im Tarif enthaltener Penetrationstest ist mit der monatlichen Gebühr abgegolten."
+          },
+          {
+            "id": "5",
+            "title": "§ 5 Mitwirkungspflichten des Kunden",
+            "body": "5.1 Der Kunde lädt den Bot-Benutzer mit lesendem Zugriff ein und stellt die zu prüfenden Repositories bereit.\n\n5.2 Der Kunde benennt einen Ansprechpartner und hält dessen Kontaktdaten aktuell.\n\n5.3 Der Kunde sichert zu, dass er berechtigt ist, den bereitgestellten Code durch den Anbieter analysieren zu lassen, und dass dem keine Rechte Dritter entgegenstehen."
+          },
+          {
+            "id": "6",
+            "title": "§ 6 Vergütung und Zahlung",
+            "body": "6.1 Die einmalige Startgebühr (499,00 EUR netto) fällt mit Vertragsbeginn an (im Jahres-Abo ist sie inklusive). Die monatliche Nutzungsgebühr richtet sich nach dem gebuchten Tarif (§ 4) und wird im gewählten Intervall (monatlich oder jährlich) im Voraus berechnet. Alle Preise verstehen sich zzgl. gesetzlicher Umsatzsteuer.\n\n6.2 Rechnungen sind innerhalb von 14 Tagen nach Rechnungsdatum ohne Abzug fällig.\n\n6.3 Die Zahlung erfolgt per Überweisung auf folgendes Konto: Sodu Secure GmbH, IBAN DE59 1009 0000 3099 0090 03, BIC BEVODEBB, Berliner Volksbank. Alternativ kann die Zahlung per SEPA-Lastschrift oder Kreditkarte über unseren Zahlungsdienstleister Stripe erfolgen; hierfür erteilt der Kunde ein entsprechendes Mandat.\n\n6.4 Bei Zahlungsverzug ist der Anbieter berechtigt, Verzugszinsen in gesetzlicher Höhe zu berechnen und die Leistung nach vorheriger Ankündigung auszusetzen."
+          },
+          {
+            "id": "7",
+            "title": "§ 7 Vertragslaufzeit und Kündigung",
+            "body": "7.1 Der Vertrag beginnt mit der Annahme des Angebots bzw. mit der Annahme der Bot-Einladung, je nachdem, was zuerst eintritt. Monats-Abos laufen auf unbestimmte Zeit, Jahres-Abos laufen über 12 Monate ab Vertragsbeginn.\n\n7.2 Monats-Abos können von beiden Parteien jederzeit zum Ende des laufenden Kalendermonats in Textform gekündigt werden. Jahres-Abos können zum Ende der vereinbarten 12-monatigen Laufzeit gekündigt werden; ohne fristgerechte Kündigung verlängert sich das Jahres-Abo um weitere 12 Monate. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.\n\n7.3 Die einmalige Startgebühr sowie bereits erbrachte Leistungen werden nicht erstattet. Mit Vertragsende entzieht der Kunde dem Bot-Benutzer den Zugriff; der Anbieter löscht die zur Leistungserbringung gespeicherten Daten innerhalb von 30 Tagen, soweit keine gesetzlichen Aufbewahrungspflichten bestehen."
+          },
+          {
+            "id": "8",
+            "title": "§ 8 Rechte am Code, Geheimhaltung (NDA)",
+            "body": "8.1 Der Quellcode und sämtliche Rechte daran verbleiben beim Kunden. Der Anbieter erhält ausschließlich lesenden Zugriff und nutzt diesen allein zum Zweck der Leistungserbringung.\n\n8.2 Vertrauliche Informationen sind alle Informationen, die eine Partei der anderen offenlegt, insbesondere Quellcode, Zugangsdaten, Berichte, gefundene Schwachstellen sowie Geschäfts-, Kunden- und technische Informationen.\n\n8.3 Beide Parteien behandeln vertrauliche Informationen der jeweils anderen Partei streng vertraulich, verwenden sie ausschließlich für Zwecke dieses Vertrages und machen sie nur Mitarbeitern oder beauftragten Dritten zugänglich, die diese zur Vertragsdurchführung benötigen und zuvor zur Vertraulichkeit verpflichtet wurden.\n\n8.4 Ausgenommen sind Informationen, die nachweislich öffentlich bekannt sind oder werden, rechtmäßig von Dritten erlangt wurden, bereits bekannt waren oder aufgrund gesetzlicher oder behördlicher Anordnung offengelegt werden müssen.\n\n8.5 Die Geheimhaltungspflicht gilt während der Vertragslaufzeit und drei Jahre darüber hinaus fort. Der Anbieter verarbeitet den Code in isolierten Umgebungen und speichert keine langlebigen Zugangsdaten des Kunden."
+          },
+          {
+            "id": "9",
+            "title": "§ 9 Datenschutz",
+            "body": "9.1 Soweit der Anbieter personenbezogene Daten im Auftrag des Kunden verarbeitet, schließen die Parteien einen Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO. Beide Parteien halten die geltenden datenschutzrechtlichen Bestimmungen ein."
+          },
+          {
+            "id": "10",
+            "title": "§ 10 Leistungsgüte",
+            "body": "10.1 Der Anbieter erbringt die Analyse mit der Sorgfalt eines fachkundigen Anbieters nach dem aktuellen Stand der Technik.\n\n10.2 Der Anbieter schuldet eine sorgfältige Untersuchung, jedoch keinen bestimmten Erfolg. Es kann nicht garantiert werden, dass sämtliche Schwachstellen erkannt werden. Der Dienst entbindet den Kunden nicht von eigenen Sorgfalts- und Prüfpflichten."
+          },
+          {
+            "id": "11",
+            "title": "§ 11 Haftung",
+            "body": "11.1 Der Anbieter haftet nur nach Maßgabe der folgenden Bestimmungen. Eine darüber hinausgehende Haftung ist ausgeschlossen.\n\n11.2 Unberührt und zwingend bleibt die Haftung für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit, bei Vorsatz und grober Fahrlässigkeit sowie nach dem Produkthaftungsgesetz.\n\n11.3 Bei leicht fahrlässiger Verletzung einer wesentlichen Vertragspflicht (Kardinalpflicht) ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Eine Haftung für leichte Fahrlässigkeit im Übrigen ist ausgeschlossen.\n\n11.4 Der Anbieter haftet insbesondere nicht für Schwachstellen oder Sicherheitsvorfälle, die nicht, nicht vollständig oder nicht rechtzeitig erkannt werden, sowie nicht für entgangenen Gewinn, Datenverlust, Betriebsunterbrechungen, Reputationsschäden, mittelbare Schäden oder Folgeschäden, soweit nicht nach Ziffer 11.2 zwingend gehaftet wird.\n\n11.5 Soweit die Haftung nicht ausgeschlossen ist, ist sie der Höhe nach auf die in den letzten zwölf Monaten vor dem schadensauslösenden Ereignis gezahlte Vergütung begrenzt."
+          },
+          {
+            "id": "12",
+            "title": "§ 12 Support",
+            "body": "12.1 Support-Anfragen richtet der Kunde an info@sodusecure.com. Der Umfang des Supports richtet sich nach dem gebuchten Tarif. Der Anbieter bemüht sich um zeitnahe Bearbeitung während der üblichen Geschäftszeiten."
+          },
+          {
+            "id": "13",
+            "title": "§ 13 Schlussbestimmungen",
+            "body": "13.1 Änderungen und Ergänzungen bedürfen der Textform. Dies gilt auch für die Änderung dieser Klausel.\n\n13.2 Sollten einzelne Bestimmungen unwirksam sein oder werden, bleibt der Vertrag im Übrigen wirksam.\n\n13.3 Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.\n\n13.4 Ausschließlicher Gerichtsstand ist, soweit der Kunde Kaufmann, juristische Person des öffentlichen Rechts oder öffentlich-rechtliches Sondervermögen ist, Berlin. Erfüllungsort ist Berlin."
+          }
+        ],
+        "closing": "Diese AGB werden mit der Annahme des Angebots durch den Kunden Vertragsbestandteil.",
+        "acceptanceLabel": "Ich habe die AGB gelesen und akzeptiere sie.",
+        "acceptanceLink": "AGB öffnen"
       },
       "privacy": {
         "title": "Datenschutzrichtlinie",
@@ -4245,7 +4324,7 @@
     "stats": {
       "years": "Jahre Erfahrung",
       "tests": "Durchgeführte Tests",
-      "countries": "Bediente Länder",
+      "countries": "Kunden im DACH-Raum",
       "satisfaction": "Zertifizierte Pentester"
     },
     "whoWeAre": {

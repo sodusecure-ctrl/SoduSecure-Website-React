@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+import { sendMail } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,15 +12,17 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Admin email not configured' }, { status: 500 });
     }
 
-    await resend.emails.send({
-      from: 'Sodu Secure <onboarding@resend.dev>',
+    const result = await sendMail({
       to: adminEmail,
       subject: `Tracking: ${action}`,
       html: `<p>Action: ${action}</p><p>Timestamp: ${timestamp}</p>`,
     });
 
-    console.log('Tracking email sent for:', action);
-    return NextResponse.json({ success: true });
+    if (!result.ok) {
+      console.error('[track] Mail failed:', result.error);
+      return NextResponse.json({ error: 'Failed to track', details: result.error }, { status: 502 });
+    }
+    return NextResponse.json({ success: true, id: result.id });
   } catch (error) {
     console.error('Tracking error:', error);
     return NextResponse.json({ error: 'Failed to track' }, { status: 500 });

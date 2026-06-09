@@ -1,5 +1,5 @@
-﻿import { Resend } from 'resend';
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
+import { sendMail } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -23,13 +23,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
     const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
 
-    // Send email to admin
-    console.log('Sending admin email to:', adminEmail);
-    await resend.emails.send({
-      from: 'Sodu Secure <onboarding@resend.dev>',
+    const adminRes = await sendMail({
       to: adminEmail,
       replyTo: email,
       subject: `🔐 Neue Pilotprogramm-Bewerbung von ${contactName} (${company})`,
@@ -68,13 +64,17 @@ export async function POST(request: NextRequest) {
         </html>
       `,
     });
-    console.log('Admin email sent successfully');
+    if (!adminRes.ok) {
+      console.error('[pilot] Admin mail failed:', adminRes.error);
+      return NextResponse.json(
+        { error: 'Failed to send email', details: adminRes.error },
+        { status: 502 },
+      );
+    }
 
-    // Send confirmation email to applicant
-    console.log('Sending confirmation email to:', email);
-    await resend.emails.send({
-      from: 'Sodu Secure <onboarding@resend.dev>',
+    const userRes = await sendMail({
       to: email,
+      replyTo: adminEmail,
       subject: '✅ Ihre Bewerbung wurde erhalten – Berlin KMU Pilotprogramm 2026',
       html: `
         <!DOCTYPE html>
@@ -127,7 +127,7 @@ export async function POST(request: NextRequest) {
         </html>
       `,
     });
-    console.log('User confirmation email sent successfully');
+    if (!userRes.ok) console.warn('[pilot] User confirmation mail failed (non-blocking):', userRes.error);
 
     return NextResponse.json(
       { message: 'Email sent successfully' },

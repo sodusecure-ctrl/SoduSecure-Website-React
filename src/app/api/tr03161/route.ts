@@ -1,5 +1,5 @@
-import { Resend } from 'resend';
 import { NextRequest, NextResponse } from 'next/server';
+import { sendMail } from '@/lib/mailer';
 
 export async function POST(request: NextRequest) {
   try {
@@ -40,14 +40,11 @@ export async function POST(request: NextRequest) {
     }
 
     const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
-    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const applicationTypeLabel = applicationType || 'Nicht angegeben';
     const developmentStageLabel = developmentStage || 'Nicht angegeben';
 
-    // Send email to admin
-    await resend.emails.send({
-      from: 'Sodu Secure <onboarding@resend.dev>',
+    const adminRes = await sendMail({
       to: adminEmail,
       replyTo: email,
       subject: `Neue TR-03161 Anfrage von ${fullName} (${company})`,
@@ -66,11 +63,17 @@ export async function POST(request: NextRequest) {
         <p><em>Diese Nachricht wurde über das BSI TR-03161 Anfrageformular auf der Sodu Secure Website gesendet.</em></p>
       `,
     });
+    if (!adminRes.ok) {
+      console.error('[tr03161] Admin mail failed:', adminRes.error);
+      return NextResponse.json(
+        { error: 'Failed to send email', details: adminRes.error },
+        { status: 502 },
+      );
+    }
 
-    // Send confirmation email to user
-    await resend.emails.send({
-      from: 'Sodu Secure <onboarding@resend.dev>',
+    const userRes = await sendMail({
       to: email,
+      replyTo: adminEmail,
       subject: '✅ Ihre TR-03161 Anfrage wurde empfangen – Sodu Secure',
       html: `
         <!DOCTYPE html>
@@ -128,6 +131,7 @@ export async function POST(request: NextRequest) {
         </html>
       `,
     });
+    if (!userRes.ok) console.warn('[tr03161] User confirmation mail failed (non-blocking):', userRes.error);
 
     return NextResponse.json(
       { message: 'Email sent successfully' },

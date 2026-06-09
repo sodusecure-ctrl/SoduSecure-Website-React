@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import { sendMail } from '@/lib/mailer';
 import {
   AUDIT_PLAN_INFO,
   MAX_REPOS_PER_PLAN,
@@ -54,7 +54,6 @@ async function sendLeadEmail(args: {
 }) {
   if (!process.env.RESEND_API_KEY || !process.env.NEXT_PUBLIC_ADMIN_EMAIL) return;
   const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
-  const resend = new Resend(process.env.RESEND_API_KEY);
   const info = AUDIT_PLAN_INFO[args.plan];
   const pricing = getPlanPricing(args.plan, args.interval);
   const intervalLabel = args.interval === 'year' ? 'jährlich' : 'monatlich';
@@ -79,8 +78,7 @@ async function sendLeadEmail(args: {
   };
 
   try {
-    await resend.emails.send({
-      from: 'Sodu Secure <onboarding@resend.dev>',
+    const res = await sendMail({
       to: adminEmail,
       replyTo: args.email,
       subject: `🛒 Stripe-Checkout gestartet · ${info.label} (${intervalLabel}) · ${args.name || args.company || args.email}`,
@@ -113,6 +111,7 @@ async function sendLeadEmail(args: {
         </body></html>
       `,
     });
+    if (!res.ok) console.warn('[checkout] Lead-Mail nicht zugestellt:', res.error);
   } catch (err) {
     console.error('Lead email failed (non-blocking)', err);
   }
@@ -131,6 +130,7 @@ export async function POST(request: NextRequest) {
       provider,
       repoUrls,
       repoUrl, // legacy single-repo fallback
+      acceptTerms,
     } = body as {
       plan?: string;
       billingInterval?: string;
@@ -141,10 +141,18 @@ export async function POST(request: NextRequest) {
       provider?: string;
       repoUrls?: unknown;
       repoUrl?: string;
+      acceptTerms?: boolean;
     };
 
     if (!isAuditPlan(plan)) {
       return NextResponse.json({ error: 'Ungültiger Plan' }, { status: 400 });
+    }
+
+    if (acceptTerms !== true) {
+      return NextResponse.json(
+        { error: 'Bitte AGB und Datenschutzerklärung akzeptieren.' },
+        { status: 400 },
+      );
     }
 
     const interval: BillingInterval = isBillingInterval(billingInterval)
@@ -248,7 +256,9 @@ export async function POST(request: NextRequest) {
     ];
 
     // Setup-/Onboarding-Gebühr nur beim Monats-Abo. Beim Jahres-Abo ist Onboarding inklusive.
-    if (interval === 'month') {
+    // Mit DISABLE_SETUP_FEE=true wird die Gebühr komplett ausgeschaltet.
+    const setupFeeDisabled = process.env.DISABLE_SETUP_FEE === 'true';
+    if (interval === 'month' && !setupFeeDisabled) {
       const setupPriceId = process.env.STRIPE_PRICE_SETUP_FEE;
       const setupLineItem: import('stripe').Stripe.Checkout.SessionCreateParams.LineItem = setupPriceId
         ? { price: setupPriceId, quantity: 1, ...taxRatesField }
@@ -262,7 +272,7 @@ export async function POST(request: NextRequest) {
               product_data: {
                 name: 'Sodu /AuditAI · Setup & Onboarding',
                 description:
-                  'Einmalige Einrichtung: Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration und Onboarding-Call.',
+                  'Einmalige Einrichtung: Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration und Onboarding.',
               },
             },
           };
@@ -289,6 +299,13 @@ export async function POST(request: NextRequest) {
       ...(taxRateId ? { default_tax_rates: [taxRateId] } : {}),
     };
 
+    // Optional Stripe-seitige AGB-Zustimmung: nur aktivieren, wenn STRIPE_TOS_URL gesetzt.
+    // Stripe verlangt zusätzlich, dass im Dashboard (Settings → Public details) eine
+    // Terms-of-Service-URL hinterlegt ist, sonst schlägt die API mit IntegrationError fehl.
+    const requireStripeTos = process.env.STRIPE_REQUIRE_TOS === 'true';
+    const consentCollection: import('stripe').Stripe.Checkout.SessionCreateParams.ConsentCollection | undefined =
+      requireStripeTos ? { terms_of_service: 'required' } : undefined;
+
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
@@ -301,6 +318,7 @@ export async function POST(request: NextRequest) {
       locale: 'de',
       metadata,
       subscription_data: subscriptionData,
+      ...(consentCollection ? { consent_collection: consentCollection } : {}),
       success_url: `${origin}/sodu-audit-ai?status=success&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}/sodu-audit-ai?status=cancelled`,
     });

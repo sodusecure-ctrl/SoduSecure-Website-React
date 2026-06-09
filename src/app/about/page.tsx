@@ -103,15 +103,15 @@ export default function AboutSection() {
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">10+</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">5+</div>
               <div className="text-white/60 text-xs sm:text-sm">{t('stats.years')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">500+</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">100+</div>
               <div className="text-white/60 text-xs sm:text-sm">{t('stats.tests')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">10+</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">DACH</div>
               <div className="text-white/60 text-xs sm:text-sm">{t('stats.countries')}</div>
             </div>
             <div className="text-center">
