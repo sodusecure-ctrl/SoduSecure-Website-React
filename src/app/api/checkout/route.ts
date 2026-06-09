@@ -3,7 +3,6 @@ import { sendMail } from '@/lib/mailer';
 import {
   AUDIT_PLAN_INFO,
   MAX_REPOS_PER_PLAN,
-  SETUP_FEE_CENTS,
   getOrCreateVatTaxRateId,
   getPlanPriceId,
   getPlanPricing,
@@ -254,30 +253,6 @@ export async function POST(request: NextRequest) {
     const lineItems: import('stripe').Stripe.Checkout.SessionCreateParams.LineItem[] = [
       subscriptionLineItem,
     ];
-
-    // Setup-/Onboarding-Gebühr nur beim Monats-Abo. Beim Jahres-Abo ist Onboarding inklusive.
-    // Mit DISABLE_SETUP_FEE=true wird die Gebühr komplett ausgeschaltet.
-    const setupFeeDisabled = process.env.DISABLE_SETUP_FEE === 'true';
-    if (interval === 'month' && !setupFeeDisabled) {
-      const setupPriceId = process.env.STRIPE_PRICE_SETUP_FEE;
-      const setupLineItem: import('stripe').Stripe.Checkout.SessionCreateParams.LineItem = setupPriceId
-        ? { price: setupPriceId, quantity: 1, ...taxRatesField }
-        : {
-            quantity: 1,
-            ...taxRatesField,
-            price_data: {
-              currency: 'eur',
-              unit_amount: SETUP_FEE_CENTS,
-              tax_behavior: 'exclusive',
-              product_data: {
-                name: 'Sodu /AuditAI · Setup & Onboarding',
-                description:
-                  'Einmalige Einrichtung: Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration und Onboarding.',
-              },
-            },
-          };
-      lineItems.push(setupLineItem);
-    }
 
     // Stripe metadata limits: 50 keys, 500 chars/value. Join repos as JSON string.
     const reposJoined = cleanedRepos.join('\n').slice(0, 490);

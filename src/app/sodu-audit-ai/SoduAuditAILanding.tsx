@@ -134,10 +134,7 @@ function priceFor(plan: PlanCopy, interval: BillingInterval): PriceVariant {
   return interval === "year" ? plan.yearly : plan.monthly;
 }
 
-const SETUP_FEE_LABEL_MONTHLY = "+ 499 € einmalige Setup-Gebühr";
-const SETUP_FEE_LABEL_YEARLY = "Setup & Onboarding inklusive";
-const SETUP_FEE_DETAIL =
-  "Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration & Onboarding.";
+const SETUP_INCLUDED_LABEL = "Setup & Onboarding inklusive";
 const VAT_NOTE = "Alle Preise zzgl. 19 % MwSt.";
 
 const HERO_PILLS = [
@@ -192,7 +189,7 @@ const FAQ = [
   },
   {
     q: "Was kostet das Onboarding?",
-    a: "Im Monats-Abo zahlen Sie eine einmalige Setup- und Onboarding-Gebühr von 499 € netto mit der ersten Rechnung (Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration und Onboarding). Im Jahres-Abo ist das Setup & Onboarding inklusive.",
+    a: "Nichts extra. Das Setup & Onboarding (Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration) ist im Plan inklusive – keine separate Setup-Gebühr.",
   },
   {
     q: "Kann ich jederzeit kündigen?",
@@ -516,8 +513,7 @@ export default function SoduAuditAILanding() {
               </h2>
               <p className="mt-4 text-[15px] text-white/65">
                 Keine Mindestlaufzeit beim Monats-Abo. Wählen Sie den Plan, der zu Ihrer Codebasis
-                passt - upgraden oder kündigen jederzeit. Im Jahres-Abo ist Setup & Onboarding
-                inklusive.
+                passt - upgraden oder kündigen jederzeit. Setup & Onboarding immer inklusive.
               </p>
             </div>
 
@@ -633,17 +629,8 @@ export default function SoduAuditAILanding() {
                       )}
                     </div>
                   )}
-                  <div
-                    className={[
-                      "mt-1.5 text-[11px] font-medium",
-                      billingInterval === "year"
-                        ? "text-emerald-300/90"
-                        : "text-white/55",
-                    ].join(" ")}
-                  >
-                    {billingInterval === "year"
-                      ? SETUP_FEE_LABEL_YEARLY
-                      : SETUP_FEE_LABEL_MONTHLY}
+                  <div className="mt-1.5 text-[11px] font-medium text-emerald-300/90">
+                    {SETUP_INCLUDED_LABEL}
                   </div>
                   <div className="mt-0.5 text-[10px] text-white/40">
                     zzgl. 19 % MwSt.
@@ -686,9 +673,7 @@ export default function SoduAuditAILanding() {
             · Read-only Zugriff
           </p>
           <p className="mt-1.5 text-center text-[11px] text-white/40">
-            {billingInterval === "year"
-              ? `Im Jahres-Abo ist Setup & Onboarding inklusive. ${SETUP_FEE_DETAIL}`
-              : `Zzgl. einmaliger Setup-Gebühr von 499 € (mit der ersten Rechnung). ${SETUP_FEE_DETAIL}`}
+            Setup & Onboarding inklusive: Repo-Anbindung, Baseline-Audit, Slack/Teams-Integration & Onboarding.
           </p>
         </div>
       </section>
@@ -773,17 +758,10 @@ export default function SoduAuditAILanding() {
                                 {selectedPrice.price}
                               </dd>
                             </div>
-                            {billingInterval === "month" ? (
-                              <div className="flex items-center justify-between text-white/80">
-                                <dt>Setup & Onboarding (einmalig)</dt>
-                                <dd className="premium-tabular font-semibold text-white">499 €</dd>
-                              </div>
-                            ) : (
-                              <div className="flex items-center justify-between text-emerald-300/85">
-                                <dt>Setup & Onboarding</dt>
-                                <dd className="premium-tabular font-semibold">inklusive</dd>
-                              </div>
-                            )}
+                            <div className="flex items-center justify-between text-emerald-300/85">
+                              <dt>Setup & Onboarding</dt>
+                              <dd className="premium-tabular font-semibold">inklusive</dd>
+                            </div>
                           </dl>
                           <p className="mt-3 border-t border-white/10 pt-2.5 text-[11px] text-white/50">
                             Anschließend nur noch {selectedPrice.price}
@@ -1106,17 +1084,11 @@ export default function SoduAuditAILanding() {
                       AGB
                     </Link>{" "}
                     zu. Alle Preise zzgl. 19 % MwSt.{" "}
+                    <span className="font-semibold text-white/70">Setup & Onboarding inklusive.</span>{" "}
                     {billingInterval === "year" ? (
-                      <>
-                        <span className="font-semibold text-white/70">Setup & Onboarding inklusive</span>{" "}
-                        im Jahres-Abo. Jahresabo, kündbar zum Laufzeitende.
-                      </>
+                      <>Jahresabo, kündbar zum Laufzeitende.</>
                     ) : (
-                      <>
-                        Mit der ersten Rechnung wird die einmalige{" "}
-                        <span className="font-semibold text-white/70">Setup-Gebühr von 499 €</span>{" "}
-                        fällig. Danach monatlich kündbar.
-                      </>
+                      <>Monatlich kündbar.</>
                     )}
                   </p>
                 </form>
@@ -1247,19 +1219,12 @@ export default function SoduAuditAILanding() {
                 { f: "Repositories", s: "1", st: "1", p: "bis zu 4 (1 Projekt)" },
                 { f: "Contributoren", s: "1", st: "Unbegrenzt", p: "Unbegrenzt" },
                 { f: "Audit-Cadence", s: "Monatlich", st: "Wöchentlich", p: "Wöchentlich" },
-                billingInterval === "year"
-                  ? {
-                      f: "Setup & Onboarding (einmalig)",
-                      s: "Inklusive",
-                      st: "Inklusive",
-                      p: "Inklusive",
-                    }
-                  : {
-                      f: "Setup & Onboarding (einmalig)",
-                      s: "499 €",
-                      st: "499 €",
-                      p: "499 €",
-                    },
+                {
+                  f: "Setup & Onboarding",
+                  s: "Inklusive",
+                  st: "Inklusive",
+                  p: "Inklusive",
+                },
                 { f: "Audit-Bericht (DE & EN)", s: true, st: true, p: true },
                 { f: "Fertige Code-Fix-Vorschläge", s: true, st: true, p: true },
                 { f: "OWASP Top 10 + CWE-Mapping", s: true, st: true, p: true },
