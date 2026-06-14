@@ -1,8 +1,7 @@
 "use client";
 
-import { Award, Building2, CheckCircle, Eye, Headphones, Lock, Shield, Target, TrendingUp, Users } from 'lucide-react';
+import { Award, Building2, CheckCircle, Cloud, Code2, Crosshair, Eye, GitBranch, Globe, Headphones, Lock, Network, Shield, Target, TrendingUp, Users } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 import { Button } from '../../components/ui/button';
@@ -13,19 +12,28 @@ export default function AboutSection() {
 
   const pathname = usePathname();
 
-  // Get team members from translations
-  const teamMembersData = t.raw('team.members') as Array<{
-    name: string;
-    role: string;
-    certifications: string[];
-    image: string;
+  // Get specializations from translations
+  const specializationsData = t.raw('team.specializations') as Array<{
+    icon: string;
+    title: string;
+    description: string;
+    tags: string[];
   }>;
 
-  const teamMembers = teamMembersData.map(member => ({
-    name: member.name,
-    role: member.role,
-    image: member.image,
-    tags: member.certifications
+  const specIcons: Record<string, React.ReactNode> = {
+    web: <Globe className="w-6 h-6 sm:w-7 sm:h-7" />,
+    api: <Code2 className="w-6 h-6 sm:w-7 sm:h-7" />,
+    cloud: <Cloud className="w-6 h-6 sm:w-7 sm:h-7" />,
+    network: <Network className="w-6 h-6 sm:w-7 sm:h-7" />,
+    devsecops: <GitBranch className="w-6 h-6 sm:w-7 sm:h-7" />,
+    redteam: <Crosshair className="w-6 h-6 sm:w-7 sm:h-7" />,
+  };
+
+  const specializations = specializationsData.map(spec => ({
+    icon: specIcons[spec.icon] ?? <Shield className="w-6 h-6 sm:w-7 sm:h-7" />,
+    title: spec.title,
+    description: spec.description,
+    tags: spec.tags,
   }));
 
   const features = [
@@ -227,7 +235,7 @@ export default function AboutSection() {
       </div>
 
       {/* Team Section */}
-      <div id='#team' className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 bg-[#16141A]">
+      <div id='team' className="py-8 sm:py-12 lg:py-16 px-4 sm:px-6 bg-[#16141A]">
         <div className="container mx-auto max-w-7xl">
           {/* Header */}
           <div className="mb-8 sm:mb-12 text-center">
@@ -239,39 +247,25 @@ export default function AboutSection() {
             </p>
           </div>
 
-          {/* Team Grid */}
+          {/* Specializations Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 lg:mb-16">
-            {teamMembers.map((member, index) => (
+            {specializations.map((spec, index) => (
               <div key={index} className="group">
-                <div className="bg-[#16141A] border border-white/10 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-square overflow-hidden bg-[#0A0A0B]">
-                    {member.image ? (
-                      <Image
-                        src={member.image}
-                        alt={member.name}
-                        width={1000}
-                        height={1000}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-[#0A0A0B]">
-                        <span className="text-2xl font-bold text-white/50">{member.name}</span>
-                      </div>
-                    )}
+                <div className="h-full bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 rounded-2xl p-6 sm:p-8 hover:border-[#FF3B30]/40 hover:shadow-[0_20px_50px_-20px_rgba(255,59,48,0.35)] transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 sm:mb-6 rounded-xl bg-[#FF3B30]/10 border border-[#FF3B30]/30 flex items-center justify-center text-[#FF3B30] group-hover:bg-[#FF3B30] group-hover:text-white transition-colors">
+                    {spec.icon}
                   </div>
-                  <div className="p-4 sm:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold mb-1 text-white">{member.name}</h3>
-                    <p className="text-white/60 text-xs sm:text-sm mb-3 sm:mb-4">{member.role}</p>
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                      {member.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="px-2 sm:px-3 py-1 bg-white/5 text-white/75 text-xs rounded-full border border-white/10"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 text-white">{spec.title}</h3>
+                  <p className="text-white/65 text-sm leading-relaxed mb-4 sm:mb-5">{spec.description}</p>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {spec.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2 sm:px-3 py-1 bg-white/5 text-white/80 text-xs rounded-full border border-white/10"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>

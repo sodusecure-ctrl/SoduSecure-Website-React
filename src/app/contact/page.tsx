@@ -46,6 +46,10 @@ export default function ContactSection() {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
 
+  // Shared styling for inputs on the dark card
+  const inputBase =
+    'w-full h-11 bg-white/[0.03] border-white/10 text-white placeholder:text-white/35 focus-visible:border-[#FF3B30]/50 focus-visible:ring-[#FF3B30]/20';
+
   // Email validation regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -172,26 +176,31 @@ export default function ContactSection() {
   return (
     <div className="bg-black">
       {/* Hero Section */}
-      <div className="bg-black text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <div className="container mx-auto max-w-7xl">
-          <button className="border border-red-600 text-[#FF3B30] px-4 sm:px-6 py-2 rounded hover:bg-red-600 hover:text-white transition-colors mb-4 sm:mb-6 text-xs sm:text-sm font-medium">
+      <div className="relative overflow-hidden bg-black text-white py-14 sm:py-20 lg:py-28 px-4 sm:px-6">
+        {/* Decorative background */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,59,48,0.18),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+        <div className="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-[#FF3B30]/20 blur-[120px]" />
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <span className="inline-flex items-center gap-2 border border-[#FF3B30]/40 bg-[#FF3B30]/10 text-[#FF6B61] px-4 sm:px-5 py-2 rounded-full mb-5 sm:mb-7 text-xs sm:text-sm font-medium">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#FF3B30] animate-pulse" />
             {t('hero.badge')}
-          </button>
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
+          </span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-5 leading-[1.1] max-w-4xl">
             {t('hero.title')}
           </h1>
-          <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl">
+          <p className="text-white/60 text-sm sm:text-base lg:text-lg max-w-2xl leading-relaxed">
             {t('hero.description')}
           </p>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="bg-[#16141A] py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
+      <div className="bg-[#0E0C11] py-10 sm:py-14 lg:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Form */}
-          <div>
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 leading-tight">
+          <div className="bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 rounded-2xl p-5 sm:p-8 lg:p-10 shadow-[0_30px_70px_-40px_rgba(0,0,0,0.9)] h-fit">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 leading-tight text-white">
               {t('form.title')}
             </h2>
 
@@ -225,7 +234,7 @@ export default function ContactSection() {
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6" noValidate>
               {/* Full Name Field */}
               <div data-error={!!errors.fullName}>
-                <label className="block text-sm font-medium mb-1.5 sm:mb-2">
+                <label className="block text-sm font-medium mb-1.5 sm:mb-2 text-white/80">
                   {t('form.fields.fullName.label')} <span className="text-[#FF3B30]">*</span>
                 </label>
                 <Input
@@ -233,7 +242,7 @@ export default function ContactSection() {
                   placeholder={t('form.fields.fullName.placeholder')}
                   value={formData.fullName}
                   onChange={(e) => handleInputChange('fullName', e.target.value)}
-                  className={`w-full ${errors.fullName ? 'border-red-500 focus:ring-red-500' : ''}`}
+                  className={`${inputBase} ${errors.fullName ? 'border-red-500 focus:ring-red-500' : ''}`}
                   required
                   disabled={isSubmitting}
                 />
@@ -247,13 +256,13 @@ export default function ContactSection() {
 
               {/* Company Field */}
               <div>
-                <label className="block text-sm font-medium mb-1.5 sm:mb-2">{t('form.fields.company.label')}</label>
+                <label className="block text-sm font-medium mb-1.5 sm:mb-2 text-white/80">{t('form.fields.company.label')}</label>
                 <Input
                   type="text"
                   placeholder={t('form.fields.company.placeholder')}
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
-                  className="w-full"
+                  className={inputBase}
                   disabled={isSubmitting}
                 />
               </div>
@@ -269,7 +278,7 @@ export default function ContactSection() {
                     placeholder={t('form.fields.email.placeholder')}
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
-                    className={`w-full ${errors.email ? 'border-red-500 focus:ring-red-500' : ''}`}
+                    className={`${inputBase} ${errors.email ? 'border-red-500 focus:ring-red-500' : ''}`}
                     required
                     disabled={isSubmitting}
                   />
@@ -283,13 +292,13 @@ export default function ContactSection() {
 
                 {/* Phone Field */}
                 <div data-error={!!errors.phone}>
-                  <label className="block text-sm font-medium mb-1.5 sm:mb-2">{t('form.fields.phone.label')}</label>
+                  <label className="block text-sm font-medium mb-1.5 sm:mb-2 text-white/80">{t('form.fields.phone.label')}</label>
                   <Input
                     type="tel"
                     placeholder={t('form.fields.phone.placeholder')}
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className={`w-full ${errors.phone ? 'border-red-500 focus:ring-red-500' : ''}`}
+                    className={`${inputBase} ${errors.phone ? 'border-red-500 focus:ring-red-500' : ''}`}
                     disabled={isSubmitting}
                   />
                   {errors.phone && (
@@ -303,14 +312,14 @@ export default function ContactSection() {
 
               {/* Message Field */}
               <div data-error={!!errors.message}>
-                <label className="block text-sm font-medium mb-1.5 sm:mb-2">
+                <label className="block text-sm font-medium mb-1.5 sm:mb-2 text-white/80">
                   {t('form.fields.message.label')} <span className="text-[#FF3B30]">*</span>
                 </label>
                 <Textarea
                   placeholder={t('form.fields.message.placeholder')}
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
-                  className={`w-full min-h-32 ${errors.message ? 'border-red-500 focus:ring-red-500' : ''}`}
+                  className={`w-full min-h-32 bg-white/[0.03] border-white/10 text-white placeholder:text-white/35 focus-visible:border-[#FF3B30]/50 focus-visible:ring-[#FF3B30]/20 ${errors.message ? 'border-red-500 focus:ring-red-500' : ''}`}
                   required
                   disabled={isSubmitting}
                 />
@@ -336,7 +345,7 @@ export default function ContactSection() {
                   disabled={isSubmitting}
                   className={`mt-0.5 ${errors.privacyAccepted ? 'border-red-500' : ''}`}
                 />
-                <label htmlFor="privacy" className="text-xs sm:text-sm text-gray-600 cursor-pointer select-none">
+                <label htmlFor="privacy" className="text-xs sm:text-sm text-white/60 cursor-pointer select-none">
                   {t('form.privacy.text')} <br />
                   {t('form.privacy.policy')} *
                 </label>
@@ -351,7 +360,7 @@ export default function ContactSection() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-red-600 hover:premium-cta text-white py-4 sm:py-6 text-sm sm:text-base lg:text-lg font-medium flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full premium-cta hover:premium-cta text-white rounded-xl py-4 sm:py-6 text-sm sm:text-base lg:text-lg font-semibold flex items-center justify-center gap-2 shadow-[0_18px_40px_-16px_rgba(255,59,48,0.7)] hover:shadow-[0_22px_50px_-14px_rgba(255,59,48,0.85)] transition-shadow disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
@@ -372,11 +381,11 @@ export default function ContactSection() {
           {/* Contact Information */}
           <div className="space-y-6 sm:space-y-8">
             {/* Interactive Map */}
-            <a 
-              href="https://www.google.com/maps/dir/?api=1&destination=Riemannstr+8,+10961+Berlin,+Germany" 
-              target="_blank" 
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=Riemannstr+8,+10961+Berlin,+Germany"
+              target="_blank"
               rel="noopener noreferrer"
-              className="block bg-black rounded-lg h-40 sm:h-48 lg:h-56 relative overflow-hidden group cursor-pointer hover:ring-2 hover:ring-red-600 transition-all"
+              className="block bg-black rounded-2xl h-40 sm:h-48 lg:h-56 relative overflow-hidden group cursor-pointer ring-1 ring-white/10 hover:ring-2 hover:ring-[#FF3B30] transition-all"
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2429.8668395447386!2d13.389599776762938!3d52.49383337207086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84fb1e1d8b8b5%3A0x6a9b4c5d7e8f9a0b!2sRiemannstra%C3%9Fe%208%2C%2010961%20Berlin!5e0!3m2!1sen!2sde!4v1234567890123!5m2!1sen!2sde"
@@ -398,50 +407,50 @@ export default function ContactSection() {
 
             {/* Contact Details */}
             <div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-6 leading-tight">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-6 leading-tight text-white">
                 {t('info.title')}
               </h3>
 
               <div className="space-y-3 sm:space-y-4">
-                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-white/10 rounded-lg">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3 sm:gap-4 p-4 bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 rounded-xl hover:border-[#FF3B30]/30 transition-colors">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm sm:text-base mb-1">{t('info.address.title')}</p>
-                    <p className="text-xs sm:text-sm text-gray-600">{t('info.address.line1')}</p>
-                    <p className="text-xs sm:text-sm text-gray-600">{t('info.address.line2')}</p>
+                    <p className="font-semibold text-sm sm:text-base mb-1 text-white">{t('info.address.title')}</p>
+                    <p className="text-xs sm:text-sm text-white/55">{t('info.address.line1')}</p>
+                    <p className="text-xs sm:text-sm text-white/55">{t('info.address.line2')}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-white/10 rounded-lg">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3 sm:gap-4 p-4 bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 rounded-xl hover:border-[#FF3B30]/30 transition-colors">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm sm:text-base mb-1">{t('info.email.title')}</p>
-                    <p className="text-xs sm:text-sm text-gray-600 break-all">{t('info.email.value')}</p>
+                    <p className="font-semibold text-sm sm:text-base mb-1 text-white">{t('info.email.title')}</p>
+                    <p className="text-xs sm:text-sm text-white/55 break-all">{t('info.email.value')}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-white/10 rounded-lg">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3 sm:gap-4 p-4 bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 rounded-xl hover:border-[#FF3B30]/30 transition-colors">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm sm:text-base mb-1">{t('info.phone.title')}</p>
-                    <p className="text-xs sm:text-sm text-gray-600">{t('info.phone.value')}</p>
+                    <p className="font-semibold text-sm sm:text-base mb-1 text-white">{t('info.phone.title')}</p>
+                    <p className="text-xs sm:text-sm text-white/55">{t('info.phone.value')}</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 border border-white/10 rounded-lg">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#FF3B30]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-3 sm:gap-4 p-4 bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 rounded-xl hover:border-[#FF3B30]/30 transition-colors">
+                  <div className="w-9 h-9 sm:w-11 sm:h-11 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-sm sm:text-base mb-1">{t('info.hours.title')}</p>
-                    <p className="text-xs sm:text-sm text-gray-600">{t('info.hours.line1')}</p>
-                    <p className="text-xs sm:text-sm text-gray-600">{t('info.hours.line2')}</p>
+                    <p className="font-semibold text-sm sm:text-base mb-1 text-white">{t('info.hours.title')}</p>
+                    <p className="text-xs sm:text-sm text-white/55">{t('info.hours.line1')}</p>
+                    <p className="text-xs sm:text-sm text-white/55">{t('info.hours.line2')}</p>
                   </div>
                 </div>
               </div>
@@ -449,28 +458,28 @@ export default function ContactSection() {
 
             {/* Quick Contact */}
             <div>
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-6 leading-tight">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 sm:mb-6 leading-tight text-white">
                 {t('quickContact.title')}
               </h3>
 
               <div className="space-y-3 sm:space-y-4">
-                <div className="p-3 sm:p-4 border border-white/10 rounded-lg">
+                <div className="p-4 bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 rounded-xl hover:border-[#FF3B30]/30 transition-colors">
                   <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
                     <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30] flex-shrink-0" />
-                    <p className="font-semibold text-sm sm:text-base">{t('quickContact.email.title')}</p>
+                    <p className="font-semibold text-sm sm:text-base text-white">{t('quickContact.email.title')}</p>
                   </div>
-                  <p className="text-xs sm:text-sm text-gray-600 break-all">{t('quickContact.email.value')}</p>
+                  <p className="text-xs sm:text-sm text-white/55 break-all">{t('quickContact.email.value')}</p>
                 </div>
 
-                <div className="p-3 sm:p-4 border border-white/10 rounded-lg">
+                <div className="p-4 bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 rounded-xl hover:border-[#FF3B30]/30 transition-colors">
                   <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30] flex-shrink-0" />
-                    <p className="font-semibold text-sm sm:text-base">{t('quickContact.call.title')}</p>
+                    <p className="font-semibold text-sm sm:text-base text-white">{t('quickContact.call.title')}</p>
                   </div>
-                  <p className="text-xs sm:text-sm text-gray-600">{t('quickContact.call.value')}</p>
+                  <p className="text-xs sm:text-sm text-white/55">{t('quickContact.call.value')}</p>
                 </div>
 
-                <div className="p-3 sm:p-4 bg-red-600 text-white rounded-lg">
+                <div className="p-4 sm:p-5 premium-cta text-white rounded-xl shadow-[0_18px_40px_-18px_rgba(255,59,48,0.7)]">
                   <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
                     <Phone className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                     <p className="font-semibold text-sm sm:text-base">{t('quickContact.emergency.title')}</p>
@@ -481,12 +490,12 @@ export default function ContactSection() {
                   </p>
                 </div>
 
-                <div className="p-3 sm:p-4 border border-white/10 rounded-lg">
+                <div className="p-4 bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 rounded-xl hover:border-[#FF3B30]/30 transition-colors">
                   <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
                     <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-[#FF3B30] flex-shrink-0" />
-                    <p className="font-semibold text-sm sm:text-base">{t('quickContact.chat.title')}</p>
+                    <p className="font-semibold text-sm sm:text-base text-white">{t('quickContact.chat.title')}</p>
                   </div>
-                  <p className="text-xs sm:text-sm text-gray-600">{t('quickContact.chat.value')}</p>
+                  <p className="text-xs sm:text-sm text-white/55">{t('quickContact.chat.value')}</p>
                 </div>
               </div>
             </div>
@@ -506,31 +515,31 @@ export default function ContactSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-            <div className="bg-gray-900/50 p-4 sm:p-6 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{t('faq.questions.start.question')}</h3>
-              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 p-5 sm:p-6 rounded-2xl hover:border-[#FF3B30]/30 transition-colors">
+              <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3 text-white">{t('faq.questions.start.question')}</h3>
+              <p className="text-white/55 text-xs sm:text-sm leading-relaxed">
                 {t('faq.questions.start.answer')}
               </p>
             </div>
 
-            <div className="bg-gray-900/50 p-4 sm:p-6 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{t('faq.questions.response.question')}</h3>
-              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            <div className="bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 p-5 sm:p-6 rounded-2xl hover:border-[#FF3B30]/30 transition-colors">
+              <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3 text-white">{t('faq.questions.response.question')}</h3>
+              <p className="text-white/55 text-xs sm:text-sm leading-relaxed">
                 {t('faq.questions.response.answer')}
               </p>
             </div>
 
-            <div className="bg-gray-900/50 p-4 sm:p-6 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{t('faq.questions.nda.question')}</h3>
-              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            <div className="bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 p-5 sm:p-6 rounded-2xl hover:border-[#FF3B30]/30 transition-colors">
+              <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3 text-white">{t('faq.questions.nda.question')}</h3>
+              <p className="text-white/55 text-xs sm:text-sm leading-relaxed">
                 {t('faq.questions.nda.answer')}
               </p>
             </div>
 
-            <div className="bg-gray-900/50 p-4 sm:p-6 rounded-lg">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{t('faq.questions.industries.question')}</h3>
-              <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
+            <div className="bg-gradient-to-b from-[#1B181F] to-[#141217] border border-white/10 p-5 sm:p-6 rounded-2xl hover:border-[#FF3B30]/30 transition-colors">
+              <h3 className="text-base sm:text-lg lg:text-xl font-semibold mb-2 sm:mb-3 text-white">{t('faq.questions.industries.question')}</h3>
+              <p className="text-white/55 text-xs sm:text-sm leading-relaxed">
                 {t('faq.questions.industries.answer')}
               </p>
             </div>

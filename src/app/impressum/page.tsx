@@ -16,7 +16,7 @@ export default function Impressum() {
           <p className="text-gray-500 text-sm">Angaben gemäß § 5 TMG</p>
         </div>
 
-        <div className="bg-[#16141A] rounded-2xl shadow-sm border border-white/10 divide-y divide-white/8">
+        <div className="bg-white rounded-2xl shadow-[0_20px_60px_-30px_rgba(0,0,0,0.25)] border border-gray-200 divide-y divide-gray-100">
 
           {/* Anbieter */}
           <section className="p-6 sm:p-8">

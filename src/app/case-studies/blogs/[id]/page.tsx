@@ -243,14 +243,14 @@ export default function BlogArticleDetail() {
           <div className="lg:hidden">
             <button
               onClick={() => setShowMobileTOC(!showMobileTOC)}
-              className="w-full flex items-center justify-between p-4 bg-[#16141A] border border-white/10 rounded-lg hover:bg-white/5 transition-colors"
+              className="w-full flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl shadow-sm hover:bg-gray-50 transition-colors"
             >
               <span className="font-semibold text-gray-900">{t('tableOfContents')}</span>
               <ChevronDown className={`w-5 h-5 text-gray-500 transition-transform ${showMobileTOC ? 'rotate-180' : ''}`} />
             </button>
 
             {showMobileTOC && (
-              <div className="mt-3 bg-[#16141A] border border-white/10 rounded-lg p-4">
+              <div className="mt-3 bg-white border border-gray-200 rounded-xl shadow-sm p-4">
                 <nav className="space-y-2">
                   {tocItems.map((item) => (
                     <a
@@ -326,7 +326,7 @@ export default function BlogArticleDetail() {
           {/* Main Content */}
           <div className="lg:col-span-3 space-y-6 sm:space-y-8">
             {/* Introduction */}
-            <section id="introduction" className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section id="introduction" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.introduction.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4">
                 {t('sections.introduction.content')}
@@ -347,7 +347,7 @@ export default function BlogArticleDetail() {
             </section>
 
             {/* Common Attack Vectors */}
-            <section className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.commonAttackVectors.title')}</h2>
               <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                 {Array.from({ length: 6 }, (_, i) => t(`sections.commonAttackVectors.items.${i}`)).map((item, index) => (
@@ -360,7 +360,7 @@ export default function BlogArticleDetail() {
             </section>
 
             {/* Impact Analysis */}
-            <section id="impact-analysis" className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section id="impact-analysis" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.impactAnalysis.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
                 {t('sections.impactAnalysis.content')}
@@ -390,7 +390,7 @@ export default function BlogArticleDetail() {
             </section>
 
             {/* Mitigation Strategies */}
-            <section id="mitigation-strategies" className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section id="mitigation-strategies" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.mitigationStrategies.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
                 {t('sections.mitigationStrategies.content')}
@@ -409,7 +409,7 @@ export default function BlogArticleDetail() {
             </section>
 
             {/* Conclusion */}
-            <section id="conclusion" className="bg-[#16141A] border border-white/10 rounded-lg p-4 sm:p-6 lg:p-8">
+            <section id="conclusion" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.conclusion.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4">
                 {t('sections.conclusion.content1')}
@@ -439,7 +439,7 @@ export default function BlogArticleDetail() {
                   <div className="max-w-md mx-auto">
                     <Input
                       placeholder={t('cta.emailPlaceholder')}
-                      className="bg-[#16141A] text-gray-900 border-0 mb-3 text-sm sm:text-base"
+                      className="bg-white text-gray-900 placeholder:text-gray-400 border-0 mb-3 text-sm sm:text-base"
                       value={ctaEmail}
                       onChange={(event) => setCtaEmail(event.target.value)}
                     />
@@ -514,18 +514,18 @@ export default function BlogArticleDetail() {
       </div>
 
       {/* Floating Mobile Actions */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#16141A] border-t border-white/10 p-4 shadow-lg">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-[0_-8px_24px_-12px_rgba(0,0,0,0.15)]">
         <div className="container mx-auto">
           <div className="flex items-center justify-between gap-4">
             <div className="flex-1">
-              <p className="font-semibold text-sm">{t('mobileActions.enjoyedArticle')}</p>
+              <p className="font-semibold text-sm text-gray-900">{t('mobileActions.enjoyedArticle')}</p>
               <p className="text-gray-600 text-xs">{t('mobileActions.shareWithNetwork')}</p>
             </div>
             <div className="flex items-center gap-2">
               <Button
                 size="sm"
                 variant="outline"
-                className="border-white/12"
+                className="border-gray-300"
                 onClick={handleShare}
               >
                 <Share2 className="w-4 h-4" />

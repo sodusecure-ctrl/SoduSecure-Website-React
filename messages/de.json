@@ -4359,26 +4359,44 @@
       }
     },
     "team": {
-      "title": "Lernen Sie unser Team kennen",
-      "subtitle": "Branchenführende Sicherheitsexperten mit bewiesenen Erfolgsbilanzen und Top-Zertifizierungen.",
-      "members": [
+      "title": "Unsere Spezialgebiete",
+      "subtitle": "Fokussierte Expertise statt Gesichter. Jedes Gebiet wird von zertifizierten Experten manuell getestet.",
+      "specializations": [
         {
-          "name": "Kerim K.",
-          "role": "Pentester",
-          "certifications": ["OSCP+", "Comptia Security +"],
-          "image": "/images/teams/kerim-koc.jpeg"
+          "icon": "web",
+          "title": "Web Application Security",
+          "description": "Manuelle Tests nach OWASP – tiefgehende Logik-, Authentifizierungs- und Session-Analyse.",
+          "tags": ["OWASP", "Auth", "Business Logic"]
         },
         {
-          "name": "Markus F.",
-          "role": "Application Security Expert",
-          "certifications": ["OSCP+"],
-          "image": ""
+          "icon": "api",
+          "title": "API & Application Security",
+          "description": "Prüfung von REST- und GraphQL-APIs, Berechtigungskonzepten und Schnittstellen auf Schwachstellen.",
+          "tags": ["REST", "GraphQL", "AuthZ"]
         },
         {
-          "name": "Burak S.",
-          "role": "Cloud Security Spezialist",
-          "certifications": ["AWS Security", "Azure Security"],
-          "image": "/images/teams/burak-s.jpeg"
+          "icon": "cloud",
+          "title": "Cloud Security",
+          "description": "Sicherheitsanalyse von AWS- und Azure-Umgebungen, Konfigurationen und Identitätsmanagement.",
+          "tags": ["AWS", "Azure", "IAM"]
+        },
+        {
+          "icon": "network",
+          "title": "Netzwerk & Infrastruktur",
+          "description": "Interne und externe Penetrationstests von Netzwerken, Servern und Active Directory.",
+          "tags": ["Intern", "Extern", "Active Directory"]
+        },
+        {
+          "icon": "devsecops",
+          "title": "DevSecOps",
+          "description": "Sicherheit in CI/CD-Pipelines sowie Container- und Kubernetes-Umgebungen.",
+          "tags": ["CI/CD", "Container", "Kubernetes"]
+        },
+        {
+          "icon": "redteam",
+          "title": "Red Teaming",
+          "description": "Realistische Angriffssimulationen, um Erkennungs- und Abwehrfähigkeiten zu prüfen.",
+          "tags": ["Adversary Simulation", "Phishing", "Evasion"]
         }
       ]
     },

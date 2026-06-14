@@ -6,12 +6,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { ChevronDown, ChevronRight, Globe, Menu, Shield, Sparkles, X } from 'lucide-react';
+import { ChevronDown, ChevronRight, Globe, Shield, Sparkles, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { localizeHref } from '@/lib/localeRouting';
 import { useBrand } from '@/components/landing/BrandContext';
 
@@ -28,6 +28,21 @@ export default function Header() {
   const t = useTranslations('header');
   const { brand, setBrand } = useBrand();
   const isPentest = brand === 'pentest';
+
+  // Lock body scroll while the mobile menu is open.
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    const original = document.body.style.overflow;
+    if (isMobileMenuOpen) document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [isMobileMenuOpen]);
+
+  // Close the mobile menu whenever the route changes.
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
 
   const toLocalizedPath = (path: string) => localizeHref(path, isEnglish);
 
@@ -98,17 +113,43 @@ export default function Header() {
     }`;
 
   return (
-    <nav className="sticky top-0 z-50 select-none border-b border-white/10 bg-[#0A0A0B]/95 backdrop-blur-xl">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+    <>
+      <nav className="sticky top-0 z-50 select-none border-b border-white/10 bg-[#0A0A0B]/95 backdrop-blur-xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between gap-3 sm:h-[68px]">
           {/* Left: hamburger + logo + brand toggle */}
           <div className="flex items-center gap-2">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="rounded-full p-2 text-white/80 transition hover:bg-white/10 hover:text-white lg:hidden"
+              className={
+                'relative flex h-10 w-10 items-center justify-center rounded-full transition-colors duration-300 lg:hidden ' +
+                (isMobileMenuOpen
+                  ? 'bg-[#FF3B30] text-white shadow-[0_4px_14px_rgba(255,59,48,0.45)]'
+                  : 'text-white/80 hover:bg-white/10 hover:text-white')
+              }
               aria-label="Toggle menu"
+              aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              <span className="relative block h-4 w-5" aria-hidden>
+                <span
+                  className={
+                    'absolute left-0 block h-0.5 w-5 rounded-full bg-current transition-all duration-300 ease-out ' +
+                    (isMobileMenuOpen ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-0')
+                  }
+                />
+                <span
+                  className={
+                    'absolute left-0 top-1/2 block h-0.5 w-5 -translate-y-1/2 rounded-full bg-current transition-all duration-200 ease-out ' +
+                    (isMobileMenuOpen ? 'opacity-0' : 'opacity-100')
+                  }
+                />
+                <span
+                  className={
+                    'absolute left-0 block h-0.5 w-5 rounded-full bg-current transition-all duration-300 ease-out ' +
+                    (isMobileMenuOpen ? 'bottom-1/2 translate-y-1/2 -rotate-45' : 'bottom-0')
+                  }
+                />
+              </span>
             </button>
 
             <button
@@ -245,32 +286,65 @@ export default function Header() {
           </div>
         </div>
       </div>
+      </nav>
 
-      {/* Mobile sheet */}
+      {/* ===== MOBILE MENU (rendered outside <nav> so `fixed` is viewport-relative) ===== */}
+      {/* Backdrop */}
       <div
+        onClick={() => setIsMobileMenuOpen(false)}
+        aria-hidden
         className={
-          'fixed inset-0 z-40 transform bg-[#0A0A0B] transition-transform duration-300 ease-out lg:hidden ' +
+          'fixed inset-0 z-[60] bg-black/70 backdrop-blur-sm transition-opacity duration-300 lg:hidden ' +
+          (isMobileMenuOpen ? 'opacity-100' : 'pointer-events-none opacity-0')
+        }
+      />
+
+      {/* Slide-in panel */}
+      <aside
+        role="dialog"
+        aria-modal="true"
+        aria-label={t('brand')}
+        className={
+          'fixed inset-y-0 left-0 z-[70] flex w-[86%] max-w-sm flex-col bg-[#0A0A0B] shadow-[0_0_60px_rgba(0,0,0,0.7)] transition-transform duration-300 ease-out will-change-transform lg:hidden ' +
           (isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full')
         }
       >
-        <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
-          <span className="text-[15px] font-semibold tracking-tight text-white">{t('brand')}</span>
+        <div
+          className="pointer-events-none absolute inset-0 opacity-70"
+          style={{
+            backgroundImage:
+              'radial-gradient(80% 35% at 0% 0%, rgba(255,59,48,0.14), transparent 70%)',
+          }}
+          aria-hidden
+        />
+
+        {/* Panel header */}
+        <div className="relative flex items-center justify-between border-b border-white/10 px-4 py-3.5">
+          <div className="flex items-center gap-2.5">
+            <span className="inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10">
+              <Image src="/icons/logo.png" height={64} width={64} alt="Logo" className="h-full w-full object-contain" />
+            </span>
+            <span className="text-[15px] font-semibold tracking-tight text-white">{t('brand')}</span>
+          </div>
           <button
+            type="button"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="rounded-full p-2 text-white/80 transition hover:bg-white/10 hover:text-white"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full text-white/80 transition hover:bg-white/10 hover:text-white"
             aria-label="Close menu"
           >
-            <X size={20} />
+            <X className="h-5 w-5" />
           </button>
         </div>
 
-        <div className="max-h-[calc(100vh-56px)] overflow-y-auto px-4 pt-4 pb-10">
+        {/* Scrollable body */}
+        <div className="relative flex-1 overflow-y-auto overscroll-contain px-4 pt-4 pb-6">
+          {/* Brand toggle */}
           <div className="mb-4 inline-flex w-full items-center rounded-full border border-white/10 bg-white/[0.04] p-1 text-[12px] font-semibold">
             <button
               type="button"
               onClick={() => setBrand('pentest')}
               className={
-                'flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-2 transition ' +
+                'flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-2.5 transition ' +
                 (isPentest ? 'bg-[#FF3B30] text-white' : 'text-white/70')
               }
             >
@@ -280,7 +354,7 @@ export default function Header() {
               type="button"
               onClick={() => setBrand('auditai')}
               className={
-                'flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-2 transition ' +
+                'flex flex-1 items-center justify-center gap-1.5 rounded-full px-3 py-2.5 transition ' +
                 (!isPentest ? 'bg-[#FF3B30] text-white' : 'text-white/70')
               }
             >
@@ -350,7 +424,7 @@ export default function Header() {
                   router.push(toLocalizedPath(l.href));
                 }}
                 className={
-                  'flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-[14px] font-medium transition ' +
+                  'flex w-full items-center justify-between rounded-xl px-4 py-3.5 text-left text-[15px] font-medium transition ' +
                   (isActive(l.href)
                     ? 'bg-white/10 text-[#FF3B30]'
                     : 'text-white/90 hover:bg-white/5')
@@ -361,12 +435,15 @@ export default function Header() {
               </button>
             ))}
           </div>
+        </div>
 
-          <div className="mt-6 grid gap-2">
+        {/* Sticky footer actions */}
+        <div className="relative border-t border-white/10 bg-[#0A0A0B]/90 px-4 py-4 backdrop-blur-sm">
+          <div className="grid gap-2">
             <Link
               href={toLocalizedPath(cta.href)}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="premium-cta inline-flex w-full items-center justify-center gap-1.5 rounded-full px-4 py-3 text-[14px] font-semibold text-white"
+              className="premium-cta inline-flex w-full items-center justify-center gap-1.5 rounded-full px-4 py-3.5 text-[15px] font-semibold text-white"
             >
               {cta.label}
             </Link>
@@ -383,8 +460,8 @@ export default function Header() {
             </button>
           </div>
         </div>
-      </div>
-    </nav>
+      </aside>
+    </>
   );
 }
 

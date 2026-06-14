@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { CTA, FeatureCard, SectionLabel, SectionLabelDark, StatRow } from './ui';
 import { useBrand } from './BrandContext';
+import TestimonialsMarquee from './TestimonialsMarquee';
 
 type BrandCopy = {
   heroH1Top: string;
@@ -201,7 +202,7 @@ function getPentestCopy(de: boolean): BrandCopy {
           { icon: <Shield className="h-5 w-5" />, title: 'Mobile & Cloud', text: 'iOS/Android, Reverse Engineering, AWS/Azure-Konfigurationen.' },
           { icon: <FileText className="h-5 w-5" />, title: 'Klarer Bericht', text: 'Executive Summary + technischer Anhang. Auf Deutsch und Englisch.' },
           { icon: <Award className="h-5 w-5" />, title: 'Kostenloser Retest', text: 'Nach dem Fix prüfen wir kostenlos nach. Damit es wirklich behoben ist.' },
-          { icon: <Users className="h-5 w-5" />, title: 'Compliance-ready', text: 'Passend zu ISO 27001, BSI TR-03161, DiGA, NIS2.' },
+          { icon: <Users className="h-5 w-5" />, title: 'Compliance-ready', text: 'Passend zu ISO 27001, BSI TR-03161, DiGA, NIS2, DORA, MDR & BSIG.' },
         ],
         methodLabel: 'Methodik',
         methodHeadline: 'Vier Phasen. Ein klarer Plan.',
@@ -293,7 +294,7 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
           { icon: <Shield className="h-5 w-5" />, title: 'Mobile & Cloud', text: 'iOS/Android, reverse engineering, AWS/Azure configurations.' },
           { icon: <FileText className="h-5 w-5" />, title: 'Clear report', text: 'Executive summary + technical appendix. EN and DE.' },
           { icon: <Award className="h-5 w-5" />, title: 'Free retest', text: "After the fix we re-check at no cost. So it's actually fixed." },
-          { icon: <Users className="h-5 w-5" />, title: 'Compliance-ready', text: 'Aligned with ISO 27001, BSI TR-03161, DiGA, NIS2.' },
+          { icon: <Users className="h-5 w-5" />, title: 'Compliance-ready', text: 'Aligned with ISO 27001, BSI TR-03161, DiGA, NIS2, DORA, MDR & BSIG.' },
         ],
         methodLabel: 'Methodology',
         methodHeadline: 'Four phases. One clear plan.',
@@ -583,7 +584,7 @@ export default function HomeClient() {
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
 
-        <div className="relative mx-auto max-w-7xl px-6 pt-14 pb-28 lg:pt-20 lg:pb-36">
+        <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-20 sm:px-6 sm:pt-14 sm:pb-28 lg:pt-20 lg:pb-36">
           {/* Eyebrow */}
           <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
@@ -614,26 +615,26 @@ export default function HomeClient() {
             </button>
           </div>
 
-          <h1 className="mt-8 max-w-5xl text-[44px] font-semibold leading-[1.02] tracking-[-0.03em] md:text-7xl lg:text-[88px]">
+          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.05] tracking-[-0.03em] sm:text-[44px] sm:leading-[1.02] md:text-7xl lg:text-[88px]">
             <span className="premium-silver">{c.heroH1Top}</span>
             <br />
             <span className="premium-headline-accent">{c.heroH1Bottom}</span>
           </h1>
-          <p className="mt-7 max-w-2xl text-base leading-relaxed text-white/65 md:text-lg">{c.heroSub}</p>
-          <div className="mt-10 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65 sm:mt-7 md:text-lg">{c.heroSub}</p>
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <Link
               href={c.heroPrimaryHref}
-              className="premium-cta inline-flex items-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
+              className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
             >
               {c.heroPrimaryCta} <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href={c.heroSecondaryHref}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
             >
               {c.heroSecondaryCta} <ArrowRight className="h-4 w-4" />
             </Link>
-            <span className="text-xs text-white/45 sm:ml-3">{c.heroFootnote}</span>
+            <span className="text-center text-xs text-white/45 sm:ml-3 sm:text-left">{c.heroFootnote}</span>
           </div>
 
           {/* SOCIAL PROOF STRIP */}
@@ -676,16 +677,19 @@ export default function HomeClient() {
             <p className="shrink-0 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">{c.trustEyebrow}</p>
             <div className="relative flex-1 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_15%,#000_85%,transparent)]">
               <div className="premium-marquee flex w-max items-center gap-12 text-[13px] font-medium text-white/55">
-                {[...Array(2)].map((_, dup) => (
-                  <div key={dup} className="flex items-center gap-12 pr-12">
-                    {['OSCP+', 'OSWE', 'CEH', 'ISO 27001', 'BSI TR-03161', 'OWASP', 'NIST', 'GDPR', 'NIS2'].map((label, i) => (
-                      <span key={label} className="flex items-center gap-12">
-                        <span className="tracking-tight">{label}</span>
-                        {i < 8 && <span className="h-1 w-1 rounded-full bg-[#0A0A0B]/15" />}
-                      </span>
-                    ))}
-                  </div>
-                ))}
+                {[...Array(2)].map((_, dup) => {
+                  const certs = ['OSCP+', 'OSWE', 'CEH', 'ISO 27001', 'BSI TR-03161', 'OWASP', 'NIST', 'GDPR', 'NIS2', 'DORA', 'MDR', 'BSIG'];
+                  return (
+                    <div key={dup} className="flex items-center gap-12 pr-12">
+                      {certs.map((label, i) => (
+                        <span key={label} className="flex items-center gap-12">
+                          <span className="tracking-tight">{label}</span>
+                          {i < certs.length - 1 && <span className="h-1 w-1 rounded-full bg-[#0A0A0B]/15" />}
+                        </span>
+                      ))}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -693,7 +697,7 @@ export default function HomeClient() {
       </section>
 
       {/* FEATURE GRID */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
         <div className="max-w-2xl">
           <SectionLabel>{c.featureLabel}</SectionLabel>
           <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-5xl">{c.featureHeadline}</h2>
@@ -709,7 +713,7 @@ export default function HomeClient() {
 
       {/* TWO PRODUCTS */}
       <section className="premium-section">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
           <div className="max-w-2xl">
             <SectionLabel>{s.twoProductsLabel}</SectionLabel>
             <h2 className="mt-5 text-3xl font-semibold tracking-[-0.02em] md:text-5xl">
@@ -849,7 +853,7 @@ export default function HomeClient() {
       </section>
 
       {/* HOW IT WORKS / METHODOLOGY */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <SectionLabel>{c.methodLabel}</SectionLabel>
@@ -881,13 +885,13 @@ export default function HomeClient() {
 
       {/* STATS */}
       <section className="premium-section">
-        <div className="mx-auto max-w-7xl px-6 py-16">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6">
           <StatRow items={c.stats} />
         </div>
       </section>
 
       {/* SAMPLE PREVIEW */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <SectionLabel>{c.sampleLabel}</SectionLabel>
@@ -943,8 +947,29 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="border-t border-white/10">
+        <div className="py-20 lg:py-28">
+          <div className="mx-auto max-w-2xl px-6 text-center">
+            <SectionLabel>{isDe ? 'Kundenstimmen' : 'Testimonials'}</SectionLabel>
+            <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-5xl">
+              {isDe ? 'Was unsere Kunden sagen' : 'What our clients say'}
+            </h2>
+            <p className="mt-4 text-[#525866]">
+              {isDe
+                ? 'Teams aus DACH vertrauen auf Sodu Secure, um kritische Schwachstellen zu finden, bevor Angreifer es tun.'
+                : 'Teams across the DACH region rely on Sodu Secure to find critical vulnerabilities before attackers do.'}
+            </p>
+          </div>
+
+          <div className="mt-14">
+            <TestimonialsMarquee isDe={isDe} />
+          </div>
+        </div>
+      </section>
+
       {/* PRICING TEASER */}
-      <section className="mx-auto max-w-7xl px-6 pb-20 lg:pb-28">
+      <section className="mx-auto max-w-7xl px-5 pb-20 sm:px-6 lg:pb-28">
         <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#0A0A0B] text-white">
           <div className="relative grid gap-10 p-10 lg:grid-cols-[1fr_1fr] lg:items-center lg:p-14">
             <div
@@ -1016,22 +1041,22 @@ export default function HomeClient() {
         <div className="premium-aurora" aria-hidden />
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
-        <div className="relative mx-auto max-w-5xl px-6 py-28 text-center">
-          <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-6xl lg:text-7xl">
+        <div className="relative mx-auto max-w-5xl px-5 py-20 text-center sm:px-6 sm:py-28">
+          <h2 className="text-[32px] font-semibold leading-[1.07] tracking-[-0.03em] sm:text-4xl sm:leading-[1.05] md:text-6xl lg:text-7xl">
             {c.ctaH2}
           </h2>
           <p className="mt-6 text-white/60">{c.ctaSub}</p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
             <Link
               href={c.ctaPrimaryHref}
-              className="premium-cta inline-flex items-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
+              className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
             >
               {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
             </Link>
             <button
               type="button"
               onClick={() => setBrand(isPentest ? 'auditai' : 'pentest')}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
             >
               {c.ctaSwitch} <ArrowRight className="h-4 w-4" />
             </button>

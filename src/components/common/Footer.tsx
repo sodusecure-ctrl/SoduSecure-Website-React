@@ -47,6 +47,11 @@ export default function Footer() {
     { label: 'ISO 27001', href: '/iso-27001' },
     { label: 'ISO 27001 Pentest Anforderungen', href: '/iso-27001-pentest-anforderungen' },
     { label: 'ISO 27001 Zertifizierung', href: '/iso-27001-zertifizierung' },
+    { label: 'NIS2', href: '/nis2' },
+    { label: 'DORA', href: '/dora' },
+    { label: 'MDR', href: '/mdr' },
+    { label: 'BSIG / KRITIS', href: '/bsig' },
+    { label: 'BSI TR-03161', href: '/bsi-tr-03161' },
     { label: 'IT Sicherheitscheck', href: '/it-sicherheitscheck' },
     { label: 'Cybersecurity Audit', href: '/cybersecurity-audit' },
     { label: 'Hacker Simulation', href: '/hacker-simulation' },
@@ -236,7 +241,7 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-3 lg:gap-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/sodu-secure-gmbh"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 lg:w-10 lg:h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors flex-shrink-0"
@@ -245,11 +250,11 @@ export default function Footer() {
               <Linkedin className="w-4 h-4 lg:w-5 lg:h-5" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/SoduSecure"
               target="_blank"
               rel="noopener noreferrer"
               className="w-9 h-9 lg:w-10 lg:h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors flex-shrink-0"
-              aria-label="Twitter"
+              aria-label="X"
             >
               <Twitter className="w-4 h-4 lg:w-5 lg:h-5" />
             </a>
