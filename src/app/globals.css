@@ -473,3 +473,44 @@ html {
   border: 2px solid #0A0A0B;
 }
 ::-webkit-scrollbar-thumb:hover { background: rgba(255, 59, 48, 0.4); }
+
+/* ======= Quick-Check (Risiko-Check) interactions ======= */
+
+/* Step enters: soft fade + slide up. Re-triggered via changing React key. */
+@keyframes qc-step-in {
+  0%   { opacity: 0; transform: translateY(14px) scale(0.99); filter: blur(2px); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+.qc-step { animation: qc-step-in 380ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Result reveal — slightly more pronounced */
+@keyframes qc-result-in {
+  0%   { opacity: 0; transform: translateY(20px) scale(0.97); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.qc-result { animation: qc-result-in 480ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+/* Option press — satisfying pop + red glow ring on click */
+@keyframes qc-pop {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(0.96); }
+  70%  { transform: scale(1.03); box-shadow: 0 0 0 4px rgba(255,59,48,0.18), 0 16px 40px -18px rgba(255,59,48,0.55); }
+  100% { transform: scale(1); }
+}
+.qc-pop { animation: qc-pop 360ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+
+/* Animated checkmark ring that fills on select */
+@keyframes qc-check-in {
+  0%   { transform: scale(0) rotate(-30deg); opacity: 0; }
+  60%  { transform: scale(1.15) rotate(0); opacity: 1; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+.qc-check { animation: qc-check-in 300ms cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+
+/* Score number count-up shimmer */
+@keyframes qc-bar-grow { from { width: 0%; } }
+.qc-bar { animation: qc-bar-grow 900ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .qc-step, .qc-result, .qc-pop, .qc-check, .qc-bar { animation: none !important; }
+}
