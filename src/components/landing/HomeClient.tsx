@@ -18,7 +18,7 @@ import {
   Award,
   Star,
 } from 'lucide-react';
-import { CTA, FeatureCard, SectionLabel, SectionLabelDark, StatRow } from './ui';
+import { SectionLabel, SectionLabelDark } from './ui';
 import { useBrand } from './BrandContext';
 import TestimonialsMarquee from './TestimonialsMarquee';
 
@@ -562,12 +562,6 @@ if (!user || !user.roles.includes('admin')) {
       };
 }
 
-const sevToneClass: Record<'red' | 'amber' | 'green', { bg: string; text: string }> = {
-  red: { bg: 'bg-[#FFF4F2]', text: 'text-[#B42318]' },
-  amber: { bg: 'bg-[#FEE4E4]', text: 'text-[#B54708]' },
-  green: { bg: 'bg-[#ECFDF3]', text: 'text-[#067647]' },
-};
-
 export default function HomeClient() {
   const { brand, setBrand } = useBrand();
   const locale = useLocale();
@@ -693,21 +687,6 @@ export default function HomeClient() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* FEATURE GRID */}
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
-        <div className="max-w-2xl">
-          <SectionLabel>{c.featureLabel}</SectionLabel>
-          <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-5xl">{c.featureHeadline}</h2>
-          <p className="mt-4 text-[#525866]">{c.featureSub}</p>
-        </div>
-
-        <div className="mt-12 grid gap-4 md:grid-cols-3">
-          {c.features.map((f) => (
-            <FeatureCard key={f.title} icon={f.icon} title={f.title} text={f.text} />
-          ))}
         </div>
       </section>
 
@@ -852,101 +831,6 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* HOW IT WORKS / METHODOLOGY */}
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl">
-            <SectionLabel>{c.methodLabel}</SectionLabel>
-            <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-5xl">{c.methodHeadline}</h2>
-          </div>
-          <Link
-            href={c.methodLinkHref}
-            className="hidden text-sm font-semibold text-white underline-offset-4 hover:underline md:inline"
-          >
-            {c.methodFullLink}
-          </Link>
-        </div>
-
-        <ol className="mt-12 grid gap-px overflow-hidden rounded-3xl border border-white/10 bg-white/[0.06] md:grid-cols-2 xl:grid-cols-4">
-          {c.steps.map((step) => (
-            <li key={step.n} className="bg-[#16141A] p-7">
-              <div className="flex items-center justify-between">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#0A0A0B] text-[#FF3B30]">
-                  {step.icon}
-                </span>
-                <span className="font-mono text-xs text-[#6B7280]">{step.n}</span>
-              </div>
-              <h3 className="mt-5 text-lg font-semibold">{step.t}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-[#525866]">{step.d}</p>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {/* STATS */}
-      <section className="premium-section">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6">
-          <StatRow items={c.stats} />
-        </div>
-      </section>
-
-      {/* SAMPLE PREVIEW */}
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div>
-            <SectionLabel>{c.sampleLabel}</SectionLabel>
-            <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-5xl">{c.sampleHeadline}</h2>
-            <p className="mt-4 text-[#525866]">{c.sampleSub}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <CTA href={c.samplePrimaryHref} variant="primary">
-                {c.samplePrimary}
-              </CTA>
-              <CTA href={c.sampleSecondaryHref} variant="secondary">
-                {c.sampleSecondary}
-              </CTA>
-            </div>
-          </div>
-
-          <div className="relative rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-white/[0.01] p-3 shadow-[0_30px_80px_-30px_rgba(255,59,48,0.25)]">
-            <div
-              className="pointer-events-none absolute inset-0 rounded-3xl opacity-60"
-              style={{ backgroundImage: 'radial-gradient(60% 50% at 100% 0%, rgba(255,59,48,0.12), transparent 60%)' }}
-              aria-hidden
-            />
-            <div className="relative rounded-2xl border border-white/10 premium-card p-6">
-              <div className="flex items-center justify-between">
-                <span className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-white/60">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_8px_rgba(255,59,48,0.8)]" />
-                  {c.findingId}
-                </span>
-                <span className="rounded-full border border-[#FF3B30]/30 bg-[#FF3B30]/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[#FF6B61]">
-                  {c.findingSeverity}
-                </span>
-              </div>
-              <h3 className="mt-3 text-lg font-semibold text-white">{c.findingTitle}</h3>
-              <p className="mt-2 text-sm text-white/55">{c.findingMeta}</p>
-              <pre className="mt-5 overflow-x-auto rounded-xl border border-white/10 bg-[#0A0A0B] p-4 text-[12px] leading-relaxed text-white/90">{c.findingFix}</pre>
-              <div className="mt-5 grid grid-cols-3 gap-2.5 text-center">
-                {c.sampleStats.map((stat) => {
-                  const tones: Record<string, { bg: string; text: string; border: string }> = {
-                    red: { bg: 'bg-[#FF3B30]/10', text: 'text-[#FF6B61]', border: 'border-[#FF3B30]/25' },
-                    amber: { bg: 'bg-amber-300/10', text: 'text-amber-300', border: 'border-amber-300/20' },
-                    green: { bg: 'bg-emerald-400/10', text: 'text-emerald-300', border: 'border-emerald-400/20' },
-                  };
-                  const t = tones[stat.tone] ?? tones.red;
-                  return (
-                    <div key={stat.label} className={'rounded-xl border p-3 ' + t.bg + ' ' + t.border}>
-                      <div className={'premium-tabular text-2xl font-bold ' + t.text}>{stat.value}</div>
-                      <div className="mt-0.5 text-[10px] uppercase tracking-wider text-white/55">{stat.label}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* TESTIMONIALS */}
       <section className="border-t border-white/10">
         <div className="py-20 lg:py-28">
@@ -1013,25 +897,6 @@ export default function HomeClient() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECURITY STRIP */}
-      <section className="border-t border-white/10">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-3 lg:py-24">
-          <div className="lg:col-span-1">
-            <SectionLabel>{s.securityLabel}</SectionLabel>
-            <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-4xl">{s.securityHeadline}</h2>
-            <p className="mt-4 text-[#525866]">{c.securityBlurb}</p>
-            <Link href="/security" className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-white underline-offset-4 hover:underline">
-              {s.securityLink} <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
-            {c.securityFeatures.map((f) => (
-              <FeatureCard key={f.title} icon={f.icon} title={f.title} text={f.text} />
-            ))}
           </div>
         </div>
       </section>

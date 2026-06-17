@@ -13,8 +13,9 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const isAdsPage = pathname?.startsWith('/request-pentest-ads');
   const isVerifyPage = pathname?.startsWith('/verify');
   const isSoduAuditAiPage = pathname?.startsWith('/sodu-audit-ai');
+  const isCorporatePage = pathname?.startsWith('/corporate');
 
-  const hideChrome = isAuthRoute || isDashboardRoute || isLandingPage || isAdsPage || isVerifyPage || isSoduAuditAiPage;
+  const hideChrome = isAuthRoute || isDashboardRoute || isLandingPage || isAdsPage || isVerifyPage || isSoduAuditAiPage || isCorporatePage;
 
   return (
     <BrandProvider>
