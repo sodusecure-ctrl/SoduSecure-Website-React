@@ -9,6 +9,7 @@ import Script from "next/script";
 import { GOOGLE_ADS_ID } from "@/lib/gtag";
 import "./globals.css";
 import LayoutContent from './LayoutContent';
+import { ThemeProvider } from '@/components/theme/ThemeProvider';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -126,8 +127,14 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
+        {/* Theme – set before paint to avoid a flash of the wrong design */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme')||'dark';window.__theme=t;var e=document.documentElement;e.classList.toggle('dark',t!=='light');e.classList.toggle('light',t==='light');e.setAttribute('data-theme',t);}catch(e){}})();`,
+          }}
+        />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -186,7 +193,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <LayoutContent>{children}</LayoutContent>
+          <ThemeProvider>
+            <LayoutContent>{children}</LayoutContent>
+          </ThemeProvider>
           <Toaster />
         </NextIntlClientProvider>
         {/* Google Ads – Basis-Tag */}

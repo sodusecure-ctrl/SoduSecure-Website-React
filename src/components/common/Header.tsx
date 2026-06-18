@@ -6,7 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { ChevronDown, ChevronRight, Globe, Shield, Sparkles, X } from 'lucide-react';
+import { ChevronDown, ChevronRight, Globe, Shield, Sparkles, X, Sun, Moon } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,6 +14,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { localizeHref } from '@/lib/localeRouting';
 import { useBrand } from '@/components/landing/BrandContext';
+import { useTheme } from '@/components/theme/ThemeProvider';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -28,6 +29,7 @@ export default function Header() {
   const t = useTranslations('header');
   const { brand, setBrand } = useBrand();
   const isPentest = brand === 'pentest';
+  const { theme, toggle: toggleTheme } = useTheme();
 
   // Lock body scroll while the mobile menu is open.
   useEffect(() => {
@@ -265,8 +267,18 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Right: locale + CTA */}
+          {/* Right: theme + locale + CTA */}
           <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-white/80 transition hover:border-[#FF3B30]/50 hover:text-white"
+              aria-label={theme === 'dark' ? 'Zu hellem Design wechseln' : 'Zu dunklem Design wechseln'}
+              title={theme === 'dark' ? 'Hell (Corporate)' : 'Dunkel'}
+            >
+              {theme === 'dark' ? <Sun className="h-4 w-4 text-[#FF6B61]" /> : <Moon className="h-4 w-4" />}
+            </button>
+
             <button
               type="button"
               onClick={() => switchLanguage(!isEnglish)}

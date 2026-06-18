@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, Menu, X, ArrowRight, ShieldCheck, MapPin, Users } from 'lucide-react';
+import { ThemeToggleInline } from '@/components/theme/ThemeToggle';
 
 export function CorporateHeader({ isDe }: { isDe: boolean }) {
   const t = (de: string, en: string) => (isDe ? de : en);
@@ -34,7 +35,7 @@ export function CorporateHeader({ isDe }: { isDe: boolean }) {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Link href="/corporate" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-[#0B2A4A] text-white"><ShieldCheck className="h-5 w-5" /></span>
             <span className="text-lg font-bold tracking-tight text-[#0B2A4A]">SODU<span className="text-[#DC2626]"> SECURE</span></span>
           </Link>
@@ -43,14 +44,17 @@ export function CorporateHeader({ isDe }: { isDe: boolean }) {
               <a key={n.href} href={n.href} className="text-sm font-medium text-slate-600 transition hover:text-[#0B2A4A]">{n.label}</a>
             ))}
           </nav>
-          <div className="hidden lg:block">
-            <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 rounded-md bg-[#DC2626] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#B91C1C]">
-              {t('Angebot anfordern', 'Request a quote')}
-            </Link>
+          <div className="flex items-center gap-3">
+            <ThemeToggleInline tone="light" />
+            <div className="hidden lg:block">
+              <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 rounded-md bg-[#DC2626] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#B91C1C]">
+                {t('Angebot anfordern', 'Request a quote')}
+              </Link>
+            </div>
+            <button onClick={() => setMenuOpen((v) => !v)} className="lg:hidden" aria-label="Menu">
+              {menuOpen ? <X className="h-6 w-6 text-[#0B2A4A]" /> : <Menu className="h-6 w-6 text-[#0B2A4A]" />}
+            </button>
           </div>
-          <button onClick={() => setMenuOpen((v) => !v)} className="lg:hidden" aria-label="Menu">
-            {menuOpen ? <X className="h-6 w-6 text-[#0B2A4A]" /> : <Menu className="h-6 w-6 text-[#0B2A4A]" />}
-          </button>
         </div>
         {menuOpen && (
           <div className="border-t border-slate-200 bg-white lg:hidden">

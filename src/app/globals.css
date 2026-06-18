@@ -514,3 +514,115 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .qc-step, .qc-result, .qc-pop, .qc-check, .qc-bar { animation: none !important; }
 }
+
+/* ============================================================= */
+/* ===============  LIGHT MODE (Corporate)  ==================== */
+/* A site-wide light theme that recolours the hard-coded dark    */
+/* palette. Scoped to html.light. Corporate pages opt out via    */
+/* a .theme-static wrapper (re-asserted at the bottom).          */
+/* ============================================================= */
+
+html.light { color-scheme: light; }
+
+html.light body {
+  background-color: #ffffff !important;
+  color: #0F172A !important;
+}
+
+/* ---- Text: whites -> dark/slate ---- */
+html.light [class*="text-white"] { color: #475569 !important; } /* muted default for /XX */
+html.light .text-white { color: #0F172A !important; }           /* solid white -> strong dark */
+html.light .text-white\/90, html.light .text-white\/85, html.light .text-white\/80 { color: #1E293B !important; }
+html.light .text-white\/75, html.light .text-white\/72, html.light .text-white\/70, html.light .text-white\/65 { color: #334155 !important; }
+html.light .text-white\/60, html.light .text-white\/55, html.light .text-white\/50 { color: #475569 !important; }
+html.light .text-white\/45, html.light .text-white\/40, html.light .text-white\/35 { color: #64748B !important; }
+html.light .text-white\/30, html.light .text-white\/25, html.light .text-white\/20 { color: #94A3B8 !important; }
+
+/* Muted greys that are too light on white */
+html.light .text-\[\#9098A6\], html.light .text-\[\#9AA0A6\], html.light .text-\[\#6B7280\] { color: #64748B !important; }
+
+/* Accent reds: keep, but lighten-on-dark variants need contrast on white */
+html.light .text-\[\#FF6B61\], html.light .text-\[\#FF8077\], html.light .text-\[\#FF7568\] { color: #DC2626 !important; }
+
+/* ---- Borders: whites -> slate ---- */
+html.light [class*="border-white"] { border-color: rgba(15, 23, 42, 0.12) !important; }
+html.light [class*="divide-white"] > * { border-color: rgba(15, 23, 42, 0.10) !important; }
+html.light [class*="ring-white"] { --tw-ring-color: rgba(15, 23, 42, 0.12) !important; }
+
+/* ---- Subtle white overlay surfaces -> faint slate tint ---- */
+html.light [class*="bg-white/"] { background-color: rgba(15, 23, 42, 0.04) !important; }
+html.light .bg-white\/95, html.light .bg-white\/90 { background-color: rgba(255, 255, 255, 0.9) !important; }
+html.light .bg-white\/15, html.light .bg-white\/20, html.light .bg-white\/30 { background-color: rgba(15, 23, 42, 0.08) !important; }
+
+/* ---- Dark backgrounds -> light surfaces (attribute match also covers /95 etc.) ---- */
+html.light [class*="bg-[#0A0A0B]"], html.light [class*="bg-[#0a0a0a]"], html.light [class*="bg-[#0b0b0f]"],
+html.light [class*="bg-[#111]"], html.light [class*="bg-[#0d1117]"], html.light [class*="bg-[#0a0e17]"],
+html.light [class*="bg-[#0b0f18]"], html.light [class*="bg-[#0f1520]"], html.light [class*="bg-[#0f1923]"],
+html.light [class*="bg-[#0f1822]"], html.light [class*="bg-[#1a0a0a]"], html.light [class*="bg-[#0F1822]"] {
+  background-color: #ffffff !important;
+}
+html.light [class*="bg-[#16141A]"], html.light [class*="bg-[#131927]"], html.light [class*="bg-[#18181f]"],
+html.light [class*="bg-[#1B181F]"], html.light [class*="bg-[#141217]"], html.light [class*="bg-[#0C0C0E]"],
+html.light [class*="bg-[#0F0E12]"], html.light [class*="bg-[#1A1A1C]"], html.light [class*="bg-[#100E12]"] {
+  background-color: #F4F7FB !important;
+}
+
+/* Dark gradient stops -> white (testimonial fades, hero washes) */
+html.light .from-\[\#0A0A0B\] { --tw-gradient-from: #ffffff var(--tw-gradient-from-position) !important; --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+html.light .via-\[\#0A0A0B\] { --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position) !important; --tw-gradient-stops: var(--tw-gradient-from), #ffffff var(--tw-gradient-via-position), var(--tw-gradient-to) !important; }
+html.light .to-\[\#0A0A0B\] { --tw-gradient-to: #ffffff var(--tw-gradient-to-position) !important; }
+
+/* ---- premium-* utilities ---- */
+html.light .premium-hero { background-color: #ffffff !important; color: #0F172A !important; }
+html.light .premium-hero::before { opacity: 0.14 !important; }
+html.light .premium-hero::after { opacity: 0 !important; }
+html.light .premium-aurora { opacity: 0.14 !important; }
+html.light .premium-noise { opacity: 0 !important; }
+html.light .premium-grid { opacity: 0 !important; }
+html.light .premium-section {
+  background: #F6F8FB !important;
+  border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+}
+html.light .premium-card {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.10) !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: 0 8px 24px -16px rgba(15, 23, 42, 0.18) !important;
+}
+html.light .premium-card:hover {
+  border-color: rgba(220, 38, 38, 0.35) !important;
+  box-shadow: 0 20px 50px -24px rgba(15, 23, 42, 0.25) !important;
+}
+html.light .premium-silver {
+  background: none !important;
+  -webkit-text-fill-color: #0F172A !important;
+  color: #0F172A !important;
+  animation: none !important;
+}
+
+/* ---- Keep white text on SOLID accent / dark buttons (exact class, */
+/*      so translucent badges like bg-[#FF3B30]/15 are NOT affected) ---- */
+html.light .premium-cta, html.light .premium-cta * { color: #ffffff !important; }
+html.light .bg-\[\#FF3B30\], html.light .bg-\[\#FF3B30\] *,
+html.light .bg-\[\#FF5247\], html.light .bg-\[\#FF5247\] *,
+html.light .bg-\[\#E5332A\], html.light .bg-\[\#E5332A\] *,
+html.light .bg-\[\#CC2D24\], html.light .bg-\[\#CC2D24\] *,
+html.light .bg-\[\#B91C1C\], html.light .bg-\[\#B91C1C\] *,
+html.light .bg-\[\#DC2626\], html.light .bg-\[\#DC2626\] *,
+html.light .bg-\[\#16A34A\], html.light .bg-\[\#16A34A\] *,
+html.light .bg-\[\#00715D\], html.light .bg-\[\#00715D\] * {
+  color: #ffffff !important;
+}
+
+/* ============================================================= */
+/* Corporate pages opt out of the inversion (already light by    */
+/* design with intentional navy accent sections).               */
+/* ============================================================= */
+html.light .theme-static [class*="text-white"] { color: #ffffff !important; }
+html.light .theme-static [class*="border-white"] { border-color: rgba(255, 255, 255, 0.12) !important; }
+html.light .theme-static .bg-white { background-color: #ffffff !important; }
+html.light .theme-static [class*="bg-white/"] { background-color: rgba(255, 255, 255, 0.06) !important; }
+html.light .theme-static .bg-white\/95 { background-color: rgba(255, 255, 255, 0.95) !important; }
+html.light .theme-static .bg-\[\#0B2A4A\] { background-color: #0B2A4A !important; }
+html.light .theme-static .bg-\[\#081F38\] { background-color: #081F38 !important; }

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import ImpressumEmailEasterEgg from './ImpressumEmailEasterEgg';
 
 export const metadata: Metadata = {
   title: 'Impressum – SODU Secure GmbH',
@@ -41,9 +42,7 @@ export default function Impressum() {
               </p>
               <p>
                 <span className="font-medium">E-Mail:</span>{' '}
-                <a href="mailto:info@sodusecure.com" className="text-[#FF3B30] hover:underline">
-                  info@sodusecure.com
-                </a>
+                <ImpressumEmailEasterEgg />
               </p>
             </div>
           </section>

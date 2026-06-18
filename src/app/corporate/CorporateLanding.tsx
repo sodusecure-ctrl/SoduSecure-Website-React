@@ -9,8 +9,9 @@ import {
   Building2, Scale, Clock, Users, ChevronRight, Star, MapPin,
 } from 'lucide-react';
 import { getTestimonials } from '@/components/landing/TestimonialsMarquee';
+import { ThemeToggleInline } from '@/components/theme/ThemeToggle';
 
-export default function CorporateLanding({ isDe }: { isDe: boolean }) {
+export default function CorporateLanding({ isDe, embedded = false }: { isDe: boolean; embedded?: boolean }) {
   const t = (de: string, en: string) => (isDe ? de : en);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -72,7 +73,9 @@ export default function CorporateLanding({ isDe }: { isDe: boolean }) {
   );
 
   return (
-    <div className="min-h-screen bg-white font-sans text-[#1E293B] antialiased">
+    <div className="theme-static min-h-screen bg-white font-sans text-[#1E293B] antialiased">
+      {!embedded && (
+      <>
       {/* ── Utility top bar ── */}
       <div className="hidden bg-[#0B2A4A] text-white md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 text-xs">
@@ -99,12 +102,15 @@ export default function CorporateLanding({ isDe }: { isDe: boolean }) {
               <a key={n.href} href={n.href} className="text-sm font-medium text-slate-600 transition hover:text-[#0B2A4A]">{n.label}</a>
             ))}
           </nav>
-          <div className="hidden lg:block">
-            <PrimaryBtn href="/request-pentest">{t('Angebot anfordern', 'Request a quote')}</PrimaryBtn>
+          <div className="flex items-center gap-3">
+            <ThemeToggleInline tone="light" />
+            <div className="hidden lg:block">
+              <PrimaryBtn href="/request-pentest">{t('Angebot anfordern', 'Request a quote')}</PrimaryBtn>
+            </div>
+            <button onClick={() => setMenuOpen((v) => !v)} className="lg:hidden" aria-label="Menu">
+              {menuOpen ? <X className="h-6 w-6 text-[#0B2A4A]" /> : <Menu className="h-6 w-6 text-[#0B2A4A]" />}
+            </button>
           </div>
-          <button onClick={() => setMenuOpen((v) => !v)} className="lg:hidden" aria-label="Menu">
-            {menuOpen ? <X className="h-6 w-6 text-[#0B2A4A]" /> : <Menu className="h-6 w-6 text-[#0B2A4A]" />}
-          </button>
         </div>
         {menuOpen && (
           <div className="border-t border-slate-200 bg-white lg:hidden">
@@ -117,6 +123,8 @@ export default function CorporateLanding({ isDe }: { isDe: boolean }) {
           </div>
         )}
       </header>
+      </>
+      )}
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-b from-slate-50 to-white">
@@ -342,6 +350,7 @@ export default function CorporateLanding({ isDe }: { isDe: boolean }) {
       </section>
 
       {/* ── Footer ── */}
+      {!embedded && (
       <footer className="border-t border-slate-200 bg-[#081F38] text-white">
         <div className="mx-auto max-w-7xl px-6 py-14">
           <div className="grid gap-10 md:grid-cols-4">
@@ -391,6 +400,7 @@ export default function CorporateLanding({ isDe }: { isDe: boolean }) {
           </div>
         </div>
       </footer>
+      )}
     </div>
   );
 }
