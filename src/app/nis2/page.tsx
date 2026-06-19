@@ -30,6 +30,28 @@ const data: RegulationContent = {
     { label: "Betroffen in DE", value: "~30.000 Unternehmen" },
     { label: "Sektoren", value: "18 Branchen" },
   ],
+  penalties: {
+    title: "Was passiert bei Nichteinhaltung von NIS2?",
+    intro:
+      "NIS2 ist kein unverbindlicher Leitfaden. Die Richtlinie sieht empfindliche Bußgelder, die persönliche Haftung der Geschäftsleitung und direkte Eingriffe der Aufsichtsbehörde vor.",
+    items: [
+      {
+        value: "Bis 10 Mio. €",
+        label: "Bußgeld für wesentliche Einrichtungen",
+        desc: "…oder 2 % des weltweiten Jahresumsatzes – je nachdem, welcher Betrag höher ist. Für wichtige Einrichtungen bis 7 Mio. € bzw. 1,4 %.",
+      },
+      {
+        value: "Persönliche Haftung",
+        label: "Geschäftsleitung in der Pflicht",
+        desc: "Die Leitung muss die Sicherheitsmaßnahmen billigen und überwachen. Bei Verstößen haftet sie persönlich und kann von Leitungsaufgaben ausgeschlossen werden.",
+      },
+      {
+        value: "Aufsicht & Anordnungen",
+        label: "Eingriff durch das BSI",
+        desc: "Das BSI kann Audits anordnen, verbindliche Anweisungen erteilen und im Extremfall die Tätigkeit einschränken – dazu kommen Reputations- und Vertrauensverluste.",
+      },
+    ],
+  },
   obligations: {
     title: "Welche Pflichten bringt",
     accent: "NIS2 mit sich?",

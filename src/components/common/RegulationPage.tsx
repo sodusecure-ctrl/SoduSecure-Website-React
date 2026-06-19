@@ -72,6 +72,11 @@ export interface RegulationContent {
   heroSecondary?: { href: string; label: string };
   whatIs: { title: string; paragraphs: string[] };
   facts: { label: string; value: string }[];
+  penalties?: {
+    title: string;
+    intro: string;
+    items: { value: string; label: string; desc: string }[];
+  };
   obligations: {
     title: string;
     accent: string;
@@ -126,14 +131,13 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
                 {data.heroPrimaryCta}
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              {data.heroSecondary && (
-                <Link
-                  href={data.heroSecondary.href}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-white/20 hover:border-white/40 text-white font-medium rounded-lg transition-colors"
-                >
-                  {data.heroSecondary.label}
-                </Link>
-              )}
+              <Link
+                href="/penetration-testing"
+                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-white/20 hover:border-white/40 text-white font-medium rounded-lg transition-colors"
+              >
+                <Search className="w-5 h-5" />
+                Penetrationstest
+              </Link>
             </div>
           </div>
         </div>
@@ -207,6 +211,38 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
           </div>
         </div>
       </section>
+
+      {/* Penalties / consequences */}
+      {data.penalties && (
+        <section className="max-w-6xl mx-auto px-4 py-16">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/30 rounded-full px-4 py-1.5 mb-4">
+              <AlertTriangle className="w-4 h-4 text-[#FF6B61]" />
+              <span className="text-[#FF6B61] text-sm font-medium">
+                Konsequenzen bei Nichteinhaltung
+              </span>
+            </div>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">{data.penalties.title}</h2>
+            <p className="text-white/60 max-w-3xl mx-auto text-lg leading-relaxed">
+              {data.penalties.intro}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {data.penalties.items.map((item, i) => (
+              <div
+                key={i}
+                className="bg-gradient-to-b from-[#241619] to-[#1A1113] border border-[#FF3B30]/25 rounded-xl p-6"
+              >
+                <p className="text-2xl md:text-3xl font-bold text-[#FF6B61] mb-2 leading-tight">
+                  {item.value}
+                </p>
+                <p className="font-semibold text-white mb-1">{item.label}</p>
+                <p className="text-white/55 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* What we offer */}
       <section className="max-w-6xl mx-auto px-4 py-20">
@@ -354,13 +390,22 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
           <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
             Kostenlose Erstberatung – wir analysieren Ihre Ausgangslage und zeigen den schnellsten Weg zur Konformität.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#16141A] text-white font-semibold rounded-lg hover:bg-black/80 transition-colors"
-          >
-            Kostenlose Erstberatung anfragen
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#16141A] text-white font-semibold rounded-lg hover:bg-black/80 transition-colors"
+            >
+              Kostenlose Erstberatung anfragen
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              href="/penetration-testing"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white/10 border border-white/40 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors"
+            >
+              <Search className="w-5 h-5" />
+              Zum Penetrationstest
+            </Link>
+          </div>
         </div>
       </section>
     </main>

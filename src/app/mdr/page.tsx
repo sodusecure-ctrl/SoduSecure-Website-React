@@ -30,6 +30,28 @@ const data: RegulationContent = {
     { label: "Gilt seit", value: "26. Mai 2021" },
     { label: "Leitlinie", value: "MDCG 2019-16" },
   ],
+  penalties: {
+    title: "Was passiert ohne MDR-Cybersicherheitsnachweis?",
+    intro:
+      "Die Cybersicherheit ist Teil der grundlegenden Sicherheits- und Leistungsanforderungen. Ohne Nachweis riskieren Hersteller den Marktzugang, behördliche Eingriffe und Haftung.",
+    items: [
+      {
+        value: "Keine CE-Kennzeichnung",
+        label: "Kein Marktzugang",
+        desc: "Ohne belastbaren Sicherheitsnachweis verweigert die Benannte Stelle die Konformitätsbewertung – das Produkt darf nicht in Verkehr gebracht werden.",
+      },
+      {
+        value: "Rückruf & Marktrücknahme",
+        label: "Behördliche Eingriffe",
+        desc: "Zuständige Behörden können Produkte vom Markt nehmen, Rückrufe anordnen und den Vertrieb untersagen, wenn Sicherheitsanforderungen nicht erfüllt sind.",
+      },
+      {
+        value: "Bußgelder & Haftung",
+        label: "Sanktionen nach MPDG",
+        desc: "Verstöße werden in Deutschland nach dem Medizinprodukterecht-Durchführungsgesetz (MPDG) geahndet – zzgl. Produkthaftung bei Schäden durch unsichere Software.",
+      },
+    ],
+  },
   obligations: {
     title: "Welche Cybersecurity-Pflichten bringt",
     accent: "die MDR mit sich?",

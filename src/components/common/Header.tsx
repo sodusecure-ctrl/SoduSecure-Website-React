@@ -22,6 +22,10 @@ export default function Header() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isMobileBerlinOpen, setIsMobileBerlinOpen] = useState(false);
   const [isMobileTR03161Open, setIsMobileTR03161Open] = useState(false);
+  const [isQuickCheckOpen, setIsQuickCheckOpen] = useState(false);
+  const [isComplianceOpen, setIsComplianceOpen] = useState(false);
+  const [isMobileQuickCheckOpen, setIsMobileQuickCheckOpen] = useState(false);
+  const [isMobileComplianceOpen, setIsMobileComplianceOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
   const locale = useLocale();
@@ -59,6 +63,28 @@ export default function Header() {
     setIsMobileServicesOpen(false);
     router.push(toLocalizedPath(path));
   };
+
+  const goTo = (path: string) => {
+    setIsServicesDropdownOpen(false);
+    setIsQuickCheckOpen(false);
+    setIsComplianceOpen(false);
+    setIsMobileMenuOpen(false);
+    router.push(toLocalizedPath(path));
+  };
+
+  const quickCheckLinks = [
+    { name: isEnglish ? 'Pentest quick check (60 s)' : 'Pentest-Schnellcheck (60 Sek.)', path: '/pentest-schnellcheck' },
+    { name: isEnglish ? 'Pentest risk check' : 'Pentest-Risiko-Check', path: '/pentest-risiko-check' },
+    { name: isEnglish ? 'Do I need a pentest?' : 'Brauche ich einen Pentest?', path: '/brauche-ich-pentest' },
+  ];
+
+  const complianceLinks = [
+    { name: 'ISO 27001', path: '/iso-27001' },
+    { name: isEnglish ? 'NIS2 directive' : 'NIS2-Richtlinie', path: '/nis2' },
+    { name: isEnglish ? 'DORA (financial sector)' : 'DORA (Finanzsektor)', path: '/dora' },
+    { name: isEnglish ? 'MDR (medical devices)' : 'MDR (Medizinprodukte)', path: '/mdr' },
+    { name: 'BSI TR-03161', path: '/bsi-tr-03161' },
+  ];
 
   const services = [
     { name: t('servicesList.infrastructureTesting'), path: '/services/infrastructure-testing' },
@@ -198,6 +224,30 @@ export default function Header() {
 
           {/* Center: nav */}
           <div className="hidden items-center gap-1 lg:flex">
+            <DropdownMenu open={isQuickCheckOpen} onOpenChange={setIsQuickCheckOpen}>
+              <DropdownMenuTrigger className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.06] px-3 py-1.5 text-[13px] font-semibold text-white transition hover:bg-white/10 focus:outline-none data-[state=open]:bg-white/10">
+                <Sparkles className="h-3.5 w-3.5 text-[#FF6B61]" />
+                Quick Check
+                <ChevronDown className="h-3.5 w-3.5 opacity-70" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className={menuCls} sideOffset={10} onCloseAutoFocus={(e) => e.preventDefault()}>
+                <div className="px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
+                  {isEnglish ? 'Free self-assessment' : 'Kostenlose Selbsteinschätzung'}
+                </div>
+                {quickCheckLinks.map((l, i) => (
+                  <DropdownMenuItem
+                    key={'q' + i}
+                    className={itemCls(isActive(l.path))}
+                    onClick={() => goTo(l.path)}
+                    onSelect={(e) => e.preventDefault()}
+                  >
+                    <span>{l.name}</span>
+                    <ChevronRight className="h-3.5 w-3.5 opacity-50" />
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <DropdownMenu open={isServicesDropdownOpen} onOpenChange={setIsServicesDropdownOpen}>
               <DropdownMenuTrigger className={triggerCls}>
                 {t('services')}
@@ -253,6 +303,29 @@ export default function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            <DropdownMenu open={isComplianceOpen} onOpenChange={setIsComplianceOpen}>
+              <DropdownMenuTrigger className={triggerCls}>
+                Compliance
+                <ChevronDown className="h-3.5 w-3.5 opacity-70" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className={menuCls} sideOffset={10} onCloseAutoFocus={(e) => e.preventDefault()}>
+                <div className="px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
+                  {isEnglish ? 'Standards, laws & certifications' : 'Richtlinien, Gesetze & Zertifikate'}
+                </div>
+                {complianceLinks.map((l, i) => (
+                  <DropdownMenuItem
+                    key={'c' + i}
+                    className={itemCls(isActive(l.path))}
+                    onClick={() => goTo(l.path)}
+                    onSelect={(e) => e.preventDefault()}
+                  >
+                    <span>{l.name}</span>
+                    <ChevronRight className="h-3.5 w-3.5 opacity-50" />
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             {navLinks.map((l, i) => (
               <Link
                 key={i}
@@ -291,8 +364,9 @@ export default function Header() {
 
             <Link
               href={toLocalizedPath(cta.href)}
-              className="premium-cta inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[12px] font-semibold text-white sm:px-4 sm:py-2.5 sm:text-[13px]"
+              className="premium-cta inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[12px] font-semibold leading-none text-white sm:px-5 sm:text-[13px]"
             >
+              {isPentest ? <Shield className="h-3.5 w-3.5" /> : <Sparkles className="h-3.5 w-3.5" />}
               {cta.label}
             </Link>
           </div>
@@ -375,6 +449,25 @@ export default function Header() {
           </div>
 
           <MobileGroup
+            label="Quick Check"
+            open={isMobileQuickCheckOpen}
+            onToggle={() => setIsMobileQuickCheckOpen(!isMobileQuickCheckOpen)}
+          >
+            {quickCheckLinks.map((l, i) => (
+              <MobileLink
+                key={i}
+                label={l.name}
+                active={isActive(l.path)}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setIsMobileQuickCheckOpen(false);
+                  router.push(toLocalizedPath(l.path));
+                }}
+              />
+            ))}
+          </MobileGroup>
+
+          <MobileGroup
             label={t('services')}
             open={isMobileServicesOpen}
             onToggle={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
@@ -385,6 +478,25 @@ export default function Header() {
                 label={s.name}
                 active={isActive(s.path)}
                 onClick={() => handleServiceClick(s.path)}
+              />
+            ))}
+          </MobileGroup>
+
+          <MobileGroup
+            label="Compliance"
+            open={isMobileComplianceOpen}
+            onToggle={() => setIsMobileComplianceOpen(!isMobileComplianceOpen)}
+          >
+            {complianceLinks.map((l, i) => (
+              <MobileLink
+                key={i}
+                label={l.name}
+                active={isActive(l.path)}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setIsMobileComplianceOpen(false);
+                  router.push(toLocalizedPath(l.path));
+                }}
               />
             ))}
           </MobileGroup>

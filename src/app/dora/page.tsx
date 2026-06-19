@@ -30,6 +30,28 @@ const data: RegulationContent = {
     { label: "Anzuwenden seit", value: "17. Januar 2025" },
     { label: "Geltung", value: "Unmittelbar (Verordnung)" },
   ],
+  penalties: {
+    title: "Was droht bei Verstößen gegen DORA?",
+    intro:
+      "DORA gilt unmittelbar und wird von den Finanzaufsichtsbehörden durchgesetzt. Bei Versäumnissen drohen aufsichtsrechtliche Maßnahmen, empfindliche Geldbußen und Zwangsgelder.",
+    items: [
+      {
+        value: "Aufsichtsmaßnahmen",
+        label: "Sanktionen durch BaFin & EZB",
+        desc: "Die Aufsicht kann verwaltungsrechtliche Sanktionen, Geldbußen und verbindliche Auflagen verhängen – bis hin zur Einschränkung der Geschäftstätigkeit.",
+      },
+      {
+        value: "Bis 1 % Tagesumsatz",
+        label: "Zwangsgelder für IKT-Drittdienstleister",
+        desc: "Kritische IKT-Drittdienstleister unter EU-Aufsicht riskieren tägliche Zwangsgelder von bis zu 1 % des durchschnittlichen weltweiten Tagesumsatzes – über bis zu 6 Monate.",
+      },
+      {
+        value: "Persönliche Haftung",
+        label: "Verantwortung der Leitungsorgane",
+        desc: "Das Leitungsorgan trägt die Letztverantwortung für das IKT-Risikomanagement. Versäumnisse können persönlich und reputativ teuer werden.",
+      },
+    ],
+  },
   obligations: {
     title: "Welche Pflichten bringt",
     accent: "DORA mit sich?",
