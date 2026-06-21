@@ -192,7 +192,7 @@ const pentestDe: Copy = {
   heroLabel: 'Preise',
   heroLine1: 'Festpreise.',
   heroLine2: 'Klarer Scope.',
-  heroSub: 'Manuelle Penetrationstests von zertifizierten Testern. Alle Pakete inklusive Bericht (DE & EN), Fix-Empfehlungen und kostenlosem Retest.',
+  heroSub: 'Automatisierte Scans ab 1.500 €, manuelle Penetrationstests individuell – von zertifizierten Testern. Bericht (DE & EN), Fix-Empfehlungen und kostenloser Retest inklusive.',
   perMonth: ' netto',
   vatNote: 'Alle Preise zzgl. MwSt. Endgültiger Preis nach Scoping-Call. Kostenloser Retest binnen 30 Tagen.',
   compareLabel: 'Pakete vergleichen',
@@ -207,35 +207,35 @@ const pentestDe: Copy = {
   popular: 'Am häufigsten',
   plans: [
     {
-      name: 'Web-App',
-      price: 'ab 2.500 €',
-      audience: 'Web- oder API-Anwendung · OWASP Top 10 + Business Logic',
+      name: 'Automatischer Scan',
+      price: 'ab 1.500 €',
+      audience: 'Automatisierter Schwachstellen-Scan · schneller Überblick',
       features: [
-        'Manueller Test einer Web-/API-Anwendung',
-        'Authenticated + Unauthenticated',
-        'Bericht (DE & EN, Management + Technik)',
-        'Konkrete Fix-Empfehlungen',
-        'Kostenloser Retest binnen 30 Tagen',
+        'Automatisierter Scan einer Web-/API-Anwendung',
+        'OWASP Top 10 (automatisiert)',
+        'Standard-Report (DE & EN)',
+        'Kein manueller Exploit-Test',
+        'Lieferzeit 3–5 Werktage',
       ],
-      cta: { label: 'Web-Pentest anfragen', href: '/request-pentest' },
+      cta: { label: 'Scan anfragen', href: '/request-pentest' },
     },
     {
-      name: 'Internes Pentest',
-      price: 'ab 4.900 €',
-      audience: 'Internes Netzwerk + Active Directory',
+      name: 'Manueller Pentest',
+      price: 'Preis ermitteln',
+      audience: 'Web, API & Netzwerk · manueller Tiefentest',
       features: [
-        'Netzwerk-Penetrationstest (intern)',
-        'Active Directory · Privilege Escalation',
-        'Lateral Movement & Domain Compromise',
-        'Bericht inkl. Angriffspfad-Diagramm',
+        'Manueller Penetrationstest',
+        'Authenticated + Unauthenticated',
+        'Active Directory / Netzwerk auf Wunsch',
+        'Bericht (DE & EN, Management + Technik)',
         'Kostenloser Retest binnen 30 Tagen',
       ],
       highlight: true,
-      cta: { label: 'Internes Pentest anfragen', href: '/request-pentest' },
+      cta: { label: 'Pentest anfragen', href: '/request-pentest' },
     },
     {
       name: 'Enterprise',
-      price: 'individuell',
+      price: 'Preis ermitteln',
       audience: 'Multi-Scope · Red Team · Cloud / OT',
       features: [
         'Mehrere Web-/API/Netzwerk-Targets',
@@ -248,16 +248,17 @@ const pentestDe: Copy = {
     },
   ],
   rows: [
-    { label: 'Scope', values: ['1 Web-/API-App', 'Netzwerk + AD', 'Multi-Scope'] },
-    { label: 'Dauer', values: ['5–8 Tage', '8–12 Tage', 'individuell'] },
-    { label: 'Methodik', values: ['OWASP / OSSTMM', 'PTES / NIST', 'Custom + Red Team'] },
+    { label: 'Scope', values: ['1 Web-/API-App', 'Web / API / Netzwerk', 'Multi-Scope'] },
+    { label: 'Testtiefe', values: ['Automatisiert', 'Manueller Tiefentest', 'Custom + Red Team'] },
+    { label: 'Dauer', values: ['1–2 Tage', '5–12 Tage', 'individuell'] },
+    { label: 'Methodik', values: ['Automatisierter Scan', 'OWASP / PTES / NIST', 'Custom + Red Team'] },
     { label: 'Bericht (DE + EN)', values: [true, true, true] },
-    { label: 'Manuelles Testing', values: [true, true, true] },
+    { label: 'Manuelles Testing', values: [false, true, true] },
     { label: 'Active-Directory-Test', values: [false, true, true] },
     { label: 'Cloud-Konfigurations-Review', values: [false, false, true] },
     { label: 'Phishing / Social Engineering', values: [false, false, 'optional'] },
-    { label: 'Kostenloser Retest', values: ['30 Tage', '30 Tage', '30 Tage'] },
-    { label: 'Compliance-Mapping', values: ['ISO 27001 / DSGVO', 'ISO 27001 / NIS2 / BSI', 'Alle relevanten Frameworks'] },
+    { label: 'Kostenloser Retest', values: ['—', '30 Tage', '30 Tage'] },
+    { label: 'Compliance-Mapping', values: ['Basis', 'ISO 27001 / NIS2 / BSI', 'Alle relevanten Frameworks'] },
   ],
   faq: [
     { q: 'Wie schnell startet das Pentest?', a: 'Nach Vertragsabschluss starten wir typischerweise binnen 1–2 Wochen, in dringenden Fällen auch innerhalb von 72 Stunden.' },
@@ -275,7 +276,7 @@ const pentestEn: Copy = {
   heroLabel: 'Pricing',
   heroLine1: 'Fixed prices.',
   heroLine2: 'Clear scope.',
-  heroSub: 'Manual penetration testing by certified testers. Every package includes a bilingual report (EN + DE), fix guidance and a free retest.',
+  heroSub: 'Automated scans from €1,500, manual penetration tests priced individually – by certified testers. Bilingual report (EN + DE), fix guidance and a free retest included.',
   perMonth: ' net',
   vatNote: 'All prices VAT excluded. Final price after scoping call. Free retest within 30 days.',
   compareLabel: 'Compare packages',
@@ -290,35 +291,35 @@ const pentestEn: Copy = {
   popular: 'Most requested',
   plans: [
     {
-      name: 'Web App',
-      price: 'from €2,500',
-      audience: 'Web or API · OWASP Top 10 + business logic',
+      name: 'Automated scan',
+      price: 'from €1,500',
+      audience: 'Automated vulnerability scan · quick overview',
       features: [
-        'Manual test of a web / API application',
-        'Authenticated + unauthenticated',
-        'Report (EN + DE, exec + technical)',
-        'Concrete remediation guidance',
-        'Free retest within 30 days',
+        'Automated scan of a web / API application',
+        'OWASP Top 10 (automated)',
+        'Standard report (EN + DE)',
+        'No manual exploitation',
+        'Delivery in 3–5 business days',
       ],
-      cta: { label: 'Request web pentest', href: '/request-pentest' },
+      cta: { label: 'Request scan', href: '/request-pentest' },
     },
     {
-      name: 'Internal',
-      price: 'from €4,900',
-      audience: 'Internal network + Active Directory',
+      name: 'Manual pentest',
+      price: 'On request',
+      audience: 'Web, API & network · manual deep test',
       features: [
-        'Internal network penetration test',
-        'Active Directory · privilege escalation',
-        'Lateral movement & domain compromise',
-        'Report incl. attack-path diagram',
+        'Manual penetration test',
+        'Authenticated + unauthenticated',
+        'Active Directory / network on request',
+        'Report (EN + DE, exec + technical)',
         'Free retest within 30 days',
       ],
       highlight: true,
-      cta: { label: 'Request internal pentest', href: '/request-pentest' },
+      cta: { label: 'Request pentest', href: '/request-pentest' },
     },
     {
       name: 'Enterprise',
-      price: 'custom',
+      price: 'On request',
       audience: 'Multi-scope · red team · cloud / OT',
       features: [
         'Multiple web / API / network targets',
@@ -331,16 +332,17 @@ const pentestEn: Copy = {
     },
   ],
   rows: [
-    { label: 'Scope', values: ['1 web / API app', 'Network + AD', 'Multi-scope'] },
-    { label: 'Duration', values: ['5–8 days', '8–12 days', 'custom'] },
-    { label: 'Methodology', values: ['OWASP / OSSTMM', 'PTES / NIST', 'Custom + red team'] },
+    { label: 'Scope', values: ['1 web / API app', 'Web / API / network', 'Multi-scope'] },
+    { label: 'Test depth', values: ['Automated', 'Manual deep test', 'Custom + red team'] },
+    { label: 'Duration', values: ['1–2 days', '5–12 days', 'custom'] },
+    { label: 'Methodology', values: ['Automated scan', 'OWASP / PTES / NIST', 'Custom + red team'] },
     { label: 'Report (EN + DE)', values: [true, true, true] },
-    { label: 'Manual testing', values: [true, true, true] },
+    { label: 'Manual testing', values: [false, true, true] },
     { label: 'Active Directory test', values: [false, true, true] },
     { label: 'Cloud configuration review', values: [false, false, true] },
     { label: 'Phishing / social engineering', values: [false, false, 'optional'] },
-    { label: 'Free retest', values: ['30 days', '30 days', '30 days'] },
-    { label: 'Compliance mapping', values: ['ISO 27001 / GDPR', 'ISO 27001 / NIS2 / BSI', 'All relevant frameworks'] },
+    { label: 'Free retest', values: ['—', '30 days', '30 days'] },
+    { label: 'Compliance mapping', values: ['Basic', 'ISO 27001 / NIS2 / BSI', 'All relevant frameworks'] },
   ],
   faq: [
     { q: 'How fast can the pentest start?', a: 'Typically within 1–2 weeks of signing; for urgent cases we can start within 72 hours.' },
@@ -460,8 +462,10 @@ export default function PricingClient() {
                     {p.price}
                   </span>
                 )}
-                <span className="premium-tabular text-5xl font-extrabold tracking-tight">{displayPrice}</span>
-                <span className={'text-sm ' + (p.highlight ? 'text-white/60' : 'text-[#6B7280]')}>{c.perMonth}</span>
+                <span className={'premium-tabular font-extrabold tracking-tight ' + (/\d/.test(displayPrice) ? 'text-5xl' : 'text-3xl')}>{displayPrice}</span>
+                {/\d/.test(displayPrice) && (
+                  <span className={'text-sm ' + (p.highlight ? 'text-white/60' : 'text-[#6B7280]')}>{c.perMonth}</span>
+                )}
               </div>
               <p className={'mt-2 text-sm ' + (p.highlight ? 'text-white/70' : 'text-[#525866]')}>{p.audience}</p>
 

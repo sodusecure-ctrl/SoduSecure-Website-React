@@ -4,7 +4,7 @@ import PricingClient from './PricingClient';
 export const metadata: Metadata = {
   title: 'Preise - Sodu Secure · Pentest & AuditAI',
   description:
-    'Pentest-Festpreise (Web ab 2.500 €, intern ab 4.900 €, Enterprise individuell) und AuditAI-Wochenbericht ab 99 €/Monat. Brand-Toggle wechselt die Pakete.',
+    'Automatisierter Schwachstellen-Scan ab 1.500 €, manuelle Penetrationstests individuell (Preis ermitteln) und AuditAI-Wochenbericht ab 99 €/Monat. Brand-Toggle wechselt die Pakete.',
 };
 
 export default function PricingPage() {
