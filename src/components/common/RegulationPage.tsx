@@ -96,11 +96,57 @@ export interface RegulationContent {
   related: { href: string; label: string; desc: string }[];
 }
 
+const SITE_URL = "https://www.sodusecure.com";
+
 export default function RegulationPage({ data }: { data: RegulationContent }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
+  const pageUrl = `${SITE_URL}/${data.slug}`;
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: data.title, item: pageUrl },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: `${data.title} – ${data.titleAccent}`,
+      serviceType: "Penetration Testing & Compliance",
+      provider: {
+        "@type": "Organization",
+        name: "SODU Secure",
+        url: SITE_URL,
+        areaServed: "DE",
+      },
+      areaServed: { "@type": "Country", name: "Germany" },
+      url: pageUrl,
+      description: data.heroIntro,
+    },
+    ...(data.faqs?.length
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: data.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          },
+        ]
+      : []),
+  ];
+
   return (
     <main className="bg-black text-white min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,59,48,0.16),transparent_60%)]" />
