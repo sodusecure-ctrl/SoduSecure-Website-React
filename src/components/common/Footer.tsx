@@ -219,6 +219,18 @@ export default function Footer() {
           {/* Legal Links - Stack on mobile, row on md+ */}
           <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
             <Link
+              href={toLocalizedPath('/about')}
+              className="text-gray-400 hover:text-white transition-colors text-xs lg:text-sm py-1"
+            >
+              {isEnglish ? 'About' : 'Über uns'}
+            </Link>
+            <Link
+              href={toLocalizedPath('/contact')}
+              className="text-gray-400 hover:text-white transition-colors text-xs lg:text-sm py-1"
+            >
+              {isEnglish ? 'Contact' : 'Kontakt'}
+            </Link>
+            <Link
               href={toLocalizedPath('/privacy')}
               className="text-gray-400 hover:text-white transition-colors text-xs lg:text-sm py-1"
             >

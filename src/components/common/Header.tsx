@@ -121,9 +121,7 @@ export default function Header() {
 
   const navLinks = [
     priceLink,
-    { label: t('caseStudiesBlogs'), href: '/case-studies' },
-    { label: t('about'), href: '/about' },
-    { label: t('contact'), href: '/contact' },
+    { label: isEnglish ? 'Case studies' : 'Fallstudien', href: '/case-studies' },
   ];
 
   const isActive = (path: string) => pathname === path;
