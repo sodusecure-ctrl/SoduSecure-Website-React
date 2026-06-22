@@ -56,6 +56,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/privacy',            lastModified: '2026-03-16', changeFreq: 'yearly',  priority: 0.3  },
     { path: '/terms',              lastModified: '2026-03-16', changeFreq: 'yearly',  priority: 0.3  },
     { path: '/impressum',          lastModified: '2026-03-16', changeFreq: 'yearly',  priority: 0.3  },
+    // Risiko-/Pflicht-Checks (Lead-Gen)
+    { path: '/pentest-schnellcheck',   lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.92 },
+    { path: '/pentest-risiko-check',   lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.92 },
+    { path: '/brauche-ich-pentest',    lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.92 },
+    // Preise / Pakete
+    { path: '/pricing',                lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.9 },
+    // Core / Service (bisher in Sitemap fehlend)
+    { path: '/penetration-testing-service',  lastModified: '2026-06-22', changeFreq: 'weekly',  priority: 0.9 },
+    { path: '/pentesting-service',           lastModified: '2026-06-22', changeFreq: 'weekly',  priority: 0.9 },
+    { path: '/penetration-testing-anbieter', lastModified: '2026-06-22', changeFreq: 'weekly',  priority: 0.9 },
+    { path: '/red-team-assessment',          lastModified: '2026-06-22', changeFreq: 'monthly', priority: 0.85 },
+    { path: '/red-team-assessment-service',  lastModified: '2026-06-22', changeFreq: 'monthly', priority: 0.8 },
+    { path: '/vulnerability-assessment-service', lastModified: '2026-06-22', changeFreq: 'monthly', priority: 0.8 },
+    { path: '/phishing-simulation',          lastModified: '2026-06-22', changeFreq: 'monthly', priority: 0.8 },
+    // Cyber-Security-Check-Cluster
+    { path: '/cyber-security-check',         lastModified: '2026-06-22', changeFreq: 'weekly',  priority: 0.85 },
+    { path: '/cyber-security-check-kosten',  lastModified: '2026-06-22', changeFreq: 'weekly',  priority: 0.85 },
+    { path: '/cyber-security-check-preis',   lastModified: '2026-06-22', changeFreq: 'weekly',  priority: 0.85 },
+    // Trust / Sonstiges
+    { path: '/security',                     lastModified: '2026-06-22', changeFreq: 'monthly', priority: 0.5 },
   ];
 
   // Service pages
