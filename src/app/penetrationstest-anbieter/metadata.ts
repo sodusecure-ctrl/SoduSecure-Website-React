@@ -5,7 +5,7 @@ const baseUrl = "https://www.sodusecure.com";
 export const metadata: Metadata = {
   title: "Penetrationstest Anbieter: So waehlen Sie richtig | SODU Secure",
   description:
-    "Penetrationstest Anbieter vergleichen: Zertifizierungen, Red Flags, Report-Qualitaet, Preise und Auswahlkriterien fuer seriouse Pentester.",
+    "Penetrationstest Anbieter vergleichen: Zertifizierungen, Red Flags, Report-Qualität, Preise und Auswahlkriterien für seriöse Pentester.",
   keywords: [
     "penetrationstest anbieter",
     "pentest anbieter",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Penetrationstest Anbieter: So waehlen Sie richtig | SODU Secure",
     description:
-      "Guide fuer Unternehmen: Anbieter vergleichen, Qualitaet erkennen und den richtigen Pentest-Partner waehlen.",
+      "Guide für Unternehmen: Anbieter vergleichen, Qualität erkennen und den richtigen Pentest-Partner wählen.",
     url: `${baseUrl}/penetrationstest-anbieter`,
     type: "website",
   },
