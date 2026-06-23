@@ -49,7 +49,7 @@ const ABLAUF = [
 const FAQS = [
   { q: "Was ist ein IT Sicherheitscheck?", a: "Ein IT Sicherheitscheck (auch IT Security Check) ist eine systematische manuelle Prüfung Ihrer IT-Infrastruktur durch Sicherheitsexperten. Im Gegensatz zu automatisierten Scannern decken zertifizierte Pentester auch komplexe Logikfehler und Angriffsketten auf." },
   { q: "Wie schnell erhalte ich Ergebnisse?", a: "SODU Secure liefert den vollständigen IT Sicherheitscheck-Bericht innerhalb von 48 Stunden nach Testabschluss. Für kritische Findings kommunizieren wir sofort während des Tests. Das macht uns zu einem der schnellsten Pentest-Anbieter in Deutschland." },
-  { q: "Was kostet ein IT Sicherheitscheck?", a: "Ein IT Sicherheitscheck kostet bei SODU Secure ab 2.500 € als Festpreis. Der genaue Preis hängt vom Umfang (Web-App, Netzwerk, AD, Cloud) ab. Nutzen Sie den Konfigurator für sofortige Preistransparenz – kein Verkaufsgespräch nötig." },
+  { q: "Was kostet ein IT Sicherheitscheck?", a: "Ein IT Sicherheitscheck kostet bei SODU Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Umfang (Web-App, Netzwerk, AD, Cloud) ab. Nutzen Sie den Konfigurator für sofortige Preistransparenz – kein Verkaufsgespräch nötig." },
   { q: "Kann ein IT Sicherheitscheck remote durchgeführt werden?", a: "Ja – der IT Sicherheitscheck wird vollständig remote über VPN oder Test-Account durchgeführt. Für interne Infrastruktur-Checks kann optional auch ein Vor-Ort-Einsatz in Berlin und Umgebung vereinbart werden." },
   { q: "Welche Compliance-Anforderungen erfüllt ein IT Sicherheitscheck?", a: "Ein SODU Secure IT Sicherheitscheck liefert Nachweise für NIS2 (Art. 21 Risikomanagement), ISO 27001 (Annex A), DSGVO Art. 32 und DORA. Der Bericht ist für die Vorlage bei Behörden und Versicherungen geeignet." },
   { q: "Was ist der Unterschied zwischen IT Sicherheitscheck und Penetrationstest?", a: "Die Begriffe werden oft synonym verwendet. Ein IT Sicherheitscheck ist oft etwas breiter gefasst und kann neben technischem Testing auch Prozess- und Konfigurationsprüfungen umfassen. Ein Penetrationstest fokussiert tiefer auf die aktive Exploitation von Schwachstellen. SODU Secure kombiniert beides." },
@@ -72,7 +72,7 @@ export default function ITSicherheitscheckPage() {
 
           <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-1.5 text-sm text-green-400 mb-6">
             <Zap className="w-3.5 h-3.5" />
-            <span>IT Sicherheitscheck · Ergebnis in 2–5 Tagen · Festpreis ab 2.500 €</span>
+            <span>IT Sicherheitscheck · Ergebnis in 2–5 Tagen · Festpreis ab 1.499 €</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -121,7 +121,7 @@ export default function ITSicherheitscheckPage() {
               { value: "24 h", label: "Angebot nach Anfrage" },
               { value: "2–5 Tage", label: "Testdauer (fokussiert)" },
               { value: "48 h", label: "Bericht nach Testende" },
-              { value: "ab 2.500 €", label: "Festpreis, kein Tagessatz" },
+              { value: "ab 1.499 €", label: "Festpreis, kein Tagessatz" },
             ].map((s) => (
               <div key={s.label}>
                 <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">{s.value}</div>
@@ -202,7 +202,7 @@ export default function ITSicherheitscheckPage() {
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
-              { name: "Basic Check", price: "ab 2.500 €", duration: "2–3 Tage", items: ["1 Web-App oder Netzwerk", "OWASP / CVE Prüfung", "CVSS 3.1 Bewertung", "Management Summary", "Remediation Guide", "1× Retest inklusive"], highlight: false },
+              { name: "Basic Check", price: "ab 1.499 €", duration: "2–3 Tage", items: ["1 Web-App oder Netzwerk", "OWASP / CVE Prüfung", "CVSS 3.1 Bewertung", "Management Summary", "Remediation Guide", "1× Retest inklusive"], highlight: false },
               { name: "Professional Check", price: "ab 6.500 €", duration: "3–5 Tage", items: ["Web-App + Netzwerk + AD", "Manuelle Exploitation", "Proof-of-Concepts", "Compliance-Bericht (NIS2/ISO)", "Abschlusspräsentation", "1× Retest inklusive"], highlight: true },
               { name: "Enterprise Check", price: "ab 12.000 €", duration: "1–2 Wochen", items: ["Vollständige IT-Infrastruktur", "Cloud + AD + APIs + Web", "Red Team Elemente", "Executive + technischer Report", "Remediation Workshop", "Unbegrenzte Retests"], highlight: false },
             ].map((pkg) => (

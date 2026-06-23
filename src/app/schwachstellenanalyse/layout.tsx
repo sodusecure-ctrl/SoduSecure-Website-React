@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'SODU Secure – Schwachstellenanalyse',
-            description: 'Professionelle Schwachstellenanalyse (Vulnerability Assessment) für Unternehmen. CVSS 3.1 Scoring, Proof-of-Concepts, Festpreis ab 2.500 €.',
+            description: 'Professionelle Schwachstellenanalyse (Vulnerability Assessment) für Unternehmen. CVSS 3.1 Scoring, Proof-of-Concepts, Festpreis ab 800 €.',
             url: 'https://www.sodusecure.com/schwachstellenanalyse',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
@@ -49,7 +49,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             mainEntity: [
               { '@type': 'Question', name: 'Was ist eine Schwachstellenanalyse?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Schwachstellenanalyse (Vulnerability Assessment) ist eine systematische Prüfung Ihrer IT-Systeme auf bekannte Sicherheitslücken. Anders als beim Penetrationstest werden Schwachstellen identifiziert und bewertet, aber nicht aktiv ausgenutzt.' } },
               { '@type': 'Question', name: 'Was ist der Unterschied zwischen Schwachstellenanalyse und Penetrationstest?', acceptedAnswer: { '@type': 'Answer', text: 'Bei der Schwachstellenanalyse werden Sicherheitslücken identifiziert und bewertet (CVSS). Beim Penetrationstest werden sie zusätzlich manuell ausgenutzt, um echte Angriffswege zu beweisen. SODU Secure bietet beide Varianten als Festpreis.' } },
-              { '@type': 'Question', name: 'Was kostet eine Schwachstellenanalyse?', acceptedAnswer: { '@type': 'Answer', text: 'Eine professionelle Schwachstellenanalyse kostet bei SODU Secure ab 2.500 € als Festpreis. Der genaue Preis wird per Online-Konfigurator sofort berechnet.' } },
+              { '@type': 'Question', name: 'Was kostet eine Schwachstellenanalyse?', acceptedAnswer: { '@type': 'Answer', text: 'Eine professionelle Schwachstellenanalyse kostet bei SODU Secure ab 800 € als Festpreis. Der genaue Preis wird per Online-Konfigurator sofort berechnet.' } },
             ],
           }),
         }}

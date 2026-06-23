@@ -5,7 +5,7 @@ const baseUrl = 'https://www.sodusecure.com';
 export const metadata: Metadata = {
   title: 'Penetrationstest Berlin – Preis sofort berechnen | Zertifizierte Experten',
   description:
-    'Ist Ihre Website hackbar? Jetzt testen lassen. Manueller Penetrationstest für Web, API, AD & Netzwerke – OSCP-zertifiziert. Preis sofort im Online-Konfigurator berechnen. Festpreis ab 2.500 €.',
+    'Ist Ihre Website hackbar? Jetzt testen lassen. Manueller Penetrationstest für Web, API, AD & Netzwerke – OSCP-zertifiziert. Preis sofort im Online-Konfigurator berechnen. Festpreis ab 1.499 €.',
   keywords: [
     'Penetrationstest',
     'Penetration Testing',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Penetrationstest Berlin – Preis sofort berechnen | Zertifizierte Experten',
     description:
-      'Ist Ihre Website hackbar? Jetzt testen lassen. Manueller Pentest für Web, API, AD & Netzwerke. Preis sofort im Online-Konfigurator berechnen. Festpreis ab 2.500 €.',
+      'Ist Ihre Website hackbar? Jetzt testen lassen. Manueller Pentest für Web, API, AD & Netzwerke. Preis sofort im Online-Konfigurator berechnen. Festpreis ab 1.499 €.',
     url: `${baseUrl}/penetration-testing`,
     type: 'website',
     siteName: 'SODU Secure',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Penetrationstest & Pentesting – Zertifizierte Pentester | SODU Secure',
     description:
-      'SODU Secure – professioneller Penetrationstest für Web, API, AD & Netzwerke. Zertifizierte Experten. Festpreis ab 2.500 €.',
+      'SODU Secure – professioneller Penetrationstest für Web, API, AD & Netzwerke. Zertifizierte Experten. Festpreis ab 1.499 €.',
   },
   alternates: {
     canonical: `${baseUrl}/penetration-testing`,
@@ -116,7 +116,7 @@ export default function PenetrationTestingLayout({ children }: { children: React
         name: 'Was kostet ein Penetrationstest?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Ein Penetrationstest kostet bei SODU Secure ab 2.500 € für fokussierte Web-App-Tests bis 15.000 €+ für umfassende KMU-Engagements inkl. Active Directory und Phishing-Simulation. Alle Preise sind Festpreise ohne versteckte Tagessätze.',
+          text: 'Ein Penetrationstest kostet bei SODU Secure ab 1.499 € für fokussierte Web-App-Tests bis 15.000 €+ für umfassende KMU-Engagements inkl. Active Directory und Phishing-Simulation. Alle Preise sind Festpreise ohne versteckte Tagessätze.',
         },
       },
       {

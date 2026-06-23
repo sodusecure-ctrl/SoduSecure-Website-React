@@ -48,7 +48,7 @@ const COMPLIANCE = [
 
 const FAQS = [
   { q: "Was ist ein Cybersecurity Audit?", a: "Ein Cybersecurity Audit ist eine systematische Prüfung der gesamten IT-Sicherheitslage eines Unternehmens – technisch und prozessual. Dabei werden Schwachstellen in Web-Apps, Netzwerken, Cloud-Umgebungen und intern erkannt, nach CVSS 3.1 bewertet und mit Maßnahmenempfehlungen versehen." },
-  { q: "Was kostet ein Cybersecurity Audit?", a: "Ein Cybersecurity Audit kostet bei SODU Secure ab 2.500 € als Festpreis. Umfangreiche Audits (Full-Stack inkl. Compliance-Prüfung) starten ab 8.000 €. Nutzen Sie den Konfigurator für sofortige Preistransparenz – kein Tagessatz, kein Überbudget." },
+  { q: "Was kostet ein Cybersecurity Audit?", a: "Ein Cybersecurity Audit kostet bei SODU Secure ab 1.499 € als Festpreis. Umfangreiche Audits (Full-Stack inkl. Compliance-Prüfung) starten ab 8.000 €. Nutzen Sie den Konfigurator für sofortige Preistransparenz – kein Tagessatz, kein Überbudget." },
   { q: "Wie lange dauert ein Cybersecurity Audit?", a: "Ein fokussierter Cyber Security Audit (z.B. nur Web oder Netzwerk) dauert 2–5 Tage. Vollständige Unternehmens-Audits inkl. Active Directory und Cloud 1–3 Wochen. Der Bericht wird 48 Stunden nach Testabschluss geliefert." },
   { q: "Erfüllt ein Cybersecurity Audit NIS2-Pflichten?", a: "Ja – ein SODU Secure Cybersecurity Audit erfüllt die NIS2-Anforderungen für regelmäßige technische Sicherheitsprüfungen (Art. 21 Abs. 2 lit. g). Der Bericht ist für die Vorlage bei Behörden und für ISO 27001 Zertifizierungen geeignet." },
   { q: "Was ist der Unterschied zwischen Cybersecurity Audit und Penetrationstest?", a: "Der Begriff Cybersecurity Audit umfasst oft sowohl technisches Pentesting als auch prozessuale und Compliance-Prüfungen. Ein klassischer Penetrationstest fokussiert tiefer auf technische Exploitation. SODU Secure kombiniert beides – technisches Pentesting + Compliance-Mapping in einem Bericht." },
@@ -72,7 +72,7 @@ export default function CybersecurityAuditPage() {
 
           <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-sm text-blue-400 mb-6">
             <Shield className="w-3.5 h-3.5" />
-            <span>Cybersecurity Audit · NIS2 & ISO 27001 konform · Festpreis ab 2.500 €</span>
+            <span>Cybersecurity Audit · NIS2 & ISO 27001 konform · Festpreis ab 1.499 €</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">

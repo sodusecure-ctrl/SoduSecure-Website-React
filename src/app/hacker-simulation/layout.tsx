@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://www.sodusecure.com/hacker-simulation' },
   openGraph: {
     title: 'Hacker-Simulation – Angriff sofort simulieren lassen | SODU Secure',
-    description: 'Jetzt testen, ob Ihr Unternehmen einem echten Hackerangriff stannhält. OSCP-zertifiziert. Preis sofort online berechnen. Festpreis ab 2.500 €.',
+    description: 'Jetzt testen, ob Ihr Unternehmen einem echten Hackerangriff stannhält. OSCP-zertifiziert. Preis sofort online berechnen. Festpreis ab 1.499 €.',
     url: 'https://www.sodusecure.com/hacker-simulation',
     siteName: 'SODU Secure',
     locale: 'de_DE',
@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'SODU Secure – Hacker Simulation & Ethical Hacking',
-            description: 'Realistische Hacker-Simulation (Ethical Hacking) für Unternehmen. OSCP-zertifizierte Experten simulieren echte Cyberangriffe. Festpreis ab 2.500 €.',
+            description: 'Realistische Hacker-Simulation (Ethical Hacking) für Unternehmen. OSCP-zertifizierte Experten simulieren echte Cyberangriffe. Festpreis ab 1.499 €.',
             url: 'https://www.sodusecure.com/hacker-simulation',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@type': 'FAQPage',
             mainEntity: [
               { '@type': 'Question', name: 'Was ist eine Hacker Simulation?', acceptedAnswer: { '@type': 'Answer', text: 'Bei einer Hacker Simulation (Ethical Hacking / Penetrationstest) simulieren autorisierte Sicherheitsexperten einen echten Cyberangriff auf Ihr Unternehmen. Ziel ist es, Schwachstellen zu finden, bevor echte Hacker es tun.' } },
-              { '@type': 'Question', name: 'Wie viel kostet eine Hacker Simulation?', acceptedAnswer: { '@type': 'Answer', text: 'Eine professionelle Hacker Simulation kostet ab 2.500 € als Festpreis. SODU Secure berechnet den genauen Preis per Online-Konfigurator – sofort und unverbindlich.' } },
+              { '@type': 'Question', name: 'Wie viel kostet eine Hacker Simulation?', acceptedAnswer: { '@type': 'Answer', text: 'Eine professionelle Hacker Simulation kostet ab 1.499 € als Festpreis. SODU Secure berechnet den genauen Preis per Online-Konfigurator – sofort und unverbindlich.' } },
               { '@type': 'Question', name: 'Ist Hacker Simulation legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja – autorisiertes Ethical Hacking (Penetrationstest) ist vollständig legal. SODU Secure führt alle Tests ausschließlich mit schriftlicher Genehmigung des Systemeigentümers durch.' } },
             ],
           }),

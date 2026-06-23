@@ -37,7 +37,7 @@ export default function CyberSecurityCheckKostenPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 mb-6">
             <Euro className="w-4 h-4 text-[#FF3B30]" />
-            <span className="text-[#FF3B30] text-sm font-medium">Transparente Preise 2025</span>
+            <span className="text-[#FF3B30] text-sm font-medium">Transparente Preise</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Cyber Security Check Kosten –<br />

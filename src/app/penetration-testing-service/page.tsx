@@ -169,7 +169,7 @@ const FAQS = [
   },
   {
     q: "Bieten Sie Pentests für KMUs an?",
-    a: "Ja – KMUs sind unser Kernsegment. Wir bieten scoped Festpreis-Pentest-Pakete ab 2.500 € an, die für begrenzte IT-Ressourcen konzipiert sind und reale Angriffsvektoren abdecken. Bewerben Sie sich für unser Berliner KMU-Pilotprogramm für einen vollständig subventionierten Pentest im Wert von bis zu 15.000 €.",
+    a: "Ja – KMUs sind unser Kernsegment. Wir bieten scoped Festpreis-Pentest-Pakete ab 1.499 € an, die für begrenzte IT-Ressourcen konzipiert sind und reale Angriffsvektoren abdecken. Bewerben Sie sich für unser Berliner KMU-Pilotprogramm für einen vollständig subventionierten Pentest im Wert von bis zu 15.000 €.",
   },
   {
     q: "Ist ein Penetrationstest DSGVO-konform?",

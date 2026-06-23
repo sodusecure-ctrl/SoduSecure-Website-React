@@ -41,7 +41,7 @@ const AUDIT_UMFANG = [
 const PAKETE = [
   {
     name: "Sicherheitsaudit Basis",
-    price: "ab 2.500 €",
+    price: "ab 1.499 €",
     duration: "2–4 Tage",
     focus: "Technischer Fokus",
     items: ["Web-App oder Netzwerk Audit", "CVSS 3.1 Bewertung", "Management Summary", "Remediation Guide", "1x Retest inklusive"],
@@ -67,7 +67,7 @@ const PAKETE = [
 
 const FAQS = [
   { q: "Was ist ein IT Sicherheitsaudit?", a: "Ein IT Sicherheitsaudit (Sicherheitsaudit) ist eine umfassende Überprüfung der IT-Sicherheitslage eines Unternehmens – technisch und organisatorisch. Dabei werden Schwachstellen identifiziert, gegen Compliance-Anforderungen geprüft und mit priorisierten Maßnahmen versehen." },
-  { q: "Was kostet ein Sicherheitsaudit?", a: "Ein Sicherheitsaudit kostet bei SODU Secure ab 2.500 € (technischer Basis-Audit) bis 8.000 € (vollständiger Audit inkl. Compliance-Prüfung). Nutzen Sie den Konfigurator für einen sofortigen Festpreis – kein Tages­satz, kein Überbudget." },
+  { q: "Was kostet ein Sicherheitsaudit?", a: "Ein Sicherheitsaudit kostet bei SODU Secure ab 1.499 € (technischer Basis-Audit) bis 8.000 € (vollständiger Audit inkl. Compliance-Prüfung). Nutzen Sie den Konfigurator für einen sofortigen Festpreis – kein Tages­satz, kein Überbudget." },
   { q: "Wie lange dauert ein Sicherheitsaudit?", a: "Ein fokussierter IT Sicherheitsaudit dauert 2–5 Tage. Ein vollständiger Unternehmens-Audit (technisch + Compliance + organisatorisch) 1–2 Wochen. Bericht-Lieferung 48 Stunden nach Testabschluss." },
   { q: "Für welche Compliance-Anforderungen brauche ich einen Sicherheitsaudit?", a: "NIS2 (Art. 21 – regelmäßige Risikomanagement-Maßnahmen), ISO 27001 (Annex A.12.6), DSGVO Art. 32 (technische Sicherheitsmaßnahmen) und DORA (Art. 26 – ICT risk management) fordern alle regelmäßige Sicherheitsüberprüfungen durch Experten." },
   { q: "Was unterscheidet einen Sicherheitsaudit von einem Penetrationstest?", a: "Ein Penetrationstest fokussiert auf technische Exploitation (manuell, PoC). Ein Sicherheitsaudit ist breiter: er umfasst technisches Testing + Policy-Prüfung + Compliance-Gap-Analyse + organisatorische Bewertung. SODU Secure kombiniert beides in einem Audit." },

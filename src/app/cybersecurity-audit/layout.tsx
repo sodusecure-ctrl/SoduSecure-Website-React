@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'SODU Secure – Cybersecurity Audit',
-            description: 'Manueller Cybersecurity Audit für Unternehmen. NIS2-, ISO 27001- und DORA-konforme Berichte. Festpreis ab 2.500 €.',
+            description: 'Manueller Cybersecurity Audit für Unternehmen. NIS2-, ISO 27001- und DORA-konforme Berichte. Festpreis ab 1.499 €.',
             url: 'https://www.sodusecure.com/cybersecurity-audit',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@type': 'FAQPage',
             mainEntity: [
               { '@type': 'Question', name: 'Was ist ein Cybersecurity Audit?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Cybersecurity Audit ist eine systematische Prüfung der IT-Sicherheitslage eines Unternehmens. Dabei werden Schwachstellen in Web-Apps, Netzwerken, Cloud und Prozessen identifiziert und nach Schweregrad bewertet.' } },
-              { '@type': 'Question', name: 'Was kostet ein Cybersecurity Audit?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Cybersecurity Audit kostet bei SODU Secure ab 2.500 € als Festpreis. Der genaue Preis hängt vom Prüfungsumfang ab und wird per Konfigurator sofort berechnet.' } },
+              { '@type': 'Question', name: 'Was kostet ein Cybersecurity Audit?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Cybersecurity Audit kostet bei SODU Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Prüfungsumfang ab und wird per Konfigurator sofort berechnet.' } },
               { '@type': 'Question', name: 'Erfüllt ein Cybersecurity Audit NIS2-Anforderungen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja – SODU Secure erstellt Cybersecurity Audit-Berichte die NIS2-Anforderungen (Art. 21 Risikomanagement), ISO 27001 Annex A und DSGVO Art. 32 erfüllen.' } },
             ],
           }),

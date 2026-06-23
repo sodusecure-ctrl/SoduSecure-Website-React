@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     default: "Pentest Berlin – Preis sofort berechnen | SODU Secure",
     template: "%s | SODU Secure"
   },
-  description: "Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. Manueller Pentest für Web, API & Active Directory – OSCP-zertifiziert. Preis sofort online berechnen. Festpreis ab 2.500 €.",
+  description: "Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. Manueller Pentest für Web, API & Active Directory – OSCP-zertifiziert. Preis sofort online berechnen. Festpreis ab 1.499 €.",
   keywords: [
     'penetration testing',
     'cybersecurity',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     locale: 'de_DE',
     url: baseUrl,
     title: 'Pentest Berlin – Preis sofort online berechnen | SODU Secure',
-    description: 'Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. OSCP-zertifizierter Pentest – Web, API, AD. Preis sofort online berechnen. Festpreis ab 2.500 €.',
+    description: 'Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. OSCP-zertifizierter Pentest – Web, API, AD. Preis sofort online berechnen. Festpreis ab 1.499 €.',
     siteName: 'SODU Secure',
     images: [
       {
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'SODU Secure – Pentest Berlin & Penetration Testing',
-    description: 'Zertifizierte Pentester – transparente Festpreise ab 2.500 €. Pentest sofort konfigurieren & Preis berechnen. Web, API, AD & Cloud.',
+    description: 'Zertifizierte Pentester – transparente Festpreise ab 1.499 €. Pentest sofort konfigurieren & Preis berechnen. Web, API, AD & Cloud.',
     images: [`${baseUrl}/images/twitter-image.jpg`],
     creator: '@sodusecure',
   },
