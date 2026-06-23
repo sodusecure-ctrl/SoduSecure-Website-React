@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/pentest-angebot',               lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.95 },
     { path: '/pentest-certification',         lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.9  },
     { path: '/penetration-testing-anbieter',  lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.95 },
+    { path: '/penetrationstest-deutschland',  lastModified: '2026-06-23', changeFreq: 'weekly',  priority: 0.96 },
     { path: '/pentest-kosten',                lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.98 },
     { path: '/pentest-konfigurator',          lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/pentest-preis',                 lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.95 },
@@ -92,6 +93,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services/security-audit',           lastModified: '2026-03-01' },
     { path: '/services/vulnerability-assessment', lastModified: '2026-03-01' },
     { path: '/services/iso-27001',                lastModified: '2026-05-18' },
+    { path: '/services/active-directory',         lastModified: '2026-06-23' },
+    { path: '/services/aws-penetrationstest',     lastModified: '2026-06-23' },
   ];
 
   const routes: MetadataRoute.Sitemap = [];

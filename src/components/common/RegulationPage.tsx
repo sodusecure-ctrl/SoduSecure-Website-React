@@ -94,6 +94,10 @@ export interface RegulationContent {
   process: { step: string; title: string; desc: string; icon: string }[];
   faqs: { q: string; a: string }[];
   related: { href: string; label: string; desc: string }[];
+  relatedHeading?: string;
+  relatedSubtext?: string;
+  ctaTitle?: string;
+  ctaText?: string;
 }
 
 const SITE_URL = "https://www.sodusecure.com";
@@ -371,9 +375,9 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
         <section className="bg-[#0A0A0B] py-16">
           <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">Weitere Standards & Regularien</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">{data.relatedHeading ?? "Weitere Standards & Regularien"}</h2>
               <p className="text-white/60 max-w-2xl mx-auto">
-                Wir decken die gängigen Sicherheits- und Compliance-Anforderungen ab. Sehen Sie sich verwandte Themen an.
+                {data.relatedSubtext ?? "Wir decken die gängigen Sicherheits- und Compliance-Anforderungen ab. Sehen Sie sich verwandte Themen an."}
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -431,10 +435,10 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
       <section className="bg-gradient-to-br from-[#FF3B30] to-[#E5332A] py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">
-            {data.title} betrifft Sie? Sprechen wir darüber.
+            {data.ctaTitle ?? `${data.title} betrifft Sie? Sprechen wir darüber.`}
           </h2>
           <p className="text-white/90 mb-8 max-w-2xl mx-auto text-lg">
-            Kostenlose Erstberatung – wir analysieren Ihre Ausgangslage und zeigen den schnellsten Weg zur Konformität.
+            {data.ctaText ?? "Kostenlose Erstberatung – wir analysieren Ihre Ausgangslage und zeigen den schnellsten Weg zur Konformität."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
