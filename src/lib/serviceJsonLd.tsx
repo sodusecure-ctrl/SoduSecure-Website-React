@@ -1,6 +1,6 @@
 import React from "react";
 
-const SITE_URL = "https://www.sodusecure.com";
+const SITE_URL = "https://sodusecure.com";
 
 /**
  * Server-rendered JSON-LD for a service / scope landing page.

@@ -1,6 +1,6 @@
 ﻿import { Metadata } from 'next';
 
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Penetration Testing Anbieter – Zertifiziert & Transparent | SODU Secure',
@@ -62,7 +62,7 @@ export default function PenetrationTestingAnbieterLayout({ children }: { childre
     telephone: '+49-177-7750985',
     email: 'info@sodusecure.com',
     priceRange: '€€',
-    sameAs: ['https://www.sodusecure.com'],
+    sameAs: ['https://sodusecure.com'],
   };
 
   const jsonLdFaq = {

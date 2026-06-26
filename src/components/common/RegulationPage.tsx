@@ -100,7 +100,7 @@ export interface RegulationContent {
   ctaText?: string;
 }
 
-const SITE_URL = "https://www.sodusecure.com";
+const SITE_URL = "https://sodusecure.com";
 
 export default function RegulationPage({ data }: { data: RegulationContent }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);

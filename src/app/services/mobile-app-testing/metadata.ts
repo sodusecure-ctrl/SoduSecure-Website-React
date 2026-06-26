@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Mobile App Pentest – iOS & Android | Zertifizierte Pentester | SODU Secure',

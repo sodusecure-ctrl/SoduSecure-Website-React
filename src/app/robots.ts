@@ -1,7 +1,7 @@
 ﻿import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://www.sodusecure.com'; // Update with your actual domain
+  const baseUrl = 'https://sodusecure.com'; // Update with your actual domain
 
   return {
     rules: [
@@ -26,6 +26,5 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
   };
 }

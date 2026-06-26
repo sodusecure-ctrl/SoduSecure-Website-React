@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Cloud Pentest – AWS, Azure & GCP | Zertifizierte Pentester | SODU Secure',

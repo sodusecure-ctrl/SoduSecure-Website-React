@@ -1,5 +1,5 @@
 ﻿import { Metadata } from 'next';
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'Cyber Security Check Kosten – Was kostet ein Sicherheitscheck? | SODU Secure',
   description: 'Cyber Security Check Kosten im Überblick: Wie viel kostet ein IT-Sicherheitscheck für Ihr Unternehmen? Transparente Preise ab 800 €. Jetzt Angebot einholen.',

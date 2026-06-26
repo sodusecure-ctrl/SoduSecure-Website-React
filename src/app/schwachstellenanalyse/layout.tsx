@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  alternates: { canonical: 'https://www.sodusecure.com/schwachstellenanalyse' },
+  alternates: { canonical: 'https://sodusecure.com/schwachstellenanalyse' },
   openGraph: {
     title: 'Schwachstellenanalyse – Sofort alle Sicherheitslücken finden | SODU Secure',
     description: 'Systematische Schwachstellenanalyse für Web, Netzwerk & Cloud. CVSS 3.1-Bericht & Proof-of-Concepts inklusive. Preis sofort berechnen – Festpreis ab 800 €.',
-    url: 'https://www.sodusecure.com/schwachstellenanalyse',
+    url: 'https://sodusecure.com/schwachstellenanalyse',
     siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     locale: 'de_DE',
     type: 'website',
@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@type': 'ProfessionalService',
             name: 'SODU Secure – Schwachstellenanalyse',
             description: 'Professionelle Schwachstellenanalyse (Vulnerability Assessment) für Unternehmen. CVSS 3.1 Scoring, Proof-of-Concepts, Festpreis ab 800 €.',
-            url: 'https://www.sodusecure.com/schwachstellenanalyse',
+            url: 'https://sodusecure.com/schwachstellenanalyse',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
@@ -61,8 +61,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sodusecure.com' },
-              { '@type': 'ListItem', position: 2, name: 'Schwachstellenanalyse', item: 'https://www.sodusecure.com/schwachstellenanalyse' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sodusecure.com' },
+              { '@type': 'ListItem', position: 2, name: 'Schwachstellenanalyse', item: 'https://sodusecure.com/schwachstellenanalyse' },
             ],
           }),
         }}

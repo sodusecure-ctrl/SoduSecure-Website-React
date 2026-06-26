@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const baseUrl = "https://www.sodusecure.com";
+const baseUrl = "https://sodusecure.com";
 
 export const metadata: Metadata = {
   title: "Penetrationstest Anbieter: So waehlen Sie richtig | SODU Secure",

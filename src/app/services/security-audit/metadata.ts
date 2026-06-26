@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Security Audit – NIS2 & ISO 27001 konform | Zertifizierte Pentester | SODU Secure',

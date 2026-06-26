@@ -120,7 +120,7 @@ export function CorporateFooter({ isDe }: { isDe: boolean }) {
           <span>© {t('Sodu Secure. Alle Rechte vorbehalten.', 'Sodu Secure. All rights reserved.')}</span>
           <div className="flex items-center gap-5">
             <Link href="/privacy" className="hover:text-white">{t('Datenschutz', 'Privacy')}</Link>
-            <Link href="/imprint" className="hover:text-white">{t('Impressum', 'Imprint')}</Link>
+            <Link href="/impressum" className="hover:text-white">{t('Impressum', 'Imprint')}</Link>
           </div>
         </div>
       </div>

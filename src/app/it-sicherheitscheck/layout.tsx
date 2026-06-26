@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  alternates: { canonical: 'https://www.sodusecure.com/it-sicherheitscheck' },
+  alternates: { canonical: 'https://sodusecure.com/it-sicherheitscheck' },
   openGraph: {
     title: 'IT Sicherheitscheck – Sofort Preis berechnen | Ergebnis in 2–5 Tagen',
     description: 'Jetzt IT Sicherheitscheck beauftragen – Web, Netzwerk, AD & Cloud in 2–5 Tagen geprüft. Preis sofort online berechnen. OSCP-zertifiziert.',
-    url: 'https://www.sodusecure.com/it-sicherheitscheck',
+    url: 'https://sodusecure.com/it-sicherheitscheck',
     siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     locale: 'de_DE',
     type: 'website',
@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@type': 'ProfessionalService',
             name: 'SODU Secure – IT Sicherheitscheck',
             description: 'IT Sicherheitscheck für Unternehmen. Manuelles Pentesting durch OSCP-zertifizierte Experten. Festpreis ab 1.499 €.',
-            url: 'https://www.sodusecure.com/it-sicherheitscheck',
+            url: 'https://sodusecure.com/it-sicherheitscheck',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
@@ -70,8 +70,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sodusecure.com' },
-              { '@type': 'ListItem', position: 2, name: 'IT Sicherheitscheck', item: 'https://www.sodusecure.com/it-sicherheitscheck' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sodusecure.com' },
+              { '@type': 'ListItem', position: 2, name: 'IT Sicherheitscheck', item: 'https://sodusecure.com/it-sicherheitscheck' },
             ],
           }),
         }}

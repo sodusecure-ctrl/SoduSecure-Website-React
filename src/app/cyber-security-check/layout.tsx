@@ -1,5 +1,5 @@
 ﻿import { Metadata } from 'next';
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'Cyber Security Check – IT-Sicherheitscheck für Unternehmen | SODU Secure',
   description: 'Professioneller Cyber Security Check für KMU und Enterprises. Identifizieren Sie Sicherheitslücken bevor Angreifer es tun. BSI-orientierter IT-Sicherheitscheck. Jetzt anfragen.',

@@ -42,7 +42,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${cert.company} – Sicherheitszertifikat ${meta.label}`,
       description: `Verifizierter Pentest von SODU Secure. Score: ${cert.score.toFixed(1).replace(".", ",")} (${meta.label})`,
-      url: `https://www.sodusecure.com/verify/${cert.id}`,
+      url: `https://sodusecure.com/verify/${cert.id}`,
       siteName: "Penetration Testing | Dein Zertifizierter IT Spezialist",
     },
   };
@@ -93,7 +93,7 @@ function getBadgeCode(cert: Certificate): string {
   const scoreDisplay = cert.score.toFixed(1).replace(".", ",");
   const year = new Date(cert.date).getFullYear();
   return `<!-- SoduSecure Security Badge – sodusecure.com/verify/${cert.id} -->
-<a href="https://www.sodusecure.com/verify/${cert.id}"
+<a href="https://sodusecure.com/verify/${cert.id}"
    target="_blank" rel="noopener"
    style="display:inline-flex;flex-direction:column;align-items:center;
           background:#fff;border:2px solid #cc0000;border-radius:10px;
@@ -150,7 +150,7 @@ export default async function VerifyPage({
     issuedBy: {
       "@type": "Organization",
       name: "SODU Secure GmbH",
-      url: "https://www.sodusecure.com",
+      url: "https://sodusecure.com",
     },
     recognizedBy: {
       "@type": "Organization",

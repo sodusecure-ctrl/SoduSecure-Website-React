@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
 import CorporateLanding from './CorporateLanding';
 
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Penetrationstests für Unternehmen – Zertifiziert & DSGVO-konform | SODU Secure',

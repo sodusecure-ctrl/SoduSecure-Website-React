@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  alternates: { canonical: 'https://www.sodusecure.com/it-sicherheit-testen' },
+  alternates: { canonical: 'https://sodusecure.com/it-sicherheit-testen' },
   openGraph: {
     title: 'IT Sicherheit testen – IT Sicherheitstest für Unternehmen | SODU Secure',
     description: 'IT Sicherheit testen lassen – Web, Netzwerk, Active Directory, Cloud. SODU Secure: Festpreis ab 1.499 €, Ergebnis in 48 h.',
-    url: 'https://www.sodusecure.com/it-sicherheit-testen',
+    url: 'https://sodusecure.com/it-sicherheit-testen',
     siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     locale: 'de_DE',
     type: 'website',
@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@type': 'ProfessionalService',
             name: 'SODU Secure – IT Sicherheit testen',
             description: 'Manueller IT Sicherheitstest für Unternehmen. Web-Apps, Netzwerke, Active Directory, Cloud. OSCP-zertifiziert, Festpreis ab 1.499 €.',
-            url: 'https://www.sodusecure.com/it-sicherheit-testen',
+            url: 'https://sodusecure.com/it-sicherheit-testen',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
@@ -61,8 +61,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sodusecure.com' },
-              { '@type': 'ListItem', position: 2, name: 'IT Sicherheit testen', item: 'https://www.sodusecure.com/it-sicherheit-testen' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sodusecure.com' },
+              { '@type': 'ListItem', position: 2, name: 'IT Sicherheit testen', item: 'https://sodusecure.com/it-sicherheit-testen' },
             ],
           }),
         }}

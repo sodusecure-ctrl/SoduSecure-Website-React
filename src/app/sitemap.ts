@@ -2,7 +2,7 @@
 import { blogPosts } from '@/lib/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.sodusecure.com';
+  const baseUrl = 'https://sodusecure.com';
 
   // Static routes with real, stable last-modified dates
   // ⚠️ Update these dates whenever you make meaningful content changes
@@ -57,7 +57,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/case-studies',       lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.85  },
     { path: '/privacy',            lastModified: '2026-03-16', changeFreq: 'yearly',  priority: 0.3  },
     { path: '/terms',              lastModified: '2026-03-16', changeFreq: 'yearly',  priority: 0.3  },
-    { path: '/impressum',          lastModified: '2026-03-16', changeFreq: 'yearly',  priority: 0.3  },
     // Risiko-/Pflicht-Checks (Lead-Gen)
     { path: '/pentest-schnellcheck',   lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.92 },
     { path: '/pentest-risiko-check',   lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.92 },

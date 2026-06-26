@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getLocale } from 'next-intl/server';
 import CorporateCheck from '../CorporateCheck';
 
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Cyber-Risiko-Check für Unternehmen | SODU Secure',

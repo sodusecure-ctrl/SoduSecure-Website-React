@@ -9,11 +9,11 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
-  alternates: { canonical: 'https://www.sodusecure.com/sicherheitsaudit' },
+  alternates: { canonical: 'https://sodusecure.com/sicherheitsaudit' },
   openGraph: {
     title: 'Sicherheitsaudit Unternehmen – IT Sicherheitsaudit | SODU Secure',
     description: 'IT Sicherheitsaudit für Ihr Unternehmen. Manuell, NIS2- & ISO 27001-konform, Festpreis. SODU Secure – OSCP-zertifiziert, Angebot in 24 h.',
-    url: 'https://www.sodusecure.com/sicherheitsaudit',
+    url: 'https://sodusecure.com/sicherheitsaudit',
     siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     locale: 'de_DE',
     type: 'website',
@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@type': 'ProfessionalService',
             name: 'SODU Secure – Sicherheitsaudit',
             description: 'Manueller IT Sicherheitsaudit für Unternehmen. NIS2-, ISO 27001- und DSGVO-konforme Berichte. Festpreis ab 1.499 €.',
-            url: 'https://www.sodusecure.com/sicherheitsaudit',
+            url: 'https://sodusecure.com/sicherheitsaudit',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
             address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
@@ -61,8 +61,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sodusecure.com' },
-              { '@type': 'ListItem', position: 2, name: 'Sicherheitsaudit', item: 'https://www.sodusecure.com/sicherheitsaudit' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sodusecure.com' },
+              { '@type': 'ListItem', position: 2, name: 'Sicherheitsaudit', item: 'https://sodusecure.com/sicherheitsaudit' },
             ],
           }),
         }}

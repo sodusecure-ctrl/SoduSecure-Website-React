@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import HomeClient from '@/components/landing/HomeClient';
 
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Sodu Secure - Pentest & AuditAI',

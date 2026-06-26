@@ -21,10 +21,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
+  alternates: { canonical: '/' },
   title: {
     default: "Pentest Berlin – Preis sofort berechnen | SODU Secure",
     template: "%s | SODU Secure"
@@ -86,13 +87,6 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    other: {
-      'msvalidate.01': 'your-bing-verification-code',
     },
   },
   other: {

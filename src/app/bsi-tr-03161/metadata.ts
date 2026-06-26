@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Vorbereitende Sicherheitsprüfung nach BSI TR-03161 für DiGA- und DiPA-Hersteller. Gap-Analyse, Schwachstellentests & Beratung.",
     type: "website",
     locale: "de_DE",
-    url: "https://www.sodusecure.com/bsi-tr-03161",
+    url: "https://sodusecure.com/bsi-tr-03161",
   },
   twitter: {
     card: "summary_large_image",
@@ -32,6 +32,6 @@ export const metadata: Metadata = {
       "Vorbereitende Sicherheitsprüfung nach BSI TR-03161 für digitale Gesundheitsanwendungen.",
   },
   alternates: {
-    canonical: "https://www.sodusecure.com/bsi-tr-03161",
+    canonical: "https://sodusecure.com/bsi-tr-03161",
   },
 };

@@ -1,4 +1,4 @@
-﻿const baseUrl = 'https://www.sodusecure.com';
+﻿const baseUrl = 'https://sodusecure.com';
 
 interface JsonLdProps {
   type: 'Organization' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList';

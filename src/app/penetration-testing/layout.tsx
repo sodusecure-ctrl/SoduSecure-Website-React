@@ -1,6 +1,6 @@
 ﻿import { Metadata } from 'next';
 
-const baseUrl = 'https://www.sodusecure.com';
+const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Penetrationstest Berlin – Preis sofort berechnen | Zertifizierte Experten',
