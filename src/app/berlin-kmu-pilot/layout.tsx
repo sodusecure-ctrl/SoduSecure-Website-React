@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: 'Professioneller Pentest in Berlin für KMUs. Externer Pentest, Active Directory Analyse, Phishing-Simulation. Jetzt bezahlte Dienstleistungen.',
     url: `${baseUrl}/berlin-kmu-pilot`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
   },
   twitter: {
     card: 'summary_large_image',

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
       'Realistische Phishing Simulationen testen Ihr Team gegen E-Mail-, Spear-Phishing- und Voice-Angriffe. NIS2-konformer Nachweis inklusive.',
     url: `${baseUrl}/phishing-simulation`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: 'Phishing Simulation – SODU Secure' }],
   },
   twitter: {

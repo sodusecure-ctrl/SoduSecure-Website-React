@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     description: DESC,
     url: `https://www.sodusecure.com${PATH}`,
     type: "website",
-    siteName: "SODU Secure",
+    siteName: "Penetration Testing | Dein Zertifizierter IT Spezialist",
   },
 };
 

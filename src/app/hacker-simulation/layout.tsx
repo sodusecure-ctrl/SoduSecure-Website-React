@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Hacker-Simulation – Angriff sofort simulieren lassen | SODU Secure',
     description: 'Jetzt testen, ob Ihr Unternehmen einem echten Hackerangriff stannhält. OSCP-zertifiziert. Preis sofort online berechnen. Festpreis ab 1.499 €.',
     url: 'https://www.sodusecure.com/hacker-simulation',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     locale: 'de_DE',
     type: 'website',
   },

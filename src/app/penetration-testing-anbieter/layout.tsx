@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       'Zertifizierter Pentest Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Transparente Festpreise ab 1.499 €. Pentest Anbieter für KMU & Enterprise.',
     url: `${baseUrl}/penetration-testing-anbieter`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: 'Penetration Testing Anbieter – SODU Secure' }],
   },
   twitter: {

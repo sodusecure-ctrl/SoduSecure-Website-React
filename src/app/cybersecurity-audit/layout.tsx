@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Cybersecurity Audit Unternehmen – Manuell & Compliant | SODU Secure',
     description: 'Cybersecurity Audit für NIS2, ISO 27001 & DORA. SODU Secure führt manuelle Cyber Security Audits durch – OSCP-zertifiziert, Festpreis, Bericht in 48 h.',
     url: 'https://www.sodusecure.com/cybersecurity-audit',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     locale: 'de_DE',
     type: 'website',
   },

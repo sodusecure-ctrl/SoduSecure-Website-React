@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       'Ist Ihre Website hackbar? Jetzt testen lassen. Manueller Pentest für Web, API, AD & Netzwerke. Preis sofort im Online-Konfigurator berechnen. Festpreis ab 1.499 €.',
     url: `${baseUrl}/penetration-testing`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     images: [
       {
         url: `${baseUrl}/images/blogs/image9.png`,

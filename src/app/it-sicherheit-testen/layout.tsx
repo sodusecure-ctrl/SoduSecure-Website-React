@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'IT Sicherheit testen – IT Sicherheitstest für Unternehmen | SODU Secure',
     description: 'IT Sicherheit testen lassen – Web, Netzwerk, Active Directory, Cloud. SODU Secure: Festpreis ab 1.499 €, Ergebnis in 48 h.',
     url: 'https://www.sodusecure.com/it-sicherheit-testen',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     locale: 'de_DE',
     type: 'website',
   },

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
       'Manual penetration testing service for web apps, networks, APIs & Active Directory. Real attack simulation – prioritised findings – actionable remediation. Get your fixed-price quote within 24h.',
     url: `${baseUrl}/penetration-testing-service`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     images: [
       {
         url: `${baseUrl}/images/blogs/image9.png`,

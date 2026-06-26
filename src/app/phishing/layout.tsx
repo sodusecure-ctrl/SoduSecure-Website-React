@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: 'Professionelle Phishing-Kampagne zur Überprüfung der Mitarbeiter-Awareness. Erfahren Sie, wie anfällig Ihr Unternehmen für Social Engineering Angriffe ist.',
     url: `${baseUrl}/phishing`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
   },
   twitter: {
     card: 'summary_large_image',

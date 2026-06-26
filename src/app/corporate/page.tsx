@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: 'Manuelle Penetrationstests von zertifizierten Experten. Prüfsicher für ISO 27001, NIS2, DORA & DSGVO. Angebot in 24 Stunden.',
     url: `${baseUrl}/corporate`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
     images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: 'SODU Secure – Penetrationstests für Unternehmen' }],
   },
   twitter: {

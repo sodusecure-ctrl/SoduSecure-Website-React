@@ -47,7 +47,7 @@ export function generatePageMetadata({
       url,
       title: fullTitle,
       description,
-      siteName: 'sodusecure',
+      siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
       images: [
         {
           url: `${baseUrl}/images/og-image.jpg`,
