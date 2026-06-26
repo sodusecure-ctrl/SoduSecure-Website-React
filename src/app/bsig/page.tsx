@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "BSIG & KRITIS: § 8a Nachweis & Pentests | SoduSecure",
+  title: "BSIG §8a Pentest & KRITIS-Nachweis | SODU Secure",
   description:
     "Was fordert das BSI-Gesetz (BSIG) von KRITIS-Betreibern? § 8a Nachweis alle zwei Jahre, Meldepflichten und Stand der Technik – wir prüfen Ihre Systeme und bereiten den Nachweis vor.",
   alternates: { canonical: "/bsig" },

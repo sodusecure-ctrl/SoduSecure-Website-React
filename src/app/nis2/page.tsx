@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "NIS2-Richtlinie: Anforderungen & Umsetzung | SoduSecure",
+  title: "NIS2-Pentest: Anforderungen & Compliance | SODU Secure",
   description:
     "Was ist NIS2? Wer ist betroffen, welche Pflichten gelten – und wie wir Sie mit Gap-Analyse, Penetrationstests und technischen Maßnahmen nach Art. 21 NIS2-konform machen.",
   alternates: { canonical: "/nis2" },

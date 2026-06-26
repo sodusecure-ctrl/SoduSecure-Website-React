@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Schwachstellenanalyse – Sofort alle Sicherheitslücken finden | SODU Secure',
     description: 'Systematische Schwachstellenanalyse für Web, Netzwerk & Cloud. CVSS 3.1-Bericht & Proof-of-Concepts inklusive. Preis sofort berechnen – Festpreis ab 800 €.',
     url: 'https://sodusecure.com/schwachstellenanalyse',
-    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
+    siteName: 'SODU Secure',
     locale: 'de_DE',
     type: 'website',
   },

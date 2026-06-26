@@ -43,7 +43,7 @@ export async function generateMetadata({
       title: `${cert.company} – Sicherheitszertifikat ${meta.label}`,
       description: `Verifizierter Pentest von SODU Secure. Score: ${cert.score.toFixed(1).replace(".", ",")} (${meta.label})`,
       url: `https://sodusecure.com/verify/${cert.id}`,
-      siteName: "Penetration Testing | Dein Zertifizierter IT Spezialist",
+      siteName: "SODU Secure",
     },
   };
 }

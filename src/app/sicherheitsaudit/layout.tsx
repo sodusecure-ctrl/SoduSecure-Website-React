@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'Sicherheitsaudit Unternehmen – IT Sicherheitsaudit | SODU Secure',
     description: 'IT Sicherheitsaudit für Ihr Unternehmen. Manuell, NIS2- & ISO 27001-konform, Festpreis. SODU Secure – OSCP-zertifiziert, Angebot in 24 h.',
     url: 'https://sodusecure.com/sicherheitsaudit',
-    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
+    siteName: 'SODU Secure',
     locale: 'de_DE',
     type: 'website',
   },

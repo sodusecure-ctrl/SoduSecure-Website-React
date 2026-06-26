@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: 'IT Sicherheitscheck – Sofort Preis berechnen | Ergebnis in 2–5 Tagen',
     description: 'Jetzt IT Sicherheitscheck beauftragen – Web, Netzwerk, AD & Cloud in 2–5 Tagen geprüft. Preis sofort online berechnen. OSCP-zertifiziert.',
     url: 'https://sodusecure.com/it-sicherheitscheck',
-    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
+    siteName: 'SODU Secure',
     locale: 'de_DE',
     type: 'website',
   },

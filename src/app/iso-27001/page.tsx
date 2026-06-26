@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "ISO 27001: Zertifizierung, Anforderungen & Pentest | SoduSecure",
+  title: "ISO 27001: Zertifizierung, Anforderungen & Pentest | SODU Secure",
   description:
     "Was ist ISO 27001? Anforderungen, Ablauf der Zertifizierung und die Rolle von Penetrationstests. Wir bringen Sie mit Gap-Analyse, Pentests und prüffähigen Nachweisen zur ISO-27001-Konformität.",
   alternates: { canonical: "/iso-27001" },

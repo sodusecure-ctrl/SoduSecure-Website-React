@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Dediziertes Red Team simuliert realistische Angriffe gegen Ihre Organisation. MITRE ATT&CK, NIS2 & DORA-konform. Jetzt anfragen.',
     url: `${baseUrl}/red-team-assessment`,
     type: 'website',
-    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
+    siteName: 'SODU Secure',
     images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: 'Red Team Assessment – SODU Secure' }],
   },
   twitter: {

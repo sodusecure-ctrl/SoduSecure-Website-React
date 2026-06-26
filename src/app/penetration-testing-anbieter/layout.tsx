@@ -3,7 +3,7 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Penetration Testing Anbieter – Zertifiziert & Transparent | SODU Secure',
+  title: 'Pentest Anbieter mit Festpreis ab 2.500 € | SODU Secure',
   description:
     'Penetration Testing Anbieter aus Berlin. SODU Secure – zertifizierte Pentester, transparente Festpreise, schnelle Umsetzung. Pentest Anbieter für KMU & Enterprise. Jetzt Pentest konfigurieren.',
   keywords: [
@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     'Penetrationstest Dienstleister',
   ],
   openGraph: {
-    title: 'Penetration Testing Anbieter – Zertifiziert & Transparent | SODU Secure',
+    title: 'Pentest Anbieter mit Festpreis ab 2.500 € | SODU Secure',
     description:
       'Zertifizierter Pentest Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Transparente Festpreise ab 1.499 €. Pentest Anbieter für KMU & Enterprise.',
     url: `${baseUrl}/penetration-testing-anbieter`,
     type: 'website',
-    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
+    siteName: 'SODU Secure',
     images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: 'Penetration Testing Anbieter – SODU Secure' }],
   },
   twitter: {

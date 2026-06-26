@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   alternates: { canonical: '/' },
   title: {
-    default: "Pentest Berlin – Preis sofort berechnen | SODU Secure",
+    default: "Pentest Berlin ab 2.500 € Festpreis | SODU Secure",
     template: "%s | SODU Secure"
   },
-  description: "Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. Manueller Pentest für Web, API & Active Directory – OSCP-zertifiziert. Preis sofort online berechnen. Festpreis ab 1.499 €.",
+  description: "Penetrationstests aus Berlin, manuell von OSCP-zertifizierten Hackern. Echte Angriffsketten, reproduzierbare PoCs, klare Fix-Empfehlungen. Festpreis ab 2.500 €.",
   keywords: [
     'penetration testing',
     'cybersecurity',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     url: baseUrl,
     title: 'Pentest Berlin – Preis sofort online berechnen | SODU Secure',
     description: 'Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. OSCP-zertifizierter Pentest – Web, API, AD. Preis sofort online berechnen. Festpreis ab 1.499 €.',
-    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
+    siteName: 'SODU Secure',
     images: [
       {
         url: `${baseUrl}/images/og-image.jpg`,

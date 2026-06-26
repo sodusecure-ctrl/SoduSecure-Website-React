@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       'Alles-inklusive KMU Pentest: Externer Pentest + Phishing + Active Directory. Kein Tageshonorar. Jetzt online konfigurieren – Preis sofort berechnen.',
     url: `${baseUrl}/services/sme-packages`,
     type: 'website',
-    siteName: 'Penetration Testing | Dein Zertifizierter IT Spezialist',
+    siteName: 'SODU Secure',
     locale: 'de_DE',
     images: [
       {
