@@ -657,30 +657,6 @@ export default function SMESecurityPackagesPage() {
         </div>
       </div>
 
-      {/* ── PILOT PROGRAM BANNER ──────────────── */}
-      <div className="bg-gray-900 py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <span className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
-            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
-            Berliner KMU? 2 kostenfreie Plätze verfügbar
-          </span>
-          <h3 className="text-white text-2xl sm:text-3xl font-bold mb-3">
-            Testen Sie uns zuerst – kostenlos.
-          </h3>
-          <p className="text-gray-400 mb-6 leading-relaxed">
-            Als Berliner KMU können Sie sich für unser kostenloses Pilotprogramm bewerben
-            und das Komplettpaket zum Nulltarif erhalten.
-          </p>
-          <Link
-            href="/berlin-kmu-pilot"
-            className="inline-flex items-center gap-2 bg-red-600 hover:premium-cta text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105"
-          >
-            Zum Pilotprogramm
-            <ExternalLink className="w-4 h-4" />
-          </Link>
-        </div>
-      </div>
-
       {/* ── FREE PDF DOWNLOAD BANNER ──────── */}
       <div className="bg-[#16141A] border-t border-white/8 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">

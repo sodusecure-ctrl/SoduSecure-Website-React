@@ -540,27 +540,6 @@ export default function PenetrationTestingPage() {
         </div>
       </section>
 
-      {/* ── PILOT ─────────────────────────────────────────────────────────────── */}
-      <section className="py-12 bg-gradient-to-r from-red-950/40 to-orange-950/40 border-y border-[#FF3B30]/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/20 border border-[#FF3B30]/30 rounded-full px-4 py-1.5 text-sm text-[#FF6B61] mb-4">
-            <Star className="w-3.5 h-3.5" /><span>Nur noch 2 Plätze verfügbar</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Berlin KMU Pilotprogramm 2026 – Kostenloser Penetrationstest
-          </h2>
-          <p className="text-white/70 max-w-2xl mx-auto mb-6 text-sm sm:text-base">
-            Berliner KMUs mit 20–150 Mitarbeitern, Microsoft-Infrastruktur (M365 / Active Directory)
-            und Standort Berlin/Brandenburg können sich für einen vollständig subventionierten
-            Penetrationstest im Wert von bis zu 15.000 € bewerben.
-          </p>
-          <Link href="/berlin-kmu-pilot"
-            className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
-            Für kostenlosen Pentest bewerben<ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
-
       {/* ── FAQ ───────────────────────────────────────────────────────────────── */}
       <section className="py-20 bg-white/[0.02] border-y border-white/5">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -612,7 +591,6 @@ export default function PenetrationTestingPage() {
               { href: "/services/web-application-testing", title: "Web App Pentest", desc: "OWASP Top 10, Business Logic, Auth Bypasses – manuelle Web-Tests.", badge: "Web", badgeColor: "bg-orange-600" },
               { href: "/services/infrastructure-testing", title: "Infrastruktur-Pentest", desc: "Active Directory, Server- und Netzwerk-Penetrationstest.", badge: "Infra", badgeColor: "bg-teal-600" },
               { href: "/pentest-berlin/iso-27001", title: "ISO 27001 Pentest", desc: "Welche Kontrollen einen Pentest erfordern und wie wir Auditreife herstellen.", badge: "ISO 27001", badgeColor: "bg-indigo-600" },
-              { href: "/berlin-kmu-pilot", title: "Kostenloser KMU-Pentest", desc: "Bewerben Sie sich für einen vollständig subventionierten Pentest bis 15.000 €.", badge: "Kostenlos", badgeColor: "bg-amber-600" },
             ].map((item) => (
               <Link key={item.href} href={item.href}
                 className="bg-[#0A0A0B] border border-white/10 rounded-xl p-5 hover:border-[#FF3B30]/50 transition-colors group flex flex-col">
@@ -658,13 +636,6 @@ export default function PenetrationTestingPage() {
             </span>
           ))}
         </div>
-        <p className="mt-6 text-sm text-white/50">
-          Oder bewerben Sie sich für unser{" "}
-          <Link href="/berlin-kmu-pilot" className="text-[#FF3B30] hover:text-[#FF6B61] underline underline-offset-2">
-            kostenloses KMU-Pilotprogramm
-          </Link>{" "}
-          – noch 2 Plätze verfügbar.
-        </p>
       </section>
     </main>
   );

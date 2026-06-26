@@ -8,8 +8,7 @@ import {
   CheckCircle,
   ArrowRight,
   ChevronDown,
-  ChevronUp,
-  Star,
+  ChevronUp,
   Phone,
   Mail,
   BookOpen,
@@ -210,24 +209,6 @@ export default function HackerSimulationPage() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── PILOT ─────────────────────────────────────────────────────────────── */}
-      <section className="py-12 bg-gradient-to-r from-red-950/40 to-orange-950/40 border-y border-[#FF3B30]/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/20 border border-[#FF3B30]/30 rounded-full px-4 py-1.5 text-sm text-[#FF6B61] mb-4">
-            <Star className="w-3.5 h-3.5" /><span>2 Plätze – Berlin KMU Pilot 2026</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Kostenlose Hacker Simulation für Berliner KMUs</h2>
-          <p className="text-white/70 max-w-2xl mx-auto mb-6 text-sm">
-            Berliner Unternehmen mit Microsoft-Infrastruktur erhalten eine vollständige
-            Hacker Simulation im Wert von bis zu 15.000 € gratis.
-          </p>
-          <Link href="/berlin-kmu-pilot"
-            className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
-            Kostenlos bewerben <ArrowRight className="w-5 h-5" />
-          </Link>
         </div>
       </section>
 

@@ -36,7 +36,6 @@ export default function Footer() {
     { label: 'Vulnerability Assessment', href: '/vulnerability-assessment-service' },
     { label: 'Red Team Assessment', href: '/red-team-assessment-service' },
     { label: 'Pentest Berlin', href: '/pentest-berlin' },
-    { label: 'Berlin KMU Pilotprogramm', href: '/berlin-kmu-pilot' },
     { label: 'Penetrationstest', href: '/penetration-testing' },
     { label: 'Pentesting Service', href: '/pentesting-service' },
     { label: 'Penetration Testing Service', href: '/penetration-testing-service' },

@@ -158,18 +158,6 @@ export const blogPosts = [
   },
   {
     id: 14,
-    slug: '14',
-    title: 'Pentest Berlin: Kostenloser Penetrationstest für Berliner KMUs – Jetzt bewerben',
-    description: 'Professioneller Pentest in Berlin – völlig kostenfrei für ausgewählte KMUs. Erfahren Sie, was unser Penetrationstest umfasst, warum Berliner Unternehmen ihn brauchen und wie Sie sich Ihren Platz sichern.',
-    category: 'Pentest Berlin',
-    author: 'Sodu Secure Team',
-    date: '2026-02-27',
-    readTime: '8 min read',
-    image: '/images/blogs/image9.png',
-    keywords: ['Pentest Berlin', 'Penetrationstest Berlin', 'KMU Pentest Berlin', 'Kostenloser Pentest Berlin', 'IT-Sicherheit Berlin', 'Cybersecurity Berlin', 'Pentest Anbieter Berlin', 'Pentest Kosten', 'Pentest KMU'],
-  },
-  {
-    id: 14,
     slug: 'pentest-berlin-leitfaden',
     title: 'Pentest Berlin 2026: Der vollständige Leitfaden für Berliner Unternehmen',
     description: 'Was kostet ein Pentest in Berlin? Was testet man wie? Welche Berliner Unternehmen brauchen einen Penetrationstest – und warum jetzt? Der komplette Guide von SODU Secure.',

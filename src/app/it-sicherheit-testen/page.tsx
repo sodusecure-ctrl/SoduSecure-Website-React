@@ -8,8 +8,7 @@ import {
   CheckCircle,
   ArrowRight,
   ChevronDown,
-  ChevronUp,
-  Star,
+  ChevronUp,
   Phone,
   Mail,
   BookOpen,
@@ -179,23 +178,6 @@ export default function ITSicherheitTestenPage() {
           <Link href="/request-pentest"
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105 flex-shrink-0">
             <Calculator className="w-4 h-4" />Test starten <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-      </section>
-
-      {/* ── PILOT ─────────────────────────────────────────────────────────────── */}
-      <section className="py-12 bg-gradient-to-r from-purple-950/40 to-violet-950/40 border-y border-purple-500/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-1.5 text-sm text-purple-300 mb-4">
-            <Star className="w-3.5 h-3.5" /><span>Berlin KMU Pilot 2026 – 2 Plätze frei</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">IT Sicherheit kostenlos testen – Pilotprogramm</h2>
-          <p className="text-white/70 max-w-2xl mx-auto mb-6 text-sm">
-            Berliner KMUs testen ihre IT-Sicherheit kostenlos – vollständiger Pentest im Wert von bis zu 15.000 €.
-          </p>
-          <Link href="/berlin-kmu-pilot"
-            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
-            Kostenlos bewerben <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </section>

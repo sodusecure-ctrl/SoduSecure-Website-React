@@ -10,14 +10,13 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isAuthRoute = pathname?.startsWith('/auth');
   const isDashboardRoute = pathname?.startsWith('/my-dashboard');
-  const isLandingPage = pathname?.startsWith('/berlin-kmu-pilot');
   const isAdsPage = pathname?.startsWith('/request-pentest-ads');
   const isVerifyPage = pathname?.startsWith('/verify');
   const isSoduAuditAiPage = pathname?.startsWith('/sodu-audit-ai');
   const isCorporatePage = pathname?.startsWith('/corporate');
 
   const hideChrome =
-    isAuthRoute || isDashboardRoute || isLandingPage || isAdsPage || isVerifyPage || isSoduAuditAiPage || isCorporatePage;
+    isAuthRoute || isDashboardRoute || isAdsPage || isVerifyPage || isSoduAuditAiPage || isCorporatePage;
 
   // The global Header carries the toggle (top-right). Corporate pages have their
   // own header with a toggle. Only the few genuinely header-less pages need the

@@ -148,7 +148,6 @@ export default function PenetrationTestingServiceLayout({
     sameAs: [
       `${baseUrl}`,
       `${baseUrl}/pentest-berlin`,
-      `${baseUrl}/berlin-kmu-pilot`,
     ],
   };
 

@@ -32,8 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/pentest-berlin/kmu',         lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.95 },
     { path: '/pentest-berlin/intern-extern', lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.95 },
     { path: '/pentest-berlin/iso-27001',   lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.95 },
-    { path: '/berlin-kmu-pilot',   lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.99 },
-    { path: '/phishing', lastModified: '2026-03-24', changeFreq: 'weekly', priority: 0.99 },
     { path: '/bsi-tr-03161',                    lastModified: '2026-04-19', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/pentest-gesundheitsanwendungen',   lastModified: '2026-04-19', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/anfrage-tr03161',                  lastModified: '2026-04-19', changeFreq: 'monthly', priority: 0.85 },

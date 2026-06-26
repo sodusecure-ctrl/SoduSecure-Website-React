@@ -169,7 +169,7 @@ const FAQS = [
   },
   {
     q: "Bieten Sie Pentests für KMUs an?",
-    a: "Ja – KMUs sind unser Kernsegment. Wir bieten scoped Festpreis-Pentest-Pakete ab 1.499 € an, die für begrenzte IT-Ressourcen konzipiert sind und reale Angriffsvektoren abdecken. Bewerben Sie sich für unser Berliner KMU-Pilotprogramm für einen vollständig subventionierten Pentest im Wert von bis zu 15.000 €.",
+    a: "Ja – KMUs sind unser Kernsegment. Wir bieten scoped Festpreis-Pentest-Pakete ab 1.499 € an, die für begrenzte IT-Ressourcen konzipiert sind und reale Angriffsvektoren abdecken.",
   },
   {
     q: "Ist ein Penetrationstest DSGVO-konform?",
@@ -1006,31 +1006,6 @@ export default function PenetrationTestingServicePage() {
         </div>
       </section>
 
-      {/* ── PILOT PROGRAMME CTA ───────────────────────────────────────────────── */}
-      <section className="py-12 bg-gradient-to-r from-red-950/40 to-orange-950/40 border-y border-[#FF3B30]/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/20 border border-[#FF3B30]/30 rounded-full px-4 py-1.5 text-sm text-[#FF6B61] mb-4">
-            <Star className="w-3.5 h-3.5" />
-            <span>Only 2 spots remaining</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            Berlin KMU Pilot Programme 2026 – Free Pentest
-          </h2>
-          <p className="text-white/70 max-w-2xl mx-auto mb-6 text-sm sm:text-base">
-            Berlin-based SMEs with 20–150 employees, Microsoft infrastructure (M365 / Active Directory)
-            and a Berlin/Brandenburg location can apply for a fully subsidised penetration test
-            worth up to €15,000.
-          </p>
-          <Link
-            href="/berlin-kmu-pilot"
-            className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105"
-          >
-            Apply for Free Pentest
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </section>
-
       {/* ── FAQ ───────────────────────────────────────────────────────────────── */}
       <section className="py-20 bg-white/[0.02] border-y border-white/5">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1130,13 +1105,6 @@ export default function PenetrationTestingServicePage() {
                 desc: "AWS, Azure, GCP misconfiguration, IAM escalation and CI/CD pipeline security.",
                 badge: "Cloud",
                 badgeColor: "bg-teal-600",
-              },
-              {
-                href: "/berlin-kmu-pilot",
-                title: "Free KMU Pilot",
-                desc: "Apply for a fully subsidised penetration test worth up to €15,000.",
-                badge: "Free",
-                badgeColor: "bg-amber-600",
               },
             ].map((item) => (
               <Link
@@ -1265,16 +1233,6 @@ export default function PenetrationTestingServicePage() {
             </span>
           ))}
         </div>
-        <p className="mt-6 text-sm text-white/50">
-          Or apply for our{" "}
-          <Link
-            href="/berlin-kmu-pilot"
-            className="text-[#FF3B30] hover:text-[#FF6B61] underline underline-offset-2"
-          >
-            free KMU Pilot Programme
-          </Link>{" "}
-          – 2 spots remaining.
-        </p>
       </section>
     </main>
   );

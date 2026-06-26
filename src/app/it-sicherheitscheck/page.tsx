@@ -10,8 +10,7 @@ import {
   ChevronDown,
   ChevronUp,
   Zap,
-  Clock,
-  Star,
+  Clock,
   Globe,
   Server,
   Cloud,
@@ -225,24 +224,6 @@ export default function ITSicherheitscheckPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── PILOT ─────────────────────────────────────────────────────────────── */}
-      <section className="py-12 bg-gradient-to-r from-green-950/40 to-emerald-950/40 border-y border-green-500/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 bg-green-500/20 border border-green-500/30 rounded-full px-4 py-1.5 text-sm text-green-300 mb-4">
-            <Star className="w-3.5 h-3.5" /><span>Nur noch 2 Plätze verfügbar</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">IT Sicherheitscheck gratis – Berliner KMU Pilot 2026</h2>
-          <p className="text-white/70 max-w-2xl mx-auto mb-6 text-sm">
-            Berliner KMUs mit 20–150 Mitarbeitern erhalten einen subventionierten
-            IT Sicherheitscheck im Wert von bis zu 15.000 € – kostenlos.
-          </p>
-          <Link href="/berlin-kmu-pilot"
-            className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg hover:scale-105">
-            Jetzt kostenlos bewerben <ArrowRight className="w-5 h-5" />
-          </Link>
         </div>
       </section>
 
