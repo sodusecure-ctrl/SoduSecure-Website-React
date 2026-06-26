@@ -104,6 +104,8 @@ const data: RegulationContent = {
     { q: "Sind Sie eine Zertifizierungsstelle?", a: "Nein. Das Zertifikat stellt eine akkreditierte Zertifizierungsstelle (z. B. TÜV, DEKRA, DQS) aus. Wir liefern die technischen Prüfungen und Nachweise und bereiten Sie so vor, dass Sie das Audit bestehen." },
   ],
   related: [
+    { href: "/iso-27001-zertifizierung", label: "ISO 27001 Zertifizierung", desc: "Ablauf, Kosten und Pentest-Anforderungen der Zertifizierung." },
+    { href: "/tisax", label: "TISAX", desc: "Automotive-Informationssicherheit auf Basis der ISO/IEC 27001 (VDA-ISA)." },
     { href: "/nis2", label: "NIS2", desc: "Cybersicherheitspflichten – häufig mit ISO 27001 nachweisbar." },
     { href: "/dora", label: "DORA", desc: "Digitale operationale Resilienz im Finanzsektor." },
     { href: "/bsig", label: "BSIG / KRITIS", desc: "Anforderungen an Betreiber Kritischer Infrastrukturen." },

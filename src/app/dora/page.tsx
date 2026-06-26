@@ -105,6 +105,7 @@ const data: RegulationContent = {
     { q: "Wie helfen Sie konkret bei DORA?", a: "Wir übernehmen die technische Säule: Penetrationstests, TLPT-nahe Angriffssimulationen und Schwachstellenanalysen samt aufsichtskonformer Berichte. Damit weisen Sie die geforderte Resilienz Ihrer Systeme nach." },
   ],
   related: [
+    { href: "/tlpt", label: "TLPT", desc: "Threat-Led Penetration Testing – unter DORA (Art. 26) für bedeutende Finanzunternehmen verpflichtend." },
     { href: "/nis2", label: "NIS2", desc: "Cybersicherheitspflichten für wesentliche und wichtige Einrichtungen." },
     { href: "/bsig", label: "BSIG / KRITIS", desc: "Anforderungen an Betreiber Kritischer Infrastrukturen." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Internationaler Standard für Informationssicherheit." },

@@ -80,10 +80,15 @@ export default function Header() {
 
   const complianceLinks = [
     { name: 'ISO 27001', path: '/iso-27001' },
+    { name: isEnglish ? 'ISO 27001 certification' : 'ISO 27001 Zertifizierung', path: '/iso-27001-zertifizierung' },
     { name: isEnglish ? 'NIS2 directive' : 'NIS2-Richtlinie', path: '/nis2' },
     { name: isEnglish ? 'DORA (financial sector)' : 'DORA (Finanzsektor)', path: '/dora' },
+    { name: 'TLPT (DORA)', path: '/tlpt' },
     { name: isEnglish ? 'MDR (medical devices)' : 'MDR (Medizinprodukte)', path: '/mdr' },
+    { name: 'BSIG / KRITIS', path: '/bsig' },
     { name: 'BSI TR-03161', path: '/bsi-tr-03161' },
+    { name: 'TISAX', path: '/tisax' },
+    { name: 'PCI DSS', path: '/pci-dss-penetrationstest' },
   ];
 
   const services = [
@@ -93,6 +98,10 @@ export default function Header() {
     { name: t('servicesList.apiSecurityTesting'), path: '/services/api-security-testing' },
     { name: t('servicesList.cloudDevopsTesting'), path: '/services/cloud-devops-testing' },
     { name: t('servicesList.networkAudit'), path: '/services/network-audit' },
+    { name: isEnglish ? 'Active Directory pentest' : 'Active Directory Pentest', path: '/services/active-directory' },
+    { name: isEnglish ? 'AWS penetration test' : 'AWS Penetrationstest', path: '/services/aws-penetrationstest' },
+    { name: isEnglish ? 'Security audit' : 'Security Audit', path: '/services/security-audit' },
+    { name: isEnglish ? 'Vulnerability assessment' : 'Vulnerability Assessment', path: '/services/vulnerability-assessment' },
     { name: t('servicesList.smePackages'), path: '/services/sme-packages' },
     { name: t('servicesList.iso27001Service'), path: '/services/iso-27001' },
   ];

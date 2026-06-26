@@ -901,6 +901,52 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* THEMEN-HUB (interne Verlinkung zu Prioritätsseiten) */}
+      {isPentest && (
+        <section className="premium-section border-t border-white/10">
+          <div className="mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:py-20">
+            <SectionLabel>Beliebte Themen</SectionLabel>
+            <h2 className="mt-4 max-w-2xl text-2xl font-semibold tracking-[-0.02em] md:text-3xl">
+              Penetrationstest – Leistungen, Preise & Compliance
+            </h2>
+            <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <div>
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">Leistungen</h3>
+                <ul className="mt-4 space-y-2.5 text-sm text-white/65">
+                  <li><Link href="/services/web-application-testing" className="hover:text-white">Web Application Pentest</Link></li>
+                  <li><Link href="/services/active-directory" className="hover:text-white">Active Directory Pentest</Link></li>
+                  <li><Link href="/services/aws-penetrationstest" className="hover:text-white">AWS Penetrationstest</Link></li>
+                  <li><Link href="/services/network-audit" className="hover:text-white">Netzwerk Pentest</Link></li>
+                  <li><Link href="/services/api-security-testing" className="hover:text-white">API-Sicherheitstest</Link></li>
+                  <li><Link href="/services/mobile-app-testing" className="hover:text-white">Mobile App Pentest</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">Preise & Anbieter</h3>
+                <ul className="mt-4 space-y-2.5 text-sm text-white/65">
+                  <li><Link href="/penetration-testing-anbieter" className="hover:text-white">Pentest-Anbieter mit Festpreis ab 2.500 €</Link></li>
+                  <li><Link href="/pentest-preis" className="hover:text-white">Was kostet ein Penetrationstest</Link></li>
+                  <li><Link href="/pentest-kosten" className="hover:text-white">Pentest-Kosten im Überblick</Link></li>
+                  <li><Link href="/pentest-berlin" className="hover:text-white">Penetrationstest in Berlin</Link></li>
+                  <li><Link href="/penetrationstest-deutschland" className="hover:text-white">Penetrationstest Deutschland</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">Compliance & Normen</h3>
+                <ul className="mt-4 space-y-2.5 text-sm text-white/65">
+                  <li><Link href="/nis2" className="hover:text-white">NIS2-Penetrationstest</Link></li>
+                  <li><Link href="/iso-27001-zertifizierung" className="hover:text-white">ISO-27001-Zertifizierung mit Pentest</Link></li>
+                  <li><Link href="/tlpt" className="hover:text-white">TLPT nach DORA</Link></li>
+                  <li><Link href="/bsig" className="hover:text-white">BSIG §8a / KRITIS-Nachweis</Link></li>
+                  <li><Link href="/tisax" className="hover:text-white">TISAX-Penetrationstest</Link></li>
+                  <li><Link href="/pci-dss-penetrationstest" className="hover:text-white">PCI-DSS-Penetrationstest</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
       <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
         <div className="premium-aurora" aria-hidden />
