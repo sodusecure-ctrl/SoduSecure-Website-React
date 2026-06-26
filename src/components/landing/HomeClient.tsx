@@ -940,6 +940,7 @@ export default function HomeClient() {
                   <li><Link href="/bsig" className="hover:text-white">BSIG §8a / KRITIS-Nachweis</Link></li>
                   <li><Link href="/tisax" className="hover:text-white">TISAX-Penetrationstest</Link></li>
                   <li><Link href="/pci-dss-penetrationstest" className="hover:text-white">PCI-DSS-Penetrationstest</Link></li>
+                  <li><Link href="/dsgvo-penetrationstest" className="hover:text-white">DSGVO-Penetrationstest</Link></li>
                 </ul>
               </div>
             </div>

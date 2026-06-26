@@ -59,6 +59,7 @@ export default function Footer() {
     { label: 'TLPT (DORA)', href: '/tlpt' },
     { label: 'TISAX Penetrationstest', href: '/tisax' },
     { label: 'PCI DSS Penetrationstest', href: '/pci-dss-penetrationstest' },
+    { label: 'DSGVO-Penetrationstest', href: '/dsgvo-penetrationstest' },
     { label: 'IT Sicherheitscheck', href: '/it-sicherheitscheck' },
     { label: 'Cybersecurity Audit', href: '/cybersecurity-audit' },
     { label: 'Hacker Simulation', href: '/hacker-simulation' },
@@ -91,7 +92,6 @@ export default function Footer() {
   ];
 
   const VISIBLE_COUNT = 5;
-  const visibleLinks = servicesExpanded ? serviceLinks : serviceLinks.slice(0, VISIBLE_COUNT);
 
   const companyLinks = [
     { label: companyLabels?.[0], href: '/about' },
@@ -160,8 +160,9 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold text-base lg:text-lg mb-4 lg:mb-6">{t('sections.services.title')}</h3>
             <ul className="space-y-2 lg:space-y-3">
-              {visibleLinks.map((item, index) => (
-                <li key={index}>
+              {/* Alle Links im DOM (crawlbar); Überzahl nur visuell eingeklappt */}
+              {serviceLinks.map((item, index) => (
+                <li key={index} className={index >= VISIBLE_COUNT && !servicesExpanded ? 'hidden' : ''}>
                   <Link
                     href={toLocalizedPath(item.href)}
                     className="text-gray-400 hover:text-white transition-colors text-sm block py-1"

@@ -120,9 +120,28 @@ export default async function RootLayout({
   const locale = await getLocale();
   const messages = await getMessages();
 
+  const orgJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${baseUrl}/#organization`,
+    name: 'SODU Secure',
+    url: baseUrl,
+    logo: `${baseUrl}/icons/logo.png`,
+    image: `${baseUrl}/images/og-image.jpg`,
+    description:
+      'Penetrationstests und IT-Security aus Berlin – manuell von OSCP-zertifizierten Hackern, transparenter Festpreis ab 2.500 €.',
+    email: 'info@sodusecure.com',
+    telephone: '+49-177-7750985',
+    areaServed: ['DE', 'AT', 'CH'],
+    address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
+    priceRange: '€€',
+    knowsAbout: ['Penetrationstest', 'NIS2', 'ISO 27001', 'DORA', 'Red Teaming', 'Active Directory', 'Cloud Security'],
+  };
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         {/* Theme – set before paint to avoid a flash of the wrong design */}
         <script
           dangerouslySetInnerHTML={{

@@ -46,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tlpt',                             lastModified: '2026-06-23', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/tisax',                            lastModified: '2026-06-23', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/pci-dss-penetrationstest',         lastModified: '2026-06-23', changeFreq: 'weekly',  priority: 0.95 },
+    { path: '/dsgvo-penetrationstest',          lastModified: '2026-06-26', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/cybersecurity-firma',              lastModified: '2026-05-18', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/vulnerability-assessment-service', lastModified: '2026-05-18', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/red-team-assessment-service',      lastModified: '2026-05-18', changeFreq: 'weekly',  priority: 0.95 },
