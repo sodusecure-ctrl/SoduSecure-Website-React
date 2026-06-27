@@ -47,9 +47,9 @@ const UNTERSCHIED = [
 
 const FAQS = [
   { q: "Was ist eine Hacker Simulation?", a: "Bei einer Hacker Simulation (auch Penetrationstest oder Ethical Hacking) greifen autorisierte Sicherheitsexperten Ihr Unternehmen mit denselben Methoden an wie echte Hacker. Das Ziel: Schwachstellen finden und beheben, bevor echte Angreifer sie ausnutzen." },
-  { q: "Ist eine Hacker Simulation legal?", a: "Ja – autorisiertes Ethical Hacking ist vollständig legal. SODU Secure führt alle Tests ausschließlich mit schriftlicher Genehmigung des Systeminhabers und in klar definiertem Scope durch. Wir stellen alle rechtlichen Dokumente (NDA, ROE, Scope-Agreement) bereit." },
-  { q: "Was kostet eine Hacker Simulation?", a: "Eine professionelle Hacker Simulation kostet bei SODU Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Umfang ab (ein System vs. gesamtes Unternehmen). Über den Konfigurator erhalten Sie sofort ein Festpreisangebot – kein Tagessatz." },
-  { q: "Wie unterscheidet sich Hacker Simulation von einem Pentest?", a: "Hacker Simulation und Penetrationstest sind weitgehend synonym. Eine Hacker Simulation betont die Realitätsnähe – echte Angriffstechniken, echte Tools (Metasploit, BloodHound, Burp Suite), echte Proof-of-Concepts. SODU Secure kombiniert klassischen OWASP-basierten Pentest mit simulierten Angriffen." },
+  { q: "Ist eine Hacker Simulation legal?", a: "Ja – autorisiertes Ethical Hacking ist vollständig legal. Sodu Secure führt alle Tests ausschließlich mit schriftlicher Genehmigung des Systeminhabers und in klar definiertem Scope durch. Wir stellen alle rechtlichen Dokumente (NDA, ROE, Scope-Agreement) bereit." },
+  { q: "Was kostet eine Hacker Simulation?", a: "Eine professionelle Hacker Simulation kostet bei Sodu Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Umfang ab (ein System vs. gesamtes Unternehmen). Über den Konfigurator erhalten Sie sofort ein Festpreisangebot – kein Tagessatz." },
+  { q: "Wie unterscheidet sich Hacker Simulation von einem Pentest?", a: "Hacker Simulation und Penetrationstest sind weitgehend synonym. Eine Hacker Simulation betont die Realitätsnähe – echte Angriffstechniken, echte Tools (Metasploit, BloodHound, Burp Suite), echte Proof-of-Concepts. Sodu Secure kombiniert klassischen OWASP-basierten Pentest mit simulierten Angriffen." },
   { q: "Wie lange dauert eine Hacker Simulation?", a: "Eine fokussierte Hacker Simulation (z.B. nur Web-App) dauert 2–3 Tage. Eine vollständige Unternehmens-Simulation (Web + Netzwerk + AD + Phishing) 1–2 Wochen. Der Bericht wird 48 Stunden nach Testende geliefert." },
   { q: "Was passiert wenn die Hacker Simulation kritische Lücken findet?", a: "Bei kritischen Findings kommunizieren wir sofort – noch während des Tests, bevor der Abschlussbericht fertig ist. Sie erhalten Sofortmaßnahmen und können direkt reagieren. Anschließend folgen detaillierter Bericht und kostenloser Retest." },
 ];
@@ -64,7 +64,7 @@ export default function HackerSimulationPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-red-900/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">SODU Secure</Link>
+            <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
             <span>/</span>
             <span className="text-white/70">Hacker Simulation</span>
           </nav>
@@ -83,7 +83,7 @@ export default function HackerSimulationPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">
-            SODU Secure simuliert realistische Hackerangriffe auf Ihr Unternehmen –
+            Sodu Secure simuliert realistische Hackerangriffe auf Ihr Unternehmen –
             autorisiert, OSCP-zertifiziert, mit echten Angriffstechniken.
             Finden Sie Sicherheitslücken, bevor echte Hacker es tun.
           </p>
@@ -118,7 +118,7 @@ export default function HackerSimulationPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">Was wird simuliert?</h2>
             <p className="text-white/60 text-sm max-w-2xl mx-auto">
-              SODU Secure simuliert die Angriffstechniken, die echte Hacker und
+              Sodu Secure simuliert die Angriffstechniken, die echte Hacker und
               Ransomware-Gruppen tatsächlich einsetzen.
             </p>
           </div>
@@ -175,7 +175,7 @@ export default function HackerSimulationPage() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">
-                Warum SODU Secure für Ihre Hacker Simulation?
+                Warum Sodu Secure für Ihre Hacker Simulation?
               </h2>
               <div className="space-y-4">
                 {[
@@ -202,7 +202,7 @@ export default function HackerSimulationPage() {
               <div className="text-4xl font-bold text-orange-400 mb-2">72 h</div>
               <p className="text-sm text-white/70 mb-4">mittlere Zeit bis ein Angreifer im Netzwerk unentdeckt bleibt</p>
               <div className="text-4xl font-bold text-green-400 mb-2">2.500 €</div>
-              <p className="text-sm text-white/70">Festpreis für Hacker Simulation bei SODU Secure</p>
+              <p className="text-sm text-white/70">Festpreis für Hacker Simulation bei Sodu Secure</p>
               <Link href="/request-pentest"
                 className="mt-6 inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105 w-full justify-center">
                 <Calculator className="w-4 h-4" />Jetzt konfigurieren

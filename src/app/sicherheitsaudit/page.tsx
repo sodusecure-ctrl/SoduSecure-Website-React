@@ -66,11 +66,11 @@ const PAKETE = [
 
 const FAQS = [
   { q: "Was ist ein IT Sicherheitsaudit?", a: "Ein IT Sicherheitsaudit (Sicherheitsaudit) ist eine umfassende Überprüfung der IT-Sicherheitslage eines Unternehmens – technisch und organisatorisch. Dabei werden Schwachstellen identifiziert, gegen Compliance-Anforderungen geprüft und mit priorisierten Maßnahmen versehen." },
-  { q: "Was kostet ein Sicherheitsaudit?", a: "Ein Sicherheitsaudit kostet bei SODU Secure ab 1.499 € (technischer Basis-Audit) bis 8.000 € (vollständiger Audit inkl. Compliance-Prüfung). Nutzen Sie den Konfigurator für einen sofortigen Festpreis – kein Tages­satz, kein Überbudget." },
+  { q: "Was kostet ein Sicherheitsaudit?", a: "Ein Sicherheitsaudit kostet bei Sodu Secure ab 1.499 € (technischer Basis-Audit) bis 8.000 € (vollständiger Audit inkl. Compliance-Prüfung). Nutzen Sie den Konfigurator für einen sofortigen Festpreis – kein Tages­satz, kein Überbudget." },
   { q: "Wie lange dauert ein Sicherheitsaudit?", a: "Ein fokussierter IT Sicherheitsaudit dauert 2–5 Tage. Ein vollständiger Unternehmens-Audit (technisch + Compliance + organisatorisch) 1–2 Wochen. Bericht-Lieferung 48 Stunden nach Testabschluss." },
   { q: "Für welche Compliance-Anforderungen brauche ich einen Sicherheitsaudit?", a: "NIS2 (Art. 21 – regelmäßige Risikomanagement-Maßnahmen), ISO 27001 (Annex A.12.6), DSGVO Art. 32 (technische Sicherheitsmaßnahmen) und DORA (Art. 26 – ICT risk management) fordern alle regelmäßige Sicherheitsüberprüfungen durch Experten." },
-  { q: "Was unterscheidet einen Sicherheitsaudit von einem Penetrationstest?", a: "Ein Penetrationstest fokussiert auf technische Exploitation (manuell, PoC). Ein Sicherheitsaudit ist breiter: er umfasst technisches Testing + Policy-Prüfung + Compliance-Gap-Analyse + organisatorische Bewertung. SODU Secure kombiniert beides in einem Audit." },
-  { q: "Kann ich den Sicherheitsaudit für die ISO 27001-Zertifizierung verwenden?", a: "Ja – ein SODU Secure Sicherheitsaudit-Bericht ist auf die Anforderungen akkreditierter ISO 27001-Zertifizierungsstellen ausgerichtet. Er adressiert direkt Annex A Controls und liefert den Nachweis für das Statement of Applicability (SoA)." },
+  { q: "Was unterscheidet einen Sicherheitsaudit von einem Penetrationstest?", a: "Ein Penetrationstest fokussiert auf technische Exploitation (manuell, PoC). Ein Sicherheitsaudit ist breiter: er umfasst technisches Testing + Policy-Prüfung + Compliance-Gap-Analyse + organisatorische Bewertung. Sodu Secure kombiniert beides in einem Audit." },
+  { q: "Kann ich den Sicherheitsaudit für die ISO 27001-Zertifizierung verwenden?", a: "Ja – ein Sodu Secure Sicherheitsaudit-Bericht ist auf die Anforderungen akkreditierter ISO 27001-Zertifizierungsstellen ausgerichtet. Er adressiert direkt Annex A Controls und liefert den Nachweis für das Statement of Applicability (SoA)." },
 ];
 
 export default function SicherheitsauditPage() {
@@ -83,7 +83,7 @@ export default function SicherheitsauditPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-900/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">SODU Secure</Link>
+            <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
             <span>/</span>
             <span className="text-white/70">Sicherheitsaudit</span>
           </nav>
@@ -102,7 +102,7 @@ export default function SicherheitsauditPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">
-            SODU Secure führt manuelle IT Sicherheitsaudits durch –
+            Sodu Secure führt manuelle IT Sicherheitsaudits durch –
             technisches Pentesting plus Compliance-Prüfung (NIS2, ISO 27001, DSGVO).
             OSCP-zertifiziert, Festpreis, schnelle Abwicklung.
           </p>
@@ -193,7 +193,7 @@ export default function SicherheitsauditPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Warum SODU Secure für Ihren Sicherheitsaudit?</h2>
+              <h2 className="text-3xl font-bold mb-6">Warum Sodu Secure für Ihren Sicherheitsaudit?</h2>
               <div className="space-y-4">
                 {[
                   { icon: Award, title: "OSCP & CEH-zertifiziert", desc: "Nachgewiesene technische Expertise – keine Scan-Reseller.", color: "text-[#FF3B30]" },

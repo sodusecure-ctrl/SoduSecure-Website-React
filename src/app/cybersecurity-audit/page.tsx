@@ -47,10 +47,10 @@ const COMPLIANCE = [
 
 const FAQS = [
   { q: "Was ist ein Cybersecurity Audit?", a: "Ein Cybersecurity Audit ist eine systematische Prüfung der gesamten IT-Sicherheitslage eines Unternehmens – technisch und prozessual. Dabei werden Schwachstellen in Web-Apps, Netzwerken, Cloud-Umgebungen und intern erkannt, nach CVSS 3.1 bewertet und mit Maßnahmenempfehlungen versehen." },
-  { q: "Was kostet ein Cybersecurity Audit?", a: "Ein Cybersecurity Audit kostet bei SODU Secure ab 1.499 € als Festpreis. Umfangreiche Audits (Full-Stack inkl. Compliance-Prüfung) starten ab 8.000 €. Nutzen Sie den Konfigurator für sofortige Preistransparenz – kein Tagessatz, kein Überbudget." },
+  { q: "Was kostet ein Cybersecurity Audit?", a: "Ein Cybersecurity Audit kostet bei Sodu Secure ab 1.499 € als Festpreis. Umfangreiche Audits (Full-Stack inkl. Compliance-Prüfung) starten ab 8.000 €. Nutzen Sie den Konfigurator für sofortige Preistransparenz – kein Tagessatz, kein Überbudget." },
   { q: "Wie lange dauert ein Cybersecurity Audit?", a: "Ein fokussierter Cyber Security Audit (z.B. nur Web oder Netzwerk) dauert 2–5 Tage. Vollständige Unternehmens-Audits inkl. Active Directory und Cloud 1–3 Wochen. Der Bericht wird 48 Stunden nach Testabschluss geliefert." },
-  { q: "Erfüllt ein Cybersecurity Audit NIS2-Pflichten?", a: "Ja – ein SODU Secure Cybersecurity Audit erfüllt die NIS2-Anforderungen für regelmäßige technische Sicherheitsprüfungen (Art. 21 Abs. 2 lit. g). Der Bericht ist für die Vorlage bei Behörden und für ISO 27001 Zertifizierungen geeignet." },
-  { q: "Was ist der Unterschied zwischen Cybersecurity Audit und Penetrationstest?", a: "Der Begriff Cybersecurity Audit umfasst oft sowohl technisches Pentesting als auch prozessuale und Compliance-Prüfungen. Ein klassischer Penetrationstest fokussiert tiefer auf technische Exploitation. SODU Secure kombiniert beides – technisches Pentesting + Compliance-Mapping in einem Bericht." },
+  { q: "Erfüllt ein Cybersecurity Audit NIS2-Pflichten?", a: "Ja – ein Sodu Secure Cybersecurity Audit erfüllt die NIS2-Anforderungen für regelmäßige technische Sicherheitsprüfungen (Art. 21 Abs. 2 lit. g). Der Bericht ist für die Vorlage bei Behörden und für ISO 27001 Zertifizierungen geeignet." },
+  { q: "Was ist der Unterschied zwischen Cybersecurity Audit und Penetrationstest?", a: "Der Begriff Cybersecurity Audit umfasst oft sowohl technisches Pentesting als auch prozessuale und Compliance-Prüfungen. Ein klassischer Penetrationstest fokussiert tiefer auf technische Exploitation. Sodu Secure kombiniert beides – technisches Pentesting + Compliance-Mapping in einem Bericht." },
   { q: "Wer braucht einen Cybersecurity Audit?", a: "Unternehmen ab 50 Mitarbeitern oder Unternehmen in regulierten Sektoren (Energie, Finance, Gesundheit) sind unter NIS2 zur regelmäßigen Prüfung verpflichtet. Aber auch KMUs sollten mindestens jährlich einen Cybersecurity Audit beauftragen." },
 ];
 
@@ -64,7 +64,7 @@ export default function CybersecurityAuditPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">SODU Secure</Link>
+            <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
             <span>/</span>
             <span className="text-white/70">Cybersecurity Audit</span>
           </nav>
@@ -83,7 +83,7 @@ export default function CybersecurityAuditPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">
-            SODU Secure führt manuelle Cybersecurity Audits für Unternehmen durch –
+            Sodu Secure führt manuelle Cybersecurity Audits für Unternehmen durch –
             OSCP-zertifiziert, NIS2- und ISO 27001-konforme Berichte, Festpreis.
             Kein Tagessatz, kein Überraschungsbudget.
           </p>
@@ -146,7 +146,7 @@ export default function CybersecurityAuditPage() {
             </h2>
             <p className="text-white/70 leading-relaxed mb-6 text-sm">
               Immer mehr Compliance-Frameworks fordern regelmäßige technische Sicherheitsprüfungen.
-              Ein SODU Secure Cybersecurity Audit-Bericht ist so aufgebaut, dass er die
+              Ein Sodu Secure Cybersecurity Audit-Bericht ist so aufgebaut, dass er die
               Anforderungen der wichtigsten Rahmenwerke direkt adressiert.
             </p>
             <div className="p-4 bg-blue-500/5 border border-blue-500/20 rounded-xl mb-6">
@@ -179,7 +179,7 @@ export default function CybersecurityAuditPage() {
       <section className="py-20 bg-white/[0.02] border-y border-white/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Warum SODU Secure für Ihren Cybersecurity Audit?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Warum Sodu Secure für Ihren Cybersecurity Audit?</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[

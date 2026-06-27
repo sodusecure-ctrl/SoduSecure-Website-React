@@ -92,10 +92,10 @@ const LEISTUNGEN = [
 const FAQS = [
   { q: "Wie wähle ich den richtigen Penetration Testing Anbieter?", a: "Achten Sie auf: Pentester-Zertifizierungen (OSCP, CEH), transparente Festpreise, nachgewiesenes manuelles Testing (Proof-of-Concepts), Retest inklusive, Compliance-Eignung der Berichte (NIS2, ISO 27001) und direkte Kommunikation mit dem Experten – nicht nur Vertrieb." },
   { q: "Was unterscheidet seriöse Pentest Anbieter von Scan-Resellern?", a: "Seriöse Pentest Anbieter führen manuelle Tests durch und liefern Proof-of-Concepts für Findings. Scan-Reseller lassen automatisierte Tools laufen und ergänzen minimal. Erkennungszeichen: fehlende Pentester-Zertifizierungen, keine PoC-Beispiele, sehr niedrige Preise unter 1.000 €." },
-  { q: "Wie viel kostet ein seriöser Penetration Testing Anbieter?", a: "Seriöse manuelle Pentest Anbieter starten ab 1.499 € für fokussierte Tests. Verdächtig günstige Angebote unter 1.000 € sind oft automatisierte Scans. SODU Secure bietet transparente Festpreise ab 1.499 € mit vollständigem manuellem Testing." },
+  { q: "Wie viel kostet ein seriöser Penetration Testing Anbieter?", a: "Seriöse manuelle Pentest Anbieter starten ab 1.499 € für fokussierte Tests. Verdächtig günstige Angebote unter 1.000 € sind oft automatisierte Scans. Sodu Secure bietet transparente Festpreise ab 1.499 € mit vollständigem manuellem Testing." },
   { q: "Welche Zertifizierungen sollte ein Pentest Anbieter haben?", a: "Minimum: OSCP (Offensive Security Certified Professional) für manuelle Exploitation. Ergänzend: CEH (EC-Council), GPEN (GIAC), ISO 27001 Lead Auditor für Compliance-Tests. Ein Anbieter ohne diese Zertifizierungen hat oft keine nachgewiesene Exploitation-Erfahrung." },
-  { q: "Kann ein Pentest Anbieter aus Berlin auch remote testen?", a: "Ja – die meisten Penetrationstests laufen remote über VPN-Zugänge. SODU Secure testet deutschlandweit und international remote. Für lokale Engagements oder Vor-Ort-Workshops in Berlin sind persönliche Treffen möglich." },
-  { q: "Was ist bei einem Penetration Testing Anbietervertrag zu beachten?", a: "Wichtig sind: klarer Scope (was wird getestet), autorisierte Testzeiträume, NDA-Vereinbarung, Schadensausschluss für autorisierte Tests, DSGVO-konforme Datenverarbeitung und ein klarer Festpreis. SODU Secure stellt alle Vertragsunterlagen vor Testbeginn bereit." },
+  { q: "Kann ein Pentest Anbieter aus Berlin auch remote testen?", a: "Ja – die meisten Penetrationstests laufen remote über VPN-Zugänge. Sodu Secure testet deutschlandweit und international remote. Für lokale Engagements oder Vor-Ort-Workshops in Berlin sind persönliche Treffen möglich." },
+  { q: "Was ist bei einem Penetration Testing Anbietervertrag zu beachten?", a: "Wichtig sind: klarer Scope (was wird getestet), autorisierte Testzeiträume, NDA-Vereinbarung, Schadensausschluss für autorisierte Tests, DSGVO-konforme Datenverarbeitung und ein klarer Festpreis. Sodu Secure stellt alle Vertragsunterlagen vor Testbeginn bereit." },
 ];
 
 export default function PenetrationTestingAnbieterPage() {
@@ -108,7 +108,7 @@ export default function PenetrationTestingAnbieterPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">SODU Secure</Link>
+            <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
             <span>/</span>
             <span className="text-white/70">Penetration Testing Anbieter</span>
           </nav>
@@ -129,7 +129,7 @@ export default function PenetrationTestingAnbieterPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
-            SODU Secure ist ein zertifizierter Pentest Anbieter mit Sitz in Berlin.
+            Sodu Secure ist ein zertifizierter Pentest Anbieter mit Sitz in Berlin.
             OSCP- und CEH-zertifizierte Pentester. Festpreise ab 1.499 €. Manuelles Testing –
             keine Scan-Reports. Angebot in 24 Stunden. Erfahren Sie mehr über Pentest Dienstleister und Penetration Testing Services.
           </p>
@@ -195,12 +195,12 @@ export default function PenetrationTestingAnbieterPage() {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              SODU Secure vs.{" "}
+              Sodu Secure vs.{" "}
               <span className="text-blue-400">typischer Pentest Anbieter</span>
             </h2>
             <p className="text-white/70 leading-relaxed mb-6">
               Viele Anbieter versprechen {'\u201ePenetrationstest"'}, liefern aber automatisierte
-              Scan-Reports. Was SODU Secure als Pentest Anbieter konkret unterscheidet:
+              Scan-Reports. Was Sodu Secure als Pentest Anbieter konkret unterscheidet:
             </p>
             <div className="space-y-3">
               {[
@@ -253,7 +253,7 @@ export default function PenetrationTestingAnbieterPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Leistungen von SODU Secure als Pentest Anbieter
+              Leistungen von Sodu Secure als Pentest Anbieter
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto text-sm">
               Als vollständiger Penetration Testing Anbieter decken wir alle relevanten
@@ -285,7 +285,7 @@ export default function PenetrationTestingAnbieterPage() {
       <section className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            SODU Secure – Ihr Penetration Testing Anbieter aus Berlin
+            Sodu Secure – Ihr Penetration Testing Anbieter aus Berlin
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto text-sm">
             Berliner Unternehmen vertrauen uns als ihren lokalen Pentest Anbieter –
@@ -387,7 +387,7 @@ export default function PenetrationTestingAnbieterPage() {
       {/* ── FINAL CTA ─────────────────────────────────────────────────────────── */}
       <section className="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-          SODU Secure als Ihren Pentest Anbieter wählen
+          Sodu Secure als Ihren Pentest Anbieter wählen
         </h2>
         <p className="text-white/60 mb-8 max-w-2xl mx-auto">
           Zertifiziert. Transparent. Aus Berlin. Festpreis-Angebot innerhalb von 24 Stunden –

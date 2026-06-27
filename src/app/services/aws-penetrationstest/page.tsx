@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "AWS Penetrationstest – Cloud-Sicherheit für Amazon Web Services | SODU Secure",
+  title: "AWS Penetrationstest – Cloud-Sicherheit für Amazon Web Services | Sodu Secure",
   description:
     "AWS Penetrationstest: Wir prüfen IAM, S3, EC2 & Konfiguration Ihrer Amazon-Web-Services-Umgebung auf ausnutzbare Schwachstellen. OSCP-zertifiziert, DSGVO-konform.",
   alternates: { canonical: "/services/aws-penetrationstest" },

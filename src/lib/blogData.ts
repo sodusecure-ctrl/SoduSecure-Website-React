@@ -160,7 +160,7 @@ export const blogPosts = [
     id: 14,
     slug: 'pentest-berlin-leitfaden',
     title: 'Pentest Berlin 2026: Der vollständige Leitfaden für Berliner Unternehmen',
-    description: 'Was kostet ein Pentest in Berlin? Was testet man wie? Welche Berliner Unternehmen brauchen einen Penetrationstest – und warum jetzt? Der komplette Guide von SODU Secure.',
+    description: 'Was kostet ein Pentest in Berlin? Was testet man wie? Welche Berliner Unternehmen brauchen einen Penetrationstest – und warum jetzt? Der komplette Guide von Sodu Secure.',
     category: 'Pentest Berlin',
     author: 'Kerim K.',
     date: '2026-02-27',

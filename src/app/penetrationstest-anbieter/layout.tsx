@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <ServiceJsonLd
         name="Penetrationstest Anbieter"
-        description="Woran erkennen Sie einen seriösen Penetrationstest-Anbieter? OSCP/CEH-Zertifizierung, manuelles Testing statt Scan und klare Berichte – plus was SODU Secure auszeichnet."
+        description="Woran erkennen Sie einen seriösen Penetrationstest-Anbieter? OSCP/CEH-Zertifizierung, manuelles Testing statt Scan und klare Berichte – plus was Sodu Secure auszeichnet."
         path="/penetrationstest-anbieter"
       />
       {children}

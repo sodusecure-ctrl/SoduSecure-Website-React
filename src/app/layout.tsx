@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   alternates: { canonical: '/' },
   title: {
-    default: "Pentest Berlin ab 2.500 € Festpreis | SODU Secure",
-    template: "%s | SODU Secure"
+    default: "Sodu Secure | ihr Cyber-Spezialist",
+    template: "%s | Sodu Secure"
   },
   description: "Penetrationstests aus Berlin, manuell von OSCP-zertifizierten Hackern. Echte Angriffsketten, reproduzierbare PoCs, klare Fix-Empfehlungen. Festpreis ab 2.500 €.",
   keywords: [
@@ -42,10 +42,9 @@ export const metadata: Metadata = {
     'network security',
     'VAPT',
     'security audit',
-    'Pentest Berlin',
-    'Penetrationstest Berlin',
-    'IT-Sicherheit Berlin',
     'Pentest KMU',
+    'Cyber-Spezialist',
+    'Cybersecurity Deutschland',
   ],
   authors: [{ name: 'sodusecure' }],
   creator: 'sodusecure',
@@ -59,9 +58,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'de_DE',
     url: baseUrl,
-    title: 'Pentest Berlin – Preis sofort online berechnen | SODU Secure',
+    title: 'Sodu Secure | ihr Cyber-Spezialist',
     description: 'Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. OSCP-zertifizierter Pentest – Web, API, AD. Preis sofort online berechnen. Festpreis ab 1.499 €.',
-    siteName: 'SODU Secure',
+    siteName: 'Sodu Secure',
     images: [
       {
         url: `${baseUrl}/images/og-image.jpg`,
@@ -73,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SODU Secure – Pentest Berlin & Penetration Testing',
+    title: 'Sodu Secure | ihr Cyber-Spezialist',
     description: 'Zertifizierte Pentester – transparente Festpreise ab 1.499 €. Pentest sofort konfigurieren & Preis berechnen. Web, API, AD & Cloud.',
     images: [`${baseUrl}/images/twitter-image.jpg`],
     creator: '@sodusecure',
@@ -124,7 +123,7 @@ export default async function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${baseUrl}/#organization`,
-    name: 'SODU Secure',
+    name: 'Sodu Secure',
     url: baseUrl,
     logo: `${baseUrl}/icons/logo.png`,
     image: `${baseUrl}/images/og-image.jpg`,

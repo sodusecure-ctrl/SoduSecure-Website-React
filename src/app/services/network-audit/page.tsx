@@ -64,7 +64,7 @@ export default function NetworkSecurityAuditLanding() {
               <Button onClick={() => router.push("/request-pentest")} className="bg-red-600 hover:premium-cta text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base w-full sm:w-auto justify-center">
                 {t('hero.requestPentest')}
               </Button>
-              <Button onClick={() => router.push("/contact")} variant="outline" className="border-white text-white bg-black hover:bg-white/10 hover:text-black px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base w-full sm:w-auto justify-center">
+              <Button onClick={() => router.push("/contact")} variant="outline" className="border-white text-white bg-black hover:bg-white hover:text-black px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base w-full sm:w-auto justify-center">
                 {t('hero.scheduleConsultation')}
               </Button>
             </div>

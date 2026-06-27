@@ -5,7 +5,7 @@ import CorporateCheck from '../CorporateCheck';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Sicherheits-Schnellcheck für Unternehmen | SODU Secure',
+  title: 'Sicherheits-Schnellcheck für Unternehmen | Sodu Secure',
   description:
     'Kostenloser Sicherheits-Schnellcheck in 60 Sekunden: Sechs Fragen zeigen Ihnen, wie gefährdet Ihr Unternehmen ist und was ein Cyberangriff kosten würde. Danach Pentest vom zertifizierten Experten.',
   alternates: { canonical: `${baseUrl}/corporate/schnellcheck` },

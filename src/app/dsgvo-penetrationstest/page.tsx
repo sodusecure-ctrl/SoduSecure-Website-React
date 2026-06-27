@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "DSGVO-Penetrationstest – Art. 32 nachweisen | SODU Secure",
+  title: "DSGVO-Penetrationstest – Art. 32 nachweisen | Sodu Secure",
   description:
     "DSGVO Art. 32 verlangt regelmäßige Überprüfung technischer Maßnahmen. Wir liefern den Penetrationstest als Wirksamkeitsnachweis – Festpreis ab 2.500 €.",
   alternates: { canonical: "/dsgvo-penetrationstest" },
@@ -99,7 +99,7 @@ const data: RegulationContent = {
   faqs: [
     { q: "Schreibt die DSGVO einen Penetrationstest vor?", a: "Die DSGVO nennt keinen Penetrationstest namentlich. Art. 32 Abs. 1 lit. d verlangt aber ein Verfahren zur regelmäßigen Überprüfung der Wirksamkeit der Sicherheitsmaßnahmen. Ein Penetrationstest ist das etablierte und anerkannte Mittel, diese Anforderung technisch zu erfüllen." },
     { q: "Wie oft sollte man einen DSGVO-Penetrationstest durchführen?", a: "Üblich ist mindestens einmal jährlich sowie nach wesentlichen Änderungen an Systemen, die personenbezogene Daten verarbeiten. Die genaue Frequenz richtet sich nach dem Risiko der Verarbeitung." },
-    { q: "Was kostet ein DSGVO-Penetrationstest?", a: "Ein fokussierter Test startet bei SODU Secure ab 2.500 € als Festpreis. Der genaue Preis hängt vom Umfang der datenverarbeitenden Systeme ab – nutzen Sie unseren Pentest-Konfigurator für eine Einordnung." },
+    { q: "Was kostet ein DSGVO-Penetrationstest?", a: "Ein fokussierter Test startet bei Sodu Secure ab 2.500 € als Festpreis. Der genaue Preis hängt vom Umfang der datenverarbeitenden Systeme ab – nutzen Sie unseren Pentest-Konfigurator für eine Einordnung." },
     { q: "Hilft der Bericht bei einem Datenschutz-Audit?", a: "Ja. Unser Bericht dokumentiert die geprüften Maßnahmen, gefundene Schwachstellen und deren Behebung mit CVSS-Bewertung – geeignet als Nachweis gegenüber Aufsichtsbehörden und im Rahmen von Auftragsverarbeitungs-Audits." },
     { q: "Gilt das auch für Auftragsverarbeiter?", a: "Ja. Art. 32 verpflichtet ausdrücklich auch Auftragsverarbeiter. Viele Auftraggeber verlangen vertraglich einen Nachweis wirksamer technischer Maßnahmen – ein Penetrationstest liefert ihn." },
   ],

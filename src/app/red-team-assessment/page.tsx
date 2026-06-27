@@ -37,7 +37,7 @@ const RED_VS_PENTEST = [
 ];
 
 const COMPLIANCE_ITEMS = [
-  { name: "DORA (Digital Operational Resilience Act)", desc: "TLPT (Threat-Led Penetration Testing) ist für betroffene Finanzunternehmen ab 2025 Pflicht. SODU Secure liefert TLPT-konforme Berichte." },
+  { name: "DORA (Digital Operational Resilience Act)", desc: "TLPT (Threat-Led Penetration Testing) ist für betroffene Finanzunternehmen ab 2025 Pflicht. Sodu Secure liefert TLPT-konforme Berichte." },
   { name: "NIS2 Richtlinie", desc: "Art. 21 NIS2: Hochsicherheits-Einrichtungen benötigen fortgeschrittene Sicherheitstests. Red Team Assessments sind der anerkannte Nachweis." },
   { name: "ISO 27001", desc: "Red Team Assessments decken A.8.8 (Vulnerability Management) und A.5.7 (Threat Intelligence) vollständig ab." },
   { name: "TIBER-EU Framework", desc: "Das europäische TIBER-EU Framework für kritische Finanzinfrastrukturen basiert auf Red Team Methodology." },
@@ -66,7 +66,7 @@ const FAQS = [
   },
   {
     q: "Was ist DORA TLPT und brauche ich das?",
-    a: "TLPT (Threat-Led Penetration Testing) ist eine Anforderung des Digital Operational Resilience Act (DORA) für Finanzunternehmen ab 2025. SODU Secure führt TLPT-konforme Red Team Assessments mit entsprechender Dokumentation durch.",
+    a: "TLPT (Threat-Led Penetration Testing) ist eine Anforderung des Digital Operational Resilience Act (DORA) für Finanzunternehmen ab 2025. Sodu Secure führt TLPT-konforme Red Team Assessments mit entsprechender Dokumentation durch.",
   },
 ];
 

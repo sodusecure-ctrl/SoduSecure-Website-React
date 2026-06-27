@@ -76,6 +76,7 @@ export default function Header() {
     { name: isEnglish ? 'Pentest quick check (60 s)' : 'Pentest-Schnellcheck (60 Sek.)', path: '/pentest-schnellcheck' },
     { name: isEnglish ? 'Pentest risk check' : 'Pentest-Risiko-Check', path: '/pentest-risiko-check' },
     { name: isEnglish ? 'Do I need a pentest?' : 'Brauche ich einen Pentest?', path: '/brauche-ich-pentest' },
+    { name: isEnglish ? 'Which laws apply to me?' : 'Welche Gesetze treffen zu?', path: '/welche-gesetze-treffen-zu' },
   ];
 
   const complianceLinks = [

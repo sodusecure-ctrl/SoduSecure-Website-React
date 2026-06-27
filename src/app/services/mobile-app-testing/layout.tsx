@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   description: DESC,
   alternates: { canonical: `https://sodusecure.com${PATH}` },
   openGraph: {
-    title: "Mobile App Penetrationstest – iOS & Android | SODU Secure",
+    title: "Mobile App Penetrationstest – iOS & Android | Sodu Secure",
     description: DESC,
     url: `https://sodusecure.com${PATH}`,
     type: "website",
-    siteName: "SODU Secure",
+    siteName: "Sodu Secure",
   },
 };
 

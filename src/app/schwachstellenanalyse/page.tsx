@@ -43,15 +43,15 @@ const VERGLEICH_ROWS = [
   { kriterium: "Vollständige Angriffsketten beweisen", analyse: false, pentest: true },
   { kriterium: "NIS2 Art. 21 Nachweis", analyse: "teilweise", pentest: true },
   { kriterium: "Testdauer", analyse: "1–3 Tage", pentest: "2–10 Tage" },
-  { kriterium: "Preis bei SODU Secure", analyse: "ab 1.500 €", pentest: "ab 2.500 €" },
+  { kriterium: "Preis bei Sodu Secure", analyse: "ab 1.500 €", pentest: "ab 2.500 €" },
 ];
 
 const FAQS = [
   { q: "Was ist eine Schwachstellenanalyse?", a: "Eine Schwachstellenanalyse (Vulnerability Assessment) ist eine systematische Prüfung Ihrer IT-Systeme auf bekannte Sicherheitslücken. Im Gegensatz zum Penetrationstest werden Schwachstellen identifiziert und nach CVSS bewertet, aber nicht aktiv ausgenutzt." },
   { q: "Was ist der Unterschied zwischen Schwachstellenanalyse und Penetrationstest?", a: "Schwachstellenanalyse = Identifikation und Bewertung von Sicherheitslücken (CVSS 3.1). Penetrationstest = Zusätzlich manuelle Exploitation mit Proof-of-Concepts. Für NIS2 Art. 21 empfiehlt sich ein vollständiger Penetrationstest. Bei eingeschränktem Budget ist die Schwachstellenanalyse ein guter Einstieg." },
-  { q: "Was kostet eine Schwachstellenanalyse?", a: "Eine professionelle Schwachstellenanalyse kostet bei SODU Secure ab 1.500 € (reine Analyse) bzw. ab 2.500 € für Schwachstellenanalyse mit manuellem Vertiefungs-Pentest. Nutzen Sie den Konfigurator für den genauen Festpreis." },
+  { q: "Was kostet eine Schwachstellenanalyse?", a: "Eine professionelle Schwachstellenanalyse kostet bei Sodu Secure ab 1.500 € (reine Analyse) bzw. ab 2.500 € für Schwachstellenanalyse mit manuellem Vertiefungs-Pentest. Nutzen Sie den Konfigurator für den genauen Festpreis." },
   { q: "Wie lange dauert eine Schwachstellenanalyse?", a: "Eine fokussierte Schwachstellenanalyse (1–2 Systeme) dauert 1–3 Tage. Eine umfassende Analyse der gesamten Infrastruktur 3–7 Tage. Der Bericht wird innerhalb von 48 Stunden nach Abschluss geliefert." },
-  { q: "Welche Tools werden bei der Schwachstellenanalyse eingesetzt?", a: "SODU Secure kombiniert automatisierte Basis-Tools (Nessus, OpenVAS, Nikto) mit manueller Vertiefung durch OSCP-zertifizierte Experten. Das Ergebnis: keine False Positives, echte Proof-of-Concepts für kritische Findings." },
+  { q: "Welche Tools werden bei der Schwachstellenanalyse eingesetzt?", a: "Sodu Secure kombiniert automatisierte Basis-Tools (Nessus, OpenVAS, Nikto) mit manueller Vertiefung durch OSCP-zertifizierte Experten. Das Ergebnis: keine False Positives, echte Proof-of-Concepts für kritische Findings." },
   { q: "Reicht eine Schwachstellenanalyse für ISO 27001?", a: "Eine Schwachstellenanalyse erfüllt die Grundanforderungen von ISO 27001 Annex A.12.6. Für eine vollständige ISO 27001-Zertifizierung und NIS2 Art. 21-Nachweis empfiehlt sich ergänzend ein vollständiger Penetrationstest." },
 ];
 
@@ -65,7 +65,7 @@ export default function SchwachstellenanalysePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-orange-900/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">SODU Secure</Link>
+            <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
             <span>/</span>
             <span className="text-white/70">Schwachstellenanalyse</span>
           </nav>
@@ -84,7 +84,7 @@ export default function SchwachstellenanalysePage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">
-            SODU Secure führt professionelle Schwachstellenanalysen (Vulnerability Assessments)
+            Sodu Secure führt professionelle Schwachstellenanalysen (Vulnerability Assessments)
             durch – CVSS 3.1-Bewertung, manuell verifiziert, Bericht in 48 h.
             Festpreis, kein Tagessatz.
           </p>
@@ -117,7 +117,7 @@ export default function SchwachstellenanalysePage() {
       <section className="py-20 bg-white/[0.02] border-y border-white/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Was analysiert SODU Secure?</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Was analysiert Sodu Secure?</h2>
             <p className="text-white/60 text-sm max-w-2xl mx-auto">
               Unsere Schwachstellenanalyse umfasst alle relevanten Bereiche Ihrer IT-Infrastruktur –
               technisch und compliance-orientiert.

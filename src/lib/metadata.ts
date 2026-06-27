@@ -47,7 +47,7 @@ export function generatePageMetadata({
       url,
       title: fullTitle,
       description,
-      siteName: 'SODU Secure',
+      siteName: 'Sodu Secure',
       images: [
         {
           url: `${baseUrl}/images/og-image.jpg`,

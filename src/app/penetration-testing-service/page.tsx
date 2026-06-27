@@ -367,7 +367,7 @@ export default function PenetrationTestingServicePage() {
             aria-label="Breadcrumb"
           >
             <Link href="/" className="hover:text-white/70 transition-colors">
-              SODU Secure
+              Sodu Secure
             </Link>
             <span>/</span>
             <span className="text-white/70">Penetration Testing Service</span>
@@ -389,7 +389,7 @@ export default function PenetrationTestingServicePage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
-            SODU Secure liefert professionelle Penetrationstests für Web-Applikationen, Netzwerke, APIs,
+            Sodu Secure liefert professionelle Penetrationstests für Web-Applikationen, Netzwerke, APIs,
             Active Directory und Cloud-Infrastrukturen. Wir simulieren echte Angriffe – damit Sie Ihre
             Risiken kennen, bevor ein Angreifer sie ausnutzt. Erfahren Sie mehr über Penetrationstest Deutschland und Pentest Services.
           </p>
@@ -763,7 +763,7 @@ export default function PenetrationTestingServicePage() {
                   >
                     BSI provides a NIS2 scope check tool
                   </a>
-                  . SODU Secure advises you on applicability and implementation.
+                  . Sodu Secure advises you on applicability and implementation.
                 </p>
               </div>
             </div>
@@ -847,7 +847,7 @@ export default function PenetrationTestingServicePage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              Why Choose SODU Secure as Your Penetration Testing Partner?
+              Why Choose Sodu Secure as Your Penetration Testing Partner?
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto text-sm">
               You don&apos;t need an anonymous IT vendor – you need a partner that delivers results
@@ -882,7 +882,7 @@ export default function PenetrationTestingServicePage() {
             Penetration Testing Service Costs – What to Expect
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto text-sm">
-            Pentest costs depend heavily on scope, number of targets and test depth. SODU Secure
+            Pentest costs depend heavily on scope, number of targets and test depth. Sodu Secure
             offers fair, transparent fixed prices – no hidden day rates.
           </p>
         </div>

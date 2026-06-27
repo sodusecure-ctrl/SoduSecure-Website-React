@@ -616,6 +616,66 @@ html.light .bg-\[\#00715D\], html.light .bg-\[\#00715D\] * {
 }
 
 /* ============================================================= */
+/* Light-mode coverage gaps (added) — close dark-on-dark holes:  */
+/* named dark backgrounds, extra near-black hexes, dark gradient */
+/* stops and light-grey text utilities not handled above.        */
+/* ============================================================= */
+
+/* Named dark backgrounds — bg-black & 900/950 scales -> white surface.
+   Exact class match (so translucent overlays like bg-black/50 are untouched). */
+html.light .bg-black,
+html.light .bg-gray-950, html.light .bg-gray-900,
+html.light .bg-zinc-950, html.light .bg-zinc-900,
+html.light .bg-neutral-950, html.light .bg-neutral-900,
+html.light .bg-slate-950, html.light .bg-slate-900,
+html.light .bg-stone-950, html.light .bg-stone-900 {
+  background-color: #ffffff !important;
+}
+/* 800 scales -> faint slate surface (slightly off-white) */
+html.light .bg-gray-800, html.light .bg-zinc-800,
+html.light .bg-neutral-800, html.light .bg-slate-800, html.light .bg-stone-800 {
+  background-color: #F4F7FB !important;
+}
+
+/* Extra near-black hex backgrounds not previously enumerated -> white */
+html.light [class*="bg-[#050506]"], html.light [class*="bg-[#08080A]"], html.light [class*="bg-[#08080a]"],
+html.light [class*="bg-[#0E0C11]"], html.light [class*="bg-[#0e0c11]"] {
+  background-color: #ffffff !important;
+}
+/* Extra dark card hex backgrounds -> faint slate surface */
+html.light [class*="bg-[#111014]"], html.light [class*="bg-[#1A1820]"], html.light [class*="bg-[#1a1820]"] {
+  background-color: #F4F7FB !important;
+}
+
+/* Light-grey text utilities -> readable slate on white
+   (text-white/* is handled above; named greys were not) */
+html.light .text-gray-300, html.light .text-gray-400,
+html.light .text-slate-300, html.light .text-slate-400,
+html.light .text-neutral-300, html.light .text-neutral-400,
+html.light .text-zinc-300, html.light .text-zinc-400 {
+  color: #475569 !important;
+}
+html.light .text-gray-500, html.light .text-slate-500,
+html.light .text-neutral-500, html.light .text-zinc-500 {
+  color: #334155 !important;
+}
+
+/* Dark gradient stops that would otherwise stay dark in light mode.
+   Tailwind v4 references these custom props inside --tw-gradient-stops,
+   so overriding the individual stop colour propagates. */
+html.light .from-\[\#1B181F\], html.light .from-\[\#141a29\], html.light .from-\[\#241619\],
+html.light .from-\[\#1a0a0a\], html.light .from-\[\#0d1117\] {
+  --tw-gradient-from: #F4F7FB var(--tw-gradient-from-position) !important;
+}
+html.light .via-\[\#0f0f1a\], html.light .via-\[\#2f0000\] {
+  --tw-gradient-via: #F4F7FB var(--tw-gradient-via-position) !important;
+}
+html.light .to-\[\#141217\], html.light .to-\[\#1A1113\], html.light .to-\[\#250000\],
+html.light .to-\[\#111827\], html.light .to-\[\#1a0a0a\] {
+  --tw-gradient-to: #ffffff var(--tw-gradient-to-position) !important;
+}
+
+/* ============================================================= */
 /* Corporate pages opt out of the inversion (already light by    */
 /* design with intentional navy accent sections).               */
 /* ============================================================= */

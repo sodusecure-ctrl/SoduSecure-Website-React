@@ -32,18 +32,18 @@ export async function generateMetadata({
   const { certId } = await params;
   const cert = getCertificate(certId);
   if (!cert) {
-    return { title: "Zertifikat nicht gefunden | SODU Secure" };
+    return { title: "Zertifikat nicht gefunden | Sodu Secure" };
   }
   const meta = SCORE_META[cert.category];
   return {
-    title: `Security-Zertifikat ${cert.id} – ${cert.company} | SODU Secure`,
-    description: `${cert.company} hat einen verifizierten Penetrationstest durch SODU Secure bestanden. Bewertung: ${meta.label} (${cert.score.toFixed(1).replace(".", ",")}). Ausgestellt am ${new Date(cert.date).toLocaleDateString("de-DE")}.`,
+    title: `Security-Zertifikat ${cert.id} – ${cert.company} | Sodu Secure`,
+    description: `${cert.company} hat einen verifizierten Penetrationstest durch Sodu Secure bestanden. Bewertung: ${meta.label} (${cert.score.toFixed(1).replace(".", ",")}). Ausgestellt am ${new Date(cert.date).toLocaleDateString("de-DE")}.`,
     robots: { index: true, follow: true },
     openGraph: {
       title: `${cert.company} – Sicherheitszertifikat ${meta.label}`,
-      description: `Verifizierter Pentest von SODU Secure. Score: ${cert.score.toFixed(1).replace(".", ",")} (${meta.label})`,
+      description: `Verifizierter Pentest von Sodu Secure. Score: ${cert.score.toFixed(1).replace(".", ",")} (${meta.label})`,
       url: `https://sodusecure.com/verify/${cert.id}`,
-      siteName: "SODU Secure",
+      siteName: "Sodu Secure",
     },
   };
 }
@@ -142,14 +142,14 @@ export default async function VerifyPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Certification",
-    name: `SODU Secure Security-Zertifikat ${cert.id}`,
+    name: `Sodu Secure Security-Zertifikat ${cert.id}`,
     description: cert.description ?? `Verifizierter Penetrationstest für ${cert.company}`,
     dateCreated: cert.date,
     validThrough: cert.validUntil,
     certificationStatus: expired ? "Expired" : "Active",
     issuedBy: {
       "@type": "Organization",
-      name: "SODU Secure GmbH",
+      name: "Sodu Secure GmbH",
       url: "https://sodusecure.com",
     },
     recognizedBy: {
@@ -516,7 +516,7 @@ export default async function VerifyPage({
             <span>
               Dieses Zertifikat wurde ausgestellt von{" "}
               <Link href="/" className="text-red-500 hover:text-red-400">
-                SODU Secure GmbH
+                Sodu Secure GmbH
               </Link>
             </span>
             <div className="flex items-center gap-4">

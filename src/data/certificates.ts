@@ -26,7 +26,7 @@ export interface Certificate {
   date: string; // ISO date string "YYYY-MM-DD"
   validUntil: string; // ISO date string "YYYY-MM-DD"
   scope: PentestScope[];
-  tester: string; // e.g. "SODU Secure GmbH"
+  tester: string; // e.g. "Sodu Secure GmbH"
   findingsTotal: number;
   findingsCritical: number;
   findingsHigh: number;
@@ -124,7 +124,7 @@ export const CERTIFICATES: Certificate[] = [
     date: "2025-01-15",
     validUntil: "2026-01-15",
     scope: ["web", "api"],
-    tester: "SODU Secure GmbH",
+    tester: "Sodu Secure GmbH",
     findingsTotal: 8,
     findingsCritical: 0,
     findingsHigh: 1,
@@ -144,7 +144,7 @@ export const CERTIFICATES: Certificate[] = [
     date: "2026-02-10",
     validUntil: "2027-02-10",
     scope: ["web", "api", "infrastructure"],
-    tester: "SODU Secure GmbH",
+    tester: "Sodu Secure GmbH",
     findingsTotal: 11,
     findingsCritical: 0,
     findingsHigh: 2,
@@ -164,7 +164,7 @@ export const CERTIFICATES: Certificate[] = [
     date: "2026-03-05",
     validUntil: "2027-03-05",
     scope: ["web", "active_directory", "phishing"],
-    tester: "SODU Secure GmbH",
+    tester: "Sodu Secure GmbH",
     findingsTotal: 19,
     findingsCritical: 1,
     findingsHigh: 3,
@@ -184,7 +184,7 @@ export const CERTIFICATES: Certificate[] = [
     date: "2026-04-01",
     validUntil: "2027-04-01",
     scope: ["web", "api", "mobile", "cloud"],
-    tester: "SODU Secure GmbH",
+    tester: "Sodu Secure GmbH",
     findingsTotal: 5,
     findingsCritical: 0,
     findingsHigh: 0,

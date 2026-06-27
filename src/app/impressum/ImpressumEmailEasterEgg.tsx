@@ -187,7 +187,7 @@ function BugGame({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="border-t border-white/10 px-5 py-2.5 text-center text-[11px] text-white/35">
-          Easter Egg · SODU Secure 🛡️
+          Easter Egg · Sodu Secure 🛡️
         </div>
       </div>
     </div>

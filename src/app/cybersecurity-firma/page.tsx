@@ -220,7 +220,7 @@ export default function CybersecurityFirmaPage() {
             <span className="text-[#FF3B30] text-sm font-medium">Cybersecurity Firma · Pentest · ISO 27001 · Consulting</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            SODU Secure –<br />
+            Sodu Secure –<br />
             <span className="text-[#FF3B30]">Ihre Cybersecurity Partneragentur</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-3xl mx-auto mb-10">
@@ -377,7 +377,7 @@ export default function CybersecurityFirmaPage() {
           <AlertTriangle className="w-7 h-7 text-[#FF3B30] mx-auto mb-3" />
           <h3 className="text-lg font-bold mb-2">Compliance ist nicht optional</h3>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
-            DSGVO, NIS2, BSI-Grundschutz, ISO 27001 – Ihre Compliance ist unsere Mission. Mit SODU Secure: Audit-ready in Monaten, nicht Jahren.
+            DSGVO, NIS2, BSI-Grundschutz, ISO 27001 – Ihre Compliance ist unsere Mission. Mit Sodu Secure: Audit-ready in Monaten, nicht Jahren.
           </p>
         </div>
       </section>
@@ -404,7 +404,7 @@ export default function CybersecurityFirmaPage() {
       <section className="py-20 bg-gradient-to-br from-red-900/20 via-[#0A0A0B] to-[#0A0A0B] border-t border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Shield className="w-14 h-14 text-[#FF3B30] mx-auto mb-4" />
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Starten Sie jetzt mit SODU Secure</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Starten Sie jetzt mit Sodu Secure</h2>
           <p className="text-white/60 text-lg mb-8">
             Kostenlose Erstberatung · Festpreisangebote · Zertifizierte Experten
           </p>

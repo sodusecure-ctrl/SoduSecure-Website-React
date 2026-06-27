@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   keywords: [
     // Primary
     'Pentest KMU',
-    'Pentest Berlin',
     // Secondary keywords from brief
     'Hacker Angriff Simulation',
     'IT Security KMU',
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     'Pentest Preis',
     'IT-Sicherheitsaudit KMU',
     'Schwachstellenanalyse KMU',
-    'SODU Secure',
+    'Sodu Secure',
   ],
   openGraph: {
     title: 'KMU Pentest-Paket – Komplett ab 8.000 € | Jetzt konfigurieren',
@@ -46,14 +45,14 @@ export const metadata: Metadata = {
       'Alles-inklusive KMU Pentest: Externer Pentest + Phishing + Active Directory. Kein Tageshonorar. Jetzt online konfigurieren – Preis sofort berechnen.',
     url: `${baseUrl}/services/sme-packages`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Sodu Secure',
     locale: 'de_DE',
     images: [
       {
         url: `${baseUrl}/images/og-sme-packages.jpg`,
         width: 1200,
         height: 630,
-        alt: 'SODU Secure KMU Sicherheitspaket – Pentest ab 8.000 €',
+        alt: 'Sodu Secure KMU Sicherheitspaket – Pentest ab 8.000 €',
       },
     ],
   },

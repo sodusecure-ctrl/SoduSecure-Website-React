@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Jobs bei SODU Secure – Zertifizierte Pentester gesucht',
+  title: 'Jobs bei Sodu Secure – Zertifizierte Pentester gesucht',
   description: 'Werde Teil unseres Teams zertifizierter Pentester. Spannende Pentest-Projekte (Web, AD, Cloud), faire Vergütung & Remote-Option. Jetzt Karriere starten.',
   keywords: [
     'cybersecurity jobs',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'ethical hacker jobs',
   ],
   openGraph: {
-    title: 'Jobs bei SODU Secure – Pentester & Security-Experten gesucht',
+    title: 'Jobs bei Sodu Secure – Pentester & Security-Experten gesucht',
     description: 'Zertifizierte Pentester gesucht: Web, AD & Cloud-Projekte. Remote & faire Vergütung. Jetzt bewerben.',
     url: `${baseUrl}/careers`,
     type: 'website',

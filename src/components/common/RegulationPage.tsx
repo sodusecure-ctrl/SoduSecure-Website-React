@@ -122,7 +122,7 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
       serviceType: "Penetration Testing & Compliance",
       provider: {
         "@type": "Organization",
-        name: "SODU Secure",
+        name: "Sodu Secure",
         url: SITE_URL,
         areaServed: "DE",
       },

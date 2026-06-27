@@ -3,9 +3,9 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Penetration Testing Service – Professional Pentesting | SODU Secure',
+  title: 'Penetration Testing Service – Professional Pentesting | Sodu Secure',
   description:
-    'Professional penetration testing service for businesses of all sizes. SODU Secure delivers manual web app, network, API & Active Directory pentests with actionable reports. Get your quote today.',
+    'Professional penetration testing service for businesses of all sizes. Sodu Secure delivers manual web app, network, API & Active Directory pentests with actionable reports. Get your quote today.',
   keywords: [
     'penetration testing service',
     'pentest service',
@@ -27,31 +27,30 @@ export const metadata: Metadata = {
     'ISO 27001 penetration testing',
     'pentest cost',
     'penetration test price',
-    'SODU Secure pentest',
-    'pentest Berlin',
+    'Sodu Secure pentest',
     'penetration testing Germany',
   ],
   openGraph: {
-    title: 'Penetration Testing Service – Professional Pentest | SODU Secure',
+    title: 'Penetration Testing Service – Professional Pentest | Sodu Secure',
     description:
       'Manual penetration testing service for web apps, networks, APIs & Active Directory. Real attack simulation – prioritised findings – actionable remediation. Get your fixed-price quote within 24h.',
     url: `${baseUrl}/penetration-testing-service`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Sodu Secure',
     images: [
       {
         url: `${baseUrl}/images/blogs/image9.png`,
         width: 1200,
         height: 630,
-        alt: 'Penetration Testing Service – SODU Secure',
+        alt: 'Penetration Testing Service – Sodu Secure',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Penetration Testing Service – Professional Pentest | SODU Secure',
+    title: 'Penetration Testing Service – Professional Pentest | Sodu Secure',
     description:
-      'SODU Secure – Penetration testing for web apps, networks, APIs & Active Directory. Fixed-price quotes. OWASP, PTES & MITRE ATT&CK aligned.',
+      'Sodu Secure – Penetration testing for web apps, networks, APIs & Active Directory. Fixed-price quotes. OWASP, PTES & MITRE ATT&CK aligned.',
   },
   alternates: {
     canonical: `${baseUrl}/penetration-testing-service`,
@@ -77,9 +76,9 @@ export default function PenetrationTestingServiceLayout({
   const jsonLdService = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'SODU Secure – Penetration Testing Service',
+    name: 'Sodu Secure – Penetration Testing Service',
     description:
-      'Professional penetration testing service for businesses: web applications, networks, APIs, Active Directory and cloud infrastructure. SODU Secure delivers manual, OWASP-aligned pentests with prioritised reports.',
+      'Professional penetration testing service for businesses: web applications, networks, APIs, Active Directory and cloud infrastructure. Sodu Secure delivers manual, OWASP-aligned pentests with prioritised reports.',
     url: `${baseUrl}/penetration-testing-service`,
     logo: `${baseUrl}/icons/logo.png`,
     image: `${baseUrl}/images/blogs/image9.png`,
@@ -168,7 +167,7 @@ export default function PenetrationTestingServiceLayout({
         name: 'How much does a penetration testing service cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Penetration testing service costs range from €2,500 for a focused web application test to €15,000+ for a full SME pentest including Active Directory and phishing simulation. Pricing depends on scope, number of targets, and test depth. SODU Secure provides fixed-price quotes within 24 hours.',
+          text: 'Penetration testing service costs range from €2,500 for a focused web application test to €15,000+ for a full SME pentest including Active Directory and phishing simulation. Pricing depends on scope, number of targets, and test depth. Sodu Secure provides fixed-price quotes within 24 hours.',
         },
       },
       {
@@ -213,7 +212,7 @@ export default function PenetrationTestingServiceLayout({
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'SODU Secure',
+        name: 'Sodu Secure',
         item: baseUrl,
       },
       {

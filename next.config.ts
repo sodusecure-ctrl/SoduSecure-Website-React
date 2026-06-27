@@ -26,6 +26,8 @@ const nextConfig: NextConfig = {
       },
       // Tote URL /imprint -> /impressum (war 2x intern verlinkt, 404 in GSC).
       { source: '/imprint', destination: '/impressum', permanent: true },
+      // Keyword-Kannibalisierung vermeiden: Berlin-Keywords gehören allein /pentest-berlin.
+      { source: '/penetration-testing-berlin', destination: '/pentest-berlin', permanent: true },
     ];
   },
 };

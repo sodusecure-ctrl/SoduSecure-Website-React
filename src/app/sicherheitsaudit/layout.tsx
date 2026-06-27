@@ -1,8 +1,8 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sicherheitsaudit Unternehmen – IT Sicherheitsaudit | SODU Secure',
-  description: 'IT Sicherheitsaudit für Ihr Unternehmen. SODU Secure führt manuelle Sicherheitsaudits durch – NIS2-, ISO 27001- & DSGVO-konform. Festpreis, schnelle Abwicklung. Angebot in 24 h.',
+  title: 'Sicherheitsaudit Unternehmen – IT Sicherheitsaudit | Sodu Secure',
+  description: 'IT Sicherheitsaudit für Ihr Unternehmen. Sodu Secure führt manuelle Sicherheitsaudits durch – NIS2-, ISO 27001- & DSGVO-konform. Festpreis, schnelle Abwicklung. Angebot in 24 h.',
   keywords: 'Sicherheitsaudit, IT Sicherheitsaudit, Security Audit Unternehmen, Sicherheitsprüfung IT, IT Audit Firma, Sicherheitsüberprüfung Unternehmen',
   robots: {
     index: true,
@@ -11,10 +11,10 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://sodusecure.com/sicherheitsaudit' },
   openGraph: {
-    title: 'Sicherheitsaudit Unternehmen – IT Sicherheitsaudit | SODU Secure',
-    description: 'IT Sicherheitsaudit für Ihr Unternehmen. Manuell, NIS2- & ISO 27001-konform, Festpreis. SODU Secure – OSCP-zertifiziert, Angebot in 24 h.',
+    title: 'Sicherheitsaudit Unternehmen – IT Sicherheitsaudit | Sodu Secure',
+    description: 'IT Sicherheitsaudit für Ihr Unternehmen. Manuell, NIS2- & ISO 27001-konform, Festpreis. Sodu Secure – OSCP-zertifiziert, Angebot in 24 h.',
     url: 'https://sodusecure.com/sicherheitsaudit',
-    siteName: 'SODU Secure',
+    siteName: 'Sodu Secure',
     locale: 'de_DE',
     type: 'website',
   },
@@ -29,7 +29,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
-            name: 'SODU Secure – Sicherheitsaudit',
+            name: 'Sodu Secure – Sicherheitsaudit',
             description: 'Manueller IT Sicherheitsaudit für Unternehmen. NIS2-, ISO 27001- und DSGVO-konforme Berichte. Festpreis ab 1.499 €.',
             url: 'https://sodusecure.com/sicherheitsaudit',
             telephone: '+491777750985',
@@ -48,8 +48,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@type': 'FAQPage',
             mainEntity: [
               { '@type': 'Question', name: 'Was ist ein Sicherheitsaudit?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Sicherheitsaudit (IT Sicherheitsaudit) ist eine umfassende Prüfung der IT-Infrastruktur, Prozesse und Sicherheitsmaßnahmen eines Unternehmens. Ziel ist die Identifikation von Schwachstellen und die Bewertung des Sicherheitsniveaus.' } },
-              { '@type': 'Question', name: 'Was kostet ein IT Sicherheitsaudit?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Sicherheitsaudit kostet bei SODU Secure ab 1.499 € als Festpreis. Umfangreiche Audits (inkl. Penetrationstest, Compliance-Prüfung, On-Site) starten ab 8.000 €.' } },
-              { '@type': 'Question', name: 'Welche Compliance-Anforderungen erfüllt ein Sicherheitsaudit?', acceptedAnswer: { '@type': 'Answer', text: 'Ein SODU Secure Sicherheitsaudit liefert Nachweise für NIS2 (Art. 21), ISO 27001 (Annex A), DSGVO Art. 32 und DORA-Anforderungen.' } },
+              { '@type': 'Question', name: 'Was kostet ein IT Sicherheitsaudit?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Sicherheitsaudit kostet bei Sodu Secure ab 1.499 € als Festpreis. Umfangreiche Audits (inkl. Penetrationstest, Compliance-Prüfung, On-Site) starten ab 8.000 €.' } },
+              { '@type': 'Question', name: 'Welche Compliance-Anforderungen erfüllt ein Sicherheitsaudit?', acceptedAnswer: { '@type': 'Answer', text: 'Ein Sodu Secure Sicherheitsaudit liefert Nachweise für NIS2 (Art. 21), ISO 27001 (Annex A), DSGVO Art. 32 und DORA-Anforderungen.' } },
             ],
           }),
         }}

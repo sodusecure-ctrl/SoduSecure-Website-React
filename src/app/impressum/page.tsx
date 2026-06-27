@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import ImpressumEmailEasterEgg from './ImpressumEmailEasterEgg';
 
 export const metadata: Metadata = {
-  title: 'Impressum – SODU Secure GmbH',
-  description: 'Impressum der SODU Secure GmbH gemäß § 5 TMG',
+  title: 'Impressum – Sodu Secure GmbH',
+  description: 'Impressum der Sodu Secure GmbH gemäß § 5 TMG',
   robots: { index: false, follow: false },
 };
 
@@ -23,7 +23,7 @@ export default function Impressum() {
           <section className="p-6 sm:p-8">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Angaben zum Unternehmen</h2>
             <address className="not-italic text-gray-700 space-y-1 leading-relaxed">
-              <p className="font-semibold text-gray-900">SODU Secure GmbH</p>
+              <p className="font-semibold text-gray-900">Sodu Secure GmbH</p>
               <p>Riemannstr. 8</p>
               <p>10961 Berlin</p>
               <p>Deutschland</p>
@@ -112,7 +112,7 @@ export default function Impressum() {
         </div>
 
         <p className="text-center text-xs text-gray-400 mt-8">
-          © {new Date().getFullYear()} SODU Secure GmbH · Berlin
+          © {new Date().getFullYear()} Sodu Secure GmbH · Berlin
         </p>
       </div>
     </div>

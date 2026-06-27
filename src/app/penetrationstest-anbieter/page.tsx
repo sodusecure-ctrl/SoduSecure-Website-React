@@ -242,7 +242,7 @@ export default function PenetrationstestAnbieterPage() {
             <span className="text-purple-500">Wie man Qualität erkennt</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-3xl mx-auto mb-10">
-            Wie unterscheidest du zwischen seriösen Pentestern und unzureichenden Anbietern? Dieser Guide zeigt dir, worauf du achten musst – und was SODU Secure macht, um deine Sicherheit zu garantieren.
+            Wie unterscheidest du zwischen seriösen Pentestern und unzureichenden Anbietern? Dieser Guide zeigt dir, worauf du achten musst – und was Sodu Secure macht, um deine Sicherheit zu garantieren.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
@@ -362,7 +362,7 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Das macht SODU Secure unterschiedlich</h2>
+            <h2 className="text-3xl font-bold mb-4">Das macht Sodu Secure unterschiedlich</h2>
             <p className="text-white/60">Warum wir der Partner für seriöse Sicherheit sind.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

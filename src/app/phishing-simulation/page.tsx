@@ -73,7 +73,7 @@ const FAQS = [
   },
   {
     q: "Ist eine Phishing Simulation legal?",
-    a: "Ja – mit entsprechender Genehmigung durch Unternehmensführung und Betriebsrat (falls vorhanden). SODU Secure stellt alle notwendigen rechtlichen Dokumente bereit und führt Simulationen DSGVO-konform durch.",
+    a: "Ja – mit entsprechender Genehmigung durch Unternehmensführung und Betriebsrat (falls vorhanden). Sodu Secure stellt alle notwendigen rechtlichen Dokumente bereit und führt Simulationen DSGVO-konform durch.",
   },
   {
     q: "Wie viel kostet eine Phishing Simulation?",

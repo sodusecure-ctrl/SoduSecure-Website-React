@@ -47,8 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tisax',                            lastModified: '2026-06-23', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/pci-dss-penetrationstest',         lastModified: '2026-06-23', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/dsgvo-penetrationstest',          lastModified: '2026-06-26', changeFreq: 'weekly',  priority: 0.95 },
-    // Lokale Penetration-Testing-Landingpages (Städte)
-    { path: '/penetration-testing-berlin',      lastModified: '2026-06-27', changeFreq: 'weekly',  priority: 0.95 },
+    // Lokale Penetration-Testing-Landingpages (Städte) – Berlin bleibt /pentest-berlin
     { path: '/penetration-testing-hamburg',     lastModified: '2026-06-27', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/penetration-testing-muenchen',    lastModified: '2026-06-27', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/penetration-testing-stuttgart',   lastModified: '2026-06-27', changeFreq: 'weekly',  priority: 0.95 },
@@ -68,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/pentest-schnellcheck',   lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.92 },
     { path: '/pentest-risiko-check',   lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.92 },
     { path: '/brauche-ich-pentest',    lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.92 },
+    { path: '/welche-gesetze-treffen-zu', lastModified: '2026-06-27', changeFreq: 'weekly', priority: 0.93 },
     // Preise / Pakete
     { path: '/pricing',                lastModified: '2026-06-22', changeFreq: 'weekly', priority: 0.9 },
     // Core / Service (bisher in Sitemap fehlend)

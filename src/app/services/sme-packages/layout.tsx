@@ -10,7 +10,7 @@ export default function SMEPackagesLayout({ children }: { children: React.ReactN
       'Professioneller Penetrationstest-Service für KMUs in Deutschland. Externer Pentest, Phishing-Kampagne und Active Directory Analyse.',
     provider: {
       '@type': 'Organization',
-      name: 'SODU Secure GmbH',
+      name: 'Sodu Secure GmbH',
       url: 'https://sodusecure.com',
       logo: 'https://sodusecure.com/icons/logo.png',
       contactPoint: {
@@ -83,7 +83,7 @@ export default function SMEPackagesLayout({ children }: { children: React.ReactN
         name: 'Was ist im KMU Pentest-Paket enthalten?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Das KMU Pentest-Paket von SODU Secure umfasst je nach Paket: Externer Penetrationstest, Phishing-Simulation, Web-Applikations-Pentest und/oder Active Directory Analyse. Transparenter Festpreis – kein Tageshonorar.',
+          text: 'Das KMU Pentest-Paket von Sodu Secure umfasst je nach Paket: Externer Penetrationstest, Phishing-Simulation, Web-Applikations-Pentest und/oder Active Directory Analyse. Transparenter Festpreis – kein Tageshonorar.',
         },
       },
       {
@@ -99,7 +99,7 @@ export default function SMEPackagesLayout({ children }: { children: React.ReactN
         name: 'Wie lange dauert ein KMU Pentest?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Ein KMU Komplett-Pentest dauert typischerweise 5–10 Werktage. SODU Secure liefert den finalen Bericht inkl. Remediation-Empfehlungen innerhalb von 48 Stunden nach Testabschluss.',
+          text: 'Ein KMU Komplett-Pentest dauert typischerweise 5–10 Werktage. Sodu Secure liefert den finalen Bericht inkl. Remediation-Empfehlungen innerhalb von 48 Stunden nach Testabschluss.',
         },
       },
       {
@@ -107,7 +107,7 @@ export default function SMEPackagesLayout({ children }: { children: React.ReactN
         name: 'Für welche KMU-Größen ist das Paket geeignet?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Die KMU Pentest-Pakete von SODU Secure sind für Unternehmen mit 20–150 Mitarbeitern konzipiert. Sie decken alle relevanten Angriffsvektoren ab und sind NIS2- sowie ISO 27001-konform.',
+          text: 'Die KMU Pentest-Pakete von Sodu Secure sind für Unternehmen mit 20–150 Mitarbeitern konzipiert. Sie decken alle relevanten Angriffsvektoren ab und sind NIS2- sowie ISO 27001-konform.',
         },
       },
     ],

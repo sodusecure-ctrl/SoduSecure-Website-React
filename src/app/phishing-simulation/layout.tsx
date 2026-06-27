@@ -3,7 +3,7 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Phishing Simulation – Mitarbeiter testen & schulen | SODU Secure',
+  title: 'Phishing Simulation – Mitarbeiter testen & schulen | Sodu Secure',
   description:
     'Professionelle Phishing Simulation für Unternehmen: Testen Sie die Sicherheitsbewusstsein Ihrer Mitarbeiter mit realistischen Phishing-Angriffen. NIS2-konform, DSGVO-konform. Jetzt anfragen.',
   keywords: [
@@ -24,17 +24,17 @@ export const metadata: Metadata = {
     'Phishing Test KMU',
   ],
   openGraph: {
-    title: 'Phishing Simulation – Mitarbeiter auf echte Angriffe vorbereiten | SODU Secure',
+    title: 'Phishing Simulation – Mitarbeiter auf echte Angriffe vorbereiten | Sodu Secure',
     description:
       'Realistische Phishing Simulationen testen Ihr Team gegen E-Mail-, Spear-Phishing- und Voice-Angriffe. NIS2-konformer Nachweis inklusive.',
     url: `${baseUrl}/phishing-simulation`,
     type: 'website',
-    siteName: 'SODU Secure',
-    images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: 'Phishing Simulation – SODU Secure' }],
+    siteName: 'Sodu Secure',
+    images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: 'Phishing Simulation – Sodu Secure' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Phishing Simulation für Unternehmen | SODU Secure',
+    title: 'Phishing Simulation für Unternehmen | Sodu Secure',
     description: 'Testen Sie Ihre Mitarbeiter mit realistischen Phishing-Angriffen. NIS2-konform.',
   },
   alternates: { canonical: `${baseUrl}/phishing-simulation` },
@@ -45,7 +45,7 @@ export default function PhishingSimulationLayout({ children }: { children: React
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'SODU Secure – Phishing Simulation',
+    name: 'Sodu Secure – Phishing Simulation',
     description: 'Professionelle Phishing Simulationen für Unternehmen in Deutschland – NIS2- und ISO 27001-konform.',
     url: `${baseUrl}/phishing-simulation`,
     logo: `${baseUrl}/icons/logo.png`,

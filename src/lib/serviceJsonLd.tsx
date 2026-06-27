@@ -30,7 +30,7 @@ export function ServiceJsonLd({
       "@type": "Service",
       name,
       serviceType: "Penetration Testing",
-      provider: { "@type": "Organization", name: "SODU Secure", url: SITE_URL },
+      provider: { "@type": "Organization", name: "Sodu Secure", url: SITE_URL },
       areaServed: { "@type": "Country", name: "Germany" },
       url,
       description,

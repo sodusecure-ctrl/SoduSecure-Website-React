@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "DORA-Verordnung: Digitale operationale Resilienz | SODU Secure",
+  title: "DORA-Verordnung: Digitale operationale Resilienz | Sodu Secure",
   description:
     "Was ist DORA? Pflichten für Finanzunternehmen, Threat-Led Penetration Testing (TLPT) und Resilienztests – wir unterstützen Sie bei der DORA-Konformität.",
   alternates: { canonical: "/dora" },

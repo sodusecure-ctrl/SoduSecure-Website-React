@@ -69,7 +69,7 @@ Regeln eingehalten: 1 Fokus-Keyword/Seite, 1 H1/Seite, keine erfundenen Fakten, 
 **Welle 1 (PRIO 1):**
 1. **Compliance-Schema-Komponente** bauen (`RegulationPage`): generische `FAQPage`-, `Service`- und `BreadcrumbList`-JSON-LD aus den bereits vorhandenen `data`-Feldern (faqs, services, slug, title). → schaltet Schema für nis2/dora/mdr/bsig/bsi-tr-03161/iso-27001 **auf einen Schlag** frei, ohne Design-Änderung.
 2. **iso-27001-pentest-anforderungen, iso-27001-zertifizierung, pentest-gesundheitsanwendungen, anfrage-tr03161, penetrationstest-anbieter:** je eine **`layout.tsx` mit `export const metadata`** (Title/Desc/Canonical/OG/Twitter) ergänzen — Pattern identisch zu bestehenden Layouts (kein Eingriff in die `use client`-Pages).
-3. **Title/Desc-Feinschliff** Compliance (Längen 50–60 / 140–160), Fokus-Keyword vorn (z. B. „ISO 27001 Penetrationstest: Anforderungen & Ablauf | SODU Secure").
+3. **Title/Desc-Feinschliff** Compliance (Längen 50–60 / 140–160), Fokus-Keyword vorn (z. B. „ISO 27001 Penetrationstest: Anforderungen & Ablauf | Sodu Secure").
 4. **Kosten-Cluster:** „2025"→ Jahr neutralisieren; interne Verlinkung Pillar↔Rechner↔Konfigurator schärfen.
 
 **Welle 2 (PRIO 2):**

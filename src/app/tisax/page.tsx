@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "TISAX Penetrationstest – Informationssicherheit Automotive | SODU Secure",
+  title: "TISAX Penetrationstest – Informationssicherheit Automotive | Sodu Secure",
   description:
     "TISAX (VDA-ISA) ist der Informationssicherheits-Standard der Automobilindustrie. Wir bereiten Sie mit Gap-Analyse und Penetrationstests auf das TISAX-Assessment vor.",
   alternates: { canonical: "/tisax" },

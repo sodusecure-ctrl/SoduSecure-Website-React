@@ -66,7 +66,7 @@ export default function WebAppPentestLanding() {
               <Button onClick={() => router.push("/request-pentest")} className="bg-red-600 hover:premium-cta text-white px-8 py-6 text-base">
                 {t('hero.requestPentest')}
               </Button>
-              <Button onClick={() => router.push("/contact")} variant="outline" className="border-white text-white bg-black hover:bg-white/10 hover:text-black px-8 py-6 text-base">
+              <Button onClick={() => router.push("/contact")} variant="outline" className="border-white text-white bg-black hover:bg-white hover:text-black px-8 py-6 text-base">
                 {t('hero.scheduleConsultation')}
               </Button>
             </div>

@@ -128,7 +128,7 @@ const FAQS = [
   },
   {
     q: "Was kostet ein Penetrationstest?",
-    a: "Penetrationstests bei SODU Secure kosten ab 1.499 € (fokussierter Web-App-Test) bis 15.000 €+ (vollständiges KMU-Engagement). Alle Preise sind Festpreise – keine versteckten Tagessätze. Nutzen Sie unseren Pentest-Konfigurator für eine individuelle Schätzung.",
+    a: "Penetrationstests bei Sodu Secure kosten ab 1.499 € (fokussierter Web-App-Test) bis 15.000 €+ (vollständiges KMU-Engagement). Alle Preise sind Festpreise – keine versteckten Tagessätze. Nutzen Sie unseren Pentest-Konfigurator für eine individuelle Schätzung.",
   },
   {
     q: "Wie lange dauert ein Penetrationstest?",
@@ -140,14 +140,14 @@ const FAQS = [
   },
   {
     q: "Welche Compliance-Anforderungen verlangen einen Penetrationstest?",
-    a: "NIS2, ISO/IEC 27001:2022, DSGVO Art. 32, DORA und viele Cyberversicherungen verlangen regelmäßige Penetrationstests. SODU Secure berät Sie zur Anwendbarkeit und stellt compliance-konforme Berichte aus.",
+    a: "NIS2, ISO/IEC 27001:2022, DSGVO Art. 32, DORA und viele Cyberversicherungen verlangen regelmäßige Penetrationstests. Sodu Secure berät Sie zur Anwendbarkeit und stellt compliance-konforme Berichte aus.",
   },
   {
     q: "Ist ein Penetrationstest DSGVO-konform?",
     a: "Alle Tests laufen auf Basis eines unterzeichneten Pentest-Vertrags mit klar definiertem Scope. Wir verarbeiten keine personenbezogenen Daten ohne Rechtsgrundlage und schließen auf Wunsch einen Auftragsverarbeitungsvertrag (AVV) ab.",
   },
   {
-    q: "Wer führt bei SODU Secure die Penetrationstests durch?",
+    q: "Wer führt bei Sodu Secure die Penetrationstests durch?",
     a: "Alle Tests werden von zertifizierten Sicherheitsexperten (OSCP, CEH, ISO 27001 Lead Auditor) durchgeführt – keine Junior-Analysten, keine reinen Scan-Reports. Sie kommunizieren direkt mit dem Pentester.",
   },
 ];
@@ -162,7 +162,7 @@ export default function PenetrationTestingPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-red-900/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
-            <Link href="/" className="hover:text-white transition-colors">SODU Secure</Link>
+            <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
             <span>/</span>
             <span className="text-white/70">Penetrationstest</span>
           </nav>
@@ -183,7 +183,7 @@ export default function PenetrationTestingPage() {
           </h1>
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
-            SODU Secure führt professionelle Penetrationstests für Web-Apps, Netzwerke, APIs,
+            Sodu Secure führt professionelle Penetrationstests für Web-Apps, Netzwerke, APIs,
             Active Directory und Cloud-Infrastrukturen durch. Zertifizierte Pentester –
             Festpreise ab 1.499 € – Angebot in 24 Stunden. Erfahren Sie mehr über Penetration Testing und Pentest Services.
           </p>
@@ -374,7 +374,7 @@ export default function PenetrationTestingPage() {
       <section className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Ablauf eines Penetrationstests bei SODU Secure
+            Ablauf eines Penetrationstests bei Sodu Secure
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto text-sm">
             Transparenter Prozess von der Anfrage bis zum finalen Bericht –
@@ -442,7 +442,7 @@ export default function PenetrationTestingPage() {
                     className="text-blue-400 hover:text-blue-300 underline underline-offset-2">
                     BSI bietet ein NIS2-Prüftool
                   </a>
-                  . SODU Secure berät Sie zur Anwendbarkeit und Umsetzung.
+                  . Sodu Secure berät Sie zur Anwendbarkeit und Umsetzung.
                 </p>
               </div>
             </div>
@@ -462,7 +462,7 @@ export default function PenetrationTestingPage() {
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto text-sm">
             Pentest-Kosten hängen von Scope, Anzahl der Ziele und Testtiefe ab.
-            SODU Secure bietet faire, transparente Festpreise – keine versteckten Tagessätze.
+            Sodu Secure bietet faire, transparente Festpreise – keine versteckten Tagessätze.
           </p>
         </div>
 

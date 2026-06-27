@@ -61,6 +61,7 @@ export default function Footer() {
     { label: 'TISAX Penetrationstest', href: '/tisax' },
     { label: 'PCI DSS Penetrationstest', href: '/pci-dss-penetrationstest' },
     { label: 'DSGVO-Penetrationstest', href: '/dsgvo-penetrationstest' },
+    { label: 'Welche Gesetze treffen zu? (NIS2/DORA/MDR-Check)', href: '/welche-gesetze-treffen-zu' },
     { label: 'IT Sicherheitscheck', href: '/it-sicherheitscheck' },
     { label: 'Cybersecurity Audit', href: '/cybersecurity-audit' },
     { label: 'Hacker Simulation', href: '/hacker-simulation' },

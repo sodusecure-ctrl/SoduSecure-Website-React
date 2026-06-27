@@ -3,7 +3,7 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Penetrationstest Berlin – Preis sofort berechnen | Zertifizierte Experten',
+  title: 'Penetrationstest – Preis sofort berechnen | Zertifizierte Experten',
   description:
     'Ist Ihre Website hackbar? Jetzt testen lassen. Manueller Penetrationstest für Web, API, AD & Netzwerke – OSCP-zertifiziert. Preis sofort im Online-Konfigurator berechnen. Festpreis ab 1.499 €.',
   keywords: [
@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     'Pentesting',
     'Penetration Test',
     'Penetrationstest Deutschland',
-    'Penetrationstest Berlin',
     'Pentest durchführen',
     'manueller Penetrationstest',
     'professioneller Pentest',
@@ -32,26 +31,26 @@ export const metadata: Metadata = {
     'Red Team Test',
   ],
   openGraph: {
-    title: 'Penetrationstest Berlin – Preis sofort berechnen | Zertifizierte Experten',
+    title: 'Penetrationstest – Preis sofort berechnen | Zertifizierte Experten',
     description:
       'Ist Ihre Website hackbar? Jetzt testen lassen. Manueller Pentest für Web, API, AD & Netzwerke. Preis sofort im Online-Konfigurator berechnen. Festpreis ab 1.499 €.',
     url: `${baseUrl}/penetration-testing`,
     type: 'website',
-    siteName: 'SODU Secure',
+    siteName: 'Sodu Secure',
     images: [
       {
         url: `${baseUrl}/images/blogs/image9.png`,
         width: 1200,
         height: 630,
-        alt: 'Penetrationstest & Pentesting – SODU Secure',
+        alt: 'Penetrationstest & Pentesting – Sodu Secure',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Penetrationstest & Pentesting – Zertifizierte Pentester | SODU Secure',
+    title: 'Penetrationstest & Pentesting – Zertifizierte Pentester | Sodu Secure',
     description:
-      'SODU Secure – professioneller Penetrationstest für Web, API, AD & Netzwerke. Zertifizierte Experten. Festpreis ab 1.499 €.',
+      'Sodu Secure – professioneller Penetrationstest für Web, API, AD & Netzwerke. Zertifizierte Experten. Festpreis ab 1.499 €.',
   },
   alternates: {
     canonical: `${baseUrl}/penetration-testing`,
@@ -73,9 +72,9 @@ export default function PenetrationTestingLayout({ children }: { children: React
   const jsonLdService = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'SODU Secure – Penetrationstest & Pentesting',
+    name: 'Sodu Secure – Penetrationstest & Pentesting',
     description:
-      'Professioneller Penetrationstest für Unternehmen: Web-Applikationen, Netzwerke, APIs, Active Directory und Cloud. SODU Secure liefert manuelle, OWASP-konforme Penetrationstests mit priorisierten Berichten.',
+      'Professioneller Penetrationstest für Unternehmen: Web-Applikationen, Netzwerke, APIs, Active Directory und Cloud. Sodu Secure liefert manuelle, OWASP-konforme Penetrationstests mit priorisierten Berichten.',
     url: `${baseUrl}/penetration-testing`,
     logo: `${baseUrl}/icons/logo.png`,
     image: `${baseUrl}/images/blogs/image9.png`,
@@ -116,7 +115,7 @@ export default function PenetrationTestingLayout({ children }: { children: React
         name: 'Was kostet ein Penetrationstest?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Ein Penetrationstest kostet bei SODU Secure ab 1.499 € für fokussierte Web-App-Tests bis 15.000 €+ für umfassende KMU-Engagements inkl. Active Directory und Phishing-Simulation. Alle Preise sind Festpreise ohne versteckte Tagessätze.',
+          text: 'Ein Penetrationstest kostet bei Sodu Secure ab 1.499 € für fokussierte Web-App-Tests bis 15.000 €+ für umfassende KMU-Engagements inkl. Active Directory und Phishing-Simulation. Alle Preise sind Festpreise ohne versteckte Tagessätze.',
         },
       },
       {

@@ -27,12 +27,12 @@ Weil DE und EN **auf derselben URL** liegen (Cookie steuert die Sprache), existi
 ## 1. Globale SEO-Infrastruktur
 
 ### 1.1 Root-Layout (`src/app/layout.tsx`)
-- ✅ `metadataBase`, Title-**Template** `%s | SODU Secure`, Default-Title `Pentest Berlin – Preis sofort berechnen | SODU Secure`, Description, OG, Twitter, robots, Icons/Manifest, GTM, Google Ads, Vercel Analytics/Speed-Insights.
+- ✅ `metadataBase`, Title-**Template** `%s | Sodu Secure`, Default-Title `Pentest Berlin – Preis sofort berechnen | Sodu Secure`, Description, OG, Twitter, robots, Icons/Manifest, GTM, Google Ads, Vercel Analytics/Speed-Insights.
 - 🟠 `verification.google = 'your-google-verification-code'`, `yandex`/`bing` ebenfalls **Platzhalter** → entfernen oder echte Codes setzen (sonst ungültiges `<meta>`).
 - 🟠 `<html lang={locale}>` ist dynamisch korrekt, aber siehe hreflang-Befund oben.
 
 ### 1.2 Metadata-Helper (`src/lib/metadata.ts`)
-- 🟠 `generatePageMetadata()` hängt **englischen** Suffix an: `… | sodusecure - Professional Penetration Testing` — inkonsistent zur Marke „SODU Secure" und macht Titles **zu lang** (>60). **Aktuell offenbar nirgends aktiv verwendet** (alle realen Titles kommen aus page/layout). Kandidat zum Aufräumen/Vereinheitlichen.
+- 🟠 `generatePageMetadata()` hängt **englischen** Suffix an: `… | sodusecure - Professional Penetration Testing` — inkonsistent zur Marke „Sodu Secure" und macht Titles **zu lang** (>60). **Aktuell offenbar nirgends aktiv verwendet** (alle realen Titles kommen aus page/layout). Kandidat zum Aufräumen/Vereinheitlichen.
 - 🔴 `serviceMetadata` (webAppTesting, mobileAppTesting, apiSecurity, networkAudit, infrastructureTesting, cloudDevOps, securityAudit, vulnerabilityAssessment, smePackages) ist **definiert, aber für `/services/*` ungenutzt** → siehe §2 Scopes.
 
 ### 1.3 JSON-LD-Helper (`src/lib/jsonld.tsx`)
@@ -60,12 +60,12 @@ Legende: ✅ ok · 🟠 verbesserbar · 🔴 Lücke. „Title-Quelle" = wo die M
 
 | Route | Title-Quelle | Title (Länge) | Description | H1 | JSON-LD | Canonical | Status / Lücke |
 |---|---|---|---|---|---|---|---|
-| `/iso-27001` | page | „ISO 27001: Zertifizierung, Anforderungen & Pentest \| SODU Secure" (73) | ✅ 194 | ✅ 1 (RegulationPage) | 🔴 **keins** | ✅ `/iso-27001` | Title >60; **kein FAQPage/Service/Breadcrumb** trotz FAQ-Block |
-| `/nis2` | page | „NIS2-Richtlinie: Anforderungen & Umsetzung \| SODU Secure" (76) | ✅ 179 | ✅ 1 | 🔴 keins | ✅ | wie oben |
-| `/dora` | page | „DORA-Verordnung: Digitale operationale Resilienz \| SODU Secure" (74) | ✅ 171 | ✅ 1 | 🔴 keins | ✅ | wie oben; **TLPT** nur als Abschnitt, keine eigene Seite |
-| `/mdr` | page | „MDR & Cybersecurity für Medizinprodukte \| SODU Secure" (64) | ✅ 176 | ✅ 1 | 🔴 keins | ✅ | wie oben |
-| `/bsig` | page | „BSIG & KRITIS: § 8a Nachweis & Pentests \| SODU Secure" (66) | ✅ 182 | ✅ 1 | 🔴 keins | ✅ | wie oben |
-| `/bsi-tr-03161` | page | „BSI TR-03161: Sicherheit für DiGA & DiPA \| SODU Secure" (67) | ✅ 206 (>160) | ✅ 1 | 🔴 keins | ✅ | Desc kürzen; Schema fehlt |
+| `/iso-27001` | page | „ISO 27001: Zertifizierung, Anforderungen & Pentest \| Sodu Secure" (73) | ✅ 194 | ✅ 1 (RegulationPage) | 🔴 **keins** | ✅ `/iso-27001` | Title >60; **kein FAQPage/Service/Breadcrumb** trotz FAQ-Block |
+| `/nis2` | page | „NIS2-Richtlinie: Anforderungen & Umsetzung \| Sodu Secure" (76) | ✅ 179 | ✅ 1 | 🔴 keins | ✅ | wie oben |
+| `/dora` | page | „DORA-Verordnung: Digitale operationale Resilienz \| Sodu Secure" (74) | ✅ 171 | ✅ 1 | 🔴 keins | ✅ | wie oben; **TLPT** nur als Abschnitt, keine eigene Seite |
+| `/mdr` | page | „MDR & Cybersecurity für Medizinprodukte \| Sodu Secure" (64) | ✅ 176 | ✅ 1 | 🔴 keins | ✅ | wie oben |
+| `/bsig` | page | „BSIG & KRITIS: § 8a Nachweis & Pentests \| Sodu Secure" (66) | ✅ 182 | ✅ 1 | 🔴 keins | ✅ | wie oben |
+| `/bsi-tr-03161` | page | „BSI TR-03161: Sicherheit für DiGA & DiPA \| Sodu Secure" (67) | ✅ 206 (>160) | ✅ 1 | 🔴 keins | ✅ | Desc kürzen; Schema fehlt |
 | `/iso-27001-pentest-anforderungen` | **none (use client)** | 🔴 erbt Root-Title | 🔴 keine | ✅ 1 (JSX) | 🔴 keins | 🔴 keins | **Kein Metadata** → Duplicate-Title; canonical fehlt |
 | `/iso-27001-zertifizierung` | **none (use client)** | 🔴 erbt Root-Title | 🔴 keine | 🟠 prüfen (evtl. 0) | 🔴 keins | 🔴 keins | **Kein Metadata**; H1 verifizieren |
 | `/pentest-gesundheitsanwendungen` | **none (use client)** | 🔴 erbt Root-Title | 🔴 keine | ✅ 1 | 🔴 keins | 🔴 keins | **Kein Metadata** (DiGA-Keyword!) |
@@ -77,11 +77,11 @@ Legende: ✅ ok · 🟠 verbesserbar · 🔴 Lücke. „Title-Quelle" = wo die M
 
 | Route | Title-Quelle | Title (Länge) | Schema | Canonical | Status |
 |---|---|---|---|---|---|
-| `/pentest-kosten` | layout | „Pentest Kosten 2025 – Was kostet ein Penetrationstest? \| SODU Secure" (~67) | ✅ (Service/FAQ inline) | ✅ | ✅ gut · 🟠 „2025"→Jahr aktualisieren |
-| `/pentest-preis` | layout | „Pentest Preis – Aktuelle Preisliste… \| SODU Secure" | ✅ | ✅ | ✅ |
-| `/pentest-preis-rechner` | layout | „Pentest Preis Rechner – Kosten berechnen \| SODU Secure" (~55) | ✅ | ✅ | ✅ Konfigurator-LP |
-| `/pentest-konfigurator` | layout | „Pentest Konfigurator… \| SODU Secure" | ✅ | ✅ | ✅ |
-| `/pentest-angebot` | layout | „Pentest Angebot – Festpreis in 24 Stunden \| SODU Secure" | ✅ (Offer) | ✅ | ✅ |
+| `/pentest-kosten` | layout | „Pentest Kosten 2025 – Was kostet ein Penetrationstest? \| Sodu Secure" (~67) | ✅ (Service/FAQ inline) | ✅ | ✅ gut · 🟠 „2025"→Jahr aktualisieren |
+| `/pentest-preis` | layout | „Pentest Preis – Aktuelle Preisliste… \| Sodu Secure" | ✅ | ✅ | ✅ |
+| `/pentest-preis-rechner` | layout | „Pentest Preis Rechner – Kosten berechnen \| Sodu Secure" (~55) | ✅ | ✅ | ✅ Konfigurator-LP |
+| `/pentest-konfigurator` | layout | „Pentest Konfigurator… \| Sodu Secure" | ✅ | ✅ | ✅ |
+| `/pentest-angebot` | layout | „Pentest Angebot – Festpreis in 24 Stunden \| Sodu Secure" | ✅ (Offer) | ✅ | ✅ |
 | `/cyber-security-check-kosten` | layout | ✅ | ✅ | ✅ | 🟠 thematische Dublette zu `/pentest-kosten` |
 | `/cyber-security-check-preis` | layout | ✅ | ✅ | ✅ | 🟠 Dublette zu `/pentest-preis` |
 

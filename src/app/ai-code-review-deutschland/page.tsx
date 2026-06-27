@@ -47,7 +47,7 @@ export default function Page() {
         faqHeadline: 'KI Code Review aus Deutschland.',
         faq: [
           { q: 'Wo werden meine Daten verarbeitet?', a: 'Worker, Storage und Reporting laufen in Deutschland. Für die KI-Inferenz nutzen wir API-Anbieter mit EU-Datacenter-Optionen wo verfügbar; Details stehen im AVV.' },
-          { q: 'Wer ist Vertragspartner?', a: 'SODU Secure (Deutschland). Sie bekommen eine deutsche Rechnung, deutschen Vertrag, deutschen Support.' },
+          { q: 'Wer ist Vertragspartner?', a: 'Sodu Secure (Deutschland). Sie bekommen eine deutsche Rechnung, deutschen Vertrag, deutschen Support.' },
           { q: 'Ist das DSGVO-konform?', a: 'Ja. Read-only Klone, Hard-Delete nach Lauf, keine persistente Code-Speicherung. AVV mit Standard-EU-Klauseln vor Start.' },
           { q: 'Sprachen und Frameworks?', a: 'TS/JS, Python, Go, Java, Kotlin, C#, PHP, Ruby. Mono-Repos und Microservices kein Problem.' },
         ],
