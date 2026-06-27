@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { isEnglishPath, localizeHref } from '@/lib/localeRouting';
+import { CITY_LINKS } from '@/components/landing/cityData';
 
 export default function Footer() {
   const [servicesExpanded, setServicesExpanded] = useState(false);
@@ -217,6 +218,38 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+        </div>
+
+        {/* Deutschlandweit aktiv – lokale Penetration-Testing-Standorte */}
+        <div className="border-t border-gray-800 pt-8 lg:pt-10 mb-10 lg:mb-12">
+          <h3 className="text-white font-semibold text-base lg:text-lg mb-2 flex items-center gap-2">
+            <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-red-500" />
+            Deutschlandweit aktiv
+          </h3>
+          <p className="text-gray-400 text-sm mb-4 max-w-2xl">
+            Penetration Testing mit lokalem Fokus in den wichtigsten Wirtschaftszentren – persönlich vor Ort und remote.
+          </p>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2">
+            {CITY_LINKS.map((city) => (
+              <li key={city.slug}>
+                <Link
+                  href={`/${city.slug}`}
+                  className="text-gray-400 hover:text-white transition-colors text-sm inline-flex items-center gap-1.5 py-1"
+                >
+                  <MapPin className="w-3.5 h-3.5 text-red-500/70 flex-shrink-0" />
+                  Penetration Testing {city.city}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link
+                href={toLocalizedPath('/penetrationstest-deutschland')}
+                className="text-red-400 hover:text-red-300 transition-colors text-sm font-medium inline-flex items-center gap-1.5 py-1"
+              >
+                Pentest deutschlandweit
+              </Link>
+            </li>
+          </ul>
         </div>
 
         {/* Divider */}

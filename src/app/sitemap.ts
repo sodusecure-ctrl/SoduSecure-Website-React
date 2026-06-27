@@ -47,6 +47,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/tisax',                            lastModified: '2026-06-23', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/pci-dss-penetrationstest',         lastModified: '2026-06-23', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/dsgvo-penetrationstest',          lastModified: '2026-06-26', changeFreq: 'weekly',  priority: 0.95 },
+    // Lokale Penetration-Testing-Landingpages (Städte)
+    { path: '/penetration-testing-berlin',      lastModified: '2026-06-27', changeFreq: 'weekly',  priority: 0.95 },
+    { path: '/penetration-testing-hamburg',     lastModified: '2026-06-27', changeFreq: 'weekly',  priority: 0.95 },
+    { path: '/penetration-testing-muenchen',    lastModified: '2026-06-27', changeFreq: 'weekly',  priority: 0.95 },
+    { path: '/penetration-testing-stuttgart',   lastModified: '2026-06-27', changeFreq: 'weekly',  priority: 0.95 },
+    { path: '/penetration-testing-koeln',       lastModified: '2026-06-27', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/cybersecurity-firma',              lastModified: '2026-05-18', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/vulnerability-assessment-service', lastModified: '2026-05-18', changeFreq: 'weekly',  priority: 0.95 },
     { path: '/red-team-assessment-service',      lastModified: '2026-05-18', changeFreq: 'weekly',  priority: 0.95 },
