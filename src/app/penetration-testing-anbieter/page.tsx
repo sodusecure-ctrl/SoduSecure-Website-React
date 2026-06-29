@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import LeadConversionSection from "@/components/landing/LeadConversionSection";
+import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import {
   Shield,
   Calculator,
@@ -421,6 +422,7 @@ export default function PenetrationTestingAnbieterPage() {
           <Link href="/cybersecurity-firma" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Firma</Link>
         </div>
       </section>
+      <TestimonialsSection />
       <LeadConversionSection context="Pentest Anbieter" />
     </main>
   );

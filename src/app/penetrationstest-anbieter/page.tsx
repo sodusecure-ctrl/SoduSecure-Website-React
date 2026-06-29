@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import LeadConversionSection from "@/components/landing/LeadConversionSection";
+import TestimonialsSection from "@/components/landing/TestimonialsSection";
 import {
   Shield,
   CheckCircle,
@@ -473,6 +474,7 @@ export default function PenetrationstestAnbieterPage() {
           </div>
         </div>
       </section>
+      <TestimonialsSection />
       <LeadConversionSection context="Penetrationstest Anbieter" />
     </main>
   );
