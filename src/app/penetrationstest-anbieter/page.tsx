@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import LeadConversionSection from "@/components/landing/LeadConversionSection";
 import {
   Shield,
   CheckCircle,
@@ -233,19 +234,19 @@ export default function PenetrationstestAnbieterPage() {
       <section className="premium-hero py-20 lg:py-32 border-b border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(168,85,247,0.08),transparent_50%)] pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <div className="inline-flex items-center gap-2 bg-purple-600/10 border border-purple-600/20 rounded-full px-4 py-1.5 mb-6">
-            <Shield className="w-4 h-4 text-purple-400" />
-            <span className="text-purple-400 text-sm font-medium">Penetrationstest Anbieter · Seriöse Pentester · OSCP Certified</span>
+          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 mb-6">
+            <Shield className="w-4 h-4 text-[#FF6B61]" />
+            <span className="text-[#FF6B61] text-sm font-medium">Penetrationstest Anbieter · Seriöse Pentester · OSCP Certified</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Der richtige Penetrationstest Anbieter –<br />
-            <span className="text-purple-500">Wie man Qualität erkennt</span>
+            <span className="text-[#FF3B30]">Wie man Qualität erkennt</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-3xl mx-auto mb-10">
             Wie unterscheidest du zwischen seriösen Pentestern und unzureichenden Anbietern? Dieser Guide zeigt dir, worauf du achten musst – und was Sodu Secure macht, um deine Sicherheit zu garantieren.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
+            <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 bg-[#FF3B30] hover:bg-[#E5332A] text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               <Phone className="w-5 h-5" />Seriösen Pentester buchen
             </Link>
             <Link href="/penetration-testing" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
@@ -256,7 +257,7 @@ export default function PenetrationstestAnbieterPage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[["500+", "Erfolgreiche Pentests"], ["OSCP · CEH · CISSP", "Zertifizierungen"], ["100%", "Kundenzufriedenheit"], ["24h", "Angebots-Response"]].map(([stat, label]) => (
               <div key={stat} className="bg-[#0A0A0B] border border-white/10 rounded-xl py-3 px-2 text-center">
-                <div className="text-xl font-bold text-purple-400">{stat}</div>
+                <div className="text-xl font-bold text-[#FF6B61]">{stat}</div>
                 <div className="text-white/50 text-xs mt-0.5">{label}</div>
               </div>
             ))}
@@ -320,8 +321,8 @@ export default function PenetrationstestAnbieterPage() {
               const Icon = item.icon;
               return (
                 <div key={i} className="flex gap-4 bg-[#0A0A0B] border border-white/10 rounded-xl p-5">
-                  <div className="w-10 h-10 bg-purple-600/10 border border-purple-600/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-purple-400" />
+                  <div className="w-10 h-10 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-[#FF6B61]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">{item.title}</h3>
@@ -370,8 +371,8 @@ export default function PenetrationstestAnbieterPage() {
               const Icon = strength.icon;
               return (
                 <div key={strength.title} className="flex gap-4 bg-[#0A0A0B] border border-white/10 rounded-xl p-6">
-                  <div className="w-10 h-10 bg-purple-600/10 border border-purple-600/20 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <Icon className="w-5 h-5 text-purple-400" />
+                  <div className="w-10 h-10 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-[#FF6B61]" />
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">{strength.title}</h3>
@@ -395,11 +396,11 @@ export default function PenetrationstestAnbieterPage() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="px-4 py-3 text-left font-semibold text-purple-400">Pentest-Typ</th>
-                  <th className="px-4 py-3 text-left font-semibold text-purple-400">Automation</th>
-                  <th className="px-4 py-3 text-left font-semibold text-purple-400">Manuell</th>
-                  <th className="px-4 py-3 text-left font-semibold text-purple-400">Kosten</th>
-                  <th className="px-4 py-3 text-left font-semibold text-purple-400">Dauer</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Pentest-Typ</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Automation</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Manuell</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Kosten</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Dauer</th>
                 </tr>
               </thead>
               <tbody>
@@ -408,7 +409,7 @@ export default function PenetrationstestAnbieterPage() {
                     <td className="px-4 py-3 font-semibold">{type.type}</td>
                     <td className="px-4 py-3">{type.automation}</td>
                     <td className="px-4 py-3">{type.manual}</td>
-                    <td className="px-4 py-3 text-purple-400">{type.cost}</td>
+                    <td className="px-4 py-3 text-[#FF6B61]">{type.cost}</td>
                     <td className="px-4 py-3">{type.timeframe}</td>
                   </tr>
                 ))}
@@ -419,9 +420,9 @@ export default function PenetrationstestAnbieterPage() {
       </section>
 
       {/* Quality Banner */}
-      <section className="py-10 bg-purple-900/10 border-y border-purple-800/20">
+      <section className="py-10 bg-[#FF3B30]/10 border-y border-[#FF3B30]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <AlertTriangle className="w-7 h-7 text-purple-400 mx-auto mb-3" />
+          <AlertTriangle className="w-7 h-7 text-[#FF6B61] mx-auto mb-3" />
           <h3 className="text-lg font-bold mb-2">Billig = Schlecht? Nicht immer, aber fast immer!</h3>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
             €500 für einen &apos;Pentest&apos;? Das ist ein Scan. Ein echte manueller Pentest mit zertifizierten Experten kostet ab €1.500. Qualität hat ihren Preis – aber den lohnt sich.
@@ -448,15 +449,15 @@ export default function PenetrationstestAnbieterPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-br from-purple-900/20 via-[#0A0A0B] to-[#0A0A0B] border-t border-white/10">
+      <section className="py-20 bg-gradient-to-br from-[#FF3B30]/15 via-[#0A0A0B] to-[#0A0A0B] border-t border-white/10">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Shield className="w-14 h-14 text-purple-500 mx-auto mb-4" />
+          <Shield className="w-14 h-14 text-[#FF3B30] mx-auto mb-4" />
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Seriöse Pentester beauftragen</h2>
           <p className="text-white/60 text-lg mb-8">
             OSCP Certified · Zertifizierte Experten · Audit-Ready Reports · Kostenlos Retest
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 rounded-2xl font-semibold transition-colors text-lg">
+            <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 bg-[#FF3B30] hover:bg-[#E5332A] text-white px-10 py-4 rounded-2xl font-semibold transition-colors text-lg">
               <Phone className="w-5 h-5" />{PHONE}
             </a>
             <a href={EMAIL_HREF} className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-10 py-4 rounded-2xl font-semibold transition-colors">
@@ -464,13 +465,15 @@ export default function PenetrationstestAnbieterPage() {
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/50">
-            <Link href="/penetration-testing" className="text-purple-400 hover:text-purple-300">Pentest Info</Link>
-            <Link href="/pentest-kosten" className="text-purple-400 hover:text-purple-300">Pentest Kosten</Link>
-            <Link href="/pentest-konfigurator" className="text-purple-400 hover:text-purple-300">Konfigurator</Link>
-            <Link href="/request-pentest" className="text-purple-400 hover:text-purple-300">Beratung buchen</Link>
+            <Link href="/penetration-testing-anbieter" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Anbieter (Festpreis)</Link>
+            <Link href="/iso-27001-pentest-anforderungen" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest ISO 27001</Link>
+            <Link href="/pentest-kosten" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Kosten</Link>
+            <Link href="/pentest-konfigurator" className="text-[#FF6B61] hover:text-[#FF8077]">Konfigurator</Link>
+            <Link href="/request-pentest" className="text-[#FF6B61] hover:text-[#FF8077]">Beratung buchen</Link>
           </div>
         </div>
       </section>
+      <LeadConversionSection context="Penetrationstest Anbieter" />
     </main>
   );
 }

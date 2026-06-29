@@ -3,24 +3,26 @@ import type { Metadata } from "next";
 const baseUrl = "https://sodusecure.com";
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Firma fuer Pentest und ISO 27001 | Sodu Secure",
+  title: "Pentest Firma & Cybersecurity Dienstleister | Sodu Secure",
   description:
-    "Cybersecurity Firma aus Deutschland: Penetrationstests, Vulnerability Assessment, Red Teaming und ISO 27001 Beratung fuer Unternehmen jeder Groesse.",
+    "Pentest Firma aus Deutschland: OSCP-zertifizierte Penetrationstests, Vulnerability Assessment, Red Teaming und ISO 27001 Beratung für Unternehmen jeder Größe. Festpreis ab 2.500 €.",
   keywords: [
+    "pentest firma",
+    "firma pentesting",
+    "pentest firma deutschland",
     "cybersecurity firma",
     "cyber security firma",
-    "cybersecurity unternehmen",
     "it security firma",
     "cybersecurity dienstleister",
-    "pentest firma deutschland",
+    "cybersecurity unternehmen",
   ],
   alternates: {
     canonical: `${baseUrl}/cybersecurity-firma`,
   },
   openGraph: {
-    title: "Cybersecurity Firma fuer Pentest und ISO 27001 | Sodu Secure",
+    title: "Pentest Firma & Cybersecurity Dienstleister | Sodu Secure",
     description:
-      "Ganzheitliche Cybersecurity Services: Pentest, Compliance, ISMS und Security Consulting aus einer Hand.",
+      "Pentest Firma aus Deutschland: Penetrationstests, Compliance, ISMS und Security Consulting aus einer Hand. OSCP-zertifiziert, Festpreis.",
     url: `${baseUrl}/cybersecurity-firma`,
     type: "website",
   },

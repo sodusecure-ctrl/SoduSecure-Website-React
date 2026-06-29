@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import LeadConversionSection from "@/components/landing/LeadConversionSection";
 import {
   Shield,
   Calculator,
@@ -9,7 +10,7 @@ import {
   ArrowRight,
   ChevronDown,
   ChevronUp,
-  Award,
+  Award,
   Target,
   Users,
   Clock,
@@ -105,7 +106,7 @@ export default function PenetrationTestingAnbieterPage() {
     <main className="bg-[#0A0A0B] text-white min-h-screen">
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <section className="premium-hero py-24 sm:py-32 text-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FF3B30]/10 via-transparent to-transparent pointer-events-none" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
             <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
@@ -113,7 +114,7 @@ export default function PenetrationTestingAnbieterPage() {
             <span className="text-white/70">Penetration Testing Anbieter</span>
           </nav>
 
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-sm text-blue-400 mb-6">
+          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 text-sm text-[#FF6B61] mb-6">
             <MapPin className="w-3.5 h-3.5" />
             <span>Pentest Anbieter Berlin · OSCP · CEH · ISO 27001</span>
           </div>
@@ -121,7 +122,7 @@ export default function PenetrationTestingAnbieterPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="text-white">Pentest Anbieter –</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#ff7568] to-[#FF3B30] bg-clip-text text-transparent">
               Penetration Testing Dienstleister.
             </span>
             <br />
@@ -140,7 +141,7 @@ export default function PenetrationTestingAnbieterPage() {
               <Calculator className="w-5 h-5" />Pentest Angebot einholen
             </Link>
             <Link href="/request-pentest"
-              className="inline-flex items-center gap-2 border border-blue-500/30 hover:border-blue-500/60 text-blue-400 hover:text-blue-300 font-semibold px-8 py-4 rounded-xl transition-all duration-200">
+              className="inline-flex items-center gap-2 border border-[#FF3B30]/30 hover:border-[#FF3B30]/60 text-[#FF6B61] hover:text-[#FF8077] font-semibold px-8 py-4 rounded-xl transition-all duration-200">
               <Award className="w-4 h-4" />Unsere Zertifizierungen
             </Link>
           </div>
@@ -159,7 +160,7 @@ export default function PenetrationTestingAnbieterPage() {
       <section className="py-20 bg-white/[0.02] border-y border-white/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-sm text-blue-400 mb-4">
+            <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 text-sm text-[#FF6B61] mb-4">
               <Target className="w-3.5 h-3.5" />
               <span>Entscheidungshilfe</span>
             </div>
@@ -175,8 +176,8 @@ export default function PenetrationTestingAnbieterPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {AUSWAHLKRITERIEN.map((item) => (
               <div key={item.title} className="bg-white/[0.03] border border-white/10 rounded-2xl p-6">
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-blue-500/10 border border-blue-500/20 rounded-xl mb-4">
-                  <item.icon className="w-5 h-5 text-blue-400" />
+                <div className="inline-flex items-center justify-center w-10 h-10 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-xl mb-4">
+                  <item.icon className="w-5 h-5 text-[#FF6B61]" />
                 </div>
                 <h3 className="font-semibold text-white mb-2">{item.title}</h3>
                 <p className="text-sm text-white/60 leading-relaxed mb-3">{item.desc}</p>
@@ -196,7 +197,7 @@ export default function PenetrationTestingAnbieterPage() {
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Sodu Secure vs.{" "}
-              <span className="text-blue-400">typischer Pentest Anbieter</span>
+              <span className="text-[#FF6B61]">typischer Pentest Anbieter</span>
             </h2>
             <p className="text-white/70 leading-relaxed mb-6">
               Viele Anbieter versprechen {'\u201ePenetrationstest"'}, liefern aber automatisierte
@@ -263,10 +264,10 @@ export default function PenetrationTestingAnbieterPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {LEISTUNGEN.map((svc) => (
               <Link key={svc.title} href={svc.href}
-                className="group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-200">
-                <h3 className="font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">{svc.title}</h3>
+                className="group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-[#FF3B30]/30 transition-all duration-200">
+                <h3 className="font-semibold text-white mb-2 group-hover:text-[#FF8077] transition-colors">{svc.title}</h3>
                 <p className="text-sm text-white/60 mb-3">{svc.desc}</p>
-                <span className="inline-flex items-center gap-1 text-xs text-blue-400 group-hover:gap-2 transition-all">
+                <span className="inline-flex items-center gap-1 text-xs text-[#FF6B61] group-hover:gap-2 transition-all">
                   Mehr erfahren <ArrowRight className="w-3 h-3" />
                 </span>
               </Link>
@@ -297,7 +298,7 @@ export default function PenetrationTestingAnbieterPage() {
           {[
             { icon: Award, title: "OSCP-zertifiziert", desc: "Höchste praktische Pentest-Zertifizierung – weltweit anerkannt.", color: "text-[#FF3B30]", bg: "bg-[#FF3B30]/10 border-[#FF3B30]/20" },
             { icon: BarChart3, title: "Festpreis ab 1.499 €", desc: "Keine Tagessatz-Überraschungen. Kalkulierbarkeit vor Beginn.", color: "text-green-400", bg: "bg-green-500/10 border-green-500/20" },
-            { icon: Clock, title: "Angebot in 24h", desc: "Transparentes Festpreis-Angebot innerhalb von 24 Stunden.", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/20" },
+            { icon: Clock, title: "Angebot in 24h", desc: "Transparentes Festpreis-Angebot innerhalb von 24 Stunden.", color: "text-[#FF6B61]", bg: "bg-[#FF3B30]/10 border-[#FF3B30]/20" },
             { icon: MapPin, title: "Standort Berlin", desc: "Vor Ort oder remote – schnelle Reaktionszeiten in der Region.", color: "text-purple-400", bg: "bg-purple-500/10 border-purple-500/20" },
           ].map((item) => (
             <div key={item.title} className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 text-center">
@@ -310,7 +311,7 @@ export default function PenetrationTestingAnbieterPage() {
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-blue-950/30 to-cyan-950/20 border border-blue-500/20 rounded-2xl p-8">
+        <div className="bg-gradient-to-r from-[#FF3B30]/10 to-[#FF3B30]/5 border border-[#FF3B30]/20 rounded-2xl p-8">
           <div className="flex flex-col sm:flex-row items-center gap-6">
             <div className="flex-1">
               <h3 className="text-xl font-bold mb-2">Kostenlos beraten lassen</h3>
@@ -414,7 +415,13 @@ export default function PenetrationTestingAnbieterPage() {
             </span>
           ))}
         </div>
+        <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
+          <Link href="/penetrationstest-anbieter" className="text-[#FF6B61] hover:text-[#FF8077]">Penetrationstest Anbieter vergleichen</Link>
+          <Link href="/iso-27001-pentest-anforderungen" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest ISO 27001</Link>
+          <Link href="/cybersecurity-firma" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Firma</Link>
+        </div>
       </section>
+      <LeadConversionSection context="Pentest Anbieter" />
     </main>
   );
 }

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import LeadConversionSection from "@/components/landing/LeadConversionSection";
 import {
   Shield,
   CheckCircle,
@@ -220,11 +221,11 @@ export default function CybersecurityFirmaPage() {
             <span className="text-[#FF3B30] text-sm font-medium">Cybersecurity Firma · Pentest · ISO 27001 · Consulting</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Sodu Secure –<br />
-            <span className="text-[#FF3B30]">Ihre Cybersecurity Partneragentur</span>
+            Sodu Secure – Ihre<br />
+            <span className="text-[#FF3B30]">Pentest Firma &amp; Cybersecurity-Partner</span>
           </h1>
           <p className="text-white/70 text-lg sm:text-xl max-w-3xl mx-auto mb-10">
-            Penetrationstests, Vulnerability Assessments, ISO 27001 Zertifizierung, Red Team Assessments – alles von einer erfahrenen, zertifizierten Cybersecurity Firma.
+            Als zertifizierte Pentest Firma aus Deutschland liefern wir Penetrationstests, Vulnerability Assessments, ISO 27001 Zertifizierung und Red Team Assessments – alles aus einer Hand, OSCP-zertifiziert und zum Festpreis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
@@ -424,6 +425,7 @@ export default function CybersecurityFirmaPage() {
           </div>
         </div>
       </section>
+      <LeadConversionSection context="Pentest Firma / Cybersecurity" />
     </main>
   );
 }
