@@ -266,6 +266,8 @@ export default function PenetrationstestAnbieterPage() {
         </div>
       </section>
 
+      <TestimonialsSection />
+
       {/* Wichtige Zertifizierungen */}
       <section className="py-16 lg:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -474,7 +476,6 @@ export default function PenetrationstestAnbieterPage() {
           </div>
         </div>
       </section>
-      <TestimonialsSection />
       <LeadConversionSection context="Penetrationstest Anbieter" />
     </main>
   );

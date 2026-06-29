@@ -157,6 +157,8 @@ export default function PenetrationTestingAnbieterPage() {
         </div>
       </section>
 
+      <TestimonialsSection />
+
       {/* ── AUSWAHLKRITERIEN ──────────────────────────────────────────────────── */}
       <section className="py-20 bg-white/[0.02] border-y border-white/5">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -422,7 +424,6 @@ export default function PenetrationTestingAnbieterPage() {
           <Link href="/cybersecurity-firma" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Firma</Link>
         </div>
       </section>
-      <TestimonialsSection />
       <LeadConversionSection context="Pentest Anbieter" />
     </main>
   );

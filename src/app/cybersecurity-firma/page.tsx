@@ -248,6 +248,8 @@ export default function CybersecurityFirmaPage() {
         </div>
       </section>
 
+      <TestimonialsSection />
+
       {/* Services */}
       <section className="py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -426,7 +428,6 @@ export default function CybersecurityFirmaPage() {
           </div>
         </div>
       </section>
-      <TestimonialsSection />
       <LeadConversionSection context="Pentest Firma / Cybersecurity" />
     </main>
   );
