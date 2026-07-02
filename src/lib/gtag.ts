@@ -1,6 +1,9 @@
 // Google Ads Measurement ID
 export const GOOGLE_ADS_ID = 'AW-17937869852';
 
+// Google Analytics 4 Measurement ID
+export const GA_MEASUREMENT_ID = 'G-RTKDCGK33G';
+
 // Declare gtag on the window object for TypeScript
 declare global {
   interface Window {

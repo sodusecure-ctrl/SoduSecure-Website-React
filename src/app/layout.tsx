@@ -6,7 +6,7 @@ import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
-import { GOOGLE_ADS_ID } from "@/lib/gtag";
+import { GOOGLE_ADS_ID, GA_MEASUREMENT_ID } from "@/lib/gtag";
 import "./globals.css";
 import LayoutContent from './LayoutContent';
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
@@ -221,6 +221,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', '${GOOGLE_ADS_ID}');
+            gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
         <Analytics />
