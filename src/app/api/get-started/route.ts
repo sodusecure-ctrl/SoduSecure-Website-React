@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sendMail } from '@/lib/mailer';
+import { estimateValue, insertLead } from '@/lib/leads-db';
 
 type Plan = 'starter' | 'studio' | 'pro';
 
@@ -51,6 +52,19 @@ export async function POST(request: NextRequest) {
 
     const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
     const info = PLAN_INFO[plan];
+
+    // Persist lead (best-effort, never blocks the email flow)
+    void insertLead({
+      source: 'get-started',
+      name: name || null,
+      company: company || null,
+      email,
+      phone: phone || null,
+      service: info.label,
+      estValue: estimateValue('get-started', plan),
+      sourcePage: request.headers.get('referer'),
+      payload: { plan, email, name, company, githubOrg, phone },
+    });
 
     const eEmail = escapeHtml(email);
     const eName = escapeHtml(name || '');

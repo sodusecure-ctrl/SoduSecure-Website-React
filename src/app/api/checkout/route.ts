@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sendMail } from '@/lib/mailer';
+import { estimateValue, insertLead } from '@/lib/leads-db';
 import {
   AUDIT_PLAN_INFO,
   MAX_REPOS_PER_PLAN,
@@ -301,6 +302,20 @@ export async function POST(request: NextRequest) {
     if (!session.url) {
       return NextResponse.json({ error: 'Stripe-Session konnte nicht erstellt werden.' }, { status: 500 });
     }
+
+    // Persist lead (best-effort, never blocks redirect to Stripe)
+    void insertLead({
+      source: 'checkout',
+      name: name?.trim() || null,
+      company: company?.trim() || null,
+      email: email.trim(),
+      phone: phone?.trim() || null,
+      service: `${info.label} (${interval === 'year' ? 'jährlich' : 'monatlich'})`,
+      estValue: estimateValue('checkout', plan),
+      tag: provider,
+      sourcePage: request.headers.get('referer'),
+      payload: { plan, interval, email: email.trim(), name, company, phone, provider, repoUrls: cleanedRepos },
+    });
 
     // Fire-and-forget lead email so we never block redirect to Stripe
     void sendLeadEmail({

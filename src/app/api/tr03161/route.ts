@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sendMail } from '@/lib/mailer';
+import { estimateValue, insertLead } from '@/lib/leads-db';
 
 export async function POST(request: NextRequest) {
   try {
@@ -40,6 +41,20 @@ export async function POST(request: NextRequest) {
     }
 
     const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
+
+    // Persist lead (best-effort, never blocks the email flow)
+    void insertLead({
+      source: 'tr03161',
+      name: fullName,
+      company,
+      email,
+      phone,
+      service: applicationType,
+      message,
+      estValue: estimateValue('tr03161'),
+      sourcePage: request.headers.get('referer'),
+      payload: { fullName, company, email, phone, applicationType, developmentStage, message },
+    });
 
     const applicationTypeLabel = applicationType || 'Nicht angegeben';
     const developmentStageLabel = developmentStage || 'Nicht angegeben';

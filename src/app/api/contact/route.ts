@@ -1,5 +1,6 @@
 ﻿import { NextRequest, NextResponse } from 'next/server';
 import { sendMail } from '@/lib/mailer';
+import { estimateValue, insertLead } from '@/lib/leads-db';
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,6 +13,19 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // Persist lead (best-effort, never blocks the email flow)
+    void insertLead({
+      source: 'contact',
+      name: fullName,
+      company,
+      email,
+      phone,
+      message,
+      estValue: estimateValue('contact'),
+      sourcePage: request.headers.get('referer'),
+      payload: { fullName, company, email, phone, message },
+    });
 
     // Validate environment variables
     if (!process.env.RESEND_API_KEY || !process.env.NEXT_PUBLIC_ADMIN_EMAIL) {
