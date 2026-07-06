@@ -15,10 +15,10 @@ import {
   type LeadStatus,
   STATUS_META,
   STATUS_ORDER,
+  displaySource,
   formatDateTime,
   initials,
   sourceColor,
-  sourceLabel,
 } from './types';
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
@@ -92,7 +92,7 @@ export default function LeadDrawer({
               {lead.company || lead.name || lead.email || 'Unbenannter Lead'}
             </div>
             <div className="truncate text-xs text-muted-foreground">
-              {sourceLabel(lead.source)} · {formatDateTime(lead.created_at)}
+              {displaySource(lead)} · {formatDateTime(lead.created_at)}
             </div>
           </div>
           <button

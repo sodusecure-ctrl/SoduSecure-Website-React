@@ -82,6 +82,49 @@ export function sourceLabel(source: string): string {
   return SOURCE_META[source]?.label ?? source;
 }
 
+/** Friendly name for a quick-check's raw parsed title (e.g. "RISIKO-CHECK"). */
+export function checkTypeLabel(raw: string | null | undefined): string | null {
+  if (!raw) return null;
+  const t = raw.toUpperCase();
+  if (t.includes('RISIKO')) return 'Risiko-Check';
+  if (t.includes('SCHNELL')) return 'Schnell-Check';
+  if (t.includes('BRAUCHE') || t.includes('PENTEST')) return 'Pentest-Check';
+  if (t.includes('GESETZ')) return 'Gesetzes-Check';
+  // Fallback: Title-case the raw value.
+  return raw
+    .toLowerCase()
+    .replace(/\b\w/g, (c) => c.toUpperCase())
+    .replace(/\?$/, '');
+}
+
+/**
+ * What to show as the "source" in lists. For quick-checks we surface the
+ * specific test (Schnell-Check / Risiko-Check / …) instead of the generic
+ * "Schnellcheck" label.
+ */
+export function displaySource(lead: Lead): string {
+  if (lead.source === 'quick-check') {
+    return checkTypeLabel(lead.check_type) ?? sourceLabel(lead.source);
+  }
+  return sourceLabel(lead.source);
+}
+
+const CHECK_COLORS: Record<string, string> = {
+  'Risiko-Check': '#a855f7',
+  'Schnell-Check': '#c084fc',
+  'Pentest-Check': '#7c3aed',
+  'Gesetzes-Check': '#d8b4fe',
+};
+
+/** Color matching displaySource() – quick-check subtypes get violet shades. */
+export function displaySourceColor(lead: Lead): string {
+  if (lead.source === 'quick-check') {
+    const label = checkTypeLabel(lead.check_type);
+    return (label && CHECK_COLORS[label]) || sourceColor('quick-check');
+  }
+  return sourceColor(lead.source);
+}
+
 export function sourceColor(source: string): string {
   return SOURCE_META[source]?.color ?? '#94a3b8';
 }

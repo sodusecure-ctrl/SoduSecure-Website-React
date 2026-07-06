@@ -18,9 +18,9 @@ import {
   type LeadStatus,
   STATUS_META,
   STATUS_ORDER,
+  displaySource,
+  displaySourceColor,
   formatEuro,
-  sourceColor,
-  sourceLabel,
 } from './types';
 
 const AXIS = { fontSize: 11, fill: 'var(--muted-foreground)' };
@@ -133,10 +133,15 @@ export function LeadsTrendChart({ leads, days = 30 }: { leads: Lead[]; days?: nu
 }
 
 export function SourceDonut({ leads }: { leads: Lead[] }) {
-  const counts = new Map<string, number>();
-  for (const l of leads) counts.set(l.source, (counts.get(l.source) ?? 0) + 1);
-  const data = [...counts.entries()]
-    .map(([source, value]) => ({ source, value, color: sourceColor(source), label: sourceLabel(source) }))
+  const groups = new Map<string, { value: number; color: string }>();
+  for (const l of leads) {
+    const label = displaySource(l);
+    const existing = groups.get(label);
+    if (existing) existing.value += 1;
+    else groups.set(label, { value: 1, color: displaySourceColor(l) });
+  }
+  const data = [...groups.entries()]
+    .map(([label, { value, color }]) => ({ source: label, value, color, label }))
     .sort((a, b) => b.value - a.value);
   const total = leads.length || 1;
 

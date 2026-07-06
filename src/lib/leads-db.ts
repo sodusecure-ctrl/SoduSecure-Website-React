@@ -217,10 +217,36 @@ export async function deleteLead(id: number): Promise<boolean> {
 }
 
 /**
+ * Deal-value estimate (EUR) for a pentest based on the chosen scope/size.
+ * Real-world pricing: mittel ≈ 8k, groß ≈ 11k. Sales can override per lead.
+ */
+function pentestValueFromScope(scope?: string | null): number {
+  const s = (scope || '').toLowerCase();
+  // Web/Mobile/API/Infra/AD size tiers
+  if (s === 'small' || s.includes('klein')) return 1500;
+  if (s === 'medium' || s.includes('mittel')) return 8000;
+  if (s === 'large' || s.includes('groß') || s.includes('gross')) return 11000;
+  // SME packages
+  if (s === 'basis') return 8000;
+  if (s === 'basis-intern') return 10500;
+  if (s === 'komplett') return 13000;
+  // Phishing / social engineering tiers
+  if (s === 'starter') return 2000;
+  if (s === 'professional') return 4500;
+  if (s === 'enterprise') return 8000;
+  // Unknown / not selected → assume a mid-size engagement.
+  return 8000;
+}
+
+/**
  * Rough deal-value estimate (EUR) so the dashboard can show a pipeline total.
  * Deliberately conservative; sales can override per lead via the UI.
  */
-export function estimateValue(source: LeadSource, service?: string | null): number {
+export function estimateValue(
+  source: LeadSource,
+  service?: string | null,
+  scope?: string | null,
+): number {
   const s = (service || '').toLowerCase();
   switch (source) {
     case 'checkout':
@@ -229,7 +255,7 @@ export function estimateValue(source: LeadSource, service?: string | null): numb
       if (s.includes('studio')) return 199 * 12;
       return 99 * 12;
     case 'pentest':
-      return 4500;
+      return pentestValueFromScope(scope);
     case 'tr03161':
       return 6000;
     case 'quick-check':

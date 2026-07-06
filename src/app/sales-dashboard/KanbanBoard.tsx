@@ -6,11 +6,11 @@ import {
   type LeadStatus,
   STATUS_META,
   STATUS_ORDER,
+  displaySource,
   formatEuro,
   initials,
   relativeTime,
   sourceColor,
-  sourceLabel,
 } from './types';
 
 export default function KanbanBoard({
@@ -86,7 +86,7 @@ export default function KanbanBoard({
                         {lead.company || lead.name || lead.email || '—'}
                       </div>
                       <div className="truncate text-[11px] text-muted-foreground">
-                        {sourceLabel(lead.source)}
+                        {displaySource(lead)}
                       </div>
                     </div>
                   </div>

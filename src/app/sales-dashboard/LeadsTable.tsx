@@ -5,11 +5,11 @@ import { ArrowDown, ArrowUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   type Lead,
   STATUS_META,
+  displaySource,
   formatEuro,
   initials,
   relativeTime,
   sourceColor,
-  sourceLabel,
 } from './types';
 
 type SortKey = 'created_at' | 'company' | 'source' | 'status' | 'est_value' | 'check_score';
@@ -138,7 +138,7 @@ export default function LeadsTable({
                       className="h-2 w-2 rounded-full"
                       style={{ background: sourceColor(lead.source) }}
                     />
-                    {sourceLabel(lead.source)}
+                    {displaySource(lead)}
                   </span>
                 </td>
                 <td className="px-3 py-2.5">
