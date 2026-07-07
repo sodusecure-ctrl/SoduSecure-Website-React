@@ -239,6 +239,14 @@ export default function SalesDashboard({ dbConfigured }: { dbConfigured: boolean
             <Download className="h-3.5 w-3.5" />
             <span className="hidden sm:inline">CSV</span>
           </a>
+          <a
+            href="/tracking"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground"
+            title="Tracking-Links & Kampagnen"
+          >
+            <TrendingUp className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">Tracking</span>
+          </a>
           <button
             onClick={logout}
             className="inline-flex items-center gap-1.5 rounded-lg border border-border px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition hover:bg-rose-500/10 hover:text-rose-400"

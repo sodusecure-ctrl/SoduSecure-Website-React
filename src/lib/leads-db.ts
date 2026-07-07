@@ -48,6 +48,8 @@ export type LeadInput = {
   estValue?: number | null;
   tag?: string | null;
   sourcePage?: string | null;
+  /** Slug des Tracking-Links (/t/<slug>), über den der Besucher kam. */
+  linkSlug?: string | null;
   payload?: Record<string, unknown> | null;
 };
 
@@ -70,8 +72,18 @@ export type Lead = {
   notes: string | null;
   tag: string | null;
   source_page: string | null;
+  link_slug: string | null;
   payload: Record<string, unknown> | null;
 };
+
+const LINK_SLUG_RE = /^[a-z0-9][a-z0-9_-]{1,63}$/i;
+
+/** Attribution-Cookie (sodu_attr) validieren – ungültige Werte werden verworfen. */
+export function sanitizeLinkSlug(v: string | undefined | null): string | null {
+  if (!v) return null;
+  const s = v.trim().toLowerCase();
+  return LINK_SLUG_RE.test(s) ? s : null;
+}
 
 export function isDbConfigured(): boolean {
   return Boolean(
@@ -111,6 +123,8 @@ export async function ensureSchema(): Promise<void> {
           payload       JSONB
         );
       `;
+      // Kampagnen-Attribution (Tracking-Links) – nachträglich ergänzt
+      await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS link_slug TEXT;`;
       await sql`CREATE INDEX IF NOT EXISTS leads_created_at_idx ON leads (created_at DESC);`;
       await sql`CREATE INDEX IF NOT EXISTS leads_status_idx ON leads (status);`;
       await sql`CREATE INDEX IF NOT EXISTS leads_source_idx ON leads (source);`;
@@ -144,7 +158,7 @@ export async function insertLead(input: LeadInput): Promise<number | null> {
     const result = await sql<{ id: number }>`
       INSERT INTO leads (
         source, name, company, email, phone, company_size, service, message,
-        check_type, check_score, check_verdict, est_value, tag, source_page, payload
+        check_type, check_score, check_verdict, est_value, tag, source_page, link_slug, payload
       ) VALUES (
         ${input.source},
         ${input.name ?? null},
@@ -160,6 +174,7 @@ export async function insertLead(input: LeadInput): Promise<number | null> {
         ${toNullableInt(input.estValue)},
         ${input.tag ?? null},
         ${input.sourcePage ?? null},
+        ${input.linkSlug ?? null},
         ${payloadJson}::jsonb
       )
       RETURNING id;

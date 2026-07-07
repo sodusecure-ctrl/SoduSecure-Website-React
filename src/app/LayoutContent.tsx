@@ -14,14 +14,17 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const isVerifyPage = pathname?.startsWith('/verify');
   const isSoduAuditAiPage = pathname?.startsWith('/sodu-audit-ai');
   const isCorporatePage = pathname?.startsWith('/corporate');
+  const isInternalTool =
+    pathname?.startsWith('/tracking') || pathname?.startsWith('/sales-dashboard');
 
   const hideChrome =
-    isAuthRoute || isDashboardRoute || isAdsPage || isVerifyPage || isSoduAuditAiPage || isCorporatePage;
+    isAuthRoute || isDashboardRoute || isAdsPage || isVerifyPage || isSoduAuditAiPage || isCorporatePage || isInternalTool;
 
   // The global Header carries the toggle (top-right). Corporate pages have their
   // own header with a toggle. Only the few genuinely header-less pages need the
   // floating fallback.
-  const showFloatingToggle = hideChrome && !isCorporatePage && !isAuthRoute && !isDashboardRoute;
+  const showFloatingToggle =
+    hideChrome && !isCorporatePage && !isAuthRoute && !isDashboardRoute && !isInternalTool;
 
   return (
     <BrandProvider>

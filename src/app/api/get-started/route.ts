@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sendMail } from '@/lib/mailer';
-import { estimateValue, insertLead } from '@/lib/leads-db';
+import { estimateValue, insertLead, sanitizeLinkSlug } from '@/lib/leads-db';
 
 type Plan = 'starter' | 'studio' | 'pro';
 
@@ -63,6 +63,7 @@ export async function POST(request: NextRequest) {
       service: info.label,
       estValue: estimateValue('get-started', plan),
       sourcePage: request.headers.get('referer'),
+      linkSlug: sanitizeLinkSlug(request.cookies.get('sodu_attr')?.value),
       payload: { plan, email, name, company, githubOrg, phone },
     });
 

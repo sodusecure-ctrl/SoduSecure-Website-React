@@ -10,6 +10,7 @@ import { GOOGLE_ADS_ID, GA_MEASUREMENT_ID } from "@/lib/gtag";
 import "./globals.css";
 import LayoutContent from './LayoutContent';
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
+import TrackingBeacon from '@/components/common/TrackingBeacon';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -210,6 +211,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </ThemeProvider>
           <Toaster />
         </NextIntlClientProvider>
+        {/* Kampagnen-Tracking: Attribution aus /t/<slug>-Links + page_views */}
+        <TrackingBeacon />
         {/* Google Ads – Basis-Tag */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}

@@ -264,6 +264,17 @@ export default function LeadDrawer({
           <div className="grid grid-cols-2 gap-4 border-t border-border pt-4 text-xs">
             <Field label="Lead-ID">#{lead.id}</Field>
             <Field label="Tag">{lead.tag}</Field>
+            <Field label="Kampagnen-Link">
+              {lead.link_slug ? (
+                <a
+                  href="/tracking"
+                  className="inline-flex items-center gap-1 rounded-md bg-violet-500/15 px-2 py-0.5 font-medium text-violet-300 hover:bg-violet-500/25"
+                  title="Über Tracking-Link gekommen – Details im Tracking-Dashboard"
+                >
+                  /t/{lead.link_slug}
+                </a>
+              ) : null}
+            </Field>
             <Field label="Herkunftsseite">
               {lead.source_page ? (
                 <span className="break-all text-muted-foreground">{lead.source_page}</span>

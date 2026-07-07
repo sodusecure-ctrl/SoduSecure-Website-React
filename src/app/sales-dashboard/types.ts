@@ -21,6 +21,7 @@ export type Lead = {
   notes: string | null;
   tag: string | null;
   source_page: string | null;
+  link_slug?: string | null;
   payload: Record<string, unknown> | null;
 };
 
