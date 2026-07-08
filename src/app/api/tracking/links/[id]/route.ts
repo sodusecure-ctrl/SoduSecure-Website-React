@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { isTrackingAuthenticated } from '@/lib/tracking-auth';
-import { deleteTrackingLink, updateTrackingLink } from '@/lib/tracking-db';
+import { deleteTrackingLink, updateTrackingLink, type GateMode } from '@/lib/tracking-db';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -25,11 +25,12 @@ export async function PATCH(
     return NextResponse.json({ error: 'Ungültige Anfrage' }, { status: 400 });
   }
 
-  const fields: { name?: string; campaign?: string | null; notes?: string | null; archived?: boolean } = {};
+  const fields: { name?: string; campaign?: string | null; notes?: string | null; archived?: boolean; gateMode?: GateMode } = {};
   if (typeof body.name === 'string' && body.name.trim()) fields.name = body.name.trim().slice(0, 120);
   if (typeof body.campaign === 'string') fields.campaign = body.campaign.trim().slice(0, 120) || null;
   if (typeof body.notes === 'string') fields.notes = body.notes.trim().slice(0, 500) || null;
   if (typeof body.archived === 'boolean') fields.archived = body.archived;
+  if (body.gateMode === 'full' || body.gateMode === 'partial') fields.gateMode = body.gateMode;
 
   try {
     const link = await updateTrackingLink(id, fields);

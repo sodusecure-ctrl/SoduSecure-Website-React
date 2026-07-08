@@ -49,12 +49,14 @@ export async function GET(
   let target = '/';
   let channel = 'other';
   let campaign: string | null = null;
+  let gateMode = 'full';
   try {
     const link = await getTrackingLink(slug);
     if (link) {
       target = link.target || '/';
       channel = link.channel || 'other';
       campaign = link.campaign;
+      gateMode = link.gate_mode === 'partial' ? 'partial' : 'full';
     }
   } catch (err) {
     console.error('[t] link lookup failed:', err);
@@ -82,10 +84,12 @@ export async function GET(
   url.searchParams.set('utm_medium', UTM_MEDIUM[channel] || 'referral');
   url.searchParams.set('utm_campaign', campaign || slug);
   url.searchParams.set('sl', slug);
+  url.searchParams.set('gm', gateMode);
 
   const res = NextResponse.redirect(url, 302);
   const cookieBase = { path: '/', sameSite: 'lax' as const, httpOnly: false, secure: process.env.NODE_ENV === 'production' };
   res.cookies.set('sodu_attr', slug, { ...cookieBase, maxAge: 60 * 60 * 24 * 90 });
   res.cookies.set('sodu_vid', vid, { ...cookieBase, maxAge: 60 * 60 * 24 * 365 });
+  res.cookies.set('sodu_gate', gateMode, { ...cookieBase, maxAge: 60 * 60 * 24 * 90 });
   return res;
 }

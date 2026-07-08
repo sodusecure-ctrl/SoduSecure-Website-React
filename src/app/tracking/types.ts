@@ -20,8 +20,29 @@ export type TrackingLinkRow = {
   target: string;
   notes: string | null;
   archived: boolean;
+  gate_mode: string;
   stats: LinkStats;
 };
+
+/** Gate-Modus: wie stark das Check-Ergebnis für Besucher dieses Links gesperrt ist. */
+export const GATE_MODES: { id: 'full' | 'partial'; label: string; short: string; hint: string }[] = [
+  {
+    id: 'full',
+    label: 'Voll gesperrt',
+    short: 'Voll',
+    hint: 'Ergebnis komplett verdeckt – erst nach Eingabe von Firma, E-Mail und Telefon sichtbar (bisheriges Verhalten).',
+  },
+  {
+    id: 'partial',
+    label: 'Teilweise gesperrt',
+    short: 'Teil',
+    hint: 'Ergebnistext sofort sichtbar, aber die roten Kennzahlen (Score, Schaden, Ausfall …) bleiben verpixelt bis zur Dateneingabe.',
+  },
+];
+
+export function gateModeMeta(id: string) {
+  return GATE_MODES.find((m) => m.id === id) ?? GATE_MODES[0];
+}
 
 export type FunnelData = {
   events: { event: string; count: number; visitors: number }[];

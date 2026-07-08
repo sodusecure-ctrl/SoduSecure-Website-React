@@ -10,8 +10,10 @@
 
 const ATTR_COOKIE = 'sodu_attr';
 const VID_COOKIE = 'sodu_vid';
+const GATE_COOKIE = 'sodu_gate';
 const ATTR_LS = 'sodu_attr';
 const VID_LS = 'sodu_vid';
+const GATE_LS = 'sodu_gate';
 const SID_SS = 'sodu_sid';
 const ATTR_MAX_AGE = 60 * 60 * 24 * 90; // 90 Tage
 const VID_MAX_AGE = 60 * 60 * 24 * 365;
@@ -51,6 +53,20 @@ export function getAttribution(): string | null {
   return slug && SLUG_RE.test(slug) ? slug : null;
 }
 
+export type GateMode = 'full' | 'partial';
+
+/**
+ * Gate-Modus des Tracking-Links, über den der Besucher kam:
+ * 'full'    – Ergebnis komplett gesperrt bis zur Dateneingabe (Standard)
+ * 'partial' – Ergebnistext sichtbar, nur die Kennzahlen bleiben verdeckt
+ * Ohne Tracking-Link (Direktbesucher) gilt immer 'full'.
+ */
+export function getGateMode(): GateMode {
+  if (typeof window === 'undefined') return 'full';
+  const v = readCookie(GATE_COOKIE) || lsGet(GATE_LS);
+  return v === 'partial' ? 'partial' : 'full';
+}
+
 /** Anonyme Besucher-ID (Cookie zuerst – wird ggf. schon vom /t/-Redirect gesetzt). */
 export function getVisitorId(): string {
   const existing = readCookie(VID_COOKIE) || lsGet(VID_LS);
@@ -83,14 +99,22 @@ export function getSessionId(): string {
 export function captureAttributionFromUrl(): void {
   if (typeof window === 'undefined') return;
   try {
-    const sl = new URLSearchParams(window.location.search).get('sl');
+    const params = new URLSearchParams(window.location.search);
+    const sl = params.get('sl');
     if (sl && SLUG_RE.test(sl)) {
       writeCookie(ATTR_COOKIE, sl.toLowerCase(), ATTR_MAX_AGE);
       lsSet(ATTR_LS, sl.toLowerCase());
+      // Gate-Modus des Links übernehmen; fehlt der Parameter, auf 'full'
+      // zurücksetzen, damit kein Modus einer alten Kampagne hängen bleibt.
+      const gm = params.get('gm') === 'partial' ? 'partial' : 'full';
+      writeCookie(GATE_COOKIE, gm, ATTR_MAX_AGE);
+      lsSet(GATE_LS, gm);
     } else {
       // Cookie → localStorage spiegeln, damit die Attribution Cookie-Löschungen übersteht
       const cookieSlug = readCookie(ATTR_COOKIE);
       if (cookieSlug && SLUG_RE.test(cookieSlug)) lsSet(ATTR_LS, cookieSlug);
+      const cookieGate = readCookie(GATE_COOKIE);
+      if (cookieGate === 'partial' || cookieGate === 'full') lsSet(GATE_LS, cookieGate);
     }
   } catch { /* nie die Seite stören */ }
 }

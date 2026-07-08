@@ -24,7 +24,16 @@ export type TrackingLink = {
   target: string;
   notes: string | null;
   archived: boolean;
+  gate_mode: string;
 };
+
+/**
+ * Gate-Modus der Zielseite für Besucher dieses Links:
+ * 'full'    – Ergebnis komplett gesperrt bis zur Dateneingabe (Standard)
+ * 'partial' – Ergebnistext sichtbar, nur die Kennzahlen bleiben verdeckt
+ */
+export const GATE_MODES = ['full', 'partial'] as const;
+export type GateMode = (typeof GATE_MODES)[number];
 
 export type TrackingEventInput = {
   linkSlug: string;
@@ -74,9 +83,11 @@ export async function ensureTrackingSchema(): Promise<void> {
           channel    TEXT NOT NULL DEFAULT 'other',
           target     TEXT NOT NULL DEFAULT '/',
           notes      TEXT,
-          archived   BOOLEAN NOT NULL DEFAULT false
+          archived   BOOLEAN NOT NULL DEFAULT false,
+          gate_mode  TEXT NOT NULL DEFAULT 'full'
         );
       `;
+      await sql`ALTER TABLE tracking_links ADD COLUMN IF NOT EXISTS gate_mode TEXT NOT NULL DEFAULT 'full';`;
       await sql`
         CREATE TABLE IF NOT EXISTS tracking_events (
           id         BIGSERIAL PRIMARY KEY,
@@ -126,14 +137,16 @@ export async function createTrackingLink(input: {
   channel: string;
   target: string;
   notes?: string | null;
+  gateMode?: GateMode;
 }): Promise<TrackingLink | 'duplicate'> {
   await ensureTrackingSchema();
   try {
     const result = await sql<TrackingLink>`
-      INSERT INTO tracking_links (slug, name, campaign, channel, target, notes)
+      INSERT INTO tracking_links (slug, name, campaign, channel, target, notes, gate_mode)
       VALUES (
         ${input.slug}, ${input.name}, ${input.campaign ?? null},
-        ${input.channel}, ${input.target}, ${input.notes ?? null}
+        ${input.channel}, ${input.target}, ${input.notes ?? null},
+        ${input.gateMode ?? 'full'}
       )
       RETURNING *;
     `;
@@ -147,13 +160,14 @@ export async function createTrackingLink(input: {
 
 export async function updateTrackingLink(
   id: number,
-  fields: { name?: string; campaign?: string | null; channel?: string; target?: string; notes?: string | null; archived?: boolean },
+  fields: { name?: string; campaign?: string | null; channel?: string; target?: string; notes?: string | null; archived?: boolean; gateMode?: GateMode },
 ): Promise<TrackingLink | null> {
   if (!isDbConfigured()) return null;
   await ensureTrackingSchema();
   const name = fields.name ?? null;
   const channel = fields.channel ?? null;
   const target = fields.target ?? null;
+  const gateMode = fields.gateMode ?? null;
   const campaign = fields.campaign === undefined ? null : fields.campaign;
   const campaignProvided = fields.campaign !== undefined;
   const notes = fields.notes === undefined ? null : fields.notes;
@@ -167,7 +181,8 @@ export async function updateTrackingLink(
       target   = COALESCE(${target}, target),
       campaign = CASE WHEN ${campaignProvided} THEN ${campaign} ELSE campaign END,
       notes    = CASE WHEN ${notesProvided} THEN ${notes} ELSE notes END,
-      archived = COALESCE(${archived}::boolean, archived)
+      archived = COALESCE(${archived}::boolean, archived),
+      gate_mode = COALESCE(${gateMode}, gate_mode)
     WHERE id = ${id}
     RETURNING *;
   `;

@@ -6,6 +6,7 @@ import {
   listTrackingLinks,
   statsByLink,
   SLUG_RE,
+  type GateMode,
 } from '@/lib/tracking-db';
 
 export const runtime = 'nodejs';
@@ -97,6 +98,7 @@ export async function POST(request: NextRequest) {
   const channel = typeof body.channel === 'string' && CHANNELS.includes(body.channel) ? body.channel : 'other';
   const campaign = typeof body.campaign === 'string' ? body.campaign.trim().slice(0, 120) || null : null;
   const notes = typeof body.notes === 'string' ? body.notes.trim().slice(0, 500) || null : null;
+  const gateMode: GateMode = body.gateMode === 'partial' ? 'partial' : 'full';
   let target = typeof body.target === 'string' ? body.target.trim() : '/';
   const slug = typeof body.slug === 'string' ? body.slug.trim().toLowerCase() : '';
 
@@ -120,7 +122,7 @@ export async function POST(request: NextRequest) {
     // Bis zu 5 Versuche bei Slug-Kollision (nur bei automatisch vergebenen Slugs)
     for (let attempt = 0; attempt < 5; attempt++) {
       const candidate = slug || `${CHANNEL_PREFIX[channel] ?? 'go'}-${randomSlugPart(5)}`;
-      const created = await createTrackingLink({ slug: candidate, name, campaign, channel, target, notes });
+      const created = await createTrackingLink({ slug: candidate, name, campaign, channel, target, notes, gateMode });
       if (created !== 'duplicate') {
         return NextResponse.json({ link: created });
       }

@@ -8,8 +8,8 @@ import {
   Target, Trash2, TrendingUp, Users, X, Zap,
 } from 'lucide-react';
 import {
-  CHANNELS, CHECK_LABELS, FIELD_LABELS, TARGETS,
-  channelMeta, eventLabel, fmtDate, fmtDateTime, fmtPercent,
+  CHANNELS, CHECK_LABELS, FIELD_LABELS, GATE_MODES, TARGETS,
+  channelMeta, eventLabel, fmtDate, fmtDateTime, fmtPercent, gateModeMeta,
   type FunnelData, type TrackingLinkRow,
 } from './types';
 
@@ -357,6 +357,7 @@ function CreateLinkPanel({
   const [customTarget, setCustomTarget] = useState('');
   const [slug, setSlug] = useState('');
   const [notes, setNotes] = useState('');
+  const [gateMode, setGateMode] = useState<'full' | 'partial'>('full');
   const [saving, setSaving] = useState(false);
   const [err, setErr] = useState('');
   const [created, setCreated] = useState<{ slug: string; url: string } | null>(null);
@@ -383,6 +384,7 @@ function CreateLinkPanel({
           target: finalTarget,
           slug: slug.trim() || undefined,
           notes: notes.trim() || undefined,
+          gateMode,
         }),
       });
       const data = await res.json();
@@ -500,6 +502,35 @@ function CreateLinkPanel({
 
       <div>
         <label className="mb-1.5 block text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+          Ergebnis-Sperre (Gate-Modus)
+        </label>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {GATE_MODES.map((m) => {
+            const on = gateMode === m.id;
+            return (
+              <button
+                key={m.id}
+                type="button"
+                onClick={() => setGateMode(m.id)}
+                className={`rounded-xl border p-3 text-left transition ${
+                  on
+                    ? 'border-violet-500/70 bg-violet-500/10'
+                    : 'border-border hover:bg-muted'
+                }`}
+              >
+                <span className={`text-sm font-semibold ${on ? 'text-violet-300' : 'text-foreground'}`}>
+                  {m.label}
+                  {m.id === 'full' && <span className="ml-1.5 text-[11px] font-normal text-muted-foreground">(Standard)</span>}
+                </span>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{m.hint}</p>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <div>
+        <label className="mb-1.5 block text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
           Notiz (optional)
         </label>
         <input
@@ -600,6 +631,11 @@ function LinksTable({
                       <code>/t/{l.slug}</code>
                       <ChevronRight className="h-3 w-3 opacity-0 transition group-hover:opacity-100" />
                       <span className="text-muted-foreground/60">{l.target}</span>
+                      {l.gate_mode === 'partial' && (
+                        <span className="rounded border border-amber-500/40 bg-amber-500/10 px-1.5 py-0.5 text-[10px] font-medium text-amber-300">
+                          Teil-Sperre
+                        </span>
+                      )}
                     </span>
                   </button>
                 </td>
@@ -893,6 +929,16 @@ function LinkDetailDrawer({
                   {link.campaign}
                 </span>
               )}
+              <span
+                className={`rounded-lg border px-2 py-1 text-xs ${
+                  link.gate_mode === 'partial'
+                    ? 'border-amber-500/40 bg-amber-500/10 text-amber-300'
+                    : 'border-border text-muted-foreground'
+                }`}
+                title={gateModeMeta(link.gate_mode).hint}
+              >
+                Gate: {gateModeMeta(link.gate_mode).label}
+              </span>
               {link.archived && (
                 <span className="rounded-lg border border-amber-500/40 bg-amber-500/10 px-2 py-1 text-xs text-amber-300">
                   Archiviert
