@@ -16,14 +16,6 @@ export function getTestimonials(isDe: boolean): Testimonial[] {
     ? [
         {
           quote:
-            'Sodu Secure hat in unserer Kundenportal-Anwendung zwei kritische Lücken gefunden, die zwei andere Anbieter übersehen hatten. Der Bericht war so klar, dass unser Dev-Team alles in drei Tagen beheben konnte.',
-          author: 'Daniel M.',
-          role: 'CTO',
-          company: 'ACUT',
-          logo: '/images/testemonials-logo/acut-logo-color.png',
-        },
-        {
-          quote:
             'Endlich ein Pentest-Partner, der nicht nur eine PDF abliefert. Das Team hat im Retest jede Schwachstelle persönlich verifiziert. Für unsere ISO-27001-Zertifizierung war das Gold wert.',
           author: 'Sandra K.',
           role: 'Head of IT',
@@ -64,14 +56,6 @@ export function getTestimonials(isDe: boolean): Testimonial[] {
         },
       ]
     : [
-        {
-          quote:
-            'Sodu Secure found two critical vulnerabilities in our customer portal that two other vendors had missed. The report was so clear our dev team fixed everything in three days.',
-          author: 'Daniel M.',
-          role: 'CTO',
-          company: 'ACUT',
-          logo: '/images/testemonials-logo/acut-logo-color.png',
-        },
         {
           quote:
             'Finally a pentest partner that does not just hand over a PDF. The team personally verified every finding in the retest. Invaluable for our ISO 27001 certification.',
