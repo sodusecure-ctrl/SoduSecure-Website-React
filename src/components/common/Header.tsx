@@ -6,7 +6,21 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { ChevronDown, ChevronRight, Globe, Shield, Sparkles, X, Sun, Moon } from 'lucide-react';
+import {
+  AppWindow,
+  ChevronDown,
+  ChevronRight,
+  ClipboardCheck,
+  Globe,
+  HeartPulse,
+  MapPin,
+  Moon,
+  Server,
+  Shield,
+  Sparkles,
+  Sun,
+  X,
+} from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -92,33 +106,73 @@ export default function Header() {
     { name: 'PCI DSS', path: '/pci-dss-penetrationstest' },
   ];
 
-  const services = [
-    { name: t('servicesList.infrastructureTesting'), path: '/services/infrastructure-testing' },
-    { name: t('servicesList.webApplicationTesting'), path: '/services/web-application-testing' },
-    { name: t('servicesList.mobileAppTesting'), path: '/services/mobile-app-testing' },
-    { name: t('servicesList.apiSecurityTesting'), path: '/services/api-security-testing' },
-    { name: t('servicesList.cloudDevopsTesting'), path: '/services/cloud-devops-testing' },
-    { name: t('servicesList.networkAudit'), path: '/services/network-audit' },
-    { name: isEnglish ? 'Active Directory pentest' : 'Active Directory Pentest', path: '/services/active-directory' },
-    { name: isEnglish ? 'AWS penetration test' : 'AWS Penetrationstest', path: '/services/aws-penetrationstest' },
-    { name: isEnglish ? 'Security audit' : 'Security Audit', path: '/services/security-audit' },
-    { name: isEnglish ? 'Vulnerability assessment' : 'Vulnerability Assessment', path: '/services/vulnerability-assessment' },
-    { name: t('servicesList.smePackages'), path: '/services/sme-packages' },
-    { name: t('servicesList.iso27001Service'), path: '/services/iso-27001' },
+  const serviceGroups = [
+    {
+      label: 'Pentest',
+      icon: <Shield className="h-3 w-3 text-[#FF6B61]" />,
+      links: [
+        { name: isEnglish ? 'Request a pentest' : 'Pentest anfragen', path: '/request-pentest' },
+        { name: isEnglish ? 'Pricing' : 'Preise', path: '/pricing' },
+        { name: isEnglish ? 'SME packages' : 'KMU-Pakete', path: '/services/sme-packages' },
+      ],
+    },
+    {
+      label: 'Web & Apps',
+      icon: <AppWindow className="h-3 w-3 text-[#FF6B61]" />,
+      links: [
+        { name: isEnglish ? 'Web applications' : 'Webanwendungen', path: '/services/web-application-testing' },
+        { name: isEnglish ? 'APIs & interfaces' : 'APIs & Schnittstellen', path: '/services/api-security-testing' },
+        { name: 'Mobile Apps', path: '/services/mobile-app-testing' },
+      ],
+    },
+    {
+      label: isEnglish ? 'Network & Cloud' : 'Netzwerk & Cloud',
+      icon: <Server className="h-3 w-3 text-[#FF6B61]" />,
+      links: [
+        { name: isEnglish ? 'IT infrastructure' : 'IT-Infrastruktur', path: '/services/infrastructure-testing' },
+        { name: isEnglish ? 'Network audit' : 'Netzwerk-Audit', path: '/services/network-audit' },
+        { name: 'Active Directory', path: '/services/active-directory' },
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops-testing' },
+        { name: 'AWS', path: '/services/aws-penetrationstest' },
+      ],
+    },
+    {
+      label: 'Audits',
+      icon: <ClipboardCheck className="h-3 w-3 text-[#FF6B61]" />,
+      links: [
+        { name: 'Security Audit', path: '/services/security-audit' },
+        { name: 'Vulnerability Assessment', path: '/services/vulnerability-assessment' },
+        { name: 'ISO 27001', path: '/services/iso-27001' },
+      ],
+    },
   ];
 
   const berlinLinks = [
-    { name: isEnglish ? 'Pentest Berlin · Overview' : 'Pentest Berlin · Übersicht', path: '/pentest-berlin' },
-    { name: isEnglish ? 'What does a pentest cost?' : 'Was kostet ein Pentest?', path: '/pentest-berlin/kosten' },
-    { name: isEnglish ? 'Pentest for SMEs Berlin' : 'Pentest für KMU Berlin', path: '/pentest-berlin/kmu' },
-    { name: isEnglish ? 'Internal vs. external pentest' : 'Interner vs. externer Pentest', path: '/pentest-berlin/intern-extern' },
-    { name: isEnglish ? 'ISO 27001 pentest Berlin' : 'ISO 27001 Pentest Berlin', path: '/pentest-berlin/iso-27001' },
+    { name: isEnglish ? 'Overview' : 'Übersicht', path: '/pentest-berlin' },
+    { name: isEnglish ? 'Costs' : 'Kosten', path: '/pentest-berlin/kosten' },
+    { name: isEnglish ? 'For SMEs' : 'Für KMU', path: '/pentest-berlin/kmu' },
+    { name: isEnglish ? 'Internal vs. external' : 'Intern vs. extern', path: '/pentest-berlin/intern-extern' },
+    { name: 'ISO 27001', path: '/pentest-berlin/iso-27001' },
   ];
 
   const tr03161Links = [
-    { name: isEnglish ? 'BSI TR-03161 security review' : 'BSI TR-03161 Sicherheitsprüfung', path: '/bsi-tr-03161' },
-    { name: isEnglish ? 'Health-app pentest' : 'Pentest für Gesundheitsanwendungen', path: '/pentest-gesundheitsanwendungen' },
-    { name: isEnglish ? 'TR-03161 request' : 'TR-03161 Anfrage', path: '/anfrage-tr03161' },
+    { name: isEnglish ? 'TR-03161 review' : 'TR-03161 Prüfung', path: '/bsi-tr-03161' },
+    { name: isEnglish ? 'Health-app pentest' : 'Pentest Gesundheits-Apps', path: '/pentest-gesundheitsanwendungen' },
+    { name: isEnglish ? 'Request TR-03161' : 'TR-03161 anfragen', path: '/anfrage-tr03161' },
+  ];
+
+  const allServiceGroups = [
+    ...serviceGroups,
+    {
+      label: 'Pentest Berlin',
+      icon: <MapPin className="h-3 w-3 text-[#FF6B61]" />,
+      links: berlinLinks,
+    },
+    {
+      label: isEnglish ? 'Health Apps' : 'Gesundheits-Apps',
+      icon: <HeartPulse className="h-3 w-3 text-[#FF6B61]" />,
+      links: tr03161Links,
+    },
   ];
 
   const priceLink = isPentest
@@ -261,53 +315,37 @@ export default function Header() {
                 {t('services')}
                 <ChevronDown className="h-3.5 w-3.5 opacity-70" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className={menuCls} sideOffset={10} onCloseAutoFocus={(e) => e.preventDefault()}>
-                <div className="px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
+              <DropdownMenuContent
+                className={menuCls + ' w-[760px] max-w-[calc(100vw-2rem)] p-4'}
+                sideOffset={10}
+                onCloseAutoFocus={(e) => e.preventDefault()}
+              >
+                <div className="px-2 pb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
                   {t('chooseServices')}
                 </div>
-                {services.map((s, i) => (
-                  <DropdownMenuItem
-                    key={i}
-                    className={itemCls(isActive(s.path))}
-                    onClick={() => handleServiceClick(s.path)}
-                    onSelect={(e) => e.preventDefault()}
-                  >
-                    <span>{s.name}</span>
-                    <ChevronRight className="h-3.5 w-3.5 opacity-50" />
-                  </DropdownMenuItem>
-                ))}
-
-                <div className="my-2 h-px bg-white/5" />
-                <div className="px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
-                  Pentest Berlin
+                <div className="grid grid-cols-3 gap-x-4 gap-y-5">
+                  {allServiceGroups.map((group, gi) => (
+                    <div key={gi}>
+                      <div className="flex items-center gap-1.5 border-b border-white/5 px-2 pb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
+                        {group.icon}
+                        {group.label}
+                      </div>
+                      <div className="mt-1.5">
+                        {group.links.map((l, i) => (
+                          <DropdownMenuItem
+                            key={gi + '-' + i}
+                            className={itemCls(isActive(l.path))}
+                            onClick={() => handleServiceClick(l.path)}
+                            onSelect={(e) => e.preventDefault()}
+                          >
+                            <span>{l.name}</span>
+                            <ChevronRight className="h-3.5 w-3.5 opacity-50" />
+                          </DropdownMenuItem>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                {berlinLinks.map((l, i) => (
-                  <DropdownMenuItem
-                    key={'b' + i}
-                    className={itemCls(isActive(l.path))}
-                    onClick={() => handleServiceClick(l.path)}
-                    onSelect={(e) => e.preventDefault()}
-                  >
-                    <span>{l.name}</span>
-                    <ChevronRight className="h-3.5 w-3.5 opacity-50" />
-                  </DropdownMenuItem>
-                ))}
-
-                <div className="my-2 h-px bg-white/5" />
-                <div className="px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
-                  BSI TR-03161
-                </div>
-                {tr03161Links.map((l, i) => (
-                  <DropdownMenuItem
-                    key={'t' + i}
-                    className={itemCls(isActive(l.path))}
-                    onClick={() => handleServiceClick(l.path)}
-                    onSelect={(e) => e.preventDefault()}
-                  >
-                    <span>{l.name}</span>
-                    <ChevronRight className="h-3.5 w-3.5 opacity-50" />
-                  </DropdownMenuItem>
-                ))}
               </DropdownMenuContent>
             </DropdownMenu>
 
@@ -480,13 +518,21 @@ export default function Header() {
             open={isMobileServicesOpen}
             onToggle={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
           >
-            {services.map((s, i) => (
-              <MobileLink
-                key={i}
-                label={s.name}
-                active={isActive(s.path)}
-                onClick={() => handleServiceClick(s.path)}
-              />
+            {serviceGroups.map((group, gi) => (
+              <div key={gi} className={gi > 0 ? 'mt-2' : undefined}>
+                <div className="flex items-center gap-1.5 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40">
+                  {group.icon}
+                  {group.label}
+                </div>
+                {group.links.map((l, i) => (
+                  <MobileLink
+                    key={gi + '-' + i}
+                    label={l.name}
+                    active={isActive(l.path)}
+                    onClick={() => handleServiceClick(l.path)}
+                  />
+                ))}
+              </div>
             ))}
           </MobileGroup>
 

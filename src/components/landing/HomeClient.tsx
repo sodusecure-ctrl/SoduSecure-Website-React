@@ -23,8 +23,8 @@ import { useBrand } from './BrandContext';
 import TestimonialsMarquee from './TestimonialsMarquee';
 
 type BrandCopy = {
-  heroH1Top: string;
-  heroH1Bottom: string;
+  heroH1Top: React.ReactNode;
+  heroH1Bottom: React.ReactNode;
   heroSub: string;
   heroPrimaryCta: string;
   heroPrimaryHref: string;
@@ -183,8 +183,18 @@ const sharedEn: SharedCopy = {
 function getPentestCopy(de: boolean): BrandCopy {
   return de
     ? {
-        heroH1Top: 'Ein Pentest, der angreift',
-        heroH1Bottom: 'wie ein echter Hacker.',
+        heroH1Top: (
+          <>
+            <span className="premium-silver whitespace-nowrap">Sodu Secure</span>
+            <br />
+            <span className="premium-headline-accent">IT-Sicherheit durch Hacking</span>
+          </>
+        ),
+        heroH1Bottom: (
+          <>
+            Wir machen Ihre IT <span className="font-semibold text-[#FF3B30]">robuster</span> gegen Cyberangriffe.
+          </>
+        ),
         heroSub: 'Hand-getestet von OSCP-zertifizierten Hackern aus Berlin. Echte Angriffsketten, reproduzierbare Proof-of-Concepts, klare Fix-Empfehlungen - Festpreis ab 2.500 €.',
         heroPrimaryCta: 'Pentest anfragen',
         heroPrimaryHref: '/request-pentest',
@@ -275,8 +285,18 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
         ctaSwitch: 'Oder zu /AuditAI wechseln',
       }
     : {
-        heroH1Top: 'A pentest that attacks',
-        heroH1Bottom: 'like a real hacker.',
+        heroH1Top: (
+          <>
+            <span className="premium-silver whitespace-nowrap">Sodu Secure</span>
+            <br />
+            <span className="premium-headline-accent">IT Security through Hacking</span>
+          </>
+        ),
+        heroH1Bottom: (
+          <>
+            We make your IT <span className="font-semibold text-[#FF3B30]">more resilient</span> against cyberattacks.
+          </>
+        ),
         heroSub: 'Hand-tested by OSCP-certified hackers from Berlin. Real attack chains, reproducible proof-of-concepts, clear fix recommendations - fixed price from €2,500.',
         heroPrimaryCta: 'Request pentest',
         heroPrimaryHref: '/request-pentest',
@@ -585,35 +605,23 @@ export default function HomeClient() {
             <span>{s.productEyebrow} {isPentest ? s.toggle.pentest : s.toggle.auditai}</span>
           </div>
 
-          {/* Toggle */}
-          <div className="mt-6 inline-flex items-center rounded-full border border-white/10 bg-white/[0.04] p-1 text-[12px] font-semibold backdrop-blur-md">
-            <button
-              type="button"
-              onClick={() => setBrand('pentest')}
-              className={
-                'inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 transition ' +
-                (isPentest ? 'bg-[#FF3B30] text-white shadow-[0_4px_14px_rgba(255,59,48,0.45)]' : 'text-white/70 hover:text-white')
-              }
-            >
-              <Shield className="h-3.5 w-3.5" /> {s.toggle.pentest}
-            </button>
-            <button
-              type="button"
-              onClick={() => setBrand('auditai')}
-              className={
-                'inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 transition ' +
-                (!isPentest ? 'bg-[#FF3B30] text-white shadow-[0_4px_14px_rgba(255,59,48,0.45)]' : 'text-white/70 hover:text-white')
-              }
-            >
-              <Sparkles className="h-3.5 w-3.5" /> {s.toggle.auditai}
-            </button>
-          </div>
-
-          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.05] tracking-[-0.03em] sm:text-[44px] sm:leading-[1.02] md:text-7xl lg:text-[88px]">
-            <span className="premium-silver">{c.heroH1Top}</span>
-            <br />
-            <span className="premium-headline-accent">{c.heroH1Bottom}</span>
+          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-7xl lg:text-[80px]">
+            {isPentest ? (
+              c.heroH1Top
+            ) : (
+              <>
+                <span className="premium-silver">{c.heroH1Top}</span>
+                <br />
+                <span className="premium-headline-accent">{c.heroH1Bottom}</span>
+              </>
+            )}
           </h1>
+          {isPentest && (
+            <p className="mt-5 flex max-w-2xl items-center gap-3 text-lg font-medium tracking-[-0.01em] text-white/80 sm:text-xl">
+              <span aria-hidden className="h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
+              <span>{c.heroH1Bottom}</span>
+            </p>
+          )}
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/65 sm:mt-7 md:text-lg">{c.heroSub}</p>
           <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <Link
@@ -690,8 +698,29 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="border-t border-white/10">
+        <div className="py-20 lg:py-28">
+          <div className="mx-auto max-w-2xl px-6 text-center">
+            <SectionLabel>{isDe ? 'Kundenstimmen' : 'Testimonials'}</SectionLabel>
+            <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-5xl">
+              {isDe ? 'Was unsere Kunden sagen' : 'What our clients say'}
+            </h2>
+            <p className="mt-4 text-[#525866]">
+              {isDe
+                ? 'Teams aus DACH vertrauen auf Sodu Secure, um kritische Schwachstellen zu finden, bevor Angreifer es tun.'
+                : 'Teams across the DACH region rely on Sodu Secure to find critical vulnerabilities before attackers do.'}
+            </p>
+          </div>
+
+          <div className="mt-14">
+            <TestimonialsMarquee isDe={isDe} />
+          </div>
+        </div>
+      </section>
+
       {/* TWO PRODUCTS */}
-      <section className="premium-section">
+      <section className="premium-section border-t border-white/10">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6 lg:py-28">
           <div className="max-w-2xl">
             <SectionLabel>{s.twoProductsLabel}</SectionLabel>
@@ -827,27 +856,6 @@ export default function HomeClient() {
             <Link href="/contact" className="inline-flex items-center gap-1.5 text-sm font-semibold text-white underline-offset-4 hover:underline">
               {s.combineCta} <ArrowRight className="h-4 w-4" />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="border-t border-white/10">
-        <div className="py-20 lg:py-28">
-          <div className="mx-auto max-w-2xl px-6 text-center">
-            <SectionLabel>{isDe ? 'Kundenstimmen' : 'Testimonials'}</SectionLabel>
-            <h2 className="mt-5 text-3xl font-extrabold tracking-tight md:text-5xl">
-              {isDe ? 'Was unsere Kunden sagen' : 'What our clients say'}
-            </h2>
-            <p className="mt-4 text-[#525866]">
-              {isDe
-                ? 'Teams aus DACH vertrauen auf Sodu Secure, um kritische Schwachstellen zu finden, bevor Angreifer es tun.'
-                : 'Teams across the DACH region rely on Sodu Secure to find critical vulnerabilities before attackers do.'}
-            </p>
-          </div>
-
-          <div className="mt-14">
-            <TestimonialsMarquee isDe={isDe} />
           </div>
         </div>
       </section>
