@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Powered by Claude · Security-Audit für SaaS-Codebases | SODU AuditAI',
   description:
     'Built on Claude. Wir nutzen Anthropics Frontier-Modelle, um Ihren Code zu reviewen wie ein Staff Security-Engineer. Wöchentlicher PDF-Bericht.',

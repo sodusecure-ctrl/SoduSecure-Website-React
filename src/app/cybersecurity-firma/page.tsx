@@ -55,7 +55,7 @@ const SERVICES = [
     icon: Globe,
     title: "Red Team Assessment",
     desc: "Realistische Angriffssimulation. Wie weit kommt ein echter Hacker in Ihr Unternehmen?",
-    slug: "/red-team-assessment-service",
+    slug: "/red-team-assessment",
     color: "purple",
   },
   {

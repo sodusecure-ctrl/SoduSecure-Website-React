@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Claude Mythos Alternative · Defensive KI für Code-Audit | SODU AuditAI',
   description:
     'Anthropic gibt Claude Mythos nicht frei. Wir bieten KI-Code-Audit mit vergleichbarem Reasoning - defensiv, im Abo, mit Berliner Hacker-Triage. Ab 99 €.',

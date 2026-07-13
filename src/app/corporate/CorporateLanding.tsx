@@ -366,8 +366,8 @@ export default function CorporateLanding({ isDe, embedded = false }: { isDe: boo
             <div>
               <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">{t('Leistungen', 'Services')}</h4>
               <ul className="mt-4 space-y-2.5 text-sm text-white/55">
-                <li><Link href="/pentest" className="hover:text-white">{t('Penetrationstest', 'Penetration testing')}</Link></li>
-                <li><Link href="/vulnerability-assessment" className="hover:text-white">{t('Schwachstellenanalyse', 'Vulnerability assessment')}</Link></li>
+                <li><Link href="/penetration-testing" className="hover:text-white">{t('Penetrationstest', 'Penetration testing')}</Link></li>
+                <li><Link href="/vulnerability-assessment-service" className="hover:text-white">{t('Schwachstellenanalyse', 'Vulnerability assessment')}</Link></li>
                 <li><Link href="/phishing-simulation" className="hover:text-white">{t('Phishing-Simulation', 'Phishing simulation')}</Link></li>
                 <li><Link href="/red-team-assessment" className="hover:text-white">Red Teaming</Link></li>
               </ul>
@@ -377,7 +377,6 @@ export default function CorporateLanding({ isDe, embedded = false }: { isDe: boo
               <ul className="mt-4 space-y-2.5 text-sm text-white/55">
                 <li><Link href="/about" className="hover:text-white">{t('Über uns', 'About us')}</Link></li>
                 <li><Link href="/case-studies" className="hover:text-white">{t('Referenzen', 'Case studies')}</Link></li>
-                <li><Link href="/careers" className="hover:text-white">{t('Karriere', 'Careers')}</Link></li>
                 <li><Link href="/contact" className="hover:text-white">{t('Kontakt', 'Contact')}</Link></li>
               </ul>
             </div>

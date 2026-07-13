@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Secure Coding as a Service | SODU AuditAI',
   description:
     'Secure Coding as a Service: ein Senior-Security-Engineer für Ihr Team, jede Woche, ohne Recruiting. Powered by Claude. Ab 99 €.',

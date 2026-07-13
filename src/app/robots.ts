@@ -3,27 +3,14 @@
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = 'https://sodusecure.com'; // Update with your actual domain
 
+  // Nur reine Redirect-/API-Endpunkte per robots.txt sperren.
+  // Seiten, die aus dem Index sollen, bekommen stattdessen ein noindex-Meta-Tag —
+  // dafür muss Google sie crawlen dürfen, also hier NICHT sperren.
+  const disallow = ['/api/', '/t/', '/lang/'];
+
   return {
     rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: [
-          '/api/',
-          '/auth/verify-otp/',
-          '/auth/forgot-password/verify-email/',
-        ],
-      },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-        disallow: ['/api/', '/auth/verify-otp/', '/auth/forgot-password/verify-email/'],
-      },
-      {
-        userAgent: 'Bingbot',
-        allow: '/',
-        disallow: ['/api/', '/auth/verify-otp/', '/auth/forgot-password/verify-email/'],
-      },
+      { userAgent: '*', allow: '/', disallow },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
   };

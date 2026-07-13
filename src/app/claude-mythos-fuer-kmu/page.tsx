@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Claude Mythos für KMU · Defensiv-KI gegen Hacker | SODU AuditAI',
   description:
     'Claude Mythos zeigt: Angreifer werden bald in Stunden finden, wofür sie Wochen brauchten. Wir liefern KMU-tauglichen KI-Code-Audit als Abo. Made in Berlin.',

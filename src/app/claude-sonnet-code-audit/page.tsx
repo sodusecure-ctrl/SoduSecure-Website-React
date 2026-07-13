@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Claude Sonnet Code Audit für GitHub-Repos | SODU AuditAI',
   description:
     'Wöchentliches Code-Audit mit Claude Sonnet - schnell, genau, skalierbar. Wir liefern PDF mit Findings und Fixes. Ab 99 € pro Repo.',

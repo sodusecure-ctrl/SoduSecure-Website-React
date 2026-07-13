@@ -5,6 +5,7 @@ import { ArrowRight, Cpu, Eye, Key, Lock, Shield, Trash2 } from 'lucide-react';
 import { SectionLabel, SectionLabelDark, FeatureCard } from '@/components/landing/ui';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Sicherheit & Vertrauen - Sodu AuditAI',
   description:
     'So gehen wir mit Ihrem Code um: Read-only-Zugriff, kurzlebige Tokens, isolierte Worker, hart gelöschte Artefakte, DSGVO-konforme Verarbeitung.',

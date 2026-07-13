@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Claude Mythos für Ihr Software-Team | SODU AuditAI',
   description:
     'Ein virtueller Senior-Security-Engineer im Abo. Wir liefern wöchentlich KI-gestützte Code-Reviews mit fertigen Fixes - ohne Neueinstellung. Ab 99 €.',

@@ -133,7 +133,7 @@ export default function CyberSecurityCheckKostenPage() {
           </div>
           <p className="text-white/50 text-sm mt-6">
             <Link href="/cyber-security-check" className="text-[#FF3B30] hover:text-[#FF6B61]">Cyber Security Check</Link>{" · "}
-            <Link href="/cyber-security-check-preis" className="text-[#FF3B30] hover:text-[#FF6B61]">Preisliste</Link>
+            <Link href="/cyber-security-check" className="text-[#FF3B30] hover:text-[#FF6B61]">Preisliste</Link>
           </p>
         </div>
       </section>

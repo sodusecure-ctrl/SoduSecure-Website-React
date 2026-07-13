@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Claude Opus Security Review für Production-Code | SODU AuditAI',
   description:
     'Security-Code-Review mit Claude Opus - dem stärksten Reasoning-Modell von Anthropic. Wöchentlicher Bericht, fertige Fixes, DSGVO. Ab 99 €.',

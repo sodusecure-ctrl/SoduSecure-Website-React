@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Kostenloser Sicherheits-Schnellcheck in 60 Sekunden: Sechs Fragen zeigen Ihnen, wie gefährdet Ihr Unternehmen ist und was ein Cyberangriff kosten würde. Danach Pentest vom zertifizierten Experten.',
   alternates: { canonical: `${baseUrl}/corporate/schnellcheck` },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
 };
 
 export default async function Page() {

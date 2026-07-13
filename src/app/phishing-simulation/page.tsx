@@ -124,7 +124,7 @@ export default function PhishingSimulationPage() {
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               <Phone className="w-5 h-5" />Phishing Simulation anfragen
             </a>
-            <Link href="/pentest" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
+            <Link href="/penetration-testing" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               Zum Pentest <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -303,9 +303,9 @@ export default function PhishingSimulationPage() {
           </div>
           <p className="text-white/50 text-sm">
             Verwandte Seiten:{" "}
-            <Link href="/pentest" className="text-[#FF3B30] hover:text-[#FF6B61]">Pentest</Link>{" · "}
+            <Link href="/penetration-testing" className="text-[#FF3B30] hover:text-[#FF6B61]">Pentest</Link>{" · "}
             <Link href="/cyber-security-check" className="text-[#FF3B30] hover:text-[#FF6B61]">Cyber Security Check</Link>{" · "}
-            <Link href="/vulnerability-assessment" className="text-[#FF3B30] hover:text-[#FF6B61]">Vulnerability Assessment</Link>{" · "}
+            <Link href="/vulnerability-assessment-service" className="text-[#FF3B30] hover:text-[#FF6B61]">Vulnerability Assessment</Link>{" · "}
             <Link href="/red-team-assessment" className="text-[#FF3B30] hover:text-[#FF6B61]">Red Team</Link>
           </p>
         </div>

@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Claude Security Audit für SaaS-Codebases | SODU AuditAI',
   description:
     'Wöchentliches Security Audit Ihrer Codebase, powered by Claude. Schwachstellen, Secrets, Auth-Lücken - mit fertigen Fixes. Ab 99 €.',

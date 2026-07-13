@@ -5,7 +5,6 @@
     "chooseServices": "Choose your services",
     "about": "About",
     "caseStudiesBlogs": "Case studies & blog",
-    "careers": "Careers",
     "contact": "Contact",
     "requestPentest": "Get pricing",
     "language": "Language",
@@ -250,7 +249,6 @@
         "links": [
           "About",
           "Our team",
-          "Careers",
           "Blog",
           "Contact"
         ]
@@ -4791,94 +4789,6 @@
         "industries": {
           "question": "Which industries do you serve?",
           "answer": "We work with clients across all industries, including finance, healthcare, SaaS, e-commerce, and more."
-        }
-      }
-    }
-  },
-  "careers": {
-    "hero": {
-      "badge": "Join our team",
-      "title": "Shaping the future of cybersecurity",
-      "description": "Join SodoSecure and work with a talented team of security experts to protect organizations worldwide."
-    },
-    "whyWorkWithUs": {
-      "title": "Why work with us",
-      "description": "We provide a competitive and inclusive workplace where security professionals can thrive.",
-      "benefits": {
-        "cuttingEdgeWork": {
-          "title": "State-of-the-art work",
-          "description": "Work on the latest security challenges and technologies in the industry."
-        },
-        "continuousLearning": {
-          "title": "Continuous learning",
-          "description": "Access to training, certifications and conferences to further develop your skills."
-        },
-        "workLifeBalance": {
-          "title": "Work-life balance",
-          "description": "Flexible working hours and remote options for a healthy balance."
-        },
-        "collaborativeCulture": {
-          "title": "Cooperative culture",
-          "description": "Work with talented professionals who are passionate about security."
-        },
-        "competitiveBenefits": {
-          "title": "Competitive services",
-          "description": "Competitive salary, health insurance and other benefits."
-        },
-        "makeAnImpact": {
-          "title": "Make a difference",
-          "description": "Help organizations protect their critical assets and confidential data."
-        }
-      }
-    },
-    "openPositions": {
-      "title": "Vacancies",
-      "description": "Positions available",
-      "viewDetails": "View details",
-      "positions": {
-        "seniorPenetrationTester": {
-          "title": "Senior Penetration Tester",
-          "type": "Full time",
-          "location": "Berlin / Remote",
-          "description": "Lead penetration testing projects and mentor younger teammates.You work on complex security assessments for corporate customers."
-        },
-        "juniorPenetrationTester": {
-          "title": "Junior Penetration Tester",
-          "type": "Full time",
-          "location": "Berlin",
-          "description": "Start your offensive security career with comprehensive guidance and hands-on experience."
-        },
-        "werkstudentPenetrationTester": {
-          "title": "Working student penetration tester",
-          "type": "Part time",
-          "location": "Berlin / Remote",
-          "description": "Gain practical experience in cybersecurity during your studies.Support our team with penetration testing and security assessments."
-        }
-      }
-    },
-    "cta": {
-      "title": "Interested?",
-      "description": "Send your application to:",
-      "email": "info@sodusecure.com"
-    },
-    "applicationProcess": {
-      "title": "Our application process",
-      "steps": {
-        "submitApplication": {
-          "title": "Submit your application",
-          "description": "Send us your CV, portfolio and a short cover letter explaining your interest."
-        },
-        "technicalInterview": {
-          "title": "Technical interview",
-          "description": "Discuss your technical skills and experience in a focused technical assessment."
-        },
-        "teamInterview": {
-          "title": "Team conversation",
-          "description": "Meet with our team to discuss culture fit and your career goals."
-        },
-        "offerOnboarding": {
-          "title": "Offer & Onboarding",
-          "description": "Get a quote and start your onboarding journey with SodoSecure."
         }
       }
     }

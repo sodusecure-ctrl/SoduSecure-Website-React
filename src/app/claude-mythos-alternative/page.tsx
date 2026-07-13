@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Wie Claude Mythos · KI-Security-Review im Abo | SODU AuditAI',
   description:
     'Anthropic hält Claude Mythos unter Verschluss - zu gefährlich, sagt der Hersteller. Wir liefern dieselbe Klasse von KI-gestütztem Code-Audit als Abo. Ab 99 €.',

@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Claude Mythos für Ihre Software-Sicherheit | SODU AuditAI',
   description:
     'KI-gestützte Software-Sicherheit als wöchentliches Abo. Frontier-Reasoning der Claude-Klasse, defensiv eingesetzt. NIS2-, DSGVO- und ISO-tauglich.',

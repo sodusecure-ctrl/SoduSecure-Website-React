@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Claude Mythos für Ihre Softwareentwicklung | SODU AuditAI',
   description:
     'KI-gestütztes Security-Code-Review für Ihre Softwareentwicklung. Frontier-Reasoning der Claude-Klasse, defensiv eingesetzt. Wöchentliches PDF ab 99 €.',

@@ -29,25 +29,18 @@ export default function Footer() {
     { label: 'AWS Penetrationstest', href: '/services/aws-penetrationstest' },
     { label: 'Security Audit', href: '/services/security-audit' },
     { label: 'Vulnerability Assessment (Service)', href: '/services/vulnerability-assessment' },
-    { label: 'Pentest', href: '/pentest' },
+    { label: 'Penetrationstest', href: '/penetration-testing' },
     { label: 'Pentest Kosten', href: '/pentest-kosten' },
-    { label: 'Pentest Preis', href: '/pentest-preis' },
     { label: 'Pentest Konfigurator', href: '/pentest-konfigurator' },
-    { label: 'Pentest Preis Rechner', href: '/pentest-preis-rechner' },
     { label: 'Cyber Security Check', href: '/cyber-security-check' },
-    { label: 'Cyber Security Check Kosten', href: '/cyber-security-check-kosten' },
-    { label: 'Cyber Security Check Preis', href: '/cyber-security-check-preis' },
     { label: 'Phishing Simulation', href: '/phishing-simulation' },
     { label: 'Vulnerability Assessment', href: '/vulnerability-assessment-service' },
-    { label: 'Red Team Assessment', href: '/red-team-assessment-service' },
+    { label: 'Red Team Assessment', href: '/red-team-assessment' },
     { label: 'Pentest Berlin', href: '/pentest-berlin' },
     { label: 'Penetrationstest Deutschland', href: '/penetrationstest-deutschland' },
-    { label: 'Penetrationstest', href: '/penetration-testing' },
-    { label: 'Pentesting Service', href: '/pentesting-service' },
-    { label: 'Penetration Testing Service', href: '/penetration-testing-service' },
-    { label: 'Pentest Angebot', href: '/pentest-angebot' },
     { label: 'Pentest Zertifizierung', href: '/pentest-certification' },
     { label: 'Pentest Anbieter', href: '/penetrationstest-anbieter' },
+    { label: 'Penetration Testing Anbieter', href: '/penetration-testing-anbieter' },
     { label: 'Cybersecurity Firma', href: '/cybersecurity-firma' },
     { label: 'ISO 27001', href: '/iso-27001' },
     { label: 'ISO 27001 Pentest Anforderungen', href: '/iso-27001-pentest-anforderungen' },
@@ -98,9 +91,8 @@ export default function Footer() {
   const companyLinks = [
     { label: companyLabels?.[0], href: '/about' },
     { label: companyLabels?.[1], href: '/about#team' },
-    { label: companyLabels?.[2], href: '/careers' },
-    { label: companyLabels?.[3], href: '/case-studies' },
-    { label: companyLabels?.[4], href: '/contact' }
+    { label: companyLabels?.[2], href: '/case-studies' },
+    { label: companyLabels?.[3], href: '/contact' }
   ];
 
   const resourceLinks = [

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     'Sodu /AuditAI · KI-gestütztes Code-Audit für Production-Repos. Wöchentlicher Bericht in DE & EN, fertige Fix-Vorschläge, jederzeit kündbar. Made in Germany.',
   alternates: { canonical: 'https://sodusecure.com/sodu-audit-ai' },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Sodu /AuditAI · KI-Code-Audit ab 99 €',
     description:

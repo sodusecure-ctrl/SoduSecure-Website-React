@@ -5,6 +5,7 @@ import { ArrowRight, FileText, GitBranch, Layers, Workflow } from 'lucide-react'
 import { SectionLabel, SectionLabelDark, FeatureCard } from '@/components/landing/ui';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'So funktioniert es - Sodu AuditAI',
   description:
     'Anbinden, prüfen, vergleichen, berichten. Vier Schritte für ein kontinuierliches KI-gestütztes Security-Review Ihres Codes. Jeden Montag.',

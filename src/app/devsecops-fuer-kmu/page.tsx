@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'DevSecOps für KMU | SODU AuditAI',
   description:
     'DevSecOps für kleine und mittlere Unternehmen: KI-gestütztes Code-Review, wöchentlicher Bericht, ohne Security-Team aufbauen zu müssen.',

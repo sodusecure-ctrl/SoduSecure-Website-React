@@ -5,6 +5,7 @@ import { ArrowRight, Briefcase, FileText, Layers, Sparkles, Users } from 'lucide
 import { SectionLabel, SectionLabelDark, FeatureCard, StatRow } from '@/components/landing/ui';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Für Agenturen - Sodu AuditAI',
   description:
     'Wöchentliches KI-Security-Review für jedes Kunden-Repo. Multi-Tenant, DE & EN, White-Label-fähig. Security als wiederkehrende Umsatzlinie.',

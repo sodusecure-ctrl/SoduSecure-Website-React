@@ -59,7 +59,7 @@ export default function CyberSecurityCheckPage() {
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               <Phone className="w-5 h-5" />Kostenlos anfragen
             </a>
-            <Link href="/cyber-security-check-kosten" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
+            <Link href="/cyber-security-check" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               Kosten ansehen<ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -159,9 +159,9 @@ export default function CyberSecurityCheckPage() {
             </a>
           </div>
           <p className="text-white/50 text-sm mt-6">
-            <Link href="/cyber-security-check-kosten" className="text-[#FF3B30] hover:text-[#FF6B61]">Kosten ansehen</Link>{" · "}
-            <Link href="/cyber-security-check-preis" className="text-[#FF3B30] hover:text-[#FF6B61]">Preisliste</Link>{" · "}
-            <Link href="/pentest" className="text-[#FF3B30] hover:text-[#FF6B61]">Zum Pentest</Link>
+            <Link href="/cyber-security-check" className="text-[#FF3B30] hover:text-[#FF6B61]">Kosten ansehen</Link>{" · "}
+            <Link href="/cyber-security-check" className="text-[#FF3B30] hover:text-[#FF6B61]">Preisliste</Link>{" · "}
+            <Link href="/penetration-testing" className="text-[#FF3B30] hover:text-[#FF6B61]">Zum Pentest</Link>
           </p>
         </div>
       </section>

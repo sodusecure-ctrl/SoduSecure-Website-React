@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Automatisiertes Code Audit für GitHub-Repos | SODU AuditAI',
   description:
     'Automatisiertes Security-Code-Audit für Ihr GitHub-Repository. Wöchentlicher Bericht mit OWASP-Mapping, CVSS-Scores und fertigen Fixes.',

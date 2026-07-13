@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Code Review für Startups | SODU AuditAI',
   description:
     'Code Review für Startups: Security-Senior-Niveau in der Pre-Series-A-Phase, ohne Vollzeit-Hire. Powered by Claude. Made in Germany.',

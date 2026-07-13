@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     description: 'Manuelle, zertifizierte Penetrationstests. Prüfsicher für ISO 27001, NIS2, DORA & DSGVO.',
   },
   alternates: { canonical: `${baseUrl}/corporate` },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
 };
 
 export default async function Page() {

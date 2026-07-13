@@ -2,6 +2,7 @@
 import AuditAILanding from '@/components/landing/AuditAILanding';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Wöchentlicher Security-Bericht für Ihr Repo | SODU AuditAI',
   description:
     'Jeden Montag ein sauberes PDF: Schwachstellen, Trend, fertige Fixes. Der Security-Wochenbericht für moderne Entwicklungsteams.',

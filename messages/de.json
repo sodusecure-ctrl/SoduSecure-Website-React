@@ -5,7 +5,6 @@
     "chooseServices": "Wählen Sie Ihre Dienstleistungen",
     "about": "Über uns",
     "caseStudiesBlogs": "Fallstudien & Blogs",
-    "careers": "Karriere",
     "contact": "Kontakt",
     "requestPentest": "Kosten berechnen",
     "language": "Sprache",
@@ -250,7 +249,6 @@
         "links": [
           "Über uns",
           "Unser Team",
-          "Karriere",
           "Blog",
           "Kontakt"
         ]
@@ -4552,94 +4550,6 @@
         "industries": {
           "question": "Welche Branchen bedienen Sie?",
           "answer": "Wir arbeiten mit Kunden in allen Branchen zusammen, einschließlich Finanzen, Gesundheitswesen, SaaS, E-Commerce und mehr."
-        }
-      }
-    }
-  },
-  "careers": {
-    "hero": {
-      "badge": "Treten Sie unserem Team bei",
-      "title": "Die Zukunft der Cybersicherheit gestalten",
-      "description": "Treten Sie SodoSecure bei und arbeiten Sie mit einem talentierten Team von Sicherheitsexperten zusammen, um Organisationen weltweit zu schützen."
-    },
-    "whyWorkWithUs": {
-      "title": "Warum bei uns arbeiten",
-      "description": "Wir bieten einen wettbewerbsfähigen und integrativen Arbeitsplatz, an dem Sicherheitsfachleute gedeihen können.",
-      "benefits": {
-        "cuttingEdgeWork": {
-          "title": "Modernste Arbeiten",
-          "description": "Arbeiten Sie an den neuesten Sicherheitsherausforderungen und Technologien in der Branche."
-        },
-        "continuousLearning": {
-          "title": "Kontinuierliches Lernen",
-          "description": "Zugang zu Schulungen, Zertifizierungen und Konferenzen zur Weiterentwicklung Ihrer Fähigkeiten."
-        },
-        "workLifeBalance": {
-          "title": "Work-Life-Balance",
-          "description": "Flexible Arbeitszeiten und Remote-Optionen für ein gesundes Gleichgewicht."
-        },
-        "collaborativeCulture": {
-          "title": "Kooperative Kultur",
-          "description": "Arbeiten Sie mit talentierten Fachleuten zusammen, die leidenschaftlich für Sicherheit sind."
-        },
-        "competitiveBenefits": {
-          "title": "Wettbewerbsfähige Leistungen",
-          "description": "Wettbewerbsfähiges Gehalt, Krankenversicherung und weitere Vorteile."
-        },
-        "makeAnImpact": {
-          "title": "Einen Unterschied machen",
-          "description": "Helfen Sie Organisationen, ihre kritischen Vermögenswerte und vertraulichen Daten zu schützen."
-        }
-      }
-    },
-    "openPositions": {
-      "title": "Offene Stellen",
-      "description": "Positionen verfügbar",
-      "viewDetails": "Details ansehen",
-      "positions": {
-        "seniorPenetrationTester": {
-          "title": "Senior-Penetrationstester",
-          "type": "Vollzeit",
-          "location": "Berlin / Remote",
-          "description": "Leiten Sie Penetrationstestprojekte und mentorieren Sie jüngere Teamkollegen. Sie arbeiten an komplexen Sicherheitsbewertungen für Unternehmenskunden."
-        },
-        "juniorPenetrationTester": {
-          "title": "Junior-Penetrationstester",
-          "type": "Vollzeit",
-          "location": "Berlin",
-          "description": "Starten Sie Ihre Karriere in Offensive Security mit umfassender Anleitung und praktischer Erfahrung."
-        },
-        "werkstudentPenetrationTester": {
-          "title": "Werkstudent Penetrationstester",
-          "type": "Teilzeit",
-          "location": "Berlin / Remote",
-          "description": "Sammeln Sie praktische Erfahrung in der Cybersicherheit während Ihres Studiums. Unterstützen Sie unser Team bei Penetrationstests und Sicherheitsbewertungen."
-        }
-      }
-    },
-    "cta": {
-      "title": "Interessiert?",
-      "description": "Sende deine Bewerbung an:",
-      "email": "info@sodusecure.com"
-    },
-    "applicationProcess": {
-      "title": "Unser Bewerbungsprozess",
-      "steps": {
-        "submitApplication": {
-          "title": "Senden Sie Ihre Bewerbung",
-          "description": "Senden Sie uns Ihren Lebenslauf, Ihr Portfolio und ein kurzes Anschreiben, das Ihr Interesse erklärt."
-        },
-        "technicalInterview": {
-          "title": "Technisches Gespräch",
-          "description": "Besprechen Sie Ihre technischen Fähigkeiten und Erfahrung in einer fokussierten technischen Bewertung."
-        },
-        "teamInterview": {
-          "title": "Team-Gespräch",
-          "description": "Treffen Sie sich mit unserem Team, um die Kulturpassung und Ihre Karriereziele zu besprechen."
-        },
-        "offerOnboarding": {
-          "title": "Angebot & Onboarding",
-          "description": "Erhalten Sie ein Angebot und beginnen Sie Ihre Onboarding-Reise mit SodoSecure."
         }
       }
     }

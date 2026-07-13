@@ -217,7 +217,7 @@ function getPentestCopy(de: boolean): BrandCopy {
         methodLabel: 'Methodik',
         methodHeadline: 'Vier Phasen. Ein klarer Plan.',
         methodFullLink: 'Vollständig ansehen →',
-        methodLinkHref: '/pentest',
+        methodLinkHref: '/penetration-testing',
         steps: [
           { n: '01', t: 'Scoping', d: 'Ziele, Systeme und Risikoschwerpunkte gemeinsam definieren.', icon: <Target className="h-5 w-5" /> },
           { n: '02', t: 'Recon', d: 'Aufklärung, Mapping und Identifikation der Angriffsflächen.', icon: <Layers className="h-5 w-5" /> },
@@ -234,7 +234,7 @@ function getPentestCopy(de: boolean): BrandCopy {
         sampleHeadline: 'Klarer Bericht. Fix-Begleitung.',
         sampleSub: 'Executive Summary für die Geschäftsleitung. Technischer Anhang mit reproduzierbaren PoCs für Ihr Dev-Team.',
         samplePrimary: 'Beispielbericht ansehen',
-        samplePrimaryHref: '/pentest',
+        samplePrimaryHref: '/penetration-testing',
         sampleSecondary: 'Termin vereinbaren',
         sampleSecondaryHref: '/contact',
         findingId: 'Finding #P-2026-022',
@@ -319,7 +319,7 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
         methodLabel: 'Methodology',
         methodHeadline: 'Four phases. One clear plan.',
         methodFullLink: 'See full page →',
-        methodLinkHref: '/pentest',
+        methodLinkHref: '/penetration-testing',
         steps: [
           { n: '01', t: 'Scoping', d: 'Targets, systems and risk priorities defined together.', icon: <Target className="h-5 w-5" /> },
           { n: '02', t: 'Recon', d: 'Reconnaissance, mapping and attack-surface identification.', icon: <Layers className="h-5 w-5" /> },
@@ -336,7 +336,7 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
         sampleHeadline: 'Clear report. Fix support.',
         sampleSub: 'Executive summary for leadership. Technical appendix with reproducible PoCs for your dev team.',
         samplePrimary: 'See sample report',
-        samplePrimaryHref: '/pentest',
+        samplePrimaryHref: '/penetration-testing',
         sampleSecondary: 'Book a call',
         sampleSecondaryHref: '/contact',
         findingId: 'Finding #P-2026-022',
@@ -778,7 +778,7 @@ export default function HomeClient() {
                   {s.pentestCardCtaPrimary} <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/pentest"
+                  href="/penetration-testing"
                   className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:border-white/20"
                 >
                   {s.pentestCardCtaSecondary}
@@ -933,7 +933,7 @@ export default function HomeClient() {
                 <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">Preise & Anbieter</h3>
                 <ul className="mt-4 space-y-2.5 text-sm text-white/65">
                   <li><Link href="/penetration-testing-anbieter" className="hover:text-white">Pentest-Anbieter mit Festpreis ab 2.500 €</Link></li>
-                  <li><Link href="/pentest-preis" className="hover:text-white">Was kostet ein Penetrationstest</Link></li>
+                  <li><Link href="/pentest-kosten" className="hover:text-white">Was kostet ein Penetrationstest</Link></li>
                   <li><Link href="/pentest-kosten" className="hover:text-white">Pentest-Kosten im Überblick</Link></li>
                   <li><Link href="/pentest-berlin" className="hover:text-white">Penetrationstest in Berlin</Link></li>
                   <li><Link href="/penetrationstest-deutschland" className="hover:text-white">Penetrationstest Deutschland</Link></li>

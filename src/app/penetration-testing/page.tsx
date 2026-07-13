@@ -584,8 +584,8 @@ export default function PenetrationTestingPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { href: "/penetration-testing-service", title: "Pentest Service", desc: "Professioneller Penetration Testing Service – Festpreis, OWASP-konform.", badge: "Service", badgeColor: "bg-[#FF3B30]" },
-              { href: "/pentest-angebot", title: "Pentest Angebot", desc: "Festpreis-Angebot für Ihren Penetrationstest in 24 Stunden.", badge: "Angebot", badgeColor: "bg-green-600" },
+              { href: "/penetration-testing", title: "Pentest Service", desc: "Professioneller Penetration Testing Service – Festpreis, OWASP-konform.", badge: "Service", badgeColor: "bg-[#FF3B30]" },
+              { href: "/pentest-kosten", title: "Pentest Angebot", desc: "Festpreis-Angebot für Ihren Penetrationstest in 24 Stunden.", badge: "Angebot", badgeColor: "bg-green-600" },
               { href: "/pentest-berlin/kosten", title: "Pentest Kosten", desc: "Alle Preisfaktoren transparent erklärt – ab 1.499 €.", badge: "Preise", badgeColor: "bg-blue-600" },
               { href: "/pentest-certification", title: "Pentest Zertifizierung", desc: "Warum zertifizierte Pentester wichtig sind – OSCP, CEH & mehr.", badge: "Zertifizierung", badgeColor: "bg-purple-600" },
               { href: "/services/web-application-testing", title: "Web App Pentest", desc: "OWASP Top 10, Business Logic, Auth Bypasses – manuelle Web-Tests.", badge: "Web", badgeColor: "bg-orange-600" },

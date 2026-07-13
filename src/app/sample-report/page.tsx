@@ -5,6 +5,7 @@ import { ArrowRight, Download, ExternalLink, FileText, GitBranch } from 'lucide-
 import { SectionLabel, SectionLabelDark } from '@/components/landing/ui';
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'Beispielbericht - Sodu AuditAI',
   description:
     'Vorschau eines wöchentlichen Sodu-AuditAI-Berichts. Executive Summary, priorisierte Befunde, fertige Fixes - DE & EN.',
