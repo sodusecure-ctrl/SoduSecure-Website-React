@@ -6,50 +6,68 @@ import { getCertificate, SCORE_META, type Certificate } from "@/data/certificate
  * und auch in React/JSX (keine Inline-Style-Strings nötig).
  */
 
+const FONT = "'Segoe UI',system-ui,-apple-system,sans-serif";
+
 function badgeSvg(cert: Certificate): string {
   const meta = SCORE_META[cert.category];
   const scoreDisplay = cert.score.toFixed(1).replace(".", ",");
   const year = new Date(cert.date).getFullYear();
   const label = meta.label.toUpperCase();
-  const pillWidth = Math.max(72, label.length * 7 + 28);
-  const pillX = (178 - pillWidth) / 2;
+  const pillWidth = Math.max(76, label.length * 7.5 + 30);
+  const pillX = (200 - pillWidth) / 2;
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="178" height="222" viewBox="0 0 178 222" role="img" aria-label="Sodu Secure Security-Zertifikat ${cert.id}: ${meta.label}, Score ${scoreDisplay}">
+  // Score-Ring: 1,0 = voll, 5,0 = leer
+  const progress = Math.min(1, Math.max(0.05, (5 - cert.score) / 4));
+  const r = 34;
+  const circumference = 2 * Math.PI * r;
+  const dash = (progress * circumference).toFixed(1);
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="256" viewBox="0 0 200 256" role="img" aria-label="Sodu Secure Security-Zertifikat ${cert.id}: ${meta.label}, Score ${scoreDisplay}">
   <title>Sodu Secure Security-Zertifikat ${cert.id} – ${meta.label} (${scoreDisplay})</title>
   <defs>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.10"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.14"/>
     </filter>
+    <linearGradient id="hdr" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E01010"/>
+      <stop offset="1" stop-color="#9E0000"/>
+    </linearGradient>
   </defs>
 
   <!-- Karte -->
-  <rect x="5" y="4" width="168" height="212" rx="14" fill="#ffffff" stroke="#E2E8F0" stroke-width="1" filter="url(#shadow)"/>
-  <!-- roter Akzent oben -->
-  <rect x="5" y="4" width="168" height="5" rx="2.5" fill="#cc0000"/>
+  <rect x="4" y="4" width="192" height="248" rx="16" fill="#ffffff" stroke="#E5E7EB" stroke-width="1" filter="url(#shadow)"/>
 
-  <!-- Logo -->
-  <g transform="translate(50,22)">
-    <rect width="30" height="30" rx="7" fill="#cc0000"/>
-    <path d="M15 3 L24.6 7.8 L24.6 17.4 C24.6 22.2 19.5 26.4 15 27.6 C10.5 26.4 5.4 22.2 5.4 17.4 L5.4 7.8 Z" fill="#ffffff"/>
-    <text x="15" y="20.5" text-anchor="middle" font-size="12" font-weight="900" fill="#cc0000" font-family="'Segoe UI',system-ui,sans-serif">S</text>
+  <!-- Header-Band -->
+  <path d="M20 4 h160 a16 16 0 0 1 16 16 v42 h-192 v-42 a16 16 0 0 1 16 -16 z" fill="url(#hdr)"/>
+  <g transform="translate(18,17)">
+    <path d="M16 1 L29 7 L29 19 C29 26 22.5 31.5 16 33 C9.5 31.5 3 26 3 19 L3 7 Z" fill="#ffffff"/>
+    <text x="16" y="23" text-anchor="middle" font-size="14" font-weight="900" fill="#C00000" font-family="${FONT}">S</text>
   </g>
-  <text x="88" y="35" font-size="14" font-weight="700" fill="#cc0000" font-family="'Segoe UI',system-ui,sans-serif">sodu</text>
-  <text x="88" y="47" font-size="10" fill="#64748B" font-family="'Segoe UI',system-ui,sans-serif">Secure</text>
+  <text x="58" y="32" font-size="13" font-weight="800" letter-spacing="0.5" fill="#ffffff" font-family="${FONT}">SODU SECURE</text>
+  <text x="58" y="46" font-size="7.5" letter-spacing="1.4" fill="#ffffff" fill-opacity="0.8" font-family="${FONT}">GEPRÜFTE IT-SICHERHEIT</text>
 
-  <!-- Score -->
-  <text x="89" y="76" text-anchor="middle" font-size="9" letter-spacing="1.6" fill="#94A3B8" font-family="'Segoe UI',system-ui,sans-serif">SECURITY SCORE</text>
-  <text x="89" y="112" text-anchor="middle" font-size="36" font-weight="800" fill="${meta.color}" font-family="'Segoe UI',system-ui,sans-serif">${scoreDisplay}</text>
-  <text x="89" y="128" text-anchor="middle" font-size="10" fill="#94A3B8" font-family="'Segoe UI',system-ui,sans-serif">von 1,0 (Bestwert)</text>
+  <!-- Caption -->
+  <text x="100" y="88" text-anchor="middle" font-size="9" letter-spacing="1.8" fill="#94A3B8" font-family="${FONT}">SECURITY SCORE</text>
+
+  <!-- Score-Ring -->
+  <g transform="rotate(-90 100 138)">
+    <circle cx="100" cy="138" r="${r}" fill="none" stroke="#EEF2F7" stroke-width="7"/>
+    <circle cx="100" cy="138" r="${r}" fill="none" stroke="${meta.color}" stroke-width="7" stroke-linecap="round"
+      stroke-dasharray="${dash} ${circumference.toFixed(1)}"/>
+  </g>
+  <text x="100" y="144" text-anchor="middle" font-size="27" font-weight="800" fill="${meta.color}" font-family="${FONT}">${scoreDisplay}</text>
+  <text x="100" y="158" text-anchor="middle" font-size="8.5" fill="#94A3B8" font-family="${FONT}">von 1,0</text>
 
   <!-- Kategorie-Pill -->
-  <rect x="${pillX}" y="139" width="${pillWidth}" height="22" rx="11" fill="${meta.bg}" stroke="${meta.border}" stroke-opacity="0.35"/>
-  <text x="89" y="154" text-anchor="middle" font-size="9.5" font-weight="700" letter-spacing="0.6" fill="${meta.color}" font-family="'Segoe UI',system-ui,sans-serif">${label}</text>
+  <rect x="${pillX}" y="186" width="${pillWidth}" height="24" rx="12" fill="${meta.bg}" stroke="${meta.border}" stroke-opacity="0.4"/>
+  <text x="100" y="202" text-anchor="middle" font-size="10" font-weight="700" letter-spacing="0.8" fill="${meta.color}" font-family="${FONT}">${label}</text>
 
-  <text x="89" y="177" text-anchor="middle" font-size="10" fill="#94A3B8" font-family="'Segoe UI',system-ui,sans-serif">Pentest ${year} · ${cert.id}</text>
+  <text x="100" y="224" text-anchor="middle" font-size="9" fill="#94A3B8" font-family="${FONT}">Pentest ${year} · ${cert.id}</text>
 
   <!-- Trenner + Verifizieren -->
-  <line x1="21" y1="188" x2="157" y2="188" stroke="#F1F5F9" stroke-width="1"/>
-  <text x="89" y="206" text-anchor="middle" font-size="10" font-weight="600" fill="#cc0000" font-family="'Segoe UI',system-ui,sans-serif">✓ Zertifikat verifizieren</text>
+  <line x1="24" y1="232" x2="176" y2="232" stroke="#F1F5F9" stroke-width="1"/>
+  <path d="M55 242.5 l3.2 3.2 l6 -6.4" stroke="#C00000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="71" y="246" font-size="9.5" font-weight="600" fill="#C00000" font-family="${FONT}">Zertifikat verifizieren</text>
 </svg>`;
 }
 

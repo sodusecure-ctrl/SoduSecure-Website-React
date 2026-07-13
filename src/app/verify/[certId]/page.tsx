@@ -95,7 +95,7 @@ function getBadgeCode(cert: Certificate): string {
   const meta = SCORE_META[cert.category];
   const scoreDisplay = cert.score.toFixed(1).replace(".", ",");
   return `<a href="https://sodusecure.com/verify/${cert.id}" target="_blank" rel="noopener noreferrer">
-  <img src="https://sodusecure.com/badge/${cert.id}" width="178" height="222" loading="lazy" alt="Sodu Secure Security-Zertifikat ${cert.id}: ${meta.label} (${scoreDisplay})" />
+  <img src="https://sodusecure.com/badge/${cert.id}" width="200" height="256" loading="lazy" alt="Sodu Secure Security-Zertifikat ${cert.id}: ${meta.label} (${scoreDisplay})" />
 </a>`;
 }
 
@@ -484,8 +484,8 @@ export default async function VerifyPage({
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`/badge/${cert.id}`}
-                width={178}
-                height={222}
+                width={200}
+                height={256}
                 alt={`Badge-Vorschau für ${cert.id}`}
                 className="shrink-0 rounded-xl"
               />
