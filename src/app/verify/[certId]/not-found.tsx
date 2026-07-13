@@ -3,7 +3,7 @@ import { ShieldX } from "lucide-react";
 
 export default function CertNotFound() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center justify-center px-4 text-center gap-6">
+    <main className="verify-page min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center justify-center px-4 text-center gap-6">
       <div className="p-4 rounded-full bg-red-900/20 border border-red-800/40">
         <ShieldX size={48} className="text-red-500" />
       </div>

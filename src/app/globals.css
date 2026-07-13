@@ -676,6 +676,23 @@ html.light .to-\[\#111827\], html.light .to-\[\#1a0a0a\] {
 }
 
 /* ============================================================= */
+/* Verify-Seiten (Zertifikat): Status-Banner, Findings & Pills   */
+/* nutzen dunkle *-900/30-Töne, die generisch nicht abgedeckt    */
+/* sind — hier auf helle Pendants mit kräftiger Schrift mappen.  */
+/* ============================================================= */
+html.light .verify-page [class*="bg-green-900"] { background-color: #E6F5EC !important; }
+html.light .verify-page [class*="border-green-700"] { border-color: rgba(26, 122, 58, 0.4) !important; }
+html.light .verify-page .text-green-300, html.light .verify-page .text-green-400 { color: #1A7A3A !important; }
+html.light .verify-page [class*="bg-yellow-900"] { background-color: #FFF7E0 !important; }
+html.light .verify-page [class*="border-yellow-700"] { border-color: rgba(163, 109, 0, 0.4) !important; }
+html.light .verify-page .text-yellow-300, html.light .verify-page .text-yellow-400 { color: #A36D00 !important; }
+html.light .verify-page [class*="bg-red-900"] { background-color: #FDE8E8 !important; }
+html.light .verify-page [class*="border-red-800"] { border-color: rgba(220, 38, 38, 0.3) !important; }
+html.light .verify-page .text-red-300 { color: #B91C1C !important; }
+html.light .verify-page .text-gray-600 { color: #94A3B8 !important; }
+html.light .verify-page pre { color: #166534 !important; }
+
+/* ============================================================= */
 /* Corporate pages opt out of the inversion (already light by    */
 /* design with intentional navy accent sections).               */
 /* ============================================================= */

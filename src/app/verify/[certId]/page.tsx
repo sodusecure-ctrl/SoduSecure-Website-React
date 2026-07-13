@@ -38,7 +38,7 @@ export async function generateMetadata({
   return {
     title: `Security-Zertifikat ${cert.id} – ${cert.company} | Sodu Secure`,
     description: `${cert.company} hat einen verifizierten Penetrationstest durch Sodu Secure bestanden. Bewertung: ${meta.label} (${cert.score.toFixed(1).replace(".", ",")}). Ausgestellt am ${new Date(cert.date).toLocaleDateString("de-DE")}.`,
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: true },
     openGraph: {
       title: `${cert.company} – Sicherheitszertifikat ${meta.label}`,
       description: `Verifizierter Pentest von Sodu Secure. Score: ${cert.score.toFixed(1).replace(".", ",")} (${meta.label})`,
@@ -88,39 +88,14 @@ function FindingBar({
 }
 
 // ── Badge embed code helper ───────────────────────────────────────────────────
+// Bewusst nur <a> + <img> ohne style-Attribute: der Schnipsel funktioniert damit
+// unverändert in HTML, CMS-Baukästen UND React/JSX (style-Strings würden dort
+// eine Client-Exception werfen).
 function getBadgeCode(cert: Certificate): string {
   const meta = SCORE_META[cert.category];
   const scoreDisplay = cert.score.toFixed(1).replace(".", ",");
-  const year = new Date(cert.date).getFullYear();
-  return `<!-- SoduSecure Security Badge – sodusecure.com/verify/${cert.id} -->
-<a href="https://sodusecure.com/verify/${cert.id}"
-   target="_blank" rel="noopener"
-   style="display:inline-flex;flex-direction:column;align-items:center;
-          background:#fff;border:2px solid #cc0000;border-radius:10px;
-          padding:12px 16px 10px;text-decoration:none;color:#1a1a1a;
-          font-family:'Segoe UI',system-ui,sans-serif;min-width:130px;">
-  <div style="display:flex;align-items:center;gap:7px;margin-bottom:8px;">
-    <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="100" height="100" rx="20" fill="#cc0000"/>
-      <path d="M50 10 L82 26 L82 58 C82 74 65 88 50 92 C35 88 18 74 18 58 L18 26 Z" fill="white"/>
-      <text x="50" y="66" text-anchor="middle" font-size="38" font-weight="900" fill="#cc0000" font-family="Segoe UI,sans-serif">S</text>
-    </svg>
-    <div style="font-size:13px;font-weight:700;color:#cc0000;line-height:1.2;">
-      sodu<span style="display:block;font-weight:400;color:#444;font-size:11px;">Secure</span>
-    </div>
-  </div>
-  <div style="font-size:10px;color:#888;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px;">Security Score</div>
-  <div style="font-size:24px;font-weight:700;color:${meta.color};line-height:1;">${scoreDisplay}</div>
-  <div style="font-size:12px;color:#aaa;margin-bottom:8px;">von 1,0</div>
-  <div style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;margin-bottom:6px;
-              letter-spacing:.05em;text-transform:uppercase;background:${meta.bg};color:${meta.color};">
-    ${meta.label}
-  </div>
-  <div style="font-size:10px;color:#bbb;">Pentest ${year}</div>
-  <div style="margin-top:8px;font-size:10px;color:#cc0000;border-top:1px solid #f0e0e0;
-              padding-top:7px;width:100%;text-align:center;letter-spacing:.04em;">
-    ✓ Zertifikat verifizieren
-  </div>
+  return `<a href="https://sodusecure.com/verify/${cert.id}" target="_blank" rel="noopener noreferrer">
+  <img src="https://sodusecure.com/badge/${cert.id}" width="178" height="222" loading="lazy" alt="Sodu Secure Security-Zertifikat ${cert.id}: ${meta.label} (${scoreDisplay})" />
 </a>`;
 }
 
@@ -166,7 +141,7 @@ export default async function VerifyPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <main className="min-h-screen bg-[#0a0a0a] text-white">
+      <main className="verify-page min-h-screen bg-[#0a0a0a] text-white">
         {/* ── Top bar ── */}
         <div className="border-b border-white/10 bg-[#111]">
           <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -501,11 +476,20 @@ export default async function VerifyPage({
           <div className="bg-[#111] border border-white/10 rounded-2xl p-6">
             <h2 className="text-base font-bold text-white mb-1">Badge Embed-Code</h2>
             <p className="text-xs text-gray-500 mb-4">
-              Diesen HTML-Code in die Website einbetten – der Badge verlinkt automatisch auf diese
-              Verifikationsseite.
+              Diesen Code in die Website einbetten – der Badge wird als Bild geladen und verlinkt
+              automatisch auf diese Verifikationsseite. Funktioniert in HTML, WordPress, Baukästen
+              und unverändert auch in React/JSX.
             </p>
-            <div className="relative">
-              <pre className="text-xs text-green-300 bg-[#0a0a0a] border border-white/10 rounded-xl p-4 overflow-x-auto leading-relaxed whitespace-pre-wrap">
+            <div className="flex flex-col md:flex-row gap-6 items-start">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/badge/${cert.id}`}
+                width={178}
+                height={222}
+                alt={`Badge-Vorschau für ${cert.id}`}
+                className="shrink-0 rounded-xl"
+              />
+              <pre className="flex-1 w-full text-xs text-green-300 bg-[#0a0a0a] border border-white/10 rounded-xl p-4 overflow-x-auto leading-relaxed whitespace-pre-wrap">
                 {embedCode}
               </pre>
             </div>
