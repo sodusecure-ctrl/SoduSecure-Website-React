@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "dsgvo-penetrationstest",
+  sourcesIntro: [
+    "Art. 32 Abs. 1 lit. d DSGVO fordert ein „Verfahren zur regelmäßigen Überprüfung, Bewertung und Evaluierung der Wirksamkeit der technischen und organisatorischen Maßnahmen“. Penetrationstests sind das etablierte Instrument, um diese Wirksamkeit zu belegen – auch gegenüber Aufsichtsbehörden nach einem Vorfall."
+  ],
+  sources: [
+    {
+      "label": "EUR-Lex: Verordnung (EU) 2016/679 (DSGVO), Art. 32",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    },
+    {
+      "label": "BSI – Bundesamt für Sicherheit in der Informationstechnik",
+      "url": "https://www.bsi.bund.de/"
+    }
+  ],
   badgeIcon: "lock",
   badgeText: "DSGVO Art. 32 · Datenschutz · Art. 83",
   title: "DSGVO-Penetrationstest",

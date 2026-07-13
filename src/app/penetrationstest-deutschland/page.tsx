@@ -10,6 +10,28 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "penetrationstest-deutschland",
+  sourcesIntro: [
+    "Laut BSI-Lagebericht bleibt die IT-Sicherheitslage in Deutschland angespannt: Ransomware, Phishing und die Ausnutzung ungepatchter Schwachstellen zählen zu den größten Bedrohungen für Unternehmen jeder Größe.",
+    "Unsere Penetrationstests folgen anerkannten Methodiken: dem OWASP Web Security Testing Guide für Anwendungen, NIST SP 800-115 als Prüfrahmen und MITRE ATT&CK zur Abbildung realer Angreifer-Taktiken."
+  ],
+  sources: [
+    {
+      "label": "BSI-Lagebericht zur IT-Sicherheit in Deutschland",
+      "url": "https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Lagebericht/lagebericht_node.html"
+    },
+    {
+      "label": "OWASP Web Security Testing Guide",
+      "url": "https://owasp.org/www-project-web-security-testing-guide/"
+    },
+    {
+      "label": "NIST SP 800-115 (Security Testing Guide)",
+      "url": "https://csrc.nist.gov/pubs/sp/800/115/final"
+    },
+    {
+      "label": "MITRE ATT&CK",
+      "url": "https://attack.mitre.org/"
+    }
+  ],
   badgeIcon: "shield",
   badgeText: "Penetrationstest · Deutschlandweit",
   title: "Penetrationstest Deutschland",

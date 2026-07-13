@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "tisax",
+  sourcesIntro: [
+    "TISAX wird von der ENX Association im Auftrag des VDA betrieben und basiert auf dem ISA-Katalog (Information Security Assessment), der sich eng an ISO/IEC 27001 orientiert. Penetrationstests belegen die Wirksamkeit der technischen Maßnahmen für das Assessment."
+  ],
+  sources: [
+    {
+      "label": "ENX Association – TISAX",
+      "url": "https://enx.com/tisax/"
+    },
+    {
+      "label": "ISO/IEC 27001 – offizielle Normseite",
+      "url": "https://www.iso.org/standard/27001"
+    }
+  ],
   badgeIcon: "factory",
   badgeText: "TISAX · VDA-ISA · ENX Association",
   title: "TISAX",

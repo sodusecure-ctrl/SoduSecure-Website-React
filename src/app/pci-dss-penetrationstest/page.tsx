@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "pci-dss-penetrationstest",
+  sourcesIntro: [
+    "PCI DSS 4.0 schreibt in Requirement 11.4 interne und externe Penetrationstests mindestens jährlich sowie nach wesentlichen Infrastruktur- oder Anwendungsänderungen vor – inklusive Tests der Netzwerk-Segmentierung."
+  ],
+  sources: [
+    {
+      "label": "PCI Security Standards Council",
+      "url": "https://www.pcisecuritystandards.org/"
+    },
+    {
+      "label": "OWASP Web Security Testing Guide",
+      "url": "https://owasp.org/www-project-web-security-testing-guide/"
+    }
+  ],
   badgeIcon: "banknote",
   badgeText: "PCI DSS v4.0 · Requirement 11.4",
   title: "PCI DSS Penetrationstest",

@@ -10,6 +10,20 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "tlpt",
+  sourcesIntro: [
+    "Threat-Led Penetration Testing ist in Art. 26–27 der DORA-Verordnung geregelt: bedeutende Finanzunternehmen müssen mindestens alle drei Jahre bedrohungsorientierte Tests an kritischen Live-Systemen durchführen.",
+    "TLPT bildet reale Angreifer-Taktiken ab, wie sie im MITRE-ATT&CK-Framework dokumentiert sind – von Initial Access bis Exfiltration."
+  ],
+  sources: [
+    {
+      "label": "EUR-Lex: Verordnung (EU) 2022/2554 (DORA)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+    },
+    {
+      "label": "MITRE ATT&CK",
+      "url": "https://attack.mitre.org/"
+    }
+  ],
   badgeIcon: "target",
   badgeText: "TLPT · DORA Art. 26-27 · TIBER-EU",
   title: "TLPT",

@@ -1,5 +1,6 @@
 "use client";
 
+import TrustedSources from '@/components/common/TrustedSources';
 import { useState } from "react";
 import Link from "next/link";
 import {
@@ -143,6 +144,18 @@ export default function CyberSecurityCheckPage() {
           </div>
         </div>
       </section>
+
+      <TrustedSources
+        title="Warum ein strukturierter Check zählt"
+        paragraphs={[
+          'Laut BSI-Lagebericht bleibt die Bedrohungslage für Unternehmen in Deutschland angespannt – Ransomware und die Ausnutzung ungepatchter Schwachstellen zählen zu den größten Risiken. Ein strukturierter Security-Check nach OWASP- und NIST-Methodik zeigt objektiv, wo Ihr Unternehmen wirklich steht, statt nur eine Scan-Liste zu liefern.',
+        ]}
+        sources={[
+          { label: 'BSI-Lagebericht zur IT-Sicherheit in Deutschland', url: 'https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Lagebericht/lagebericht_node.html' },
+          { label: 'OWASP Top 10', url: 'https://owasp.org/www-project-top-ten/' },
+          { label: 'NIST SP 800-115 (Security Testing Guide)', url: 'https://csrc.nist.gov/pubs/sp/800/115/final' },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-16 border-t border-white/10 bg-gradient-to-br from-red-900/20 via-[#0A0A0B] to-[#0A0A0B]">

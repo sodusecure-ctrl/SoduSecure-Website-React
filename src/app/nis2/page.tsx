@@ -10,6 +10,20 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "nis2",
+  sourcesIntro: [
+    "Artikel 21 Abs. 2 der NIS2-Richtlinie verlangt von betroffenen Einrichtungen ausdrücklich „Konzepte und Verfahren zur Bewertung der Wirksamkeit von Risikomanagementmaßnahmen im Bereich der Cybersicherheit“. Regelmäßige technische Prüfungen wie Penetrationstests sind der anerkannte Weg, diese Wirksamkeit gegenüber Aufsicht und Geschäftsführung nachzuweisen.",
+    "Die Bedrohungslage bleibt laut BSI-Lagebericht angespannt – Ransomware und die Ausnutzung ungepatchter Schwachstellen zählen zu den größten Risiken für Unternehmen in Deutschland."
+  ],
+  sources: [
+    {
+      "label": "EUR-Lex: Richtlinie (EU) 2022/2555 (NIS2)",
+      "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+    },
+    {
+      "label": "BSI-Lagebericht zur IT-Sicherheit in Deutschland",
+      "url": "https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Lagebericht/lagebericht_node.html"
+    }
+  ],
   badgeIcon: "network",
   badgeText: "NIS2 · EU 2022/2555 · NIS2UmsuCG",
   title: "NIS2",

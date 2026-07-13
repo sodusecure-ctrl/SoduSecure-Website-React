@@ -1,5 +1,6 @@
 "use client";
 
+import TrustedSources from '@/components/common/TrustedSources';
 import { useState } from "react";
 import Link from "next/link";
 import LeadConversionSection from "@/components/landing/LeadConversionSection";
@@ -450,6 +451,19 @@ export default function PenetrationstestAnbieterPage() {
           </div>
         </div>
       </section>
+
+      <TrustedSources
+        title="Woran Sie professionelle Methodik erkennen"
+        paragraphs={[
+          'Seriöse Penetrationstest Anbieter arbeiten nach dokumentierten Methodiken statt nur mit automatisierten Scans: Der OWASP Web Security Testing Guide und NIST SP 800-115 definieren, wie professionelle Sicherheitstests ablaufen, und MITRE ATT&CK katalogisiert die realen Angreifer-Taktiken, gegen die getestet wird.',
+          'Fragen Sie Anbieter deshalb konkret nach Methodik, Zertifizierungen der Tester (z. B. OSCP) und einem geschwärzten Beispielbericht – das trennt Qualität zuverlässig von Scan-Resellern.',
+        ]}
+        sources={[
+          { label: 'OWASP Web Security Testing Guide', url: 'https://owasp.org/www-project-web-security-testing-guide/' },
+          { label: 'NIST SP 800-115 (Security Testing Guide)', url: 'https://csrc.nist.gov/pubs/sp/800/115/final' },
+          { label: 'MITRE ATT&CK', url: 'https://attack.mitre.org/' },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-[#FF3B30]/15 via-[#0A0A0B] to-[#0A0A0B] border-t border-white/10">

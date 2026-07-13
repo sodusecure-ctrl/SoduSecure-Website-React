@@ -1,5 +1,6 @@
 "use client";
 
+import TrustedSources from '@/components/common/TrustedSources';
 import { useState } from "react";
 import Link from "next/link";
 import {
@@ -233,6 +234,17 @@ export default function RedTeamAssessmentPage() {
           </div>
         </div>
       </section>
+
+      <TrustedSources
+        title="Nach realen Angreifer-Taktiken"
+        paragraphs={[
+          'Red-Team-Assessments simulieren realistische Angriffe entlang der im MITRE-ATT&CK-Framework dokumentierten Taktiken – von Initial Access über Lateral Movement bis zur Zielerreichung. Für den Finanzsektor schreibt die DORA-Verordnung solche bedrohungsorientierten Tests (TLPT) für bedeutende Institute sogar verbindlich vor.',
+        ]}
+        sources={[
+          { label: 'MITRE ATT&CK', url: 'https://attack.mitre.org/' },
+          { label: 'EUR-Lex: Verordnung (EU) 2022/2554 (DORA)', url: 'https://eur-lex.europa.eu/eli/reg/2022/2554/oj' },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-red-900/25 via-[#0A0A0B] to-[#0A0A0B] border-t border-white/10">

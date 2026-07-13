@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "bsi-tr-03161",
+  sourcesIntro: [
+    "Die Technische Richtlinie TR-03161 des BSI definiert Sicherheitsanforderungen an digitale Gesundheitsanwendungen – von der sicheren Datenspeicherung über Kryptografie bis zur Absicherung der Backend-Kommunikation. Für DiGA ist der Nachweis Teil des BfArM-Zulassungsverfahrens."
+  ],
+  sources: [
+    {
+      "label": "BSI – Bundesamt für Sicherheit in der Informationstechnik",
+      "url": "https://www.bsi.bund.de/"
+    },
+    {
+      "label": "OWASP Top 10",
+      "url": "https://owasp.org/www-project-top-ten/"
+    }
+  ],
   badgeIcon: "heart",
   badgeText: "BSI TR-03161 · DiGA & DiPA · § 139e SGB V",
   title: "BSI TR-03161",

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import TrustedSources from "@/components/common/TrustedSources";
 import {
   Shield,
   CheckCircle,
@@ -98,6 +99,9 @@ export interface RegulationContent {
   relatedSubtext?: string;
   ctaTitle?: string;
   ctaText?: string;
+  /** 1–3 belegende Sätze + Links zu offiziellen Quellen (BSI, EUR-Lex, ISO …) */
+  sourcesIntro?: string[];
+  sources?: { label: string; url: string }[];
 }
 
 const SITE_URL = "https://sodusecure.com";
@@ -430,6 +434,15 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
           ))}
         </div>
       </section>
+
+      {/* Offizielle Quellen */}
+      {data.sources && data.sources.length > 0 && (
+        <TrustedSources
+          title="Rechtsgrundlagen & offizielle Quellen"
+          paragraphs={data.sourcesIntro ?? []}
+          sources={data.sources}
+        />
+      )}
 
       {/* CTA */}
       <section className="bg-gradient-to-br from-[#FF3B30] to-[#E5332A] py-16">

@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "dora",
+  sourcesIntro: [
+    "DORA verpflichtet Finanzunternehmen in Art. 24–26 zu einem Programm für Tests der digitalen operationalen Resilienz – von Schwachstellenbewertungen bis zu bedrohungsorientierten Penetrationstests (TLPT), die für bedeutende Institute mindestens alle drei Jahre vorgeschrieben sind."
+  ],
+  sources: [
+    {
+      "label": "EUR-Lex: Verordnung (EU) 2022/2554 (DORA)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+    },
+    {
+      "label": "BSI-Lagebericht zur IT-Sicherheit in Deutschland",
+      "url": "https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Lagebericht/lagebericht_node.html"
+    }
+  ],
   badgeIcon: "banknote",
   badgeText: "DORA · EU 2022/2554 · seit 17.01.2025",
   title: "DORA",

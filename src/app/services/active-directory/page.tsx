@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "services/active-directory",
+  sourcesIntro: [
+    "Angriffe auf Active Directory folgen gut dokumentierten Techniken – von Kerberoasting über Pass-the-Hash bis DCSync. Das MITRE-ATT&CK-Framework katalogisiert diese Taktiken; unsere Tests prüfen Ihre Domäne systematisch dagegen."
+  ],
+  sources: [
+    {
+      "label": "MITRE ATT&CK",
+      "url": "https://attack.mitre.org/"
+    },
+    {
+      "label": "BSI-Lagebericht zur IT-Sicherheit in Deutschland",
+      "url": "https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Lagebericht/lagebericht_node.html"
+    }
+  ],
   badgeIcon: "server",
   badgeText: "Active Directory · Windows-Domäne",
   title: "Active Directory Pentest",

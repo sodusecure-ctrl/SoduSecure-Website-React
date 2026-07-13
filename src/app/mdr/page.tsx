@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "mdr",
+  sourcesIntro: [
+    "Die EU-Medizinprodukteverordnung (MDR) verlangt in Anhang I, dass Software nach dem Stand der Technik entwickelt wird – ausdrücklich einschließlich der Anforderungen an IT-Sicherheit, Schutz vor unbefugtem Zugriff und Risikomanagement über den gesamten Lebenszyklus."
+  ],
+  sources: [
+    {
+      "label": "EUR-Lex: Verordnung (EU) 2017/745 (MDR)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2017/745/oj"
+    },
+    {
+      "label": "BSI – Bundesamt für Sicherheit in der Informationstechnik",
+      "url": "https://www.bsi.bund.de/"
+    }
+  ],
   badgeIcon: "heart",
   badgeText: "MDR · EU 2017/745 · MDCG 2019-16",
   title: "MDR",

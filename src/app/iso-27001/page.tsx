@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "iso-27001",
+  sourcesIntro: [
+    "ISO/IEC 27001:2022 fordert in Control A.8.8 das systematische Management technischer Schwachstellen. Zertifizierungsauditoren akzeptieren aktuelle Penetrationstest-Berichte als Nachweis, dass Schwachstellen identifiziert, bewertet und behandelt werden."
+  ],
+  sources: [
+    {
+      "label": "ISO/IEC 27001 – offizielle Normseite",
+      "url": "https://www.iso.org/standard/27001"
+    },
+    {
+      "label": "OWASP Top 10",
+      "url": "https://owasp.org/www-project-top-ten/"
+    }
+  ],
   badgeIcon: "shield",
   badgeText: "ISO/IEC 27001 · ISMS · International zertifizierbar",
   title: "ISO 27001",

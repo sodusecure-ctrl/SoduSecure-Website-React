@@ -1,5 +1,6 @@
 "use client";
 
+import TrustedSources from '@/components/common/TrustedSources';
 import { useState } from "react";
 import Link from "next/link";
 import {
@@ -286,6 +287,17 @@ export default function PhishingSimulationPage() {
           </div>
         </div>
       </section>
+
+      <TrustedSources
+        title="Phishing in Zahlen und Standards"
+        paragraphs={[
+          'Phishing zählt laut BSI-Lagebericht zu den häufigsten Einfallstoren für Angriffe auf Unternehmen. Im MITRE-ATT&CK-Framework ist Phishing als Standard-Initial-Access-Technik (T1566) dokumentiert – regelmäßige Simulationen mit anschließender Schulung senken die Klickrate im Unternehmen messbar.',
+        ]}
+        sources={[
+          { label: 'BSI-Lagebericht zur IT-Sicherheit in Deutschland', url: 'https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Lagebericht/lagebericht_node.html' },
+          { label: 'MITRE ATT&CK', url: 'https://attack.mitre.org/' },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-red-900/20 via-[#0A0A0B] to-[#0A0A0B] border-t border-white/10">

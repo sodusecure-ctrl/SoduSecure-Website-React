@@ -1,5 +1,6 @@
 "use client";
 
+import TrustedSources from '@/components/common/TrustedSources';
 import { useState } from "react";
 import Link from "next/link";
 import LeadConversionSection from "@/components/landing/LeadConversionSection";
@@ -403,6 +404,18 @@ export default function CybersecurityFirmaPage() {
           </div>
         </div>
       </section>
+
+      <TrustedSources
+        title="Woran Sie eine seriöse Cybersecurity-Firma erkennen"
+        paragraphs={[
+          'Die Auswahl einer Cybersecurity-Firma sollte sich an anerkannten Standards orientieren: Prüfmethodik nach OWASP und NIST SP 800-115, Angreifermodelle nach MITRE ATT&CK und Berichte, die als Nachweis für ISO 27001, NIS2 und DSGVO Art. 32 taugen. Genau danach arbeiten wir – und dokumentieren es in jedem Bericht.',
+        ]}
+        sources={[
+          { label: 'OWASP Web Security Testing Guide', url: 'https://owasp.org/www-project-web-security-testing-guide/' },
+          { label: 'NIST SP 800-115 (Security Testing Guide)', url: 'https://csrc.nist.gov/pubs/sp/800/115/final' },
+          { label: 'MITRE ATT&CK', url: 'https://attack.mitre.org/' },
+        ]}
+      />
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-red-900/20 via-[#0A0A0B] to-[#0A0A0B] border-t border-white/10">

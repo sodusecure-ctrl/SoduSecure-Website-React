@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "bsig",
+  sourcesIntro: [
+    "§ 8a BSIG verpflichtet Betreiber Kritischer Infrastrukturen, angemessene organisatorische und technische Vorkehrungen nach dem Stand der Technik zu treffen und dies dem BSI regelmäßig nachzuweisen. Penetrationstests sind ein anerkannter Bestandteil dieser Nachweisführung."
+  ],
+  sources: [
+    {
+      "label": "BSI – Bundesamt für Sicherheit in der Informationstechnik",
+      "url": "https://www.bsi.bund.de/"
+    },
+    {
+      "label": "EUR-Lex: Richtlinie (EU) 2022/2555 (NIS2)",
+      "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+    }
+  ],
   badgeIcon: "landmark",
   badgeText: "BSIG · KRITIS · § 8a BSIG",
   title: "BSIG",

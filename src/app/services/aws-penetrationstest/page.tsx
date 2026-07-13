@@ -10,6 +10,19 @@ export const metadata: Metadata = {
 
 const data: RegulationContent = {
   slug: "services/aws-penetrationstest",
+  sourcesIntro: [
+    "AWS erlaubt Kunden ausdrücklich Penetrationstests der eigenen Workloads für eine definierte Liste von Services – ohne Voranmeldung, im Rahmen der offiziellen AWS-Pentest-Policy. Unsere Cloud-Tests bewegen sich vollständig innerhalb dieser Regeln."
+  ],
+  sources: [
+    {
+      "label": "AWS – Penetration Testing Policy",
+      "url": "https://aws.amazon.com/security/penetration-testing/"
+    },
+    {
+      "label": "OWASP Web Security Testing Guide",
+      "url": "https://owasp.org/www-project-web-security-testing-guide/"
+    }
+  ],
   badgeIcon: "server",
   badgeText: "AWS · Cloud Penetration Testing",
   title: "AWS Penetrationstest",
