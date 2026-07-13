@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "MDR & Cybersecurity für Medizinprodukte | Sodu Secure",
+  title: "MDR & Cybersecurity für Medizinprodukte",
   description:
     "Was verlangt die MDR (EU 2017/745) zur Cybersicherheit? Security-Tests für Medizinprodukte-Software nach MDCG 2019-16, IEC 62304 & 81001-5-1 – wir unterstützen Hersteller.",
   alternates: { canonical: "/mdr" },

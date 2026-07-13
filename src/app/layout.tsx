@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   alternates: { canonical: '/' },
   title: {
-    default: "Sodu Secure | ihr Cyber-Spezialist",
+    default: "Sodu Secure – zertifizierte Penetrationstests aus Berlin",
     template: "%s | Sodu Secure"
   },
-  description: "Penetrationstests aus Berlin, manuell von OSCP-zertifizierten Hackern. Echte Angriffsketten, reproduzierbare PoCs, klare Fix-Empfehlungen. Festpreis ab 2.500 €.",
+  description: "Penetrationstests von OSCP-zertifizierten Experten aus Berlin. Echte Angriffsketten, klare Fix-Empfehlungen, kostenloser Retest. Festpreis – Angebot in 24 h.",
   keywords: [
     'penetration testing',
     'cybersecurity',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'de_DE',
     url: baseUrl,
-    title: 'Sodu Secure | ihr Cyber-Spezialist',
+    title: 'Sodu Secure – zertifizierte Penetrationstests aus Berlin',
     description: 'Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. OSCP-zertifizierter Pentest – Web, API, AD. Preis sofort online berechnen. Festpreis ab 1.499 €.',
     siteName: 'Sodu Secure',
     images: [
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sodu Secure | ihr Cyber-Spezialist',
+    title: 'Sodu Secure – zertifizierte Penetrationstests aus Berlin',
     description: 'Zertifizierte Pentester – transparente Festpreise ab 1.499 €. Pentest sofort konfigurieren & Preis berechnen. Web, API, AD & Cloud.',
     images: [`${baseUrl}/images/twitter-image.jpg`],
     creator: '@sodusecure',

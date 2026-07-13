@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: DESC,
   alternates: { canonical: `https://sodusecure.com${PATH}` },
   openGraph: {
-    title: "Infrastruktur Penetrationstest & Active Directory | Sodu Secure",
+    title: "Infrastruktur Penetrationstest & Active Directory",
     description: DESC,
     url: `https://sodusecure.com${PATH}`,
     type: "website",

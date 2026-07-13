@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "PCI DSS Penetrationstest – Pflicht nach Requirement 11.4 | Sodu Secure",
+  title: "PCI DSS Penetrationstest – Pflicht nach Requirement 11.4",
   description:
     "PCI DSS verlangt regelmäßige interne und externe Penetrationstests (Requirement 11.4). Wir liefern PCI-konforme Pentests inkl. Segmentierungstest – nach v4.0.",
   alternates: { canonical: "/pci-dss-penetrationstest" },

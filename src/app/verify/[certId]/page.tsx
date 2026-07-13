@@ -32,11 +32,11 @@ export async function generateMetadata({
   const { certId } = await params;
   const cert = getCertificate(certId);
   if (!cert) {
-    return { title: "Zertifikat nicht gefunden | Sodu Secure" };
+    return { title: "Zertifikat nicht gefunden" };
   }
   const meta = SCORE_META[cert.category];
   return {
-    title: `Security-Zertifikat ${cert.id} – ${cert.company} | Sodu Secure`,
+    title: `Security-Zertifikat ${cert.id} – ${cert.company}`,
     description: `${cert.company} hat einen verifizierten Penetrationstest durch Sodu Secure bestanden. Bewertung: ${meta.label} (${cert.score.toFixed(1).replace(".", ",")}). Ausgestellt am ${new Date(cert.date).toLocaleDateString("de-DE")}.`,
     robots: { index: false, follow: true },
     openGraph: {

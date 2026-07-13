@@ -3,7 +3,7 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Red Team Assessment – Realistische Angriffssimulation | Sodu Secure',
+  title: 'Red Team Assessment – Realistische Angriffssimulation',
   description:
     'Red Team Assessment für Unternehmen: Vollständige Angriffssimulation durch ein dediziertes Red Team. MITRE ATT&CK-Framework, NIS2/DORA-konform. Testen Sie Ihre echte Verteidigungsfähigkeit.',
   keywords: [
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'Threat-Led Penetration Testing',
   ],
   openGraph: {
-    title: 'Red Team Assessment – Realistische APT-Simulation | Sodu Secure',
+    title: 'Red Team Assessment – Realistische APT-Simulation',
     description:
       'Dediziertes Red Team simuliert realistische Angriffe gegen Ihre Organisation. MITRE ATT&CK, NIS2 & DORA-konform. Jetzt anfragen.',
     url: `${baseUrl}/red-team-assessment`,
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Red Team Assessment | Sodu Secure',
+    title: 'Red Team Assessment',
     description: 'Vollständige Angriffssimulation durch ein dediziertes Red Team. NIS2 & DORA-konform.',
   },
   alternates: { canonical: `${baseUrl}/red-team-assessment` },

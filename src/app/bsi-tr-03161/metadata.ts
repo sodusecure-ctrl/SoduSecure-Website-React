@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BSI TR-03161 Sicherheitsprüfung – DiGA & DiPA Vorbereitung | Sodu Secure",
+  title: "BSI TR-03161 Sicherheitsprüfung – DiGA & DiPA Vorbereitung",
   description:
     "Vorbereitende Sicherheitsprüfung nach BSI TR-03161 für DiGA- und DiPA-Hersteller. Gap-Analyse, Schwachstellentests & Beratung – optimale Vorbereitung auf die offizielle Zertifizierung.",
   keywords: [
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "digitale Gesundheitsanwendung Pentest",
   ],
   openGraph: {
-    title: "BSI TR-03161 Sicherheitsprüfung – DiGA & DiPA Vorbereitung | Sodu Secure",
+    title: "BSI TR-03161 Sicherheitsprüfung – DiGA & DiPA Vorbereitung",
     description:
       "Vorbereitende Sicherheitsprüfung nach BSI TR-03161 für DiGA- und DiPA-Hersteller. Gap-Analyse, Schwachstellentests & Beratung.",
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "BSI TR-03161 Sicherheitsprüfung | Sodu Secure",
+    title: "BSI TR-03161 Sicherheitsprüfung",
     description:
       "Vorbereitende Sicherheitsprüfung nach BSI TR-03161 für digitale Gesundheitsanwendungen.",
   },

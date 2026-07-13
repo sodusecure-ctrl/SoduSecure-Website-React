@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: DESC,
   alternates: { canonical: `https://sodusecure.com${PATH}` },
   openGraph: {
-    title: "Security Audit – NIS2 & ISO 27001 konform | Sodu Secure",
+    title: "Security Audit – NIS2 & ISO 27001 konform",
     description: DESC,
     url: `https://sodusecure.com${PATH}`,
     type: "website",

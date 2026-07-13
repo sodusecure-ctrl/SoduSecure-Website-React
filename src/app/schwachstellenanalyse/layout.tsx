@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Schwachstellenanalyse – Sofort alle Sicherheitslücken finden | Sodu Secure',
+  title: 'Schwachstellenanalyse – Sofort alle Sicherheitslücken finden',
   description: 'Wissen Sie, wo Ihre IT-Infrastruktur angreifbar ist? Jetzt Schwachstellenanalyse beauftragen – Web, Netzwerk & Cloud. CVSS 3.1-Bericht inkl. Preis sofort berechnen – Festpreis ab 800 €.',
   keywords: 'Schwachstellenanalyse, Vulnerability Assessment, Sicherheitslücken finden, Schwachstellen Analyse, Sicherheitslücken Analyse, Schwachstellen Check Unternehmen',
   robots: {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://sodusecure.com/schwachstellenanalyse' },
   openGraph: {
-    title: 'Schwachstellenanalyse – Sofort alle Sicherheitslücken finden | Sodu Secure',
+    title: 'Schwachstellenanalyse – Sofort alle Sicherheitslücken finden',
     description: 'Systematische Schwachstellenanalyse für Web, Netzwerk & Cloud. CVSS 3.1-Bericht & Proof-of-Concepts inklusive. Preis sofort berechnen – Festpreis ab 800 €.',
     url: 'https://sodusecure.com/schwachstellenanalyse',
     siteName: 'Sodu Secure',

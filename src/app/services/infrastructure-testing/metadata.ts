@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Infrastruktur Pentest – Active Directory & Server | Sodu Secure',
+  title: 'Infrastruktur Pentest – Active Directory & Server',
   description: 'Infrastruktur Pentest: Active Directory, Server & Datenbanken – Kerberoasting, Pass-the-Hash & mehr. Zertifizierte Pentester. Preis sofort berechnen – Festpreis.',
   keywords: [
     'infrastructure pentesting',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'IT infrastructure security',
   ],
   openGraph: {
-    title: 'Infrastruktur Pentest – Active Directory & Server | Sodu Secure',
+    title: 'Infrastruktur Pentest – Active Directory & Server',
     description: 'Kerberoasting, Pass-the-Hash & AD-Angriffe – zertifizierte Pentester. Festpreis, jetzt konfigurieren.',
     url: `${baseUrl}/services/infrastructure-testing`,
     type: 'website',

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "Active Directory Pentest – Windows-Domäne absichern | Sodu Secure",
+  title: "Active Directory Pentest – Windows-Domäne absichern",
   description:
     "Active Directory Pentest: Wir finden Angriffspfade in Ihrer Windows-Domäne – Kerberoasting, ACL-Missbrauch, Lateral Movement bis Domain Admin. OSCP-zertifiziert, ab 2.500 €.",
   alternates: { canonical: "/services/active-directory" },

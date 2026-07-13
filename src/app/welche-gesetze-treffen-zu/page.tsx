@@ -5,7 +5,7 @@ import RiskCheckLanding from '../pentest-risiko-check/RiskCheckLanding';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Welche Gesetze treffen auf mein Unternehmen zu? NIS2, DSGVO, DORA & MDR Check | Sodu Secure',
+  title: 'Welche Gesetze treffen auf mein Unternehmen zu? NIS2, DSGVO, DORA & MDR Check',
   description:
     'Compliance-Schnellcheck in 60 Sekunden: Beantworten Sie 5 Fragen zu Branche, Größe und Daten und erfahren Sie sofort, ob NIS2, DSGVO, DORA oder MDR auf Ihr Unternehmen zutrifft – mit Rechtsgrundlage. Kostenlos & ohne Anmeldung.',
   keywords: [

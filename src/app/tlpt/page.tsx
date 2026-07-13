@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "TLPT – Threat-Led Penetration Testing (DORA) | Sodu Secure",
+  title: "TLPT – Threat-Led Penetration Testing (DORA)",
   description:
     "Was ist TLPT? Bedrohungsgeleitetes Penetration Testing nach DORA (Art. 26) und TIBER-EU – Pflicht für bedeutende Finanzunternehmen. Wir liefern die technischen Angriffssimulationen.",
   alternates: { canonical: "/tlpt" },

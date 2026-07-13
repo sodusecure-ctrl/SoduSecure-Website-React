@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'IT Sicherheitscheck – Sofort Preis berechnen | Ergebnis in 2–5 Tagen',
+  title: 'IT Sicherheitscheck – zertifizierte Prüfung, Ergebnis in 2–5 Tagen',
   description: 'Wie sicher ist Ihr Unternehmen wirklich? Jetzt IT Sicherheitscheck bestellen – Web, Netzwerk, AD & Cloud. Preis sofort online berechnen. Ergebnis in 2–5 Tagen. OSCP-zertifiziert.',
   keywords: 'IT Sicherheitscheck, IT Security Check, IT Sicherheitsprüfung Unternehmen, IT Sicherheitscheck Firma, Sicherheitscheck IT, IT Check Unternehmen',
   robots: {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://sodusecure.com/it-sicherheitscheck' },
   openGraph: {
-    title: 'IT Sicherheitscheck – Sofort Preis berechnen | Ergebnis in 2–5 Tagen',
+    title: 'IT Sicherheitscheck – zertifizierte Prüfung, Ergebnis in 2–5 Tagen',
     description: 'Jetzt IT Sicherheitscheck beauftragen – Web, Netzwerk, AD & Cloud in 2–5 Tagen geprüft. Preis sofort online berechnen. OSCP-zertifiziert.',
     url: 'https://sodusecure.com/it-sicherheitscheck',
     siteName: 'Sodu Secure',

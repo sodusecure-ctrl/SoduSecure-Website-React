@@ -5,7 +5,7 @@ import CorporateLanding from './CorporateLanding';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Penetrationstests für Unternehmen – Zertifiziert & DSGVO-konform | Sodu Secure',
+  title: 'Penetrationstests für Unternehmen – Zertifiziert & DSGVO-konform',
   description:
     'Professionelle Penetrationstests von OSCP-zertifizierten Experten aus der DACH-Region. Manuell, prüfsicher für ISO 27001, NIS2, DORA & DSGVO. Festpreisangebot innerhalb von 24 Stunden.',
   keywords: [

@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'ISO 27001 Beratung, ISMS & Pentest (A.12.6) | Sodu Secure',
+  title: 'ISO 27001 Beratung, ISMS & Pentest (A.12.6)',
   description:
     'ISO 27001 Services fuer Unternehmen: ISMS-Aufbau, Gap-Analyse, Risikobehandlung, Pentest-Nachweise nach A.12.6 und Audit-Vorbereitung fuer die Zertifizierung.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     'bsi grundschutz iso 27001',
   ],
   openGraph: {
-    title: 'ISO 27001 Beratung, ISMS & Pentest (A.12.6) | Sodu Secure',
+    title: 'ISO 27001 Beratung, ISMS & Pentest (A.12.6)',
     description:
       'Praxisnahe ISO 27001 Unterstuetzung: Scope, ISMS, Risikomanagement, Pentesting und Audit-ready Dokumentation aus einer Hand.',
     url: `${baseUrl}/services/iso-27001`,
