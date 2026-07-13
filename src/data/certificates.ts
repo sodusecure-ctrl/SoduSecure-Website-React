@@ -137,8 +137,8 @@ export const CERTIFICATES: Certificate[] = [
   },
   {
     id: "SS-2026-0001",
-    company: "Acur Fulfillment GmbH",
-    companyUrl: "https://acur-fulfillment.de",
+    company: "Acut Fulfillment GmbH",
+    companyUrl: "https://acut-fulfillment.de",
     score: 1.7,
     category: "gut",
     date: "2026-07-13",
