@@ -86,6 +86,7 @@ export async function GET(
     headers: {
       "Content-Type": "image/svg+xml; charset=utf-8",
       "Cache-Control": "public, max-age=3600, s-maxage=86400",
+      "X-Badge-Rev": "2",
     },
   });
 }
