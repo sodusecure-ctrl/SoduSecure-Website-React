@@ -87,6 +87,13 @@ export const TARGETS: { path: string; label: string }[] = [
   { path: '/request-pentest', label: 'Pentest-Konfigurator' },
   { path: '/contact', label: 'Kontaktseite' },
   { path: '/', label: 'Startseite' },
+  // Standort-Landingpages
+  { path: '/pentest-berlin', label: 'Standort: Pentest Berlin' },
+  { path: '/penetration-testing-hamburg', label: 'Standort: Pentest Hamburg' },
+  { path: '/penetration-testing-muenchen', label: 'Standort: Pentest München' },
+  { path: '/penetration-testing-stuttgart', label: 'Standort: Pentest Stuttgart' },
+  { path: '/penetration-testing-koeln', label: 'Standort: Pentest Köln' },
+  { path: '/penetrationstest-deutschland', label: 'Standort: Penetrationstest Deutschland' },
 ];
 
 export const EVENT_LABELS: Record<string, string> = {
