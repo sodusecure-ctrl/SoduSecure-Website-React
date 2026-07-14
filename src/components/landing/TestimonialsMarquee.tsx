@@ -16,6 +16,14 @@ export function getTestimonials(isDe: boolean): Testimonial[] {
     ? [
         {
           quote:
+            'Die Zusammenarbeit mit Sodu Secure war von Anfang an sehr professionell und angenehm. Besonders beeindruckt hat uns der detaillierte Abschlussbericht mit klaren Handlungsempfehlungen zur Behebung der gefundenen Probleme. Wir empfehlen Sodu Secure gerne als kompetenten und zuverlässigen Partner weiter.',
+          author: 'Savas Großmann',
+          role: '',
+          company: 'Acut Fulfillment GmbH',
+          logo: '/images/testemonials-logo/acut-logo-color.png',
+        },
+        {
+          quote:
             'Endlich ein Pentest-Partner, der nicht nur eine PDF abliefert. Das Team hat im Retest jede Schwachstelle persönlich verifiziert. Für unsere ISO-27001-Zertifizierung war das Gold wert.',
           author: 'Sandra K.',
           role: 'Head of IT',
@@ -56,6 +64,14 @@ export function getTestimonials(isDe: boolean): Testimonial[] {
         },
       ]
     : [
+        {
+          quote:
+            'Working with Sodu Secure was professional and pleasant from day one. We were particularly impressed by the detailed final report with clear, actionable recommendations for fixing the issues found. We are happy to recommend Sodu Secure as a competent and reliable partner.',
+          author: 'Savas Großmann',
+          role: '',
+          company: 'Acut Fulfillment GmbH',
+          logo: '/images/testemonials-logo/acut-logo-color.png',
+        },
         {
           quote:
             'Finally a pentest partner that does not just hand over a PDF. The team personally verified every finding in the retest. Invaluable for our ISO 27001 certification.',
@@ -114,7 +130,7 @@ function TestimonialCard({ tm }: { tm: Testimonial }) {
         <div>
           <div className="text-sm font-semibold text-white">{tm.author}</div>
           <div className="text-xs text-white/55">
-            {tm.role} · {tm.company}
+            {tm.role ? `${tm.role} · ${tm.company}` : tm.company}
           </div>
         </div>
         {tm.logo ? (
