@@ -249,7 +249,7 @@ export default function PenetrationstestAnbieterPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 bg-[#FF3B30] hover:bg-[#E5332A] text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
-              <Phone className="w-5 h-5" />Seriösen Pentester buchen
+              <Phone className="w-5 h-5" />Jetzt Pentest Angebot anfordern
             </Link>
             <Link href="/penetration-testing" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               Pentest Übersicht <ArrowRight className="w-5 h-5" />
