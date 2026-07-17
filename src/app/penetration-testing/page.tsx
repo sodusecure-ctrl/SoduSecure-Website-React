@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import TestimonialsSection from "@/components/landing/TestimonialsSection";
+import TrustCertMarquee from "@/components/landing/TrustCertMarquee";
 import {
   Shield,
   Calculator,
@@ -219,6 +221,10 @@ export default function PenetrationTestingPage() {
           </div>
         </div>
       </section>
+
+      <TrustCertMarquee />
+
+      <TestimonialsSection />
 
       {/* ── STATS ─────────────────────────────────────────────────────────────── */}
       <section className="py-12 border-y border-white/5 bg-white/[0.02]">

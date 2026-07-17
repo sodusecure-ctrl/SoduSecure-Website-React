@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import TestimonialsSection from "@/components/landing/TestimonialsSection";
+import TrustCertMarquee from "@/components/landing/TrustCertMarquee";
 import {
   Shield,
   Calculator,
@@ -10,7 +12,7 @@ import {
   ChevronDown,
   ChevronUp,
   Zap,
-  Clock,
+  Clock,
   Globe,
   Server,
   Cloud,
@@ -111,6 +113,10 @@ export default function ITSicherheitscheckPage() {
           </div>
         </div>
       </section>
+
+      <TrustCertMarquee />
+
+      <TestimonialsSection />
 
       {/* ── SPEED USP ─────────────────────────────────────────────────────────── */}
       <section className="py-10 border-y border-white/5">
