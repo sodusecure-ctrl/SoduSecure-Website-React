@@ -97,6 +97,7 @@ export default function Footer() {
   const resourceLinks = [
     { label: resourceLabels?.[0], href: '/case-studies' },
     { label: resourceLabels?.[1], href: '/case-studies/study/5' },
+    { label: 'Wiki', href: '/wiki' },
     { label: resourceLabels?.[2], href: '/contact' },
     { label: resourceLabels?.[3], href: '/services/network-audit' }
   ];
