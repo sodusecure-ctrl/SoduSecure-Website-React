@@ -11,8 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '',                                lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/penetration-testing',            lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/pentest-kosten',                 lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
-    { path: '/penetration-testing-anbieter',   lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
-    { path: '/penetrationstest-anbieter',      lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/penetrationstest-anbieter',      lastModified: '2026-07-17', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/it-sicherheitscheck',            lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/iso-27001-pentest-anforderungen', lastModified: '2026-07-13', changeFreq: 'weekly', priority: 1.0 },
 

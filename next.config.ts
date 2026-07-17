@@ -33,6 +33,8 @@ const nextConfig: NextConfig = {
       { source: '/pentest', destination: '/penetration-testing', permanent: true },
       { source: '/pentesting-service', destination: '/penetration-testing', permanent: true },
       { source: '/penetration-testing-service', destination: '/penetration-testing', permanent: true },
+      // Haupt-Landingpage Anbieter-Auswahl: /penetrationstest-anbieter (Merge Juli 2026)
+      { source: '/penetration-testing-anbieter', destination: '/penetrationstest-anbieter', permanent: true },
       // Haupt-Landingpage Kosten/Preis: /pentest-kosten
       { source: '/pentest-preis', destination: '/pentest-kosten', permanent: true },
       { source: '/pentest-preis-rechner', destination: '/pentest-kosten', permanent: true },

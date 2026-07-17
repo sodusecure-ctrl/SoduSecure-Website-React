@@ -40,7 +40,6 @@ export default function Footer() {
     { label: 'Penetrationstest Deutschland', href: '/penetrationstest-deutschland' },
     { label: 'Pentest Zertifizierung', href: '/pentest-certification' },
     { label: 'Pentest Anbieter', href: '/penetrationstest-anbieter' },
-    { label: 'Penetration Testing Anbieter', href: '/penetration-testing-anbieter' },
     { label: 'Cybersecurity Firma', href: '/cybersecurity-firma' },
     { label: 'ISO 27001', href: '/iso-27001' },
     { label: 'ISO 27001 Pentest Anforderungen', href: '/iso-27001-pentest-anforderungen' },

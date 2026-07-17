@@ -485,7 +485,7 @@ export default function PenetrationstestAnbieterPage() {
             </a>
           </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/50">
-            <Link href="/penetration-testing-anbieter" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Anbieter (Festpreis)</Link>
+            <Link href="/penetration-testing" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Übersicht</Link>
             <Link href="/iso-27001-pentest-anforderungen" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest ISO 27001</Link>
             <Link href="/pentest-kosten" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Kosten</Link>
             <Link href="/pentest-konfigurator" className="text-[#FF6B61] hover:text-[#FF8077]">Konfigurator</Link>

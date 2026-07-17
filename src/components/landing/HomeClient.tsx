@@ -932,7 +932,7 @@ export default function HomeClient() {
               <div>
                 <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">Preise & Anbieter</h3>
                 <ul className="mt-4 space-y-2.5 text-sm text-white/65">
-                  <li><Link href="/penetration-testing-anbieter" className="hover:text-white">Pentest-Anbieter mit Festpreis ab 2.500 €</Link></li>
+                  <li><Link href="/penetrationstest-anbieter" className="hover:text-white">Pentest-Anbieter mit Festpreis ab 2.500 €</Link></li>
                   <li><Link href="/pentest-kosten" className="hover:text-white">Was kostet ein Penetrationstest</Link></li>
                   <li><Link href="/pentest-kosten" className="hover:text-white">Pentest-Kosten im Überblick</Link></li>
                   <li><Link href="/pentest-berlin" className="hover:text-white">Penetrationstest in Berlin</Link></li>

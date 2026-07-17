@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import TrustedSources from "@/components/common/TrustedSources";
+import TestimonialsSection from "@/components/landing/TestimonialsSection";
+import TrustCertMarquee from "@/components/landing/TrustCertMarquee";
 import {
   Shield,
   CheckCircle,
@@ -102,6 +104,8 @@ export interface RegulationContent {
   /** 1–3 belegende Sätze + Links zu offiziellen Quellen (BSI, EUR-Lex, ISO …) */
   sourcesIntro?: string[];
   sources?: { label: string; url: string }[];
+  /** Zertifikats-Marquee + Kundenstimmen direkt unter dem Hero (wie Startseite) */
+  showTrustSection?: boolean;
 }
 
 const SITE_URL = "https://sodusecure.com";
@@ -196,6 +200,13 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
           </div>
         </div>
       </section>
+
+      {data.showTrustSection && (
+        <>
+          <TrustCertMarquee />
+          <TestimonialsSection />
+        </>
+      )}
 
       {/* What is it */}
       <section className="max-w-6xl mx-auto px-4 pb-16">
