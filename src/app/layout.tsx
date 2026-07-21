@@ -232,7 +232,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* LinkedIn Insight Tag */}
         <Script id="linkedin-insight-init" strategy="afterInteractive">
           {`
-            _linkedin_partner_id = "9359618";
+            _linkedin_partner_id = "10516833";
             window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
             window._linkedin_data_partner_ids.push(_linkedin_partner_id);
           `}
@@ -255,7 +255,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             width="1"
             style={{ display: 'none' }}
             alt=""
-            src="https://px.ads.linkedin.com/collect/?pid=9359618&fmt=gif"
+            src="https://px.ads.linkedin.com/collect/?pid=10516833&fmt=gif"
           />
         </noscript>
         {/* End LinkedIn Insight Tag */}
