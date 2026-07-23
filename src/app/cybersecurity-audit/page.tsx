@@ -8,7 +8,7 @@ import {
   CheckCircle,
   ArrowRight,
   ChevronDown,
-  ChevronUp,
+  ChevronUp,
   FileText,
   Phone,
   Mail,
@@ -60,49 +60,55 @@ export default function CybersecurityAuditPage() {
   return (
     <main className="bg-[#0A0A0B] text-white min-h-screen">
       {/* ── HERO ──────────────────────────────────────────────────────────────── */}
-      <section className="premium-hero py-24 sm:py-32 text-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 via-transparent to-transparent pointer-events-none" />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
+      <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
+        <div className="premium-aurora" aria-hidden />
+        <div className="absolute inset-0 premium-grid" aria-hidden />
+        <div className="premium-noise" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-16 sm:px-6 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-24">
+          <nav className="flex items-center gap-2 text-sm text-white/50 mb-8">
             <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
             <span>/</span>
             <span className="text-white/70">Cybersecurity Audit</span>
           </nav>
 
-          <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-sm text-blue-400 mb-6">
-            <Shield className="w-3.5 h-3.5" />
+          <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
+            <Shield className="h-3.5 w-3.5 text-[#FF3B30]" />
             <span>Cybersecurity Audit · NIS2 & ISO 27001 konform · Festpreis ab 1.499 €</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-white">Cybersecurity Audit –</span>
+          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
+            <span className="premium-silver">Cybersecurity Audit –</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+            <span className="premium-headline-accent">
               Manuell. Compliant. Festpreis.
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">
-            Sodu Secure führt manuelle Cybersecurity Audits für Unternehmen durch –
-            OSCP-zertifiziert, NIS2- und ISO 27001-konforme Berichte, Festpreis.
-            Kein Tagessatz, kein Überraschungsbudget.
+          <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
+            <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
+            <span>
+              Sodu Secure führt manuelle Cybersecurity Audits für Unternehmen durch –
+              OSCP-zertifiziert, NIS2- und ISO 27001-konforme Berichte, Festpreis.
+              Kein Tagessatz, kein Überraschungsbudget.
+            </span>
           </p>
-          <p className="text-sm text-blue-400 mb-10 font-medium">
+          <p className="mt-3 text-sm text-[#FF3B30] font-medium">
             ⚡ Festpreisangebot per Konfigurator – Angebot in 24 Stunden, unverbindlich
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <Link href="/request-pentest"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-blue-900/40 hover:scale-105">
+              className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white">
               <Calculator className="w-5 h-5" />Cybersecurity Audit konfigurieren
             </Link>
             <a href={PHONE_HREF}
-              className="inline-flex items-center gap-2 border border-blue-500/30 hover:border-blue-500/60 text-blue-400 hover:text-blue-300 font-semibold px-8 py-4 rounded-xl transition-all duration-200">
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]">
               <Phone className="w-4 h-4" />{PHONE}
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-white/70">
             {["NIS2-konformer Bericht", "OSCP-zertifizierte Experten", "Festpreis – keine Tagessätze", "Bericht in 48 h"].map((s) => (
               <div key={s} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" /><span>{s}</span>

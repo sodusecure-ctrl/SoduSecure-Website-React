@@ -160,43 +160,42 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,59,48,0.16),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:44px_44px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
-        <div className="max-w-6xl mx-auto px-4 py-20 md:py-28 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/30 rounded-full px-4 py-1.5 mb-6">
-              <Icon name={data.badgeIcon} className="w-4 h-4 text-[#FF6B61]" />
-              <span className="text-[#FF6B61] text-sm font-medium">{data.badgeText}</span>
-            </div>
+      <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
+        <div className="premium-aurora" aria-hidden />
+        <div className="absolute inset-0 premium-grid" aria-hidden />
+        <div className="premium-noise" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-16 sm:px-6 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-24">
+          <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
+            <Icon name={data.badgeIcon} className="h-3.5 w-3.5 text-[#FF3B30]" />
+            <span>{data.badgeText}</span>
+          </div>
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              {data.title}{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF5247] to-[#FF8A4C]">
-                {data.titleAccent}
-              </span>
-            </h1>
+          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
+            <span className="premium-silver">{data.title}</span>{" "}
+            <span className="premium-headline-accent">{data.titleAccent}</span>
+          </h1>
 
-            <p className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto leading-relaxed">
-              {data.heroIntro}
-            </p>
+          <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
+            <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
+            <span>{data.heroIntro}</span>
+          </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 premium-cta text-white font-semibold rounded-lg transition-colors"
-              >
-                {data.heroPrimaryCta}
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/penetration-testing"
-                className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-white/20 hover:border-white/40 text-white font-medium rounded-lg transition-colors"
-              >
-                <Search className="w-5 h-5" />
-                Penetrationstest
-              </Link>
-            </div>
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
+            <Link
+              href="/contact"
+              className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
+            >
+              {data.heroPrimaryCta}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/penetration-testing"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
+            >
+              <Search className="h-4 w-4" />
+              Penetrationstest
+            </Link>
           </div>
         </div>
       </section>

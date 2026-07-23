@@ -2,7 +2,6 @@
 import {
   AlertTriangle,
   ArrowRight,
-  Briefcase,
   CheckCircle,
   ChevronRight,
   ExternalLink,
@@ -229,51 +228,46 @@ export default function SMESecurityPackagesPage() {
     <div className="min-h-screen bg-black text-white">
 
       {/* ── HERO ──────────────────────────────── */}
-      <div className="bg-black text-white relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage: `linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)`,
-            backgroundSize: "48px 48px",
-          }}
-        />
-        <div className="absolute top-0 right-0 w-80 h-80 bg-red-600/10 rounded-full blur-3xl" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
-          <div className="w-14 h-14 bg-red-600 rounded-xl flex items-center justify-center mb-6">
-            <Briefcase className="w-8 h-8 text-white" />
+      <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
+        <div className="premium-aurora" aria-hidden />
+        <div className="absolute inset-0 premium-grid" aria-hidden />
+        <div className="premium-noise" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-16 sm:px-6 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-24">
+          <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
+            <Lock className="h-3.5 w-3.5 text-[#FF3B30]" />
+            <span>KMU Sicherheits-Komplettpaket</span>
           </div>
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-semibold uppercase tracking-wider px-4 py-1.5 rounded-full mb-4">
-              <Lock className="w-3.5 h-3.5" />
-              KMU Sicherheits-Komplettpaket
-            </span>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mt-4 mb-4">
-              Vollständige IT-Sicherheit<br />
-              <span className="text-red-500">für Ihr Unternehmen.</span>
-            </h1>
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
+          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
+            <span className="premium-silver">Vollständige IT-Sicherheit</span>
+            <br />
+            <span className="premium-headline-accent">für Ihr Unternehmen.</span>
+          </h1>
+          <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
+            <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
+            <span>
               Unser KMU Sicherheits-Komplettpaket deckt alle relevanten Angriffsvektoren ab –
               extern, organisatorisch und intern. Speziell konzipiert für Unternehmen mit
               20–150 Mitarbeitern, die professionelle Sicherheit ohne Enterprise-Budget benötigen.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <button
-                onClick={() => router.push("/request-pentest")}
-                className="bg-red-600 hover:premium-cta text-white font-bold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center gap-2"
-              >
-                <Lock className="w-5 h-5" />
-                Jetzt Paket anfragen
-              </button>
-              <button
-                onClick={() => router.push("/contact")}
-                className="border-2 border-white/20 text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105"
-              >
-                Beratungsgespräch
-              </button>
-            </div>
+            </span>
+          </p>
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
+            <button
+              onClick={() => router.push("/request-pentest")}
+              className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
+            >
+              <Lock className="w-3.5 h-3.5" />
+              Jetzt Paket anfragen
+            </button>
+            <button
+              onClick={() => router.push("/contact")}
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
+            >
+              Beratungsgespräch
+            </button>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* ── KMU QUALIFICATION ─────────────────── */}
       <div className="bg-[#0a0a0a] border-y border-zinc-900 py-8">

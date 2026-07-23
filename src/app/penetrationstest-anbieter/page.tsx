@@ -234,34 +234,42 @@ export default function PenetrationstestAnbieterPage() {
   return (
     <main className="bg-[#0A0A0B] text-white min-h-screen">
       {/* Hero */}
-      <section className="premium-hero py-20 lg:py-32 border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(168,85,247,0.08),transparent_50%)] pointer-events-none" />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 mb-6">
-            <Shield className="w-4 h-4 text-[#FF6B61]" />
-            <span className="text-[#FF6B61] text-sm font-medium">Penetrationstest Anbieter · Seriöse Pentester · OSCP Certified</span>
+      <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
+        <div className="premium-aurora" aria-hidden />
+        <div className="absolute inset-0 premium-grid" aria-hidden />
+        <div className="premium-noise" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-16 sm:px-6 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-24">
+          <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
+            <Shield className="h-3.5 w-3.5 text-[#FF3B30]" />
+            <span>Penetrationstest Anbieter · Seriöse Pentester · OSCP Certified</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Der richtige Penetrationstest Anbieter –<br />
-            <span className="text-[#FF3B30]">Wie man Qualität erkennt</span>
+          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
+            <span className="premium-silver">Der richtige Penetrationstest Anbieter –</span>
+            <br />
+            <span className="premium-headline-accent">Wie man Qualität erkennt</span>
           </h1>
-          <p className="text-white/70 text-lg sm:text-xl max-w-3xl mx-auto mb-10">
-            Wie unterscheidest du zwischen seriösen Pentestern und unzureichenden Anbietern? Dieser Guide zeigt dir, worauf du achten musst – und was Sodu Secure macht, um deine Sicherheit zu garantieren.
+          <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
+            <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
+            <span>Wie unterscheidest du zwischen seriösen Pentestern und unzureichenden Anbietern? Dieser Guide zeigt dir, worauf du achten musst – und was Sodu Secure macht, um deine Sicherheit zu garantieren.</span>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link href="/request-pentest" className="inline-flex items-center justify-center gap-2 bg-[#FF3B30] hover:bg-[#E5332A] text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
+            <Link href="/request-pentest" className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white">
               Jetzt Pentest Angebot anfordern
             </Link>
-            <Link href="/penetration-testing" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
-              Pentest Übersicht <ArrowRight className="w-5 h-5" />
+            <Link href="/penetration-testing" className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]">
+              Pentest Übersicht <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           {/* Trust bar */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
-            {[["500+", "Erfolgreiche Pentests"], ["OSCP · CEH · CISSP", "Zertifizierungen"], ["100%", "Kundenzufriedenheit"], ["24h", "Angebots-Response"]].map(([stat, label]) => (
-              <div key={stat} className="bg-[#0A0A0B] border border-white/10 rounded-xl py-3 px-2 text-center">
-                <div className="text-xl font-bold text-[#FF6B61]">{stat}</div>
-                <div className="text-white/50 text-xs mt-0.5">{label}</div>
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-white/70">
+            {[["500+", "Erfolgreiche Pentests"], ["OSCP · CEH · CISSP", "Zertifizierungen"], ["100%", "Kundenzufriedenheit"], ["24h", "Angebots-Response"]].map(([stat, label], i) => (
+              <div key={stat} className="flex items-center gap-x-6">
+                {i > 0 && <span className="hidden h-4 w-px bg-white/15 sm:block" aria-hidden />}
+                <div className="flex items-center gap-2">
+                  <span className="font-semibold text-white">{stat}</span>
+                  <span className="text-white/50">{label}</span>
+                </div>
               </div>
             ))}
           </div>

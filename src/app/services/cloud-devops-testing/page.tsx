@@ -1,5 +1,4 @@
 "use client";
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Box, Cloud, Database, FileText, GitBranch, Image, List, Lock, RotateCcw, Server, Settings, Shield } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -41,36 +40,32 @@ export default function CloudDevOpsSecurityLanding() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <div className="relative px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">
-        <div className="container mx-auto max-w-7xl">
-          <div className="mb-6 md:mb-8">
-            {/* Logo/Badge */}
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-red-600 rounded-lg flex items-center justify-center mb-4 sm:mb-6">
-              <Cloud className="w-6 h-6 sm:w-8 sm:h-8" />
-            </div>
-
-            {/* Title */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-snug sm:leading-tight">
-              {t('hero.title')}
-            </h1>
-
-            {/* Description */}
-            <p className="text-gray-400 text-base sm:text-lg md:text-xl max-w-full sm:max-w-2xl mb-6 sm:mb-8 leading-relaxed">
-              {t('hero.description')}
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button onClick={() => router.push("/request-pentest")} className="bg-red-600 hover:premium-cta text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base w-full sm:w-auto justify-center">
-                {t('hero.requestPentest')}
-              </Button>
-              <Button onClick={() => router.push("/contact")} variant="outline" className="border-white text-white bg-black hover:bg-white hover:text-black px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-base w-full sm:w-auto justify-center">
-                {t('hero.scheduleConsultation')}
-              </Button>
-            </div>
+      <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
+        <div className="premium-aurora" aria-hidden />
+        <div className="absolute inset-0 premium-grid" aria-hidden />
+        <div className="premium-noise" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-16 sm:px-6 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-24">
+          <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
+            <Cloud className="h-3.5 w-3.5 text-[#FF3B30]" />
+          </div>
+          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
+            <span className="premium-silver">{t('hero.title')}</span>
+          </h1>
+          <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
+            <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
+            <span>{t('hero.description')}</span>
+          </p>
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
+            <button onClick={() => router.push("/request-pentest")} className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white">
+              {t('hero.requestPentest')}
+            </button>
+            <button onClick={() => router.push("/contact")} className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]">
+              {t('hero.scheduleConsultation')}
+            </button>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* What's Included Section */}
       <div className="bg-[#0a0a0a] text-white border-y border-zinc-900 px-4 sm:px-6 py-12 md:py-16 lg:py-20 md:px-8 lg:px-16 xl:px-24">

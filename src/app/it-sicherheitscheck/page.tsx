@@ -62,52 +62,58 @@ export default function ITSicherheitscheckPage() {
   return (
     <main className="bg-[#0A0A0B] text-white min-h-screen">
       {/* ── HERO ──────────────────────────────────────────────────────────────── */}
-      <section className="premium-hero py-24 sm:py-32 text-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-green-900/10 via-transparent to-transparent pointer-events-none" />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
+      <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
+        <div className="premium-aurora" aria-hidden />
+        <div className="absolute inset-0 premium-grid" aria-hidden />
+        <div className="premium-noise" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-16 sm:px-6 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-24">
+          <nav className="flex items-center gap-2 text-sm text-white/50 mb-8">
             <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
             <span>/</span>
             <span className="text-white/70">IT Sicherheitscheck</span>
           </nav>
 
-          <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-1.5 text-sm text-green-400 mb-6">
-            <Zap className="w-3.5 h-3.5" />
+          <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
+            <Zap className="h-3.5 w-3.5 text-[#FF3B30]" />
             <span>IT Sicherheitscheck · Ergebnis in 2–5 Tagen · Festpreis ab 1.499 €</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-white">IT Sicherheitscheck</span>
+          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
+            <span className="premium-silver">IT Sicherheitscheck</span>
             <br />
-            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+            <span className="premium-headline-accent">
               Schnell. Manuell. Festpreis.
             </span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">
-            Lassen Sie Ihre IT-Sicherheit von OSCP-zertifizierten Experten prüfen.
-            Web-Apps, Netzwerke, Active Directory und Cloud – manuell getestet,
-            Bericht in 48 Stunden. Kein Tagessatz, kein Überraschungsbudget.
+          <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
+            <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
+            <span>
+              Lassen Sie Ihre IT-Sicherheit von OSCP-zertifizierten Experten prüfen.
+              Web-Apps, Netzwerke, Active Directory und Cloud – manuell getestet,
+              Bericht in 48 Stunden. Kein Tagessatz, kein Überraschungsbudget.
+            </span>
           </p>
-          <p className="text-sm text-green-400 mb-10 font-medium">
+          <p className="mt-4 max-w-2xl text-sm font-medium text-white/60">
             ⚡ Festpreisangebot per Konfigurator in unter 2 Minuten – sofort & unverbindlich
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <Link href="/request-pentest"
-              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-green-900/40 hover:scale-105">
-              <Calculator className="w-5 h-5" />IT Sicherheitscheck konfigurieren
+              className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white">
+              <Calculator className="h-4 w-4" />IT Sicherheitscheck konfigurieren
             </Link>
             <a href={PHONE_HREF}
-              className="inline-flex items-center gap-2 border border-green-500/30 hover:border-green-500/60 text-green-400 hover:text-green-300 font-semibold px-8 py-4 rounded-xl transition-all duration-200">
-              <Phone className="w-4 h-4" />{PHONE}
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]">
+              <Phone className="h-4 w-4" />{PHONE}
             </a>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-white/70">
             {["Ergebnis in 2–5 Tagen", "Festpreis – keine Tagessätze", "OSCP-zertifiziert", "Bericht in 48 h"].map((s) => (
               <div key={s} className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /><span>{s}</span>
+                <CheckCircle className="w-4 h-4 text-[#FF3B30] flex-shrink-0" /><span>{s}</span>
               </div>
             ))}
           </div>

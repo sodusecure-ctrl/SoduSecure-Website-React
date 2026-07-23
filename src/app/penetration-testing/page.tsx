@@ -160,54 +160,58 @@ export default function PenetrationTestingPage() {
   return (
     <main className="bg-[#0A0A0B] text-white min-h-screen">
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
-      <section className="premium-hero py-24 sm:py-32 text-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-red-900/10 via-transparent to-transparent pointer-events-none" />
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center justify-center gap-2 text-sm text-white/50 mb-8">
+      <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
+        <div className="premium-aurora" aria-hidden />
+        <div className="absolute inset-0 premium-grid" aria-hidden />
+        <div className="premium-noise" aria-hidden />
+        <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-16 sm:px-6 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-24">
+          <nav className="flex items-center gap-2 text-sm text-white/50 mb-8">
             <Link href="/" className="hover:text-white transition-colors">Sodu Secure</Link>
             <span>/</span>
             <span className="text-white/70">Penetrationstest</span>
           </nav>
 
-          <div className="inline-flex items-center gap-2 bg-[#FF3B30]/10 border border-[#FF3B30]/20 rounded-full px-4 py-1.5 text-sm text-[#FF3B30] mb-6">
-            <Shield className="w-3.5 h-3.5" />
+          <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
+            <Shield className="h-3.5 w-3.5 text-[#FF3B30]" />
             <span>Professioneller Pentest – OWASP · PTES · MITRE ATT&amp;CK</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-white">Penetrationstest &amp; Pentesting –</span>
+          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
+            <span className="premium-silver">Penetrationstest &amp; Pentesting –</span>
             <br />
-            <span className="bg-gradient-to-r from-[#ff7568] via-[#ff3b30] to-[#b8252e] bg-clip-text text-transparent">
-              Manuell. Methodisch.
-            </span>
+            <span className="premium-headline-accent">Manuell. Methodisch.</span>
             <br />
-            <span className="text-white">Wirkungsvoll.</span>
+            <span className="premium-silver">Wirkungsvoll.</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
-            Sodu Secure führt professionelle Penetrationstests für Web-Apps, Netzwerke, APIs,
-            Active Directory und Cloud-Infrastrukturen durch. Zertifizierte Pentester –
-            Festpreise ab 1.499 € – Angebot in 24 Stunden. Erfahren Sie mehr über Penetration Testing und Pentest Services.
+          <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
+            <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
+            <span>
+              Sodu Secure führt professionelle Penetrationstests für Web-Apps, Netzwerke, APIs,
+              Active Directory und Cloud-Infrastrukturen durch. Zertifizierte Pentester –
+              Festpreise ab 1.499 € – Angebot in 24 Stunden. Erfahren Sie mehr über Penetration Testing und Pentest Services.
+            </span>
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <Link
               href="/request-pentest"
-              className="inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-[#FF3B30]/30 hover:scale-105"
+              className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
             >
               <Calculator className="w-5 h-5" />
               Pentest Kosten Berechnen
             </Link>
             <Link
               href="/request-pentest"
-              className="inline-flex items-center gap-2 border border-[#FF3B30]/30 hover:border-[#FF3B30]/60 text-[#FF3B30] hover:text-[#FF6B61] font-semibold px-8 py-4 rounded-xl transition-all duration-200"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
             >
               <Layers className="w-4 h-4" />
               Pentest Konfigurieren
             </Link>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/60">
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-white/70">
             {[
               "Festpreis – keine Überraschungen",
               "Manuelles Testing – nicht nur Scanner",
