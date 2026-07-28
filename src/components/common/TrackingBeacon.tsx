@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { captureAttributionFromUrl, getAttribution, track } from '@/lib/tracker';
+import { captureAttributionFromUrl, captureTrafficSource, getAttribution, track } from '@/lib/tracker';
 
 /**
  * Unsichtbarer Begleiter im Root-Layout: übernimmt die Attribution aus
@@ -15,6 +15,7 @@ export default function TrackingBeacon() {
 
   useEffect(() => {
     captureAttributionFromUrl();
+    captureTrafficSource();
     if (!getAttribution()) return;
     if (lastPath.current === pathname) return;
     lastPath.current = pathname;
