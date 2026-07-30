@@ -282,6 +282,14 @@ export default function Footer() {
             >
               Impressum
             </Link>
+            <a
+              href="https://sodusecurereviews.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors text-xs lg:text-sm py-1"
+            >
+              {isEnglish ? 'Reviews' : 'Bewertungen'}
+            </a>
           </div>
 
           {/* Social Links */}
