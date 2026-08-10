@@ -36,11 +36,11 @@ export async function generateMetadata({
   }
   const meta = SCORE_META[cert.category];
   return {
-    title: `Security-Zertifikat ${cert.id} – ${cert.company}`,
+    title: `Security-Zertifikat ${cert.id} | ${cert.company}`,
     description: `${cert.company} hat einen verifizierten Penetrationstest durch Sodu Secure bestanden. Bewertung: ${meta.label} (${cert.score.toFixed(1).replace(".", ",")}). Ausgestellt am ${new Date(cert.date).toLocaleDateString("de-DE")}.`,
     robots: { index: false, follow: true },
     openGraph: {
-      title: `${cert.company} – Sicherheitszertifikat ${meta.label}`,
+      title: `${cert.company} | Sicherheitszertifikat ${meta.label}`,
       description: `Verifizierter Pentest von Sodu Secure. Score: ${cert.score.toFixed(1).replace(".", ",")} (${meta.label})`,
       url: `https://sodusecure.com/verify/${cert.id}`,
       siteName: "Sodu Secure",

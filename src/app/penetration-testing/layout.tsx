@@ -3,7 +3,7 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Penetrationstest – zertifizierte Pentests zum Festpreis',
+  title: 'Penetrationstest | zertifizierte Pentests zum Festpreis',
   description:
     'Penetrationstest von OSCP-zertifizierten Experten: Web, API, Netzwerk & Active Directory. Festpreis ab 1.499 €, Bericht mit Fix-Empfehlungen und kostenlosem Retest. Preis in 3 Min. berechnen.',
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     'Red Team Test',
   ],
   openGraph: {
-    title: 'Penetrationstest – zertifizierte Pentests zum Festpreis',
+    title: 'Penetrationstest | zertifizierte Pentests zum Festpreis',
     description:
       'Penetrationstest von OSCP-zertifizierten Experten: Web, API, Netzwerk & AD. Festpreis ab 1.499 €, Bericht mit Fix-Empfehlungen und kostenlosem Retest.',
     url: `${baseUrl}/penetration-testing`,
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Penetrationstest & Pentesting – Zertifizierte Pentester',
+    title: 'Penetrationstest & Pentesting | Zertifizierte Pentester',
     description:
-      'Sodu Secure – professioneller Penetrationstest für Web, API, AD & Netzwerke. Zertifizierte Experten. Festpreis ab 1.499 €.',
+      'Sodu Secure - professioneller Penetrationstest für Web, API, AD & Netzwerke. Zertifizierte Experten. Festpreis ab 1.499 €.',
   },
   alternates: {
     canonical: `${baseUrl}/penetration-testing`,

@@ -1,7 +1,7 @@
 ﻿import { Metadata } from 'next';
 const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
-  title: 'Cyber Security Check Kosten – Was kostet ein Sicherheitscheck?',
+  title: 'Cyber Security Check Kosten | Was kostet ein Sicherheitscheck?',
   description: 'Cyber Security Check Kosten im Überblick: Wie viel kostet ein IT-Sicherheitscheck für Ihr Unternehmen? Transparente Preise ab 800 €. Jetzt Angebot einholen.',
   keywords: ['Cyber Security Check Kosten','IT Sicherheitscheck Kosten','Cybersecurity Check Preis','Security Audit Kosten','Sicherheitscheck Kosten','Vulnerability Assessment Kosten','IT Sicherheit Kosten'],
   openGraph: { title: 'Cyber Security Check Kosten', description: 'Transparente Preise für IT-Sicherheitschecks. Festpreisangebot in 24 Stunden.', url: `${baseUrl}/cyber-security-check-kosten`, type: 'website', siteName: 'Sodu Secure', images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: 'Cyber Security Check Kosten' }] },

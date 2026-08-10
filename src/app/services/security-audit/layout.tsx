@@ -7,11 +7,11 @@ const DESC =
   "Security Audit für NIS2, ISO 27001 & DORA – manuelle, prüfsichere Bewertung Ihrer IT von zertifizierten Experten. Festpreis & prüffähiger Bericht, Angebot in 24 h.";
 
 export const metadata: Metadata = {
-  title: "Security Audit – NIS2 & ISO 27001 konform",
+  title: "Security Audit | NIS2 & ISO 27001 konform",
   description: DESC,
   alternates: { canonical: `https://sodusecure.com${PATH}` },
   openGraph: {
-    title: "Security Audit – NIS2 & ISO 27001 konform",
+    title: "Security Audit | NIS2 & ISO 27001 konform",
     description: DESC,
     url: `https://sodusecure.com${PATH}`,
     type: "website",

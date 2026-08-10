@@ -1,8 +1,8 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sicherheitsaudit Unternehmen – IT Sicherheitsaudit',
-  description: 'IT Sicherheitsaudit für Ihr Unternehmen. Sodu Secure führt manuelle Sicherheitsaudits durch – NIS2-, ISO 27001- & DSGVO-konform. Festpreis, schnelle Abwicklung. Angebot in 24 h.',
+  title: 'Sicherheitsaudit Unternehmen | IT Sicherheitsaudit',
+  description: 'IT Sicherheitsaudit für Ihr Unternehmen. Sodu Secure führt manuelle Sicherheitsaudits durch - NIS2-, ISO 27001- & DSGVO-konform. Festpreis, schnelle Abwicklung. Angebot in 24 h.',
   keywords: 'Sicherheitsaudit, IT Sicherheitsaudit, Security Audit Unternehmen, Sicherheitsprüfung IT, IT Audit Firma, Sicherheitsüberprüfung Unternehmen',
   robots: {
     index: true,
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://sodusecure.com/sicherheitsaudit' },
   openGraph: {
-    title: 'Sicherheitsaudit Unternehmen – IT Sicherheitsaudit',
-    description: 'IT Sicherheitsaudit für Ihr Unternehmen. Manuell, NIS2- & ISO 27001-konform, Festpreis. Sodu Secure – OSCP-zertifiziert, Angebot in 24 h.',
+    title: 'Sicherheitsaudit Unternehmen | IT Sicherheitsaudit',
+    description: 'IT Sicherheitsaudit für Ihr Unternehmen. Manuell, NIS2- & ISO 27001-konform, Festpreis. Sodu Secure - OSCP-zertifiziert, Angebot in 24 h.',
     url: 'https://sodusecure.com/sicherheitsaudit',
     siteName: 'Sodu Secure',
     locale: 'de_DE',

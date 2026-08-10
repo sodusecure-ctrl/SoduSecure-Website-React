@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "Penetrationstest Deutschland – zertifizierte Pentester",
+  title: "Penetrationstest Deutschland | zertifizierte Pentester",
   description:
-    "Penetrationstest deutschlandweit: OSCP-zertifizierte Pentester, DSGVO-konform, Berichte auf Deutsch. Web, API, Netzwerk, Active Directory & Cloud – Festpreis ab 1.499 €.",
+    "Penetrationstest deutschlandweit: OSCP-zertifizierte Pentester, DSGVO-konform, Berichte auf Deutsch. Web, API, Netzwerk, Active Directory & Cloud - Festpreis ab 1.499 €.",
   alternates: { canonical: "/penetrationstest-deutschland" },
 };
 

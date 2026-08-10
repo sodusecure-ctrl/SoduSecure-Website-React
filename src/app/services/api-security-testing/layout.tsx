@@ -7,11 +7,11 @@ const DESC =
   "API Penetrationstest nach OWASP API Top 10 – REST, GraphQL & SOAP manuell geprüft auf Auth-Fehler, BOLA & Injection. Festpreis nach Scoping, Angebot in 24 h.";
 
 export const metadata: Metadata = {
-  title: "API Penetrationstest – OWASP API Top 10",
+  title: "API Penetrationstest | OWASP API Top 10",
   description: DESC,
   alternates: { canonical: `https://sodusecure.com${PATH}` },
   openGraph: {
-    title: "API Penetrationstest – OWASP API Top 10",
+    title: "API Penetrationstest | OWASP API Top 10",
     description: DESC,
     url: `https://sodusecure.com${PATH}`,
     type: "website",

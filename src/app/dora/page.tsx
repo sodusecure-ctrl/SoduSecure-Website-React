@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "DORA-Verordnung: Digitale operationale Resilienz",
   description:
-    "Was ist DORA? Pflichten für Finanzunternehmen, Threat-Led Penetration Testing (TLPT) und Resilienztests – wir unterstützen Sie bei der DORA-Konformität.",
+    "Was ist DORA? Pflichten für Finanzunternehmen, Threat-Led Penetration Testing (TLPT) und Resilienztests - wir unterstützen Sie bei der DORA-Konformität.",
   alternates: { canonical: "/dora" },
 };
 

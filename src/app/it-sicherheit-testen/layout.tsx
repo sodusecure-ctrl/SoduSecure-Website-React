@@ -1,8 +1,8 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'IT Sicherheit testen – IT Sicherheitstest für Unternehmen',
-  description: 'IT Sicherheit testen lassen – Web, Netzwerk, Active Directory, Cloud. Sodu Secure führt manuelle IT Sicherheitstests durch. Festpreis ab 1.499 €, Ergebnis in 48 h. Jetzt konfigurieren.',
+  title: 'IT Sicherheit testen | IT Sicherheitstest für Unternehmen',
+  description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure führt manuelle IT Sicherheitstests durch. Festpreis ab 1.499 €, Ergebnis in 48 h. Jetzt konfigurieren.',
   keywords: 'IT Sicherheit testen, IT Sicherheitstest, Netzwerk Sicherheitstest, IT Sicherheitsprüfung, Sicherheitstest Unternehmen, IT Sicherheit überprüfen',
   robots: {
     index: true,
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://sodusecure.com/it-sicherheit-testen' },
   openGraph: {
-    title: 'IT Sicherheit testen – IT Sicherheitstest für Unternehmen',
-    description: 'IT Sicherheit testen lassen – Web, Netzwerk, Active Directory, Cloud. Sodu Secure: Festpreis ab 1.499 €, Ergebnis in 48 h.',
+    title: 'IT Sicherheit testen | IT Sicherheitstest für Unternehmen',
+    description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure: Festpreis ab 1.499 €, Ergebnis in 48 h.',
     url: 'https://sodusecure.com/it-sicherheit-testen',
     siteName: 'Sodu Secure',
     locale: 'de_DE',

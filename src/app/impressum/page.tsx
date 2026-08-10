@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import ImpressumEmailEasterEgg from './ImpressumEmailEasterEgg';
 
 export const metadata: Metadata = {
-  title: 'Impressum – Sodu Secure GmbH',
+  title: 'Impressum | Sodu Secure GmbH',
   description: 'Impressum der Sodu Secure GmbH gemäß § 5 TMG',
   robots: { index: false, follow: false },
 };

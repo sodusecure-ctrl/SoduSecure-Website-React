@@ -3,9 +3,9 @@ import { Metadata } from 'next';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'KMU Pentest-Paket – Komplett ab 8.000 € | Jetzt online konfigurieren',
+  title: 'KMU Pentest-Paket | Komplett ab 8.000 € | Jetzt online konfigurieren',
   description:
-    'Alles-inklusive Pentest für KMUs: Externer Pentest + Phishing + Active Directory. Kein Tageshonorar – transparenter Festpreis ab 8.000 €. Jetzt online konfigurieren & Preis sofort berechnen.',
+    'Alles-inklusive Pentest für KMUs: Externer Pentest + Phishing + Active Directory. Kein Tageshonorar - transparenter Festpreis ab 8.000 €. Jetzt online konfigurieren & Preis sofort berechnen.',
   keywords: [
     // Primary
     'Pentest KMU',
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
     'Sodu Secure',
   ],
   openGraph: {
-    title: 'KMU Pentest-Paket – Komplett ab 8.000 € | Jetzt konfigurieren',
+    title: 'KMU Pentest-Paket | Komplett ab 8.000 € | Jetzt konfigurieren',
     description:
-      'Alles-inklusive KMU Pentest: Externer Pentest + Phishing + Active Directory. Kein Tageshonorar. Jetzt online konfigurieren – Preis sofort berechnen.',
+      'Alles-inklusive KMU Pentest: Externer Pentest + Phishing + Active Directory. Kein Tageshonorar. Jetzt online konfigurieren - Preis sofort berechnen.',
     url: `${baseUrl}/services/sme-packages`,
     type: 'website',
     siteName: 'Sodu Secure',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KMU Sicherheitspaket – Pentest & Phishing ab 8.000 €',
+    title: 'KMU Sicherheitspaket | Pentest & Phishing ab 8.000 €',
     description:
       'KMU Pentest ab 8.000 €: Externer Pentest, Active Directory & Phishing-Simulation. Zertifizierte Pentester, Festpreis. Jetzt konfigurieren.',
     images: [`${baseUrl}/images/og-sme-packages.jpg`],

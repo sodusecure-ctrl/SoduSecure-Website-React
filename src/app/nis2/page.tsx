@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "NIS2-Pentest: Anforderungen & Compliance",
   description:
-    "Was ist NIS2? Wer ist betroffen, welche Pflichten gelten – und wie wir Sie mit Gap-Analyse, Penetrationstests und technischen Maßnahmen nach Art. 21 NIS2-konform machen.",
+    "Was ist NIS2? Wer ist betroffen, welche Pflichten gelten - und wie wir Sie mit Gap-Analyse, Penetrationstests und technischen Maßnahmen nach Art. 21 NIS2-konform machen.",
   alternates: { canonical: "/nis2" },
 };
 

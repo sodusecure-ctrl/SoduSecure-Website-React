@@ -5,9 +5,9 @@ import { wikiArticles, wikiCategories, wikiTools } from "@/lib/wikiData";
 
 // Bewusst noindex: Das Wiki soll nicht mit den SEO-Landingpages konkurrieren.
 export const metadata: Metadata = {
-  title: "Wiki – Compliance & IT-Sicherheit einfach erklärt",
+  title: "Wiki | Compliance & IT-Sicherheit einfach erklärt",
   description:
-    "Das Sodu Secure Wiki: NIS2, DSGVO, DORA, MDR, BSI C5, ISO 27001, TISAX & mehr – mit Umsetzungsschritten, offiziellen Quellen sowie allen Rechnern und Konfiguratoren.",
+    "Das Sodu Secure Wiki: NIS2, DSGVO, DORA, MDR, BSI C5, ISO 27001, TISAX & mehr - mit Umsetzungsschritten, offiziellen Quellen sowie allen Rechnern und Konfiguratoren.",
   robots: { index: false, follow: true },
 };
 

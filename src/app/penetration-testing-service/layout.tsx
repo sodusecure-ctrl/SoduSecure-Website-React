@@ -3,7 +3,7 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Penetration Testing Service – Professional Pentesting',
+  title: 'Penetration Testing Service | Professional Pentesting',
   description:
     'Professional penetration testing service for businesses of all sizes. Sodu Secure delivers manual web app, network, API & Active Directory pentests with actionable reports. Get your quote today.',
   keywords: [
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     'penetration testing Germany',
   ],
   openGraph: {
-    title: 'Penetration Testing Service – Professional Pentest',
+    title: 'Penetration Testing Service | Professional Pentest',
     description:
-      'Manual penetration testing service for web apps, networks, APIs & Active Directory. Real attack simulation – prioritised findings – actionable remediation. Get your fixed-price quote within 24h.',
+      'Manual penetration testing service for web apps, networks, APIs & Active Directory. Real attack simulation - prioritised findings - actionable remediation. Get your fixed-price quote within 24h.',
     url: `${baseUrl}/penetration-testing-service`,
     type: 'website',
     siteName: 'Sodu Secure',
@@ -48,9 +48,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Penetration Testing Service – Professional Pentest',
+    title: 'Penetration Testing Service | Professional Pentest',
     description:
-      'Sodu Secure – Penetration testing for web apps, networks, APIs & Active Directory. Fixed-price quotes. OWASP, PTES & MITRE ATT&CK aligned.',
+      'Sodu Secure - Penetration testing for web apps, networks, APIs & Active Directory. Fixed-price quotes. OWASP, PTES & MITRE ATT&CK aligned.',
   },
   alternates: {
     canonical: `${baseUrl}/penetration-testing-service`,

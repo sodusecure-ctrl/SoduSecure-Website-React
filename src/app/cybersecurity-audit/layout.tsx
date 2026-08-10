@@ -1,8 +1,8 @@
 ﻿import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cybersecurity Audit Unternehmen – Manuell & Compliant',
-  description: 'Cybersecurity Audit für NIS2, ISO 27001 & DORA. Sodu Secure führt manuelle Cyber Security Audits durch – OSCP-zertifiziert, Festpreis, Bericht in 48 h. Jetzt Angebot einholen.',
+  title: 'Cybersecurity Audit Unternehmen | Manuell & Compliant',
+  description: 'Cybersecurity Audit für NIS2, ISO 27001 & DORA. Sodu Secure führt manuelle Cyber Security Audits durch - OSCP-zertifiziert, Festpreis, Bericht in 48 h. Jetzt Angebot einholen.',
   keywords: 'Cybersecurity Audit, Cyber Security Audit, IT Audit Unternehmen, Cyber Audit Firma, Cybersecurity Prüfung, Security Audit Deutschland',
   robots: {
     index: true,
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://sodusecure.com/cybersecurity-audit' },
   openGraph: {
-    title: 'Cybersecurity Audit Unternehmen – Manuell & Compliant',
-    description: 'Cybersecurity Audit für NIS2, ISO 27001 & DORA. Sodu Secure führt manuelle Cyber Security Audits durch – OSCP-zertifiziert, Festpreis, Bericht in 48 h.',
+    title: 'Cybersecurity Audit Unternehmen | Manuell & Compliant',
+    description: 'Cybersecurity Audit für NIS2, ISO 27001 & DORA. Sodu Secure führt manuelle Cyber Security Audits durch - OSCP-zertifiziert, Festpreis, Bericht in 48 h.',
     url: 'https://sodusecure.com/cybersecurity-audit',
     siteName: 'Sodu Secure',
     locale: 'de_DE',

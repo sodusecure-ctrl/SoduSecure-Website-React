@@ -4,7 +4,7 @@ const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Netzwerk Pentest & Security Audit | Zertifizierte Pentester',
-  description: 'Netzwerk Pentest: Firewall, Segmentierung & exponierte Dienste – systematisch geprüft von zertifizierten Pentestern. Transparente Preise. Jetzt Pentest konfigurieren.',
+  description: 'Netzwerk Pentest: Firewall, Segmentierung & exponierte Dienste - systematisch geprüft von zertifizierten Pentestern. Transparente Preise. Jetzt Pentest konfigurieren.',
   keywords: [
     'network security audit',
     'network pentesting',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Netzwerk Pentest & Security Audit',
-    description: 'Firewall, Segmentierung & exponierte Dienste – zertifizierte Pentester. Transparente Preise, jetzt konfigurieren.',
+    description: 'Firewall, Segmentierung & exponierte Dienste - zertifizierte Pentester. Transparente Preise, jetzt konfigurieren.',
     url: `${baseUrl}/services/network-audit`,
     type: 'website',
   },

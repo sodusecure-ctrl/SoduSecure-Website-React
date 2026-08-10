@@ -4,7 +4,7 @@ const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Pentest Case Studies & Security Blog',
-  description: 'Pentest Case Studies & Security Blog: Echte Befunde, OWASP Top 10, AD-Angriffe & Cloud-Risiken. Von zertifizierten Pentestern – Praxis statt Theorie.',
+  description: 'Pentest Case Studies & Security Blog: Echte Befunde, OWASP Top 10, AD-Angriffe & Cloud-Risiken. Von zertifizierten Pentestern - Praxis statt Theorie.',
   keywords: [
     'security blog',
     'case studies',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Pentest Case Studies & Security Blog',
-    description: 'Echte Pentest-Befunde, OWASP Top 10 & AD-Angriffe. Von zertifizierten Pentestern – Praxis statt Theorie.',
+    description: 'Echte Pentest-Befunde, OWASP Top 10 & AD-Angriffe. Von zertifizierten Pentestern - Praxis statt Theorie.',
     url: `${baseUrl}/case-studies`,
     type: 'website',
   },

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  title: "DSGVO-Penetrationstest – Art. 32 nachweisen",
+  title: "DSGVO-Penetrationstest | Art. 32 nachweisen",
   description:
-    "DSGVO Art. 32 verlangt regelmäßige Überprüfung technischer Maßnahmen. Wir liefern den Penetrationstest als Wirksamkeitsnachweis – Festpreis ab 2.500 €.",
+    "DSGVO Art. 32 verlangt regelmäßige Überprüfung technischer Maßnahmen. Wir liefern den Penetrationstest als Wirksamkeitsnachweis - Festpreis ab 2.500 €.",
   alternates: { canonical: "/dsgvo-penetrationstest" },
 };
 

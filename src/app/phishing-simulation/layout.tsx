@@ -3,7 +3,7 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Phishing Simulation – Mitarbeiter testen & schulen',
+  title: 'Phishing Simulation | Mitarbeiter testen & schulen',
   description:
     'Professionelle Phishing Simulation für Unternehmen: Testen Sie die Sicherheitsbewusstsein Ihrer Mitarbeiter mit realistischen Phishing-Angriffen. NIS2-konform, DSGVO-konform. Jetzt anfragen.',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'Phishing Test KMU',
   ],
   openGraph: {
-    title: 'Phishing Simulation – Mitarbeiter auf echte Angriffe vorbereiten',
+    title: 'Phishing Simulation | Mitarbeiter auf echte Angriffe vorbereiten',
     description:
       'Realistische Phishing Simulationen testen Ihr Team gegen E-Mail-, Spear-Phishing- und Voice-Angriffe. NIS2-konformer Nachweis inklusive.',
     url: `${baseUrl}/phishing-simulation`,

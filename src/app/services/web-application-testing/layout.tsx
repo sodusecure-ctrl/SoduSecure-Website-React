@@ -7,11 +7,11 @@ const DESC =
   "Web Application Penetrationstest nach OWASP Top 10 – manuell von OSCP-Testern, inkl. Business-Logic-Tests & Auth-Bypass. Festpreis nach Scoping, Angebot in 24 h.";
 
 export const metadata: Metadata = {
-  title: "Web Application Penetrationstest – OWASP Top 10",
+  title: "Web Application Penetrationstest | OWASP Top 10",
   description: DESC,
   alternates: { canonical: `https://sodusecure.com${PATH}` },
   openGraph: {
-    title: "Web Application Penetrationstest – OWASP Top 10",
+    title: "Web Application Penetrationstest | OWASP Top 10",
     description: DESC,
     url: `https://sodusecure.com${PATH}`,
     type: "website",

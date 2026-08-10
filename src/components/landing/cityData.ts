@@ -89,9 +89,9 @@ const berlin: CityData = {
     { q: "Wie schnell bekomme ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Angebot. Bei dringenden Fällen – etwa vor einer Finanzierungsrunde oder einem Audit – richten wir uns nach Ihrem Zeitplan." },
     { q: "Ist der Pentest DSGVO-konform?", a: "Ja. Alle Tests laufen auf Basis eines schriftlichen Vertrags mit klar definiertem Scope, auf Wunsch mit AVV und NDA. Der Bericht ist als Nachweis technischer Maßnahmen nach Art. 32 DSGVO gegenüber der Berliner Datenschutzbehörde verwendbar." },
   ],
-  metaTitle: "Penetration Testing Berlin – Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing Berlin | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
-    "Penetration Testing in Berlin von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests, DSGVO-konform, Festpreis ab 1.499 €. Pentest Anbieter Berlin – Angebot in 24h.",
+    "Penetration Testing in Berlin von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests, DSGVO-konform, Festpreis ab 1.499 €. Pentest Anbieter Berlin - Angebot in 24h.",
   keywords: [
     "penetration testing berlin",
     "pentest berlin",
@@ -146,7 +146,7 @@ const hamburg: CityData = {
     { q: "Brauchen Hamburger Unternehmen wegen NIS2 einen Pentest?", a: "Viele ja. Logistik, Lebensmittel, Industrie und digitale Dienste fallen unter NIS2 – und Hamburg ist in genau diesen Sektoren stark. Wir prüfen Ihre Betroffenheit und liefern die geforderten Sicherheitsnachweise." },
     { q: "Wie schnell erhalte ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Festpreis-Angebot – ohne versteckte Tagessätze." },
   ],
-  metaTitle: "Penetration Testing Hamburg – Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing Hamburg | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
     "Penetration Testing in Hamburg von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Logistik, Handel & Industrie, DSGVO-konform, Festpreis ab 1.499 €. Angebot in 24h.",
   keywords: [
@@ -203,7 +203,7 @@ const muenchen: CityData = {
     { q: "Sind Sie für Vor-Ort-Termine in München verfügbar?", a: "Die meisten Tests laufen remote. Für Kick-offs, interne Tests oder Abschlusspräsentationen kommen wir nach München – persönlich und mit kurzer Reaktionszeit." },
     { q: "Wie schnell erhalte ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Festpreis-Angebot – ohne versteckte Tagessätze." },
   ],
-  metaTitle: "Penetration Testing München – Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing München | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
     "Penetration Testing in München von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Versicherer, Automotive & Tech, DORA- & DSGVO-konform, Festpreis ab 1.499 €.",
   keywords: [
@@ -260,7 +260,7 @@ const stuttgart: CityData = {
     { q: "Sind Sie für Vor-Ort-Termine in Stuttgart verfügbar?", a: "Die meisten Tests laufen remote. Für Kick-offs, interne Tests oder Abschlusspräsentationen kommen wir nach Stuttgart und in die Region – persönlich und mit kurzer Reaktionszeit." },
     { q: "Wie schnell erhalte ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Festpreis-Angebot – ohne versteckte Tagessätze." },
   ],
-  metaTitle: "Penetration Testing Stuttgart – Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing Stuttgart | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
     "Penetration Testing in Stuttgart von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Automotive, Maschinenbau & Mittelstand, TISAX- & DSGVO-konform, Festpreis ab 1.499 €.",
   keywords: [
@@ -317,7 +317,7 @@ const koeln: CityData = {
     { q: "Sind Sie für Vor-Ort-Termine in Köln verfügbar?", a: "Die meisten Tests laufen remote. Für Kick-offs, interne Tests oder Abschlusspräsentationen kommen wir nach Köln und ins Rheinland – persönlich und mit kurzer Reaktionszeit." },
     { q: "Wie schnell erhalte ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Festpreis-Angebot – ohne versteckte Tagessätze." },
   ],
-  metaTitle: "Penetration Testing Köln – Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing Köln | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
     "Penetration Testing in Köln von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Medien, Versicherer & Games, DSGVO-konform, Festpreis ab 1.499 €. Angebot in 24h.",
   keywords: [

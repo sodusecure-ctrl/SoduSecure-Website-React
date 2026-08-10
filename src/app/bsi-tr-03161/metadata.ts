@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BSI TR-03161 Sicherheitsprüfung – DiGA & DiPA Vorbereitung",
+  title: "BSI TR-03161 Sicherheitsprüfung | DiGA & DiPA Vorbereitung",
   description:
-    "Vorbereitende Sicherheitsprüfung nach BSI TR-03161 für DiGA- und DiPA-Hersteller. Gap-Analyse, Schwachstellentests & Beratung – optimale Vorbereitung auf die offizielle Zertifizierung.",
+    "Vorbereitende Sicherheitsprüfung nach BSI TR-03161 für DiGA- und DiPA-Hersteller. Gap-Analyse, Schwachstellentests & Beratung - optimale Vorbereitung auf die offizielle Zertifizierung.",
   keywords: [
     "BSI TR-03161",
     "DiGA Sicherheitsprüfung",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "digitale Gesundheitsanwendung Pentest",
   ],
   openGraph: {
-    title: "BSI TR-03161 Sicherheitsprüfung – DiGA & DiPA Vorbereitung",
+    title: "BSI TR-03161 Sicherheitsprüfung | DiGA & DiPA Vorbereitung",
     description:
       "Vorbereitende Sicherheitsprüfung nach BSI TR-03161 für DiGA- und DiPA-Hersteller. Gap-Analyse, Schwachstellentests & Beratung.",
     type: "website",

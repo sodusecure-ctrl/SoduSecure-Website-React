@@ -17,11 +17,11 @@ export function buildCityMetadata(slug: string): Metadata {
       type: "website",
       siteName: "Sodu Secure",
       locale: "de_DE",
-      images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: `Penetration Testing ${c.city} – Sodu Secure` }],
+      images: [{ url: `${baseUrl}/images/blogs/image9.png`, width: 1200, height: 630, alt: `Penetration Testing ${c.city} | Sodu Secure` }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `Penetration Testing ${c.city} – Sodu Secure`,
+      title: `Penetration Testing ${c.city} | Sodu Secure`,
       description: c.metaDescription,
     },
     alternates: { canonical: url },

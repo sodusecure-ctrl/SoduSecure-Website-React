@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = getWikiArticle(slug);
   if (!article) return {};
   return {
-    title: `${article.title} – Wiki`,
+    title: `${article.title} | Wiki`,
     description: article.short,
     robots: { index: false, follow: true },
   };

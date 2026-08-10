@@ -5,7 +5,7 @@ import CorporateLanding from './CorporateLanding';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Penetrationstests für Unternehmen – Zertifiziert & DSGVO-konform',
+  title: 'Penetrationstests für Unternehmen | Zertifiziert & DSGVO-konform',
   description:
     'Professionelle Penetrationstests von OSCP-zertifizierten Experten aus der DACH-Region. Manuell, prüfsicher für ISO 27001, NIS2, DORA & DSGVO. Festpreisangebot innerhalb von 24 Stunden.',
   keywords: [
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'NIS2', 'DORA', 'DSGVO Sicherheitstest', 'Pentest Deutschland', 'Penetration Testing Deutschland',
   ],
   openGraph: {
-    title: 'Penetrationstests für Unternehmen – Zertifiziert & DSGVO-konform',
+    title: 'Penetrationstests für Unternehmen | Zertifiziert & DSGVO-konform',
     description: 'Manuelle Penetrationstests von zertifizierten Experten. Prüfsicher für ISO 27001, NIS2, DORA & DSGVO. Angebot in 24 Stunden.',
     url: `${baseUrl}/corporate`,
     type: 'website',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Penetrationstests für Unternehmen – Sodu Secure',
+    title: 'Penetrationstests für Unternehmen | Sodu Secure',
     description: 'Manuelle, zertifizierte Penetrationstests. Prüfsicher für ISO 27001, NIS2, DORA & DSGVO.',
   },
   alternates: { canonical: `${baseUrl}/corporate` },
