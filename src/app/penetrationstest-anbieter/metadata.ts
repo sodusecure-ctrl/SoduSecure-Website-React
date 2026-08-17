@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const baseUrl = "https://sodusecure.com";
 
 export const metadata: Metadata = {
-  title: { absolute: "Penetrationstest Anbieter aus Deutschland mit Zertifizierung" },
+  title: "Penetrationstest Anbieter mit Zertifizierung",
   description:
     "Ihr Penetrationstest Anbieter aus Deutschland: OSCP-zertifiziert, DSGVO-konform, 500+ erfolgreiche Pentests. Kostenlose Erstberatung innerhalb von 24h.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/penetrationstest-anbieter`,
   },
   openGraph: {
-    title: "Penetrationstest Anbieter aus Deutschland mit Zertifizierung | Sodu Secure",
+    title: "Penetrationstest Anbieter mit Zertifizierung | Sodu Secure",
     description:
       "Ihr Penetrationstest Anbieter aus Deutschland: OSCP-zertifiziert, DSGVO-konform, 500+ erfolgreiche Pentests. Kostenlose Erstberatung innerhalb von 24h.",
     url: `${baseUrl}/penetrationstest-anbieter`,
