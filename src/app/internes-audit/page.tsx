@@ -121,9 +121,9 @@ export default function InternesAuditPage() {
             Konformität prüfen und Risiken identifizieren, bevor es der Zertifizierer tut: Wir führen Ihr internes Audit nach ISO 27001 durch – unabhängig, erfahren und mit einem Maßnahmenplan, der Sie wirklich weiterbringt.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-            <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
-              <Phone className="w-5 h-5" />Internes Audit anfragen
-            </a>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
+              Internes Audit anfragen <ArrowRight className="w-5 h-5" />
+            </Link>
             <Link href="/services/iso-27001" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               ISMS / ISO 27001 <ArrowRight className="w-5 h-5" />
             </Link>
@@ -260,9 +260,9 @@ export default function InternesAuditPage() {
                 <h3 className="font-bold mb-1">{pkg.name}</h3>
                 <div className="text-xl font-bold text-[#FF3B30] mb-3">{pkg.price}</div>
                 <p className="text-white/60 text-sm">{pkg.desc}</p>
-                <a href={PHONE_HREF} className="mt-4 w-full inline-flex items-center justify-center premium-cta text-white px-4 py-2.5 rounded-2xl text-sm font-medium transition-colors">
+                <Link href="/contact" className="mt-4 w-full inline-flex items-center justify-center premium-cta text-white px-4 py-2.5 rounded-2xl text-sm font-medium transition-colors">
                   Anfragen
-                </a>
+                </Link>
               </div>
             ))}
           </div>

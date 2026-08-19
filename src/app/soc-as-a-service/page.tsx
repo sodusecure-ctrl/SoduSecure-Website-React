@@ -121,9 +121,9 @@ export default function SocAsAServicePage() {
             Security Operations Center ohne eigenes Team: Wir überwachen Ihre IT rund um die Uhr, bewerten jeden Alarm mit echten Analysten und reagieren, bevor aus einem Alert ein Ransomware-Vorfall wird.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-            <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
-              <Phone className="w-5 h-5" />SOC-Beratung anfragen
-            </a>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
+              SOC-Beratung anfragen <ArrowRight className="w-5 h-5" />
+            </Link>
             <Link href="/schwachstellenscan" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               Zum Schwachstellenscan <ArrowRight className="w-5 h-5" />
             </Link>
@@ -260,9 +260,9 @@ export default function SocAsAServicePage() {
                 <h3 className="font-bold mb-1">{pkg.name}</h3>
                 <div className="text-xl font-bold text-[#FF3B30] mb-3">{pkg.price}</div>
                 <p className="text-white/60 text-sm">{pkg.desc}</p>
-                <a href={PHONE_HREF} className="mt-4 w-full inline-flex items-center justify-center premium-cta text-white px-4 py-2.5 rounded-2xl text-sm font-medium transition-colors">
+                <Link href="/contact" className="mt-4 w-full inline-flex items-center justify-center premium-cta text-white px-4 py-2.5 rounded-2xl text-sm font-medium transition-colors">
                   Anfragen
-                </a>
+                </Link>
               </div>
             ))}
           </div>

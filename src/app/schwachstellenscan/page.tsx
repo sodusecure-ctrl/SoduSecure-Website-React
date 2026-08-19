@@ -121,9 +121,9 @@ export default function SchwachstellenscanPage() {
             Regelmäßige automatisierte Schwachstellen-Prüfung Ihrer Systeme – jedes Ergebnis von zertifizierten Pentestern validiert und nach echtem Risiko priorisiert. Kein Rohbericht-Dump.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
-            <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
-              <Phone className="w-5 h-5" />Schwachstellenscan anfragen
-            </a>
+            <Link href="/contact" className="inline-flex items-center justify-center gap-2 premium-cta text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
+              Schwachstellenscan anfragen <ArrowRight className="w-5 h-5" />
+            </Link>
             <Link href="/pentest" className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-8 py-4 rounded-2xl font-semibold transition-colors text-base">
               Zum Penetrationstest <ArrowRight className="w-5 h-5" />
             </Link>
@@ -261,9 +261,9 @@ export default function SchwachstellenscanPage() {
                 <h3 className="font-bold mb-1">{pkg.name}</h3>
                 <div className="text-xl font-bold text-[#FF3B30] mb-3">{pkg.price}</div>
                 <p className="text-white/60 text-sm">{pkg.desc}</p>
-                <a href={PHONE_HREF} className="mt-4 w-full inline-flex items-center justify-center premium-cta text-white px-4 py-2.5 rounded-2xl text-sm font-medium transition-colors">
+                <Link href="/contact" className="mt-4 w-full inline-flex items-center justify-center premium-cta text-white px-4 py-2.5 rounded-2xl text-sm font-medium transition-colors">
                   Anfragen
-                </a>
+                </Link>
               </div>
             ))}
           </div>
