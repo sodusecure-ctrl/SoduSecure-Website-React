@@ -7,18 +7,17 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {
-  AppWindow,
   ChevronDown,
   ChevronRight,
   ClipboardCheck,
   Globe,
   HeartPulse,
-  MapPin,
   Moon,
   Server,
   Shield,
   Sparkles,
   Sun,
+  Target,
   X,
 } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
@@ -35,7 +34,6 @@ export default function Header() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isMobileBerlinOpen, setIsMobileBerlinOpen] = useState(false);
-  const [isMobileTR03161Open, setIsMobileTR03161Open] = useState(false);
   const [isQuickCheckOpen, setIsQuickCheckOpen] = useState(false);
   const [isComplianceOpen, setIsComplianceOpen] = useState(false);
   const [isMobileQuickCheckOpen, setIsMobileQuickCheckOpen] = useState(false);
@@ -111,22 +109,15 @@ export default function Header() {
       label: 'Pentest',
       icon: <Shield className="h-3 w-3 text-[#FF6B61]" />,
       links: [
-        { name: isEnglish ? 'Request a pentest' : 'Pentest anfragen', path: '/request-pentest' },
-        { name: isEnglish ? 'Pricing' : 'Preise', path: '/pricing' },
+        { name: isEnglish ? 'Penetration testing' : 'Penetrationstest', path: '/pentest' },
+        { name: isEnglish ? 'Web applications' : 'Webanwendungen', path: '/services/web-application-testing' },
+        { name: isEnglish ? 'APIs & interfaces' : 'APIs & Schnittstellen', path: '/services/api-security-testing' },
+        { name: 'Mobile Apps', path: '/services/mobile-app-testing' },
         { name: isEnglish ? 'SME packages' : 'KMU-Pakete', path: '/services/sme-packages' },
       ],
     },
     {
-      label: 'Web & Apps',
-      icon: <AppWindow className="h-3 w-3 text-[#FF6B61]" />,
-      links: [
-        { name: isEnglish ? 'Web applications' : 'Webanwendungen', path: '/services/web-application-testing' },
-        { name: isEnglish ? 'APIs & interfaces' : 'APIs & Schnittstellen', path: '/services/api-security-testing' },
-        { name: 'Mobile Apps', path: '/services/mobile-app-testing' },
-      ],
-    },
-    {
-      label: isEnglish ? 'Network & Cloud' : 'Netzwerk & Cloud',
+      label: isEnglish ? 'Pentest: Infrastructure & Cloud' : 'Pentest: Infrastruktur & Cloud',
       icon: <Server className="h-3 w-3 text-[#FF6B61]" />,
       links: [
         { name: isEnglish ? 'IT infrastructure' : 'IT-Infrastruktur', path: '/services/infrastructure-testing' },
@@ -137,12 +128,30 @@ export default function Header() {
       ],
     },
     {
-      label: 'Audits',
+      label: isEnglish ? 'Pentest: Industries' : 'Pentest: Branchen',
+      icon: <HeartPulse className="h-3 w-3 text-[#FF6B61]" />,
+      links: [
+        { name: isEnglish ? 'TR-03161 review' : 'TR-03161 Prüfung', path: '/bsi-tr-03161' },
+        { name: isEnglish ? 'Health-app pentest' : 'Pentest Gesundheits-Apps', path: '/pentest-gesundheitsanwendungen' },
+        { name: isEnglish ? 'GDPR pentest' : 'DSGVO-Penetrationstest', path: '/dsgvo-penetrationstest' },
+      ],
+    },
+    {
+      label: 'ISO 27001 & Audits',
       icon: <ClipboardCheck className="h-3 w-3 text-[#FF6B61]" />,
       links: [
+        { name: 'ISO 27001', path: '/services/iso-27001' },
         { name: 'Security Audit', path: '/services/security-audit' },
         { name: 'Vulnerability Assessment', path: '/services/vulnerability-assessment' },
-        { name: 'ISO 27001', path: '/services/iso-27001' },
+      ],
+    },
+    {
+      label: 'Red Teaming',
+      icon: <Target className="h-3 w-3 text-[#FF6B61]" />,
+      links: [
+        { name: 'Red Team Assessment', path: '/red-team-assessment' },
+        { name: isEnglish ? 'Phishing simulation' : 'Phishing-Simulation', path: '/phishing-simulation' },
+        { name: isEnglish ? 'Hacker simulation' : 'Hacker-Simulation', path: '/hacker-simulation' },
       ],
     },
   ];
@@ -153,26 +162,6 @@ export default function Header() {
     { name: isEnglish ? 'For SMEs' : 'Für KMU', path: '/pentest-berlin/kmu' },
     { name: isEnglish ? 'Internal vs. external' : 'Intern vs. extern', path: '/pentest-berlin/intern-extern' },
     { name: 'ISO 27001', path: '/pentest-berlin/iso-27001' },
-  ];
-
-  const tr03161Links = [
-    { name: isEnglish ? 'TR-03161 review' : 'TR-03161 Prüfung', path: '/bsi-tr-03161' },
-    { name: isEnglish ? 'Health-app pentest' : 'Pentest Gesundheits-Apps', path: '/pentest-gesundheitsanwendungen' },
-    { name: isEnglish ? 'Request TR-03161' : 'TR-03161 anfragen', path: '/anfrage-tr03161' },
-  ];
-
-  const allServiceGroups = [
-    ...serviceGroups,
-    {
-      label: 'Pentest Berlin',
-      icon: <MapPin className="h-3 w-3 text-[#FF6B61]" />,
-      links: berlinLinks,
-    },
-    {
-      label: isEnglish ? 'Health Apps' : 'Gesundheits-Apps',
-      icon: <HeartPulse className="h-3 w-3 text-[#FF6B61]" />,
-      links: tr03161Links,
-    },
   ];
 
   const priceLink = isPentest
@@ -324,7 +313,7 @@ export default function Header() {
                   {t('chooseServices')}
                 </div>
                 <div className="grid grid-cols-3 gap-x-4 gap-y-5">
-                  {allServiceGroups.map((group, gi) => (
+                  {serviceGroups.map((group, gi) => (
                     <div key={gi}>
                       <div className="flex items-center gap-1.5 border-b border-white/5 px-2 pb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/40">
                         {group.icon}
@@ -568,25 +557,6 @@ export default function Header() {
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   setIsMobileBerlinOpen(false);
-                  router.push(toLocalizedPath(l.path));
-                }}
-              />
-            ))}
-          </MobileGroup>
-
-          <MobileGroup
-            label="BSI TR-03161"
-            open={isMobileTR03161Open}
-            onToggle={() => setIsMobileTR03161Open(!isMobileTR03161Open)}
-          >
-            {tr03161Links.map((l, i) => (
-              <MobileLink
-                key={i}
-                label={l.name}
-                active={isActive(l.path)}
-                onClick={() => {
-                  setIsMobileMenuOpen(false);
-                  setIsMobileTR03161Open(false);
                   router.push(toLocalizedPath(l.path));
                 }}
               />
