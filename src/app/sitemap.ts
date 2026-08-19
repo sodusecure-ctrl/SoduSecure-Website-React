@@ -55,6 +55,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/vulnerability-assessment-service', lastModified: '2026-05-18', changeFreq: 'monthly', priority: 0.8 },
     { path: '/pentest-certification',          lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.7 },
 
+    // ── Leistungs-Seiten (Menü-Säulen) ──
+    { path: '/schwachstellenscan',             lastModified: '2026-08-19', changeFreq: 'monthly', priority: 0.8 },
+    { path: '/ki-penetrationstest',            lastModified: '2026-08-19', changeFreq: 'monthly', priority: 0.8 },
+    { path: '/internes-audit',                 lastModified: '2026-08-19', changeFreq: 'monthly', priority: 0.8 },
+    { path: '/soc-as-a-service',               lastModified: '2026-08-19', changeFreq: 'monthly', priority: 0.8 },
+    { path: '/live-hacking-show',              lastModified: '2026-08-19', changeFreq: 'monthly', priority: 0.8 },
+    { path: '/security-awareness-schulung',    lastModified: '2026-08-19', changeFreq: 'monthly', priority: 0.8 },
+
     // ── Lead-Gen-Checks ──
     { path: '/pentest-schnellcheck',           lastModified: '2026-06-22', changeFreq: 'monthly', priority: 0.8 },
     { path: '/pentest-risiko-check',           lastModified: '2026-06-22', changeFreq: 'monthly', priority: 0.8 },

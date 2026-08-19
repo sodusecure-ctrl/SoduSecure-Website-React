@@ -3,10 +3,15 @@
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Penetrationstest | zertifizierte Pentests zum Festpreis',
+  title: { absolute: 'Sodu Secure: Pentest Kosten & Angebot | Konfigurator' },
   description:
-    'Penetrationstest von OSCP-zertifizierten Experten: Web, API, Netzwerk & Active Directory. Festpreis ab 1.499 €, Bericht mit Fix-Empfehlungen und kostenlosem Retest. Preis in 3 Min. berechnen.',
+    'Pentest vom zertifizierten Anbieter - Kosten in 3 Minuten im Konfigurator berechnen. Web, API, Netzwerk & Active Directory. Festpreis ab 1.499 €, kostenloser Retest. Angebot in 24h.',
   keywords: [
+    'Pentest',
+    'Pentest Kosten',
+    'Pentest Angebot',
+    'Pentest Konfigurator',
+    'Pentest Anbieter',
     'Penetrationstest',
     'Penetration Testing',
     'Pentesting',
@@ -31,9 +36,9 @@ export const metadata: Metadata = {
     'Red Team Test',
   ],
   openGraph: {
-    title: 'Penetrationstest | zertifizierte Pentests zum Festpreis',
+    title: 'Sodu Secure: Pentest Kosten & Angebot | Konfigurator',
     description:
-      'Penetrationstest von OSCP-zertifizierten Experten: Web, API, Netzwerk & AD. Festpreis ab 1.499 €, Bericht mit Fix-Empfehlungen und kostenlosem Retest.',
+      'Pentest vom zertifizierten Anbieter - Kosten sofort im Konfigurator berechnen. Festpreis ab 1.499 €, Bericht mit Fix-Empfehlungen und kostenlosem Retest.',
     url: `${baseUrl}/penetration-testing`,
     type: 'website',
     siteName: 'Sodu Secure',
@@ -48,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Penetrationstest & Pentesting | Zertifizierte Pentester',
+    title: 'Pentest Kosten & Angebot | Sodu Secure',
     description:
-      'Sodu Secure - professioneller Penetrationstest für Web, API, AD & Netzwerke. Zertifizierte Experten. Festpreis ab 1.499 €.',
+      'Pentest vom zertifizierten Anbieter - Kosten sofort im Konfigurator berechnen. Festpreis ab 1.499 €.',
   },
   alternates: {
     canonical: `${baseUrl}/penetration-testing`,

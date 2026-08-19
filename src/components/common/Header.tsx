@@ -11,13 +11,11 @@ import {
   ChevronRight,
   ClipboardCheck,
   Globe,
-  HeartPulse,
+  GraduationCap,
   Moon,
-  Server,
   Shield,
   Sparkles,
   Sun,
-  Target,
   X,
 } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
@@ -106,52 +104,71 @@ export default function Header() {
 
   const serviceGroups = [
     {
-      label: 'Pentest',
+      label: 'Offensive Security',
       icon: <Shield className="h-3 w-3 text-[#FF6B61]" />,
       links: [
-        { name: isEnglish ? 'Penetration testing' : 'Penetrationstest', path: '/pentest' },
-        { name: isEnglish ? 'Web applications' : 'Webanwendungen', path: '/services/web-application-testing' },
-        { name: isEnglish ? 'APIs & interfaces' : 'APIs & Schnittstellen', path: '/services/api-security-testing' },
-        { name: 'Mobile Apps', path: '/services/mobile-app-testing' },
-        { name: isEnglish ? 'SME packages' : 'KMU-Pakete', path: '/services/sme-packages' },
+        {
+          name: isEnglish ? 'Penetration testing' : 'Penetrationstest',
+          desc: isEnglish ? 'Find the flaws scanners miss' : 'Schwachstellen finden, die Scanner übersehen',
+          path: '/pentest',
+        },
+        {
+          name: 'Red Teaming',
+          desc: isEnglish ? 'Realistic attack scenarios for your defense' : 'Realistische Angriffsszenarien für Ihre Abwehr',
+          path: '/red-team-assessment',
+        },
+        {
+          name: isEnglish ? 'Vulnerability scanning' : 'Schwachstellenscan',
+          desc: isEnglish ? 'Recurring automated vulnerability checks' : 'Regelmäßige automatisierte Schwachstellen-Prüfung',
+          path: '/schwachstellenscan',
+        },
+        {
+          name: isEnglish ? 'AI penetration testing' : 'KI-Penetrationstest',
+          desc: isEnglish ? 'Secure LLMs, RAG systems and AI agents' : 'LLMs, RAG-Systeme und KI-Agenten sicher machen',
+          path: '/ki-penetrationstest',
+        },
       ],
     },
     {
-      label: isEnglish ? 'Pentest: Infrastructure & Cloud' : 'Pentest: Infrastruktur & Cloud',
-      icon: <Server className="h-3 w-3 text-[#FF6B61]" />,
-      links: [
-        { name: isEnglish ? 'IT infrastructure' : 'IT-Infrastruktur', path: '/services/infrastructure-testing' },
-        { name: isEnglish ? 'Network audit' : 'Netzwerk-Audit', path: '/services/network-audit' },
-        { name: 'Active Directory', path: '/services/active-directory' },
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops-testing' },
-        { name: 'AWS', path: '/services/aws-penetrationstest' },
-      ],
-    },
-    {
-      label: isEnglish ? 'Pentest: Industries' : 'Pentest: Branchen',
-      icon: <HeartPulse className="h-3 w-3 text-[#FF6B61]" />,
-      links: [
-        { name: isEnglish ? 'TR-03161 review' : 'TR-03161 Prüfung', path: '/bsi-tr-03161' },
-        { name: isEnglish ? 'Health-app pentest' : 'Pentest Gesundheits-Apps', path: '/pentest-gesundheitsanwendungen' },
-        { name: isEnglish ? 'GDPR pentest' : 'DSGVO-Penetrationstest', path: '/dsgvo-penetrationstest' },
-      ],
-    },
-    {
-      label: 'ISO 27001 & Audits',
+      label: isEnglish ? 'Security Consulting' : 'Sicherheitsberatung',
       icon: <ClipboardCheck className="h-3 w-3 text-[#FF6B61]" />,
       links: [
-        { name: 'ISO 27001', path: '/services/iso-27001' },
-        { name: 'Security Audit', path: '/services/security-audit' },
-        { name: 'Vulnerability Assessment', path: '/services/vulnerability-assessment' },
+        {
+          name: 'ISMS / ISO 27001',
+          desc: isEnglish ? 'Build and certify your management system' : 'Managementsystem aufbauen und zertifizieren',
+          path: '/services/iso-27001',
+        },
+        {
+          name: isEnglish ? 'Internal audit' : 'Internes Audit',
+          desc: isEnglish ? 'Verify compliance and identify risks' : 'Konformität prüfen und Risiken identifizieren',
+          path: '/internes-audit',
+        },
+        {
+          name: 'SOC',
+          desc: isEnglish ? '24/7 security monitoring & incident response' : '24/7 Security Monitoring & Incident Response',
+          path: '/soc-as-a-service',
+        },
       ],
     },
     {
-      label: 'Red Teaming',
-      icon: <Target className="h-3 w-3 text-[#FF6B61]" />,
+      label: 'Security Awareness',
+      icon: <GraduationCap className="h-3 w-3 text-[#FF6B61]" />,
       links: [
-        { name: 'Red Team Assessment', path: '/red-team-assessment' },
-        { name: isEnglish ? 'Phishing simulation' : 'Phishing-Simulation', path: '/phishing-simulation' },
-        { name: isEnglish ? 'Hacker simulation' : 'Hacker-Simulation', path: '/hacker-simulation' },
+        {
+          name: 'Live Hacking Show',
+          desc: isEnglish ? 'Experience attacks live and understand them' : 'Angriffe live erleben und verstehen',
+          path: '/live-hacking-show',
+        },
+        {
+          name: isEnglish ? 'Phishing simulation' : 'Phishing-Simulation',
+          desc: isEnglish ? 'Prepare employees for real attacks' : 'Mitarbeiter gezielt auf Angriffe vorbereiten',
+          path: '/phishing-simulation',
+        },
+        {
+          name: isEnglish ? 'Custom trainings' : 'Individuelle Schulungen',
+          desc: isEnglish ? 'Tailored awareness training' : 'Maßgeschneidertes Awareness-Training',
+          path: '/security-awareness-schulung',
+        },
       ],
     },
   ];
@@ -327,8 +344,11 @@ export default function Header() {
                             onClick={() => handleServiceClick(l.path)}
                             onSelect={(e) => e.preventDefault()}
                           >
-                            <span>{l.name}</span>
-                            <ChevronRight className="h-3.5 w-3.5 opacity-50" />
+                            <span>
+                              <span className="block font-medium">{l.name}</span>
+                              <span className="mt-0.5 block text-[11px] leading-snug text-white/45">{l.desc}</span>
+                            </span>
+                            <ChevronRight className="h-3.5 w-3.5 flex-shrink-0 opacity-50" />
                           </DropdownMenuItem>
                         ))}
                       </div>
@@ -517,6 +537,7 @@ export default function Header() {
                   <MobileLink
                     key={gi + '-' + i}
                     label={l.name}
+                    sublabel={l.desc}
                     active={isActive(l.path)}
                     onClick={() => handleServiceClick(l.path)}
                   />
@@ -647,10 +668,12 @@ function MobileGroup({
 
 function MobileLink({
   label,
+  sublabel,
   active,
   onClick,
 }: {
   label: string;
+  sublabel?: string;
   active: boolean;
   onClick: () => void;
 }) {
@@ -662,8 +685,11 @@ function MobileLink({
         (active ? 'bg-white/10 text-[#FF3B30]' : 'text-white/75 hover:bg-white/5 hover:text-white')
       }
     >
-      <span>{label}</span>
-      <ChevronRight className="h-3.5 w-3.5 opacity-50" />
+      <span>
+        <span className="block">{label}</span>
+        {sublabel && <span className="mt-0.5 block text-[11px] leading-snug text-white/40">{sublabel}</span>}
+      </span>
+      <ChevronRight className="h-3.5 w-3.5 flex-shrink-0 opacity-50" />
     </button>
   );
 }
