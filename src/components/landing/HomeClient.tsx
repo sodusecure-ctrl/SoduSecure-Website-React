@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import {
@@ -594,14 +595,33 @@ export default function HomeClient() {
     <main className="bg-transparent text-white">
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
-        <div className="premium-aurora" aria-hidden />
+        {/* Hintergrundfoto (Pexels-Lizenz, frei nutzbar) mit Verlauf zur Textseite */}
+        <div className="absolute inset-0 hidden sm:block" aria-hidden>
+          <Image
+            src="/images/hero-cybersecurity-light.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[72%_center] dark:hidden"
+          />
+          <Image
+            src="/images/hero-cybersecurity.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="hidden object-cover object-[72%_center] dark:block"
+          />
+          <div className="absolute inset-0 hero-photo-overlay" />
+          <div className="absolute inset-x-0 bottom-0 h-28 hero-photo-bottom" />
+        </div>
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
 
         <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-20 sm:px-6 sm:pt-14 sm:pb-28 lg:pt-20 lg:pb-36">
           {/* Eyebrow */}
           <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
             <span>{s.productEyebrow} {isPentest ? s.toggle.pentest : s.toggle.auditai}</span>
           </div>
 

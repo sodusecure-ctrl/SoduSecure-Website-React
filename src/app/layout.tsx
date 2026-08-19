@@ -145,7 +145,7 @@ export default async function RootLayout({
         {/* Theme – set before paint to avoid a flash of the wrong design */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme')||'dark';window.__theme=t;var e=document.documentElement;e.classList.toggle('dark',t!=='light');e.classList.toggle('light',t==='light');e.setAttribute('data-theme',t);}catch(e){}})();`,
+            __html: `(function(){try{var t=localStorage.getItem('theme-v2')||'light';window.__theme=t;var e=document.documentElement;e.classList.toggle('dark',t!=='light');e.classList.toggle('light',t==='light');e.setAttribute('data-theme',t);}catch(e){}})();`,
           }}
         />
         {/* Google Tag Manager */}

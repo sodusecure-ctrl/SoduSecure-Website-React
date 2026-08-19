@@ -208,6 +208,14 @@ export default function Header() {
         : 'text-white/85 hover:bg-white/5 hover:text-white'
     }`;
 
+  // Leistungs-Menü: jeder Eintrag als eigener Kasten mit Abstand
+  const serviceItemCls = (active: boolean) =>
+    `group flex items-center justify-between gap-3 rounded-xl border px-3 py-2.5 text-[13px] transition cursor-pointer ${
+      active
+        ? 'border-[#FF3B30]/40 bg-white/10 text-[#FF3B30]'
+        : 'border-white/10 bg-white/[0.03] text-white/85 hover:border-white/25 hover:bg-white/5 hover:text-white'
+    }`;
+
   return (
     <>
       <nav className="sticky top-0 z-50 select-none border-b border-white/10 bg-[#0A0A0B]/95 backdrop-blur-xl">
@@ -336,11 +344,11 @@ export default function Header() {
                         {group.icon}
                         {group.label}
                       </div>
-                      <div className="mt-1.5">
+                      <div className="mt-2 flex flex-col gap-2">
                         {group.links.map((l, i) => (
                           <DropdownMenuItem
                             key={gi + '-' + i}
-                            className={itemCls(isActive(l.path))}
+                            className={serviceItemCls(isActive(l.path))}
                             onClick={() => handleServiceClick(l.path)}
                             onSelect={(e) => e.preventDefault()}
                           >

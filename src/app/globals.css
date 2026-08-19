@@ -365,6 +365,46 @@ html {
   font-feature-settings: "tnum", "ss01";
 }
 
+/* Hero-Foto-Overlays: links deckend (Textseite), rechts Foto sichtbar */
+.hero-photo-overlay {
+  background: linear-gradient(90deg,
+    #0A0A0B 0%,
+    rgba(10, 10, 11, 0.96) 34%,
+    rgba(10, 10, 11, 0.72) 56%,
+    rgba(10, 10, 11, 0.30) 78%,
+    rgba(10, 10, 11, 0.15) 100%);
+}
+.hero-photo-bottom {
+  background: linear-gradient(180deg, transparent 0%, #0A0A0B 100%);
+}
+html.light .hero-photo-overlay {
+  background:
+    radial-gradient(ellipse 66% 62% at 20% 62%,
+      rgba(255, 255, 255, 0.97) 0%,
+      rgba(255, 255, 255, 0.85) 45%,
+      rgba(255, 255, 255, 0) 74%),
+    linear-gradient(90deg,
+      #ffffff 0%,
+      #ffffff 26%,
+      rgba(255, 255, 255, 0.92) 44%,
+      rgba(255, 255, 255, 0.45) 58%,
+      rgba(255, 255, 255, 0) 70%);
+}
+html.light .hero-photo-bottom {
+  background: linear-gradient(180deg, transparent 0%, #ffffff 100%);
+}
+
+/* Eyebrow-Pills (Oval mit rotem Punkt über Überschriften) — entfernt.
+   Fängt SectionLabel und alle inline gebauten Varianten zentral ab. */
+.inline-flex.rounded-full:has(.h-1\.5.w-1\.5.bg-\[\#FF3B30\]) {
+  display: none;
+}
+
+/* Leuchtende Eyebrow-Punkte (Neon-Dots) vor Hero-Zeilen — entfernt */
+span[class*="shadow-[0_0_12px_rgba(255,59,48"] {
+  display: none;
+}
+
 /* ============== DARK PREMIUM v2 — full-page luxury layer ============== */
 
 /* Glass section: replaces white/light section backgrounds */
@@ -691,6 +731,207 @@ html.light .verify-page [class*="border-red-800"] { border-color: rgba(220, 38, 
 html.light .verify-page .text-red-300 { color: #B91C1C !important; }
 html.light .verify-page .text-gray-600 { color: #94A3B8 !important; }
 html.light .verify-page pre { color: #166534 !important; }
+
+/* ============================================================= */
+/* Light als Standard-Design — Feinschliff:                      */
+/* Body-Glow/Vignette, Scrollbar, Selection, Shimmer-Headlines,  */
+/* Pastell-Akzente und dunkle Farb-Wash-Hintergründe.            */
+/* ============================================================= */
+
+/* Ambient-Glow im Hellen komplett aus (kein rotes Leuchten); Vignette aus */
+html.light body::before {
+  background: none;
+}
+html.light body::after { background: none; }
+
+/* Scrollbar hell */
+html.light ::-webkit-scrollbar-track { background: #F1F5F9; }
+html.light ::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.18);
+  border: 2px solid #F1F5F9;
+}
+html.light ::-webkit-scrollbar-thumb:hover { background: rgba(220, 38, 38, 0.45); }
+
+/* Selection lesbar auf Weiß */
+html.light ::selection { background: rgba(220, 38, 38, 0.16); color: #0F172A; }
+html.light ::-moz-selection { background: rgba(220, 38, 38, 0.16); color: #0F172A; }
+
+/* Shimmer-Headlines: Weiß-Anteile waren auf Weiß unsichtbar -> dunkles Slate + Rot */
+html.light .premium-headline-shimmer {
+  background: linear-gradient(110deg, #0F172A 0%, #1E293B 25%, #DC2626 45%, #EF4444 55%, #1E293B 75%, #0F172A 100%);
+  background-size: 280% 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+html.light .premium-headline-accent {
+  background: linear-gradient(110deg, #0F172A 0%, #DC2626 35%, #B91C1C 50%, #DC2626 65%, #0F172A 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+/* Glass-Pille auf Weiß: statt Weiß-Verlauf ein heller Slate-Ton */
+html.light .premium-pill {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.10);
+  box-shadow: none;
+}
+html.light .premium-glass {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(15, 23, 42, 0.10);
+}
+html.light .premium-section-glow::before { opacity: 0.12; }
+
+/* Pastell-Akzente (300/400) -> kräftige Töne mit Kontrast auf Weiß */
+html.light .text-orange-300 { color: #9A3412 !important; }
+html.light .text-orange-400 { color: #C2410C !important; }
+html.light .text-amber-300 { color: #92400E !important; }
+html.light .text-amber-400 { color: #B45309 !important; }
+html.light .text-yellow-300 { color: #854D0E !important; }
+html.light .text-yellow-400 { color: #A16207 !important; }
+html.light .text-green-300 { color: #166534 !important; }
+html.light .text-green-400 { color: #15803D !important; }
+html.light .text-emerald-300 { color: #065F46 !important; }
+html.light .text-emerald-400 { color: #047857 !important; }
+html.light .text-teal-300 { color: #115E59 !important; }
+html.light .text-teal-400 { color: #0F766E !important; }
+html.light .text-cyan-300 { color: #155E75 !important; }
+html.light .text-cyan-400 { color: #0E7490 !important; }
+html.light .text-blue-300 { color: #1E40AF !important; }
+html.light .text-blue-400 { color: #1D4ED8 !important; }
+html.light .text-purple-300 { color: #6B21A8 !important; }
+html.light .text-purple-400 { color: #7E22CE !important; }
+html.light .text-red-300 { color: #B91C1C !important; }
+html.light .text-red-400 { color: #DC2626 !important; }
+
+/* Dunkle Farb-Wash-Hintergründe (900er, meist mit Alpha) -> helle Tints */
+html.light [class*="bg-orange-900"] { background-color: #FFF3E8 !important; }
+html.light [class*="border-orange-800"], html.light [class*="border-orange-700"] { border-color: rgba(194, 65, 12, 0.25) !important; }
+html.light [class*="bg-red-900"] { background-color: #FDECEC !important; }
+html.light [class*="bg-green-900"] { background-color: #E9F7EF !important; }
+html.light [class*="bg-yellow-900"] { background-color: #FFF8E1 !important; }
+html.light [class*="bg-blue-900"] { background-color: #EAF1FE !important; }
+
+/* ---- Professioneller Feinschliff: Rhythmus, Tiefe, Textur ---- */
+
+/* Sektionen mit dunklem Flächen-BG -> sanftes Slate: ergibt einen
+   ruhigen Weiß/Grau-Wechsel statt einer flachen weißen Fläche */
+html.light section[class*="bg-[#0A0A0B]"] {
+  background-color: #F7F9FC !important;
+}
+
+/* Karten (rounded + dunkler BG) -> Weiß mit weichem Schatten für Tiefe */
+html.light .rounded-xl[class*="bg-[#0A0A0B]"],
+html.light .rounded-2xl[class*="bg-[#0A0A0B]"] {
+  background-color: #ffffff !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 10px 30px -18px rgba(15, 23, 42, 0.12);
+}
+
+/* Featured-/Empfohlen-Karten: warmer roter Hauch statt reinweiß */
+html.light [class*="bg-[#1a0a0a]"] {
+  background-color: #FFF7F6 !important;
+}
+
+/* Hero: dezente Grid-Textur in Slate (die weiße war auf Weiß unsichtbar) */
+html.light .premium-hero::after {
+  opacity: 1 !important;
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+}
+html.light .premium-hero::before { opacity: 0 !important; }
+html.light .premium-aurora { opacity: 0 !important; }
+html.light .premium-section-glow::before { opacity: 0 !important; }
+html.light .premium-cta-glow { animation: none !important; }
+
+/* Neonrot -> ruhiges Corporate-Rot */
+html.light .text-\[\#FF3B30\] { color: #DC2626 !important; }
+html.light .bg-\[\#FF3B30\] { background-color: #DC2626 !important; }
+html.light .premium-cta {
+  background: linear-gradient(180deg, #E14141 0%, #DC2626 55%, #C42222 100%);
+}
+
+/* Dropdown-Menüs: harter schwarzer Schatten -> weicher Slate-Schatten */
+html.light [class*="bg-[#0F1822]"] {
+  box-shadow: 0 24px 60px -24px rgba(15, 23, 42, 0.28), 0 2px 8px rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Marquee-Trennpunkte sichtbar halten (waren auf Weiß gemappt) */
+html.light .h-1.w-1[class*="bg-[#0A0A0B]"] {
+  background-color: rgba(15, 23, 42, 0.25) !important;
+  box-shadow: none;
+}
+
+/* Kunden-/Firmen-Logos: im Dark Mode weiß eingefärbt (brightness-0 invert),
+   im Light Mode stattdessen dunkel, damit sie auf weißen Karten sichtbar sind */
+html.light img.brightness-0.invert {
+  filter: brightness(0) !important;
+  opacity: 0.7;
+}
+
+/* Header: echtes Glas statt deckendem Weiß + feiner Schwebe-Schatten */
+html.light nav[class*="bg-[#0A0A0B]"] {
+  background-color: rgba(255, 255, 255, 0.82) !important;
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.05), 0 10px 30px -20px rgba(15, 23, 42, 0.15);
+}
+
+/* Footer: heller Slate-Abschluss statt reinweiß — erdet die Seite */
+html.light footer.bg-black {
+  background-color: #F7F9FC !important;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+/* Dunkle graue Trennlinien (Footer u. a.) -> feine Slate-Linien */
+html.light .border-gray-800, html.light .border-gray-700,
+html.light .border-zinc-800, html.light .border-neutral-800,
+html.light .border-slate-800, html.light .border-gray-600 {
+  border-color: rgba(15, 23, 42, 0.10) !important;
+}
+
+/* Typografie: große Überschriften minimal enger — wirkt hochwertiger */
+html.light h1, html.light h2 {
+  letter-spacing: -0.02em;
+}
+
+/* Karten: sanfte Hover-Elevation */
+html.light .rounded-xl[class*="bg-[#0A0A0B]"],
+html.light .rounded-2xl[class*="bg-[#0A0A0B]"] {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+html.light .rounded-xl[class*="bg-[#0A0A0B]"]:hover,
+html.light .rounded-2xl[class*="bg-[#0A0A0B]"]:hover {
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.05), 0 18px 44px -20px rgba(15, 23, 42, 0.20);
+}
+
+/* Roter Haupt-CTA: Schatten auf Weiß etwas ruhiger und praeziser */
+html.light .premium-cta {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.30),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    0 8px 22px -10px rgba(220, 38, 38, 0.40),
+    0 2px 6px -2px rgba(15, 23, 42, 0.15);
+}
+html.light .premium-cta:hover {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12),
+    0 12px 30px -10px rgba(220, 38, 38, 0.50),
+    0 3px 8px -2px rgba(15, 23, 42, 0.18);
+}
+
+/* CTA-Gradient-Anläufe aus dunklem Rot/Orange -> helle Tints */
+html.light [class*="from-red-900"], html.light [class*="from-red-950"] {
+  --tw-gradient-from: #FDECEC var(--tw-gradient-from-position) !important;
+}
+html.light [class*="to-orange-900"], html.light [class*="to-orange-950"] {
+  --tw-gradient-to: #FFF3E8 var(--tw-gradient-to-position) !important;
+}
+html.light [class*="from-orange-900"], html.light [class*="from-orange-950"] {
+  --tw-gradient-from: #FFF3E8 var(--tw-gradient-from-position) !important;
+}
+html.light [class*="to-red-900"], html.light [class*="to-red-950"] {
+  --tw-gradient-to: #FDECEC var(--tw-gradient-to-position) !important;
+}
 
 /* ============================================================= */
 /* Corporate pages opt out of the inversion (already light by    */

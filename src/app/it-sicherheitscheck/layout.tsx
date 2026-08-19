@@ -3,7 +3,7 @@
 export const metadata: Metadata = {
   title: 'IT Sicherheitscheck | zertifizierte Prüfung, Ergebnis in 2-5 Tagen',
   description: 'Wie sicher ist Ihr Unternehmen wirklich? Jetzt IT Sicherheitscheck bestellen - Web, Netzwerk, AD & Cloud. Preis sofort online berechnen. Ergebnis in 2-5 Tagen. OSCP-zertifiziert.',
-  keywords: 'IT Sicherheitscheck, IT Security Check, IT Sicherheitsprüfung Unternehmen, IT Sicherheitscheck Firma, Sicherheitscheck IT, IT Check Unternehmen',
+  keywords: 'IT Sicherheitscheck, IT Security Check, Sicherheitscheck, IT Sicherheitsprüfung Unternehmen, IT Sicherheitscheck Firma, IT Sicherheitscheck KMU, Sicherheitscheck IT, IT Check Unternehmen, IT Sicherheit prüfen lassen, IT Sicherheitsanalyse',
   robots: {
     index: true,
     follow: true,

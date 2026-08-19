@@ -12,7 +12,7 @@ type ThemeContextValue = {
 };
 
 const ThemeContext = createContext<ThemeContextValue>({
-  theme: 'dark',
+  theme: 'light',
   mounted: false,
   setTheme: () => {},
   toggle: () => {},
@@ -27,15 +27,15 @@ function apply(theme: Theme) {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  // SSR + first client render default to 'dark' (matches the existing design).
-  const [theme, setThemeState] = useState<Theme>('dark');
+  // SSR + first client render default to 'light' (standard design).
+  const [theme, setThemeState] = useState<Theme>('light');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    let initial: Theme = 'dark';
+    let initial: Theme = 'light';
     try {
       const w = window as unknown as { __theme?: Theme };
-      const stored = w.__theme || (localStorage.getItem('theme') as Theme | null);
+      const stored = w.__theme || (localStorage.getItem('theme-v2') as Theme | null);
       if (stored === 'light' || stored === 'dark') initial = stored;
     } catch {
       /* ignore */
@@ -48,7 +48,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const setTheme = useCallback((t: Theme) => {
     setThemeState(t);
     try {
-      localStorage.setItem('theme', t);
+      localStorage.setItem('theme-v2', t);
     } catch {
       /* ignore */
     }
@@ -59,7 +59,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setThemeState((prev) => {
       const next: Theme = prev === 'dark' ? 'light' : 'dark';
       try {
-        localStorage.setItem('theme', next);
+        localStorage.setItem('theme-v2', next);
       } catch {
         /* ignore */
       }

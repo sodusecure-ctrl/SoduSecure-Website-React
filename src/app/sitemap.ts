@@ -8,15 +8,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Nur indexierbare Seiten eintragen — Seiten mit noindex oder Redirect gehören NICHT hierher.
   const staticRoutes: { path: string; lastModified: string; changeFreq: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number }[] = [
     // ── Top-Landingpages ──
-    { path: '',                                lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
-    { path: '/penetration-testing',            lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
-    { path: '/pentest-kosten',                 lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '',                                lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/penetration-testing',            lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/pentest-kosten',                 lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/penetrationstest-anbieter',      lastModified: '2026-07-17', changeFreq: 'weekly',  priority: 1.0 },
-    { path: '/it-sicherheitscheck',            lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 1.0 },
-    { path: '/iso-27001-pentest-anforderungen', lastModified: '2026-07-13', changeFreq: 'weekly', priority: 1.0 },
+    { path: '/it-sicherheitscheck',            lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/iso-27001-pentest-anforderungen', lastModified: '2026-08-19', changeFreq: 'weekly', priority: 1.0 },
 
     // ── Lokal-Cluster ──
-    { path: '/pentest-berlin',                 lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.9 },
+    { path: '/pentest-berlin',                 lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 0.9 },
     { path: '/pentest-berlin/kosten',          lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.8 },
     { path: '/pentest-berlin/kmu',             lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.8 },
     { path: '/pentest-berlin/intern-extern',   lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.8 },
