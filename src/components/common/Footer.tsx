@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ChevronDown, ChevronUp, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { isEnglishPath, localizeHref } from '@/lib/localeRouting';
@@ -321,6 +322,19 @@ export default function Footer() {
             >
               <Github className="w-4 h-4 lg:w-5 lg:h-5" />
             </a>
+          </div>
+        </div>
+
+        {/* Google "Bevorzugte Quelle" Button */}
+        <div className="flex justify-center mt-6 lg:mt-8">
+          <Script async src="https://news.google.com/swg/js/v1/publisher.js" strategy="lazyOnload" />
+          {/* Google-Script setzt width:100% aufs Element – Wrapper begrenzt die Breite fürs Zentrieren */}
+          <div className="w-[320px]">
+            <div
+              {...{ 'google-add-preferred-source-btn': '' }}
+              data-theme="dark"
+              data-lang={isEnglish ? 'en' : 'de'}
+            />
           </div>
         </div>
 
