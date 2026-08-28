@@ -340,23 +340,19 @@ html {
   animation: premium-marquee 35s linear infinite;
 }
 
-/* Testimonial scroll loop */
-@keyframes testimonial-marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+/* Testimonial scroll loop (JS-gesteuert: Autoplay + Drag + Touch) */
+.testimonial-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+.testimonial-scroll::-webkit-scrollbar {
+  display: none;
 }
 .testimonial-track {
   display: flex;
   width: max-content;
-  animation: testimonial-marquee 45s linear infinite;
-}
-.testimonial-marquee:hover .testimonial-track {
-  animation-play-state: paused;
-}
-@media (prefers-reduced-motion: reduce) {
-  .testimonial-track {
-    animation: none;
-  }
 }
 
 /* Tabular numerals (premium stats) */

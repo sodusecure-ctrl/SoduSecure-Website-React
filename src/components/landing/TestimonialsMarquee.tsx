@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Star } from 'lucide-react';
 
@@ -140,6 +141,7 @@ function TestimonialCard({ tm }: { tm: Testimonial }) {
               alt={tm.company}
               width={120}
               height={40}
+              draggable={false}
               className="max-h-9 w-auto object-contain opacity-90 brightness-0 invert"
             />
           </span>
@@ -156,21 +158,128 @@ function TestimonialCard({ tm }: { tm: Testimonial }) {
   );
 }
 
+const AUTO_SPEED_PX_PER_SEC = 45;
+const RESUME_AFTER_INTERACTION_MS = 1800;
+
 export default function TestimonialsMarquee({ isDe }: { isDe: boolean }) {
   const items = getTestimonials(isDe);
-  // Duplicate the list so the loop is seamless (-50% translate).
-  const loop = [...items, ...items];
+  // 3 Kopien: Scrollposition bleibt in der mittleren, Umbruch ist unsichtbar.
+  const loop = [...items, ...items, ...items];
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const posRef = useRef(0);
+  const hoveringRef = useRef(false);
+  const draggingRef = useRef(false);
+  const interactedUntilRef = useRef(0);
+  const dragStartRef = useRef({ x: 0, scrollLeft: 0 });
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const setWidth = () => el.scrollWidth / 3;
+
+    // Start in der mittleren Kopie
+    posRef.current = setWidth();
+    el.scrollLeft = posRef.current;
+
+    let raf = 0;
+    let last = performance.now();
+
+    const tick = (now: number) => {
+      const dt = Math.min(now - last, 100); // Tab-Wechsel: keine Riesensprünge
+      last = now;
+      const set = setWidth();
+
+      if (set > 0) {
+        const autoActive =
+          !reduced && !hoveringRef.current && !draggingRef.current && now > interactedUntilRef.current;
+
+        if (autoActive) {
+          posRef.current += (AUTO_SPEED_PX_PER_SEC * dt) / 1000;
+          el.scrollLeft = posRef.current;
+        }
+
+        // Nahtloser Umbruch: Position in der mittleren Kopie halten
+        if (el.scrollLeft < set * 0.5) {
+          posRef.current = el.scrollLeft + set;
+          el.scrollLeft = posRef.current;
+        } else if (el.scrollLeft > set * 1.5) {
+          posRef.current = el.scrollLeft - set;
+          el.scrollLeft = posRef.current;
+        }
+      }
+
+      raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
+  const markInteraction = () => {
+    interactedUntilRef.current = performance.now() + RESUME_AFTER_INTERACTION_MS;
+  };
 
   return (
-    <div className="testimonial-marquee group relative overflow-hidden">
+    <div className="testimonial-marquee group relative">
       {/* edge fades */}
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#0A0A0B] to-transparent sm:w-28" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#0A0A0B] to-transparent sm:w-28" />
 
-      <div className="testimonial-track gap-6 py-2">
-        {loop.map((tm, i) => (
-          <TestimonialCard key={`${tm.author}-${i}`} tm={tm} />
-        ))}
+      <div
+        ref={scrollRef}
+        className="testimonial-scroll cursor-grab overflow-x-auto active:cursor-grabbing"
+        onScroll={() => {
+          const el = scrollRef.current;
+          if (!el) return;
+          // Nutzer-Scroll (Touch/Wheel/Drag) erkennen und Autoplay kurz pausieren
+          if (Math.abs(el.scrollLeft - posRef.current) > 1.5) {
+            posRef.current = el.scrollLeft;
+            markInteraction();
+          }
+        }}
+        onWheel={markInteraction}
+        onTouchStart={markInteraction}
+        onTouchMove={markInteraction}
+        onPointerEnter={(e) => {
+          if (e.pointerType === 'mouse') hoveringRef.current = true;
+        }}
+        onPointerLeave={(e) => {
+          if (e.pointerType === 'mouse') hoveringRef.current = false;
+        }}
+        onPointerDown={(e) => {
+          if (e.pointerType !== 'mouse' || e.button !== 0) return;
+          const el = scrollRef.current;
+          if (!el) return;
+          e.preventDefault();
+          draggingRef.current = true;
+          dragStartRef.current = { x: e.clientX, scrollLeft: el.scrollLeft };
+          el.setPointerCapture(e.pointerId);
+        }}
+        onPointerMove={(e) => {
+          if (!draggingRef.current) return;
+          const el = scrollRef.current;
+          if (!el) return;
+          el.scrollLeft = dragStartRef.current.scrollLeft - (e.clientX - dragStartRef.current.x);
+        }}
+        onPointerUp={(e) => {
+          if (!draggingRef.current) return;
+          draggingRef.current = false;
+          markInteraction();
+          scrollRef.current?.releasePointerCapture(e.pointerId);
+        }}
+        onPointerCancel={() => {
+          draggingRef.current = false;
+          markInteraction();
+        }}
+      >
+        <div className="testimonial-track select-none gap-6 py-2">
+          {loop.map((tm, i) => (
+            <TestimonialCard key={`${tm.author}-${i}`} tm={tm} />
+          ))}
+        </div>
       </div>
     </div>
   );
