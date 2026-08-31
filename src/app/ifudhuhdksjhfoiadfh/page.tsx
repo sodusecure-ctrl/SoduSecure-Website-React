@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CheckCircle, ArrowRight, Phone, Mail, Loader2 } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function ThankYouPage() {
   const [visible, setVisible] = useState(false);
@@ -36,106 +37,117 @@ export default function ThankYouPage() {
   const ratingEmojis = ["😡", "😕", "😐", "🙂", "😄"];
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-black via-[#2f0000] to-[#250000] flex items-center justify-center px-4 py-8 sm:py-14 lg:py-20">
+    <main className="min-h-screen bg-[#0C0C0E] flex items-center justify-center px-4 py-10 sm:py-16 lg:py-20">
       <div
-        className={`max-w-xl w-full text-center transition-all duration-700 ${
+        className={`max-w-xl w-full transition-all duration-700 ${
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
         }`}
       >
-        {/* Icon */}
-        <div className="flex justify-center mb-4 sm:mb-6">
-          <div className="bg-red-800/30 border border-red-400 rounded-full p-4 sm:p-5 shadow-lg shadow-red-900/70">
-            <CheckCircle className="w-10 h-10 sm:w-14 sm:h-14 text-red-300" />
-          </div>
-        </div>
-
-        {/* Heading */}
-        <h1 className="text-2xl sm:text-4xl font-extrabold text-red-200 mb-2 sm:mb-3 leading-tight">
-          Vielen Dank!
-        </h1>
-        <p className="text-red-200 text-sm sm:text-base mb-1 sm:mb-2">
-          Ihre Anfrage ist bei uns eingegangen.
-        </p>
-        <p className="text-red-100/80 text-xs sm:text-sm mb-5 sm:mb-10">
-          Unser Team meldet sich in der Regel innerhalb von <span className="text-red-100 font-semibold">2 Stunden</span> persönlich bei Ihnen.
-        </p>
-
-        {/* Divider */}
-        <div className="border-t border-white/10 mb-5 sm:mb-10" />
-
-        {/* Contact info */}
-        <p className="text-gray-500 text-xs sm:text-sm mb-3 sm:mb-5">Bei dringenden Fragen erreichen Sie uns direkt:</p>
-        <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center mb-5 sm:mb-8">
-          <a
-            href="tel:+491777750985"
-            className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-xl px-5 py-3 sm:px-6 sm:py-4 text-base sm:text-lg font-bold transition shadow-lg hover:shadow-xl"
-          >
-            <Phone className="w-5 h-5 text-red-400" />
-            <span className="text-base sm:text-xl font-extrabold">0177 7750985</span>
-          </a>
-          <a
-            href="mailto:info@sodusecure.com"
-            className="flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-xl px-4 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm transition"
-          >
-            <Mail className="w-4 h-4 text-red-400" />
-            info@sodusecure.com
-          </a>
-        </div>
-
-        {/* Feedback */}
-        <div className="mb-5 sm:mb-8 text-left text-white">
-          <p className="text-xs sm:text-sm mb-2">Wie fanden Sie die Seite? Bitte bewerten:</p>
-          <div className="flex justify-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-            {ratingEmojis.map((emoji, index) => {
-              const value = index + 1;
-              return (
-                <button
-                  key={value}
-                  onClick={() => setRating(value)}
-                  className={`text-xl sm:text-2xl p-1.5 sm:p-2 rounded-full transition ${rating === value ? 'bg-white/30' : 'bg-white/10 hover:bg-white/20'}`}
-                  aria-label={`Bewertung ${value}`}
-                >
-                  {emoji}
-                </button>
-              );
-            })}
+        <div className="rounded-3xl border border-white/10 bg-white/[0.04] px-5 py-8 sm:px-10 sm:py-12 text-center shadow-[0_30px_60px_-30px_rgba(0,0,0,0.5)]">
+          {/* Icon */}
+          <div className="flex justify-center mb-5 sm:mb-6">
+            <div className="rounded-full bg-[#FF3B30]/15 border border-[#FF3B30]/30 p-4 sm:p-5">
+              <CheckCircle className="w-10 h-10 sm:w-12 sm:h-12 text-[#FF3B30]" />
+            </div>
           </div>
 
-          <textarea
-            value={feedback}
-            onChange={(e) => setFeedback(e.target.value)}
-            placeholder="Wie du die Seite fandest..."
-            className="w-full p-2.5 sm:p-3 rounded-lg border border-white/20 bg-white/5 text-white text-sm placeholder:text-white/60"
-            rows={2}
-          />
+          {/* Heading */}
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-white mb-2 sm:mb-3 leading-tight">
+            Vielen Dank!
+          </h1>
+          <p className="text-white/80 text-sm sm:text-base mb-1 sm:mb-2">
+            Ihre Anfrage ist bei uns eingegangen.
+          </p>
+          <p className="text-white/60 text-xs sm:text-sm mb-6 sm:mb-8">
+            Unser Team meldet sich in der Regel innerhalb von{" "}
+            <span className="text-white font-semibold">2 Stunden</span> persönlich bei Ihnen.
+          </p>
 
-          {feedbackSent ? (
-            <p className="mt-2 text-center text-sm text-green-400 font-medium">
-              ✓ Danke für dein Feedback!
-            </p>
-          ) : (
-            <button
-              onClick={sendFeedback}
-              disabled={feedbackSending || (!rating && !feedback.trim())}
-              className="mt-2 w-full flex items-center justify-center gap-2 bg-red-600 hover:premium-cta disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold px-4 py-2 rounded-lg text-sm transition"
+          {/* Divider */}
+          <div className="border-t border-white/10 mb-6 sm:mb-8" />
+
+          {/* Contact info */}
+          <p className="text-white/55 text-xs sm:text-sm mb-3 sm:mb-4">
+            Bei dringenden Fragen erreichen Sie uns direkt:
+          </p>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center mb-6 sm:mb-8">
+            <a
+              href="tel:+491777750985"
+              className="flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/[0.06] px-5 py-3 sm:px-6 sm:py-4 text-white font-bold transition hover:bg-white/[0.1]"
             >
-              {feedbackSending ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
-              ) : (
-                "Feedback senden"
-              )}
-            </button>
-          )}
-        </div>
+              <Phone className="w-5 h-5 text-[#FF3B30]" />
+              <span className="text-base sm:text-xl font-extrabold">0177 7750985</span>
+            </a>
+            <a
+              href="mailto:info@sodusecure.com"
+              className="flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2.5 sm:px-5 sm:py-3 text-xs sm:text-sm text-white/80 transition hover:bg-white/[0.08]"
+            >
+              <Mail className="w-4 h-4 text-[#FF3B30]" />
+              info@sodusecure.com
+            </a>
+          </div>
 
-        {/* CTA back to site */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 bg-red-600 hover:premium-cta text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-sm sm:text-base"
-        >
-          Zurück zur Startseite
-          <ArrowRight className="w-4 h-4" />
-        </Link>
+          {/* Feedback */}
+          <div className="mb-6 sm:mb-8 text-left">
+            <p className="text-white/70 text-xs sm:text-sm mb-2 text-center">
+              Wie fanden Sie die Seite? Bitte bewerten:
+            </p>
+            <div className="flex justify-center gap-1.5 sm:gap-2 mb-3">
+              {ratingEmojis.map((emoji, index) => {
+                const value = index + 1;
+                return (
+                  <button
+                    key={value}
+                    onClick={() => setRating(value)}
+                    className={`text-xl sm:text-2xl p-1.5 sm:p-2 rounded-full transition ${
+                      rating === value
+                        ? "bg-[#FF3B30]/20 ring-2 ring-[#FF3B30]/70"
+                        : "bg-white/10 hover:bg-white/20"
+                    }`}
+                    aria-label={`Bewertung ${value}`}
+                  >
+                    {emoji}
+                  </button>
+                );
+              })}
+            </div>
+
+            <Textarea
+              value={feedback}
+              onChange={(e) => setFeedback(e.target.value)}
+              placeholder="Wie fanden Sie die Seite?"
+              rows={2}
+              className="bg-white/[0.04] border-white/10 focus:border-white/15 focus:ring-[#FF3B30]/30 resize-none"
+            />
+
+            {feedbackSent ? (
+              <p className="mt-2 text-center text-sm text-green-400 font-medium">
+                ✓ Danke für Ihr Feedback!
+              </p>
+            ) : (
+              <button
+                onClick={sendFeedback}
+                disabled={feedbackSending || (!rating && !feedback.trim())}
+                className="mt-3 w-full flex items-center justify-center gap-2 bg-red-600 hover:premium-cta disabled:opacity-40 disabled:cursor-not-allowed text-white font-semibold px-4 py-2.5 rounded-lg text-sm transition"
+              >
+                {feedbackSending ? (
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                ) : (
+                  "Feedback senden"
+                )}
+              </button>
+            )}
+          </div>
+
+          {/* CTA back to site */}
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 bg-red-600 hover:premium-cta text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-sm sm:text-base"
+          >
+            Zurück zur Startseite
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
     </main>
   );
