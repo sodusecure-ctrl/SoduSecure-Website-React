@@ -66,8 +66,9 @@ export async function GET(
   // Besucher-ID: vorhandenen Cookie weiterverwenden, sonst neu vergeben
   const vid = request.cookies.get('sodu_vid')?.value || randomId();
 
-  // Klick loggen (best-effort, blockiert den Redirect nicht)
-  void insertTrackingEvent({
+  // Klick loggen – awaited, weil fire-and-forget auf kalten Serverless-
+  // Instanzen verloren geht; insertTrackingEvent wirft nie.
+  await insertTrackingEvent({
     linkSlug: slug,
     visitorId: vid,
     sessionId: 'redirect',

@@ -305,8 +305,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Stripe-Session konnte nicht erstellt werden.' }, { status: 500 });
     }
 
-    // Persist lead (best-effort, never blocks redirect to Stripe)
-    void insertLead({
+    // Persist lead – awaited, weil fire-and-forget auf kalten Serverless-
+    // Instanzen verloren geht; insertLead wirft nie.
+    await insertLead({
       source: 'checkout',
       name: name?.trim() || null,
       company: company?.trim() || null,

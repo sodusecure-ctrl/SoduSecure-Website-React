@@ -54,8 +54,9 @@ export async function POST(request: NextRequest) {
     const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
     const info = PLAN_INFO[plan];
 
-    // Persist lead (best-effort, never blocks the email flow)
-    void insertLead({
+    // Persist lead – awaited, weil fire-and-forget auf kalten Serverless-
+    // Instanzen verloren geht; insertLead wirft nie.
+    await insertLead({
       source: 'get-started',
       name: name || null,
       company: company || null,
