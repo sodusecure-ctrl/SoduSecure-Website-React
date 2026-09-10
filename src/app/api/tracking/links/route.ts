@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { isTrackingAuthenticated } from '@/lib/tracking-auth';
-import { isDbConfigured } from '@/lib/leads-db';
+import { isDbConfigured, leadsByLink } from '@/lib/leads-db';
 import {
   createTrackingLink,
   listTrackingLinks,
@@ -14,7 +14,7 @@ export const dynamic = 'force-dynamic';
 
 const CHANNELS = [
   'linkedin', 'youtube', 'instagram', 'tiktok', 'x', 'facebook',
-  'google-ads', 'email', 'blog', 'podcast', 'qr', 'other',
+  'google-ads', 'chatgpt-ads', 'email', 'blog', 'podcast', 'qr', 'other',
 ];
 
 function sinceIso(days: number): string {
@@ -29,10 +29,14 @@ export async function GET(request: NextRequest) {
   }
   try {
     const days = Math.max(0, Number(request.nextUrl.searchParams.get('days')) || 0);
-    const [links, stats] = await Promise.all([
+    const [links, stats, leadCounts] = await Promise.all([
       listTrackingLinks(),
       statsByLink(sinceIso(days)),
+      leadsByLink(sinceIso(days)),
     ]);
+    // Leads kommen aus der Leads-Tabelle (jedes Formular), nicht nur aus den
+    // Client-Events – die feuern nur auf den Check-Seiten.
+    const dbLeadsBySlug = new Map(leadCounts.map((r) => [r.link_slug, r.count]));
 
     // Kennzahlen je Link zusammenfassen
     const bySlug = new Map<string, Record<string, { count: number; visitors: number }>>();
@@ -51,7 +55,7 @@ export async function GET(request: NextRequest) {
           checkStarts: ev.check_start?.visitors ?? 0,
           checkCompleted: ev.check_completed?.visitors ?? 0,
           gateViews: ev.gate_view?.visitors ?? 0,
-          leads: ev.lead_submitted?.visitors ?? 0,
+          leads: Math.max(ev.lead_submitted?.visitors ?? 0, dbLeadsBySlug.get(l.slug) ?? 0),
           calls: ev.call_click?.visitors ?? 0,
         },
       };
@@ -71,8 +75,8 @@ function randomSlugPart(len: number): string {
 
 const CHANNEL_PREFIX: Record<string, string> = {
   linkedin: 'li', youtube: 'yt', instagram: 'ig', tiktok: 'tt', x: 'x',
-  facebook: 'fb', 'google-ads': 'ads', email: 'mail', blog: 'blog',
-  podcast: 'pod', qr: 'qr', other: 'go',
+  facebook: 'fb', 'google-ads': 'ads', 'chatgpt-ads': 'gpt', email: 'mail',
+  blog: 'blog', podcast: 'pod', qr: 'qr', other: 'go',
 };
 
 /** POST /api/tracking/links – neuen Tracking-Link anlegen. */

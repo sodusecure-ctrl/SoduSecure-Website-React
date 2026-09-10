@@ -19,6 +19,8 @@ import {
   formatDateTime,
   initials,
   sourceColor,
+  trafficColor,
+  trafficLabelOf,
 } from './types';
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
@@ -258,6 +260,47 @@ export default function LeadDrawer({
               placeholder="Notizen, nächste Schritte, Gesprächsnotizen…"
               className="w-full resize-y rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground outline-none focus:border-rose-500/60"
             />
+          </div>
+
+          {/* Herkunft */}
+          <div className="rounded-xl border border-border bg-background/60 p-4">
+            <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+              Woher kam der Besucher?
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              <span
+                className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1 text-xs font-semibold text-white"
+                style={{ background: trafficColor(trafficLabelOf(lead)) }}
+              >
+                {trafficLabelOf(lead)}
+              </span>
+              {lead.link_slug && (
+                <a
+                  href="/tracking"
+                  className="inline-flex items-center gap-1 rounded-md bg-violet-500/15 px-2 py-1 text-xs font-medium text-violet-300 hover:bg-violet-500/25"
+                  title="Über Tracking-Link gekommen – Details im Tracking-Dashboard"
+                >
+                  /t/{lead.link_slug}
+                </a>
+              )}
+            </div>
+            {(() => {
+              const src = lead.payload?.source as
+                | { landingPage?: string; referrer?: string | null; utmCampaign?: string | null; clickIds?: Record<string, string> }
+                | null
+                | undefined;
+              if (!src) return null;
+              return (
+                <div className="mt-3 space-y-1 text-xs text-muted-foreground">
+                  {src.landingPage && <p className="break-all">Einstiegsseite: {src.landingPage}</p>}
+                  {src.utmCampaign && <p className="break-all">Kampagne: {src.utmCampaign}</p>}
+                  {src.referrer && <p className="break-all">Referrer: {src.referrer}</p>}
+                  {src.clickIds && Object.keys(src.clickIds).length > 0 && (
+                    <p className="break-all">Click-IDs: {Object.keys(src.clickIds).join(', ')}</p>
+                  )}
+                </div>
+              );
+            })()}
           </div>
 
           {/* Meta */}

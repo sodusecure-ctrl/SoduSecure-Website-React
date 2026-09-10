@@ -10,6 +10,8 @@ import {
   initials,
   relativeTime,
   sourceColor,
+  trafficColor,
+  trafficLabelOf,
 } from './types';
 
 type SortKey = 'created_at' | 'company' | 'source' | 'status' | 'est_value' | 'check_score';
@@ -97,6 +99,9 @@ export default function LeadsTable({
             <tr>
               <Th label="Lead" k="company" />
               <Th label="Quelle" k="source" className="hidden md:table-cell" />
+              <th className="hidden px-3 py-2.5 text-left font-medium text-muted-foreground xl:table-cell">
+                Herkunft
+              </th>
               <Th label="Status" k="status" />
               <Th label="Score" k="check_score" className="hidden lg:table-cell" />
               <Th label="Wert" k="est_value" className="hidden sm:table-cell" />
@@ -141,6 +146,15 @@ export default function LeadsTable({
                     {displaySource(lead)}
                   </span>
                 </td>
+                <td className="hidden px-3 py-2.5 xl:table-cell">
+                  <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <span
+                      className="h-2 w-2 shrink-0 rounded-full"
+                      style={{ background: trafficColor(trafficLabelOf(lead)) }}
+                    />
+                    <span className="max-w-[180px] truncate">{trafficLabelOf(lead)}</span>
+                  </span>
+                </td>
                 <td className="px-3 py-2.5">
                   <span
                     className={`inline-flex items-center rounded-md border px-2 py-0.5 text-[11px] font-medium ${STATUS_META[lead.status].badge}`}
@@ -170,7 +184,7 @@ export default function LeadsTable({
             ))}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={6} className="px-3 py-12 text-center text-sm text-muted-foreground">
+                <td colSpan={7} className="px-3 py-12 text-center text-sm text-muted-foreground">
                   Keine Leads gefunden.
                 </td>
               </tr>

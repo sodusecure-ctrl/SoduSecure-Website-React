@@ -27,6 +27,7 @@ import {
   Languages,
 } from "lucide-react";
 import { trackConversion } from "@/lib/gtag";
+import { getTrafficSource } from "@/lib/tracker";
 
 type Plan = "starter" | "studio" | "pro";
 type BillingInterval = "month" | "year";
@@ -559,6 +560,7 @@ export default function SoduAuditAILanding() {
           repoUrls: cleanRepos,
           acceptTerms,
           locale: lang,
+          source: getTrafficSource(),
         }),
       });
       if (!res.ok) {

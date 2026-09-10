@@ -21,6 +21,8 @@ import {
   displaySource,
   displaySourceColor,
   formatEuro,
+  trafficColor,
+  trafficLabelOf,
 } from './types';
 
 const AXIS = { fontSize: 11, fill: 'var(--muted-foreground)' };
@@ -75,6 +77,12 @@ function TooltipBox({
 
 /* ------------------------------------------------------------------ */
 
+/** Lokaler Datums-Key (YYYY-MM-DD) – toISOString würde in UTC kippen und
+ *  heutige Leads in den falschen (oder gar keinen) Tages-Bucket sortieren. */
+function localDayKey(d: Date): string {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+
 export function LeadsTrendChart({ leads, days = 30 }: { leads: Lead[]; days?: number }) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -83,7 +91,7 @@ export function LeadsTrendChart({ leads, days = 30 }: { leads: Lead[]; days?: nu
   for (let i = days - 1; i >= 0; i--) {
     const d = new Date(today);
     d.setDate(d.getDate() - i);
-    const key = d.toISOString().slice(0, 10);
+    const key = localDayKey(d);
     index.set(key, buckets.length);
     buckets.push({
       key,
@@ -92,7 +100,7 @@ export function LeadsTrendChart({ leads, days = 30 }: { leads: Lead[]; days?: nu
     });
   }
   for (const lead of leads) {
-    const key = new Date(lead.created_at).toISOString().slice(0, 10);
+    const key = localDayKey(new Date(lead.created_at));
     const i = index.get(key);
     if (i !== undefined) buckets[i].count += 1;
   }
@@ -187,6 +195,74 @@ export function SourceDonut({ leads }: { leads: Lead[] }) {
             <div key={d.source} className="flex items-center gap-2 text-xs">
               <span className="h-2.5 w-2.5 rounded-full" style={{ background: d.color }} />
               <span className="flex-1 text-muted-foreground">{d.label}</span>
+              <span className="font-medium text-foreground">{d.value}</span>
+            </div>
+          ))}
+          {data.length === 0 && (
+            <p className="text-xs text-muted-foreground">Keine Daten</p>
+          )}
+        </div>
+      </div>
+    </ChartCard>
+  );
+}
+
+/** Woher kamen die Leads? (Google Ads, ChatGPT, Kampagnen-Links, organisch …) */
+export function TrafficDonut({ leads }: { leads: Lead[] }) {
+  const groups = new Map<string, { value: number; color: string }>();
+  for (const l of leads) {
+    const label = trafficLabelOf(l);
+    const existing = groups.get(label);
+    if (existing) existing.value += 1;
+    else groups.set(label, { value: 1, color: trafficColor(label) });
+  }
+  const data = [...groups.entries()]
+    .map(([label, { value, color }]) => ({ source: label, value, color, label }))
+    .sort((a, b) => b.value - a.value);
+  const total = leads.length || 1;
+
+  return (
+    <ChartCard title="Leads nach Traffic-Quelle" subtitle="Woher die Besucher kamen">
+      <div className="flex items-center gap-4">
+        <ResponsiveContainer width="55%" height={200}>
+          <PieChart>
+            <Pie
+              data={data}
+              dataKey="value"
+              nameKey="label"
+              cx="50%"
+              cy="50%"
+              innerRadius={48}
+              outerRadius={80}
+              paddingAngle={2}
+              stroke="none"
+            >
+              {data.map((d) => (
+                <Cell key={d.source} fill={d.color} />
+              ))}
+            </Pie>
+            <Tooltip
+              content={({ active, payload }) =>
+                active && payload?.length ? (
+                  <TooltipBox
+                    rows={[
+                      {
+                        name: String(payload[0].payload.label),
+                        value: `${payload[0].value} (${Math.round((Number(payload[0].value) / total) * 100)}%)`,
+                        color: payload[0].payload.color,
+                      },
+                    ]}
+                  />
+                ) : null
+              }
+            />
+          </PieChart>
+        </ResponsiveContainer>
+        <div className="flex-1 space-y-2">
+          {data.map((d) => (
+            <div key={d.source} className="flex items-center gap-2 text-xs">
+              <span className="h-2.5 w-2.5 rounded-full shrink-0" style={{ background: d.color }} />
+              <span className="flex-1 break-all text-muted-foreground">{d.label}</span>
               <span className="font-medium text-foreground">{d.value}</span>
             </div>
           ))}

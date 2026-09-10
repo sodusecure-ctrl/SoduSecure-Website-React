@@ -35,6 +35,7 @@ import {
   SourceDonut,
   StatusFunnel,
   TopCompanies,
+  TrafficDonut,
   ValueByStatus,
 } from './LeadCharts';
 import LeadsTable from './LeadsTable';
@@ -454,11 +455,15 @@ export default function SalesDashboard({ dbConfigured }: { dbConfigured: boolean
                   <div className="lg:col-span-2">
                     <LeadsTrendChart leads={filtered} days={trendDays} />
                   </div>
-                  <SourceDonut leads={filtered} />
+                  <TrafficDonut leads={filtered} />
                 </div>
                 <div className="grid gap-4 lg:grid-cols-2">
+                  <SourceDonut leads={filtered} />
                   <StatusFunnel leads={filtered} />
+                </div>
+                <div className="grid gap-4 lg:grid-cols-2">
                   <ValueByStatus leads={filtered} />
+                  <TopCompanies leads={filtered} />
                 </div>
                 <div>
                   <h3 className="mb-3 text-sm font-semibold text-muted-foreground">
@@ -486,6 +491,7 @@ export default function SalesDashboard({ dbConfigured }: { dbConfigured: boolean
                 <div className="lg:col-span-2">
                   <LeadsTrendChart leads={filtered} days={trendDays} />
                 </div>
+                <TrafficDonut leads={filtered} />
                 <SourceDonut leads={filtered} />
                 <StatusFunnel leads={filtered} />
                 <ValueByStatus leads={filtered} />

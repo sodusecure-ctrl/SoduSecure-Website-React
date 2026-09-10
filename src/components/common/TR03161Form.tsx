@@ -4,6 +4,7 @@ import { useState, FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import Link from "next/link";
+import { getTrafficSource } from "@/lib/tracker";
 
 interface TR03161FormData {
   fullName: string;
@@ -103,6 +104,7 @@ export default function TR03161Form() {
             developmentStages.find((d) => d.value === formData.developmentStage)
               ?.label || undefined,
           message: formData.message.trim() || undefined,
+          source: getTrafficSource(),
         }),
       });
 

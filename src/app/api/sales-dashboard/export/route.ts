@@ -21,6 +21,8 @@ const COLUMNS: { key: keyof Lead; label: string }[] = [
   { key: 'check_verdict', label: 'Check-Ergebnis' },
   { key: 'est_value', label: 'Geschätzter Wert (€)' },
   { key: 'tag', label: 'Tag' },
+  { key: 'traffic_label', label: 'Traffic-Quelle' },
+  { key: 'link_slug', label: 'Kampagnen-Link' },
   { key: 'source_page', label: 'Seite' },
   { key: 'message', label: 'Nachricht' },
   { key: 'notes', label: 'Notizen' },

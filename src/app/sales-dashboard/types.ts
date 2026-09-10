@@ -22,6 +22,7 @@ export type Lead = {
   tag: string | null;
   source_page: string | null;
   link_slug?: string | null;
+  traffic_label?: string | null;
   payload: Record<string, unknown> | null;
 };
 
@@ -128,6 +129,40 @@ export function displaySourceColor(lead: Lead): string {
 
 export function sourceColor(source: string): string {
   return SOURCE_META[source]?.color ?? '#94a3b8';
+}
+
+/**
+ * Traffic-Quelle des Leads (woher der Besucher kam): erst die neue Spalte,
+ * dann das ältere payload.source-Feld, dann der Kampagnen-Link als Fallback.
+ */
+export function trafficLabelOf(lead: Lead): string {
+  if (lead.traffic_label) return lead.traffic_label;
+  const payloadSource = lead.payload?.source as { label?: unknown } | null | undefined;
+  if (payloadSource && typeof payloadSource.label === 'string' && payloadSource.label) {
+    return payloadSource.label;
+  }
+  if (lead.link_slug) return `Kampagnen-Link /t/${lead.link_slug}`;
+  return 'Unbekannt';
+}
+
+const TRAFFIC_COLORS: [RegExp, string][] = [
+  [/kampagnen-link/i, '#8b5cf6'],
+  [/chatgpt|openai|ki-assistent/i, '#10a37f'],
+  [/google ads/i, '#f4b400'],
+  [/google/i, '#34a853'],
+  [/linkedin/i, '#0a66c2'],
+  [/bing|microsoft/i, '#00a4ef'],
+  [/facebook|meta|instagram/i, '#e1306c'],
+  [/e-mail|newsletter/i, '#10b981'],
+  [/verweis/i, '#f97316'],
+  [/direkt|unbekannt/i, '#64748b'],
+];
+
+export function trafficColor(label: string): string {
+  for (const [re, color] of TRAFFIC_COLORS) {
+    if (re.test(label)) return color;
+  }
+  return '#94a3b8';
 }
 
 export function formatEuro(n: number): string {

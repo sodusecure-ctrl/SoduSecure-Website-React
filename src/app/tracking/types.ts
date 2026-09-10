@@ -57,6 +57,18 @@ export type FunnelData = {
     path: string | null;
     meta: Record<string, unknown> | null;
   }[];
+  /** Tatsächliche Leads aus der Leads-Tabelle (alle Formulare, nicht nur Checks). */
+  leadsList?: {
+    id: number;
+    created_at: string;
+    source: string;
+    name: string | null;
+    company: string | null;
+    email: string | null;
+    est_value: number | null;
+    status: string;
+  }[];
+  leadsCount?: number;
 };
 
 export const CHANNELS: { id: string; label: string; color: string }[] = [
@@ -67,6 +79,7 @@ export const CHANNELS: { id: string; label: string; color: string }[] = [
   { id: 'x', label: 'X / Twitter', color: '#9CA3AF' },
   { id: 'facebook', label: 'Facebook', color: '#1877F2' },
   { id: 'google-ads', label: 'Google Ads', color: '#F4B400' },
+  { id: 'chatgpt-ads', label: 'ChatGPT Ads', color: '#10A37F' },
   { id: 'email', label: 'E-Mail', color: '#10B981' },
   { id: 'blog', label: 'Blog / SEO', color: '#8B5CF6' },
   { id: 'podcast', label: 'Podcast', color: '#F97316' },

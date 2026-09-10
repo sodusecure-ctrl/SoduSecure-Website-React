@@ -293,8 +293,9 @@ export default function TrackingDashboard({ dbConfigured }: { dbConfigured: bool
         )}
 
         <p className="mt-8 text-center text-[11px] text-muted-foreground/60">
-          Erfasst werden ausschließlich anonyme Besucher-IDs und Ereignisse von Besuchern, die über
-          einen Tracking-Link kamen – keine Formularinhalte, keine Klardaten.
+          Ereignisse werden nur für Besucher erfasst, die über einen Tracking-Link kamen (anonyme
+          Besucher-IDs). Die Leads-Zahlen stammen aus der Lead-Datenbank – jedes abgesendete
+          Formular zählt, unabhängig von der Zielseite.
         </p>
       </main>
 
@@ -842,6 +843,8 @@ function LinkDetailDrawer({
   );
 
   const clicks = ev('click')?.count ?? link.stats.clicks;
+  // Leads kommen aus der Leads-Tabelle (jedes Formular zählt), Events nur von den Check-Seiten.
+  const dbLeads = funnel?.leadsCount ?? 0;
   const steps = useMemo(() => ([
     { label: 'Link geklickt', value: clicks },
     { label: 'Seite geöffnet', value: ev('page_view')?.visitors ?? 0 },
@@ -849,10 +852,10 @@ function LinkDetailDrawer({
     { label: 'Check abgeschlossen', value: ev('check_completed')?.visitors ?? 0 },
     { label: 'Ergebnis-Sperre gesehen', value: ev('gate_view')?.visitors ?? 0 },
     { label: 'Formular begonnen', value: ev('form_field_filled')?.visitors ?? 0 },
-    { label: 'Lead abgesendet', value: ev('lead_submitted')?.visitors ?? 0 },
+    { label: 'Lead abgesendet', value: Math.max(ev('lead_submitted')?.visitors ?? 0, dbLeads) },
     { label: 'Ergebnis freigeschaltet', value: ev('result_unlocked')?.visitors ?? 0 },
     { label: 'Calendly gesehen', value: ev('calendly_view')?.visitors ?? 0 },
-  ]), [clicks, ev]);
+  ]), [clicks, ev, dbLeads]);
   const maxStep = Math.max(1, ...steps.map((s) => s.value));
 
   const fieldOf = (f: string) => funnel?.fields.find((x) => x.field === f)?.visitors ?? 0;
@@ -1083,6 +1086,42 @@ function LinkDetailDrawer({
                       );
                     })}
                   </div>
+                </section>
+              )}
+
+              {/* Konkrete Leads über diesen Link */}
+              {(funnel?.leadsList?.length ?? 0) > 0 && (
+                <section>
+                  <h3 className="mb-3 text-sm font-semibold text-muted-foreground">
+                    Leads über diesen Link ({funnel!.leadsCount ?? funnel!.leadsList!.length})
+                  </h3>
+                  <div className="max-h-72 overflow-y-auto rounded-xl border border-border">
+                    <table className="w-full text-xs">
+                      <thead className="sticky top-0 bg-card">
+                        <tr className="border-b border-border text-left text-[10px] uppercase tracking-wider text-muted-foreground">
+                          <th className="px-3 py-2 font-medium">Datum</th>
+                          <th className="px-3 py-2 font-medium">Firma / Name</th>
+                          <th className="px-3 py-2 font-medium">E-Mail</th>
+                          <th className="px-3 py-2 text-right font-medium">Wert</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {funnel!.leadsList!.map((l) => (
+                          <tr key={l.id} className="border-b border-border/50 last:border-0">
+                            <td className="whitespace-nowrap px-3 py-2 text-muted-foreground">{fmtDateTime(l.created_at)}</td>
+                            <td className="px-3 py-2 font-medium text-foreground">{l.company || l.name || '—'}</td>
+                            <td className="px-3 py-2 text-muted-foreground">{l.email || '—'}</td>
+                            <td className="px-3 py-2 text-right text-emerald-400">
+                              {l.est_value ? `${l.est_value.toLocaleString('de-DE')} €` : '—'}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <p className="mt-1.5 text-[11px] text-muted-foreground/70">
+                    Details und Status-Pflege im <a href="/sales-dashboard" className="text-violet-300 hover:underline">Sales-Dashboard</a>.
+                  </p>
                 </section>
               )}
 

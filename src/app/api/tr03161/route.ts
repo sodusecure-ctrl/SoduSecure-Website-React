@@ -12,6 +12,7 @@ export async function POST(request: NextRequest) {
       applicationType,
       developmentStage,
       message,
+      source,
     } = await request.json();
 
     // Validate required fields
@@ -54,7 +55,8 @@ export async function POST(request: NextRequest) {
       estValue: estimateValue('tr03161'),
       sourcePage: request.headers.get('referer'),
       linkSlug: sanitizeLinkSlug(request.cookies.get('sodu_attr')?.value),
-      payload: { fullName, company, email, phone, applicationType, developmentStage, message },
+      trafficLabel: typeof source?.label === 'string' ? source.label.slice(0, 120) : null,
+      payload: { fullName, company, email, phone, applicationType, developmentStage, message, source },
     });
 
     const applicationTypeLabel = applicationType || 'Nicht angegeben';

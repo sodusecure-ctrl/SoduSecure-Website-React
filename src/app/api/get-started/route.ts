@@ -26,13 +26,14 @@ function escapeHtml(s: string): string {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { plan, email, name, company, githubOrg, phone } = body as {
+    const { plan, email, name, company, githubOrg, phone, source } = body as {
       plan?: string;
       email?: string;
       name?: string;
       company?: string;
       githubOrg?: string;
       phone?: string;
+      source?: { label?: string } | null;
     };
 
     if (!isPlan(plan)) {
@@ -64,7 +65,8 @@ export async function POST(request: NextRequest) {
       estValue: estimateValue('get-started', plan),
       sourcePage: request.headers.get('referer'),
       linkSlug: sanitizeLinkSlug(request.cookies.get('sodu_attr')?.value),
-      payload: { plan, email, name, company, githubOrg, phone },
+      trafficLabel: typeof source?.label === 'string' ? source.label.slice(0, 120) : null,
+      payload: { plan, email, name, company, githubOrg, phone, source },
     });
 
     const eEmail = escapeHtml(email);

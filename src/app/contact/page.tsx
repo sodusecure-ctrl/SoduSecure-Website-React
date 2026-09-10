@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import { FormEvent, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { trackConversion } from '@/lib/gtag';
+import { getTrafficSource } from '@/lib/tracker';
 
 // Define types for form data
 interface FormData {
@@ -124,7 +125,7 @@ export default function ContactSection() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, source: getTrafficSource() }),
       });
 
       if (!response.ok) {

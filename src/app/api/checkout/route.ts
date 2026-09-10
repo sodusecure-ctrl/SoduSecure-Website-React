@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sendMail } from '@/lib/mailer';
-import { estimateValue, insertLead } from '@/lib/leads-db';
+import { estimateValue, insertLead, sanitizeLinkSlug } from '@/lib/leads-db';
 import {
   AUDIT_PLAN_INFO,
   MAX_REPOS_PER_PLAN,
@@ -131,6 +131,7 @@ export async function POST(request: NextRequest) {
       repoUrls,
       repoUrl, // legacy single-repo fallback
       acceptTerms,
+      source: leadSourceInfo,
     } = body as {
       plan?: string;
       billingInterval?: string;
@@ -142,6 +143,7 @@ export async function POST(request: NextRequest) {
       repoUrls?: unknown;
       repoUrl?: string;
       acceptTerms?: boolean;
+      source?: { label?: string } | null;
     };
 
     if (!isAuditPlan(plan)) {
@@ -314,7 +316,9 @@ export async function POST(request: NextRequest) {
       estValue: estimateValue('checkout', plan),
       tag: provider,
       sourcePage: request.headers.get('referer'),
-      payload: { plan, interval, email: email.trim(), name, company, phone, provider, repoUrls: cleanedRepos },
+      linkSlug: sanitizeLinkSlug(request.cookies.get('sodu_attr')?.value),
+      trafficLabel: typeof leadSourceInfo?.label === 'string' ? leadSourceInfo.label.slice(0, 120) : null,
+      payload: { plan, interval, email: email.trim(), name, company, phone, provider, repoUrls: cleanedRepos, source: leadSourceInfo },
     });
 
     // Fire-and-forget lead email so we never block redirect to Stripe

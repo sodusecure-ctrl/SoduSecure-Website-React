@@ -50,6 +50,8 @@ export type LeadInput = {
   sourcePage?: string | null;
   /** Slug des Tracking-Links (/t/<slug>), über den der Besucher kam. */
   linkSlug?: string | null;
+  /** Lesbare Traffic-Quelle des Besuchers (z. B. "Google Ads", "ChatGPT"). */
+  trafficLabel?: string | null;
   payload?: Record<string, unknown> | null;
 };
 
@@ -73,6 +75,7 @@ export type Lead = {
   tag: string | null;
   source_page: string | null;
   link_slug: string | null;
+  traffic_label: string | null;
   payload: Record<string, unknown> | null;
 };
 
@@ -125,6 +128,8 @@ export async function ensureSchema(): Promise<void> {
       `;
       // Kampagnen-Attribution (Tracking-Links) – nachträglich ergänzt
       await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS link_slug TEXT;`;
+      // Lesbare Traffic-Quelle (Google Ads, ChatGPT, LinkedIn …) – nachträglich ergänzt
+      await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS traffic_label TEXT;`;
       await sql`CREATE INDEX IF NOT EXISTS leads_created_at_idx ON leads (created_at DESC);`;
       await sql`CREATE INDEX IF NOT EXISTS leads_status_idx ON leads (status);`;
       await sql`CREATE INDEX IF NOT EXISTS leads_source_idx ON leads (source);`;
@@ -158,7 +163,7 @@ export async function insertLead(input: LeadInput): Promise<number | null> {
     const result = await sql<{ id: number }>`
       INSERT INTO leads (
         source, name, company, email, phone, company_size, service, message,
-        check_type, check_score, check_verdict, est_value, tag, source_page, link_slug, payload
+        check_type, check_score, check_verdict, est_value, tag, source_page, link_slug, traffic_label, payload
       ) VALUES (
         ${input.source},
         ${input.name ?? null},
@@ -175,6 +180,7 @@ export async function insertLead(input: LeadInput): Promise<number | null> {
         ${input.tag ?? null},
         ${input.sourcePage ?? null},
         ${input.linkSlug ?? null},
+        ${input.trafficLabel ?? null},
         ${payloadJson}::jsonb
       )
       RETURNING id;
@@ -194,6 +200,63 @@ export async function listLeads(limit = 2000): Promise<Lead[]> {
     SELECT * FROM leads
     ORDER BY created_at DESC
     LIMIT ${limit};
+  `;
+  return result.rows;
+}
+
+/**
+ * Lead-Anzahl je Tracking-Link (aus der Leads-Tabelle, nicht aus Client-Events).
+ * Damit zählt JEDES Formular (Konfigurator, Kontakt, Preisrechner, Checks …)
+ * für die Leads-Spalte im Tracking-Dashboard – Events feuern nur die Checks.
+ */
+export async function leadsByLink(sinceIso: string): Promise<{ link_slug: string; count: number }[]> {
+  if (!isDbConfigured()) return [];
+  await ensureSchema();
+  const result = await sql<{ link_slug: string; count: number }>`
+    SELECT link_slug, COUNT(*)::int AS count
+    FROM leads
+    WHERE link_slug IS NOT NULL AND created_at >= ${sinceIso}
+    GROUP BY link_slug;
+  `;
+  return result.rows;
+}
+
+export type LinkLead = {
+  id: number;
+  created_at: string;
+  source: LeadSource;
+  name: string | null;
+  company: string | null;
+  email: string | null;
+  est_value: number | null;
+  status: LeadStatus;
+};
+
+/** Die konkreten Leads eines Tracking-Links (für das Detail-Drawer). */
+export async function leadsForLink(slug: string, sinceIso: string, limit = 100): Promise<LinkLead[]> {
+  if (!isDbConfigured()) return [];
+  await ensureSchema();
+  const result = await sql<LinkLead>`
+    SELECT id, created_at, source, name, company, email, est_value, status
+    FROM leads
+    WHERE link_slug = ${slug} AND created_at >= ${sinceIso}
+    ORDER BY created_at DESC
+    LIMIT ${limit};
+  `;
+  return result.rows;
+}
+
+/** Leads pro Tag für einen Tracking-Link (für den Klicks-vs.-Leads-Verlauf). */
+export async function leadDaysForLink(slug: string, sinceIso: string): Promise<{ day: string; leads: number }[]> {
+  if (!isDbConfigured()) return [];
+  await ensureSchema();
+  const result = await sql<{ day: string; leads: number }>`
+    SELECT to_char(date_trunc('day', created_at), 'YYYY-MM-DD') AS day,
+           COUNT(*)::int AS leads
+    FROM leads
+    WHERE link_slug = ${slug} AND created_at >= ${sinceIso}
+    GROUP BY 1
+    ORDER BY 1;
   `;
   return result.rows;
 }

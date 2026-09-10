@@ -2,6 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import { ArrowRight, Check, Mail, User, Building2, Github, Phone } from 'lucide-react';
+import { getTrafficSource } from '@/lib/tracker';
 
 type Plan = 'starter' | 'studio' | 'pro';
 
@@ -62,6 +63,7 @@ export function GetStartedForm({ plan, labels }: { plan: Plan; labels: Labels })
           company: company.trim() || undefined,
           githubOrg: githubOrg.trim() || undefined,
           phone: phone.trim() || undefined,
+          source: getTrafficSource(),
         }),
       });
       if (!res.ok) {

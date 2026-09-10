@@ -156,13 +156,19 @@ function deriveSourceLabel(
   utmSource: string | null,
   utmMedium: string | null,
   referrer: string | null,
+  linkSlug?: string | null,
 ): string {
+  // Eigener Kampagnen-Link (/t/<slug>) ist die präziseste Quelle.
+  if (linkSlug) return `Kampagnen-Link /t/${linkSlug}`;
   for (const [param, label] of Object.entries(CLICK_ID_PARAMS)) {
     if (clickIds[param]) return label;
   }
   if (utmSource) {
     const src = utmSource.toLowerCase();
     const paid = /(cpc|ppc|paid|ads)/i.test(utmMedium || '');
+    if (src.includes('chatgpt') || src.includes('openai')) return paid ? 'ChatGPT Ads' : 'ChatGPT';
+    if (src.includes('perplexity')) return 'Perplexity';
+    if (src.includes('claude') || src.includes('anthropic')) return 'Claude';
     if (src.includes('google')) return paid ? 'Google Ads' : 'Google (Kampagne)';
     if (src.includes('linkedin')) return paid ? 'LinkedIn Ads' : 'LinkedIn (Kampagne)';
     if (src.includes('facebook') || src.includes('meta') || src.includes('instagram')) return 'Facebook/Meta (Kampagne)';
@@ -201,7 +207,9 @@ export function captureTrafficSource(): void {
     }
     const utmSource = params.get('utm_source');
     const utmMedium = params.get('utm_medium');
-    const hasCampaign = Object.keys(clickIds).length > 0 || !!utmSource;
+    const slParam = params.get('sl');
+    const linkSlug = slParam && SLUG_RE.test(slParam) ? slParam.toLowerCase() : null;
+    const hasCampaign = Object.keys(clickIds).length > 0 || !!utmSource || !!linkSlug;
 
     const existingRaw = lsGet(SRC_LS);
     if (existingRaw && !hasCampaign) return; // erste Quelle behalten
@@ -211,7 +219,7 @@ export function captureTrafficSource(): void {
     const referrer = rawReferrer && !rawReferrer.includes(window.location.hostname) ? rawReferrer : null;
     if (!existingRaw || hasCampaign) {
       const source: TrafficSource = {
-        label: deriveSourceLabel(clickIds, utmSource, utmMedium, referrer),
+        label: deriveSourceLabel(clickIds, utmSource, utmMedium, referrer, linkSlug),
         referrer,
         landingPage: window.location.pathname + window.location.search,
         utmSource,

@@ -4,7 +4,7 @@ import { estimateValue, insertLead, sanitizeLinkSlug } from '@/lib/leads-db';
 
 export async function POST(request: NextRequest) {
   try {
-    const { fullName, company, email, phone, message } = await request.json();
+    const { fullName, company, email, phone, message, source } = await request.json();
 
     // Validate required fields
     if (!fullName || !email || !message) {
@@ -25,7 +25,8 @@ export async function POST(request: NextRequest) {
       estValue: estimateValue('contact'),
       sourcePage: request.headers.get('referer'),
       linkSlug: sanitizeLinkSlug(request.cookies.get('sodu_attr')?.value),
-      payload: { fullName, company, email, phone, message },
+      trafficLabel: typeof source?.label === 'string' ? source.label.slice(0, 120) : null,
+      payload: { fullName, company, email, phone, message, source },
     });
 
     // Validate environment variables

@@ -21,6 +21,7 @@ const UTM_MEDIUM: Record<string, string> = {
   x: 'social',
   facebook: 'social',
   'google-ads': 'cpc',
+  'chatgpt-ads': 'cpc',
   email: 'email',
   blog: 'referral',
   podcast: 'audio',
