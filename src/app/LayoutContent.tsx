@@ -12,7 +12,8 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   const isDashboardRoute = pathname?.startsWith('/my-dashboard');
   const isAdsPage = pathname?.startsWith('/request-pentest-ads');
   const isVerifyPage = pathname?.startsWith('/verify');
-  const isSoduAuditAiPage = pathname?.startsWith('/sodu-audit-ai');
+  const isSoduAuditAiPage =
+    pathname?.startsWith('/sodu-audit-ai') || pathname?.startsWith('/zzwutSODU');
   const isCorporatePage = pathname?.startsWith('/corporate');
   const isInternalTool =
     pathname?.startsWith('/tracking') || pathname?.startsWith('/sales-dashboard');

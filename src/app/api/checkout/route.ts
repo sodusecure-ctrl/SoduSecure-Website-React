@@ -131,6 +131,7 @@ export async function POST(request: NextRequest) {
       repoUrls,
       repoUrl, // legacy single-repo fallback
       acceptTerms,
+      locale,
       source: leadSourceInfo,
     } = body as {
       plan?: string;
@@ -143,6 +144,7 @@ export async function POST(request: NextRequest) {
       repoUrls?: unknown;
       repoUrl?: string;
       acceptTerms?: boolean;
+      locale?: string;
       source?: { label?: string } | null;
     };
 
@@ -297,8 +299,8 @@ export async function POST(request: NextRequest) {
       metadata,
       subscription_data: subscriptionData,
       ...(consentCollection ? { consent_collection: consentCollection } : {}),
-      success_url: `${origin}/sodu-audit-ai?status=success&session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/sodu-audit-ai?status=cancelled`,
+      success_url: `${origin}/zzwutSODU?session_id={CHECKOUT_SESSION_ID}&plan=${plan}${locale === 'en' ? '&lang=en' : ''}`,
+      cancel_url: `${origin}/sodu-audit-ai?status=cancelled${locale === 'en' ? '&lang=en' : ''}`,
     });
 
     if (!session.url) {
