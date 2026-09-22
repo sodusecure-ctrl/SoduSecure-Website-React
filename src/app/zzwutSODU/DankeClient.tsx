@@ -22,6 +22,9 @@ export default function DankeClient() {
 
   useEffect(() => {
     trackConversion();
+    // ChatGPT Ads Conversion (Pixel wird global in layout.tsx initialisiert)
+    const oaiq = (window as unknown as { oaiq?: (...args: unknown[]) => void }).oaiq;
+    oaiq?.("measure", "order_created", { type: "contents" });
     const t = setTimeout(() => setVisible(true), 50);
     return () => clearTimeout(t);
   }, []);
