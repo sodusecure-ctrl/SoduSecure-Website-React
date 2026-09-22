@@ -1830,12 +1830,12 @@ function SuccessState({
                 d: "Stripe receipt in your inbox. Invoice PDF follows with the first billing run.",
               },
               {
-                t: "2 · Repo access",
-                d: "We send the GitHub/GitLab App link, read-only, setup in 5 minutes.",
+                t: "2 · Setup guide",
+                d: "Within the next 24 hours you'll receive instructions on how to set everything up.",
               },
               {
                 t: "3 · First report",
-                d: "PDF in DE & EN, typically within 7 days.",
+                d: "The day after setup you'll receive your first report, PDF in DE & EN.",
               },
             ]
           : [
@@ -1844,12 +1844,12 @@ function SuccessState({
                 d: "Stripe-Beleg in Ihrem Posteingang. Rechnungs-PDF folgt mit dem ersten Abrechnungslauf.",
               },
               {
-                t: "2 · Repo-Zugang",
-                d: "Wir senden den GitHub-/GitLab-App-Link, Read-only, Setup in 5 Minuten.",
+                t: "2 · Anleitung",
+                d: "Sie bekommen in den nächsten 24 Stunden die Anleitung, wie Sie alles einrichten.",
               },
               {
                 t: "3 · Erster Bericht",
-                d: "PDF in DE & EN, typischerweise innerhalb von 7 Tagen.",
+                d: "Am Folgetag bekommen Sie Ihren ersten Bericht, PDF in DE & EN.",
               },
             ]
         ).map((s) => (
