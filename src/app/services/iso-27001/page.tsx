@@ -33,11 +33,11 @@ const serviceSteps = [
   },
   {
     title: "Risikobewertung und Behandlungsplan",
-    desc: "Durchfuehrung einer strukturierten Risikoanalyse, Bewertung nach Eintrittswahrscheinlichkeit und Impact, anschliessend Risk Treatment Plan mit Massnahmen.",
+    desc: "Durchführung einer strukturierten Risikoanalyse, Bewertung nach Eintrittswahrscheinlichkeit und Impact, anschließend Risk Treatment Plan mit Maßnahmen.",
   },
   {
     title: "Pentest-Nachweise nach A.12.6",
-    desc: "Durchfuehrung und Dokumentation technischer Tests als Nachweis fuer die Wirksamkeit Ihrer Sicherheitsmassnahmen, inkl. Findings, Priorisierung und Retest.",
+    desc: "Durchführung und Dokumentation technischer Tests als Nachweis für die Wirksamkeit Ihrer Sicherheitsmaßnahmen, inkl. Findings, Priorisierung und Retest.",
   },
   {
     title: "Audit-Vorbereitung",
@@ -45,7 +45,7 @@ const serviceSteps = [
   },
   {
     title: "Kontinuierliche Verbesserung",
-    desc: "Roadmap fuer Ueberwachungsaudits, KPI-basierte Steuerung und nachhaltige Weiterentwicklung Ihres ISMS.",
+    desc: "Roadmap für Überwachungsaudits, KPI-basierte Steuerung und nachhaltige Weiterentwicklung Ihres ISMS.",
   },
 ];
 
@@ -53,37 +53,37 @@ const requirements = [
   "Kontext der Organisation und Scope sauber definieren",
   "Informationssicherheitsziele mit klaren Verantwortlichkeiten etablieren",
   "Risiken systematisch identifizieren, bewerten und behandeln",
-  "Technische und organisatorische Massnahmen dokumentiert umsetzen",
-  "Wirksamkeit von Kontrollen regelmaessig pruefen (inkl. Pentests)",
-  "Interne Audits und Management-Reviews nachweisbar durchfuehren",
+  "Technische und organisatorische Maßnahmen dokumentiert umsetzen",
+  "Wirksamkeit von Kontrollen regelmäßig prüfen (inkl. Pentests)",
+  "Interne Audits und Management-Reviews nachweisbar durchführen",
 ];
 
 const pentestFocus = [
   {
     icon: Radar,
     title: "Technische Schwachstellen nachweisen",
-    desc: "Ein Pentest validiert, ob Sicherheitsmassnahmen in realen Angriffsszenarien wirksam sind.",
+    desc: "Ein Pentest validiert, ob Sicherheitsmaßnahmen in realen Angriffsszenarien wirksam sind.",
   },
   {
     icon: ClipboardCheck,
     title: "Audit-Evidence bereitstellen",
-    desc: "Berichte mit Scope, Methodik, Findings und Retest dienen als belastbarer Nachweis fuer Auditoren.",
+    desc: "Berichte mit Scope, Methodik, Findings und Retest dienen als belastbarer Nachweis für Auditoren.",
   },
   {
     icon: BadgeCheck,
     title: "Risikobehandlung priorisieren",
-    desc: "Kritische Findings werden in den Risk Treatment Plan ueberfuehrt und nachvollziehbar geschlossen.",
+    desc: "Kritische Findings werden in den Risk Treatment Plan überführt und nachvollziehbar geschlossen.",
   },
 ];
 
 const faq = [
   {
-    q: "Ist ein Pentest fuer ISO 27001 verpflichtend?",
-    a: "Die Norm verlangt den Umgang mit technischen Schwachstellen und Wirksamkeitspruefungen von Kontrollen. In der Praxis sind regelmaessige Pentests ein sehr starker und oft erwarteter Nachweis gegenueber Auditoren.",
+    q: "Ist ein Pentest für ISO 27001 verpflichtend?",
+    a: "Die Norm verlangt den Umgang mit technischen Schwachstellen und Wirksamkeitsprüfungen von Kontrollen. In der Praxis sind regelmäßige Pentests ein sehr starker und oft erwarteter Nachweis gegenüber Auditoren.",
   },
   {
     q: "Wie oft sollten Pentests im ISO 27001 Kontext stattfinden?",
-    a: "Mindestens jaehrlich und zusaetzlich nach wesentlichen Aenderungen (z. B. neue Systeme, Architekturwechsel, kritische Releases).",
+    a: "Mindestens jährlich und zusätzlich nach wesentlichen Änderungen (z. B. neue Systeme, Architekturwechsel, kritische Releases).",
   },
   {
     q: "Wie lange dauert eine ISO 27001 Vorbereitung?",
@@ -95,7 +95,7 @@ const faq = [
   },
   {
     q: "Was kostet ein Pentest für ISO 27001?",
-    a: "Ein Pentest für ISO 27001 startet bei Sodu Secure ab 1.499 € Festpreis für kompakte Web-Apps oder APIs; Netzwerk- und Active-Directory-Tests beginnen ab 2.500 €. Sie erhalten innerhalb von 24 Stunden ein Angebot, einen Bericht in Deutsch und Englisch als Audit-Nachweis sowie einen kostenlosen Retest nach Behebung der Findings.",
+    a: "Ein automatisierter Schwachstellenscan startet bei Sodu Secure ab 1.499 €; ein manueller Pentest für ISO 27001 wird individuell auf Ihren Scope zugeschnitten und nach Aufwand kalkuliert - meist zwischen 4.000 und 20.000 €. Sie erhalten innerhalb von 24 Stunden ein Angebot, einen Bericht in Deutsch und Englisch als Audit-Nachweis sowie einen kostenlosen Retest nach Behebung der Findings.",
   },
 ];
 
@@ -140,17 +140,20 @@ const sources = [
 export default function ISO27001ServicePage() {
   return (
     <main className="min-h-screen bg-black text-white">
-      <section className="relative border-b border-gray-800 bg-gradient-to-br from-[#141a29] via-black to-[#111827] py-16 lg:py-24">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden border-b border-gray-800 bg-[#0A0A0B] py-16 lg:py-24">
+        <div className="premium-aurora" aria-hidden />
+        <div className="absolute inset-0 premium-grid" aria-hidden />
+        <div className="premium-noise" aria-hidden />
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-red-500/10 px-4 py-1.5 text-sm text-red-300">
             <Shield className="h-4 w-4" />
-            ISO 27001 Dienstleistung fuer Unternehmen
+            ISO 27001 Dienstleistung für Unternehmen
           </div>
           <h1 className="mt-5 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
             ISO 27001 Beratung, ISMS-Aufbau und Pentest-Nachweise
           </h1>
           <p className="mt-6 max-w-3xl text-base text-gray-300 sm:text-lg">
-            Wir begleiten Ihr Unternehmen von der Gap-Analyse bis zur Audit-Reife: strukturiert, evidenzbasiert und mit technischen Nachweisen. So erfuellen Sie ISO 27001 Anforderungen nicht nur auf Papier, sondern in der Praxis.
+            Wir begleiten Ihr Unternehmen von der Gap-Analyse bis zur Audit-Reife: strukturiert, evidenzbasiert und mit technischen Nachweisen. So erfüllen Sie ISO 27001 Anforderungen nicht nur auf Papier, sondern in der Praxis.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -176,7 +179,7 @@ export default function ISO27001ServicePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold sm:text-4xl">Was unsere ISO 27001 Dienstleistung abdeckt</h2>
           <p className="mt-3 max-w-3xl text-gray-400">
-            Vollstaendige Begleitung fuer Strategie, Umsetzung und Nachweisfaehigkeit.
+            Vollständige Begleitung für Strategie, Umsetzung und Nachweisfähigkeit.
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -206,9 +209,9 @@ export default function ISO27001ServicePage() {
 
       <section className="py-14 lg:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold sm:text-4xl">Warum Pentests fuer ISO 27001 zentral sind</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">Warum Pentests für ISO 27001 zentral sind</h2>
           <p className="mt-3 max-w-3xl text-gray-400">
-            Technische Wirksamkeitspruefung ist ein Schluessel, um Sicherheitskontrollen glaubwuerdig nachzuweisen.
+            Technische Wirksamkeitsprüfung ist ein Schlüssel, um Sicherheitskontrollen glaubwürdig nachzuweisen.
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-3">
@@ -234,7 +237,7 @@ export default function ISO27001ServicePage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
         />
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-bold sm:text-4xl">Haeufige Fragen</h2>
+          <h2 className="text-center text-3xl font-bold sm:text-4xl">Häufige Fragen</h2>
           <div className="mt-8 space-y-4">
             {faq.map((item) => (
               <details key={item.q} className="group rounded-xl border border-gray-800 bg-[#131927] p-6">
@@ -256,7 +259,7 @@ export default function ISO27001ServicePage() {
             <h2 className="text-2xl font-bold sm:text-3xl">Quellen und Standards</h2>
           </div>
           <p className="mt-2 text-sm text-gray-400">
-            Alle Inhalte auf dieser Seite orientieren sich an offiziellen Normen, Leitfaeden und Fachstandards.
+            Alle Inhalte auf dieser Seite orientieren sich an offiziellen Normen, Leitfäden und Fachstandards.
           </p>
 
           <ul className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
@@ -281,7 +284,7 @@ export default function ISO27001ServicePage() {
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold sm:text-4xl">ISO 27001 jetzt strukturiert angehen</h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-300">
-            Lassen Sie Ihr ISMS, Ihre technischen Kontrollen und Ihre Audit-Nachweise professionell aufsetzen. Wir unterstuetzen Sie pragmatisch und messbar.
+            Lassen Sie Ihr ISMS, Ihre technischen Kontrollen und Ihre Audit-Nachweise professionell aufsetzen. Wir unterstützen Sie pragmatisch und messbar.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/request-pentest" className="rounded-lg bg-red-600 px-8 py-3.5 font-semibold hover:premium-cta">

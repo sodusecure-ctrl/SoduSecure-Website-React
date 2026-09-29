@@ -5580,7 +5580,7 @@
           },
           "multipleBreaches": {
             "value": "from 1,499 €",
-            "label": "Entry price at Sodu Secure for a web app pentest - network and Active Directory tests from 2,500 euros"
+            "label": "Automated vulnerability scan at Sodu Secure - manual pentests are individually scoped, typically 4,000 to 20,000 euros"
           }
         }
       },
@@ -5604,7 +5604,7 @@
       "conclusion": {
         "title": "Conclusion: Budget realistically instead of buying cheap",
         "content1": "The honest answer to the cost question is: a professional, manual penetration test in Germany usually costs between 4,000 and 30,000 euros depending on scope, with clearly defined smaller projects below that. The sources of this overview - AWARE7, CODE-LEIN, Reepa Solutions, microCAT and ChannelPartner - arrive at very similar daily rates of 900 to 1,800 euros despite different package cuts. Anyone offering significantly less is usually not selling a pentest, but an automated scan.",
-        "content2": "Sodu Secure works with transparent fixed prices after a scoping call: web app pentests from 1,499 euros, network and Active Directory tests from 2,500 euros - including a free retest and a report within 24 hours in German and English. You will find the full price overview and the request form via the linked pages below - you will receive a concrete offer with itemized person-days within one business day."
+        "content2": "Sodu Secure scopes manual pentests individually for your project - calculated from effort and daily rates, typically between 4,000 and 20,000 euros; an automated vulnerability scan is available from 1,499 euros. Always included: a free retest and a report within 24 hours in German and English. You will find the full price overview and the request form via the linked pages below - you will receive a concrete offer with itemized person-days within one business day."
       }
     },
     "tags": [
@@ -5617,7 +5617,7 @@
     ],
     "cta": {
       "title": "Request a transparent pentest offer",
-      "description": "Receive a fixed-price offer with itemized person-days within 24 hours - web app pentests from 1,499 euros.",
+      "description": "Receive an offer with itemized person-days within 24 hours - automated vulnerability scan from 1,499 euros, manual pentests individually scoped.",
       "emailPlaceholder": "Enter email",
       "buttonText": "Request pentest offer",
       "disclaimer": "No spam, unsubscribe anytime"
@@ -5864,7 +5864,7 @@
       "conclusion": {
         "title": "Conclusion: Both instruments have their place",
         "content1": "The vulnerability scan delivers breadth and continuity: it monitors inexpensively and automatically whether known vulnerabilities appear in your systems. The penetration test delivers depth and certainty: it shows what a real attacker could actually do with your systems - verified, prioritized and with concrete recommendations. Those who only scan see the mass of known vulnerabilities, but not the critical attack paths. Those who only pentest every few years are blind to new issues between tests. The combination of both is the most robust approach.",
-        "content2": "Sodu Secure performs manual penetration tests based on OWASP and the recommendations of the BSI practical guide - with OSCP-certified testers, a free retest and a report within 24 hours in German and English. Web app pentests start from 1,499 euros, network and Active Directory tests from 2,500 euros. Via the request form you will receive a concrete offer within one business day."
+        "content2": "Sodu Secure performs manual penetration tests based on OWASP and the recommendations of the BSI practical guide - with OSCP-certified testers, a free retest and a report within 24 hours in German and English. An automated vulnerability scan starts from 1,499 euros - manual pentests are individually scoped, typically 4,000 to 20,000 euros. Via the request form you will receive a concrete offer within one business day."
       }
     },
     "tags": [
@@ -5877,7 +5877,7 @@
     ],
     "cta": {
       "title": "A real pentest instead of a scan report?",
-      "description": "Manual penetration tests with verified findings - web app pentests from 1,499 euros, offer within 24 hours.",
+      "description": "Manual penetration tests with verified findings - individually scoped, offer within 24 hours.",
       "emailPlaceholder": "Enter email",
       "buttonText": "Request a pentest",
       "disclaimer": "No spam, unsubscribe anytime"

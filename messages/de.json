@@ -5269,7 +5269,7 @@
           },
           "multipleBreaches": {
             "value": "ab 1.499 €",
-            "label": "Einstieg bei Sodu Secure für einen Web-App-Pentest - Netzwerk- und Active-Directory-Tests ab 2.500 Euro"
+            "label": "Automatisierter Schwachstellenscan bei Sodu Secure - manuelle Pentests werden individuell kalkuliert und liegen meist zwischen 4.000 und 20.000 Euro"
           }
         }
       },
@@ -5293,7 +5293,7 @@
       "conclusion": {
         "title": "Fazit: Realistisch budgetieren statt billig einkaufen",
         "content1": "Die ehrliche Antwort auf die Kostenfrage lautet: Ein professioneller, manueller Penetrationstest kostet in Deutschland je nach Scope meist zwischen 4.000 und 30.000 Euro, klar umrissene kleinere Projekte auch darunter. Die Quellen dieser Übersicht - AWARE7, CODE-LEIN, Reepa Solutions, microCAT und ChannelPartner - kommen trotz unterschiedlicher Paket-Schnitte auf sehr ähnliche Tagessätze von 900 bis 1.800 Euro. Wer deutlich darunter anbietet, verkauft in der Regel keinen Pentest, sondern einen automatisierten Scan.",
-        "content2": "Sodu Secure arbeitet mit transparenten Festpreisen nach Scoping-Gespräch: Web-App-Pentests ab 1.499 Euro, Netzwerk- und Active-Directory-Tests ab 2.500 Euro - inklusive kostenlosem Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch. Die vollständige Preisübersicht und das Anfrageformular finden Sie über die verlinkten Seiten unten - Sie erhalten innerhalb eines Werktags ein konkretes Angebot mit ausgewiesenen Personentagen."
+        "content2": "Sodu Secure kalkuliert manuelle Pentests individuell auf Ihr Projekt zugeschnitten - nach Aufwand und Tagessätzen, meist zwischen 4.000 und 20.000 Euro; ein automatisierter Schwachstellenscan ist ab 1.499 Euro erhältlich. Immer inklusive: kostenloser Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch. Die vollständige Preisübersicht und das Anfrageformular finden Sie über die verlinkten Seiten unten - Sie erhalten innerhalb eines Werktags ein konkretes Angebot mit ausgewiesenen Personentagen."
       }
     },
     "tags": [
@@ -5306,7 +5306,7 @@
     ],
     "cta": {
       "title": "Transparentes Pentest-Angebot anfragen",
-      "description": "Erhalten Sie innerhalb von 24 Stunden ein Festpreisangebot mit ausgewiesenen Personentagen - Web-App-Pentests ab 1.499 Euro.",
+      "description": "Erhalten Sie innerhalb von 24 Stunden ein Angebot mit ausgewiesenen Personentagen - Schwachstellenscan ab 1.499 Euro, manueller Pentest individuell kalkuliert.",
       "emailPlaceholder": "E-Mail eingeben",
       "buttonText": "Pentest-Angebot anfragen",
       "disclaimer": "Kein Spam, jederzeit abbestellen"
@@ -5553,7 +5553,7 @@
       "conclusion": {
         "title": "Fazit: Beide Instrumente haben ihren Platz",
         "content1": "Der Schwachstellenscan liefert Breite und Kontinuität: Er überwacht günstig und automatisiert, ob bekannte Lücken in Ihren Systemen auftauchen. Der Penetrationstest liefert Tiefe und Gewissheit: Er zeigt, was ein echter Angreifer mit Ihren Systemen tatsächlich anstellen könnte - verifiziert, priorisiert und mit konkreten Empfehlungen. Wer nur scannt, sieht die Masse der bekannten Schwachstellen, aber nicht die kritischen Angriffspfade. Wer nur alle paar Jahre pentestet, ist zwischen den Tests blind für Neues. Die Kombination aus beidem ist der belastbarste Ansatz.",
-        "content2": "Sodu Secure führt manuelle Penetrationstests nach OWASP und den Empfehlungen des BSI-Praxis-Leitfadens durch - mit OSCP-zertifizierten Testern, kostenlosem Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch. Web-App-Pentests starten ab 1.499 Euro, Netzwerk- und Active-Directory-Tests ab 2.500 Euro. Über das Anfrageformular erhalten Sie innerhalb eines Werktags ein konkretes Angebot."
+        "content2": "Sodu Secure führt manuelle Penetrationstests nach OWASP und den Empfehlungen des BSI-Praxis-Leitfadens durch - mit OSCP-zertifizierten Testern, kostenlosem Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch. Ein automatisierter Schwachstellenscan startet ab 1.499 Euro - manuelle Pentests werden individuell kalkuliert und liegen meist zwischen 4.000 und 20.000 Euro. Über das Anfrageformular erhalten Sie innerhalb eines Werktags ein konkretes Angebot."
       }
     },
     "tags": [
@@ -5566,7 +5566,7 @@
     ],
     "cta": {
       "title": "Echten Pentest statt Scan-Report?",
-      "description": "Manuelle Penetrationstests mit verifizierten Findings - Web-App-Pentests ab 1.499 Euro, Angebot innerhalb von 24 Stunden.",
+      "description": "Manuelle Penetrationstests mit verifizierten Findings - individuell kalkuliert, Angebot innerhalb von 24 Stunden.",
       "emailPlaceholder": "E-Mail eingeben",
       "buttonText": "Pentest anfragen",
       "disclaimer": "Kein Spam, jederzeit abbestellen"

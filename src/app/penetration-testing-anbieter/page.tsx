@@ -95,7 +95,7 @@ const LEISTUNGEN = [
 const FAQS = [
   { q: "Wie wähle ich den richtigen Penetration Testing Anbieter?", a: "Achten Sie auf: Pentester-Zertifizierungen (OSCP, CEH), transparente Festpreise, nachgewiesenes manuelles Testing (Proof-of-Concepts), Retest inklusive, Compliance-Eignung der Berichte (NIS2, ISO 27001) und direkte Kommunikation mit dem Experten – nicht nur Vertrieb." },
   { q: "Was unterscheidet seriöse Pentest Anbieter von Scan-Resellern?", a: "Seriöse Pentest Anbieter führen manuelle Tests durch und liefern Proof-of-Concepts für Findings. Scan-Reseller lassen automatisierte Tools laufen und ergänzen minimal. Erkennungszeichen: fehlende Pentester-Zertifizierungen, keine PoC-Beispiele, sehr niedrige Preise unter 1.000 €." },
-  { q: "Wie viel kostet ein seriöser Penetration Testing Anbieter?", a: "Seriöse manuelle Pentest Anbieter starten ab 1.499 € für fokussierte Tests. Verdächtig günstige Angebote unter 1.000 € sind oft automatisierte Scans. Sodu Secure bietet transparente Festpreise ab 1.499 € mit vollständigem manuellem Testing." },
+  { q: "Wie viel kostet ein seriöser Penetration Testing Anbieter?", a: "Automatisierte Schwachstellenscans starten ab 1.499 €. Manuelle Pentests kalkulieren seriöse Anbieter individuell nach Aufwand und Tagessätzen – meist zwischen 4.000 und 20.000 €. Verdächtig günstige Angebote unter 1.000 € sind oft reine automatisierte Scans. Sodu Secure kalkuliert transparent und testet vollständig manuell." },
   { q: "Welche Zertifizierungen sollte ein Pentest Anbieter haben?", a: "Minimum: OSCP (Offensive Security Certified Professional) für manuelle Exploitation. Ergänzend: CEH (EC-Council), GPEN (GIAC), ISO 27001 Lead Auditor für Compliance-Tests. Ein Anbieter ohne diese Zertifizierungen hat oft keine nachgewiesene Exploitation-Erfahrung." },
   { q: "Kann ein Pentest Anbieter aus Berlin auch remote testen?", a: "Ja – die meisten Penetrationstests laufen remote über VPN-Zugänge. Sodu Secure testet deutschlandweit und international remote. Für lokale Engagements oder Vor-Ort-Workshops in Berlin sind persönliche Treffen möglich." },
   { q: "Was ist bei einem Penetration Testing Anbietervertrag zu beachten?", a: "Wichtig sind: klarer Scope (was wird getestet), autorisierte Testzeiträume, NDA-Vereinbarung, Schadensausschluss für autorisierte Tests, DSGVO-konforme Datenverarbeitung und ein klarer Festpreis. Sodu Secure stellt alle Vertragsunterlagen vor Testbeginn bereit." },
@@ -133,7 +133,7 @@ export default function PenetrationTestingAnbieterPage() {
 
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
             Sodu Secure ist ein zertifizierter Pentest Anbieter mit Sitz in Berlin.
-            OSCP- und CEH-zertifizierte Pentester. Festpreise ab 1.499 €. Manuelles Testing –
+            OSCP- und CEH-zertifizierte Pentester. Schwachstellenscan ab 1.499 €, manueller Pentest individuell kalkuliert. Manuelles Testing –
             keine Scan-Reports. Angebot in 24 Stunden. Erfahren Sie mehr über Pentest Dienstleister und Penetration Testing Services.
           </p>
 
@@ -303,7 +303,7 @@ export default function PenetrationTestingAnbieterPage() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {[
             { icon: Award, title: "OSCP-zertifiziert", desc: "Höchste praktische Pentest-Zertifizierung – weltweit anerkannt.", color: "text-[#FF3B30]", bg: "bg-[#FF3B30]/10 border-[#FF3B30]/20" },
-            { icon: BarChart3, title: "Festpreis ab 1.499 €", desc: "Keine Tagessatz-Überraschungen. Kalkulierbarkeit vor Beginn.", color: "text-green-400", bg: "bg-green-500/10 border-green-500/20" },
+            { icon: BarChart3, title: "Transparente Preise", desc: "Scan ab 1.499 €, Pentest individuell kalkuliert – verbindliches Angebot vor Beginn.", color: "text-green-400", bg: "bg-green-500/10 border-green-500/20" },
             { icon: Clock, title: "Angebot in 24h", desc: "Transparentes Festpreis-Angebot innerhalb von 24 Stunden.", color: "text-[#FF6B61]", bg: "bg-[#FF3B30]/10 border-[#FF3B30]/20" },
             { icon: MapPin, title: "Standort Berlin", desc: "Vor Ort oder remote – schnelle Reaktionszeiten in der Region.", color: "text-purple-400", bg: "bg-purple-500/10 border-purple-500/20" },
           ].map((item) => (

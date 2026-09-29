@@ -43,8 +43,8 @@ const PAKETE = [
     name: "Sicherheitsaudit Basis",
     price: "ab 1.499 €",
     duration: "2–4 Tage",
-    focus: "Technischer Fokus",
-    items: ["Web-App oder Netzwerk Audit", "CVSS 3.1 Bewertung", "Management Summary", "Remediation Guide", "1x Retest inklusive"],
+    focus: "Automatisierter Schwachstellenscan",
+    items: ["Automatisierter Scan: Web-App oder Netzwerk", "CVSS 3.1 Bewertung", "Management Summary", "Remediation Guide"],
     highlight: false,
   },
   {

@@ -654,7 +654,7 @@ export default function PenetrationstestAnbieterPage() {
           <AlertTriangle className="w-7 h-7 text-[#FF6B61] mx-auto mb-3" />
           <h3 className="text-lg font-bold mb-2">Billig = Schlecht? Nicht immer, aber fast immer!</h3>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
-            €500 für einen &apos;Pentest&apos;? Das ist ein Scan. Ein echter manueller Pentest mit zertifizierten Experten kostet ab 1.499 €. Qualität hat ihren Preis – und der lohnt sich.
+            €500 für einen &apos;Pentest&apos;? Das ist ein Scan. Ein echter manueller Pentest mit zertifizierten Experten wird individuell kalkuliert und kostet meist 4.000 bis 20.000 €. Qualität hat ihren Preis – und der lohnt sich.
           </p>
         </div>
       </section>

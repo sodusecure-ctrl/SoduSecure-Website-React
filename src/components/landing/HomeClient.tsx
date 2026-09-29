@@ -32,7 +32,7 @@ const faqDe: LandingFaqItem[] = [
   },
   {
     q: 'Was kostet ein Pentest bei Sodu Secure?',
-    a: 'Ein Pentest bei Sodu Secure startet zum Festpreis: kompakte Web-App- und API-Tests ab 1.499 €, Netzwerk- und Active-Directory-Pentests ab 2.500 €. Nach Ihrer Anfrage erhalten Sie innerhalb von 24 Stunden ein verbindliches Angebot. Im Preis enthalten sind der Bericht in Deutsch und Englisch sowie der kostenlose Retest nach der Behebung.',
+    a: 'Ein automatisierter Schwachstellenscan startet bei Sodu Secure ab 1.499 €. Ein manueller Pentest wird individuell auf Ihr Projekt zugeschnitten und nach Aufwand und Tagessätzen kalkuliert - meist zwischen 4.000 und 20.000 €. Nach Ihrer Anfrage erhalten Sie innerhalb von 24 Stunden ein verbindliches Angebot. Im Preis enthalten sind der Bericht in Deutsch und Englisch sowie der kostenlose Retest nach der Behebung.',
   },
   {
     q: 'Ist der Zugriff auf mein Repository bei Sodu /AuditAI read-only?',
@@ -55,7 +55,7 @@ const faqEn: LandingFaqItem[] = [
   },
   {
     q: 'What does a pentest at Sodu Secure cost?',
-    a: 'A pentest at Sodu Secure starts at a fixed price: compact web app and API tests from €1,499, network and Active Directory pentests from €2,500. After your request you receive a binding quote within 24 hours. The price includes a report in German and English plus a free retest after remediation.',
+    a: 'An automated vulnerability scan starts at €1,499. A manual pentest is individually scoped and calculated based on effort and daily rates - typically €4,000 to €20,000. After your request you receive a binding quote within 24 hours. The price includes a report in German and English plus a free retest after remediation.',
   },
   {
     q: 'Is access to my repository read-only with Sodu /AuditAI?',
@@ -171,8 +171,8 @@ const sharedDe: SharedCopy = {
   pentestCardTitle: 'Wie ein echter Hacker. Nur auf Ihrer Seite.',
   pentestCardSub: 'Hand-getestet von OSCP-zertifizierten Hackern aus Berlin. Kein Scanner-Output, sondern echte Angriffe mit echten Proof-of-Concepts.',
   pentestCardBullets: ['Web · API · Mobile · Infra · AD', 'OWASP / OSSTMM / NIST', 'Executive- + technischer Bericht', 'Kostenloser Retest nach Fix'],
-  pentestCardPriceLabel: 'Festpreis ab',
-  pentestCardPrice: '2.500 €',
+  pentestCardPriceLabel: 'Projektpreis · meist',
+  pentestCardPrice: '4.000–20.000 €',
   pentestCardCtaPrimary: 'Pentest anfragen',
   pentestCardCtaSecondary: 'Mehr erfahren',
   auditaiCardTitle: 'Ihr IT-Security-Team. Ab 99 €.',
@@ -207,8 +207,8 @@ const sharedEn: SharedCopy = {
   pentestCardTitle: 'Like a real hacker. Just on your side.',
   pentestCardSub: 'Hand-tested by OSCP-certified hackers from Berlin. Not scanner output - real attacks with real proof-of-concepts.',
   pentestCardBullets: ['Web · API · Mobile · Infra · AD', 'OWASP / OSSTMM / NIST', 'Executive + technical report', 'Free retest after fix'],
-  pentestCardPriceLabel: 'Fixed price from',
-  pentestCardPrice: '€2,500',
+  pentestCardPriceLabel: 'Project price · typically',
+  pentestCardPrice: '€4,000–20,000',
   pentestCardCtaPrimary: 'Request pentest',
   pentestCardCtaSecondary: 'Learn more',
   auditaiCardTitle: 'Your security team. From €99.',
@@ -244,7 +244,7 @@ function getPentestCopy(de: boolean): BrandCopy {
             Wir machen Ihre IT <span className="font-semibold text-[#FF3B30]">robuster</span> gegen Cyberangriffe.
           </>
         ),
-        heroSub: 'Hand-getestet von OSCP-zertifizierten Hackern aus Berlin. Echte Angriffsketten, reproduzierbare Proof-of-Concepts, klare Fix-Empfehlungen - Festpreis ab 2.500 €.',
+        heroSub: 'Hand-getestet von OSCP-zertifizierten Hackern aus Berlin. Echte Angriffsketten, reproduzierbare Proof-of-Concepts, klare Fix-Empfehlungen - individuell kalkuliert, meist 4.000 bis 20.000 €.',
         heroPrimaryCta: 'Pentest anfragen',
         heroPrimaryHref: '/request-pentest',
         heroSecondaryCta: 'Preis berechnen',
@@ -274,7 +274,7 @@ function getPentestCopy(de: boolean): BrandCopy {
           { n: '04', t: 'Bericht & Retest', d: 'Klarer Bericht, Fix-Begleitung und kostenloser Nachtest.', icon: <FileText className="h-5 w-5" /> },
         ],
         stats: [
-          { value: '2.500 €', label: 'Festpreis ab' },
+          { value: '4.000–20.000 €', label: 'Typischer Projektpreis' },
           { value: '24h', label: 'Angebot' },
           { value: 'OSCP+', label: 'Zertifiziert' },
           { value: 'Gratis', label: 'Retest' },
@@ -301,7 +301,7 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
         ],
         pricingHeadline: (
           <>
-            Festpreis ab <span className="text-[#FF3B30]">2.500 €</span>. Transparent. Sofort online.
+            Individuell kalkuliert, meist <span className="text-[#FF3B30]">4.000 bis 20.000 €</span>. Transparent. Sofort online.
           </>
         ),
         pricingSub: 'Berechnen Sie Ihren individuellen Pentest-Preis online - in unter 2 Minuten.',
@@ -309,8 +309,8 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
         pricingPrimaryHref: '/pentest-konfigurator',
         pricingSecondary: 'Mit Sales sprechen',
         pricingPlans: [
-          ['Web-App', 'ab 2.500 €', 'Einzelne Web-/API-Anwendung'],
-          ['Internes Pentest', 'ab 4.900 €', 'Netzwerk + Active Directory'],
+          ['Schwachstellenscan', 'ab 1.499 €', 'Automatisierter Scan Ihrer Systeme'],
+          ['Manueller Pentest', 'meist 4.000 – 20.000 €', 'Web, API, Netzwerk, AD - individuell kalkuliert'],
           ['Enterprise', 'individuell', 'Multi-Scope, Red Team'],
         ],
         pricingPerMonth: '',
@@ -346,7 +346,7 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
             We make your IT <span className="font-semibold text-[#FF3B30]">more resilient</span> against cyberattacks.
           </>
         ),
-        heroSub: 'Hand-tested by OSCP-certified hackers from Berlin. Real attack chains, reproducible proof-of-concepts, clear fix recommendations - fixed price from €2,500.',
+        heroSub: 'Hand-tested by OSCP-certified hackers from Berlin. Real attack chains, reproducible proof-of-concepts, clear fix recommendations - individually scoped, typically €4,000 to €20,000.',
         heroPrimaryCta: 'Request pentest',
         heroPrimaryHref: '/request-pentest',
         heroSecondaryCta: 'Calculate price',
@@ -376,7 +376,7 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
           { n: '04', t: 'Report & retest', d: 'Clear report, fix support and free retest.', icon: <FileText className="h-5 w-5" /> },
         ],
         stats: [
-          { value: '€2,500', label: 'Fixed price from' },
+          { value: '€4,000–20,000', label: 'Typical project price' },
           { value: '24h', label: 'Quote' },
           { value: 'OSCP+', label: 'Certified' },
           { value: 'Free', label: 'Retest' },
@@ -403,7 +403,7 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
         ],
         pricingHeadline: (
           <>
-            Fixed price from <span className="text-[#FF3B30]">€2,500</span>. Transparent. Online instantly.
+            Individually scoped, typically <span className="text-[#FF3B30]">€4,000 to €20,000</span>. Transparent. Online instantly.
           </>
         ),
         pricingSub: 'Calculate your individual pentest price online - in under 2 minutes.',
@@ -411,8 +411,8 @@ if (req.user.id !== params.id && !req.user.isAdmin) {
         pricingPrimaryHref: '/pentest-konfigurator',
         pricingSecondary: 'Talk to sales',
         pricingPlans: [
-          ['Web app', 'from €2,500', 'Single web/API app'],
-          ['Internal pentest', 'from €4,900', 'Network + Active Directory'],
+          ['Vulnerability scan', 'from €1,499', 'Automated scan of your systems'],
+          ['Manual pentest', 'typically €4,000 – €20,000', 'Web, API, network, AD - individually scoped'],
           ['Enterprise', 'custom', 'Multi-scope, red team'],
         ],
         pricingPerMonth: '',
@@ -1000,7 +1000,7 @@ export default function HomeClient() {
               <div>
                 <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">Preise & Anbieter</h3>
                 <ul className="mt-4 space-y-2.5 text-sm text-white/65">
-                  <li><Link href="/penetrationstest-anbieter" className="hover:text-white">Pentest-Anbieter mit Festpreis ab 2.500 €</Link></li>
+                  <li><Link href="/penetrationstest-anbieter" className="hover:text-white">Pentest-Anbieter mit transparenten Preisen</Link></li>
                   <li><Link href="/pentest-kosten" className="hover:text-white">Was kostet ein Penetrationstest</Link></li>
                   <li><Link href="/pentest-kosten" className="hover:text-white">Pentest-Kosten im Überblick</Link></li>
                   <li><Link href="/pentest-berlin" className="hover:text-white">Penetrationstest in Berlin</Link></li>

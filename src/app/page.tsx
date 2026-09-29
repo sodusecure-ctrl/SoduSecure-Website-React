@@ -45,7 +45,7 @@ export default function Home() {
         name: 'Was kostet ein Pentest bei Sodu Secure?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Ein Pentest bei Sodu Secure startet zum Festpreis: kompakte Web-App- und API-Tests ab 1.499 €, Netzwerk- und Active-Directory-Pentests ab 2.500 €. Nach Ihrer Anfrage erhalten Sie innerhalb von 24 Stunden ein verbindliches Angebot. Im Preis enthalten sind der Bericht in Deutsch und Englisch sowie der kostenlose Retest nach der Behebung.',
+          text: 'Ein automatisierter Schwachstellenscan startet bei Sodu Secure ab 1.499 €. Ein manueller Pentest wird individuell auf Ihr Projekt zugeschnitten und nach Aufwand und Tagessätzen kalkuliert - meist zwischen 4.000 und 20.000 €. Nach Ihrer Anfrage erhalten Sie innerhalb von 24 Stunden ein verbindliches Angebot. Im Preis enthalten sind der Bericht in Deutsch und Englisch sowie der kostenlose Retest nach der Behebung.',
         },
       },
       {

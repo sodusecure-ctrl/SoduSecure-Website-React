@@ -34,7 +34,7 @@ const RED_VS_PENTEST = [
   { aspect: "Zeitraum", pentest: "Tage bis 2 Wochen", red: "2 Wochen bis 3 Monate" },
   { aspect: "Wissen vom Blue Team", pentest: "Oft bekannt", red: "Unbekannt (full adversarial)" },
   { aspect: "MITRE ATT&CK", pentest: "Teilweise", red: "Vollständig gemappt" },
-  { aspect: "Preis", pentest: "ab 1.500 €", red: "ab 8.000 €" },
+  { aspect: "Preis", pentest: "individuell, meist 4.000 – 20.000 €", red: "ab 8.000 €" },
   { aspect: "Ideal für", pentest: "Compliance, konkrete Systeme", red: "Enterprise, kritische Infrastruktur, DORA/NIS2" },
 ];
 

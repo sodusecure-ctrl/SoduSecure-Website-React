@@ -609,14 +609,14 @@ const de: Copy = {
   ],
   kostenAnchors: [
     {
-      name: 'Web-App / API',
+      name: 'Schwachstellenscan (automatisiert)',
       price: 'ab 1.499 €',
-      desc: 'Eine Web- oder API-Anwendung, OWASP Top 10 plus Business-Logik.',
+      desc: 'Automatisierter Scan mit Report - schneller Einstieg, kein manueller Pentest.',
     },
     {
-      name: 'Netzwerk / Active Directory',
-      price: 'ab 2.500 €',
-      desc: 'Externe oder interne Infrastruktur inkl. Active Directory.',
+      name: 'Manueller Pentest (Web, API, Netzwerk, AD)',
+      price: 'meist 4.000 – 20.000 €',
+      desc: 'Individuell auf das Projekt zugeschnitten, kalkuliert nach Aufwand und Tagessätzen.',
     },
     {
       name: 'Multi-Scope / Enterprise',
@@ -706,7 +706,7 @@ const de: Copy = {
     },
     {
       q: 'Was kostet ein Penetrationstest?',
-      a: 'Die Kosten hängen von Scope und Prüftiefe ab. Bei Sodu Secure beginnt ein Web-Application-Pentest ab 1.499 €, ein Netzwerk- oder Active-Directory-Pentest ab 2.500 €. Größere Umgebungen werden nach dem Scoping-Call individuell als Festpreis angeboten. Vorsicht bei Pauschalpreisen ohne Scoping - dahinter steckt oft nur ein automatisierter Scan.',
+      a: 'Die Kosten hängen von Scope und Prüftiefe ab. Ein automatisierter Schwachstellenscan startet bei Sodu Secure ab 1.499 €. Ein manueller Penetrationstest wird individuell auf das Projekt zugeschnitten und nach Aufwand und Tagessätzen kalkuliert - meist zwischen 4.000 und 20.000 €. Den verbindlichen Festpreis erhalten Sie nach dem Scoping-Call. Vorsicht bei Pauschalpreisen ohne Scoping - dahinter steckt oft nur ein automatisierter Scan.',
     },
     {
       q: 'Wie lange dauert ein Penetrationstest?',
@@ -1175,14 +1175,14 @@ const en: Copy = {
   ],
   kostenAnchors: [
     {
-      name: 'Web app / API',
+      name: 'Vulnerability scan (automated)',
       price: 'from €1,499',
-      desc: 'One web or API application, OWASP Top 10 plus business logic.',
+      desc: 'Automated scan with report - a fast entry point, not a manual pentest.',
     },
     {
-      name: 'Network / Active Directory',
-      price: 'from €2,500',
-      desc: 'External or internal infrastructure incl. Active Directory.',
+      name: 'Manual pentest (web, API, network, AD)',
+      price: 'typically €4,000 – €20,000',
+      desc: 'Individually scoped, calculated based on effort and day rates.',
     },
     {
       name: 'Multi-scope / enterprise',
@@ -1270,7 +1270,7 @@ const en: Copy = {
     },
     {
       q: 'How much does a penetration test cost?',
-      a: 'Costs depend on scope and test depth. At Sodu Secure a web application pentest starts from €1,499, a network or Active Directory pentest from €2,500. Larger environments are quoted individually as a fixed price after the scoping call. Be cautious with flat rates offered without scoping - they usually hide an automated scan.',
+      a: 'Costs depend on scope and test depth. An automated vulnerability scan at Sodu Secure starts from €1,499. Manual pentests are individually scoped and calculated based on effort and day rates - typically €4,000 to €20,000. You receive a binding fixed price after the scoping call. Be cautious with flat rates offered without scoping - they usually hide an automated scan.',
     },
     {
       q: 'How long does a penetration test take?',
@@ -1404,42 +1404,47 @@ export default async function PenetrationstestPage() {
         <div className="premium-aurora" aria-hidden />
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-20 lg:pt-28 lg:pb-24">
-          <SectionLabelDark>{c.heroLabel}</SectionLabelDark>
-          <h1 className="mt-6 max-w-5xl text-[40px] font-semibold leading-[1.04] tracking-[-0.03em] md:text-6xl lg:text-7xl">
-            <span className="premium-silver">{c.heroLine1}</span>
-            <br />
-            <span className="premium-headline-accent">{c.heroLine2}</span>
-          </h1>
-          <p className="mt-6 max-w-2xl text-base text-white/75 md:text-lg">{c.heroSub}</p>
+        <div className="relative mx-auto max-w-7xl px-6 pt-16 pb-24 lg:pt-24 lg:pb-28">
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+            <div>
+              <SectionLabelDark>{c.heroLabel}</SectionLabelDark>
+              <h1 className="mt-6 text-[38px] font-semibold leading-[1.06] tracking-[-0.03em] md:text-5xl lg:text-6xl">
+                <span className="premium-silver">{c.heroLine1}</span>
+                <br />
+                <span className="premium-headline-accent">{c.heroLine2}</span>
+              </h1>
+              <p className="mt-6 max-w-2xl text-base text-white/75 md:text-lg">{c.heroSub}</p>
 
-          {/* GEO/AEO-Antwortblock */}
-          <div className="mt-8 max-w-3xl rounded-2xl border border-white/15 bg-white/5 p-6">
-            <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#FF3B30]">
-              {c.answerLabel}
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <Link
+                  href="/request-pentest"
+                  className="premium-cta inline-flex items-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
+                >
+                  {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/pentest-kosten"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white/85 transition hover:border-white/50 hover:text-white"
+                >
+                  {c.ctaSecondary} <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
-            <p className="mt-3 text-sm leading-relaxed text-white/85 md:text-base">{c.answerBox}</p>
-          </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-3">
-            <Link
-              href="/request-pentest"
-              className="premium-cta inline-flex items-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
-            >
-              {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/pentest-kosten"
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 px-6 py-3.5 text-sm font-semibold text-white/85 transition hover:border-white/50 hover:text-white"
-            >
-              {c.ctaSecondary} <ArrowRight className="h-4 w-4" />
-            </Link>
+            {/* GEO/AEO-Antwortblock */}
+            <div className="rounded-2xl border border-white/15 bg-white/5 p-6 shadow-xl shadow-black/20 lg:p-8">
+              <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#FF3B30]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#FF3B30]" />
+                {c.answerLabel}
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-white/85 md:text-base">{c.answerBox}</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* STATS */}
-      <section className="mx-auto -mt-10 max-w-7xl px-6">
+      <section className="relative z-10 mx-auto -mt-10 max-w-7xl px-6">
         <StatRow items={c.stats} />
       </section>
 

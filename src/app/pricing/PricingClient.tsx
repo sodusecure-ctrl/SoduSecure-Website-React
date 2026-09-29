@@ -193,7 +193,7 @@ const pentestDe: Copy = {
   heroLabel: 'Preise',
   heroLine1: 'Festpreise.',
   heroLine2: 'Klarer Scope.',
-  heroSub: 'Automatisierte Scans ab 1.500 €, manuelle Penetrationstests individuell – von zertifizierten Testern. Bericht (DE & EN), Fix-Empfehlungen und kostenloser Retest inklusive.',
+  heroSub: 'Automatisierte Scans ab 1.499 €, manuelle Penetrationstests individuell – von zertifizierten Testern. Bericht (DE & EN), Fix-Empfehlungen und kostenloser Retest inklusive.',
   perMonth: ' netto',
   vatNote: 'Alle Preise zzgl. MwSt. Endgültiger Preis nach Scoping-Call. Kostenloser Retest binnen 30 Tagen.',
   compareLabel: 'Pakete vergleichen',
@@ -209,7 +209,7 @@ const pentestDe: Copy = {
   plans: [
     {
       name: 'Automatischer Scan',
-      price: 'ab 1.500 €',
+      price: 'ab 1.499 €',
       audience: 'Automatisierter Schwachstellen-Scan · schneller Überblick',
       features: [
         'Automatisierter Scan einer Web-/API-Anwendung',
@@ -270,7 +270,7 @@ const pentestEn: Copy = {
   heroLabel: 'Pricing',
   heroLine1: 'Fixed prices.',
   heroLine2: 'Clear scope.',
-  heroSub: 'Automated scans from €1,500, manual penetration tests priced individually – by certified testers. Bilingual report (EN + DE), fix guidance and a free retest included.',
+  heroSub: 'Automated scans from €1,499, manual penetration tests priced individually – by certified testers. Bilingual report (EN + DE), fix guidance and a free retest included.',
   perMonth: ' net',
   vatNote: 'All prices VAT excluded. Final price after scoping call. Free retest within 30 days.',
   compareLabel: 'Compare packages',
@@ -286,7 +286,7 @@ const pentestEn: Copy = {
   plans: [
     {
       name: 'Automated scan',
-      price: 'from €1,500',
+      price: 'from €1,499',
       audience: 'Automated vulnerability scan · quick overview',
       features: [
         'Automated scan of a web / API application',

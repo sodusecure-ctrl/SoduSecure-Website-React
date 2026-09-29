@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sodusecure.com/hacker-simulation' },
   openGraph: {
     title: 'Hacker-Simulation | Angriff sofort simulieren lassen',
-    description: 'Jetzt testen, ob Ihr Unternehmen einem echten Hackerangriff stannhält. OSCP-zertifiziert. Preis sofort online berechnen. Festpreis ab 1.499 €.',
+    description: 'Jetzt testen, ob Ihr Unternehmen einem echten Hackerangriff stannhält. OSCP-zertifiziert. Preis sofort online berechnen. Angebot in 24 h.',
     url: 'https://sodusecure.com/hacker-simulation',
     siteName: 'Sodu Secure',
     locale: 'de_DE',
@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'Sodu Secure – Hacker Simulation & Ethical Hacking',
-            description: 'Realistische Hacker-Simulation (Ethical Hacking) für Unternehmen. OSCP-zertifizierte Experten simulieren echte Cyberangriffe. Festpreis ab 1.499 €.',
+            description: 'Realistische Hacker-Simulation (Ethical Hacking) für Unternehmen. OSCP-zertifizierte Experten simulieren echte Cyberangriffe. Individuell kalkuliert, Schwachstellenscan ab 1.499 €.',
             url: 'https://sodusecure.com/hacker-simulation',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',

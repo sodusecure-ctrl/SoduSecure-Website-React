@@ -95,7 +95,7 @@ export default function LeadConversionSection({ context = "Landingpage" }: { con
               transparent, ohne Verpflichtung und ohne Wartezeit.
             </p>
             <ul className="space-y-2 mb-7">
-              {["Preis sofort online berechnen", "Transparenter Festpreis ab 2.500 €", "Keine Anmeldung nötig"].map((t) => (
+              {["Preis sofort online berechnen", "Transparente Preise - individuell kalkuliert", "Keine Anmeldung nötig"].map((t) => (
                 <li key={t} className="flex items-start gap-2 text-sm text-white/70">
                   <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />{t}
                 </li>

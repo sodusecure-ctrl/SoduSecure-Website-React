@@ -85,19 +85,19 @@ export function generatePageMetadata({
 
 export const homeMetadata = {
   title: 'Professional Penetration Testing Services',
-  description: 'Transparente Pentest Preise ohne Wartezeit. Web, API & Mobile Security Audits inkl. Bericht. Jetzt Pentest konfigurieren oder kostenlos beraten lassen. Zertifizierte Pentester - Festpreis ab 2.500 €.',
+  description: 'Transparente Pentest Preise ohne Wartezeit. Web, API & Mobile Security Audits inkl. Bericht. Jetzt Pentest konfigurieren oder kostenlos beraten lassen. Zertifizierte Pentester - Schwachstellenscan ab 1.499 €, Pentest individuell kalkuliert.',
   keywords: ['ethical hacking', 'security audit', 'VAPT', 'cyber security services'],
 };
 
 export const serviceMetadata = {
   webAppTesting: {
     title: 'Web Application Penetration Testing',
-    description: 'Web Application Pentest: OWASP Top 10, SQL Injection, Auth-Bypasses - manuell getestet von zertifizierten Pentestern. Transparenter Festpreis. Jetzt Preis berechnen - ab 2.500 €.',
+    description: 'Web Application Pentest: OWASP Top 10, SQL Injection, Auth-Bypasses - manuell getestet von zertifizierten Pentestern. Individuell kalkuliert, meist 4.000 bis 20.000 €. Jetzt Preis berechnen.',
     keywords: ['web app pentesting', 'OWASP testing', 'web security', 'application security'],
   },
   mobileAppTesting: {
     title: 'Mobile Application Security Testing',
-    description: 'Mobile App Pentest für iOS & Android: OWASP MASVS, Reverse Engineering & Datenschutz-Checks. Zertifizierte Pentester, transparenter Festpreis. Preis sofort berechnen - ab 2.500 €.',
+    description: 'Mobile App Pentest für iOS & Android: OWASP MASVS, Reverse Engineering & Datenschutz-Checks. Zertifizierte Pentester, individuell kalkuliert. Preis sofort berechnen.',
     keywords: ['mobile pentesting', 'iOS security', 'Android security', 'mobile app security'],
   },
   apiSecurity: {

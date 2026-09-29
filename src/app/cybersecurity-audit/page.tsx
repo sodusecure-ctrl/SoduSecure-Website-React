@@ -66,7 +66,7 @@ export default function CybersecurityAuditPage() {
           <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
             <Shield className="h-3.5 w-3.5 text-[#FF3B30]" />
-            <span>Cybersecurity Audit · NIS2 & ISO 27001 konform · Festpreis ab 1.499 €</span>
+            <span>Cybersecurity Audit · NIS2 & ISO 27001 konform · Schwachstellenscan ab 1.499 €</span>
           </div>
 
           <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">

@@ -58,7 +58,7 @@ const berlin: CityData = {
   heroBadge: "Penetration Testing Anbieter aus Berlin · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Berliner Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Anbieter aus Berlin. Wir simulieren reale Angriffe auf Ihre Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert und mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Anbieter aus Berlin. Wir simulieren reale Angriffe auf Ihre Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert und individuell kalkuliert. Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben zahlreiche Berliner Unternehmen bei Penetrationstests begleitet – vom Charlottenburger Mittelständler über Startups in Kreuzberg und Mitte bis zu Gesundheitsdienstleistern im Berliner Umland. Diese Nähe ist kein Zufall: Sodu Secure ist in Berlin verwurzelt.",
     "Berlin ist Deutschlands größter Startup-Hub und gleichzeitig Sitz von Kliniken, Behörden und einer wachsenden Finanzszene. Diese Dichte macht die Stadt zu einem der attraktivsten Ziele für Cyberkriminelle in Deutschland – und genau deshalb kennen wir die typischen Angriffsflächen Berliner Firmen sehr genau.",
@@ -83,15 +83,15 @@ const berlin: CityData = {
     { label: "ISO 27001 Pentest", href: "/iso-27001", note: "Pentest-Nachweise für Annex-A-Controls Ihrer ISO-27001-Zertifizierung." },
   ],
   faqs: [
-    { q: "Was kostet ein Penetration Test in Berlin?", a: "Je nach Scope zwischen 1.499 € für einen fokussierten Webapplikationstest und 15.000 € für einen vollständigen KMU-Pentest inklusive Active Directory und Phishing-Simulation. Als Berliner Anbieter erstellen wir nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot – ohne versteckte Tagessätze." },
+    { q: "Was kostet ein Penetration Test in Berlin?", a: "Ein automatisierter Schwachstellenscan startet bei 1.499 €. Ein manueller Penetrationstest wird individuell auf Ihr Projekt zugeschnitten und nach Aufwand kalkuliert - meist zwischen 4.000 und 20.000 €, ein vollständiger KMU-Pentest inklusive Active Directory und Phishing-Simulation liegt bei rund 15.000 €. Als Berliner Anbieter erstellen wir nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot – ohne versteckte Tagessätze." },
     { q: "Testet Sodu Secure auch vor Ort in Berlin?", a: "Ja. Die meisten Penetrationstests laufen remote über VPN-Zugänge, aber für Kick-offs, interne Tests oder Abschlusspräsentationen sind wir in Berlin persönlich vor Ort – kurze Wege, schnelle Reaktion." },
     { q: "Welche Berliner Unternehmen brauchen einen Pentest?", a: "Praktisch jedes Unternehmen mit Webpräsenz, Kundendaten oder Active Directory. Besonders relevant für Berliner Startups (Investor- und Enterprise-Anforderungen), Kliniken (Patientendaten), Fintechs (DORA/BaFin) und Mittelständler unter NIS2." },
     { q: "Wie schnell bekomme ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Angebot. Bei dringenden Fällen – etwa vor einer Finanzierungsrunde oder einem Audit – richten wir uns nach Ihrem Zeitplan." },
     { q: "Ist der Pentest DSGVO-konform?", a: "Ja. Alle Tests laufen auf Basis eines schriftlichen Vertrags mit klar definiertem Scope, auf Wunsch mit AVV und NDA. Der Bericht ist als Nachweis technischer Maßnahmen nach Art. 32 DSGVO gegenüber der Berliner Datenschutzbehörde verwendbar." },
   ],
-  metaTitle: "Penetration Testing Berlin | Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing Berlin | Zertifizierte Pentester vor Ort & remote",
   metaDescription:
-    "Penetration Testing in Berlin von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests, DSGVO-konform, Festpreis ab 1.499 €. Pentest Anbieter Berlin - Angebot in 24h.",
+    "Penetration Testing in Berlin von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests, DSGVO-konform, individuell kalkuliert - Schwachstellenscan ab 1.499 €. Angebot in 24h.",
   keywords: [
     "penetration testing berlin",
     "pentest berlin",
@@ -115,7 +115,7 @@ const hamburg: CityData = {
   heroBadge: "Penetration Testing Anbieter für Hamburg · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Hamburger Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Partner für Hamburg. Wir simulieren reale Angriffe auf Web-Apps, Logistik- und Netzwerk-Infrastruktur, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Partner für Hamburg. Wir simulieren reale Angriffe auf Web-Apps, Logistik- und Netzwerk-Infrastruktur, Active Directory und Cloud – manuell, OSCP-zertifiziert, individuell kalkuliert. Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben viele Hamburger Unternehmen bei Penetrationstests betreut – von Logistik- und Handelsbetrieben rund um den Hafen über Medienhäuser bis zu E-Commerce-Teams in der HafenCity. Hamburg ist für uns kein anonymer Markt, sondern ein Standort, dessen Risikoprofil wir aus der Praxis kennen.",
     "Als Deutschlands größter Seehafen und wichtiger Logistik-, Medien- und Handelsknoten ist Hamburg besonders abhängig von funktionierender, vernetzter IT – und damit ein lohnendes Ziel für Ransomware und Supply-Chain-Angriffe. Genau dort setzen unsere Tests an.",
@@ -140,15 +140,15 @@ const hamburg: CityData = {
     { label: "TISAX für Zulieferer", href: "/tisax", note: "Industrie- und Automotive-Zulieferer brauchen TISAX-konforme Sicherheitsnachweise." },
   ],
   faqs: [
-    { q: "Was kostet ein Penetration Test in Hamburg?", a: "Je nach Scope zwischen 1.499 € für einen fokussierten Webapplikationstest und 15.000 € für einen vollständigen KMU-Pentest inklusive Active Directory und Phishing-Simulation. Wir erstellen nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot für Ihr Hamburger Unternehmen." },
+    { q: "Was kostet ein Penetration Test in Hamburg?", a: "Ein automatisierter Schwachstellenscan startet bei 1.499 €. Ein manueller Penetrationstest wird individuell auf Ihr Projekt zugeschnitten und nach Aufwand kalkuliert - meist zwischen 4.000 und 20.000 €, ein vollständiger KMU-Pentest inklusive Active Directory und Phishing-Simulation liegt bei rund 15.000 €. Wir erstellen nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot für Ihr Hamburger Unternehmen." },
     { q: "Testen Sie auch Logistik- und OT-nahe Systeme in Hamburg?", a: "Ja. Gerade in Hamburg ist die Verzahnung von IT und Logistik-/OT-Systemen ein zentrales Risiko. Wir testen externe und interne Netzwerke, Schnittstellen zu Logistiksystemen und prüfen, wie weit ein Angreifer in vernetzten Umgebungen kommt – ohne den Betrieb zu stören." },
     { q: "Sind Sie für Vor-Ort-Termine in Hamburg verfügbar?", a: "Die meisten Tests laufen remote. Für Kick-offs, interne Tests oder Abschlusspräsentationen kommen wir nach Hamburg – persönlich und mit kurzer Reaktionszeit." },
     { q: "Brauchen Hamburger Unternehmen wegen NIS2 einen Pentest?", a: "Viele ja. Logistik, Lebensmittel, Industrie und digitale Dienste fallen unter NIS2 – und Hamburg ist in genau diesen Sektoren stark. Wir prüfen Ihre Betroffenheit und liefern die geforderten Sicherheitsnachweise." },
     { q: "Wie schnell erhalte ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Festpreis-Angebot – ohne versteckte Tagessätze." },
   ],
-  metaTitle: "Penetration Testing Hamburg | Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing Hamburg | Zertifizierte Pentester vor Ort & remote",
   metaDescription:
-    "Penetration Testing in Hamburg von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Logistik, Handel & Industrie, DSGVO-konform, Festpreis ab 1.499 €. Angebot in 24h.",
+    "Penetration Testing in Hamburg von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Logistik, Handel & Industrie, DSGVO-konform, individuell kalkuliert - Schwachstellenscan ab 1.499 €.",
   keywords: [
     "penetration testing hamburg",
     "pentest hamburg",
@@ -172,7 +172,7 @@ const muenchen: CityData = {
   heroBadge: "Penetration Testing Anbieter für München · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Münchner Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Partner für München und Bayern. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Partner für München und Bayern. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, individuell kalkuliert. Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben zahlreiche Münchner Unternehmen bei Penetrationstests begleitet – von Versicherern und Finanzdienstleistern über Automotive-Zulieferer bis zu Tech- und Biotech-Firmen im Raum München. Bayerns Wirtschaftskraft bringt besonders hohe Anforderungen an Cybersicherheit mit sich, und genau darauf sind wir eingestellt.",
     "München ist Heimat von DAX-Konzernen, einer der dichtesten Versicherungs- und Finanzlandschaften Europas und eines starken Tech- und Life-Science-Clusters. Diese Konzentration wertvoller Daten und geistigen Eigentums macht Münchner Unternehmen zu bevorzugten Zielen gezielter Angriffe.",
@@ -197,15 +197,15 @@ const muenchen: CityData = {
     { label: "ISO 27001 Pentest", href: "/iso-27001", note: "Pentest-Nachweise für Annex-A-Controls Ihrer ISO-27001-Zertifizierung." },
   ],
   faqs: [
-    { q: "Was kostet ein Penetration Test in München?", a: "Je nach Scope zwischen 1.499 € für einen fokussierten Webapplikationstest und 15.000 € für einen vollständigen KMU-Pentest inklusive Active Directory und Phishing-Simulation. Wir erstellen nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot für Ihr Münchner Unternehmen." },
+    { q: "Was kostet ein Penetration Test in München?", a: "Ein automatisierter Schwachstellenscan startet bei 1.499 €. Ein manueller Penetrationstest wird individuell auf Ihr Projekt zugeschnitten und nach Aufwand kalkuliert - meist zwischen 4.000 und 20.000 €, ein vollständiger KMU-Pentest inklusive Active Directory und Phishing-Simulation liegt bei rund 15.000 €. Wir erstellen nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot für Ihr Münchner Unternehmen." },
     { q: "Erfüllen Ihre Pentests die DORA-Anforderungen für Münchner Versicherer?", a: "Ja. Für Finanz- und Versicherungsunternehmen führen wir Tests durch, die sich an den DORA-Anforderungen an Threat-Led Penetration Testing (TLPT) orientieren, inklusive Bedrohungsmodellierung und auditfähiger Berichte für die BaFin." },
     { q: "Testen Sie auch Automotive-Zulieferer im Raum München?", a: "Ja. Wir kennen die Anforderungen der OEM-Lieferketten und liefern Pentest-Nachweise, die sich in TISAX-Assessments einbringen lassen – mit Fokus auf Schutz von Konstruktionsdaten und privilegierten Zugängen." },
     { q: "Sind Sie für Vor-Ort-Termine in München verfügbar?", a: "Die meisten Tests laufen remote. Für Kick-offs, interne Tests oder Abschlusspräsentationen kommen wir nach München – persönlich und mit kurzer Reaktionszeit." },
     { q: "Wie schnell erhalte ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Festpreis-Angebot – ohne versteckte Tagessätze." },
   ],
-  metaTitle: "Penetration Testing München | Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing München | Zertifizierte Pentester vor Ort & remote",
   metaDescription:
-    "Penetration Testing in München von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Versicherer, Automotive & Tech, DORA- & DSGVO-konform, Festpreis ab 1.499 €.",
+    "Penetration Testing in München von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Versicherer, Automotive & Tech, DORA- & DSGVO-konform, individuell kalkuliert - Scan ab 1.499 €.",
   keywords: [
     "penetration testing münchen",
     "pentest münchen",
@@ -229,7 +229,7 @@ const stuttgart: CityData = {
   heroBadge: "Penetration Testing Anbieter für Stuttgart · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Stuttgarter Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Partner für Stuttgart und die Region. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Partner für Stuttgart und die Region. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, individuell kalkuliert. Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben viele Stuttgarter Unternehmen bei Penetrationstests betreut – von Automotive-Zulieferern und Maschinenbauern bis zu den vielen „Hidden Champions“ des baden-württembergischen Mittelstands. Die Region steht für Ingenieurskunst und Exportstärke – und genau diese wertvollen Daten gilt es zu schützen.",
     "Stuttgart ist das Herz der deutschen Automobil- und Maschinenbauindustrie: Mercedes-Benz, Porsche, Bosch und tausende spezialisierte Zulieferer. Diese Lieferketten sind eng vernetzt – ein einziger kompromittierter Zulieferer kann zum Einfallstor für Angriffe auf einen ganzen OEM werden.",
@@ -254,15 +254,15 @@ const stuttgart: CityData = {
     { label: "ISO 27001 Pentest", href: "/iso-27001", note: "Pentest-Nachweise für Annex-A-Controls Ihrer ISO-27001-Zertifizierung." },
   ],
   faqs: [
-    { q: "Was kostet ein Penetration Test in Stuttgart?", a: "Je nach Scope zwischen 1.499 € für einen fokussierten Webapplikationstest und 15.000 € für einen vollständigen KMU-Pentest inklusive Active Directory und Phishing-Simulation. Wir erstellen nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot für Ihr Stuttgarter Unternehmen." },
+    { q: "Was kostet ein Penetration Test in Stuttgart?", a: "Ein automatisierter Schwachstellenscan startet bei 1.499 €. Ein manueller Penetrationstest wird individuell auf Ihr Projekt zugeschnitten und nach Aufwand kalkuliert - meist zwischen 4.000 und 20.000 €, ein vollständiger KMU-Pentest inklusive Active Directory und Phishing-Simulation liegt bei rund 15.000 €. Wir erstellen nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot für Ihr Stuttgarter Unternehmen." },
     { q: "Können Sie Pentest-Nachweise für TISAX liefern?", a: "Ja. Viele Stuttgarter Zulieferer benötigen für die Zusammenarbeit mit OEMs einen TISAX-Nachweis. Unsere Penetrationstests prüfen genau die technischen Sicherheitsmaßnahmen, die im TISAX-Assessment gefordert werden, und liefern auditfähige Berichte." },
     { q: "Schützen Sie auch Produktions- und OT-Umgebungen?", a: "Ja. Gerade im Stuttgarter Maschinenbau ist die Verzahnung von IT und Produktion (OT) ein zentrales Risiko. Wir testen Netzwerksegmentierung und exponierte Systeme behutsam und ohne den Produktionsbetrieb zu gefährden." },
     { q: "Sind Sie für Vor-Ort-Termine in Stuttgart verfügbar?", a: "Die meisten Tests laufen remote. Für Kick-offs, interne Tests oder Abschlusspräsentationen kommen wir nach Stuttgart und in die Region – persönlich und mit kurzer Reaktionszeit." },
     { q: "Wie schnell erhalte ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Festpreis-Angebot – ohne versteckte Tagessätze." },
   ],
-  metaTitle: "Penetration Testing Stuttgart | Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing Stuttgart | Zertifizierte Pentester vor Ort & remote",
   metaDescription:
-    "Penetration Testing in Stuttgart von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Automotive, Maschinenbau & Mittelstand, TISAX- & DSGVO-konform, Festpreis ab 1.499 €.",
+    "Penetration Testing in Stuttgart von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Automotive, Maschinenbau & Mittelstand, TISAX- & DSGVO-konform, individuell kalkuliert - Scan ab 1.499 €.",
   keywords: [
     "penetration testing stuttgart",
     "pentest stuttgart",
@@ -286,7 +286,7 @@ const koeln: CityData = {
   heroBadge: "Penetration Testing Anbieter für Köln · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Kölner Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Partner für Köln und das Rheinland. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Partner für Köln und das Rheinland. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, individuell kalkuliert. Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben viele Kölner Unternehmen bei Penetrationstests begleitet – von Medien- und Versicherungsunternehmen über Games-Studios bis zu Handels- und Logistikbetrieben im Rheinland. Köln ist ein dichter Medien-, Versicherungs- und Digitalstandort, dessen Risikoprofil wir aus der Praxis kennen.",
     "Als einer der größten Medien- und Versicherungsstandorte Deutschlands und Heimat der größten Games-Branche des Landes verarbeitet Köln riesige Mengen sensibler Kunden- und Nutzerdaten. Diese Datenfülle macht Kölner Unternehmen zu attraktiven Zielen für Datendiebstahl und Erpressung.",
@@ -311,15 +311,15 @@ const koeln: CityData = {
     { label: "ISO 27001 Pentest", href: "/iso-27001", note: "Pentest-Nachweise für Annex-A-Controls Ihrer ISO-27001-Zertifizierung." },
   ],
   faqs: [
-    { q: "Was kostet ein Penetration Test in Köln?", a: "Je nach Scope zwischen 1.499 € für einen fokussierten Webapplikationstest und 15.000 € für einen vollständigen KMU-Pentest inklusive Active Directory und Phishing-Simulation. Wir erstellen nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot für Ihr Kölner Unternehmen." },
+    { q: "Was kostet ein Penetration Test in Köln?", a: "Ein automatisierter Schwachstellenscan startet bei 1.499 €. Ein manueller Penetrationstest wird individuell auf Ihr Projekt zugeschnitten und nach Aufwand kalkuliert - meist zwischen 4.000 und 20.000 €, ein vollständiger KMU-Pentest inklusive Active Directory und Phishing-Simulation liegt bei rund 15.000 €. Wir erstellen nach einem kurzen Erstgespräch ein transparentes Festpreis-Angebot für Ihr Kölner Unternehmen." },
     { q: "Testen Sie Web-Plattformen und APIs von Kölner Medien- und Games-Firmen?", a: "Ja. Für Medien-, Games- und Digitalunternehmen sind Web-Applikationen und APIs die kritischste Angriffsfläche. Wir testen nach OWASP Top 10 und OWASP API Top 10 – inklusive Authentifizierung, Business-Logik und Zahlungsflüssen." },
     { q: "Erfüllen Ihre Pentests die Anforderungen Kölner Versicherer?", a: "Ja. Für Versicherer und Finanzdienstleister führen wir Tests durch, die sich an DORA und den BaFin-Anforderungen orientieren, inklusive auditfähiger Berichte und Threat-Led-Ansatz." },
     { q: "Sind Sie für Vor-Ort-Termine in Köln verfügbar?", a: "Die meisten Tests laufen remote. Für Kick-offs, interne Tests oder Abschlusspräsentationen kommen wir nach Köln und ins Rheinland – persönlich und mit kurzer Reaktionszeit." },
     { q: "Wie schnell erhalte ich ein Angebot?", a: "Innerhalb von 24 Stunden nach dem Erstgespräch erhalten Sie ein fest kalkuliertes Festpreis-Angebot – ohne versteckte Tagessätze." },
   ],
-  metaTitle: "Penetration Testing Köln | Pentest Anbieter ab 1.499 € | Sodu Secure",
+  metaTitle: "Penetration Testing Köln | Zertifizierte Pentester vor Ort & remote",
   metaDescription:
-    "Penetration Testing in Köln von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Medien, Versicherer & Games, DSGVO-konform, Festpreis ab 1.499 €. Angebot in 24h.",
+    "Penetration Testing in Köln von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Medien, Versicherer & Games, DSGVO-konform, individuell kalkuliert - Schwachstellenscan ab 1.499 €.",
   keywords: [
     "penetration testing köln",
     "pentest köln",

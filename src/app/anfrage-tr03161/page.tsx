@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: "Was kostet eine TR-03161 Sicherheitsprüfung?",
-    a: "Die Kosten einer TR-03161 Sicherheitsprüfung richten sich nach dem Umfang: Anzahl der Komponenten (mobile App, Web-Frontend, Backend/APIs), Komplexität und gewünschte Prüftiefe. Kompakte Web-App- oder API-Prüfungen beginnen bei 1.499 € als Festpreis. Nach dem Erstgespräch erhalten Sie ein verbindliches Festpreis-Angebot, sodass Sie volle Kostentransparenz vor Projektstart haben.",
+    a: "Die Kosten einer TR-03161 Sicherheitsprüfung richten sich nach dem Umfang: Anzahl der Komponenten (mobile App, Web-Frontend, Backend/APIs), Komplexität und gewünschte Prüftiefe. Ein automatisierter Schwachstellenscan startet ab 1.499 €; die manuelle TR-03161-Prüfung wird individuell auf Ihr Projekt zugeschnitten und nach Aufwand und Tagessätzen kalkuliert - meist zwischen 4.000 und 20.000 €. Nach dem Erstgespräch erhalten Sie ein verbindliches Angebot, sodass Sie volle Kostentransparenz vor Projektstart haben.",
   },
   {
     q: "Ersetzt die TR-03161-Prüfung das offizielle BSI-Zertifikat?",

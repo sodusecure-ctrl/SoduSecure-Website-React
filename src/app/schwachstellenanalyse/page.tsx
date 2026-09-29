@@ -44,7 +44,7 @@ const VERGLEICH_ROWS = [
   { kriterium: "Vollständige Angriffsketten beweisen", analyse: false, pentest: true },
   { kriterium: "NIS2 Art. 21 Nachweis", analyse: "teilweise", pentest: true },
   { kriterium: "Testdauer", analyse: "1–3 Tage", pentest: "2–10 Tage" },
-  { kriterium: "Preis bei Sodu Secure", analyse: "ab 1.500 €", pentest: "ab 2.500 €" },
+  { kriterium: "Preis bei Sodu Secure", analyse: "ab 1.499 €", pentest: "individuell, meist 4.000 – 20.000 €" },
 ];
 
 export default function SchwachstellenanalysePage() {
@@ -102,7 +102,7 @@ export default function SchwachstellenanalysePage() {
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-white/70">
-            {["CVSS 3.1 Bewertung", "Manuell verifiziert – keine False Positives", "Festpreis ab 1.500 €", "Bericht in 48 h"].map((s) => (
+            {["CVSS 3.1 Bewertung", "Manuelle Verifikation optional", "Scan ab 1.499 €", "Bericht in 48 h"].map((s) => (
               <div key={s} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /><span>{s}</span>
               </div>

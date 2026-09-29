@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "DSGVO-Penetrationstest | Art. 32 nachweisen",
   description:
-    "DSGVO Art. 32 verlangt regelmäßige Überprüfung technischer Maßnahmen. Wir liefern den Penetrationstest als Wirksamkeitsnachweis - Festpreis ab 2.500 €.",
+    "DSGVO Art. 32 verlangt regelmäßige Überprüfung technischer Maßnahmen. Penetrationstest als Wirksamkeitsnachweis - individuell kalkuliert, meist 4.000 bis 20.000 €.",
   alternates: { canonical: "/dsgvo-penetrationstest" },
 };
 
@@ -28,7 +28,7 @@ const data: RegulationContent = {
   title: "DSGVO-Penetrationstest",
   titleAccent: "Technische Maßnahmen nach Art. 32 nachweisen",
   heroIntro:
-    "Die DSGVO verlangt nicht nur Sicherheitsmaßnahmen, sondern auch deren regelmäßige Überprüfung. Ein Penetrationstest ist der etablierte Nachweis, dass Ihre technischen und organisatorischen Maßnahmen (TOM) nach Art. 32 wirksam sind – manuell von OSCP-zertifizierten Hackern, Festpreis ab 2.500 €.",
+    "Die DSGVO verlangt nicht nur Sicherheitsmaßnahmen, sondern auch deren regelmäßige Überprüfung. Ein Penetrationstest ist der etablierte Nachweis, dass Ihre technischen und organisatorischen Maßnahmen (TOM) nach Art. 32 wirksam sind – manuell von OSCP-zertifizierten Hackern, individuell kalkuliert - meist zwischen 4.000 und 20.000 €.",
   heroPrimaryCta: "Kostenlose DSGVO-Erstberatung",
   whatIs: {
     title: "Was verlangt Art. 32 DSGVO?",
@@ -112,7 +112,7 @@ const data: RegulationContent = {
   faqs: [
     { q: "Schreibt die DSGVO einen Penetrationstest vor?", a: "Die DSGVO nennt keinen Penetrationstest namentlich. Art. 32 Abs. 1 lit. d verlangt aber ein Verfahren zur regelmäßigen Überprüfung der Wirksamkeit der Sicherheitsmaßnahmen. Ein Penetrationstest ist das etablierte und anerkannte Mittel, diese Anforderung technisch zu erfüllen." },
     { q: "Wie oft sollte man einen DSGVO-Penetrationstest durchführen?", a: "Üblich ist mindestens einmal jährlich sowie nach wesentlichen Änderungen an Systemen, die personenbezogene Daten verarbeiten. Die genaue Frequenz richtet sich nach dem Risiko der Verarbeitung." },
-    { q: "Was kostet ein DSGVO-Penetrationstest?", a: "Ein fokussierter Test startet bei Sodu Secure ab 2.500 € als Festpreis. Der genaue Preis hängt vom Umfang der datenverarbeitenden Systeme ab – nutzen Sie unseren Pentest-Konfigurator für eine Einordnung." },
+    { q: "Was kostet ein DSGVO-Penetrationstest?", a: "Ein manueller DSGVO-Penetrationstest wird bei Sodu Secure individuell nach Aufwand und Tagessätzen kalkuliert - meist zwischen 4.000 und 20.000 €, abhängig vom Umfang der datenverarbeitenden Systeme. Ein automatisierter Schwachstellenscan startet ab 1.499 €. Nutzen Sie unseren Pentest-Konfigurator für eine Einordnung." },
     { q: "Hilft der Bericht bei einem Datenschutz-Audit?", a: "Ja. Unser Bericht dokumentiert die geprüften Maßnahmen, gefundene Schwachstellen und deren Behebung mit CVSS-Bewertung – geeignet als Nachweis gegenüber Aufsichtsbehörden und im Rahmen von Auftragsverarbeitungs-Audits." },
     { q: "Gilt das auch für Auftragsverarbeiter?", a: "Ja. Art. 32 verpflichtet ausdrücklich auch Auftragsverarbeiter. Viele Auftraggeber verlangen vertraglich einen Nachweis wirksamer technischer Maßnahmen – ein Penetrationstest liefert ihn." },
   ],

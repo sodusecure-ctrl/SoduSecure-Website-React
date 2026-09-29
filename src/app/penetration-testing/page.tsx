@@ -156,7 +156,7 @@ export default function PenetrationTestingPage() {
             <span>
               Sodu Secure führt professionelle Penetrationstests für Web-Apps, Netzwerke, APIs,
               Active Directory und Cloud-Infrastrukturen durch. Zertifizierte Pentester –
-              Festpreise ab 1.499 € – Angebot in 24 Stunden. Erfahren Sie mehr über Penetration Testing und Pentest Services.
+              Schwachstellenscan ab 1.499 €, manueller Pentest individuell kalkuliert – Angebot in 24 Stunden. Erfahren Sie mehr über Penetration Testing und Pentest Services.
             </span>
           </p>
 
@@ -438,17 +438,18 @@ export default function PenetrationTestingPage() {
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto text-sm">
             Pentest-Kosten hängen von Scope, Anzahl der Ziele und Testtiefe ab.
-            Sodu Secure bietet faire, transparente Festpreise – keine versteckten Tagessätze.
+            Der automatisierte Schwachstellenscan startet ab 1.499 € – manuelle Pentests kalkulieren
+            wir individuell nach Aufwand und Tagessätzen, meist zwischen 4.000 und 20.000 €.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-3 gap-5 mb-10">
           {[
             {
-              name: "Basis-Penetrationstest",
+              name: "Automatisierter Schwachstellenscan",
               price: "ab 1.499 €",
-              desc: "Fokussierter Web-App- oder Netzwerk-Test",
-              items: ["Externe Systeme (1–3 Ziele)", "OWASP Top 10 Testing", "Manuelle Validierung", "Executive Summary", "Maßnahmenempfehlungen"],
+              desc: "Schneller Überblick für Web-Apps & externe Systeme",
+              items: ["Externe Systeme (1–3 Ziele)", "Automatisierter Schwachstellen-Scan", "OWASP Top 10 (automatisiert)", "Priorisierter Report", "Maßnahmenempfehlungen"],
               color: "border-white/10",
               badge: "",
             },
@@ -561,7 +562,7 @@ export default function PenetrationTestingPage() {
             {[
               { href: "/penetration-testing", title: "Pentest Service", desc: "Professioneller Penetration Testing Service – Festpreis, OWASP-konform.", badge: "Service", badgeColor: "bg-[#FF3B30]" },
               { href: "/pentest-kosten", title: "Pentest Angebot", desc: "Festpreis-Angebot für Ihren Penetrationstest in 24 Stunden.", badge: "Angebot", badgeColor: "bg-green-600" },
-              { href: "/pentest-berlin/kosten", title: "Pentest Kosten", desc: "Alle Preisfaktoren transparent erklärt – ab 1.499 €.", badge: "Preise", badgeColor: "bg-blue-600" },
+              { href: "/pentest-berlin/kosten", title: "Pentest Kosten", desc: "Alle Preisfaktoren transparent erklärt – Scan ab 1.499 €, Pentest individuell.", badge: "Preise", badgeColor: "bg-blue-600" },
               { href: "/pentest-certification", title: "Pentest Zertifizierung", desc: "Warum zertifizierte Pentester wichtig sind – OSCP, CEH & mehr.", badge: "Zertifizierung", badgeColor: "bg-purple-600" },
               { href: "/services/web-application-testing", title: "Web App Pentest", desc: "OWASP Top 10, Business Logic, Auth Bypasses – manuelle Web-Tests.", badge: "Web", badgeColor: "bg-orange-600" },
               { href: "/services/infrastructure-testing", title: "Infrastruktur-Pentest", desc: "Active Directory, Server- und Netzwerk-Penetrationstest.", badge: "Infra", badgeColor: "bg-teal-600" },

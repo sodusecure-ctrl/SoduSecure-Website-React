@@ -3,7 +3,7 @@ import { FAQS } from './faq';
 
 export const metadata: Metadata = {
   title: 'IT Sicherheit testen | IT Sicherheitstest für Unternehmen',
-  description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure führt manuelle IT Sicherheitstests durch. Festpreis ab 1.499 €, Ergebnis in 48 h. Jetzt konfigurieren.',
+  description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure führt manuelle IT Sicherheitstests durch. Schwachstellenscan ab 1.499 €, Pentest individuell kalkuliert. Jetzt konfigurieren.',
   keywords: 'IT Sicherheit testen, IT Sicherheitstest, Netzwerk Sicherheitstest, IT Sicherheitsprüfung, Sicherheitstest Unternehmen, IT Sicherheit überprüfen',
   robots: {
     index: true,
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sodusecure.com/it-sicherheit-testen' },
   openGraph: {
     title: 'IT Sicherheit testen | IT Sicherheitstest für Unternehmen',
-    description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure: Festpreis ab 1.499 €, Ergebnis in 48 h.',
+    description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure: Schwachstellenscan ab 1.499 €, Pentest individuell kalkuliert, Ergebnis in 48 h.',
     url: 'https://sodusecure.com/it-sicherheit-testen',
     siteName: 'Sodu Secure',
     locale: 'de_DE',
@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'Sodu Secure – IT Sicherheit testen',
-            description: 'Manueller IT Sicherheitstest für Unternehmen. Web-Apps, Netzwerke, Active Directory, Cloud. OSCP-zertifiziert, Festpreis ab 1.499 €.',
+            description: 'Manueller IT Sicherheitstest für Unternehmen. Web-Apps, Netzwerke, Active Directory, Cloud. OSCP-zertifiziert, individuell kalkuliert - Schwachstellenscan ab 1.499 €.',
             url: 'https://sodusecure.com/it-sicherheit-testen',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',

@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'Sodu Secure – Sicherheitsaudit',
-            description: 'Manueller IT Sicherheitsaudit für Unternehmen. NIS2-, ISO 27001- und DSGVO-konforme Berichte. Festpreis ab 1.499 €.',
+            description: 'Manueller IT Sicherheitsaudit für Unternehmen. NIS2-, ISO 27001- und DSGVO-konforme Berichte. Individuell kalkuliert, Schwachstellenscan ab 1.499 €.',
             url: 'https://sodusecure.com/sicherheitsaudit',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',

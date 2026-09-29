@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "Active Directory Pentest | Windows-Domäne absichern",
   description:
-    "Active Directory Pentest: Wir finden Angriffspfade in Ihrer Windows-Domäne - Kerberoasting, ACL-Missbrauch, Lateral Movement bis Domain Admin. OSCP-zertifiziert, ab 2.500 €.",
+    "Active Directory Pentest: Wir finden Angriffspfade in Ihrer Windows-Domäne - Kerberoasting, ACL-Missbrauch, Lateral Movement bis Domain Admin. OSCP-zertifiziert, individuell kalkuliert.",
   alternates: { canonical: "/services/active-directory" },
 };
 
@@ -40,7 +40,7 @@ const data: RegulationContent = {
   facts: [
     { label: "Fokus", value: "Windows-Domäne" },
     { label: "Methoden", value: "Kerberos · ACL · BloodHound" },
-    { label: "Einstieg", value: "ab 2.500 €" },
+    { label: "Preis", value: "individuell kalkuliert" },
   ],
   obligations: {
     title: "Was prüft ein",
@@ -92,7 +92,7 @@ const data: RegulationContent = {
     { q: "Welche Angriffe werden getestet?", a: "Typischerweise Enumeration und Angriffspfad-Analyse mit BloodHound, Kerberos-Angriffe wie Kerberoasting und AS-REP Roasting, ACL- und Delegation-Missbrauch, Credential-Zugriff sowie Lateral Movement und Privilege Escalation bis zur Domain Dominance." },
     { q: "Was ist BloodHound?", a: "BloodHound ist ein etabliertes Analyse-Tool, das Beziehungen und Berechtigungen in einem Active Directory als Graph darstellt. Damit lassen sich oft nicht offensichtliche Angriffspfade zum Domain Admin sichtbar machen – ein Standardwerkzeug im AD-Pentest." },
     { q: "Wie lange dauert ein AD-Pentest?", a: "Je nach Größe und Komplexität der Domäne typischerweise ein bis drei Wochen. Den genauen Aufwand legen wir nach einem kostenlosen Scoping-Gespräch fest und bieten einen Festpreis an." },
-    { q: "Was kostet ein Active Directory Pentest?", a: "Ein fokussierter AD-Pentest startet bei Sodu Secure ab 2.500 €. Der genaue Preis hängt von der Anzahl der Systeme und der gewünschten Tiefe ab und wird als Festpreis angeboten – nutzen Sie auch unseren Pentest-Konfigurator." },
+    { q: "Was kostet ein Active Directory Pentest?", a: "Ein manueller Active Directory Pentest wird bei Sodu Secure individuell auf Ihre Umgebung zugeschnitten und nach Aufwand und Tagessätzen kalkuliert - meist zwischen 4.000 und 20.000 €. Der genaue Preis hängt von der Anzahl der Systeme und der gewünschten Tiefe ab und wird nach dem Scoping als Festpreis angeboten – nutzen Sie auch unseren Pentest-Konfigurator." },
   ],
   related: [
     { href: "/services/network-audit", label: "Netzwerk-Pentest", desc: "Prüfung interner und externer Netzwerk-Infrastruktur." },

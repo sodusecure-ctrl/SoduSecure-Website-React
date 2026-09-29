@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Penetration Testing | Professionelle Penetrationstests",
-  description: "Penetration Testing Services: Web-App, API, Netzwerk, Cloud & Active Directory. OSCP-zertifiziert, manuell, DSGVO-konform. Penetrationstest ab 1.499 €.",
+  description: "Penetration Testing Services: Web-App, API, Netzwerk, Cloud & Active Directory. OSCP-zertifiziert, manuell, DSGVO-konform. Schwachstellenscan ab 1.499 €, Pentest individuell kalkuliert.",
   keywords: [
     "penetration testing",
     "penetrationstest",

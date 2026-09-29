@@ -65,7 +65,7 @@ export default function ITSicherheitTestenPage() {
           <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
             <Shield className="h-3.5 w-3.5 text-[#FF3B30]" />
-            <span>IT Sicherheit testen · Manuell · Festpreis ab 1.499 € · Ergebnis in 48 h</span>
+            <span>IT Sicherheit testen · Manuell · Individuell kalkuliert · Ergebnis in 48 h</span>
           </div>
 
           <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
@@ -100,7 +100,7 @@ export default function ITSicherheitTestenPage() {
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-white/70">
-            {["Web · Netzwerk · AD · Cloud · API", "OSCP-zertifizierte Pentester", "Festpreis ab 1.499 €", "Bericht in 48 h nach Test"].map((s) => (
+            {["Web · Netzwerk · AD · Cloud · API", "OSCP-zertifizierte Pentester", "Schwachstellenscan ab 1.499 €", "Bericht in 48 h nach Test"].map((s) => (
               <div key={s} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /><span>{s}</span>
               </div>
@@ -117,7 +117,7 @@ export default function ITSicherheitTestenPage() {
               { value: "24 h", label: "Festpreisangebot nach Anfrage" },
               { value: "2–10 Tage", label: "Testdauer je nach Scope" },
               { value: "48 h", label: "Bericht nach Testabschluss" },
-              { value: "ab 1.499 €", label: "Festpreis, transparent" },
+              { value: "ab 1.499 €", label: "Schwachstellenscan – Pentest individuell" },
             ].map((s) => (
               <div key={s.label}>
                 <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-1">{s.value}</div>

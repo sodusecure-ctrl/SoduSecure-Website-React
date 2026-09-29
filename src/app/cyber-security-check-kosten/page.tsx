@@ -9,7 +9,7 @@ const EMAIL_HREF = "mailto:info@sodusecure.com";
 
 const PRICE_TABLE = [
   { name: "Security Quick Check", price: "ab 800 €", duration: "1–2 Tage", scope: "Kleine Umgebungen", features: ["Automatisierter Scan", "Manuelle Validierung", "Kurzbericht", "Top-10 Findings"] },
-  { name: "Security Standard Check", price: "ab 1.500 €", duration: "2–4 Tage", scope: "KMU, mittlere Infrastrukturen", features: ["Manuelles Assessment", "Compliance Review", "Detaillierter Bericht", "1 Retest"], featured: true },
+  { name: "Security Standard Check", price: "ab 1.499 €", duration: "2–4 Tage", scope: "KMU, mittlere Infrastrukturen", features: ["Automatisierter Scan + manuelle Verifikation", "Compliance Review", "Detaillierter Bericht", "1 Retest"], featured: true },
   { name: "Security Premium Check", price: "ab 3.500 €", duration: "5–10 Tage", scope: "Enterprise, kritische Infrastruktur", features: ["Full-Scope Assessment", "ISO 27001 / NIS2 Mapping", "CISO-Ready Bericht", "Remediation Workshop"] },
 ];
 
@@ -23,7 +23,7 @@ const FACTORS = [
 const FAQS = [
   { q: "Was kostet ein Cyber Security Check?", a: "Ein Cyber Security Check kostet zwischen 800 € und 5.000 €, je nach Umfang. Ein einfacher Quick Check beginnt bei 800 €, ein umfassendes Enterprise-Assessment kann 5.000 € überschreiten." },
   { q: "Gibt es Fördermöglichkeiten?", a: "Ja, für KMU gibt es in vielen Bundesländern Förderungen für Cybersecurity-Maßnahmen. Wir beraten Sie gerne dazu." },
-  { q: "Was ist teurer – Security Check oder Pentest?", a: "Ein Pentest ist in der Regel teurer als ein Security Check, da er tiefergehende manuelle Exploitierung umfasst. Als Einstieg empfehlen wir oft den Security Check." },
+  { q: "Was ist teurer – Security Check oder Pentest?", a: "Ein Pentest ist in der Regel teurer als ein Security Check, da er tiefergehende manuelle Exploitierung umfasst. Ein manueller Pentest wird individuell auf das Projekt zugeschnitten und nach Aufwand kalkuliert – meist zwischen 4.000 und 20.000 €. Als Einstieg empfehlen wir oft den Security Check." },
   { q: "Sind Folge-Checks günstiger?", a: "Ja, für Bestandskunden bieten wir reduzierte Preise für regelmäßige Follow-up-Checks an." },
 ];
 

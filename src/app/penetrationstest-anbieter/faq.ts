@@ -3,7 +3,7 @@ export type ProviderFaq = { q: string; a: string };
 export const FAQS: ProviderFaq[] = [
   {
     q: "Wie viel kostet ein seriöser Penetrationstest?",
-    a: "Es kommt auf den Scope an. Ein Web-App-Pentest: ab 1.499 €. Netzwerk-Pentest: ab 2.500 €. Enterprise-Pentest: 6.000 €+. Billiger = meist unseriös oder unzureichend.",
+    a: "Es kommt auf den Scope an. Ein automatisierter Schwachstellenscan startet ab 1.499 €. Ein manueller Pentest wird individuell auf das Projekt zugeschnitten und nach Aufwand und Tagessätzen kalkuliert - meist 4.000 bis 20.000 €, Enterprise-Projekte auch darüber. Deutlich billigere Angebote = meist unseriös oder nur ein Scan.",
   },
   {
     q: "Was ist der Unterschied zwischen internem und externem Penetrationstest?",

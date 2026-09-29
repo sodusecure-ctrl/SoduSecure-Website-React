@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     locale: 'de_DE',
     url: baseUrl,
     title: 'Sodu Secure | zertifizierte Penetrationstests aus Berlin',
-    description: 'Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. OSCP-zertifizierter Pentest - Web, API, AD. Preis sofort online berechnen. Festpreis ab 1.499 €.',
+    description: 'Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. OSCP-zertifizierter Pentest - Web, API, AD. Schwachstellenscan ab 1.499 € - manueller Pentest individuell kalkuliert.',
     siteName: 'Sodu Secure',
     images: [
       {
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Sodu Secure | zertifizierte Penetrationstests aus Berlin',
-    description: 'Zertifizierte Pentester - transparente Festpreise ab 1.499 €. Pentest sofort konfigurieren & Preis berechnen. Web, API, AD & Cloud.',
+    description: 'Zertifizierte Pentester - Schwachstellenscan ab 1.499 €, manueller Pentest individuell kalkuliert. Pentest sofort konfigurieren & Preis berechnen. Web, API, AD & Cloud.',
     images: [`${baseUrl}/images/twitter-image.jpg`],
     creator: '@sodusecure',
   },
@@ -131,7 +131,7 @@ export default async function RootLayout({
     logo: `${baseUrl}/icons/logo.png`,
     image: `${baseUrl}/images/og-image.jpg`,
     description:
-      'Penetrationstests und IT-Security aus Berlin – manuell von OSCP-zertifizierten Hackern, transparenter Festpreis ab 2.500 €.',
+      'Penetrationstests und IT-Security aus Berlin – manuell von OSCP-zertifizierten Hackern. Schwachstellenscan ab 1.499 €, manuelle Pentests individuell kalkuliert.',
     email: 'info@sodusecure.com',
     telephone: '+49-177-7750985',
     areaServed: ['DE', 'AT', 'CH'],

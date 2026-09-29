@@ -167,7 +167,7 @@ export default function PenetrationTestingServiceLayout({
         name: 'How much does a penetration testing service cost?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Penetration testing service costs range from €2,500 for a focused web application test to €15,000+ for a full SME pentest including Active Directory and phishing simulation. Pricing depends on scope, number of targets, and test depth. Sodu Secure provides fixed-price quotes within 24 hours.',
+          text: 'Automated vulnerability scans start from €1,499. Manual penetration tests are individually scoped and priced by effort, typically €4,000 to €20,000; a full SME pentest including Active Directory and phishing simulation can reach €15,000+. Pricing depends on scope, number of targets, and test depth. Sodu Secure provides fixed-price quotes within 24 hours.',
         },
       },
       {

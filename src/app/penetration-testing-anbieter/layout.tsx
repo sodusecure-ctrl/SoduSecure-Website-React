@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pentest Anbieter | zertifizierte Penetrationstests für Unternehmen',
     description:
-      'Zertifizierter Pentest Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Transparente Festpreise ab 1.499 €. Pentest Anbieter für KMU & Enterprise.',
+      'Zertifizierter Pentest Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Schwachstellenscan ab 1.499 €, Pentest individuell kalkuliert. Pentest Anbieter für KMU & Enterprise.',
     url: `${baseUrl}/penetration-testing-anbieter`,
     type: 'website',
     siteName: 'Sodu Secure',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Penetration Testing Anbieter | Sodu Secure',
-    description: 'Zertifizierter Pentest Anbieter - OSCP, CEH, ISO 27001. Festpreis ab 1.499 €. Sofort konfigurieren.',
+    description: 'Zertifizierter Pentest Anbieter - OSCP, CEH, ISO 27001. Schwachstellenscan ab 1.499 €, Pentest individuell kalkuliert. Sofort konfigurieren.',
   },
   alternates: { canonical: `${baseUrl}/penetration-testing-anbieter` },
   robots: {
@@ -52,7 +52,7 @@ export default function PenetrationTestingAnbieterLayout({ children }: { childre
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Sodu Secure – Penetration Testing Anbieter',
-    description: 'Zertifizierter Penetration Testing Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Manuelle Penetrationstests für KMU und Enterprise. Festpreis ab 1.499 €.',
+    description: 'Zertifizierter Penetration Testing Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Manuelle Penetrationstests für KMU und Enterprise, individuell kalkuliert - Schwachstellenscan ab 1.499 €.',
     url: `${baseUrl}/penetration-testing-anbieter`,
     logo: `${baseUrl}/icons/logo.png`,
     image: `${baseUrl}/images/blogs/image9.png`,
@@ -70,7 +70,7 @@ export default function PenetrationTestingAnbieterLayout({ children }: { childre
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'Wie wählt man den richtigen Pentest Anbieter?', acceptedAnswer: { '@type': 'Answer', text: 'Achten Sie auf: (1) Zertifizierungen der Pentester (OSCP, CEH), (2) Festpreis vs. Tagessatz, (3) Manuelles Testing vs. reiner Scan-Report, (4) Retest inklusive, (5) Compliance-Eignung der Berichte, (6) direkte Kommunikation mit dem Pentester.' } },
-      { '@type': 'Question', name: 'Was unterscheidet Sodu Secure von anderen Pentest Anbietern?', acceptedAnswer: { '@type': 'Answer', text: 'Sodu Secure ist ein zertifizierter Pentest Anbieter (OSCP, CEH, ISO 27001) mit 100% manuellen Tests, transparenten Festpreisen ab 1.499 €, direktem Pentester-Kontakt und compliance-fähigen Berichten für NIS2, ISO 27001 und DSGVO.' } },
+      { '@type': 'Question', name: 'Was unterscheidet Sodu Secure von anderen Pentest Anbietern?', acceptedAnswer: { '@type': 'Answer', text: 'Sodu Secure ist ein zertifizierter Pentest Anbieter (OSCP, CEH, ISO 27001) mit 100% manuellen Tests, transparenter Kalkulation nach Aufwand (Schwachstellenscan ab 1.499 €, manuelle Pentests meist 4.000 bis 20.000 €), direktem Pentester-Kontakt und compliance-fähigen Berichten für NIS2, ISO 27001 und DSGVO.' } },
     ],
   };
 

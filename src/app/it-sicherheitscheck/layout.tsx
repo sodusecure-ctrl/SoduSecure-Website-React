@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'Sodu Secure – IT Sicherheitscheck',
-            description: 'IT Sicherheitscheck für Unternehmen. Manuelles Pentesting durch OSCP-zertifizierte Experten. Festpreis ab 1.499 €.',
+            description: 'IT Sicherheitscheck für Unternehmen. Manuelles Pentesting durch OSCP-zertifizierte Experten. Individuell kalkuliert, Schwachstellenscan ab 1.499 €.',
             url: 'https://sodusecure.com/it-sicherheitscheck',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
@@ -42,7 +42,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               '@type': 'OfferCatalog',
               name: 'IT Sicherheitscheck Pakete',
               itemListElement: [
-                { '@type': 'Offer', name: 'IT Sicherheitscheck Basic', price: '2500', priceCurrency: 'EUR', description: 'Web-App oder Netzwerk Check' },
+                { '@type': 'Offer', name: 'IT Sicherheitscheck Basic', price: '1499', priceCurrency: 'EUR', description: 'Automatisierter Schwachstellenscan - Web-App oder Netzwerk' },
                 { '@type': 'Offer', name: 'IT Sicherheitscheck Professional', price: '6500', priceCurrency: 'EUR', description: 'Web + Netzwerk + Active Directory' },
                 { '@type': 'Offer', name: 'IT Sicherheitscheck Enterprise', price: '12000', priceCurrency: 'EUR', description: 'Vollständiger Sicherheitscheck inkl. Cloud' },
               ],

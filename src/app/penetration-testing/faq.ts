@@ -11,7 +11,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "Was kostet ein Penetrationstest?",
-    a: "Penetrationstests bei Sodu Secure kosten ab 1.499 € (fokussierter Web-App-Test) bis 15.000 €+ (vollständiges KMU-Engagement). Alle Preise sind Festpreise – keine versteckten Tagessätze. Nutzen Sie unseren Pentest-Konfigurator für eine individuelle Schätzung.",
+    a: "Ein automatisierter Schwachstellenscan kostet bei Sodu Secure ab 1.499 €. Ein manueller Penetrationstest wird individuell auf Ihr Projekt zugeschnitten und nach Aufwand und Tagessätzen kalkuliert – meist zwischen 4.000 und 20.000 €. Nutzen Sie unseren Pentest-Konfigurator für eine individuelle Schätzung.",
   },
   {
     q: "Wie lange dauert ein Penetrationstest?",
@@ -19,7 +19,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     q: "Ist ein Penetrationstest für KMUs sinnvoll?",
-    a: "Ja – KMUs sind besonders häufige Ziele, weil Angreifer automatisierte Tools nutzen, die unabhängig von der Unternehmensgröße scannen. Unsere KMU-Pentest-Pakete ab 1.499 € sind speziell für begrenzte IT-Budgets konzipiert.",
+    a: "Ja – KMUs sind besonders häufige Ziele, weil Angreifer automatisierte Tools nutzen, die unabhängig von der Unternehmensgröße scannen. Der Einstieg gelingt mit unserem automatisierten Schwachstellenscan ab 1.499 €; manuelle KMU-Pentests kalkulieren wir individuell nach Aufwand.",
   },
   {
     q: "Welche Compliance-Anforderungen verlangen einen Penetrationstest?",

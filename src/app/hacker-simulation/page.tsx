@@ -43,7 +43,7 @@ const UNTERSCHIED = [
   { aspect: "Methode", simulation: "Manuelle Exploitation durch zertifizierte Pentester", scan: "Automatisierter Scanner-Lauf" },
   { aspect: "Ergebnis", simulation: "Vollständige Angriffsketten mit PoC", scan: "CVE-Liste mit CVSS-Score" },
   { aspect: "Wert für NIS2", simulation: "Vollständiger Nachweis (Art. 21)", scan: "Eingeschränkt (nicht ausreichend)" },
-  { aspect: "Preis (SODU)", simulation: "ab 1.499 € Festpreis", scan: "650 € – 1.500 €" },
+  { aspect: "Preis (SODU)", simulation: "individuell kalkuliert, meist 4.000 – 20.000 €", scan: "ab 1.499 €" },
 ];
 
 export default function HackerSimulationPage() {
@@ -199,8 +199,8 @@ export default function HackerSimulationPage() {
               <p className="text-sm text-white/70 mb-4">aller erfolgreichen Ransomware-Angriffe nutzen Active Directory-Schwachstellen</p>
               <div className="text-4xl font-bold text-orange-400 mb-2">72 h</div>
               <p className="text-sm text-white/70 mb-4">mittlere Zeit bis ein Angreifer im Netzwerk unentdeckt bleibt</p>
-              <div className="text-4xl font-bold text-green-400 mb-2">2.500 €</div>
-              <p className="text-sm text-white/70">Festpreis für Hacker Simulation bei Sodu Secure</p>
+              <div className="text-4xl font-bold text-green-400 mb-2">4.000 – 20.000 €</div>
+              <p className="text-sm text-white/70">typische Projektspanne für eine Hacker Simulation – individuell nach Aufwand kalkuliert</p>
               <Link href="/request-pentest"
                 className="mt-6 inline-flex items-center gap-2 bg-[#FF3B30] hover:bg-[#FF3B30] text-white font-semibold px-6 py-3 rounded-xl text-sm transition-all duration-200 hover:scale-105 w-full justify-center">
                 <Calculator className="w-4 h-4" />Jetzt konfigurieren

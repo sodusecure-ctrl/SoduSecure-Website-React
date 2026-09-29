@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <ServiceJsonLd
         name="Pentest Firma & Cybersecurity Dienstleister"
-        description="Sodu Secure ist eine Pentest Firma aus Deutschland: OSCP-zertifizierte Penetrationstests, Vulnerability Assessment, Red Teaming und ISO 27001 Beratung – Festpreis ab 2.500 €."
+        description="Sodu Secure ist eine Pentest Firma aus Deutschland: OSCP-zertifizierte Penetrationstests, Vulnerability Assessment, Red Teaming und ISO 27001 Beratung - Schwachstellenscan ab 1.499 €, Pentests individuell kalkuliert."
         path="/cybersecurity-firma"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />

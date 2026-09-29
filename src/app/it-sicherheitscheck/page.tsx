@@ -68,7 +68,7 @@ export default function ITSicherheitscheckPage() {
           <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
             <Zap className="h-3.5 w-3.5 text-[#FF3B30]" />
-            <span>IT Sicherheitscheck · Ergebnis in 2–5 Tagen · Festpreis ab 1.499 €</span>
+            <span>IT Sicherheitscheck · Ergebnis in 2–5 Tagen · Schwachstellenscan ab 1.499 €</span>
           </div>
 
           <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
@@ -124,7 +124,7 @@ export default function ITSicherheitscheckPage() {
               { value: "24 h", label: "Angebot nach Anfrage" },
               { value: "2–5 Tage", label: "Testdauer (fokussiert)" },
               { value: "48 h", label: "Bericht nach Testende" },
-              { value: "ab 1.499 €", label: "Festpreis, kein Tagessatz" },
+              { value: "ab 1.499 €", label: "Schwachstellenscan – Pentest individuell" },
             ].map((s) => (
               <div key={s.label}>
                 <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-1">{s.value}</div>
@@ -205,7 +205,7 @@ export default function ITSicherheitscheckPage() {
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
-              { name: "Basic Check", price: "ab 1.499 €", duration: "2–3 Tage", items: ["1 Web-App oder Netzwerk", "OWASP / CVE Prüfung", "CVSS 3.1 Bewertung", "Management Summary", "Remediation Guide", "1× Retest inklusive"], highlight: false },
+              { name: "Basic Check", price: "ab 1.499 €", duration: "2–3 Tage", items: ["Automatisierter Schwachstellenscan", "1 Web-App oder Netzwerk", "OWASP / CVE Prüfung", "CVSS 3.1 Bewertung", "Management Summary", "Remediation Guide"], highlight: false },
               { name: "Professional Check", price: "ab 6.500 €", duration: "3–5 Tage", items: ["Web-App + Netzwerk + AD", "Manuelle Exploitation", "Proof-of-Concepts", "Compliance-Bericht (NIS2/ISO)", "Abschlusspräsentation", "1× Retest inklusive"], highlight: true },
               { name: "Enterprise Check", price: "ab 12.000 €", duration: "1–2 Wochen", items: ["Vollständige IT-Infrastruktur", "Cloud + AD + APIs + Web", "Red Team Elemente", "Executive + technischer Report", "Remediation Workshop", "Unbegrenzte Retests"], highlight: false },
             ].map((pkg) => (

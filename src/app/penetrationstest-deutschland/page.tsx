@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "Penetrationstest Deutschland | zertifizierte Pentester",
   description:
-    "Penetrationstest deutschlandweit: OSCP-zertifizierte Pentester, DSGVO-konform, Berichte auf Deutsch. Web, API, Netzwerk, Active Directory & Cloud - Festpreis ab 1.499 €.",
+    "Penetrationstest deutschlandweit: OSCP-zertifizierte Pentester, DSGVO-konform, Berichte auf Deutsch. Schwachstellenscan ab 1.499 € - manueller Pentest individuell kalkuliert.",
   alternates: { canonical: "/penetrationstest-deutschland" },
 };
 
@@ -76,7 +76,7 @@ const data: RegulationContent = {
   servicesIntro:
     "Wir decken alle gängigen Scopes ab – einzeln oder kombiniert als Full-Scope-Engagement.",
   services: [
-    { icon: "globe", title: "Web & API", desc: "Web-Applikationen und Schnittstellen nach OWASP – manuell getestet, ab 1.499 €." },
+    { icon: "globe", title: "Web & API", desc: "Web-Applikationen und Schnittstellen nach OWASP – manuell getestet, individuell kalkuliert." },
     { icon: "network", title: "Netzwerk & Infrastruktur", desc: "Interne und externe Netzwerke, Server und Dienste im Detail geprüft." },
     { icon: "server", title: "Active Directory", desc: "Angriffspfade in der Windows-Domäne bis zur Domänenübernahme." },
     { icon: "search", title: "Cloud", desc: "AWS- und Cloud-Umgebungen auf Fehlkonfigurationen und Angriffspfade prüfen." },
@@ -98,7 +98,7 @@ const data: RegulationContent = {
     { step: "05", title: "Re-Test", desc: "Kostenloser Nachtest der behobenen Schwachstellen.", icon: "award" },
   ],
   faqs: [
-    { q: "Was kostet ein Penetrationstest in Deutschland?", a: "Ein fokussierter Test (z. B. eine Web-App) startet bei Sodu Secure ab 1.499 €. Ein vollständiger manueller Penetrationstest liegt je nach Umfang typischerweise ab 7.000 €. Den genauen Festpreis ermitteln wir nach einem kostenlosen Scoping-Gespräch – nutzen Sie auch unseren Pentest-Konfigurator." },
+    { q: "Was kostet ein Penetrationstest in Deutschland?", a: "Ein automatisierter Schwachstellenscan startet bei Sodu Secure ab 1.499 €. Ein manueller Penetrationstest wird individuell auf das Projekt zugeschnitten und nach Aufwand und Tagessätzen kalkuliert – meist zwischen 4.000 und 20.000 €, ein vollständiger Web-Pentest typischerweise ab 7.000 €. Den genauen Festpreis ermitteln wir nach einem kostenlosen Scoping-Gespräch – nutzen Sie auch unseren Pentest-Konfigurator." },
     { q: "Führt ihr Pentests remote oder vor Ort durch?", a: "Beides. Die meisten Tests führen wir effizient remote durch. Für interne Netzwerke, Active Directory oder auf Wunsch bieten wir auch Tests vor Ort bei Ihnen an – deutschlandweit." },
     { q: "Sind die Penetrationstests DSGVO-konform?", a: "Ja. Wir führen Penetrationstests datenschutzkonform durch, regeln die Auftragsverarbeitung vertraglich und verarbeiten Daten in Deutschland. Auf Wunsch unterstützen wir Sie auch bei der Dokumentation für Ihre Compliance." },
     { q: "Welche Qualifikationen haben eure Pentester?", a: "Unsere Pentester sind unter anderem OSCP-zertifiziert und arbeiten zu 100 % manuell – kein reines Tool-Scanning. Jeder Befund wird mit einem Proof-of-Concept belegt und priorisiert." },
