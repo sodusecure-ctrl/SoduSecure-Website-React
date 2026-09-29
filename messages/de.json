@@ -4309,6 +4309,27 @@
           "description": "Schritt für Schritt: Wie läuft ein professioneller Penetrationstest ab? Von der Auftragsklärung über aktives Testing bis zum fertigen Report – der komplette Pentest-Ablauf erklärt.",
           "author": "Kerim K.",
           "readTime": "12 Min"
+        },
+        {
+          "category": "PENTEST KOSTEN",
+          "title": "Was kostet ein Penetrationstest? Ehrliche Marktübersicht",
+          "description": "Was kostet ein Penetrationstest in Deutschland? Ehrliche Marktübersicht mit belegten Preisspannen - Tagessätze, Kosten nach Testart, Kostenfaktoren und Warnsignale bei Billigangeboten.",
+          "author": "Sodu Secure Team",
+          "readTime": "13 Min"
+        },
+        {
+          "category": "PENTEST ANBIETER",
+          "title": "Pentest Anbieter auswählen: Kriterien und Checkliste",
+          "description": "Die wichtigsten Kriterien für die Anbieterwahl, die offizielle BSI-Liste zertifizierter IS-Penetrationstest-Dienstleister, Red Flags und eine Checkliste mit 8 Fragen vor der Beauftragung.",
+          "author": "Sodu Secure Team",
+          "readTime": "14 Min"
+        },
+        {
+          "category": "PENTEST GRUNDLAGEN",
+          "title": "Pentest vs. Schwachstellenscan: Der Unterschied",
+          "description": "Manuelle Angriffssimulation oder automatisierter Scan? Der direkte Vergleich mit Kosten, Aussagekraft, False Positives und einer klaren Einsatzempfehlung für Unternehmen.",
+          "author": "Sodu Secure Team",
+          "readTime": "11 Min"
         }
       ]
     }
@@ -5188,6 +5209,396 @@
       "enjoyedArticle": "War dieser Artikel hilfreich?",
       "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
       "getHelp": "Mobile App Pentest anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "pentestKostenMarktuebersichtDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "PENTEST KOSTEN",
+    "date": "29. Sep 2026",
+    "title": "Was kostet ein Penetrationstest? Ehrliche Marktübersicht mit echten Zahlen",
+    "description": "Was kostet ein Penetrationstest in Deutschland? Ehrliche Marktübersicht mit belegten Preisspannen - Tagessätze, Kosten nach Testart, die wichtigsten Kostenfaktoren und Warnsignale bei Billigangeboten.",
+    "author": "Sodu Secure Team",
+    "readTime": "13 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Warum Pentest-Preise so intransparent wirken",
+        "content": "Kaum ein Pentest-Anbieter nennt öffentlich Preise - und wer Angebote einholt, bekommt Spannen, die sich um den Faktor zehn unterscheiden können. Das liegt nicht an Willkür, sondern daran, dass ein Penetrationstest eine Dienstleistung nach Aufwand ist: Der Preis entsteht aus Personentagen mal Tagessatz, und der Aufwand hängt vom Prüfobjekt ab. Trotzdem gibt es belastbare öffentliche Zahlen. Für diesen Artikel haben wir die Preisangaben mehrerer deutscher Quellen ausgewertet: der Anbieter AWARE7, CODE-LEIN, Reepa Solutions und microCAT sowie des IDG-Fachmediums ChannelPartner. Das Ergebnis ist eine ehrliche Marktübersicht - mit allen Quellen im Text, damit Sie jede Zahl nachprüfen können.",
+        "keyTakeaway": {
+          "title": "Die kurze Antwort",
+          "content": "Manuelle Penetrationstests kosten in Deutschland laut CODE-LEIN meist zwischen 4.000 und 30.000 Euro; KMU-Projekte liegen laut AWARE7 häufig bei 3.000 bis 12.000 Euro. Grundlage ist fast immer das Modell Personentage mal Tagessatz - marktübliche Tagessätze liegen laut microCAT und Reepa Solutions bei 900 bis 1.800 Euro."
+        },
+        "quote": "Ein seriöses Pentest-Angebot entsteht im Scoping-Gespräch - nicht in einer Preisliste ohne Kontext."
+      },
+      "commonAttackVectors": {
+        "title": "Marktübersicht: Belegte Preisspannen deutscher Quellen",
+        "items": [
+          "AWARE7 GmbH (Pentest-Anbieter): Tagessatz 1.350 Euro netto. Kleine Web-App 3.000-8.000 Euro, mittelgroße Web-App mit mehreren Rollen und API 8.000-20.000 Euro, komplexe Web-App 15.000-50.000 Euro, internes Netzwerk bis 50 Hosts 5.000-12.000 Euro, externes Netzwerk 3.000-8.000 Euro, Mobile App 5.000-15.000 Euro, Red Team 25.000 bis über 100.000 Euro. Typische KMU-Projekte: 3.000-12.000 Euro.",
+          "CODE-LEIN GmbH (Fachblog): Manueller Pentest in Deutschland gesamt 4.000-30.000 Euro, Web-App-Pentest 4.000-12.000 Euro, Infrastruktur-Pentest 8.000-25.000 Euro. Tagessätze qualifizierter Tester 1.200-1.800 Euro. Wichtig zur Einordnung: Ein reiner Schwachstellenscan kostet dagegen nur 300-3.000 Euro.",
+          "ChannelPartner (IDG-Fachmedium): Der zitierte Aramido-Gründer Armin Harbrecht nennt Tagessätze von typischerweise 1.000-1.800 Euro. Pentests dauern meist 2 bis 10 Testtage - daraus ergeben sich Gesamtkosten von rund 2.000 Euro für einen kurzen bis etwa 18.000 Euro für einen aufwändigen Test.",
+          "Reepa Solutions: Web-Application-Pentest 6.000-25.000 Euro (5-15 Personentage), API-Pentest 4.000-12.000 Euro, Mobile App für iOS und Android 8.000-18.000 Euro, externe Infrastruktur 3.000-15.000 Euro, interne Infrastruktur 8.000-30.000 Euro, Active-Directory-Audit 8.000-20.000 Euro, Cloud-Audit 6.000-18.000 Euro. Tagessätze: Junior ca. 800 Euro, Senior 1.200-1.800 Euro, Spezialisten ab 2.000 Euro.",
+          "microCAT: Allgemeine Spanne 2.000-25.000 Euro. Internes Netzwerk mit 10-20 IPs 5.000-7.500 Euro, komplexe Infrastruktur inklusive Cloud 10.000-20.000 Euro, Social-Engineering-Kampagne 4.000-8.000 Euro. Retest nach der Behebung: 1.000-2.000 Euro, meist ein Testtag. Tagessätze 900-1.800 Euro.",
+          "Konsolidiert über alle Quellen ergibt sich pro Testart: Web-App ca. 3.000-25.000 Euro je nach Komplexität, API 4.000-12.000 Euro, externe Infrastruktur 3.000-15.000 Euro, interne Infrastruktur und Active Directory 5.000-30.000 Euro, Mobile App 5.000-18.000 Euro, Cloud 5.000-20.000 Euro, Red Team 25.000-100.000 Euro. Die Spannen sind je Anbieter unterschiedlich geschnitten - wirklich vergleichbar werden Angebote erst, wenn Personentage und Tagessatz ausgewiesen sind."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Die Kostenfaktoren: Was den Preis wirklich bestimmt",
+        "content": "Der Preis eines Penetrationstests folgt fast immer demselben Modell: Personentage mal Tagessatz plus Berichtserstellung. Der mit Abstand größte Hebel ist laut CODE-LEIN der Scope - also die Anzahl der Systeme, Anwendungen und IP-Adressen. Danach folgen die Komplexität des Prüfobjekts (Rollenmodelle, Schnittstellen, Geschäftslogik), der Testansatz (Black-, Grey- oder White-Box) und die Berichtstiefe inklusive Nachtest. Compliance-Anforderungen erhöhen den Aufwand laut Reepa Solutions um 30-60 Prozent, kurzfristige Rush-Projekte kosten dort 20-30 Prozent Aufschlag.",
+        "statistics": {
+          "title": "Drei Zahlen für Ihre Budgetplanung",
+          "averageCost": {
+            "value": "900-1.800 €",
+            "label": "Marktübliche Tagessätze für Penetrationstester in Deutschland (Quellen: microCAT, Reepa Solutions, ChannelPartner)"
+          },
+          "identificationTime": {
+            "value": "2-10 Tage",
+            "label": "Typische Testdauer laut ChannelPartner - daraus ergeben sich Gesamtkosten von rund 2.000 bis 18.000 Euro"
+          },
+          "multipleBreaches": {
+            "value": "ab 1.499 €",
+            "label": "Einstieg bei Sodu Secure für einen Web-App-Pentest - Netzwerk- und Active-Directory-Tests ab 2.500 Euro"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "So budgetieren Sie richtig: 8 Praxis-Tipps",
+        "content": "Mit diesen acht Punkten holen Sie vergleichbare Angebote ein, erkennen Mogelpackungen und setzen Ihr Budget dort ein, wo es die Sicherheit tatsächlich verbessert.",
+        "essentialPractices": {
+          "title": "Die 8 Tipps im Überblick",
+          "items": [
+            "Scope präzise definieren: Die Anzahl der Systeme, Anwendungen und IP-Adressen ist laut CODE-LEIN der mit Abstand größte Kostenhebel. Je klarer der Scope, desto vergleichbarer die Angebote.",
+            "Personentage und Tagessatz ausweisen lassen: Ein seriöses Angebot nennt beides. So erkennen Sie, ob der Preis aus echten Testtagen besteht - oder aus einem automatisierten Tool-Lauf.",
+            "Angebote unter rund 2.000 Euro hinterfragen: Laut CODE-LEIN sind das meist automatisierte Scans mit Pentest-Etikett - ein reiner Schwachstellenscan kostet dort nur 300-3.000 Euro. Ausnahme sind bewusst eng geschnittene Festpreis-Scopes nach einem Scoping-Gespräch; hier zählen manueller Anteil und Musterbericht.",
+            "Prüferqualifikation abfragen: Das BSI empfiehlt im Praxis-Leitfaden für IS-Penetrationstests, dass der hauptverantwortliche Prüfer mindestens fünf Jahre IT-Berufserfahrung mitbringt, davon zwei Jahre Informationssicherheit, plus mindestens sechs Penetrationstests in den letzten drei Jahren.",
+            "Testansatz bewusst wählen: Das BSI empfiehlt grundsätzlich Whitebox-Tests mit moderater Angriffsstärke - so fließt jeder bezahlte Testtag in Tiefe statt in Rätselraten über Ihre Architektur.",
+            "Retest einpreisen: Ein Nachtest nach der Behebung kostet laut microCAT 1.000-2.000 Euro und dauert meist einen Tag - bei Sodu Secure ist der Retest kostenlos enthalten.",
+            "Compliance-Anforderungen früh benennen: Zusätzliche Framework-Anforderungen erhöhen den Aufwand laut Reepa Solutions um 30-60 Prozent - das gehört von Anfang an ins Angebot, nicht als Nachtrag.",
+            "Kosten ins Verhältnis zum Risiko setzen: Laut der Bitkom-Studie Wirtschaftsschutz 2025 entstanden der deutschen Wirtschaft 202,4 Milliarden Euro Schaden durch Cyberangriffe, und laut BSI-Lagebericht 2025 richteten sich rund 80 Prozent der angezeigten Angriffe gegen kleine und mittlere Unternehmen."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Fazit: Realistisch budgetieren statt billig einkaufen",
+        "content1": "Die ehrliche Antwort auf die Kostenfrage lautet: Ein professioneller, manueller Penetrationstest kostet in Deutschland je nach Scope meist zwischen 4.000 und 30.000 Euro, klar umrissene kleinere Projekte auch darunter. Die Quellen dieser Übersicht - AWARE7, CODE-LEIN, Reepa Solutions, microCAT und ChannelPartner - kommen trotz unterschiedlicher Paket-Schnitte auf sehr ähnliche Tagessätze von 900 bis 1.800 Euro. Wer deutlich darunter anbietet, verkauft in der Regel keinen Pentest, sondern einen automatisierten Scan.",
+        "content2": "Sodu Secure arbeitet mit transparenten Festpreisen nach Scoping-Gespräch: Web-App-Pentests ab 1.499 Euro, Netzwerk- und Active-Directory-Tests ab 2.500 Euro - inklusive kostenlosem Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch. Die vollständige Preisübersicht und das Anfrageformular finden Sie über die verlinkten Seiten unten - Sie erhalten innerhalb eines Werktags ein konkretes Angebot mit ausgewiesenen Personentagen."
+      }
+    },
+    "tags": [
+      "Pentest Kosten",
+      "Penetrationstest Preis",
+      "Pentest Tagessatz",
+      "Pentest Angebot",
+      "Pentest Budget",
+      "IT-Sicherheit Kosten"
+    ],
+    "cta": {
+      "title": "Transparentes Pentest-Angebot anfragen",
+      "description": "Erhalten Sie innerhalb von 24 Stunden ein Festpreisangebot mit ausgewiesenen Personentagen - Web-App-Pentests ab 1.499 Euro.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Pentest-Angebot anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Weiterführende Seiten",
+      "articles": [
+        {
+          "title": "Pentest Kosten: Preise und Pakete von Sodu Secure",
+          "description": "Konkrete Preisspannen für Web-App, API, Netzwerk und Active Directory - transparent und ohne versteckte Kosten.",
+          "category": "PENTEST KOSTEN",
+          "readTime": "5 Min. Lesezeit",
+          "readMore": "Seite ansehen →"
+        },
+        {
+          "title": "Penetrationstest: Definition, Ablauf und Kosten",
+          "description": "Der vollständige Überblick nach BSI-Methodik - Arten, Standards, Phasen und was ein Test kostet.",
+          "category": "PENETRATIONSTEST",
+          "readTime": "6 Min. Lesezeit",
+          "readMore": "Seite ansehen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
+      "bio": "OSCP-zertifizierte Penetrationstester aus Berlin. Über 500 durchgeführte Pentests für Web-Anwendungen, APIs, Netzwerke und Active Directory - mit kostenlosem Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Pentest-Angebot anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "pentestAnbieterAuswaehlenDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "PENTEST ANBIETER",
+    "date": "28. Sep 2026",
+    "title": "Pentest Anbieter auswählen: Kriterien und Checkliste",
+    "description": "Pentest Anbieter auswählen: Die wichtigsten Kriterien, die offizielle BSI-Liste zertifizierter IS-Penetrationstest-Dienstleister, Red Flags und eine Checkliste mit 8 Fragen vor der Beauftragung.",
+    "author": "Sodu Secure Team",
+    "readTime": "14 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Warum die Anbieterwahl so schwer ist",
+        "content": "Der Begriff Penetrationstest ist nicht geschützt. Jeder darf sich Pentest-Anbieter nennen - vom Einzelunternehmer mit Scanner-Lizenz bis zum spezialisierten Team mit langjähriger Offensive-Security-Erfahrung. Entsprechend groß ist die Qualitätsspanne: Am unteren Ende wird ein umformatierter Schwachstellenscan-Export als Pentest verkauft, am oberen Ende stehen mehrwöchige Red-Team-Operationen. Für Einkäufer und IT-Verantwortliche ist das ein Problem, denn die Angebote sehen auf dem Papier oft ähnlich aus. Dieser Artikel zeigt die Kriterien, an denen Sie Qualität erkennen - gestützt auf den offiziellen Praxis-Leitfaden für IS-Penetrationstests des BSI und öffentlich belegte Marktdaten.",
+        "keyTakeaway": {
+          "title": "Das Wichtigste in Kürze",
+          "content": "Prüfen Sie fünf Dinge: die Zertifikate der konkret eingesetzten Tester (z. B. OSCP, OSWE, OSEP), die Methodik (OWASP, PTES, BSI-Leitfaden), den Vertrag (Scope, NDA, Haftung, Datenlöschung), die Berichtsqualität (Musterbericht anfordern) und ob ein Retest enthalten ist. Wer hier klare Antworten bekommt, hat die schwarzen Schafe bereits aussortiert."
+        },
+        "quote": "Penetrationstest ist kein geschützter Begriff - Qualität erkennen Sie an den Testern, der Methodik und dem Bericht, nicht am Logo."
+      },
+      "commonAttackVectors": {
+        "title": "Die 6 wichtigsten Auswahlkriterien",
+        "items": [
+          "Zertifizierungen der Tester: OSCP von OffSec gilt als praxisorientierter Mindeststandard - eine rein praktische, beaufsichtigte 24-Stunden-Prüfung mit Einzelmaschinen und einem Active-Directory-Set. Für Web-Anwendungen ist OSWE relevant (48-Stunden-Praxisprüfung inklusive eigener Exploit-Entwicklung), für interne Netze OSEP (Schwerpunkt AV/EDR-Evasion und Active Directory). Zum Vergleich: Die CEH-Basisprüfung von EC-Council ist eine Multiple-Choice-Wissensprüfung mit 125 Fragen in 4 Stunden - breites Wissen, aber allein kein Beleg für Praxiskompetenz. Fragen Sie nach den Zertifikaten der namentlich eingesetzten Tester, nicht nur der Firma.",
+          "BSI-Zertifizierung und BSI-Anerkennung: Das BSI führt eine offizielle Liste zertifizierter IT-Sicherheitsdienstleister im Geltungsbereich IS-Penetrationstests - beim Abruf im September 2026 standen dort rund zwei Dutzend Unternehmen, die Zertifikate sind typischerweise drei Jahre gültig. Für KRITIS-Betreiber und Behörden ist ein gelisteter Dienstleister oft gefordert, für KMU ist er kein Muss. Die BSI-Kompetenzfeststellung für Penetrationstester erkennt elf externe Zertifikate an, darunter OSCP, CREST CRT und GIAC GPEN - jeweils mit mindestens 60 Prozent Praxisanteil.",
+          "Methodik und Testtiefe: Seriöse Anbieter benennen ihre Methodik - etwa den OWASP Testing Guide für Web-Anwendungen, PTES oder den BSI-Praxis-Leitfaden. Das BSI empfiehlt grundsätzlich Whitebox-Tests mit moderater Angriffsstärke und ein Testteam aus mindestens zwei Personen (Vier-Augen-Prinzip). Fragen Sie explizit nach dem manuellen Anteil des Tests.",
+          "Unabhängigkeit: Nach dem BSI-Praxis-Leitfaden müssen Pentests von fachlich qualifizierten, unabhängigen Personen durchgeführt werden, die nicht an Konzeption, Aufbau oder Betrieb der getesteten Systeme mitgewirkt haben. Ihr IT-Dienstleister, der die Umgebung selbst betreibt, ist daher der falsche Prüfer - beauftragen Sie grundsätzlich externe Prüfer.",
+          "Vertrag, NDA und Haftung: Niemals ohne schriftlichen Auftrag testen lassen. Der Vertrag muss laut BSI-Leitfaden Prüfzeitraum, Prüfobjekt, Prüftiefe, Kosten, Mitwirkungspflichten, Haftbarkeit und Verschwiegenheit regeln. Auch Speicher- und Löschfristen der erhobenen Daten gehören hinein, bei personenbezogenen Daten ist der Datenschutzbeauftragte einzubeziehen und ausgelagerte Hoster müssen in den Vertrag aufgenommen werden.",
+          "Berichtsqualität und Retest: Fordern Sie vorab einen Musterbericht an. Nach BSI-Empfehlung gehören hinein: Prüfobjekt und Prüfbedingungen, eine Managementzusammenfassung mit den Kernaussagen sowie technische Schwachstellenbeschreibungen mit konkreten Empfehlungen und einer Kritikalitätsbewertung nach Industriestandards wie CVSS. Klären Sie außerdem, ob ein Retest nach der Behebung enthalten ist - und planen Sie Wiederholungsprüfungen ein, das BSI empfiehlt sie alle zwei bis drei Jahre."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Red Flags: Woran Sie unseriöse Angebote erkennen",
+        "content": "Die häufigste Mogelpackung im Markt ist der Schwachstellenscan mit Pentest-Etikett: Ein automatisierter Scanner-Export wird umformatiert und als Penetrationstest verkauft. Die Prüftiefen-Systematik des BSI ordnet den Schwachstellenscan aber nur als Vorstufe ein - erst die manuelle Verifikation der Funde und die gezielte Umgehung von Sicherheitsmaßnahmen machen den Pentest aus. Preislich ist das gut erkennbar: Laut CODE-LEIN sind Angebote unter rund 2.000 Euro meist automatisierte Scans, der Anbieter-Leitfaden von Yekta IT zieht die Warnschwelle bei etwa 3.000 Euro. Yekta IT nennt als weitere Warnsignale vage Antworten auf technische Fragen, fehlenden Retest im Angebot und wenige zertifizierte Tester als bloßes Aushängeschild. Dazu kommt die BSI-Grundregel: Wer ohne schriftlichen Vertrag mit klarem Scope testen will, ist raus.",
+        "statistics": {
+          "title": "Der BSI-Rahmen in Zahlen",
+          "averageCost": {
+            "value": "3 Jahre",
+            "label": "Typische Gültigkeit des BSI-Zertifikats als IT-Sicherheitsdienstleister für IS-Penetrationstests"
+          },
+          "identificationTime": {
+            "value": "60 %",
+            "label": "Mindest-Praxisanteil eines externen Zertifikats (z. B. OSCP, CREST CRT), damit das BSI es für die Kompetenzfeststellung anerkennt"
+          },
+          "multipleBreaches": {
+            "value": "2 Tester",
+            "label": "Vom BSI empfohlene Mindestgröße des Testteams - Vier-Augen-Prinzip"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Die Checkliste: 8 Fragen vor der Beauftragung",
+        "content": "Stellen Sie jedem Anbieter diese acht Fragen. Seriöse Anbieter beantworten sie konkret und ohne Ausflüchte - vage Antworten auf technische Fragen sind laut dem Anbieter-Leitfaden von Yekta IT selbst schon ein Warnsignal.",
+        "essentialPractices": {
+          "title": "Zum Abhaken im Auswahlgespräch",
+          "items": [
+            "Welche Zertifikate haben die konkret eingesetzten Tester - OSCP, OSWE, OSEP, CREST - und können Sie das pro Person nachweisen?",
+            "Erfüllt der projektverantwortliche Prüfer die BSI-Erfahrungswerte: mindestens fünf Jahre Vollzeit-IT-Erfahrung in den letzten acht Jahren, davon zwei Jahre Informationssicherheit, und mindestens sechs Penetrationstests in den letzten drei Jahren?",
+            "Nach welcher Methodik testen Sie - OWASP Testing Guide, PTES, BSI-Praxis-Leitfaden - und wie hoch ist der manuelle Anteil?",
+            "Können Sie einen Musterbericht zeigen - mit Managementzusammenfassung, technischen Findings, CVSS-Bewertung und konkreten Empfehlungen?",
+            "Was regelt der Vertrag: Prüfzeitraum, Prüfobjekt, Prüftiefe, NDA, Haftung und die Löschung der erhobenen Daten?",
+            "Ist ein Retest nach der Behebung der Schwachstellen enthalten - und was kostet er andernfalls?",
+            "Gibt es ein Abschlussgespräch, in dem die Findings erklärt und priorisiert werden?",
+            "Welche Referenzen können Sie nennen? Wenn Kundennamen unter Verschwiegenheit stehen, lassen Sie sich nach BSI-Empfehlung zumindest Branchen und Unternehmensgrößen bestätigen."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Fazit: Welcher Anbieter-Typ passt zu Ihnen?",
+        "content1": "Der deutsche Markt gliedert sich grob in vier Typen: große Beratungshäuser und Prüfkonzerne (auf der BSI-Liste stehen unter anderem PwC, Ernst & Young und die TÜV-Gesellschaften), Telekom-Konzerneinheiten, spezialisierte Boutiquen wie SySS, secuvera oder HiSolutions - und automatisierte Scan- und Plattform-Angebote. Für Konzerne mit hohem Compliance-Druck und großem Budget sind die großen Häuser gesetzt. Für die meisten mittelständischen Unternehmen liefern spezialisierte Teams mit Senior-Testern die beste Kombination aus Tiefe, direktem Kontakt und fairem Preis. Automatisierte Plattformen ersetzen keinen manuellen Test, können aber als Ergänzung sinnvoll sein.",
+        "content2": "Sodu Secure ist eine spezialisierte Pentest-Boutique aus Berlin: OSCP-zertifizierte Tester, über 500 durchgeführte Pentests, Methodik nach OWASP und BSI-Praxis-Leitfaden, kostenloser Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch. Stellen Sie uns gern jede Frage aus der Checkliste - über das Anfrageformular erhalten Sie innerhalb eines Werktags eine konkrete Antwort samt Angebot."
+      }
+    },
+    "tags": [
+      "Pentest Anbieter",
+      "Pentest Dienstleister",
+      "BSI Penetrationstest",
+      "OSCP",
+      "Pentest Checkliste",
+      "IT-Sicherheitsdienstleister"
+    ],
+    "cta": {
+      "title": "Pentest-Anbieter auf dem Prüfstand?",
+      "description": "Stellen Sie uns die 8 Fragen aus der Checkliste - wir antworten konkret und mit Musterbericht. Angebot innerhalb von 24 Stunden.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Pentest anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Weiterführende Seiten",
+      "articles": [
+        {
+          "title": "Penetrationstest Anbieter: Der große Vergleich",
+          "description": "Zertifizierungen, rote Flaggen und Pentest-Typen im Vergleich - die ausführliche Übersicht.",
+          "category": "PENTEST ANBIETER",
+          "readTime": "8 Min. Lesezeit",
+          "readMore": "Seite ansehen →"
+        },
+        {
+          "title": "Pentest anfragen: In wenigen Minuten zum Angebot",
+          "description": "Beschreiben Sie Ihr Prüfobjekt - Sie erhalten innerhalb von 24 Stunden ein konkretes Festpreisangebot.",
+          "category": "ANGEBOT",
+          "readTime": "2 Min.",
+          "readMore": "Jetzt anfragen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
+      "bio": "OSCP-zertifizierte Penetrationstester aus Berlin. Über 500 durchgeführte Pentests für Web-Anwendungen, APIs, Netzwerke und Active Directory - mit kostenlosem Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Pentest anfragen"
+    },
+    "toasts": {
+      "linkCopied": "Link in die Zwischenablage kopiert!",
+      "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+      "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+      "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "pentestVsSchwachstellenscanDetail": {
+    "backToBlog": "Zurück zum Blog",
+    "shareArticle": "Artikel teilen",
+    "bookmarkArticle": "Artikel speichern",
+    "category": "PENTEST GRUNDLAGEN",
+    "date": "27. Sep 2026",
+    "title": "Pentest vs. Schwachstellenscan: Der Unterschied - und wann Sie was brauchen",
+    "description": "Pentest vs. Schwachstellenscan: Was unterscheidet die manuelle Angriffssimulation vom automatisierten Scan? Der direkte Vergleich mit Kosten, Aussagekraft, False Positives und Einsatzempfehlung.",
+    "author": "Sodu Secure Team",
+    "readTime": "11 Min. Lesezeit",
+    "tableOfContents": "Inhaltsverzeichnis",
+    "shareThisArticle": "Diesen Artikel teilen",
+    "share": "Teilen",
+    "save": "Speichern",
+    "sections": {
+      "introduction": {
+        "title": "Zwei Begriffe, die ständig verwechselt werden",
+        "content": "Schwachstellenscan und Penetrationstest werden im Alltag oft synonym verwendet - und manche Anbieter nutzen genau das aus, indem sie automatisierte Scans als Pentests verkaufen. Dabei ist der Unterschied fundamental: Ein Schwachstellenscan ist eine automatisierte Prüfung, die Systeme gegen eine Datenbank bekannter Schwachstellen abgleicht. Ein Penetrationstest ist eine manuelle, zielgerichtete Angriffssimulation durch Experten. Der Praxis-Leitfaden für IS-Penetrationstests des BSI beschreibt es so: Automatisierte Schwachstellenscanner können Gefährdungen aufzeigen - der Penetrationstest geht einen Schritt weiter und sucht gezielt nach Wegen, die eingesetzten Sicherheitsmaßnahmen zu umgehen. Wer den Unterschied kennt, kauft das richtige Instrument für den richtigen Zweck - und zahlt keine Pentest-Preise für Scan-Leistungen.",
+        "keyTakeaway": {
+          "title": "Der Kernunterschied",
+          "content": "Ein Scan prüft automatisiert, ob eine bekannte Lücke existiert. Ein Pentest prüft manuell, ob und wie sie sich tatsächlich ausnutzen lässt - inklusive Verkettung mehrerer Schwachstellen und Fehlern in der Geschäftslogik, die kein Scanner findet. Preislich: Reine Scans kosten laut CODE-LEIN 300-3.000 Euro, manuelle Pentests 4.000-30.000 Euro."
+        },
+        "quote": "Ein Scan prüft nur, ob eine Lücke existiert - nicht, ob sie tatsächlich ausnutzbar ist. (ORBIT IT-Solutions)"
+      },
+      "commonAttackVectors": {
+        "title": "Der direkte Vergleich: 6 Unterschiede im Überblick",
+        "items": [
+          "Tiefe: Der Scan erkennt bekannte Schwachstellen anhand einer Datenbank beziehungsweise Signaturen - laut audius eine oberflächliche Schwachstellenanalyse ohne tiefgehende Tests, die keine Exploits simulieren und keine komplexen Angriffsszenarien analysieren kann. Der Pentest analysiert zusätzlich Geschäftslogik, verkettet mehrere Schwachstellen und simuliert realistische Angriffsszenarien.",
+          "Methode: Der Scan läuft vollautomatisch mit Software-Tools. Der Pentest kombiniert manuelle und automatisierte Angriffssimulationen und erfordert laut simplisec menschliches Fachwissen und Erfahrung.",
+          "Verlässlichkeit: Automatisierte Scans tragen laut Allgeier CyRis ein Risiko von False Positives und False Negatives, weil keine Verifikation der Schwachstelle durch aktive Ausnutzung stattfindet. Im Pentest wird jeder Fund manuell verifiziert - was im Bericht steht, ist real nachgewiesen und eingeordnet.",
+          "Aussagekraft: Scans bieten laut simplisec normalerweise nur begrenzte Details. Ein Pentest liefert laut audius eine detaillierte Analyse der Sicherheitslage und eine realistische Einschätzung der Angriffsvektoren - inklusive konkreter Handlungsempfehlungen für Ihre Techniker.",
+          "Preis: Ein reiner Schwachstellenscan kostet laut CODE-LEIN etwa 300-3.000 Euro, ein manueller Penetrationstest in Deutschland 4.000-30.000 Euro. Beides hat seine Berechtigung - problematisch wird es erst, wenn ein Scan zum Pentest-Preis verkauft wird.",
+          "Frequenz: Scans eignen sich für den Dauerbetrieb - laut ORBIT als kontinuierliche, bis zu tägliche Prüfung. Ein Pentest ist eine gezielte Momentaufnahme: ORBIT empfiehlt ihn mindestens einmal jährlich, der BSI-Praxis-Leitfaden empfiehlt Wiederholungsprüfungen alle zwei bis drei Jahre und betont, dass Ergebnisse nur zum Zeitpunkt des Tests gültig sind."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Warum die Unterscheidung wichtig ist: Die Bedrohungslage",
+        "content": "Die Zahlen des BSI-Lageberichts zur IT-Sicherheit in Deutschland 2025 zeigen, warum reine Scan-Routinen für exponierte Systeme nicht genügen: Täglich wurden im Schnitt 119 neue Schwachstellen bekannt - ein Wachstum von rund 24 Prozent gegenüber dem vorherigen Berichtszeitraum. Angriffe über die aktive Ausnutzung von Schwachstellen (Exploitation) nahmen laut BSI-Messungen um 38 Prozent zu, und rund 80 Prozent der angezeigten Angriffe richteten sich gegen kleine und mittlere Unternehmen. Scanner finden davon nur, was bereits in ihren Datenbanken steht - die gezielte Ausnutzung von Konfigurations- und Logikfehlern bleibt unsichtbar, bis ein Mensch sie prüft. Oder ein Angreifer sie findet.",
+        "statistics": {
+          "title": "BSI-Lagebericht 2025 in Zahlen",
+          "averageCost": {
+            "value": "119",
+            "label": "Neu bekannt gewordene Schwachstellen pro Tag im Schnitt - plus rund 24 Prozent gegenüber dem vorherigen Berichtszeitraum (BSI-Lagebericht 2025)"
+          },
+          "identificationTime": {
+            "value": "+38 %",
+            "label": "Zunahme von Exploitation-Angriffen laut BSI-Messungen, also der aktiven Ausnutzung von Schwachstellen (BSI-Lagebericht 2025)"
+          },
+          "multipleBreaches": {
+            "value": "80 %",
+            "label": "Anteil der angezeigten Angriffe, die sich gegen kleine und mittlere Unternehmen richteten (BSI-Lagebericht 2025)"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "Wann reicht ein Scan - und wann brauchen Sie einen Pentest?",
+        "content": "Die richtige Antwort ist fast nie entweder-oder, sondern eine Kombination: kontinuierliche Scans als Basis-Hygiene plus manuelle Penetrationstests für die Systeme, bei denen ein Einbruch wirklich weh tut. Diese acht Leitlinien helfen bei der Entscheidung:",
+        "essentialPractices": {
+          "title": "8 Leitlinien für die Praxis",
+          "items": [
+            "Scans als Dauerbetrieb etablieren: Regelmäßige automatisierte Scans - wöchentlich bis monatlich, bei exponierten Systemen häufiger - sind günstige Basis-Hygiene und entdecken neu bekannt gewordene Schwachstellen schnell.",
+            "Pentests für geschäftskritische, exponierte Anwendungen einplanen: Login-Bereiche, Kundendaten, Zahlungsprozesse und APIs - hier entscheiden Logik- und Berechtigungsfehler, die kein Scanner erkennt.",
+            "Anlassbezogen testen: Nach größeren Releases, Architekturwechseln oder Migrationen ist ein manueller Test sinnvoll - Testergebnisse sind laut BSI nur zum Zeitpunkt des Tests gültig.",
+            "Die BSI-Prüftiefen als Orientierung nutzen: vom technischen Sicherheitsaudit über den nicht-invasiven Schwachstellenscan bis zum invasiven Test mit Exploits - der Scan ist in dieser Systematik nur eine Vorstufe des Penetrationstests.",
+            "Compliance sauber adressieren: Wer Anforderungen aus ISO 27001, TISAX oder NIS2 nachweisen will, fährt mit der Kombination aus dokumentierter Scan-Routine und manuellem Pentest am belastbarsten - klären Sie den konkreten Nachweisbedarf mit Ihrem Auditor.",
+            "Scan-Ergebnisse vor dem Pentest bereinigen: Beheben Sie bekannte Findings vorab, damit die bezahlten Testtage in die Tiefe gehen, statt Bekanntes zu dokumentieren.",
+            "Mogelpackungen erkennen: Liegt ein Pentest-Angebot im Preisbereich eines Scans (laut CODE-LEIN 300-3.000 Euro), erhalten Sie mit hoher Wahrscheinlichkeit auch nur einen Scan - es sei denn, der niedrige Preis erklärt sich durch einen bewusst eng geschnittenen Scope zum Festpreis. Entscheidend sind manueller Anteil, Methodik und Musterbericht.",
+            "Qualität beim Pentest sicherstellen: Das BSI empfiehlt externe, unabhängige Prüfer, ein Testteam aus mindestens zwei Personen und Whitebox-Tests mit moderater Angriffsstärke - Web-Tests sollten dem OWASP Web Security Testing Guide folgen, dem De-facto-Standard für Webanwendungs-Pentests."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Fazit: Beide Instrumente haben ihren Platz",
+        "content1": "Der Schwachstellenscan liefert Breite und Kontinuität: Er überwacht günstig und automatisiert, ob bekannte Lücken in Ihren Systemen auftauchen. Der Penetrationstest liefert Tiefe und Gewissheit: Er zeigt, was ein echter Angreifer mit Ihren Systemen tatsächlich anstellen könnte - verifiziert, priorisiert und mit konkreten Empfehlungen. Wer nur scannt, sieht die Masse der bekannten Schwachstellen, aber nicht die kritischen Angriffspfade. Wer nur alle paar Jahre pentestet, ist zwischen den Tests blind für Neues. Die Kombination aus beidem ist der belastbarste Ansatz.",
+        "content2": "Sodu Secure führt manuelle Penetrationstests nach OWASP und den Empfehlungen des BSI-Praxis-Leitfadens durch - mit OSCP-zertifizierten Testern, kostenlosem Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch. Web-App-Pentests starten ab 1.499 Euro, Netzwerk- und Active-Directory-Tests ab 2.500 Euro. Über das Anfrageformular erhalten Sie innerhalb eines Werktags ein konkretes Angebot."
+      }
+    },
+    "tags": [
+      "Schwachstellenscan",
+      "Pentest vs Scan",
+      "Vulnerability Scan",
+      "Penetrationstest",
+      "False Positives",
+      "IT-Sicherheit"
+    ],
+    "cta": {
+      "title": "Echten Pentest statt Scan-Report?",
+      "description": "Manuelle Penetrationstests mit verifizierten Findings - Web-App-Pentests ab 1.499 Euro, Angebot innerhalb von 24 Stunden.",
+      "emailPlaceholder": "E-Mail eingeben",
+      "buttonText": "Pentest anfragen",
+      "disclaimer": "Kein Spam, jederzeit abbestellen"
+    },
+    "relatedArticles": {
+      "title": "Weiterführende Seiten",
+      "articles": [
+        {
+          "title": "Penetrationstest: Definition, Ablauf und Kosten",
+          "description": "Der vollständige Überblick nach BSI-Methodik - Arten, Standards, Phasen und was ein Test kostet.",
+          "category": "PENETRATIONSTEST",
+          "readTime": "6 Min. Lesezeit",
+          "readMore": "Seite ansehen →"
+        },
+        {
+          "title": "Pentest: Ablauf, Methodik und Preise",
+          "description": "So läuft ein Pentest bei Sodu Secure ab - vom Scoping bis zum kostenlosen Retest.",
+          "category": "PENTEST",
+          "readTime": "6 Min. Lesezeit",
+          "readMore": "Seite ansehen →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
+      "bio": "OSCP-zertifizierte Penetrationstester aus Berlin. Über 500 durchgeführte Pentests für Web-Anwendungen, APIs, Netzwerke und Active Directory - mit kostenlosem Retest und Bericht innerhalb von 24 Stunden auf Deutsch und Englisch."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "War dieser Artikel hilfreich?",
+      "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+      "getHelp": "Pentest anfragen"
     },
     "toasts": {
       "linkCopied": "Link in die Zwischenablage kopiert!",

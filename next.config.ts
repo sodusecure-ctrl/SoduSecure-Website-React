@@ -29,8 +29,8 @@ const nextConfig: NextConfig = {
       // Keyword-Kannibalisierung vermeiden: Berlin-Keywords gehören allein /pentest-berlin.
       { source: '/penetration-testing-berlin', destination: '/pentest-berlin', permanent: true },
       // SEO-Konsolidierung Juli 2026: Duplikat-Landingpages auf die jeweilige Hauptseite.
-      // Haupt-Landingpage Pentest: /penetration-testing
-      { source: '/pentest', destination: '/penetration-testing', permanent: true },
+      // Sept 2026: /pentest ist wieder eine eigene Landingpage (Head-Keyword "pentest"),
+      // /penetrationstest ist der neue informationale Pillar ("penetrationstest").
       { source: '/pentesting-service', destination: '/penetration-testing', permanent: true },
       { source: '/penetration-testing-service', destination: '/penetration-testing', permanent: true },
       // Haupt-Landingpage Anbieter-Auswahl: /penetrationstest-anbieter (Merge Juli 2026)

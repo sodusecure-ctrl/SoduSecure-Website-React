@@ -10,7 +10,6 @@ import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useTranslations } from 'next-intl';
 import { getBlogById } from '@/lib/blogData';
-import DynamicMetaTags from '@/components/common/DynamicMetaTags';
 import { trackConversion } from '@/lib/gtag';
 
 export default function BlogArticleDetail() {
@@ -46,9 +45,23 @@ export default function BlogArticleDetail() {
       18: 'bsiTr03161EinfachErklaertDetail',
       19: 'tr03161ZertifizierungVorbereitungDetail',
       20: 'mobileAppSecurityGesundheitswesenDetail',
+      21: 'pentestKostenMarktuebersichtDetail',
+      22: 'pentestAnbieterAuswaehlenDetail',
+      23: 'pentestVsSchwachstellenscanDetail',
     };
     return mapping[id] || 'blogDetail';
   };
+
+  // Routen der "Verwandte Artikel"-Karten pro Blog (interne Verlinkung)
+  const getRelatedArticleRoutes = (id: number): [string, string] => {
+    const mapping: Record<number, [string, string]> = {
+      21: ['/pentest-kosten', '/penetrationstest'],
+      22: ['/penetrationstest-anbieter', '/request-pentest'],
+      23: ['/penetrationstest', '/pentest'],
+    };
+    return mapping[id] || ['/case-studies/blogs/2', '/case-studies/blogs/2'];
+  };
+  const relatedArticleRoutes = getRelatedArticleRoutes(blogId);
 
   const t = useTranslations(getBlogTranslationKey(blogId));
 
@@ -154,19 +167,7 @@ export default function BlogArticleDetail() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Dynamic Meta Tags for SEO */}
-      {blogData && (
-        <DynamicMetaTags
-          title={blogData.title}
-          description={blogData.description}
-          keywords={blogData.keywords}
-          author={blogData.author}
-          image={`https://sodusecure.com${blogData.image}`}
-          url={`https://sodusecure.com/case-studies/blogs/${blogData.slug}`}
-          type="article"
-          publishedTime={blogData.date}
-        />
-      )}
+      {/* Title/Description/Canonical/OG kommen server-seitig aus layout.tsx (generateMetadata) */}
 
       {/* JSON-LD for SEO */}
       {articleSchema && (
@@ -465,7 +466,7 @@ export default function BlogArticleDetail() {
                   title: t(`relatedArticles.articles.${i}.title`),
                   desc: t(`relatedArticles.articles.${i}.description`),
                   category: t(`relatedArticles.articles.${i}.category`),
-                  route: "/case-studies/blogs/2",
+                  route: relatedArticleRoutes[i] ?? "/case-studies/blogs/2",
                   readTime: t(`relatedArticles.articles.${i}.readTime`),
                   readMore: t(`relatedArticles.articles.${i}.readMore`)
                 })).map((article, index) => (

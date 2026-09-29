@@ -9,9 +9,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: { path: string; lastModified: string; changeFreq: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number }[] = [
     // ── Top-Landingpages ──
     { path: '',                                lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/penetrationstest',               lastModified: '2026-09-29', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/pentest',                        lastModified: '2026-09-29', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/penetration-testing',            lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
-    { path: '/pentest-kosten',                 lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
-    { path: '/penetrationstest-anbieter',      lastModified: '2026-07-17', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/pentest-kosten',                 lastModified: '2026-09-29', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/penetrationstest-anbieter',      lastModified: '2026-09-29', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/it-sicherheitscheck',            lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/iso-27001-pentest-anforderungen', lastModified: '2026-08-19', changeFreq: 'weekly', priority: 1.0 },
 
@@ -74,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/services/sme-packages',          lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.9 },
     { path: '/pricing',                        lastModified: '2026-06-22', changeFreq: 'weekly',  priority: 0.8 },
     { path: '/pentest-konfigurator',           lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.7 },
-    { path: '/request-pentest',                lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.7 },
+    { path: '/request-pentest',                lastModified: '2026-09-29', changeFreq: 'monthly', priority: 0.7 },
 
     // ── AuditAI (Hub + stärkste Satelliten) ──
     { path: '/sodu-audit-ai',                  lastModified: '2026-07-13', changeFreq: 'weekly',  priority: 0.8 },

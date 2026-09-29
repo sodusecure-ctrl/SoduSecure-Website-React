@@ -110,7 +110,7 @@ export default function Header() {
         {
           name: isEnglish ? 'Penetration testing' : 'Penetrationstest',
           desc: isEnglish ? 'Find the flaws scanners miss' : 'Schwachstellen finden, die Scanner übersehen',
-          path: '/pentest',
+          path: '/penetrationstest',
         },
         {
           name: 'Red Teaming',

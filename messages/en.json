@@ -4548,6 +4548,27 @@
           "description": "Step by step: from scoping and active testing to final reporting. A clear walkthrough of the full professional pentest process.",
           "author": "Kerim K.",
           "readTime": "12 mins"
+        },
+        {
+          "category": "PENTEST COSTS",
+          "title": "How Much Does a Penetration Test Cost? An Honest Market Overview",
+          "description": "What does a penetration test cost in Germany? Honest market overview with sourced price ranges - daily rates, costs by test type, cost drivers and red flags in cheap offers.",
+          "author": "Sodu Secure Team",
+          "readTime": "13 mins"
+        },
+        {
+          "category": "PENTEST PROVIDERS",
+          "title": "Choosing a Pentest Provider: Criteria and Checklist",
+          "description": "The key selection criteria, the official BSI list of certified IS penetration testing providers, red flags and an 8-question checklist before you sign.",
+          "author": "Sodu Secure Team",
+          "readTime": "14 mins"
+        },
+        {
+          "category": "PENTEST BASICS",
+          "title": "Pentest vs. Vulnerability Scan: The Difference",
+          "description": "Manual attack simulation or automated scan? A direct comparison covering cost, depth, false positives and a clear recommendation for businesses.",
+          "author": "Sodu Secure Team",
+          "readTime": "11 mins"
         }
       ]
     }
@@ -5507,6 +5528,396 @@
       "invalidEmail": "Please enter a valid email address.",
       "emailSent": "Thanks!Your request has been sent.",
       "emailFailed": "Sending failed.Please try again."
+    }
+  },
+  "pentestKostenMarktuebersichtDetail": {
+    "backToBlog": "Back to blog",
+    "shareArticle": "Share article",
+    "bookmarkArticle": "Bookmark article",
+    "category": "PENTEST COSTS",
+    "date": "Sep 29, 2026",
+    "title": "How Much Does a Penetration Test Cost? An Honest Market Overview with Real Numbers",
+    "description": "How much does a penetration test cost in Germany? An honest market overview with documented price ranges - daily rates, costs by test type, the most important cost factors and warning signs of low-cost offers.",
+    "author": "Sodu Secure Team",
+    "readTime": "13 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Why pentest prices seem so opaque",
+        "content": "Hardly any pentest provider publishes prices - and anyone requesting quotes receives ranges that can differ by a factor of ten. This is not arbitrary: a penetration test is an effort-based service. The price is calculated as person-days times daily rate, and the effort depends on the test object. Nevertheless, there are solid public figures. For this article, we evaluated the published price data of several German sources: the providers AWARE7, CODE-LEIN, Reepa Solutions and microCAT, as well as the IDG trade publication ChannelPartner. The result is an honest market overview - with all sources named in the text so you can verify every number.",
+        "keyTakeaway": {
+          "title": "The short answer",
+          "content": "According to CODE-LEIN, manual penetration tests in Germany usually cost between 4,000 and 30,000 euros; SME projects are often in the range of 3,000 to 12,000 euros according to AWARE7. The basis is almost always the model of person-days times daily rate - according to microCAT and Reepa Solutions, market daily rates are 900 to 1,800 euros."
+        },
+        "quote": "A serious pentest offer is created in a scoping call - not in a price list without context."
+      },
+      "commonAttackVectors": {
+        "title": "Market overview: Documented price ranges from German sources",
+        "items": [
+          "AWARE7 GmbH (pentest provider): daily rate 1,350 euros net. Small web app 3,000-8,000 euros, medium-sized web app with multiple roles and API 8,000-20,000 euros, complex web app 15,000-50,000 euros, internal network up to 50 hosts 5,000-12,000 euros, external network 3,000-8,000 euros, mobile app 5,000-15,000 euros, red team 25,000 to over 100,000 euros. Typical SME projects: 3,000-12,000 euros.",
+          "CODE-LEIN GmbH (technical blog): manual pentest in Germany 4,000-30,000 euros overall, web app pentest 4,000-12,000 euros, infrastructure pentest 8,000-25,000 euros. Daily rates of qualified testers 1,200-1,800 euros. Important for context: a pure vulnerability scan costs only 300-3,000 euros.",
+          "ChannelPartner (IDG trade publication): quoted Aramido founder Armin Harbrecht names daily rates of typically 1,000-1,800 euros. Pentests usually take 2 to 10 testing days - resulting in total costs of around 2,000 euros for a short test up to about 18,000 euros for an extensive one.",
+          "Reepa Solutions: web application pentest 6,000-25,000 euros (5-15 person-days), API pentest 4,000-12,000 euros, mobile app for iOS and Android 8,000-18,000 euros, external infrastructure 3,000-15,000 euros, internal infrastructure 8,000-30,000 euros, Active Directory audit 8,000-20,000 euros, cloud audit 6,000-18,000 euros. Daily rates: junior approx. 800 euros, senior 1,200-1,800 euros, specialists from 2,000 euros.",
+          "microCAT: general range 2,000-25,000 euros. Internal network with 10-20 IPs 5,000-7,500 euros, complex infrastructure including cloud 10,000-20,000 euros, social engineering campaign 4,000-8,000 euros. Retest after remediation: 1,000-2,000 euros, usually one testing day. Daily rates 900-1,800 euros.",
+          "Consolidated across all sources, per test type: web app approx. 3,000-25,000 euros depending on complexity, API 4,000-12,000 euros, external infrastructure 3,000-15,000 euros, internal infrastructure and Active Directory 5,000-30,000 euros, mobile app 5,000-18,000 euros, cloud 5,000-20,000 euros, red team 25,000-100,000 euros. The ranges are cut differently by each provider - offers only become truly comparable once person-days and daily rate are itemized."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "The cost factors: What really determines the price",
+        "content": "The price of a penetration test almost always follows the same model: person-days times daily rate plus reporting. By far the biggest lever, according to CODE-LEIN, is the scope - the number of systems, applications and IP addresses. Next come the complexity of the test object (role models, interfaces, business logic), the test approach (black, grey or white box) and the depth of reporting including retest. Compliance requirements increase the effort by 30-60 percent according to Reepa Solutions, and short-notice rush projects carry a 20-30 percent surcharge there.",
+        "statistics": {
+          "title": "Three numbers for your budget planning",
+          "averageCost": {
+            "value": "900-1,800 €",
+            "label": "Market daily rates for penetration testers in Germany (sources: microCAT, Reepa Solutions, ChannelPartner)"
+          },
+          "identificationTime": {
+            "value": "2-10 days",
+            "label": "Typical test duration according to ChannelPartner - resulting in total costs of around 2,000 to 18,000 euros"
+          },
+          "multipleBreaches": {
+            "value": "from 1,499 €",
+            "label": "Entry price at Sodu Secure for a web app pentest - network and Active Directory tests from 2,500 euros"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "How to budget correctly: 8 practical tips",
+        "content": "With these eight points you can obtain comparable offers, spot mislabeled products and invest your budget where it actually improves security.",
+        "essentialPractices": {
+          "title": "The 8 tips at a glance",
+          "items": [
+            "Define the scope precisely: According to CODE-LEIN, the number of systems, applications and IP addresses is by far the biggest cost lever. The clearer the scope, the more comparable the offers.",
+            "Have person-days and daily rate itemized: A serious offer states both. This is how you tell whether the price consists of real testing days - or of an automated tool run.",
+            "Question offers below around 2,000 euros: According to CODE-LEIN, these are usually automated scans with a pentest label - a pure vulnerability scan costs only 300-3,000 euros there. The exception is a deliberately narrow, fixed-price scope agreed after a scoping call; what matters is the manual share and a sample report.",
+            "Ask about tester qualification: In its practical guide for IS penetration tests, the BSI recommends that the lead tester has at least five years of IT experience, including two years in information security, plus at least six penetration tests in the last three years.",
+            "Choose the test approach deliberately: The BSI generally recommends white-box tests with moderate attack strength - so every paid testing day goes into depth instead of guessing about your architecture.",
+            "Budget for a retest: A retest after remediation costs 1,000-2,000 euros according to microCAT and usually takes one day - at Sodu Secure the retest is included free of charge.",
+            "Name compliance requirements early: Additional framework requirements increase the effort by 30-60 percent according to Reepa Solutions - this belongs in the offer from the start, not as an addendum.",
+            "Put costs in relation to risk: According to the Bitkom study Wirtschaftsschutz 2025, cyberattacks caused 202.4 billion euros of damage to the German economy, and according to the BSI situation report 2025, around 80 percent of reported attacks targeted small and medium-sized enterprises."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Conclusion: Budget realistically instead of buying cheap",
+        "content1": "The honest answer to the cost question is: a professional, manual penetration test in Germany usually costs between 4,000 and 30,000 euros depending on scope, with clearly defined smaller projects below that. The sources of this overview - AWARE7, CODE-LEIN, Reepa Solutions, microCAT and ChannelPartner - arrive at very similar daily rates of 900 to 1,800 euros despite different package cuts. Anyone offering significantly less is usually not selling a pentest, but an automated scan.",
+        "content2": "Sodu Secure works with transparent fixed prices after a scoping call: web app pentests from 1,499 euros, network and Active Directory tests from 2,500 euros - including a free retest and a report within 24 hours in German and English. You will find the full price overview and the request form via the linked pages below - you will receive a concrete offer with itemized person-days within one business day."
+      }
+    },
+    "tags": [
+      "Pentest costs",
+      "Penetration test price",
+      "Pentest daily rate",
+      "Pentest offer",
+      "Pentest budget",
+      "IT security costs"
+    ],
+    "cta": {
+      "title": "Request a transparent pentest offer",
+      "description": "Receive a fixed-price offer with itemized person-days within 24 hours - web app pentests from 1,499 euros.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Request pentest offer",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Further reading",
+      "articles": [
+        {
+          "title": "Pentest costs: Prices and packages from Sodu Secure",
+          "description": "Concrete price ranges for web app, API, network and Active Directory - transparent and without hidden costs.",
+          "category": "PENTEST COSTS",
+          "readTime": "5 min read",
+          "readMore": "View page →"
+        },
+        {
+          "title": "Penetration testing: definition, process and costs",
+          "description": "The complete overview based on BSI methodology - types, standards, phases and what a test costs.",
+          "category": "PENETRATION TEST",
+          "readTime": "6 min read",
+          "readMore": "View page →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
+      "bio": "OSCP-certified penetration testers from Berlin. Over 500 pentests performed for web applications, APIs, networks and Active Directory - with a free retest and a report within 24 hours in German and English."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Was this article helpful?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request pentest offer"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The inquiry advice function is not yet implemented.",
+      "saveNotImplemented": "Storage function is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Sending failed. Please try again."
+    }
+  },
+  "pentestAnbieterAuswaehlenDetail": {
+    "backToBlog": "Back to blog",
+    "shareArticle": "Share article",
+    "bookmarkArticle": "Bookmark article",
+    "category": "PENTEST PROVIDERS",
+    "date": "Sep 28, 2026",
+    "title": "Choosing a Pentest Provider: Criteria and Checklist",
+    "description": "Choosing a pentest provider: the most important criteria, the official BSI list of certified IS penetration testing providers, red flags and a checklist with 8 questions to ask before commissioning.",
+    "author": "Sodu Secure Team",
+    "readTime": "14 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Why choosing a provider is so difficult",
+        "content": "The term penetration test is not protected. Anyone can call themselves a pentest provider - from a one-person business with a scanner license to a specialized team with many years of offensive security experience. The quality range is correspondingly wide: at the lower end, a reformatted vulnerability scan export is sold as a pentest; at the upper end are red team operations lasting several weeks. This is a problem for buyers and IT managers, because the offers often look similar on paper. This article shows the criteria by which you can recognize quality - based on the official BSI practical guide for IS penetration tests and publicly documented market data.",
+        "keyTakeaway": {
+          "title": "The essentials in brief",
+          "content": "Check five things: the certificates of the testers actually deployed (e.g. OSCP, OSWE, OSEP), the methodology (OWASP, PTES, BSI guide), the contract (scope, NDA, liability, data deletion), the report quality (request a sample report) and whether a retest is included. If you get clear answers here, you have already sorted out the black sheep."
+        },
+        "quote": "Penetration test is not a protected term - you recognize quality by the testers, the methodology and the report, not by the logo."
+      },
+      "commonAttackVectors": {
+        "title": "The 6 most important selection criteria",
+        "items": [
+          "Tester certifications: OSCP from OffSec is considered the hands-on minimum standard - a purely practical, proctored 24-hour exam with standalone machines and an Active Directory set. For web applications OSWE is relevant (48-hour practical exam including developing your own exploit), for internal networks OSEP (focus on AV/EDR evasion and Active Directory). For comparison: the CEH base exam from EC-Council is a multiple-choice knowledge test with 125 questions in 4 hours - broad knowledge, but on its own no proof of practical competence. Ask for the certificates of the individually named testers, not just the company.",
+          "BSI certification and BSI recognition: The BSI maintains an official list of certified IT security service providers in the scope of IS penetration tests - at the time of retrieval in September 2026 it contained around two dozen companies, and the certificates are typically valid for three years. For critical infrastructure operators and public authorities a listed provider is often required; for SMEs it is not a must. The BSI competence assessment for penetration testers recognizes eleven external certificates, including OSCP, CREST CRT and GIAC GPEN - each with at least a 60 percent practical component.",
+          "Methodology and test depth: Serious providers name their methodology - for example the OWASP Testing Guide for web applications, PTES or the BSI practical guide. The BSI generally recommends white-box tests with moderate attack strength and a test team of at least two people (four-eyes principle). Ask explicitly about the manual share of the test.",
+          "Independence: According to the BSI practical guide, pentests must be performed by professionally qualified, independent persons who were not involved in the design, setup or operation of the tested systems. Your IT service provider who runs the environment itself is therefore the wrong tester - always commission external testers.",
+          "Contract, NDA and liability: Never allow testing without a written order. According to the BSI guide, the contract must regulate the test period, test object, test depth, costs, cooperation obligations, liability and confidentiality. Retention and deletion periods for collected data also belong in it; for personal data the data protection officer must be involved, and outsourced hosters must be included in the contract.",
+          "Report quality and retest: Request a sample report in advance. According to BSI recommendations it should contain: the test object and test conditions, a management summary with the key statements, and technical vulnerability descriptions with concrete recommendations and a criticality rating based on industry standards such as CVSS. Also clarify whether a retest after remediation is included - and plan repeat tests, which the BSI recommends every two to three years."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Red flags: How to recognize dubious offers",
+        "content": "The most common mislabeled product on the market is the vulnerability scan with a pentest label: an automated scanner export is reformatted and sold as a penetration test. However, the BSI's test-depth framework classifies the vulnerability scan as merely a preliminary stage - only the manual verification of findings and the targeted circumvention of security measures make it a pentest. This is easy to recognize by price: according to CODE-LEIN, offers below around 2,000 euros are usually automated scans, and the provider guide by Yekta IT draws the warning threshold at about 3,000 euros. Yekta IT names further warning signs: vague answers to technical questions, no retest in the offer, and a few certified testers used as a mere figurehead. Add the BSI ground rule: anyone willing to test without a written contract and a clear scope is out.",
+        "statistics": {
+          "title": "The BSI framework in numbers",
+          "averageCost": {
+            "value": "3 years",
+            "label": "Typical validity of the BSI certificate as an IT security service provider for IS penetration tests"
+          },
+          "identificationTime": {
+            "value": "60 %",
+            "label": "Minimum practical share of an external certificate (e.g. OSCP, CREST CRT) for the BSI to recognize it for the competence assessment"
+          },
+          "multipleBreaches": {
+            "value": "2 testers",
+            "label": "Minimum test team size recommended by the BSI - four-eyes principle"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "The checklist: 8 questions before commissioning",
+        "content": "Ask every provider these eight questions. Serious providers answer them concretely and without evasion - vague answers to technical questions are themselves a warning sign according to the provider guide by Yekta IT.",
+        "essentialPractices": {
+          "title": "To tick off in the selection call",
+          "items": [
+            "Which certificates do the testers actually deployed hold - OSCP, OSWE, OSEP, CREST - and can you prove this per person?",
+            "Does the lead tester meet the BSI experience benchmarks: at least five years of full-time IT experience in the last eight years, including two years in information security, and at least six penetration tests in the last three years?",
+            "Which methodology do you test by - OWASP Testing Guide, PTES, BSI practical guide - and how high is the manual share?",
+            "Can you show a sample report - with a management summary, technical findings, CVSS ratings and concrete recommendations?",
+            "What does the contract regulate: test period, test object, test depth, NDA, liability and the deletion of collected data?",
+            "Is a retest after remediation of the vulnerabilities included - and what does it cost otherwise?",
+            "Is there a final debriefing in which the findings are explained and prioritized?",
+            "Which references can you name? If customer names are under confidentiality, have at least industries and company sizes confirmed, as recommended by the BSI."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Conclusion: Which provider type suits you?",
+        "content1": "The German market roughly divides into four types: large consulting firms and audit corporations (the BSI list includes PwC, Ernst & Young and the TÜV companies, among others), Telekom group units, specialized boutiques such as SySS, secuvera or HiSolutions - and automated scan and platform offerings. For corporations with high compliance pressure and large budgets, the big firms are the default. For most mid-sized companies, specialized teams with senior testers deliver the best combination of depth, direct contact and a fair price. Automated platforms do not replace a manual test, but can be a useful supplement.",
+        "content2": "Sodu Secure is a specialized pentest boutique from Berlin: OSCP-certified testers, over 500 pentests performed, methodology based on OWASP and the BSI practical guide, a free retest and a report within 24 hours in German and English. Feel free to ask us any question from the checklist - via the request form you will receive a concrete answer including an offer within one business day."
+      }
+    },
+    "tags": [
+      "Pentest provider",
+      "Pentest service provider",
+      "BSI penetration test",
+      "OSCP",
+      "Pentest checklist",
+      "IT security service provider"
+    ],
+    "cta": {
+      "title": "Putting pentest providers to the test?",
+      "description": "Ask us the 8 questions from the checklist - we answer concretely and with a sample report. Offer within 24 hours.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Request a pentest",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Further reading",
+      "articles": [
+        {
+          "title": "Penetration test providers: The big comparison",
+          "description": "Certifications, red flags and pentest types compared - the detailed overview.",
+          "category": "PENTEST PROVIDERS",
+          "readTime": "8 min read",
+          "readMore": "View page →"
+        },
+        {
+          "title": "Request a pentest: Get an offer in minutes",
+          "description": "Describe your test object - you will receive a concrete fixed-price offer within 24 hours.",
+          "category": "OFFER",
+          "readTime": "2 min",
+          "readMore": "Request now →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
+      "bio": "OSCP-certified penetration testers from Berlin. Over 500 pentests performed for web applications, APIs, networks and Active Directory - with a free retest and a report within 24 hours in German and English."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Was this article helpful?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request a pentest"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The inquiry advice function is not yet implemented.",
+      "saveNotImplemented": "Storage function is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Sending failed. Please try again."
+    }
+  },
+  "pentestVsSchwachstellenscanDetail": {
+    "backToBlog": "Back to blog",
+    "shareArticle": "Share article",
+    "bookmarkArticle": "Bookmark article",
+    "category": "PENTEST BASICS",
+    "date": "Sep 27, 2026",
+    "title": "Pentest vs. Vulnerability Scan: The Difference - and When You Need Which",
+    "description": "Pentest vs. vulnerability scan: What distinguishes the manual attack simulation from the automated scan? The direct comparison with costs, meaningfulness, false positives and usage recommendation.",
+    "author": "Sodu Secure Team",
+    "readTime": "11 min read",
+    "tableOfContents": "Table of Contents",
+    "shareThisArticle": "Share this article",
+    "share": "Share",
+    "save": "Save",
+    "sections": {
+      "introduction": {
+        "title": "Two terms that are constantly confused",
+        "content": "Vulnerability scan and penetration test are often used synonymously in everyday language - and some providers exploit exactly that by selling automated scans as pentests. Yet the difference is fundamental: a vulnerability scan is an automated check that compares systems against a database of known vulnerabilities. A penetration test is a manual, targeted attack simulation by experts. The BSI's practical guide for IS penetration tests describes it like this: automated vulnerability scanners can point out threats - the penetration test goes one step further and specifically searches for ways to circumvent the security measures in place. If you know the difference, you buy the right instrument for the right purpose - and do not pay pentest prices for scan services.",
+        "keyTakeaway": {
+          "title": "The core difference",
+          "content": "A scan automatically checks whether a known vulnerability exists. A pentest manually checks whether and how it can actually be exploited - including chaining multiple vulnerabilities and business logic flaws that no scanner finds. In terms of price: pure scans cost 300-3,000 euros according to CODE-LEIN, manual pentests 4,000-30,000 euros."
+        },
+        "quote": "A scan only checks whether a vulnerability exists - not whether it can actually be exploited. (ORBIT IT-Solutions)"
+      },
+      "commonAttackVectors": {
+        "title": "The direct comparison: 6 differences at a glance",
+        "items": [
+          "Depth: The scan detects known vulnerabilities based on a database or signatures - according to audius, a superficial vulnerability analysis without in-depth tests that cannot simulate exploits or analyze complex attack scenarios. The pentest additionally analyzes business logic, chains multiple vulnerabilities and simulates realistic attack scenarios.",
+          "Method: The scan runs fully automatically with software tools. The pentest combines manual and automated attack simulations and, according to simplisec, requires human expertise and experience.",
+          "Reliability: According to Allgeier CyRis, automated scans carry a risk of false positives and false negatives because there is no verification of the vulnerability through active exploitation. In a pentest, every finding is manually verified - what is in the report is genuinely proven and put into context.",
+          "Meaningfulness: According to simplisec, scans usually offer only limited details. A pentest, according to audius, delivers a detailed analysis of the security posture and a realistic assessment of the attack vectors - including concrete recommendations for your engineers.",
+          "Price: A pure vulnerability scan costs around 300-3,000 euros according to CODE-LEIN, a manual penetration test in Germany 4,000-30,000 euros. Both have their place - it only becomes a problem when a scan is sold at a pentest price.",
+          "Frequency: Scans are suited for continuous operation - according to ORBIT as a continuous, even daily check. A pentest is a targeted snapshot: ORBIT recommends it at least once a year, the BSI practical guide recommends repeat tests every two to three years and emphasizes that results are only valid at the time of testing."
+        ]
+      },
+      "impactAnalysis": {
+        "title": "Why the distinction matters: The threat landscape",
+        "content": "The figures from the BSI report on the state of IT security in Germany 2025 show why pure scan routines are not enough for exposed systems: on average, 119 new vulnerabilities became known every day - a growth of around 24 percent compared to the previous reporting period. Attacks via the active exploitation of vulnerabilities grew by 38 percent according to BSI measurements, and around 80 percent of reported attacks targeted small and medium-sized enterprises. Scanners only find what is already in their databases - the targeted exploitation of configuration and logic flaws remains invisible until a human checks them. Or an attacker finds them.",
+        "statistics": {
+          "title": "BSI situation report 2025 in numbers",
+          "averageCost": {
+            "value": "119",
+            "label": "Newly disclosed vulnerabilities per day on average - up around 24 percent from the previous reporting period (BSI situation report 2025)"
+          },
+          "identificationTime": {
+            "value": "+38 %",
+            "label": "Increase in exploitation attacks per BSI measurements, i.e. the active exploitation of vulnerabilities (BSI situation report 2025)"
+          },
+          "multipleBreaches": {
+            "value": "80 %",
+            "label": "Share of reported attacks that targeted small and medium-sized enterprises (BSI situation report 2025)"
+          }
+        }
+      },
+      "mitigationStrategies": {
+        "title": "When is a scan enough - and when do you need a pentest?",
+        "content": "The right answer is almost never either-or, but a combination: continuous scans as basic hygiene plus manual penetration tests for the systems where a breach really hurts. These eight guidelines help with the decision:",
+        "essentialPractices": {
+          "title": "8 guidelines for practice",
+          "items": [
+            "Establish scans as continuous operation: Regular automated scans - weekly to monthly, more often for exposed systems - are inexpensive basic hygiene and quickly detect newly disclosed vulnerabilities.",
+            "Plan pentests for business-critical, exposed applications: login areas, customer data, payment processes and APIs - here, logic and authorization flaws that no scanner detects are decisive.",
+            "Test on relevant occasions: After major releases, architecture changes or migrations a manual test makes sense - according to the BSI, test results are only valid at the time of testing.",
+            "Use the BSI test depths as orientation: from the technical security audit through the non-invasive vulnerability scan to the invasive test with exploits - in this framework, the scan is only a preliminary stage of the penetration test.",
+            "Address compliance cleanly: If you want to demonstrate requirements from ISO 27001, TISAX or NIS2, the combination of a documented scan routine and a manual pentest is the most robust approach - clarify the concrete evidence requirements with your auditor.",
+            "Clean up scan results before the pentest: Fix known findings in advance so the paid testing days go into depth instead of documenting the already-known.",
+            "Recognize mislabeled products: If a pentest offer is in the price range of a scan (300-3,000 euros according to CODE-LEIN), you will most likely also just get a scan - unless the low price reflects a deliberately narrow fixed-price scope. What matters is the manual share, methodology and a sample report.",
+            "Ensure quality in the pentest: The BSI recommends external, independent testers, a test team of at least two people and white-box tests with moderate attack strength - web tests should follow the OWASP Web Security Testing Guide, the de facto standard for web application pentests."
+          ]
+        }
+      },
+      "conclusion": {
+        "title": "Conclusion: Both instruments have their place",
+        "content1": "The vulnerability scan delivers breadth and continuity: it monitors inexpensively and automatically whether known vulnerabilities appear in your systems. The penetration test delivers depth and certainty: it shows what a real attacker could actually do with your systems - verified, prioritized and with concrete recommendations. Those who only scan see the mass of known vulnerabilities, but not the critical attack paths. Those who only pentest every few years are blind to new issues between tests. The combination of both is the most robust approach.",
+        "content2": "Sodu Secure performs manual penetration tests based on OWASP and the recommendations of the BSI practical guide - with OSCP-certified testers, a free retest and a report within 24 hours in German and English. Web app pentests start from 1,499 euros, network and Active Directory tests from 2,500 euros. Via the request form you will receive a concrete offer within one business day."
+      }
+    },
+    "tags": [
+      "Vulnerability scan",
+      "Pentest vs scan",
+      "Vulnerability assessment",
+      "Penetration test",
+      "False positives",
+      "IT security"
+    ],
+    "cta": {
+      "title": "A real pentest instead of a scan report?",
+      "description": "Manual penetration tests with verified findings - web app pentests from 1,499 euros, offer within 24 hours.",
+      "emailPlaceholder": "Enter email",
+      "buttonText": "Request a pentest",
+      "disclaimer": "No spam, unsubscribe anytime"
+    },
+    "relatedArticles": {
+      "title": "Further reading",
+      "articles": [
+        {
+          "title": "Penetration testing: definition, process and costs",
+          "description": "The complete overview based on BSI methodology - types, standards, phases and what a test costs.",
+          "category": "PENETRATION TEST",
+          "readTime": "6 min read",
+          "readMore": "View page →"
+        },
+        {
+          "title": "Pentest: Process, methodology and prices",
+          "description": "How a pentest at Sodu Secure works - from scoping to the free retest.",
+          "category": "PENTEST",
+          "readTime": "6 min read",
+          "readMore": "View page →"
+        }
+      ]
+    },
+    "authorBio": {
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
+      "bio": "OSCP-certified penetration testers from Berlin. Over 500 pentests performed for web applications, APIs, networks and Active Directory - with a free retest and a report within 24 hours in German and English."
+    },
+    "mobileActions": {
+      "enjoyedArticle": "Was this article helpful?",
+      "shareWithNetwork": "Share with your network",
+      "getHelp": "Request a pentest"
+    },
+    "toasts": {
+      "linkCopied": "Link copied to clipboard!",
+      "consultationNotImplemented": "The inquiry advice function is not yet implemented.",
+      "saveNotImplemented": "Storage function is not yet implemented.",
+      "invalidEmail": "Please enter a valid email address.",
+      "emailSent": "Thanks! Your request has been sent.",
+      "emailFailed": "Sending failed. Please try again."
     }
   }
 }
