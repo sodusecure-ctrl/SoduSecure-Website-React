@@ -22,6 +22,54 @@ import {
 import { SectionLabel, SectionLabelDark } from './ui';
 import { useBrand } from './BrandContext';
 import TestimonialsMarquee from './TestimonialsMarquee';
+import LandingFaq, { type LandingFaqItem } from '@/components/common/LandingFaq';
+
+// Muss inhaltlich mit dem faqSchema in src/app/page.tsx übereinstimmen (DE-Fragen).
+const faqDe: LandingFaqItem[] = [
+  {
+    q: 'Was ist der Unterschied zwischen Sodu /Pentest und Sodu /AuditAI?',
+    a: 'Sodu /Pentest ist ein manueller, punktueller Penetrationstest durch zertifizierte Tester: echte Angriffe, reproduzierbare Proof-of-Concepts und ein klarer Bericht. Sodu /AuditAI ist ein kontinuierliches, KI-gestütztes Code-Review, das jede Woche einen Sicherheitsbericht zu Ihrem Repository liefert. Der Pentest prüft den Ist-Zustand in der Tiefe, AuditAI schützt zwischen den Releases - beides lässt sich kombinieren.',
+  },
+  {
+    q: 'Was kostet ein Pentest bei Sodu Secure?',
+    a: 'Ein Pentest bei Sodu Secure startet zum Festpreis: kompakte Web-App- und API-Tests ab 1.499 €, Netzwerk- und Active-Directory-Pentests ab 2.500 €. Nach Ihrer Anfrage erhalten Sie innerhalb von 24 Stunden ein verbindliches Angebot. Im Preis enthalten sind der Bericht in Deutsch und Englisch sowie der kostenlose Retest nach der Behebung.',
+  },
+  {
+    q: 'Ist der Zugriff auf mein Repository bei Sodu /AuditAI read-only?',
+    a: 'Ja. Ihr Repository wird ausschließlich read-only über eine GitHub-App oder einen Token geklont - wir können zu keinem Zeitpunkt in Ihren Code schreiben. Jede Analyse läuft in einer isolierten, kurzlebigen Umgebung, langlebige Secrets speichern wir nicht. Das Ergebnis erhalten Sie als wöchentlichen Bericht, ohne ein neues Dashboard einführen zu müssen.',
+  },
+  {
+    q: 'Wer führt die Penetrationstests bei Sodu Secure durch?',
+    a: 'Die Penetrationstests bei Sodu Secure führen OSCP-, OSWE- und CEH-zertifizierte Tester aus Berlin durch - manuell statt reinem Scanner-Einsatz, mit der Erfahrung aus über 500 durchgeführten Pentests. Jedes Finding wird mit einem reproduzierbaren Proof-of-Concept belegt und mit konkreten Fix-Empfehlungen dokumentiert. Getestet wird remote oder auf Wunsch vor Ort.',
+  },
+  {
+    q: 'Wie schnell kann Sodu Secure mit einem Pentest starten?',
+    a: 'Auf Ihre Anfrage antwortet Sodu Secure innerhalb von 24 Stunden mit einem verbindlichen Festpreis-Angebot. Im kurzen Scoping-Gespräch legen wir Ziele, Umfang und Prüftiefe fest und stimmen den Testzeitraum mit Ihrem Team ab. Nach dem Test erhalten Sie den Bericht in Deutsch und Englisch; der Retest der behobenen Schwachstellen ist kostenlos enthalten.',
+  },
+];
+
+const faqEn: LandingFaqItem[] = [
+  {
+    q: 'What is the difference between Sodu /Pentest and Sodu /AuditAI?',
+    a: 'Sodu /Pentest is a manual, point-in-time penetration test by certified testers: real attacks, reproducible proof-of-concepts and a clear report. Sodu /AuditAI is a continuous, AI-driven code review that delivers a weekly security report for your repository. The pentest examines the current state in depth, AuditAI protects between releases - and both can be combined.',
+  },
+  {
+    q: 'What does a pentest at Sodu Secure cost?',
+    a: 'A pentest at Sodu Secure starts at a fixed price: compact web app and API tests from €1,499, network and Active Directory pentests from €2,500. After your request you receive a binding quote within 24 hours. The price includes a report in German and English plus a free retest after remediation.',
+  },
+  {
+    q: 'Is access to my repository read-only with Sodu /AuditAI?',
+    a: 'Yes. Your repository is cloned strictly read-only via a GitHub App or token - we can never write to your code. Every analysis runs in an isolated, short-lived environment and we store no long-lived secrets. You receive the result as a weekly report, without having to introduce a new dashboard.',
+  },
+  {
+    q: 'Who performs the penetration tests at Sodu Secure?',
+    a: 'Penetration tests at Sodu Secure are performed by OSCP, OSWE and CEH certified testers from Berlin - manually instead of pure scanner output, backed by the experience of more than 500 pentests delivered. Every finding is documented with a reproducible proof of concept and concrete fix recommendations. Testing is done remotely or on site on request.',
+  },
+  {
+    q: 'How quickly can Sodu Secure start a pentest?',
+    a: 'Sodu Secure replies to your request within 24 hours with a binding fixed-price quote. In a short scoping call we define goals, scope and test depth and align the testing window with your team. After the test you receive the report in German and English; the retest of fixed findings is included free of charge.',
+  },
+];
 
 type BrandCopy = {
   heroH1Top: React.ReactNode;
@@ -1003,6 +1051,13 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
+
+      {/* FAQ (Schema kommt aus src/app/page.tsx - deshalb withSchema={false}) */}
+      <LandingFaq
+        faqs={isDe ? faqDe : faqEn}
+        headline={isDe ? 'Häufige Fragen' : 'Frequently asked questions'}
+        withSchema={false}
+      />
     </main>
   );
 }

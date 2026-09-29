@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from 'next';
+import { FAQS } from './faq';
 
 export const metadata: Metadata = {
   title: 'Hacker-Simulation | Angriff sofort simulieren lassen',
@@ -46,11 +47,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: [
-              { '@type': 'Question', name: 'Was ist eine Hacker Simulation?', acceptedAnswer: { '@type': 'Answer', text: 'Bei einer Hacker Simulation (Ethical Hacking / Penetrationstest) simulieren autorisierte Sicherheitsexperten einen echten Cyberangriff auf Ihr Unternehmen. Ziel ist es, Schwachstellen zu finden, bevor echte Hacker es tun.' } },
-              { '@type': 'Question', name: 'Wie viel kostet eine Hacker Simulation?', acceptedAnswer: { '@type': 'Answer', text: 'Eine professionelle Hacker Simulation kostet ab 1.499 € als Festpreis. Sodu Secure berechnet den genauen Preis per Online-Konfigurator – sofort und unverbindlich.' } },
-              { '@type': 'Question', name: 'Ist Hacker Simulation legal?', acceptedAnswer: { '@type': 'Answer', text: 'Ja – autorisiertes Ethical Hacking (Penetrationstest) ist vollständig legal. Sodu Secure führt alle Tests ausschließlich mit schriftlicher Genehmigung des Systemeigentümers durch.' } },
-            ],
+            mainEntity: FAQS.map((faq) => ({
+              '@type': 'Question',
+              name: faq.q,
+              acceptedAnswer: { '@type': 'Answer', text: faq.a },
+            })),
           }),
         }}
       />

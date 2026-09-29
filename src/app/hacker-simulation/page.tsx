@@ -22,6 +22,7 @@ import {
   Lock,
   Activity,
 } from "lucide-react";
+import { FAQS } from "./faq";
 
 const PHONE = "(+49) 01777750985";
 const PHONE_HREF = "tel:+491777750985";
@@ -43,15 +44,6 @@ const UNTERSCHIED = [
   { aspect: "Ergebnis", simulation: "Vollständige Angriffsketten mit PoC", scan: "CVE-Liste mit CVSS-Score" },
   { aspect: "Wert für NIS2", simulation: "Vollständiger Nachweis (Art. 21)", scan: "Eingeschränkt (nicht ausreichend)" },
   { aspect: "Preis (SODU)", simulation: "ab 1.499 € Festpreis", scan: "650 € – 1.500 €" },
-];
-
-const FAQS = [
-  { q: "Was ist eine Hacker Simulation?", a: "Bei einer Hacker Simulation (auch Penetrationstest oder Ethical Hacking) greifen autorisierte Sicherheitsexperten Ihr Unternehmen mit denselben Methoden an wie echte Hacker. Das Ziel: Schwachstellen finden und beheben, bevor echte Angreifer sie ausnutzen." },
-  { q: "Ist eine Hacker Simulation legal?", a: "Ja – autorisiertes Ethical Hacking ist vollständig legal. Sodu Secure führt alle Tests ausschließlich mit schriftlicher Genehmigung des Systeminhabers und in klar definiertem Scope durch. Wir stellen alle rechtlichen Dokumente (NDA, ROE, Scope-Agreement) bereit." },
-  { q: "Was kostet eine Hacker Simulation?", a: "Eine professionelle Hacker Simulation kostet bei Sodu Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Umfang ab (ein System vs. gesamtes Unternehmen). Über den Konfigurator erhalten Sie sofort ein Festpreisangebot – kein Tagessatz." },
-  { q: "Wie unterscheidet sich Hacker Simulation von einem Pentest?", a: "Hacker Simulation und Penetrationstest sind weitgehend synonym. Eine Hacker Simulation betont die Realitätsnähe – echte Angriffstechniken, echte Tools (Metasploit, BloodHound, Burp Suite), echte Proof-of-Concepts. Sodu Secure kombiniert klassischen OWASP-basierten Pentest mit simulierten Angriffen." },
-  { q: "Wie lange dauert eine Hacker Simulation?", a: "Eine fokussierte Hacker Simulation (z.B. nur Web-App) dauert 2–3 Tage. Eine vollständige Unternehmens-Simulation (Web + Netzwerk + AD + Phishing) 1–2 Wochen. Der Bericht wird 48 Stunden nach Testende geliefert." },
-  { q: "Was passiert wenn die Hacker Simulation kritische Lücken findet?", a: "Bei kritischen Findings kommunizieren wir sofort – noch während des Tests, bevor der Abschlussbericht fertig ist. Sie erhalten Sofortmaßnahmen und können direkt reagieren. Anschließend folgen detaillierter Bericht und kostenloser Retest." },
 ];
 
 export default function HackerSimulationPage() {
@@ -232,9 +224,7 @@ export default function HackerSimulationPage() {
                 <span className="font-medium text-white text-sm sm:text-base">{faq.q}</span>
                 {openFaq === i ? <ChevronUp className="w-5 h-5 text-[#FF3B30] flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
               </button>
-              {openFaq === i && (
-                <div className="px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
-              )}
+              <div className={`px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4 ${openFaq === i ? "" : "hidden"}`}>{faq.a}</div>
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
 ﻿import type { Metadata } from 'next';
+import { FAQS } from './faq';
 
 export const metadata: Metadata = {
   title: 'Schwachstellenanalyse | Sofort alle Sicherheitslücken finden',
@@ -46,11 +47,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: [
-              { '@type': 'Question', name: 'Was ist eine Schwachstellenanalyse?', acceptedAnswer: { '@type': 'Answer', text: 'Eine Schwachstellenanalyse (Vulnerability Assessment) ist eine systematische Prüfung Ihrer IT-Systeme auf bekannte Sicherheitslücken. Anders als beim Penetrationstest werden Schwachstellen identifiziert und bewertet, aber nicht aktiv ausgenutzt.' } },
-              { '@type': 'Question', name: 'Was ist der Unterschied zwischen Schwachstellenanalyse und Penetrationstest?', acceptedAnswer: { '@type': 'Answer', text: 'Bei der Schwachstellenanalyse werden Sicherheitslücken identifiziert und bewertet (CVSS). Beim Penetrationstest werden sie zusätzlich manuell ausgenutzt, um echte Angriffswege zu beweisen. Sodu Secure bietet beide Varianten als Festpreis.' } },
-              { '@type': 'Question', name: 'Was kostet eine Schwachstellenanalyse?', acceptedAnswer: { '@type': 'Answer', text: 'Eine professionelle Schwachstellenanalyse kostet bei Sodu Secure ab 800 € als Festpreis. Der genaue Preis wird per Online-Konfigurator sofort berechnet.' } },
-            ],
+            mainEntity: FAQS.map((faq) => ({
+              '@type': 'Question',
+              name: faq.q,
+              acceptedAnswer: { '@type': 'Answer', text: faq.a },
+            })),
           }),
         }}
       />

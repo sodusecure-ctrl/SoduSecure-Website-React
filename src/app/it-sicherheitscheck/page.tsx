@@ -25,6 +25,7 @@ import {
   ExternalLink,
   Timer,
 } from "lucide-react";
+import { FAQS } from "./faq";
 
 const PHONE = "(+49) 01777750985";
 const PHONE_HREF = "tel:+491777750985";
@@ -45,15 +46,6 @@ const ABLAUF = [
   { step: "02", title: "Kick-off & Zugangs­einrichtung – 1 Tag", desc: "Kurzes Kick-off (30 Min.), VPN-Zugang oder Test-Account einrichten. Zeitplan für 2–5 Testtage festlegen.", icon: Timer },
   { step: "03", title: "Manueller Sicherheitscheck – 2–5 Tage", desc: "OSCP-zertifizierte Pentester führen den manuellen IT Sicherheitscheck durch. Tägliche Status-Updates.", icon: Shield },
   { step: "04", title: "Bericht & Präsentation – 48 h", desc: "Detaillierter Pentest-Bericht mit CVSS 3.1, Proof-of-Concepts, Sofortmaßnahmen und Road­map. Persönliche Abschlusspräsentation.", icon: FileText },
-];
-
-const FAQS = [
-  { q: "Was ist ein IT Sicherheitscheck?", a: "Ein IT Sicherheitscheck (auch IT Security Check) ist eine systematische manuelle Prüfung Ihrer IT-Infrastruktur durch Sicherheitsexperten. Im Gegensatz zu automatisierten Scannern decken zertifizierte Pentester auch komplexe Logikfehler und Angriffsketten auf." },
-  { q: "Wie schnell erhalte ich Ergebnisse?", a: "Sodu Secure liefert den vollständigen IT Sicherheitscheck-Bericht innerhalb von 48 Stunden nach Testabschluss. Für kritische Findings kommunizieren wir sofort während des Tests. Das macht uns zu einem der schnellsten Pentest-Anbieter in Deutschland." },
-  { q: "Was kostet ein IT Sicherheitscheck?", a: "Ein IT Sicherheitscheck kostet bei Sodu Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Umfang (Web-App, Netzwerk, AD, Cloud) ab. Nutzen Sie den Konfigurator für sofortige Preistransparenz – kein Verkaufsgespräch nötig." },
-  { q: "Kann ein IT Sicherheitscheck remote durchgeführt werden?", a: "Ja – der IT Sicherheitscheck wird vollständig remote über VPN oder Test-Account durchgeführt. Für interne Infrastruktur-Checks kann optional auch ein Vor-Ort-Einsatz in Berlin und Umgebung vereinbart werden." },
-  { q: "Welche Compliance-Anforderungen erfüllt ein IT Sicherheitscheck?", a: "Ein Sodu Secure IT Sicherheitscheck liefert Nachweise für NIS2 (Art. 21 Risikomanagement), ISO 27001 (Annex A), DSGVO Art. 32 und DORA. Der Bericht ist für die Vorlage bei Behörden und Versicherungen geeignet." },
-  { q: "Was ist der Unterschied zwischen IT Sicherheitscheck und Penetrationstest?", a: "Die Begriffe werden oft synonym verwendet. Ein IT Sicherheitscheck ist oft etwas breiter gefasst und kann neben technischem Testing auch Prozess- und Konfigurationsprüfungen umfassen. Ein Penetrationstest fokussiert tiefer auf die aktive Exploitation von Schwachstellen. Sodu Secure kombiniert beides." },
 ];
 
 export default function ITSicherheitscheckPage() {
@@ -254,9 +246,7 @@ export default function ITSicherheitscheckPage() {
                 <span className="font-medium text-white text-sm sm:text-base">{faq.q}</span>
                 {openFaq === i ? <ChevronUp className="w-5 h-5 text-green-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
               </button>
-              {openFaq === i && (
-                <div className="px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
-              )}
+              <div className={`px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4 ${openFaq === i ? "" : "hidden"}`}>{faq.a}</div>
             </div>
           ))}
         </div>

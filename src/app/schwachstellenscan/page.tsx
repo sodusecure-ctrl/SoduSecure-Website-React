@@ -7,6 +7,7 @@ import {
   Phone, Mail, AlertTriangle, Globe, Server, Cloud,
   FileText, Lock, Repeat, Search, BarChart3, ListChecks,
 } from "lucide-react";
+import { FAQS } from "./faq";
 
 const PHONE_HREF = "tel:+491777750985";
 const EMAIL_HREF = "mailto:info@sodusecure.com";
@@ -64,33 +65,6 @@ const STATS = [
   { stat: "25+", label: "neue Schwachstellen (CVEs) werden im Schnitt pro Tag veröffentlicht" },
   { stat: "0", label: "False-Positive-Rohberichte – jedes Ergebnis wird manuell validiert" },
   { stat: "48h", label: "bis zum priorisierten Ergebnisbericht nach Scan-Abschluss" },
-];
-
-const FAQS = [
-  {
-    q: "Was ist der Unterschied zwischen Schwachstellenscan und Pentest?",
-    a: "Ein Schwachstellenscan prüft automatisiert und regelmäßig auf bekannte Schwachstellen – breit und wiederholbar. Ein Penetrationstest geht deutlich tiefer: Zertifizierte Pentester verketten Schwachstellen manuell zu echten Angriffspfaden und finden Logikfehler, die kein Scanner erkennt. Ideal ist die Kombination: regelmäßige Scans plus ein jährlicher Pentest.",
-  },
-  {
-    q: "Wie oft sollte ein Schwachstellenscan durchgeführt werden?",
-    a: "Empfohlen sind mindestens quartalsweise Scans, für exponierte Systeme monatlich. Standards wie ISO 27001 und NIS2 verlangen ein kontinuierliches Schwachstellenmanagement – ein einmaliger Scan reicht dafür nicht aus.",
-  },
-  {
-    q: "Was kostet ein Schwachstellenscan?",
-    a: "Ein einzelner externer Scan mit validiertem Bericht beginnt ab 490 €. Wiederkehrende Scans im Abo (quartalsweise, inkl. Re-Scans und Trend-Reporting) ab 990 € pro Quartal. Der genaue Preis hängt von der Anzahl der Systeme ab – Festpreisangebot in 24h.",
-  },
-  {
-    q: "Erzeugt der Scan Ausfälle oder Störungen?",
-    a: "Nein. Wir verwenden produktionssichere Scan-Profile und stimmen Zeitfenster mit Ihnen ab. Aggressive Tests, die Systeme stören könnten, gehören in einen Pentest mit explizitem Scope – nicht in einen regelmäßigen Scan.",
-  },
-  {
-    q: "Bekomme ich nur einen Rohbericht aus dem Scanner?",
-    a: "Nein – das ist der zentrale Unterschied zu reinen Scan-Tools: Unsere Pentester validieren jedes Ergebnis, entfernen False Positives und priorisieren nach echtem Risiko für Ihr Unternehmen. Sie erhalten eine umsetzbare Maßnahmenliste, keinen 300-Seiten-Export.",
-  },
-  {
-    q: "Zählt der Schwachstellenscan als Nachweis für ISO 27001 oder NIS2?",
-    a: "Ja. Regelmäßige, dokumentierte Schwachstellenscans mit nachverfolgter Behebung sind ein anerkannter Baustein des technischen Schwachstellenmanagements nach ISO 27001 (A.8.8) und der Risikomaßnahmen nach NIS2 Art. 21.",
-  },
 ];
 
 const COMPLIANCE_ITEMS = [
@@ -281,7 +255,7 @@ export default function SchwachstellenscanPage() {
                   <span className="font-medium">{faq.q}</span>
                   {openFaq === i ? <ChevronUp className="w-5 h-5 text-white/60 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
                 </button>
-                {openFaq === i && <div className="px-5 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/10 pt-4">{faq.a}</div>}
+                <div className={`px-5 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/10 pt-4 ${openFaq === i ? "" : "hidden"}`}>{faq.a}</div>
               </div>
             ))}
           </div>

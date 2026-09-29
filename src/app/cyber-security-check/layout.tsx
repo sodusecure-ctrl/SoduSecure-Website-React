@@ -1,4 +1,5 @@
 ﻿import { Metadata } from 'next';
+import { FAQS } from './faq';
 const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'Cyber Security Check | IT-Sicherheitscheck für Unternehmen',
@@ -11,5 +12,15 @@ export const metadata: Metadata = {
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
   const jsonLd = { '@context': 'https://schema.org', '@type': 'ProfessionalService', name: 'Sodu Secure – Cyber Security Check', url: `${baseUrl}/cyber-security-check`, logo: `${baseUrl}/icons/logo.png`, address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' }, telephone: '+49-177-7750985', email: 'info@sodusecure.com', priceRange: '€€', areaServed: ['Germany', 'Austria', 'Switzerland'] };
-  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />{children}</>);
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
+  };
+
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />{children}</>);
 }

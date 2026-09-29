@@ -22,6 +22,7 @@ import {
   Zap,
   RotateCcw,
 } from "lucide-react";
+import { FAQS } from "./faq";
 
 const PHONE = "(+49) 01777750985";
 const PHONE_HREF = "tel:+491777750985";
@@ -42,15 +43,6 @@ const ABLAUF = [
   { step: "02", title: "Kick-off & Setup (½ Tag)", desc: "30-minütiger Kick-off-Call, Scope-Bestätigung, VPN-Zugang oder Test-Account-Einrichtung. Teststart in derselben oder nächsten Woche." },
   { step: "03", title: "Manueller Sicherheitstest (2–10 Tage)", desc: "OSCP-zertifizierte Pentester testen manuell. Keine Scanner-Reports. Tägliche Status-Updates bei laufenden Findings." },
   { step: "04", title: "Bericht + Retest (48 h nach Test)", desc: "Vollständiger Pentest-Bericht: CVSS 3.1, PoC, Maßnahmen, Compliance-Mapping. Kostenloser Retest kritischer Findings." },
-];
-
-const FAQS = [
-  { q: "Was bedeutet IT Sicherheit testen?", a: "IT Sicherheit testen bedeutet, die eigene IT-Infrastruktur – Web-Apps, Netzwerke, Cloud, Active Directory – gezielt auf Schwachstellen zu prüfen, bevor Angreifer sie finden. Ein professioneller IT Sicherheitstest wird von zertifizierten Experten manuell durchgeführt." },
-  { q: "Wie oft sollte ich IT Sicherheit testen lassen?", a: "Mindestens einmal jährlich, und nach jeder größeren Systemänderung (Deployment, neue Infrastruktur). NIS2 und ISO 27001 fordern regelmäßige Sicherheitsprüfungen. Viele Unternehmen testen halbjährlich oder nach jedem Release-Zyklus." },
-  { q: "Was kostet ein IT Sicherheitstest?", a: "Ein professioneller IT Sicherheitstest kostet bei Sodu Secure ab 1.499 € als Festpreis. Nutzen Sie den Online-Konfigurator für sofortigen Preis – kein Tagessatz, kein Überraschungsbudget." },
-  { q: "Kann ich IT Sicherheit remote testen lassen?", a: "Ja – alle IT Sicherheitstests können vollständig remote über VPN oder Test-Account durchgeführt werden. Sodu Secure testet deutschlandweit und international." },
-  { q: "Was sind die häufigsten Schwachstellen beim IT Sicherheitstest?", a: "Die häufigsten Findings: schwache Authentifizierung (72 %), veraltete Software/CVEs (68 %), unsichere API-Endpunkte (61 %), Active Directory-Fehlkonfigurationen (55 %), überprivilegierte Cloud-Rollen (49 %)." },
-  { q: "Bekomme ich nach dem IT Sicherheitstest Unterstützung bei der Behebung?", a: "Ja – der Sodu Secure Pentest-Bericht enthält konkrete Remediation-Empfehlungen für jedes Finding. Optional bieten wir einen kostenlosen Retest kritischer Lücken an, um die Behebung zu verifizieren." },
 ];
 
 export default function ITSicherheitTestenPage() {
@@ -202,9 +194,7 @@ export default function ITSicherheitTestenPage() {
                 <span className="font-medium text-white text-sm sm:text-base">{faq.q}</span>
                 {openFaq === i ? <ChevronUp className="w-5 h-5 text-purple-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
               </button>
-              {openFaq === i && (
-                <div className="px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
-              )}
+              <div className={`px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4 ${openFaq === i ? "" : "hidden"}`}>{faq.a}</div>
             </div>
           ))}
         </div>

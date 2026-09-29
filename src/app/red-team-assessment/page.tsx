@@ -8,6 +8,7 @@ import {
   Phone, Mail, Target, Eye, Zap, Network, Globe, Lock,
   AlertTriangle, FileText, Users, Swords, Radio, Layers,
 } from "lucide-react";
+import { FAQS } from "./faq";
 
 const PHONE_HREF = "tel:+491777750985";
 const EMAIL_HREF = "mailto:info@sodusecure.com";
@@ -42,33 +43,6 @@ const COMPLIANCE_ITEMS = [
   { name: "NIS2 Richtlinie", desc: "Art. 21 NIS2: Hochsicherheits-Einrichtungen benötigen fortgeschrittene Sicherheitstests. Red Team Assessments sind der anerkannte Nachweis." },
   { name: "ISO 27001", desc: "Red Team Assessments decken A.8.8 (Vulnerability Management) und A.5.7 (Threat Intelligence) vollständig ab." },
   { name: "TIBER-EU Framework", desc: "Das europäische TIBER-EU Framework für kritische Finanzinfrastrukturen basiert auf Red Team Methodology." },
-];
-
-const FAQS = [
-  {
-    q: "Was ist ein Red Team Assessment?",
-    a: "Ein Red Team Assessment ist eine vollständige, realistische Simulation eines gezielten Cyberangriffs gegen Ihre Organisation durch ein dediziertes Angreifer-Team (Red Team). Anders als ein Penetrationstest ist der Umfang nicht auf einzelne Systeme begrenzt – das Red Team nutzt alle verfügbaren Angriffsmethoden: technische, soziale und physische. Das Ziel ist nicht nur Schwachstellen zu finden, sondern zu zeigen, wie weit ein echter Angreifer in Ihrer Organisation kommt.",
-  },
-  {
-    q: "Wer braucht ein Red Team Assessment?",
-    a: "Red Team Assessments sind für Unternehmen mit höherem Sicherheitsreifegrad geeignet: wenn bereits Pentests durchgeführt wurden, ein SOC vorhanden ist, oder regulatorische Anforderungen (DORA, NIS2, TIBER-EU) advanced testing erfordern. Für kleinere Unternehmen ohne eigenes Security-Team empfehlen wir zuerst einen Pentest.",
-  },
-  {
-    q: "Was ist der Unterschied zwischen Red Team und Pentest?",
-    a: "Ein Pentest prüft spezifische Systeme auf Schwachstellen in einem definierten Zeitfenster. Ein Red Team Assessment simuliert einen langfristigen, zielgerichteten Angriff gegen die gesamte Organisation – inklusive Social Engineering, physische Versuche und Evasion vor Detection-Systemen. Der Blue Team weiß beim Red Team meist nicht, wann der Angriff stattfindet.",
-  },
-  {
-    q: "Wie lange dauert ein Red Team Assessment?",
-    a: "Typischerweise 4–12 Wochen, je nach Scope. Die Planungsphase dauert 1–2 Wochen, die aktive Angriffsphase 2–8 Wochen, danach Berichterstellung und Präsentation.",
-  },
-  {
-    q: "Was kostet ein Red Team Assessment?",
-    a: "Red Team Assessments beginnen bei 8.000 € für kleinere Scopes (SME) und reichen bis 50.000 € für vollständige Enterprise-Assessments mit mehreren Angriffsvektoren. Nach einem NDI-gesicherten Scoping-Gespräch erhalten Sie ein detailliertes Festpreisangebot.",
-  },
-  {
-    q: "Was ist DORA TLPT und brauche ich das?",
-    a: "TLPT (Threat-Led Penetration Testing) ist eine Anforderung des Digital Operational Resilience Act (DORA) für Finanzunternehmen ab 2025. Sodu Secure führt TLPT-konforme Red Team Assessments mit entsprechender Dokumentation durch.",
-  },
 ];
 
 export default function RedTeamAssessmentPage() {
@@ -228,7 +202,7 @@ export default function RedTeamAssessmentPage() {
                   <span className="font-medium">{faq.q}</span>
                   {openFaq === i ? <ChevronUp className="w-5 h-5 text-white/60 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
                 </button>
-                {openFaq === i && <div className="px-5 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/10 pt-4">{faq.a}</div>}
+                <div className={`px-5 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/10 pt-4 ${openFaq === i ? "" : "hidden"}`}>{faq.a}</div>
               </div>
             ))}
           </div>

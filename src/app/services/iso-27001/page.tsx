@@ -93,7 +93,22 @@ const faq = [
     q: "Welche Quellen akzeptieren Auditoren?",
     a: "Auditoren akzeptieren normnahe Nachweise wie Richtlinien, Risikoakten, interne Auditprotokolle, Management-Reviews und technische Testberichte mit nachvollziehbarer Methodik.",
   },
+  {
+    q: "Was kostet ein Pentest für ISO 27001?",
+    a: "Ein Pentest für ISO 27001 startet bei Sodu Secure ab 1.499 € Festpreis für kompakte Web-Apps oder APIs; Netzwerk- und Active-Directory-Tests beginnen ab 2.500 €. Sie erhalten innerhalb von 24 Stunden ein Angebot, einen Bericht in Deutsch und Englisch als Audit-Nachweis sowie einen kostenlosen Retest nach Behebung der Findings.",
+  },
 ];
+
+// FAQPage-JSON-LD aus GENAU dem sichtbaren faq-Array (Single Source).
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
 
 const sources = [
   {
@@ -214,14 +229,21 @@ export default function ISO27001ServicePage() {
       </section>
 
       <section className="border-y border-gray-800 bg-[#0b0f18] py-14 lg:py-20">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+        />
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-bold sm:text-4xl">Haeufige Fragen</h2>
           <div className="mt-8 space-y-4">
             {faq.map((item) => (
-              <article key={item.q} className="rounded-xl border border-gray-800 bg-[#131927] p-6">
-                <h3 className="font-semibold text-red-400">{item.q}</h3>
+              <details key={item.q} className="group rounded-xl border border-gray-800 bg-[#131927] p-6">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-red-400">
+                  <span>{item.q}</span>
+                  <span aria-hidden className="text-xl leading-none text-red-400 transition-transform group-open:rotate-45">+</span>
+                </summary>
                 <p className="mt-2 text-sm leading-relaxed text-gray-300">{item.a}</p>
-              </article>
+              </details>
             ))}
           </div>
         </div>

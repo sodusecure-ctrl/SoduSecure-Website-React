@@ -1,4 +1,5 @@
 ﻿import { Metadata } from 'next';
+import { FAQS } from './faq';
 
 const baseUrl = 'https://sodusecure.com';
 
@@ -106,40 +107,11 @@ export default function PenetrationTestingLayout({ children }: { children: React
   const jsonLdFaq = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Was ist ein Penetrationstest?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ein Penetrationstest (Pentest) ist ein autorisierter, simulierter Angriff auf ein IT-System, um Sicherheitslücken zu identifizieren, bevor ein echter Angreifer sie ausnutzen kann. Dabei werden manuelle Techniken eingesetzt, um Schwachstellen zu verketten und reale Angriffspfade nachzuweisen.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was kostet ein Penetrationstest?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ein Penetrationstest kostet bei Sodu Secure ab 1.499 € für fokussierte Web-App-Tests bis 15.000 €+ für umfassende KMU-Engagements inkl. Active Directory und Phishing-Simulation. Alle Preise sind Festpreise ohne versteckte Tagessätze.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Wie lange dauert ein Penetrationstest?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ein fokussierter Web-App-Pentest dauert 3–5 Werktage. Ein vollständiges KMU-Engagement inkl. Active Directory und Phishing dauert 7–15 Werktage. Die genaue Dauer hängt vom Scope und der Anzahl der Zielsysteme ab.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Was ist der Unterschied zwischen Pentesting und Vulnerability Scanning?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Ein Vulnerability Scan ist automatisiert und liefert eine Liste potenzieller Schwachstellen ohne manuelle Validierung. Beim Pentesting werden diese Schwachstellen von menschlichen Experten aktiv ausgenutzt, zu Angriffspfaden verknüpft und auf echte Ausnutzbarkeit geprüft – mit null Falschmeldungen.',
-        },
-      },
-    ],
+    mainEntity: FAQS.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: { '@type': 'Answer', text: faq.a },
+    })),
   };
 
   const jsonLdBreadcrumb = {

@@ -3,6 +3,30 @@
 import Link from "next/link";
 import { Shield, ArrowLeft } from "lucide-react";
 import TR03161Form from "@/components/common/TR03161Form";
+import LandingFaq from "@/components/common/LandingFaq";
+
+const FAQS = [
+  {
+    q: "Wie läuft die TR-03161 Sicherheitsprüfung nach der Anfrage ab?",
+    a: "Nach Ihrer TR-03161-Anfrage melden wir uns innerhalb von 1 - 2 Werktagen für ein kostenloses Erstgespräch. Anschließend folgen eine Gap-Analyse gegen die Prüfaspekte der Richtlinie, Penetrationstests von mobiler App, Web-Anwendung und Backend sowie ein detaillierter Bericht mit priorisierten Empfehlungen. Auf Wunsch begleiten wir Sie bis zur offiziellen Zertifizierung durch eine BSI-anerkannte Prüfstelle.",
+  },
+  {
+    q: "Was kostet eine TR-03161 Sicherheitsprüfung?",
+    a: "Die Kosten einer TR-03161 Sicherheitsprüfung richten sich nach dem Umfang: Anzahl der Komponenten (mobile App, Web-Frontend, Backend/APIs), Komplexität und gewünschte Prüftiefe. Kompakte Web-App- oder API-Prüfungen beginnen bei 1.499 € als Festpreis. Nach dem Erstgespräch erhalten Sie ein verbindliches Festpreis-Angebot, sodass Sie volle Kostentransparenz vor Projektstart haben.",
+  },
+  {
+    q: "Ersetzt die TR-03161-Prüfung das offizielle BSI-Zertifikat?",
+    a: "Nein. Das offizielle TR-03161-Zertifikat darf nur eine vom BSI anerkannte Prüfstelle ausstellen. Unsere Prüfung ist die Vorbereitung darauf: Wir identifizieren Schwachstellen und offene Anforderungen vorab, damit Sie die Zertifizierung möglichst beim ersten Anlauf bestehen und teure Nachprüfungen sowie Verzögerungen beim DiGA-Antrag vermeiden.",
+  },
+  {
+    q: "Welche Unterlagen benötige ich für die TR-03161-Anfrage?",
+    a: "Für die TR-03161-Anfrage genügen die Angaben im Formular: Ihre Anwendung, die betroffenen Komponenten und der aktuelle Entwicklungsstand. Technische Details wie Architektur, Testzugänge oder vorhandene Dokumentation klären wir gemeinsam im kostenlosen Erstgespräch. Sie müssen also nichts weiter vorbereiten, um die Anfrage zu stellen.",
+  },
+  {
+    q: "Wer führt die Sicherheitsprüfung durch?",
+    a: "Die Prüfung führen OSCP-, OSWE- und CEH-zertifizierte Penetrationstester von Sodu Secure aus Berlin durch. Die Methodik orientiert sich an den Prüfaspekten der TR-03161 sowie an OWASP MASVS, MASTG und ASVS. Sie erhalten einen Bericht in Deutsch und Englisch; die Prüfung ist remote und vor Ort möglich.",
+  },
+];
 
 export default function AnfrageTR03161Page() {
   return (
@@ -60,6 +84,8 @@ export default function AnfrageTR03161Page() {
           </div>
         </div>
       </section>
+
+      <LandingFaq faqs={FAQS} />
     </main>
   );
 }

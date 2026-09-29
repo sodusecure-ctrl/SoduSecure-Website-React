@@ -1,0 +1,10 @@
+export type FaqItem = { q: string; a: string };
+
+export const FAQS: FaqItem[] = [
+  { q: "Was ist eine Hacker Simulation?", a: "Bei einer Hacker Simulation (auch Penetrationstest oder Ethical Hacking) greifen autorisierte Sicherheitsexperten Ihr Unternehmen mit denselben Methoden an wie echte Hacker. Das Ziel: Schwachstellen finden und beheben, bevor echte Angreifer sie ausnutzen." },
+  { q: "Ist eine Hacker Simulation legal?", a: "Ja – autorisiertes Ethical Hacking ist vollständig legal. Sodu Secure führt alle Tests ausschließlich mit schriftlicher Genehmigung des Systeminhabers und in klar definiertem Scope durch. Wir stellen alle rechtlichen Dokumente (NDA, ROE, Scope-Agreement) bereit." },
+  { q: "Was kostet eine Hacker Simulation?", a: "Eine professionelle Hacker Simulation kostet bei Sodu Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Umfang ab (ein System vs. gesamtes Unternehmen). Über den Konfigurator erhalten Sie sofort ein Festpreisangebot – kein Tagessatz." },
+  { q: "Wie unterscheidet sich Hacker Simulation von einem Pentest?", a: "Hacker Simulation und Penetrationstest sind weitgehend synonym. Eine Hacker Simulation betont die Realitätsnähe – echte Angriffstechniken, echte Tools (Metasploit, BloodHound, Burp Suite), echte Proof-of-Concepts. Sodu Secure kombiniert klassischen OWASP-basierten Pentest mit simulierten Angriffen." },
+  { q: "Wie lange dauert eine Hacker Simulation?", a: "Eine fokussierte Hacker Simulation (z.B. nur Web-App) dauert 2–3 Tage. Eine vollständige Unternehmens-Simulation (Web + Netzwerk + AD + Phishing) 1–2 Wochen. Der Bericht wird 48 Stunden nach Testende geliefert." },
+  { q: "Was passiert wenn die Hacker Simulation kritische Lücken findet?", a: "Bei kritischen Findings kommunizieren wir sofort – noch während des Tests, bevor der Abschlussbericht fertig ist. Sie erhalten Sofortmaßnahmen und können direkt reagieren. Anschließend folgen detaillierter Bericht und kostenloser Retest." },
+];

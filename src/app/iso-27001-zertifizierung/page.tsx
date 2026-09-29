@@ -201,6 +201,17 @@ const FAQS = [
   },
 ];
 
+// FAQPage-JSON-LD aus GENAU dem sichtbaren FAQS-Array (Single Source).
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
 function Trophy(props: React.ComponentProps<"svg">) {
   return (
     <svg {...props} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -365,24 +376,6 @@ export default function ISO27001CertificationPage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 lg:py-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-10">Häufige Fragen zur ISO 27001 Zertifizierung</h2>
-          <div className="space-y-3">
-            {FAQS.map((faq, i) => (
-              <div key={i} className="bg-[#0A0A0B] border border-white/10 rounded-xl overflow-hidden">
-                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-5 text-left hover:bg-white/5 transition-colors">
-                  <span className="font-medium">{faq.q}</span>
-                  {openFaq === i ? <ChevronUp className="w-5 h-5 text-white/60 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
-                </button>
-                {openFaq === i && <div className="px-5 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/10 pt-4">{faq.a}</div>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing */}
       <section className="py-14 bg-[#0A0A0B]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -414,6 +407,28 @@ export default function ISO27001CertificationPage() {
           </div>
           <div className="text-center mt-6 text-sm text-white/50">
             *Kosten variieren je nach Unternehmensgröße (Mitarbeiter, Komplexität, Infrastruktur)
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ – letzte Sektion vor dem CTA/Footer */}
+      <section className="py-16 lg:py-20">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }}
+        />
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center mb-10">Häufige Fragen zur ISO 27001 Zertifizierung</h2>
+          <div className="space-y-3">
+            {FAQS.map((faq, i) => (
+              <div key={i} className="bg-[#0A0A0B] border border-white/10 rounded-xl overflow-hidden">
+                <button onClick={() => setOpenFaq(openFaq === i ? null : i)} className="w-full flex items-center justify-between p-5 text-left hover:bg-white/5 transition-colors">
+                  <span className="font-medium">{faq.q}</span>
+                  {openFaq === i ? <ChevronUp className="w-5 h-5 text-white/60 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
+                </button>
+                <div className={openFaq === i ? "px-5 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/10 pt-4" : "hidden"}>{faq.a}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

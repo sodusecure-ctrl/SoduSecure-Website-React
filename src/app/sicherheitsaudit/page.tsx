@@ -8,7 +8,7 @@ import {
   CheckCircle,
   ArrowRight,
   ChevronDown,
-  ChevronUp,
+  ChevronUp,
   Phone,
   Mail,
   BookOpen,
@@ -22,6 +22,7 @@ import {
   Zap,
   ClipboardList,
 } from "lucide-react";
+import { FAQS } from "./faq";
 
 const PHONE = "(+49) 01777750985";
 const PHONE_HREF = "tel:+491777750985";
@@ -62,15 +63,6 @@ const PAKETE = [
     items: ["Gesamte Infrastruktur", "Red Team Elemente", "Org. Sicherheitsaudit", "ISO 27001 Zertifizierungsvorbereitung", "Remediation Workshop", "Unbegrenzte Retests"],
     highlight: false,
   },
-];
-
-const FAQS = [
-  { q: "Was ist ein IT Sicherheitsaudit?", a: "Ein IT Sicherheitsaudit (Sicherheitsaudit) ist eine umfassende Überprüfung der IT-Sicherheitslage eines Unternehmens – technisch und organisatorisch. Dabei werden Schwachstellen identifiziert, gegen Compliance-Anforderungen geprüft und mit priorisierten Maßnahmen versehen." },
-  { q: "Was kostet ein Sicherheitsaudit?", a: "Ein Sicherheitsaudit kostet bei Sodu Secure ab 1.499 € (technischer Basis-Audit) bis 8.000 € (vollständiger Audit inkl. Compliance-Prüfung). Nutzen Sie den Konfigurator für einen sofortigen Festpreis – kein Tages­satz, kein Überbudget." },
-  { q: "Wie lange dauert ein Sicherheitsaudit?", a: "Ein fokussierter IT Sicherheitsaudit dauert 2–5 Tage. Ein vollständiger Unternehmens-Audit (technisch + Compliance + organisatorisch) 1–2 Wochen. Bericht-Lieferung 48 Stunden nach Testabschluss." },
-  { q: "Für welche Compliance-Anforderungen brauche ich einen Sicherheitsaudit?", a: "NIS2 (Art. 21 – regelmäßige Risikomanagement-Maßnahmen), ISO 27001 (Annex A.12.6), DSGVO Art. 32 (technische Sicherheitsmaßnahmen) und DORA (Art. 26 – ICT risk management) fordern alle regelmäßige Sicherheitsüberprüfungen durch Experten." },
-  { q: "Was unterscheidet einen Sicherheitsaudit von einem Penetrationstest?", a: "Ein Penetrationstest fokussiert auf technische Exploitation (manuell, PoC). Ein Sicherheitsaudit ist breiter: er umfasst technisches Testing + Policy-Prüfung + Compliance-Gap-Analyse + organisatorische Bewertung. Sodu Secure kombiniert beides in einem Audit." },
-  { q: "Kann ich den Sicherheitsaudit für die ISO 27001-Zertifizierung verwenden?", a: "Ja – ein Sodu Secure Sicherheitsaudit-Bericht ist auf die Anforderungen akkreditierter ISO 27001-Zertifizierungsstellen ausgerichtet. Er adressiert direkt Annex A Controls und liefert den Nachweis für das Statement of Applicability (SoA)." },
 ];
 
 export default function SicherheitsauditPage() {
@@ -244,9 +236,7 @@ export default function SicherheitsauditPage() {
                 <span className="font-medium text-white text-sm sm:text-base">{faq.q}</span>
                 {openFaq === i ? <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
               </button>
-              {openFaq === i && (
-                <div className="px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4">{faq.a}</div>
-              )}
+              <div className={`px-6 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/5 pt-4 ${openFaq === i ? "" : "hidden"}`}>{faq.a}</div>
             </div>
           ))}
         </div>

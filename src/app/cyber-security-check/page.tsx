@@ -7,6 +7,7 @@ import {
   Shield, CheckCircle, ArrowRight, ChevronDown, ChevronUp,
   Phone, Mail, Search, AlertTriangle, FileText, Target, Zap, Network, Globe, Lock,
 } from "lucide-react";
+import { FAQS } from "./faq";
 
 const PHONE_HREF = "tel:+491777750985";
 const EMAIL_HREF = "mailto:info@sodusecure.com";
@@ -27,14 +28,6 @@ const PROCESS_STEPS = [
   { step: "04", title: "Detaillierter Sicherheitsbericht", desc: "Technischer Bericht + Executive Summary + umsetzbare Handlungsempfehlungen." },
   { step: "05", title: "Remediation Support", desc: "Unterstützung bei der Behebung der gefundenen Schwachstellen." },
   { step: "06", title: "Validierungs-Retest", desc: "Kostenloser Retest zur Bestätigung der erfolgreichen Behebung." },
-];
-
-const FAQS = [
-  { q: "Was ist ein Cyber Security Check?", a: "Ein Cyber Security Check ist eine systematische Überprüfung Ihrer IT-Infrastruktur auf Sicherheitslücken. Im Unterschied zum vollständigen Penetrationstest liegt der Fokus auf der Identifikation und Bewertung von Schwachstellen ohne vollständige Ausnutzung." },
-  { q: "Wie lange dauert ein Cyber Security Check?", a: "Je nach Scope dauert ein Check 1–5 Werktage. Nach dem Scoping-Gespräch nennen wir Ihnen einen verbindlichen Zeitplan." },
-  { q: "Für welche Unternehmen ist ein Cyber Security Check geeignet?", a: "Für alle Unternehmensgrößen: KMU die erstmals ihren Sicherheitsstatus ermitteln wollen, bis hin zu Enterprises die ihre bestehenden Maßnahmen validieren möchten." },
-  { q: "Was ist der Unterschied zum Pentest?", a: "Ein Security Check ist breiter und schneller – er identifiziert Schwachstellen. Ein Penetrationstest ist tiefer – er nutzt Schwachstellen aktiv aus. Oft beginnen Unternehmen mit einem Check und gehen dann zum Pentest über." },
-  { q: "Erhalte ich ein Zertifikat?", a: "Sie erhalten einen detaillierten Bericht. Auf Wunsch stellen wir ein Prüfzertifikat für interne oder externe Nachweispflichten aus." },
 ];
 
 export default function CyberSecurityCheckPage() {
@@ -138,7 +131,7 @@ export default function CyberSecurityCheckPage() {
                   <span className="font-medium">{faq.q}</span>
                   {openFaq === i ? <ChevronUp className="w-5 h-5 text-white/60 flex-shrink-0" /> : <ChevronDown className="w-5 h-5 text-white/60 flex-shrink-0" />}
                 </button>
-                {openFaq === i && <div className="px-5 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/10 pt-4">{faq.a}</div>}
+                <div className={`px-5 pb-5 text-white/60 text-sm leading-relaxed border-t border-white/10 pt-4 ${openFaq === i ? "" : "hidden"}`}>{faq.a}</div>
               </div>
             ))}
           </div>

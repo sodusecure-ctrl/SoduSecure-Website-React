@@ -435,11 +435,9 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
                   <ChevronDown className="w-5 h-5 text-white/40 flex-shrink-0" />
                 )}
               </button>
-              {openFaq === i && (
-                <div className="px-5 pb-5">
-                  <p className="text-white/60 leading-relaxed">{faq.a}</p>
-                </div>
-              )}
+              <div className={openFaq === i ? "px-5 pb-5" : "hidden"}>
+                <p className="text-white/60 leading-relaxed">{faq.a}</p>
+              </div>
             </div>
           ))}
         </div>
