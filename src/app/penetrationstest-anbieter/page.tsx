@@ -143,7 +143,7 @@ const OUR_STRENGTHS = [
   {
     icon: Award,
     title: "Zertifizierte Pentester",
-    desc: "OSCP, CEH, CISSP – unsere Experten sind offiziell zertifiziert. Keine Junior-Tester.",
+    desc: "OSCP, OSWE und CEH: unsere Experten sind offiziell zertifiziert. Keine Junior-Tester.",
   },
   {
     icon: Target,
@@ -336,7 +336,7 @@ export default function PenetrationstestAnbieterPage() {
           </div>
           {/* Trust bar */}
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-white/70">
-            {[["500+", "Erfolgreiche Pentests"], ["OSCP · CEH · CISSP", "Zertifizierungen"], ["100%", "Kundenzufriedenheit"], ["24h", "Angebots-Response"]].map(([stat, label], i) => (
+            {[["500+", "Durchgeführte Pentests"], ["OSCP · OSWE · CEH", "Zertifizierungen"], ["0 €", "Retest nach Behebung"], ["24h", "Angebots-Response"]].map(([stat, label], i) => (
               <div key={stat} className="flex items-center gap-x-6">
                 {i > 0 && <span className="hidden h-4 w-px bg-white/15 sm:block" aria-hidden />}
                 <div className="flex items-center gap-2">

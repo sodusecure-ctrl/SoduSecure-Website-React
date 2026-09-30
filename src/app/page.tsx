@@ -4,9 +4,11 @@ import HomeClient from '@/components/landing/HomeClient';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: 'Sodu Secure - Pentest & AuditAI',
+  // absolute: verhindert, dass das Root-Template " | Sodu Secure" ein zweites Mal
+  // anhängt (gerendert wurde zuvor "Sodu Secure - Pentest & AuditAI | Sodu Secure").
+  title: { absolute: 'Sodu Secure | Pentest aus Berlin und AI Code Review' },
   description:
-    'Manueller Penetrationstest von OSCP-Experten und wöchentliches AI-Code-Review. Wechseln Sie zwischen Sodu /Pentest und Sodu /AuditAI.',
+    'OSCP-zertifizierte Pentester aus Berlin, über 500 Pentests, kostenloser Retest. Preisspanne in 3 Minuten berechnen oder AuditAI ab 99 € je Repository.',
   alternates: { canonical: '/' },
 };
 

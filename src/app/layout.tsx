@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   // eigenes alternates vererben und sie auf die Homepage kanonisieren.
   // Das Homepage-Canonical liegt in src/app/page.tsx.
   title: {
-    default: "Sodu Secure – zertifizierte Penetrationstests aus Berlin",
+    default: "Sodu Secure | zertifizierte Penetrationstests aus Berlin",
     template: "%s | Sodu Secure"
   },
   description: "Penetrationstests von OSCP-zertifizierten Experten aus Berlin. Echte Angriffsketten, klare Fix-Empfehlungen, kostenloser Retest. Festpreis - Angebot in 24 h.",

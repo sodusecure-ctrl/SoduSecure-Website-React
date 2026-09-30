@@ -3,16 +3,19 @@ import type { Metadata } from "next";
 const baseUrl = "https://sodusecure.com";
 
 export const metadata: Metadata = {
-  title: "Penetrationstest Anbieter mit Zertifizierung",
+  // "Pentest Anbieter" statt "Penetrationstest Anbieter": Die Impressionen liegen
+  // auf der Kurzform (187/Woche vs. 105). Die Langform bleibt über URL und H1 erhalten.
+  title: "Pentest Anbieter mit kostenlosem Retest",
   description:
-    "Ihr Penetrationstest Anbieter aus Deutschland: OSCP-zertifiziert, DSGVO-konform, 500+ erfolgreiche Pentests. Kostenlose Erstberatung innerhalb von 24h.",
+    "Pentest Anbieter aus Berlin: OSCP-zertifizierte Tester, über 500 Pentests, Bericht auf Deutsch und Englisch. Retest nach Behebung kostenlos inklusive.",
   keywords: [
+    "pentest anbieter",
     "penetrationstest anbieter",
-    "penetrationstest anbieter vergleichen",
-    "seriöser penetrationstest anbieter",
-    "zertifizierter penetrationstest anbieter",
+    "pentest dienstleister",
+    "penetrationstest dienstleister",
+    "pentest anbieter vergleich",
     "bsi zertifizierte penetrationstest anbieter",
-    "penetration testing anbieter",
+    "penetration test anbieter",
     "pentester deutschland",
     "oscp pentester",
   ],
@@ -20,9 +23,9 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/penetrationstest-anbieter`,
   },
   openGraph: {
-    title: "Penetrationstest Anbieter mit Zertifizierung | Sodu Secure",
+    title: "Pentest Anbieter mit kostenlosem Retest | Sodu Secure",
     description:
-      "Ihr Penetrationstest Anbieter aus Deutschland: OSCP-zertifiziert, DSGVO-konform, 500+ erfolgreiche Pentests. Kostenlose Erstberatung innerhalb von 24h.",
+      "Pentest Anbieter aus Berlin: OSCP-zertifizierte Tester, über 500 Pentests, Bericht auf Deutsch und Englisch. Retest nach Behebung kostenlos inklusive.",
     url: `${baseUrl}/penetrationstest-anbieter`,
     type: "website",
   },

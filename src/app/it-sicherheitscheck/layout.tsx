@@ -2,8 +2,10 @@
 import { FAQS } from './faq';
 
 export const metadata: Metadata = {
-  title: 'IT Sicherheitscheck | zertifizierte Prüfung, Ergebnis in 2-5 Tagen',
-  description: 'Wie sicher ist Ihr Unternehmen wirklich? Jetzt IT Sicherheitscheck bestellen - Web, Netzwerk, AD & Cloud. Preis sofort online berechnen. Ergebnis in 2-5 Tagen. OSCP-zertifiziert.',
+  // Vorher 79 Zeichen inkl. Suffix und damit sicher abgeschnitten. Die Description
+  // grenzt gegen den Fragebogen-Ansatz des BSI-CyberRisikoChecks ab (organisch #1).
+  title: 'IT Sicherheitscheck | Ergebnis in 2-5 Tagen',
+  description: 'Kein Fragebogen: OSCP-zertifizierte Tester prüfen Web, Netzwerk, Active Directory und Cloud technisch. Ergebnis in 2-5 Tagen, Preis sofort online.',
   keywords: 'IT Sicherheitscheck, IT Security Check, Sicherheitscheck, IT Sicherheitsprüfung Unternehmen, IT Sicherheitscheck Firma, IT Sicherheitscheck KMU, Sicherheitscheck IT, IT Check Unternehmen, IT Sicherheit prüfen lassen, IT Sicherheitsanalyse',
   robots: {
     index: true,
@@ -12,8 +14,8 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: 'https://sodusecure.com/it-sicherheitscheck' },
   openGraph: {
-    title: 'IT Sicherheitscheck | zertifizierte Prüfung, Ergebnis in 2-5 Tagen',
-    description: 'Jetzt IT Sicherheitscheck beauftragen - Web, Netzwerk, AD & Cloud in 2-5 Tagen geprüft. Preis sofort online berechnen. OSCP-zertifiziert.',
+    title: 'IT Sicherheitscheck | Ergebnis in 2-5 Tagen | Sodu Secure',
+    description: 'Kein Fragebogen: OSCP-zertifizierte Tester prüfen Web, Netzwerk, Active Directory und Cloud technisch. Ergebnis in 2-5 Tagen, Preis sofort online.',
     url: 'https://sodusecure.com/it-sicherheitscheck',
     siteName: 'Sodu Secure',
     locale: 'de_DE',
