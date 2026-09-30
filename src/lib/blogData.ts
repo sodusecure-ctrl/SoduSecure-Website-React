@@ -1,5 +1,26 @@
 ﻿// Blog data for metadata generation
-export const blogPosts = [
+export interface BlogPost {
+  id: number;
+  slug: string;
+  title: string;
+  description: string;
+  category: string;
+  /** Name exakt wie in der sichtbaren Byline; Registry siehe src/lib/authors.ts */
+  author: string;
+  /** Erstveroeffentlichung (ISO-Datum) -> datePublished */
+  date: string;
+  /**
+   * Letzte inhaltliche Ueberarbeitung (ISO-Datum) -> dateModified.
+   * NUR setzen, wenn der Artikel tatsaechlich inhaltlich geaendert wurde.
+   * Ohne echte Aenderung leer lassen - dann faellt dateModified auf `date` zurueck.
+   */
+  updated?: string;
+  readTime: string;
+  image: string;
+  keywords: string[];
+}
+
+export const blogPosts: BlogPost[] = [
   {
     id: 1,
     slug: '1',
@@ -383,19 +404,63 @@ export const blogPosts = [
   },
 ];
 
+/**
+ * Loest einen Route-Parameter auf einen Artikel auf.
+ *
+ * Reihenfolge ist wichtig: ZUERST exakter Slug-Vergleich, erst danach numerisch.
+ * parseInt() wuerde sonst bei Slugs, die mit einer Ziffer beginnen
+ * (z. B. "5-sicherheitsluecken-kmu" -> 5), den falschen Artikel liefern.
+ * Numerisch wird nur aufgeloest, wenn der Parameter ausschliesslich aus Ziffern besteht.
+ */
 export function getBlogById(id: number | string) {
   if (typeof id === 'number') {
     return blogPosts.find(blog => blog.id === id);
   }
-  const numId = parseInt(id, 10);
-  if (!isNaN(numId)) {
-    const byId = blogPosts.find(blog => blog.id === numId);
-    if (byId) return byId;
+  const bySlug = blogPosts.find(blog => blog.slug === id);
+  if (bySlug) return bySlug;
+
+  if (/^\d+$/.test(id)) {
+    return blogPosts.find(blog => blog.id === parseInt(id, 10));
   }
-  // keyword slug fallback
-  return blogPosts.find(blog => blog.slug === id);
+  return undefined;
 }
 
 export function getAllBlogSlugs() {
   return blogPosts.map(blog => blog.slug);
+}
+
+/**
+ * Slugs, deren Inhalt technisch-methodisch ist (Schwachstellenklassen, Angriffstechniken,
+ * Prueffmethodik). Diese Artikel werden als TechArticle ausgezeichnet, alle uebrigen als
+ * BlogPosting (Ratgeber, Markt-/Kostenuebersichten, Compliance-Einordnung).
+ */
+const TECH_ARTICLE_SLUGS = new Set([
+  '1', // SQL Injection
+  '2', // Zero-Day
+  '3', // API Security
+  '4', // Mobile App Security
+  '5', // Cloud Security
+  '7', // React4Shell
+  '8', // OpenClaw Framework
+  '10', // OWASP Top 10
+  'pentest-ablauf',
+  'mobile-app-security-gesundheitswesen-tr-03161',
+]);
+
+export function getArticleSchemaType(blog: BlogPost): 'TechArticle' | 'BlogPosting' {
+  return TECH_ARTICLE_SLUGS.has(blog.slug) ? 'TechArticle' : 'BlogPosting';
+}
+
+/** Letzte inhaltliche Aenderung; ohne gepflegtes `updated` identisch mit `date`. */
+export function getBlogDateModified(blog: BlogPost): string {
+  return blog.updated ?? blog.date;
+}
+
+/**
+ * Wandelt "8 min read" in die ISO-8601-Dauer "PT8M" um (schema.org timeRequired erwartet
+ * eine Duration, kein Fliesstext). Ohne erkennbare Zahl wird undefined zurueckgegeben.
+ */
+export function getBlogTimeRequired(blog: BlogPost): string | undefined {
+  const match = blog.readTime.match(/\d+/);
+  return match ? `PT${match[0]}M` : undefined;
 }

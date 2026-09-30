@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 import { Button } from '../../components/ui/button';
 import Link from 'next/link';
+import { ORGANIZATION_ID, SITE_URL, WEBSITE_ID } from '@/lib/authors';
 
 export default function AboutSection() {
   const t = useTranslations('about');
@@ -69,14 +70,53 @@ export default function AboutSection() {
     }
   ];
 
+  // Nur Zertifizierungen, die als Sodu-Claim belegt sind (OSCP/OSWE/CEH).
+  // CISSP wurde entfernt - keine belegte Selbstaussage.
   const certifications = [
     { name: 'ISO', subtitle: 'ISO 27001' },
     { name: 'OSCP', subtitle: 'Offensive Security' },
+    { name: 'OSWE', subtitle: 'Offensive Security' },
     { name: 'CEH', subtitle: 'EC-Council' },
-    { name: 'CISSP', subtitle: 'ISC²' },
     { name: 'AWS', subtitle: 'AWS Partner' },
     { name: 'MS', subtitle: 'Microsoft Partner' }
   ];
+
+  // Belegte Tester-Zertifizierungen fuer das JSON-LD (Site-Claim: OSCP/OSWE/CEH).
+  const credentialJsonLd = [
+    { cert: 'OSCP', issuer: 'Offensive Security' },
+    { cert: 'OSWE', issuer: 'Offensive Security' },
+    { cert: 'CEH', issuer: 'EC-Council' },
+  ].map(({ cert, issuer }) => ({
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'certification',
+    name: cert,
+    recognizedBy: { '@type': 'Organization', name: issuer },
+  }));
+
+  const aboutJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'AboutPage',
+        '@id': `${SITE_URL}/about#webpage`,
+        url: `${SITE_URL}/about`,
+        name: t('hero.title'),
+        description: t('hero.description'),
+        mainEntity: { '@id': ORGANIZATION_ID },
+        isPartOf: { '@id': WEBSITE_ID },
+      },
+      {
+        // Erweitert die zentrale Organisations-Entitaet aus src/app/layout.tsx ueber
+        // dieselbe @id. Bewusst nur um das, was dort NICHT steht: die sichtbar auf
+        // dieser Seite gelisteten Tester-Zertifizierungen. Adresse, Handelsregister
+        // und sameAs liefert das Root-Layout - hier nicht duplizieren.
+        '@type': 'Organization',
+        '@id': ORGANIZATION_ID,
+        name: 'Sodu Secure',
+        hasCredential: credentialJsonLd,
+      },
+    ],
+  };
 
 
 
@@ -91,6 +131,11 @@ export default function AboutSection() {
 
   return (
     <div className="bg-black">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
+
       {/* Hero Section */}
       <div className="bg-black text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
@@ -115,7 +160,7 @@ export default function AboutSection() {
               <div className="text-white/60 text-xs sm:text-sm">{t('stats.years')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">100+</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">500+</div>
               <div className="text-white/60 text-xs sm:text-sm">{t('stats.tests')}</div>
             </div>
             <div className="text-center">

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   // anhängt (gerendert wurde zuvor "Sodu Secure - Pentest & AuditAI | Sodu Secure").
   title: { absolute: 'Sodu Secure | Pentest aus Berlin und AI Code Review' },
   description:
-    'OSCP-zertifizierte Pentester aus Berlin, über 500 Pentests, kostenloser Retest. Preisspanne in 3 Minuten berechnen oder AuditAI ab 99 € je Repository.',
+    'OSCP-zertifizierte Pentester aus Berlin, über 500 Pentests, kostenloser Retest. Preisspanne in 3 Minuten berechnen oder AuditAI ab 99 € pro Monat.',
   alternates: { canonical: '/' },
 };
 

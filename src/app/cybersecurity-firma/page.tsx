@@ -89,7 +89,7 @@ const EXPERTISE = [
   {
     icon: Award,
     title: "Zertifizierte Pentester & Auditor*innen",
-    desc: "OSCP, CEH, CISSP – unsere Experten sind offiziell zertifiziert. Ständige Weiterbildung.",
+    desc: "OSCP, OSWE, CEH - unsere Tester sind offiziell zertifiziert. Ständige Weiterbildung.",
   },
   {
     icon: Briefcase,
@@ -154,7 +154,7 @@ const EXPERIENCE = [
 const CERTIFICATIONS = [
   { name: "OSCP", level: "Pentester", count: "3+" },
   { name: "CEH", level: "Ethical Hacker", count: "5+" },
-  { name: "CISSP", level: "Senior Security", count: "2+" },
+  { name: "OSWE", level: "Web Application Expert", count: "Mehrere" },
   { name: "ISO 27001", level: "Lead Auditor", count: "Mehrere" },
   { name: "BSI-GS Auditor", level: "Grundschutz", count: "Mehrere" },
   { name: "GPEN", level: "Pentester", count: "1+" },

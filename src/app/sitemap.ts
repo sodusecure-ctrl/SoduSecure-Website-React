@@ -6,6 +6,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ⚠️ lastModified bei inhaltlichen Änderungen aktualisieren.
   // Nur indexierbare Seiten eintragen — Seiten mit noindex oder Redirect gehören NICHT hierher.
+  //
+  // Vollständigkeit geprüft am 30.09.2026: Jede Route unter src/app mit page.tsx wurde
+  // gegen diese Liste abgeglichen. Alle fehlenden Routen sind entweder noindex
+  // (/auth/*, /corporate/*, /claude-*, /wiki/*, /preisrechner, /ifudhuhdksjhfoiadfh,
+  // /zzwutSODU, /request-pentest-ads*, /impressum, /sample-report, /how-it-works,
+  // /security, /for-agencies) oder Redirect-Quellen aus next.config.ts
+  // (/pentest-preis, /pentest-preis-rechner, /pentest-angebot, /pentesting-service,
+  // /penetration-testing-service, /penetration-testing-anbieter, /vulnerability-assessment,
+  // /red-team-assessment-service, /cyber-security-check-kosten, /cyber-security-check-preis).
+  // Offen und bewusst nicht ergänzt, weil es eine Indexierungsentscheidung wäre:
+  // /privacy, /terms und /verify sind indexierbar, stehen aber nicht in der Sitemap.
   const staticRoutes: { path: string; lastModified: string; changeFreq: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number }[] = [
     // ── Top-Landingpages ──
     { path: '',                                lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },

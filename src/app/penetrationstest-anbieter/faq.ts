@@ -7,23 +7,23 @@ export const FAQS: ProviderFaq[] = [
   },
   {
     q: "Was ist der Unterschied zwischen internem und externem Penetrationstest?",
-    a: "Extern: Angriff von außen (Internet). Intern: Angriff von innerhalb des Netzwerks. Intern findet oft mehr Probleme, weil der Attacker schon 'ins Netzwerk gekommen' ist.",
+    a: "Ein externer Penetrationstest greift die aus dem Internet erreichbare Angriffsfläche an: Webanwendungen, APIs, VPN-Gateways, Mailserver. Ein interner Test startet aus dem Firmennetz und bildet ab, was ein Angreifer nach dem ersten erfolgreichen Zugriff erreichen kann - Lateral Movement, Privilege Escalation, Übernahme der Active-Directory-Domäne. Interne Tests finden meist mehr Findings, weil interne Netze historisch weniger gehärtet sind.",
   },
   {
     q: "Wie prüfe ich, ob ein Pentester wirklich kompetent ist?",
-    a: "Fragen: (1) Welche Zertifizierungen? (2) Sample-Reports? (3) Referenzen? (4) Beschreibt die Methodik – OWASP, PTES? (5) Findet manuell, nicht nur mit Tools?",
+    a: "Fünf Rückfragen reichen aus: Welche praktischen Zertifikate haben die konkret eingesetzten Tester? Gibt es einen geschwärzten Musterbericht? Welche Referenzprojekte in vergleichbaren Umgebungen existieren? Nach welcher Methodik wird getestet - OWASP WSTG, PTES, BSI-Praxis-Leitfaden? Und: Was findet ein Mensch, was ein Scanner nicht findet? Wer die letzte Frage konkret beantwortet, testet in der Regel wirklich manuell.",
   },
   {
     q: "Brauche ich einen Pentester mit Branchenerfahrung?",
-    a: "Nicht unbedingt, aber hilfreich. Fin-Tech Pentest ist anders als Healthcare Pentest. Mit Branchenerfahrung: bessere Findings, weniger Missverständnisse.",
+    a: "Zwingend ist Branchenerfahrung nicht, sie verkürzt aber die Einarbeitung und verbessert die Bewertung der Findings. Wer Zahlungsprozesse, Patientendaten oder Fertigungsnetze schon getestet hat, kennt die typischen Fehlerbilder und die jeweilige Regulierung - DORA im Finanzsektor, MDR im Medizinprodukte-Bereich, TISAX in der Automobilindustrie. Das spart Erklärungsaufwand auf beiden Seiten.",
   },
   {
-    q: "Kann ich meinen eigenen IT-Admin einen Pentest machen lassen?",
-    a: "Theoretisch ja, praktisch nein. IT-Admin kennt die Infrastruktur – kann nicht 'angreifen' wie ein Außenstehender. Auch das BSI empfiehlt grundsätzlich externe, unabhängige Prüfer, die nicht an Konzeption oder Betrieb der getesteten Systeme mitgewirkt haben.",
+    q: "Kann die eigene IT-Abteilung den Penetrationstest durchführen?",
+    a: "Möglich ist es, sinnvoll selten. Wer eine Umgebung selbst konzipiert und betreibt, testet gegen die eigenen Annahmen und übersieht genau die blinden Flecken, die ein Angreifer sucht. Das BSI empfiehlt deshalb externe, unabhängige Prüfer, die weder an der Konzeption noch am Betrieb der geprüften Systeme mitgewirkt haben. Für Audit-Nachweise ist die Unabhängigkeit ohnehin Voraussetzung.",
   },
   {
-    q: "Wie lange sind Pentest-Ergebnisse 'gültig'?",
-    a: "Nicht lange! Nach 3–6 Monaten sollte ein Retest durchgeführt werden, da neue Schwachstellen entstehen. Nach größeren Änderungen: sofort retest. Das BSI empfiehlt vollständige Wiederholungsprüfungen alle 2–3 Jahre.",
+    q: "Wie lange sind Pentest-Ergebnisse aussagekräftig?",
+    a: "Ein Penetrationstest ist eine Momentaufnahme des Testzeitpunkts. Nach jeder größeren Architektur- oder Release-Änderung verliert das Ergebnis an Aussagekraft, weil neue Angriffsfläche entsteht. Das BSI empfiehlt vollständige Wiederholungsprüfungen alle zwei bis drei Jahre; bei hohem Schutzbedarf oder agiler Entwicklung testen Unternehmen in der Praxis jährlich. Der Retest nach der Behebung ersetzt keine Wiederholungsprüfung.",
   },
   {
     q: "Woran erkenne ich einen seriösen Pentest-Dienstleister?",

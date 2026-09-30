@@ -21,6 +21,7 @@ import {
   Wifi,
 } from 'lucide-react';
 import { SectionLabel, SectionLabelDark, StatRow } from '@/components/landing/ui';
+import { ORGANIZATION_ID } from '@/lib/authors';
 
 const baseUrl = 'https://sodusecure.com';
 
@@ -103,6 +104,7 @@ type Copy = {
   defLabel: string;
   defHeadline: string;
   defQuote: { text: string; src: string; srcUrl: string };
+  defQuote2: { lead: string; text: string; src: string; srcUrl: string };
   defParas: Para[];
   defObjectsTitle: string;
   defObjectsIntro: Para;
@@ -111,8 +113,11 @@ type Copy = {
   vsLabel: string;
   vsHeadline: string;
   vsSub: string;
+  vsTableCaption: string;
   vsTableHead: [string, string, string, string];
   vsRows: { crit: string; scan: string; pentest: string; red: string }[];
+  vsGlossaryTitle: string;
+  vsGlossary: { term: string; def: string }[];
   vsParas: Para[];
 
   artenLabel: string;
@@ -142,6 +147,8 @@ type Copy = {
   pflichtLabel: string;
   pflichtHeadline: string;
   pflichtSub: string;
+  pflichtQuote: { lead: string; text: string; src: string; srcUrl: string };
+  pflichtTableCaption: string;
   pflichtTableHead: [string, string, string];
   pflichtRows: { reg: string; href?: string; req: string; praxis: string; srcUrl: string }[];
   pflichtParas: Para[];
@@ -219,6 +226,12 @@ const de: Copy = {
     src: 'BSI, Praxis-Leitfaden für IS-Penetrationstests',
     srcUrl: SRC.bsiLeitfaden,
   },
+  defQuote2: {
+    lead: 'Die international gebräuchliche Definition stammt aus dem NIST-Glossar und verweist auf NIST SP 800-115:',
+    text: '„Security testing in which evaluators mimic real-world attacks in an attempt to identify ways to circumvent the security features of an application, system, or network.“',
+    src: 'NIST Computer Security Resource Center, Glossareintrag „penetration testing“ (NIST SP 800-115)',
+    srcUrl: SRC.nistPentest,
+  },
   defParas: [
     [
       { t: 'Das Bundesamt für Sicherheit in der Informationstechnik beschreibt den Penetrationstest in seiner ' },
@@ -259,7 +272,9 @@ const de: Copy = {
   vsLabel: 'Abgrenzung',
   vsHeadline: 'Penetrationstest vs. Schwachstellenscan vs. Red Teaming',
   vsSub:
-    'Die drei Begriffe werden oft vermischt - sie beantworten aber unterschiedliche Fragen mit unterschiedlicher Tiefe.',
+    'Ein Schwachstellenscan sucht automatisiert nach bekannten Lücken, ein Penetrationstest weist Schwachstellen manuell nach und verkettet sie zu Angriffspfaden, ein Red Teaming prüft verdeckt, ob die eigene Verteidigung einen Angriff überhaupt bemerkt. Die drei Formate unterscheiden sich also nicht im Anspruch, sondern in der Fragestellung.',
+  vsTableCaption:
+    'Vergleich von Schwachstellenscan, Penetrationstest und Red Teaming nach Ziel, Methode, Prüftiefe, Ergebnis und Aufwand',
   vsTableHead: ['Kriterium', 'Schwachstellenscan', 'Penetrationstest', 'Red Teaming'],
   vsRows: [
     {
@@ -293,6 +308,25 @@ const de: Copy = {
       red: 'Hoch - mehrwöchige Kampagnen',
     },
   ],
+  vsGlossaryTitle: 'Die vier Begriffe kurz definiert',
+  vsGlossary: [
+    {
+      term: 'Schwachstellenscan',
+      def: 'Automatisierter Abgleich eines Systems gegen Datenbanken bekannter Schwachstellen. Liefert schnell eine Rohliste, verifiziert die Treffer aber nicht - daher laut BSI mit vielen False Positives.',
+    },
+    {
+      term: 'Penetrationstest',
+      def: 'Autorisierte, überwiegend manuelle Sicherheitsprüfung, die Schwachstellen mit einem Proof-of-Concept nachweist, sie zu Angriffspfaden verkettet und das reale Angriffspotenzial bewertet.',
+    },
+    {
+      term: 'Red Teaming',
+      def: 'Verdeckte, mehrwöchige Angriffssimulation entlang realer Angreifer-Taktiken. Geprüft wird nicht die Schwachstellenliste, sondern ob das Verteidigungsteam den Angriff erkennt und darauf reagiert.',
+    },
+    {
+      term: 'TLPT',
+      def: 'Threat-Led Penetration Testing: bedrohungsgeleitete Prüfung auf Basis echter Bedrohungsdaten, für bestimmte Finanzunternehmen in Art. 26 und 27 DORA ausdrücklich vorgeschrieben.',
+    },
+  ],
   vsParas: [
     [
       { t: 'Der ' },
@@ -319,7 +353,7 @@ const de: Copy = {
   artenLabel: 'Arten',
   artenHeadline: 'Welche Arten von Penetrationstests gibt es?',
   artenSub:
-    'Penetrationstests unterscheiden sich nach Informationsbasis, nach der BSI-Klassifikation und nach dem Prüfobjekt.',
+    'Penetrationstests werden nach drei Achsen unterschieden: nach der Informationsbasis (Black-, Grey- oder White-Box), nach den sechs Klassifikationskriterien des BSI und nach dem Prüfobjekt - also Webanwendung, API, Infrastruktur, Active Directory, Cloud, Mobile App oder WLAN. Festgelegt werden alle drei Achsen im Scoping vor Vertragsschluss.',
   boxes: [
     {
       title: 'Black-Box',
@@ -411,7 +445,7 @@ const de: Copy = {
   stdLabel: 'Standards & Methodik',
   stdHeadline: 'Wonach seriöse Anbieter testen.',
   stdSub:
-    'Ein professioneller Penetrationstest folgt dokumentierten Methodiken - das macht Ergebnisse nachvollziehbar und vergleichbar.',
+    'Professionelle Penetrationstests folgen vier etablierten Methodiken: der BSI-Systematik für Tests in Deutschland, dem OWASP Web Security Testing Guide für Webanwendungen, dem PTES für den Projektablauf und NIST SP 800-115 für technisches Sicherheitstesten. Dokumentierte Methodik macht Ergebnisse nachvollziehbar, reproduzierbar und zwischen Anbietern vergleichbar.',
   standards: [
     {
       title: 'BSI-Methodik',
@@ -449,10 +483,12 @@ const de: Copy = {
   ablaufLabel: 'Ablauf',
   ablaufHeadline: 'Wie läuft ein Penetrationstest ab?',
   ablaufSub: [
-    { t: 'Das ' },
+    {
+      t: 'Ein Penetrationstest läuft in fünf Phasen ab: Vorbereitung, Informationsbeschaffung, Bewertung der gesammelten Informationen, aktive Eindringversuche und Abschlussanalyse mit Bericht. Diese Gliederung stammt aus dem ',
+    },
     { t: 'BSI-Durchführungskonzept', href: SRC.bsiStudie, ext: true },
     {
-      t: ' beschreibt fünf Phasen. In der Praxis kommt als sechster Schritt der Retest hinzu, der die Behebung der Findings verifiziert.',
+      t: '. In der Praxis kommt als sechster Schritt der Retest hinzu, der die Behebung der Findings verifiziert.',
     },
   ],
   phases: [
@@ -501,6 +537,14 @@ const de: Copy = {
   pflichtHeadline: 'Wann sind Penetrationstests Pflicht?',
   pflichtSub:
     'Kaum eine Norm schreibt das Wort „Penetrationstest“ wörtlich vor - fast alle relevanten Regulierungen verlangen aber den Nachweis, dass Ihre Sicherheitsmaßnahmen wirksam sind. Der Pentest ist dafür das etablierte Mittel.',
+  pflichtQuote: {
+    lead: 'Wie indirekt diese Pflicht formuliert ist, zeigt § 30 Abs. 2 Nr. 6 BSIG - die deutsche Umsetzung der NIS2-Richtlinie. Gefordert werden dort:',
+    text: '„Konzepte und Verfahren zur Bewertung der Wirksamkeit von Risikomanagementmaßnahmen im Bereich der Sicherheit in der Informationstechnik“',
+    src: '§ 30 Abs. 2 Nr. 6 BSIG, gesetze-im-internet.de',
+    srcUrl: SRC.bsig30,
+  },
+  pflichtTableCaption:
+    'Regulatorische Anforderungen mit Pentest-Bezug: ISO 27001, NIS2, KRITIS, DORA, DSGVO und TISAX im Vergleich, je mit Normstelle und Bedeutung für die Praxis',
   pflichtTableHead: ['Regulierung', 'Anforderung', 'Bedeutung für die Praxis'],
   pflichtRows: [
     {
@@ -605,8 +649,13 @@ const de: Copy = {
   kostenParas: [
     [
       {
-        t: 'Die Kosten richten sich nach Scope, Prüftiefe und Komplexität des Ziels - seriöse Anbieter kalkulieren nach dem Scoping, nicht pauschal. Als Orientierung für unsere Festpreise:',
+        t: 'Ein automatisierter Schwachstellenscan startet bei Sodu Secure ab 1.499 €. Ein manueller Penetrationstest wird individuell kalkuliert und liegt meist zwischen 4.000 und 20.000 €, abhängig von Scope, Prüftiefe und Komplexität des Ziels. Seriöse Anbieter nennen den Preis erst nach dem Scoping, nicht pauschal.',
       },
+    ],
+    [
+      { t: 'Marktübliche Preisspannen anderer Anbieter, Tagessatz-Belege und eine Einordnung fremder Angebote finden Sie auf der Seite ' },
+      { t: 'Pentest Kosten', href: '/pentest-kosten' },
+      { t: '. Die drei Festpreis-Anker von Sodu Secure:' },
     ],
   ],
   kostenAnchors: [
@@ -790,6 +839,12 @@ const en: Copy = {
     src: 'NIST glossary (SP 800-115), penetration testing',
     srcUrl: SRC.nistPentest,
   },
+  defQuote2: {
+    lead: 'The German reference definition comes from the BSI practical guide for IS penetration tests:',
+    text: '“Ein IS-Penetrationstest ist ein erprobtes und geeignetes Vorgehen, um das Angriffspotenzial auf ein IT-Netz, ein einzelnes IT-System oder eine (Web-)Anwendung festzustellen.”',
+    src: 'BSI, practical guide for IS penetration tests (German original)',
+    srcUrl: SRC.bsiLeitfaden,
+  },
   defParas: [
     [
       { t: 'The German Federal Office for Information Security (BSI) defines it equivalently in its ' },
@@ -829,7 +884,10 @@ const en: Copy = {
 
   vsLabel: 'Comparison',
   vsHeadline: 'Penetration test vs. vulnerability scan vs. red teaming',
-  vsSub: 'The three terms are often mixed up - but they answer different questions at different depths.',
+  vsSub:
+    'A vulnerability scan looks for known issues automatically, a penetration test proves vulnerabilities manually and chains them into attack paths, and red teaming covertly checks whether your defence notices an attack at all. The three formats differ in the question they answer, not in ambition.',
+  vsTableCaption:
+    'Comparison of vulnerability scan, penetration test and red teaming by goal, method, depth, result and effort',
   vsTableHead: ['Criterion', 'Vulnerability scan', 'Penetration test', 'Red teaming'],
   vsRows: [
     {
@@ -863,6 +921,25 @@ const en: Copy = {
       red: 'High - multi-week campaigns',
     },
   ],
+  vsGlossaryTitle: 'The four terms defined',
+  vsGlossary: [
+    {
+      term: 'Vulnerability scan',
+      def: 'Automated comparison of a system against databases of known vulnerabilities. Fast, but the hits are not verified - hence, per BSI, many false positives.',
+    },
+    {
+      term: 'Penetration test',
+      def: 'Authorized, largely manual security assessment that proves vulnerabilities with a proof of concept, chains them into attack paths and rates the realistic attack potential.',
+    },
+    {
+      term: 'Red teaming',
+      def: 'Covert, multi-week attack simulation along real adversary tactics. What is tested is not the vulnerability list but whether the defence team detects and responds to the attack.',
+    },
+    {
+      term: 'TLPT',
+      def: 'Threat-led penetration testing: assessment driven by real threat intelligence, explicitly prescribed for certain financial entities in Art. 26 and 27 DORA.',
+    },
+  ],
   vsParas: [
     [
       { t: 'The ' },
@@ -888,7 +965,8 @@ const en: Copy = {
 
   artenLabel: 'Types',
   artenHeadline: 'Which types of penetration tests exist?',
-  artenSub: 'Penetration tests differ by information basis, by the BSI classification and by target system.',
+  artenSub:
+    'Penetration tests are distinguished along three axes: by information basis (black, grey or white box), by the six BSI classification criteria and by target system - web application, API, infrastructure, Active Directory, cloud, mobile app or wireless. All three are fixed during scoping, before the contract is signed.',
   boxes: [
     {
       title: 'Black box',
@@ -979,7 +1057,8 @@ const en: Copy = {
 
   stdLabel: 'Standards & methodology',
   stdHeadline: 'What serious providers test against.',
-  stdSub: 'A professional penetration test follows documented methodologies - making results traceable and comparable.',
+  stdSub:
+    'Professional penetration tests follow four established methodologies: the BSI system for tests in Germany, the OWASP Web Security Testing Guide for web applications, PTES for the project structure and NIST SP 800-115 for technical security testing. Documented methodology makes results traceable, reproducible and comparable across providers.',
   standards: [
     {
       title: 'BSI methodology',
@@ -1017,9 +1096,11 @@ const en: Copy = {
   ablaufLabel: 'Process',
   ablaufHeadline: 'How does a penetration test work?',
   ablaufSub: [
-    { t: 'The ' },
+    {
+      t: 'A penetration test runs in five phases: preparation, information gathering, assessment of the collected information, active intrusion attempts and final analysis with the report. That structure comes from the ',
+    },
     { t: 'BSI study', href: SRC.bsiStudie, ext: true },
-    { t: ' describes five phases. In practice, a sixth step is added: the retest that verifies remediation.' },
+    { t: '. In practice, a sixth step is added: the retest that verifies remediation.' },
   ],
   phases: [
     {
@@ -1067,6 +1148,14 @@ const en: Copy = {
   pflichtHeadline: 'When are penetration tests mandatory?',
   pflichtSub:
     'Hardly any standard literally prescribes the word "penetration test" - but almost all relevant regulations require proof that your security controls are effective. The pentest is the established means to provide it.',
+  pflichtQuote: {
+    lead: 'How indirectly this obligation is worded shows in Sec. 30 (2) no. 6 BSIG, the German implementation of NIS2, which requires:',
+    text: '“Konzepte und Verfahren zur Bewertung der Wirksamkeit von Risikomanagementmaßnahmen im Bereich der Sicherheit in der Informationstechnik” (concepts and procedures to assess the effectiveness of IT security risk management measures)',
+    src: 'Sec. 30 (2) no. 6 BSIG, gesetze-im-internet.de',
+    srcUrl: SRC.bsig30,
+  },
+  pflichtTableCaption:
+    'Regulatory requirements with pentest relevance: ISO 27001, NIS2, KRITIS, DORA, GDPR and TISAX compared, each with the relevant clause and its practical meaning',
   pflichtTableHead: ['Regulation', 'Requirement', 'What it means in practice'],
   pflichtRows: [
     {
@@ -1171,8 +1260,13 @@ const en: Copy = {
   kostenParas: [
     [
       {
-        t: 'Costs depend on scope, test depth and target complexity - serious providers quote after scoping, not with flat rates. As orientation for our fixed prices:',
+        t: 'An automated vulnerability scan at Sodu Secure starts from €1,499. A manual penetration test is scoped individually and typically lands between €4,000 and €20,000, depending on scope, test depth and target complexity. Serious providers quote after scoping, not with flat rates.',
       },
+    ],
+    [
+      { t: 'Market ranges of other providers, day-rate evidence and help with judging third-party quotes are on our ' },
+      { t: 'pentest costs page', href: '/pentest-kosten' },
+      { t: '. The three fixed-price anchors at Sodu Secure:' },
     ],
   ],
   kostenAnchors: [
@@ -1380,11 +1474,30 @@ export default async function PenetrationstestPage() {
       '@type': 'Service',
       name: 'Penetrationstest',
       serviceType: 'Penetration Testing',
-      provider: { '@type': 'Organization', name: 'Sodu Secure', url: baseUrl },
+      // Referenz auf die zentrale Organisations-Entitaet aus src/app/layout.tsx statt eines
+      // zweiten, unverknuepften Organization-Objekts.
+      provider: { '@id': ORGANIZATION_ID, '@type': 'Organization', name: 'Sodu Secure', url: baseUrl },
       areaServed: { '@type': 'Country', name: 'Germany' },
       url: pageUrl,
       description:
         'Penetrationstest verständlich erklärt: Definition nach BSI, Ablauf in 5 Phasen, Arten, Standards, Kosten und regulatorische Anforderungen - vom zertifizierten Pentest-Anbieter aus Berlin.',
+    },
+    // HowTo spiegelt exakt die sichtbare Phasenliste (Abschnitt "Ablauf", c.phases) -
+    // inklusive des sechsten Praxisschritts Retest, der dort ebenfalls gelistet ist.
+    {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      '@id': `${pageUrl}#ablauf`,
+      name: c.ablaufHeadline,
+      description: c.ablaufSub.map((seg) => seg.t).join(''),
+      url: `${pageUrl}#ablauf`,
+      step: c.phases.map((p, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        name: p.title.split(' · ')[1] ?? p.title,
+        text: p.desc,
+        url: `${pageUrl}#ablauf`,
+      })),
     },
     {
       '@context': 'https://schema.org',
@@ -1475,6 +1588,21 @@ export default async function PenetrationstestPage() {
                 <RichText para={p} />
               </p>
             ))}
+
+            <p className="mt-8 text-sm leading-relaxed text-white/70 md:text-base">{c.defQuote2.lead}</p>
+            <blockquote className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-6">
+              <p className="text-base leading-relaxed text-white/90 md:text-lg">{c.defQuote2.text}</p>
+              <footer className="mt-4 text-sm text-white/60">
+                <a
+                  href={c.defQuote2.srcUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#FF6B61] transition hover:text-[#FF8077]"
+                >
+                  {c.defQuote2.src}
+                </a>
+              </footer>
+            </blockquote>
           </div>
 
           <aside className="rounded-3xl border border-white/10 bg-transparent p-7">
@@ -1499,15 +1627,17 @@ export default async function PenetrationstestPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
           <SectionLabel>{c.vsLabel}</SectionLabel>
           <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.vsHeadline}</h2>
-          <p className="mt-4 max-w-2xl text-white/70">{c.vsSub}</p>
+          <p className="mt-4 max-w-3xl text-white/70">{c.vsSub}</p>
 
           <div className="mt-10 overflow-x-auto rounded-2xl border border-white/10">
             <table className="w-full min-w-[760px] text-sm">
+              <caption className="sr-only">{c.vsTableCaption}</caption>
               <thead>
                 <tr className="border-b border-white/10 bg-white/5">
                   {c.vsTableHead.map((h, i) => (
                     <th
                       key={h}
+                      scope="col"
                       className={
                         'px-4 py-3.5 text-left font-semibold ' + (i === 2 ? 'text-[#FF6B61]' : 'text-white')
                       }
@@ -1520,7 +1650,9 @@ export default async function PenetrationstestPage() {
               <tbody>
                 {c.vsRows.map((row) => (
                   <tr key={row.crit} className="border-b border-white/10 last:border-b-0">
-                    <td className="px-4 py-3.5 font-semibold text-white">{row.crit}</td>
+                    <th scope="row" className="px-4 py-3.5 text-left font-semibold text-white">
+                      {row.crit}
+                    </th>
                     <td className="px-4 py-3.5 text-white/70">{row.scan}</td>
                     <td className="px-4 py-3.5 text-white/85">{row.pentest}</td>
                     <td className="px-4 py-3.5 text-white/70">{row.red}</td>
@@ -1529,6 +1661,16 @@ export default async function PenetrationstestPage() {
               </tbody>
             </table>
           </div>
+
+          <h3 className="mt-12 text-2xl font-bold tracking-tight md:text-3xl">{c.vsGlossaryTitle}</h3>
+          <dl className="mt-6 grid gap-4 md:grid-cols-2">
+            {c.vsGlossary.map((g) => (
+              <div key={g.term} className="rounded-2xl border border-white/10 bg-transparent p-6 transition hover:border-white/20">
+                <dt className="text-base font-semibold tracking-tight text-white">{g.term}</dt>
+                <dd className="mt-2 text-sm leading-relaxed text-white/70">{g.def}</dd>
+              </div>
+            ))}
+          </dl>
 
           {c.vsParas.map((p, i) => (
             <p key={i} className="mt-6 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">
@@ -1542,7 +1684,7 @@ export default async function PenetrationstestPage() {
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
         <SectionLabel>{c.artenLabel}</SectionLabel>
         <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.artenHeadline}</h2>
-        <p className="mt-4 max-w-2xl text-white/70">{c.artenSub}</p>
+        <p className="mt-4 max-w-3xl text-white/70">{c.artenSub}</p>
 
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {c.boxes.map((b) => (
@@ -1612,7 +1754,7 @@ export default async function PenetrationstestPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
           <SectionLabel>{c.stdLabel}</SectionLabel>
           <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.stdHeadline}</h2>
-          <p className="mt-4 max-w-2xl text-white/70">{c.stdSub}</p>
+          <p className="mt-4 max-w-3xl text-white/70">{c.stdSub}</p>
 
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {c.standards.map((s) => (
@@ -1644,8 +1786,8 @@ export default async function PenetrationstestPage() {
         </div>
       </section>
 
-      {/* ABLAUF */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+      {/* ABLAUF - id ist der Anker fuer das HowTo-Schema (#ablauf) */}
+      <section id="ablauf" className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
         <SectionLabel>{c.ablaufLabel}</SectionLabel>
         <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.ablaufHeadline}</h2>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
@@ -1679,12 +1821,28 @@ export default async function PenetrationstestPage() {
           <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.pflichtHeadline}</h2>
           <p className="mt-4 max-w-3xl text-white/70">{c.pflichtSub}</p>
 
+          <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">{c.pflichtQuote.lead}</p>
+          <blockquote className="mt-4 max-w-3xl rounded-2xl border border-white/10 bg-white/5 p-6">
+            <p className="text-base leading-relaxed text-white/90 md:text-lg">{c.pflichtQuote.text}</p>
+            <footer className="mt-4 text-sm text-white/60">
+              <a
+                href={c.pflichtQuote.srcUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#FF6B61] transition hover:text-[#FF8077]"
+              >
+                {c.pflichtQuote.src}
+              </a>
+            </footer>
+          </blockquote>
+
           <div className="mt-10 overflow-x-auto rounded-2xl border border-white/10">
             <table className="w-full min-w-[760px] text-sm">
+              <caption className="sr-only">{c.pflichtTableCaption}</caption>
               <thead>
                 <tr className="border-b border-white/10 bg-white/5">
                   {c.pflichtTableHead.map((h) => (
-                    <th key={h} className="px-4 py-3.5 text-left font-semibold text-white">
+                    <th key={h} scope="col" className="px-4 py-3.5 text-left font-semibold text-white">
                       {h}
                     </th>
                   ))}
@@ -1695,7 +1853,7 @@ export default async function PenetrationstestPage() {
                   const Icon = PFLICHT_ICONS[i % PFLICHT_ICONS.length];
                   return (
                     <tr key={row.reg} className="border-b border-white/10 last:border-b-0 align-top">
-                      <td className="px-4 py-4 font-semibold text-white">
+                      <th scope="row" className="px-4 py-4 text-left font-semibold text-white">
                         <span className="inline-flex items-center gap-2">
                           <Icon className="h-4 w-4 shrink-0 text-[#FF3B30]" />
                           {row.href ? (
@@ -1706,7 +1864,7 @@ export default async function PenetrationstestPage() {
                             row.reg
                           )}
                         </span>
-                      </td>
+                      </th>
                       <td className="px-4 py-4 text-white/75">
                         {row.req}{' '}
                         <a

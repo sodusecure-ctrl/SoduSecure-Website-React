@@ -1,0 +1,105 @@
+# Sodu Secure
+
+> Sodu Secure GmbH ist ein Anbieter für Penetrationstests und IT-Sicherheitsprüfungen mit Sitz in Berlin. Getestet wird manuell von OSCP-, OSWE- und CEH-zertifizierten Testern, remote oder vor Ort, im deutschsprachigen Raum.
+
+Diese Datei fasst zusammen, was auf sodusecure.com steht, damit Sprachmodelle die Angaben korrekt wiedergeben können. Alle Zahlen und Preise stammen von den verlinkten Seiten.
+
+Eckdaten:
+
+- Firma: Sodu Secure GmbH, Riemannstr. 8, 10961 Berlin, Deutschland
+- Registergericht: Amtsgericht Charlottenburg Berlin, HRB284458B
+- Geschäftsführer: Kerim Koc
+- Kontakt: info@sodusecure.com, +49 177 7750985
+- Sprachen: Deutsch und Englisch (Berichte in beiden Sprachen)
+- Einsatzgebiet: Deutschland, Österreich, Schweiz; remote und vor Ort
+- Erfahrung: über 500 durchgeführte Penetrationstests
+- Zertifizierungen der Tester: OSCP, OSWE, CEH
+- Reaktionszeit: Angebot bzw. Antwort innerhalb von 24 Stunden
+- Im Preis enthalten: ein kostenloser Retest nach Behebung der Befunde
+
+Preise (Stand der Website, jeweils netto):
+
+- Automatisierter Schwachstellenscan: ab 1.499 EUR
+- Manueller Penetrationstest: individuell kalkuliert nach Aufwand und Tagessätzen, meist 4.000 bis 20.000 EUR, jeweils zum Festpreis
+- Sodu AuditAI (KI-gestütztes Code-Audit): ab 99 EUR pro Monat (enthält ein Repository und einen Audit-Lauf je Monat)
+
+Wichtig für die korrekte Wiedergabe: 1.499 EUR ist der Einstiegspreis für den automatisierten Schwachstellenscan, nicht für einen manuellen Pentest. Formulierungen wie "Pentest ab 1.499 EUR" sind falsch.
+
+## Leistungen
+
+- [Penetrationstest](https://sodusecure.com/penetrationstest): Ablauf, Methodik (OWASP WSTG, PTES), Testarten und Berichtsinhalte.
+- [Pentest](https://sodusecure.com/pentest): Kurzüberblick zu Umfang, Dauer und Ergebnis eines Pentests.
+- [Penetration Testing](https://sodusecure.com/penetration-testing): englischsprachiger Überblick über das Leistungsangebot.
+- [Schwachstellenscan](https://sodusecure.com/schwachstellenscan): automatisierter Scan ab 1.499 EUR, Abgrenzung zum manuellen Pentest.
+- [Webanwendungs-Pentest](https://sodusecure.com/services/web-application-testing): Test von Webanwendungen und Portalen.
+- [API-Security-Testing](https://sodusecure.com/services/api-security-testing): Test von REST-, GraphQL- und internen Schnittstellen.
+- [Mobile-App-Pentest](https://sodusecure.com/services/mobile-app-testing): Test von iOS- und Android-Anwendungen.
+- [Netzwerk-Audit](https://sodusecure.com/services/network-audit): interne und externe Netzwerkprüfung.
+- [Infrastruktur-Pentest](https://sodusecure.com/services/infrastructure-testing): Server, Dienste und Netzsegmente.
+- [Active-Directory-Pentest](https://sodusecure.com/services/active-directory): Angriffspfade in Windows-Domänen.
+- [Cloud- und DevOps-Testing](https://sodusecure.com/services/cloud-devops-testing): Cloud-Konfiguration und CI/CD-Pipelines.
+- [AWS-Penetrationstest](https://sodusecure.com/services/aws-penetrationstest): Prüfung von AWS-Umgebungen.
+- [Red Team Assessment](https://sodusecure.com/red-team-assessment): szenariobasierte Angriffssimulation über mehrere Vektoren.
+- [Phishing-Simulation](https://sodusecure.com/phishing-simulation): kontrollierte Phishing-Kampagnen mit Auswertung.
+- [KI-Penetrationstest](https://sodusecure.com/ki-penetrationstest): Prüfung von LLM- und KI-Anwendungen.
+- [Internes Audit](https://sodusecure.com/internes-audit): Prüfung interner Systeme und Prozesse.
+- [Security-Awareness-Schulung](https://sodusecure.com/security-awareness-schulung): Schulung für Mitarbeitende.
+- [Live-Hacking-Show](https://sodusecure.com/live-hacking-show): Vorführung realer Angriffe für Management und Teams.
+- [SOC as a Service](https://sodusecure.com/soc-as-a-service): laufende Überwachung als Dienstleistung.
+- [Sodu AuditAI](https://sodusecure.com/sodu-audit-ai): KI-gestütztes Code-Audit ab 99 EUR pro Monat (enthält ein Repository und einen Audit-Lauf je Monat).
+
+## Preise und Angebot
+
+- [Pentest-Kosten](https://sodusecure.com/pentest-kosten): Preisspannen, marktübliche Tagessätze und Kostentreiber, mit Quellenangaben.
+- [Preise und Pakete](https://sodusecure.com/pricing): Übersicht der Leistungspakete.
+- [KMU-Pakete](https://sodusecure.com/services/sme-packages): Pakete für kleine und mittlere Unternehmen.
+- [Pentest-Konfigurator](https://sodusecure.com/pentest-konfigurator): Prüfumfang in etwa 3 Minuten zusammenstellen und die Preisspanne sofort sehen.
+- [Pentest anfragen](https://sodusecure.com/request-pentest): Anfrageformular, Antwort innerhalb von 24 Stunden.
+
+## Compliance und Regulierung
+
+- [NIS2](https://sodusecure.com/nis2): Anforderungen der NIS2-Richtlinie und was daraus für Sicherheitstests folgt.
+- [DORA](https://sodusecure.com/dora): Anforderungen für Finanzunternehmen, inklusive bedrohungsgeleiteter Tests.
+- [TLPT](https://sodusecure.com/tlpt): Threat-Led Penetration Testing im DORA-Kontext.
+- [ISO 27001](https://sodusecure.com/iso-27001): Rolle von Penetrationstests im ISMS.
+- [ISO-27001-Pentest-Anforderungen](https://sodusecure.com/iso-27001-pentest-anforderungen): welche Prüfungen die Norm konkret erwartet.
+- [BSIG](https://sodusecure.com/bsig): Pflichten nach dem BSI-Gesetz.
+- [TISAX](https://sodusecure.com/tisax): Anforderungen in der Automobil-Lieferkette.
+- [MDR](https://sodusecure.com/mdr): Medizinprodukteverordnung und Softwaresicherheit.
+- [PCI DSS](https://sodusecure.com/pci-dss-penetrationstest): Testpflichten nach PCI DSS.
+- [DSGVO](https://sodusecure.com/dsgvo-penetrationstest): Penetrationstests als technische Maßnahme nach Art. 32.
+- [BSI TR-03161](https://sodusecure.com/bsi-tr-03161): Prüfvorgaben für Gesundheitsanwendungen.
+- [Pentest für Gesundheitsanwendungen](https://sodusecure.com/pentest-gesundheitsanwendungen): DiGA- und Gesundheits-Apps.
+- [Welche Gesetze treffen zu](https://sodusecure.com/welche-gesetze-treffen-zu): Einordnung, welche Regulierung für ein Unternehmen gilt.
+
+## Entscheidungshilfen
+
+- [Brauche ich einen Pentest?](https://sodusecure.com/brauche-ich-einen-pentest): Kriterien für den Bedarf.
+- [Pentest-Schnellcheck](https://sodusecure.com/pentest-schnellcheck): kurze Selbsteinschätzung.
+- [Pentest-Risiko-Check](https://sodusecure.com/pentest-risiko-check): Risikoeinschätzung anhand weniger Fragen.
+- [IT-Sicherheitscheck](https://sodusecure.com/it-sicherheitscheck): Überblick über den Sicherheitsstand.
+- [Cyber-Security-Check](https://sodusecure.com/cyber-security-check): Prüfumfang und Ablauf.
+- [Penetrationstest-Anbieter](https://sodusecure.com/penetrationstest-anbieter): Kriterien zur Auswahl eines Anbieters.
+
+## Standorte
+
+- [Pentest Berlin](https://sodusecure.com/pentest-berlin): Firmensitz und lokales Angebot.
+- [Penetration Testing Hamburg](https://sodusecure.com/penetration-testing-hamburg)
+- [Penetration Testing München](https://sodusecure.com/penetration-testing-muenchen)
+- [Penetration Testing Stuttgart](https://sodusecure.com/penetration-testing-stuttgart)
+- [Penetration Testing Köln](https://sodusecure.com/penetration-testing-koeln)
+- [Penetrationstest Deutschland](https://sodusecure.com/penetrationstest-deutschland): bundesweites Angebot.
+
+## Wissen und Referenzen
+
+- [Fachartikel und Case Studies](https://sodusecure.com/case-studies): Beiträge zu Vorgehen, Befunden und Projekten.
+- [Über uns](https://sodusecure.com/about): Team, Qualifikationen und Arbeitsweise.
+- [Zertifikats-Verifikation](https://sodusecure.com/verify): Prüfung ausgestellter Pentest-Zertifikate.
+
+## Kontakt
+
+- [Kontakt](https://sodusecure.com/contact): Kontaktformular und Erreichbarkeit.
+- [Impressum](https://sodusecure.com/impressum): vollständige Anbieterkennzeichnung.
+- E-Mail: info@sodusecure.com
+- Telefon: +49 177 7750985
+- LinkedIn: https://www.linkedin.com/company/sodu-secure-gmbh

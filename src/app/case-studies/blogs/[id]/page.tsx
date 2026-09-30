@@ -8,8 +8,14 @@ import { ArrowLeft, Bookmark, Calendar, ChevronDown, Clock, Share2, User } from 
 import { useParams, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import { useTranslations } from 'next-intl';
-import { getBlogById } from '@/lib/blogData';
+import { useLocale, useTranslations } from 'next-intl';
+import {
+  getArticleSchemaType,
+  getBlogById,
+  getBlogDateModified,
+  getBlogTimeRequired,
+} from '@/lib/blogData';
+import { ORGANIZATION_ID, SITE_URL, WEBSITE_ID, authorJsonLd } from '@/lib/authors';
 import { trackConversion } from '@/lib/gtag';
 
 export default function BlogArticleDetail() {
@@ -17,6 +23,7 @@ export default function BlogArticleDetail() {
   const [ctaEmail, setCtaEmail] = useState('');
   const router = useRouter();
   const params = useParams();
+  const locale = useLocale();
   const paramId = (params?.id ?? '1') as string;
 
   // Get blog metadata for JSON-LD (handles numeric ids AND keyword slugs)
@@ -65,30 +72,34 @@ export default function BlogArticleDetail() {
 
   const t = useTranslations(getBlogTranslationKey(blogId));
 
-  // Generate JSON-LD for Article
-  const articleSchema = blogData ? {
+  // Article-JSON-LD: Typ, Autor und Datumsangaben kommen aus den zentralen Datenquellen
+  // (src/lib/blogData.ts, src/lib/authors.ts), damit Schema und sichtbarer Inhalt nicht driften.
+  const articleUrl = blogData ? `${SITE_URL}/case-studies/blogs/${blogData.slug}` : null;
+  const timeRequired = blogData ? getBlogTimeRequired(blogData) : undefined;
+  const articleSchema = blogData && articleUrl ? {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+    '@type': getArticleSchemaType(blogData),
+    '@id': `${articleUrl}#article`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': articleUrl },
+    url: articleUrl,
+    isPartOf: {
+      '@type': 'Blog',
+      '@id': `${SITE_URL}/case-studies#blog`,
+      name: 'Sodu Secure Blog',
+      url: `${SITE_URL}/case-studies`,
+      isPartOf: { '@id': WEBSITE_ID },
+    },
     headline: blogData.title,
     description: blogData.description,
-    image: `https://sodusecure.com${blogData.image}`,
+    image: `${SITE_URL}${blogData.image}`,
+    inLanguage: locale === 'en' ? 'en' : 'de-DE',
     datePublished: blogData.date,
-    dateModified: blogData.date,
-    author: {
-      '@type': 'Person',
-      name: blogData.author,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'SoduSecure',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://sodusecure.com/images/logo.png',
-      },
-    },
+    dateModified: getBlogDateModified(blogData),
+    author: authorJsonLd(blogData.author),
+    publisher: { '@id': ORGANIZATION_ID, '@type': 'Organization', name: 'Sodu Secure' },
     keywords: blogData.keywords.join(', '),
     articleSection: blogData.category,
-    timeRequired: blogData.readTime,
+    ...(timeRequired ? { timeRequired } : {}),
   } : null;
 
 
@@ -215,6 +226,22 @@ export default function BlogArticleDetail() {
               <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               <span>{t('date')}</span>
             </div>
+            {/* Sichtbares Aktualisierungsdatum - erscheint nur, wenn in blogData.ts ein
+                `updated`-Datum gepflegt ist (also bei echter inhaltlicher Ueberarbeitung).
+                Gleiche Quelle wie dateModified im JSON-LD. */}
+            {blogData?.updated && (
+              <div className="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
+                <span aria-hidden>·</span>
+                <span>
+                  {locale === 'en' ? 'Last updated: ' : 'Zuletzt aktualisiert: '}
+                  {new Date(blogData.updated).toLocaleDateString(locale === 'en' ? 'en-GB' : 'de-DE', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric',
+                  })}
+                </span>
+              </div>
+            )}
           </div>
 
           <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
@@ -501,6 +528,10 @@ export default function BlogArticleDetail() {
                     <User className="w-6 h-6 sm:w-8 sm:h-8 text-[#FF3B30]" />
                   </div>
                   <div>
+                    {/* Sichtbare Autorenbox: Text bleibt artikelspezifisch aus messages/*.json.
+                        Das JSON-LD nutzt fuer registrierte Autoren src/lib/authors.ts und gibt
+                        fuer "Sodu Secure Team" die Organisation statt einer Person aus - dadurch
+                        widersprechen sich sichtbarer Inhalt und Markup nicht. */}
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{t('authorBio.name')}</h3>
                     <p className="text-sm text-gray-600 mb-2">{t('authorBio.role')}</p>
                     <p className="text-gray-700 text-sm sm:text-base">

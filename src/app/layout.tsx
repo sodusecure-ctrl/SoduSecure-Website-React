@@ -122,11 +122,20 @@ export default async function RootLayout({
   const locale = await getLocale();
   const messages = await getMessages();
 
+  // Zentrale Entität der Website. Alle anderen Schemas sollten per
+  // { '@id': `${baseUrl}/#organization` } hierauf referenzieren, statt Name und
+  // URL erneut als Strings zu duplizieren — sonst entstehen für Crawler mehrere
+  // scheinbar verschiedene Firmen.
+  //
+  // Regel für dieses Objekt: Jeder Wert hier muss auch sichtbar im HTML stehen
+  // (Preise auf /pentest-kosten und /sodu-audit-ai, Firmendaten im Impressum).
+  // Keine Angabe aufnehmen, die nicht auf der Website belegt ist.
   const orgJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     '@id': `${baseUrl}/#organization`,
     name: 'Sodu Secure',
+    legalName: 'Sodu Secure GmbH',
     url: baseUrl,
     logo: `${baseUrl}/icons/logo.png`,
     image: `${baseUrl}/images/og-image.jpg`,
@@ -134,16 +143,209 @@ export default async function RootLayout({
       'Penetrationstests und IT-Security aus Berlin – manuell von OSCP-zertifizierten Hackern. Schwachstellenscan ab 1.499 €, manuelle Pentests individuell kalkuliert.',
     email: 'info@sodusecure.com',
     telephone: '+49-177-7750985',
-    areaServed: ['DE', 'AT', 'CH'],
-    address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
+    // Nur verifizierte, im Footer verlinkte Profile. Der GitHub-Link im Footer
+    // zeigt auf github.com ohne Organisation und ist deshalb hier bewusst nicht
+    // aufgeführt — eine falsche sameAs-Angabe schadet der Entitätszuordnung.
+    sameAs: [
+      'https://www.linkedin.com/company/sodu-secure-gmbh',
+      'https://x.com/SoduSecure',
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Riemannstr. 8',
+      postalCode: '10961',
+      addressLocality: 'Berlin',
+      addressRegion: 'Berlin',
+      addressCountry: 'DE',
+    },
+    // Handelsregisterangabe aus dem Impressum – macht die Entität gegen ein
+    // öffentliches Register prüfbar.
+    identifier: {
+      '@type': 'PropertyValue',
+      name: 'Handelsregister',
+      value: 'HRB284458B',
+    },
+    foundingLocation: {
+      '@type': 'Place',
+      address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
+    },
+    areaServed: [
+      { '@type': 'Country', name: 'Deutschland' },
+      { '@type': 'Country', name: 'Österreich' },
+      { '@type': 'Country', name: 'Schweiz' },
+    ],
+    availableLanguage: [
+      { '@type': 'Language', name: 'Deutsch', alternateName: 'de' },
+      { '@type': 'Language', name: 'Englisch', alternateName: 'en' },
+    ],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'sales',
+        telephone: '+49-177-7750985',
+        email: 'info@sodusecure.com',
+        areaServed: ['DE', 'AT', 'CH'],
+        availableLanguage: ['de', 'en'],
+        url: `${baseUrl}/request-pentest`,
+      },
+    ],
     priceRange: '€€',
-    knowsAbout: ['Penetrationstest', 'NIS2', 'ISO 27001', 'DORA', 'Red Teaming', 'Active Directory', 'Cloud Security'],
+    knowsAbout: [
+      'Penetrationstest',
+      'Webanwendungs-Pentest',
+      'API-Penetrationstest',
+      'Mobile-App-Pentest',
+      'Active-Directory-Penetrationstest',
+      'Cloud-Penetrationstest',
+      'Infrastruktur-Penetrationstest',
+      'Schwachstellenscan',
+      'Red Teaming',
+      'Phishing-Simulation',
+      'Security Awareness',
+      'OWASP Web Security Testing Guide',
+      'PTES',
+      'NIS2',
+      'DORA',
+      'TLPT',
+      'ISO/IEC 27001',
+      'TISAX',
+      'PCI DSS',
+      'BSI TR-03161',
+      'DSGVO Art. 32',
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Leistungen Sodu Secure',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          url: `${baseUrl}/schwachstellenscan`,
+          priceCurrency: 'EUR',
+          price: '1499',
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            priceCurrency: 'EUR',
+            minPrice: 1499,
+            valueAddedTaxIncluded: false,
+          },
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Automatisierter Schwachstellenscan',
+            serviceType: 'Schwachstellenscan',
+            provider: { '@id': `${baseUrl}/#organization` },
+          },
+        },
+        {
+          '@type': 'Offer',
+          url: `${baseUrl}/pentest-kosten`,
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            priceCurrency: 'EUR',
+            minPrice: 4000,
+            maxPrice: 20000,
+            valueAddedTaxIncluded: false,
+            description:
+              'Manuelle Penetrationstests werden individuell nach Aufwand und Tagessätzen kalkuliert und liegen meist zwischen 4.000 und 20.000 € – zum Festpreis inklusive kostenlosem Retest.',
+          },
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Manueller Penetrationstest',
+            serviceType: 'Penetrationstest',
+            provider: { '@id': `${baseUrl}/#organization` },
+          },
+        },
+        {
+          '@type': 'Offer',
+          url: `${baseUrl}/sodu-audit-ai`,
+          priceCurrency: 'EUR',
+          price: '99',
+          priceSpecification: {
+            '@type': 'PriceSpecification',
+            priceCurrency: 'EUR',
+            minPrice: 99,
+            valueAddedTaxIncluded: false,
+            description: 'Sodu AuditAI, ab 99 € pro Monat (enthält ein Repository und einen Audit-Lauf je Monat).',
+          },
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Sodu AuditAI – KI-gestütztes Code-Audit',
+            serviceType: 'Code Security Review',
+            provider: { '@id': `${baseUrl}/#organization` },
+          },
+        },
+        {
+          '@type': 'Offer',
+          url: `${baseUrl}/red-team-assessment`,
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Red Team Assessment',
+            serviceType: 'Red Teaming',
+            provider: { '@id': `${baseUrl}/#organization` },
+          },
+        },
+        {
+          '@type': 'Offer',
+          url: `${baseUrl}/phishing-simulation`,
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Phishing-Simulation',
+            serviceType: 'Phishing-Simulation',
+            provider: { '@id': `${baseUrl}/#organization` },
+          },
+        },
+        {
+          '@type': 'Offer',
+          url: `${baseUrl}/ki-penetrationstest`,
+          itemOffered: {
+            '@type': 'Service',
+            name: 'KI-Penetrationstest',
+            serviceType: 'KI-Sicherheitsprüfung',
+            provider: { '@id': `${baseUrl}/#organization` },
+          },
+        },
+        {
+          '@type': 'Offer',
+          url: `${baseUrl}/security-awareness-schulung`,
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Security-Awareness-Schulung',
+            serviceType: 'Security Awareness Training',
+            provider: { '@id': `${baseUrl}/#organization` },
+          },
+        },
+        {
+          '@type': 'Offer',
+          url: `${baseUrl}/soc-as-a-service`,
+          itemOffered: {
+            '@type': 'Service',
+            name: 'SOC as a Service',
+            serviceType: 'Security Operations',
+            provider: { '@id': `${baseUrl}/#organization` },
+          },
+        },
+      ],
+    },
+  };
+
+  // WebSite-Entität, damit Article-/WebPage-Schemas per isPartOf referenzieren können.
+  // Bewusst OHNE potentialAction/SearchAction: Die Website hat keine eigene
+  // Suchfunktion (keine /search-Route, kein Suchformular) — eine SearchAction wäre
+  // eine Falschangabe und würde ins Leere zeigen.
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${baseUrl}/#website`,
+    url: baseUrl,
+    name: 'Sodu Secure',
+    inLanguage: ['de-DE', 'en'],
+    publisher: { '@id': `${baseUrl}/#organization` },
   };
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
         {/* Theme – set before paint to avoid a flash of the wrong design */}
         <script
           dangerouslySetInnerHTML={{

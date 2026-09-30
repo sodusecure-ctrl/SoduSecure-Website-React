@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getBlogById } from '@/lib/blogData';
+import { getBlogById, getBlogDateModified } from '@/lib/blogData';
 
 const baseUrl = 'https://sodusecure.com';
 
@@ -38,6 +38,10 @@ export async function generateMetadata({
       title: blog.title,
       description: blog.description,
       publishedTime: blog.date,
+      // dateModified-Pendant fuer Open Graph; ohne gepflegtes `updated` identisch mit publishedTime.
+      modifiedTime: getBlogDateModified(blog),
+      section: blog.category,
+      tags: blog.keywords,
       authors: [blog.author],
       images: [
         {
