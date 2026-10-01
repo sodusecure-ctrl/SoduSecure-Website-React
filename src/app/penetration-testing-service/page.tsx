@@ -149,7 +149,7 @@ const FAQS = [
   },
   {
     q: "Was kostet ein Penetration Testing Service?",
-    a: "Ein automatisierter Schwachstellenscan startet ab 1.499 €. Manuelle Pentests werden individuell auf Ihr Projekt zugeschnitten und nach Aufwand kalkuliert – meist zwischen 4.000 und 20.000 €; ein vollständiges KMU-Engagement inkl. Active Directory und Phishing-Simulation liegt bei 15.000 €+. Nutzen Sie unseren Pentest-Preisrechner für eine individuelle Schätzung – oder kontaktieren Sie uns für ein Festpreis-Angebot innerhalb von 24 Stunden.",
+    a: "Für den automatisierten Schwachstellenscan liegt der Einstieg bei 1.499 €. Manuelle Pentests werden individuell auf Ihr Projekt zugeschnitten und nach Aufwand kalkuliert, meist zwischen 4.000 und 20.000 €; ein vollständiges KMU-Engagement inkl. Active Directory und Phishing-Simulation liegt bei 15.000 €+. Der Preis steigt dabei nicht linear mit der Zahl der Systeme, sondern mit der Zahl unterschiedlicher Technologien im Scope, weil jede eigene Prüftechniken und eigene Einarbeitung verlangt.",
   },
   {
     q: "Wie lange dauert ein Penetrationstest?",
@@ -173,7 +173,7 @@ const FAQS = [
   },
   {
     q: "Ist ein Penetrationstest DSGVO-konform?",
-    a: "Alle Tests laufen auf Basis eines unterschriebenen Pentesting-Vertrags mit klar definiertem Scope. Wir verarbeiten keine personenbezogenen Daten ohne Rechtsgrundlage und schließen auf Wunsch einen Auftragsverarbeitungsvertrag (AVV) ab. Wir beraten Sie zur DSGVO-Konformität im Rahmen jedes Auftrags.",
+    a: "Alle Tests laufen auf Basis eines unterschriebenen Pentesting-Vertrags mit klar definiertem Scope. Personenbezogene Daten verarbeiten wir nur mit Rechtsgrundlage, auf Wunsch unter einem Auftragsverarbeitungsvertrag nach Art. 28 DSGVO. Bevorzugt testen wir auf Staging-Systemen mit Testdaten; erhobene Nachweise löschen wir nach Projektende zur vereinbarten Frist.",
   },
 ];
 

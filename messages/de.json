@@ -334,28 +334,44 @@
       "title": "Häufig gestellte Fragen",
       "items": [
         {
-          "question": "Wie lange dauert ein Infrastruktur-Penetrationstest?",
-          "answer": "Typischerweise 1-3 Wochen, abhängig vom Umfang und der Komplexität Ihrer Infrastruktur."
+          "question": "Was ist ein Penetrationstest?",
+          "answer": "Ein Penetrationstest ist ein kontrollierter Angriff auf Ihre Systeme durch zertifizierte Sicherheitsexperten. Wir nutzen dieselben Techniken wie echte Angreifer, um Schwachstellen nicht nur zu finden, sondern nachweisbar auszunutzen - abgestimmt, dokumentiert und ohne Schaden für Ihren Betrieb. Ergebnis ist ein Bericht, der jede Lücke mit Nachweis, Risikobewertung und konkreter Behebungsempfehlung beschreibt."
         },
         {
-          "question": "Müssen wir Ihnen VPN-Zugang geben?",
-          "answer": "Für interne Tests ist VPN-Zugang erforderlich. Für externe Tests werden nur öffentlich zugängliche Assets getestet."
+          "question": "Was kostet ein Pentest bei Sodu Secure?",
+          "answer": "Ein automatisierter Schwachstellenscan startet bei 1.499 €. Ein manueller Penetrationstest wird individuell nach Umfang und Aufwand kalkuliert und liegt meist zwischen 4.000 und 20.000 €. Den Preisrahmen für Ihren Fall ermitteln Sie in drei Minuten über unseren Konfigurator, ein verbindliches Festpreisangebot erhalten Sie innerhalb von 24 Stunden nach dem Scoping."
         },
         {
-          "question": "Wird das Testen unseren Betrieb stören?",
-          "answer": "Wir verwenden nicht-störende Testmethoden während der Geschäftszeiten und koordinieren alle invasiven Tests."
+          "question": "Wie läuft ein Pentest ab?",
+          "answer": "In fünf Schritten: kostenloses Scoping-Gespräch, schriftliche Testfreigabe mit Zeitfenster, aktive Testphase, Bericht mit priorisierten Findings und kostenloser Retest nach Behebung. Kritische Schwachstellen melden wir sofort während des Tests, nicht erst im Abschlussbericht. Sie benennen einen Ansprechpartner, der jederzeit erreichbar ist und Tests bei Bedarf stoppen kann."
         },
         {
-          "question": "Was passiert, wenn Sie kritische Schwachstellen finden?",
-          "answer": "Wir informieren sofort Ihr Sicherheitsteam und bieten Behebungsanleitungen."
+          "question": "Wie lange dauert ein Penetrationstest?",
+          "answer": "Zwischen Teststart und Berichtsübergabe vergehen typischerweise ein bis drei Wochen. Die aktive Testphase dauert je nach Umfang wenige Tage bis zwei Wochen, die Auswertung und Berichtserstellung danach rund drei bis fünf Arbeitstage. Den genauen Zeitraum legen wir im Scoping fest, kurzfristige Termine sind nach Absprache möglich."
         },
         {
-          "question": "Testen Sie auch unsere Cloud-Infrastruktur?",
-          "answer": "Ja, wir testen sowohl On-Premise- als auch Cloud-Infrastruktur einschließlich AWS, Azure und Google Cloud."
+          "question": "Stört der Test unseren laufenden Betrieb?",
+          "answer": "Nein. Wir testen mit Methoden, die den Produktivbetrieb nicht beeinträchtigen, und stimmen jeden potenziell invasiven Schritt vorab mit Ihnen ab. Auf Wunsch testen wir außerhalb der Geschäftszeiten oder gegen eine Staging-Umgebung. Während des Tests ist ein Tester für Sie erreichbar und kann laufende Tests jederzeit unterbrechen."
         },
         {
-          "question": "Welche Zugangsdaten benötigen Sie von uns?",
-          "answer": "Die Zugangsdaten variieren je nach Testtyp - von keinen Zugangsdaten für Black-Box-Tests bis zu Domain-Admin für umfassende Tests."
+          "question": "Welche Zugänge und Zugangsdaten brauchen Sie von uns?",
+          "answer": "Für einen Black-Box-Test genügen die Zieladressen. Bei Grey- und White-Box-Tests stellen Sie Testbenutzer mit unterschiedlichen Rollen bereit, für interne Tests zusätzlich einen VPN-Zugang oder ein System im Netz. Mehr Zugang bedeutet in der Regel mehr gefundene Schwachstellen pro Testtag - welches Modell sinnvoll ist, klären wir im Scoping."
+        },
+        {
+          "question": "Was passiert, wenn Sie eine kritische Schwachstelle finden?",
+          "answer": "Kritische Funde melden wir sofort während des Tests an Ihren benannten Ansprechpartner, telefonisch und schriftlich, inklusive erster Sofortmaßnahmen. Sie warten nicht bis zum Abschlussbericht. Auf Wunsch unterbrechen wir den Test, bis die Lücke geschlossen ist, und setzen ihn danach im vereinbarten Zeitfenster fort."
+        },
+        {
+          "question": "Was steht im Pentest-Bericht?",
+          "answer": "Der Bericht enthält eine Management-Zusammenfassung, alle Findings mit CVSS-Bewertung, Proof-of-Concept und Screenshots sowie eine nach Risiko priorisierte Maßnahmenliste. Sie erhalten ihn als PDF auf Deutsch und Englisch und können ihn direkt an Ihr Entwicklungsteam, an Auditoren oder an Kunden weitergeben, die einen Sicherheitsnachweis verlangen."
+        },
+        {
+          "question": "Reicht nicht ein automatischer Schwachstellenscanner?",
+          "answer": "Ein Scanner findet bekannte, katalogisierte Schwachstellen. Er erkennt keine Geschäftslogikfehler, keine Rechteausweitung über mehrere Schritte und nicht die Kombination harmloser Einzelbefunde zu einem echten Angriffspfad. Genau dort setzt der manuelle Test an. Für laufendes Monitoring ist ein Scan ab 1.499 € sinnvoll, für belastbare Nachweise der manuelle Penetrationstest."
+        },
+        {
+          "question": "Wie finde ich einen seriösen Penetrationstest-Anbieter?",
+          "answer": "Achten Sie auf nachgewiesene Zertifizierungen der Testenden, einen anonymisierten Musterbericht vor Auftragsvergabe, ein schriftliches Scoping mit klar abgegrenztem Umfang und einen im Preis enthaltenen Retest. Unsere Tester sind OSCP-, OSWE- und CEH-zertifiziert und haben über 500 Penetrationstests durchgeführt. Wir arbeiten von Berlin aus, remote und vor Ort."
         }
       ]
     },
@@ -1037,6 +1053,35 @@
     }
   },
   "infrastructureTesting": {
+    "pageFaq": {
+      "title": "Infrastruktur-Penetrationstest - häufige Fragen",
+      "items": [
+        {
+          "question": "Was ist ein Infrastruktur-Penetrationstest?",
+          "answer": "Ein Infrastruktur-Penetrationstest prüft Server, Dienste, Betriebssysteme und zentrale Verzeichnisdienste auf ausnutzbare Schwachstellen. Im Fokus stehen fehlende Patches, unsichere Konfigurationen, schwache Anmeldedaten und Rechteausweitung. Ziel ist, den realistischen Angriffspfad vom ersten Zugang bis zum kritischen System nachzuweisen, statt nur eine Liste offener Ports zu liefern."
+        },
+        {
+          "question": "Was kostet ein Infrastruktur-Penetrationstest?",
+          "answer": "Der Aufwand richtet sich nach Anzahl der Systeme, Standorte und der gewünschten Testtiefe. Ein manueller Infrastruktur-Pentest liegt meist zwischen 4.000 und 20.000 €, ein automatisierter Schwachstellenscan startet bei 1.499 €. Den größten Ausschlag gibt, ob nur der von außen erreichbare Perimeter geprüft wird oder zusätzlich das interne Netz samt Active Directory, weil dort Lateral Movement und Rechteausweitung einzeln nachgestellt werden."
+        },
+        {
+          "question": "Testen Sie On-Premise- und Cloud-Infrastruktur?",
+          "answer": "Ja, beides - auch in gemischten Umgebungen. On-Premise prüfen wir Server, Hypervisoren, Netzwerkdienste und Verzeichnisdienste, in der Cloud zusätzlich Identitäten, Berechtigungen und Konfiguration der genutzten Dienste. Hybride Setups sind besonders relevant, weil Angriffspfade dort oft über die Verbindung zwischen beiden Welten laufen."
+        },
+        {
+          "question": "Wird beim Infrastruktur-Pentest auch das Active Directory geprüft?",
+          "answer": "Ja, wenn eine Windows-Domäne im Scope liegt. Wir analysieren Angriffspfade mit Werkzeugen wie BloodHound und testen Kerberoasting, AS-REP Roasting, ACL- und Delegationsmissbrauch sowie Lateral Movement bis zur Domänenübernahme. Für eine reine Tiefenprüfung der Domäne gibt es zusätzlich unseren dedizierten Active-Directory-Pentest."
+        },
+        {
+          "question": "Welche Systeme gehören in den Scope eines Infrastruktur-Pentests?",
+          "answer": "Sinnvoll sind alle Systeme, deren Ausfall oder Kompromittierung Ihren Betrieb trifft: Domänencontroller, Datei- und Datenbankserver, Virtualisierung, Backup-Systeme, Fernwartungszugänge sowie zentrale Dienste wie Mail und Monitoring. Backup und Fernwartung werden häufig vergessen und sind erfahrungsgemäß besonders lohnende Ziele."
+        },
+        {
+          "question": "Testen Sie remote oder vor Ort?",
+          "answer": "Beides. Externe Tests und der überwiegende Teil interner Tests laufen remote über einen VPN-Zugang oder ein System im Netz. Vor Ort sind wir, wenn es fachlich nötig ist, etwa bei WLAN-Tests, physisch getrennten Produktionsnetzen oder wenn interne Vorgaben einen externen Zugang ausschließen. Wir arbeiten von Berlin aus deutschlandweit."
+        }
+      ]
+    },
     "hero": {
       "title": "Infrastruktur Penetration Testing",
       "description": "Umfassende Sicherheitsbewertung Ihrer Netzwerkinfrastruktur zur Identifizierung von Schwachstellen, bevor Angreifer sie ausnutzen.",
@@ -1116,6 +1161,35 @@
     }
   },
   "webApplicationTesting": {
+    "pageFaq": {
+      "title": "Web Application Penetrationstest - häufige Fragen",
+      "items": [
+        {
+          "question": "Was wird bei einem Web Application Penetrationstest geprüft?",
+          "answer": "Geprüft werden Authentifizierung und Session-Handling, Autorisierung und Rechtetrennung, Eingabevalidierung (SQL-Injection, XSS, Command Injection), Datei-Uploads, Passwort-Reset- und Zahlungsprozesse sowie die Geschäftslogik der Anwendung. Grundlage ist der OWASP Web Security Testing Guide, ergänzt um manuelle Tests, die über die reine OWASP-Top-10-Abdeckung hinausgehen."
+        },
+        {
+          "question": "Was kostet ein Web Application Penetrationstest?",
+          "answer": "Der Preis richtet sich nach Anzahl der Rollen, Funktionsumfang und Testtiefe der Anwendung. Ein manueller Web-Pentest liegt meist zwischen 4.000 und 20.000 €, ein automatisierter Schwachstellenscan Ihrer Webanwendung startet bei 1.499 €. Den Aufwand treibt vor allem das Rollenmodell: Jede Nutzerrolle wird gegen jede andere auf fehlerhafte Zugriffsrechte geprüft, sodass der Testumfang mit jeder zusätzlichen Rolle überproportional wächst."
+        },
+        {
+          "question": "Testen Sie unsere Webanwendung in der Produktion oder auf Staging?",
+          "answer": "Beides ist möglich. Wir testen bevorzugt gegen eine Staging-Umgebung, die produktionsnah aufgebaut ist - so entfällt jedes Restrisiko für echte Kundendaten. Ist nur Produktion verfügbar, arbeiten wir mit angelegten Testkonten, vermeiden destruktive Payloads und stimmen das Testfenster mit Ihnen ab."
+        },
+        {
+          "question": "Was sind die OWASP Top 10?",
+          "answer": "Die OWASP Top 10 sind eine Liste der zehn kritischsten Risikokategorien für Webanwendungen, herausgegeben vom Open Web Application Security Project. Dazu zählen unter anderem fehlerhafte Zugriffskontrolle, Injection und Fehlkonfigurationen. Sie sind der Mindestrahmen unseres Web-Pentests, nicht die Obergrenze: Wir testen zusätzlich anwendungsspezifische Logik."
+        },
+        {
+          "question": "Findet ein Web-Pentest auch Geschäftslogikfehler?",
+          "answer": "Ja, und das ist der Hauptgrund für manuelle Tests. Geschäftslogikfehler wie manipulierbare Preise im Warenkorb, überspringbare Freigabeschritte oder Rabattlogik, die sich mehrfach anwenden lässt, kennt kein Scanner - sie ergeben sich erst aus dem Verständnis Ihres Prozesses. Unsere Tester arbeiten sich deshalb zuerst in die Anwendung ein."
+        },
+        {
+          "question": "Wie oft sollte eine Webanwendung getestet werden?",
+          "answer": "Mindestens einmal jährlich sowie zusätzlich nach größeren Releases, Architekturänderungen oder der Einführung neuer Zahlungs- und Authentifizierungsfunktionen. Für Anwendungen mit häufigen Deployments kombinieren viele Kunden einen jährlichen manuellen Pentest mit laufenden Schwachstellenscans zwischen den Tests. Entscheidend ist, dass jede sicherheitsrelevante Funktion mindestens einmal nach ihrer Einführung geprüft wurde."
+        }
+      ]
+    },
     "hero": {
       "title": "Web Application Penetration Testing",
       "description": "Tiefgehende manuelle Sicherheitsprüfung von Webanwendungen zur Identifizierung von OWASP Top 10 Schwachstellen, Geschäftslogikfehlern und Authentifizierungsproblemen.",
@@ -1195,6 +1269,35 @@
     }
   },
   "apiSecurityTesting": {
+    "pageFaq": {
+      "title": "API-Penetrationstest - häufige Fragen",
+      "items": [
+        {
+          "question": "Was wird beim API-Penetrationstest geprüft?",
+          "answer": "Geprüft werden Authentifizierung und Token-Handling, Objekt- und Funktionsberechtigungen (BOLA und BFLA), Massenzuweisung, Rate Limiting, Eingabevalidierung und Injection sowie die Menge an Daten, die Endpunkte zurückgeben. Rahmen ist die OWASP API Security Top 10, ergänzt um manuelle Tests der Rechtelogik zwischen verschiedenen Konten und Rollen."
+        },
+        {
+          "question": "Was kostet ein API-Penetrationstest?",
+          "answer": "Der Aufwand richtet sich nach Anzahl der Endpunkte, Rollenmodell und Komplexität der Authentifizierung. Ein manueller API-Pentest liegt meist zwischen 4.000 und 20.000 €. Liegt eine aktuelle OpenAPI-Spezifikation oder eine Postman-Collection vor, entfällt die aufwendige Erfassung der Endpunkte und der Aufwand sinkt messbar."
+        },
+        {
+          "question": "Welche API-Typen testen Sie?",
+          "answer": "REST, GraphQL, SOAP und gRPC. Bei GraphQL prüfen wir zusätzlich Introspection, verschachtelte Abfragen und Query-Tiefe, bei SOAP die XML-Verarbeitung inklusive XXE. Hilfreich ist eine OpenAPI- oder GraphQL-Schema-Datei, nötig ist sie nicht - Endpunkte lassen sich auch aus Mitschnitten und Client-Analyse ableiten."
+        },
+        {
+          "question": "Was brauchen Sie von uns für einen API-Pentest?",
+          "answer": "Die Basis-URL der Testumgebung, mindestens zwei Testkonten pro Rolle, um Rechtetrennung prüfen zu können, sowie gültige Tokens oder Anmeldedaten. Eine API-Dokumentation oder Postman-Collection beschleunigt den Test deutlich. Bei IP-Beschränkungen benötigen wir zusätzlich eine Freischaltung unserer Test-IPs."
+        },
+        {
+          "question": "Was sind die OWASP API Security Top 10?",
+          "answer": "Die OWASP API Security Top 10 sind eine eigene Risikoliste speziell für Schnittstellen, weil APIs andere Schwachstellenmuster zeigen als klassische Webanwendungen. Im Vordergrund stehen fehlende Objekt- und Funktionsberechtigungen, unsichere Authentifizierung, unbegrenzter Ressourcenverbrauch und ungeprüfte Datenrückgabe."
+        },
+        {
+          "question": "Reicht ein Web-Pentest oder brauchen wir einen eigenen API-Pentest?",
+          "answer": "Ein Web-Pentest deckt die APIs nur so weit ab, wie die Oberfläche sie aufruft. Endpunkte ohne Frontend-Nutzung, ältere Versionen und interne Schnittstellen bleiben dabei unentdeckt. Wenn Ihre API von mobilen Apps, Partnern oder Kunden direkt genutzt wird, gehört sie als eigener Scope in den Test."
+        }
+      ]
+    },
     "hero": {
       "title": "API-Sicherheitstests",
       "description": "Umfassende Sicherheitsbewertung von REST-, GraphQL- und Microservice-APIs zur Identifizierung von Authentifizierungsfehlern, Autorisierungsumgehungen und Datenexpositionsschwachstellen.",
@@ -1274,6 +1377,35 @@
     }
   },
   "mobileAppTesting": {
+    "pageFaq": {
+      "title": "Mobile App Penetrationstest - häufige Fragen",
+      "items": [
+        {
+          "question": "Was wird bei einem Mobile App Penetrationstest geprüft?",
+          "answer": "Geprüft werden lokale Datenspeicherung, Verschlüsselung und Schlüsselverwaltung, Transportsicherheit inklusive Certificate Pinning, Authentifizierung und Session-Handling, Manipulationsschutz gegen Reverse Engineering sowie die Kommunikation mit dem Backend. Als Rahmen dient der OWASP Mobile Application Security Verification Standard, ergänzt um manuelle Laufzeitanalyse auf echten Geräten."
+        },
+        {
+          "question": "Testen Sie iOS- und Android-Apps?",
+          "answer": "Ja, beide Plattformen. Wir testen native iOS- und Android-Apps ebenso wie Cross-Platform-Apps aus React Native oder Flutter. Da sich Speicher-, Keychain- und Berechtigungsmodelle zwischen den Plattformen unterscheiden, werden beide Builds getrennt geprüft - eine iOS-Freigabe sagt nichts über die Android-Version aus."
+        },
+        {
+          "question": "Was kostet ein Mobile App Penetrationstest?",
+          "answer": "Ein manueller Mobile-App-Pentest wird nach Plattformanzahl, Funktionsumfang und Backend-Anbindung kalkuliert und liegt meist zwischen 4.000 und 20.000 €. Ob eine oder beide Plattformen geprüft werden und ob die APIs im Scope liegen, bestimmt den Aufwand am stärksten. Hinzu kommt, ob die App gegen Jailbreak- und Root-Erkennung sowie Zertifikatspinning antreten muss, weil das Umgehen dieser Schutzmechanismen eigene Testzeit bindet."
+        },
+        {
+          "question": "Wie stellen wir Ihnen die App zum Testen bereit?",
+          "answer": "Über TestFlight, einen Firebase- oder Play-Console-Testtrack oder als direkte IPA- beziehungsweise APK-Datei. Zusätzlich benötigen wir Testkonten für die relevanten Nutzerrollen und, wenn vorhanden, Zugriff auf eine Staging-Umgebung des Backends. Den Quellcode brauchen wir nicht zwingend, er erhöht aber die Testtiefe."
+        },
+        {
+          "question": "Prüfen Sie beim App-Pentest auch die Backend-APIs?",
+          "answer": "Ja, sofern sie im Scope liegen - und wir empfehlen das ausdrücklich. Die meisten schweren Befunde in mobilen Projekten liegen nicht in der App, sondern in der API dahinter: fehlende Objektberechtigungen, zu großzügige Antworten oder Endpunkte ohne Authentifizierung. Eine gehärtete App schützt nicht vor einer offenen Schnittstelle."
+        },
+        {
+          "question": "Wer führt Penetrationstests für Medizinprodukte oder Medizinproduktesoftware durch?",
+          "answer": "Solche Tests übernehmen spezialisierte Pentest-Dienstleister mit zertifizierten Testern - wir prüfen unter anderem Health- und Medizinprodukte-Apps samt Backend. Der Bericht ist so aufgebaut, dass er als technischer Nachweis in die Risikomanagement- und Cybersecurity-Dokumentation Ihres Produkts einfließen kann, inklusive Retest nach Behebung."
+        }
+      ]
+    },
     "hero": {
       "title": "Mobile App Penetration Testing",
       "description": "Umfassende Sicherheitsbewertung für iOS- und Android-Anwendungen, einschließlich statischer Analyse, dynamischer Tests und Backend-API-Sicherheit.",
@@ -1353,6 +1485,35 @@
     }
   },
   "cloudDevopsTesting": {
+    "pageFaq": {
+      "title": "Cloud- und DevOps-Pentest - häufige Fragen",
+      "items": [
+        {
+          "question": "Was ist Cloud-Penetration-Testing?",
+          "answer": "Cloud-Penetration-Testing ist die Sicherheitsprüfung Ihrer in der Cloud betriebenen Workloads und Konfigurationen. Getestet wird nicht die Plattform des Anbieters, sondern Ihr Verantwortungsbereich: Identitäten und Rollen, Speicherberechtigungen, Netzwerkregeln, Secrets und die Konfiguration der genutzten Dienste - jeweils mit dem Nachweis, was sich davon ausnutzen lässt."
+        },
+        {
+          "question": "Was kostet ein Cloud-Penetrationstest?",
+          "answer": "Der Preis richtet sich nach Anzahl der Konten und Abonnements, der genutzten Dienste und der Testtiefe. Ein manueller Cloud-Pentest liegt meist zwischen 4.000 und 20.000 €. Deutlich mehr Aufwand entsteht, wenn neben der Konfigurationsprüfung auch die CI/CD-Pipeline und die Verwaltung der Secrets im Prüfumfang liegen."
+        },
+        {
+          "question": "Welche Cloud-Plattformen testen Sie?",
+          "answer": "AWS, Microsoft Azure und Google Cloud sowie containerisierte Umgebungen auf Kubernetes. Der Ansatz ist gleich - Konfigurations- und Berechtigungsanalyse plus aktive Ausnutzung auf Ihren eigenen Ressourcen -, die konkreten Dienste und Schwachstellenmuster unterscheiden sich je Anbieter. Für AWS haben wir eine eigene Detailseite."
+        },
+        {
+          "question": "Braucht man für einen Cloud-Pentest die Erlaubnis des Anbieters?",
+          "answer": "Die großen Anbieter erlauben Kunden Penetrationstests der eigenen Ressourcen für definierte Dienste ohne Voranmeldung. Bestimmte Testarten, etwa Lasttests oder DoS-Szenarien, bleiben ausgenommen oder erfordern eine Abstimmung. Wir prüfen die geltende Richtlinie vor Testbeginn und bewegen uns strikt innerhalb der Vorgaben Ihres Anbieters."
+        },
+        {
+          "question": "Prüfen Sie auch CI/CD-Pipelines und Infrastructure as Code?",
+          "answer": "Ja. Wir prüfen Pipeline-Berechtigungen, Secrets-Handling in Build-Jobs und Repositories, Signierung und Herkunft von Artefakten sowie Terraform- und Kubernetes-Manifeste auf unsichere Voreinstellungen. Eine kompromittierbare Pipeline gibt Angreifern oft direkten Weg in die Produktion, ohne dass ein einziger Server angegriffen werden muss."
+        },
+        {
+          "question": "Wofür ist der Cloud-Anbieter verantwortlich und wofür wir selbst?",
+          "answer": "Der Anbieter verantwortet die Sicherheit der Plattform: Rechenzentren, Hardware und Virtualisierung. Sie verantworten die Sicherheit in der Cloud: Identitäten, Berechtigungen, Netzwerkregeln, Daten, Verschlüsselung und Anwendungskonfiguration. Genau dieser Kundenbereich ist Gegenstand des Cloud-Pentests, denn dort entstehen die meisten Datenlecks."
+        }
+      ]
+    },
     "hero": {
       "title": "Cloud & DevOps Sicherheitstests",
       "description": "Umfassende Sicherheitsbewertung von Cloud-Infrastruktur, DevOps-Pipelines und containerisierten Umgebungen zur Identifizierung von Fehlkonfigurationen und Sicherheitslücken.",
@@ -1432,6 +1593,35 @@
     }
   },
   "networkAudit": {
+    "pageFaq": {
+      "title": "Netzwerk-Penetrationstest - häufige Fragen",
+      "items": [
+        {
+          "question": "Was ist ein Netzwerk-Penetrationstest?",
+          "answer": "Ein Netzwerk-Penetrationstest prüft Ihre Netzwerkinfrastruktur auf ausnutzbare Schwachstellen: erreichbare Dienste, veraltete Software, schwache Konfigurationen, Standardpasswörter und Fehler in der Segmentierung. Geprüft wird nicht nur, was offen ist, sondern was sich davon tatsächlich für einen Zugriff oder eine Ausbreitung im Netz missbrauchen lässt."
+        },
+        {
+          "question": "Was kostet ein Netzwerk-Penetrationstest?",
+          "answer": "Der Preis hängt von der Anzahl der IP-Adressen, Standorte und Netzsegmente ab. Ein manueller Netzwerk-Pentest liegt meist zwischen 4.000 und 20.000 €, ein automatisierter Schwachstellenscan Ihres Perimeters startet bei 1.499 €. Spürbar teurer wird es erst, wenn die Segmentierung zwischen den Netzbereichen einzeln nachgewiesen werden soll, weil dafür aus jedem Segment heraus getestet wird."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen internem und externem Netzwerk-Pentest?",
+          "answer": "Der externe Test prüft, was aus dem Internet erreichbar ist: Perimeter, VPN-Gateways, Mailserver und exponierte Dienste. Der interne Test startet aus Ihrem Netz und beantwortet die Frage, wie weit ein Angreifer nach dem ersten Zugang kommt. Die meisten Unternehmen brauchen beides, weil die Befunde völlig unterschiedlich ausfallen."
+        },
+        {
+          "question": "Stellen Sie das Prüfgerät für den internen Test selbst bereit?",
+          "answer": "Auf Wunsch ja: Wir senden ein vorbereitetes Prüfgerät, das Sie nur ins Zielsegment einstecken und mit Strom versorgen müssen. Alternativ richten wir eine Test-Instanz auf Ihrer Virtualisierung ein. Nach Testende geht das Gerät zurück oder die Instanz wird gelöscht; die erhobenen Daten bleiben im Bericht und werden nicht weitergegeben."
+        },
+        {
+          "question": "Prüfen Sie auch WLAN und Netzwerksegmentierung?",
+          "answer": "Ja. Beim Segmentierungstest prüfen wir, ob die Trennung zwischen Client-, Server-, Gäste- und Produktionsnetzen tatsächlich greift oder sich umgehen lässt - ein häufiger Befund und für PCI-DSS- und NIS2-Nachweise relevant. WLAN-Tests vor Ort umfassen Authentifizierung, Gastnetz-Isolierung und Rogue-Access-Point-Szenarien."
+        },
+        {
+          "question": "Wie oft sollte ein Netzwerk-Pentest durchgeführt werden?",
+          "answer": "Einmal jährlich als Regelfall, zusätzlich nach Umzügen, Netzumbauten, Firewall-Migrationen oder der Anbindung neuer Standorte und Dienstleister. Zwischen den Tests empfiehlt sich ein regelmäßiger Schwachstellenscan des Perimeters, weil dort laufend neue Dienste und CVEs hinzukommen. Für ISO-27001- und NIS2-Nachweise sollte die gewählte Frequenz zusätzlich schriftlich begründet sein."
+        }
+      ]
+    },
     "hero": {
       "title": "Netzwerksicherheitsaudit",
       "description": "Umfassende Bewertung der Netzwerkinfrastruktur zur Identifizierung von Schwachstellen in Firewalls, Routern, Switches und Netzwerkkonfigurationen.",
@@ -1590,6 +1780,35 @@
     }
   },
   "securityAudit": {
+    "pageFaq": {
+      "title": "Security Audit - häufige Fragen",
+      "items": [
+        {
+          "question": "Was ist ein Security Audit?",
+          "answer": "Ein Security Audit ist die strukturierte Prüfung Ihrer IT-Sicherheit gegen einen festen Bewertungsrahmen: technische Konfiguration, Prozesse, Richtlinien, Berechtigungen und Nachweise. Anders als beim reinen Angriffstest steht am Ende ein Reifegradbild mit Lücken, Prioritäten und Maßnahmenplan, das sich direkt für Audits und Managementberichte nutzen lässt."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen Security Audit und Penetrationstest?",
+          "answer": "Ein Penetrationstest beantwortet die Frage, ob und wie ein Angreifer eindringen kann. Ein Security Audit beantwortet die Frage, ob Ihre Sicherheitsmaßnahmen vollständig, dokumentiert und wirksam sind. Der Pentest liefert Tiefe an einzelnen Punkten, das Audit liefert Breite über Technik und Organisation. Für Compliance-Nachweise braucht es meist beides."
+        },
+        {
+          "question": "Was kostet ein Security Audit?",
+          "answer": "Der Preis hängt von Unternehmensgröße, Anzahl der Standorte und dem gewählten Rahmen ab, etwa ISO 27001, NIS2 oder DORA. Ein automatisierter Schwachstellenscan als technischer Baustein startet bei 1.499 €, manuelle Prüfungen werden individuell kalkuliert und liegen meist zwischen 4.000 und 20.000 €. Wer mehrere Rahmenwerke gleichzeitig abdecken will, spart Aufwand, weil sich die technischen Nachweise überschneiden und einmal erhoben für mehrere Audits taugen."
+        },
+        {
+          "question": "Wie kann ich prüfen, ob mein System sicher ist?",
+          "answer": "Verlässlich nur durch Prüfung von außen: ein Schwachstellenscan zeigt bekannte Lücken in erreichbaren Systemen, ein Penetrationstest zeigt, was sich davon tatsächlich ausnutzen lässt, und ein Security Audit zeigt, ob Prozesse und Konfiguration dahinter tragfähig sind. Eine Selbsteinschätzung ohne technische Prüfung übersieht erfahrungsgemäß genau die kritischen Punkte."
+        },
+        {
+          "question": "Was gehört alles zur IT-Sicherheit?",
+          "answer": "Technik, Organisation und Menschen. Technisch gehören Netzwerk- und Systemhärtung, Patchmanagement, Zugriffskontrolle, Verschlüsselung, Protokollierung und Backup dazu. Organisatorisch Richtlinien, Verantwortlichkeiten, Risikomanagement, Dienstleistersteuerung und Notfallprozesse. Dazu kommen Sensibilisierung der Mitarbeitenden und regelmäßige Wirksamkeitsprüfungen wie Audits und Penetrationstests."
+        },
+        {
+          "question": "Unterschreiben Sie eine Geheimhaltungsvereinbarung?",
+          "answer": "Ja. Wir unterzeichnen Ihre Geheimhaltungsvereinbarung vor dem Scoping und stellen auf Wunsch eine eigene bereit. Erhobene Daten werden ausschließlich für die Prüfung verwendet, verschlüsselt gespeichert und nach einer vereinbarten Frist gelöscht. Wo personenbezogene Daten berührt werden, schließen wir zusätzlich einen Auftragsverarbeitungsvertrag nach Art. 28 DSGVO."
+        }
+      ]
+    },
     "hero": {
       "title": "Sicherheitsaudit-Dienstleistungen",
       "description": "Umfassende Sicherheitsbewertung, die mehrere Testmethoden kombiniert, um eine vollständige Bewertung der Sicherheitslage zu bieten.",
@@ -1669,6 +1888,35 @@
     }
   },
   "vulnerabilityAssessment": {
+    "pageFaq": {
+      "title": "Schwachstellenscan - häufige Fragen",
+      "items": [
+        {
+          "question": "Wie priorisieren Sie die gefundenen Schwachstellen?",
+          "answer": "Die CVSS-Bewertung ist der Ausgangspunkt, nicht das Ergebnis. Entscheidend ist die Einordnung in Ihre Umgebung: Ist das System aus dem Internet erreichbar, existiert ein öffentlich verfügbarer Exploit, hängen personenbezogene Daten oder ein produktionskritischer Prozess daran. Daraus entsteht eine Reihenfolge, die Ihr Team von oben nach unten abarbeiten kann, statt einer Liste gleichrangiger Einträge."
+        },
+        {
+          "question": "Wie gehen Sie mit False Positives um?",
+          "answer": "Jeder Treffer wird manuell nachgeprüft, bevor er in den Bericht kommt. Rein versionsbasierte Meldungen verifizieren wir am tatsächlichen Verhalten des Dienstes, denn zurückportierte Patches und nicht erreichbare Codepfade erzeugen im Rohbefund regelmäßig Fehlalarme. Was sich nicht bestätigen lässt, entfällt oder wird mit Begründung als nicht ausnutzbar gekennzeichnet."
+        },
+        {
+          "question": "Können wir das Assessment wiederkehrend beauftragen?",
+          "answer": "Ja. Viele Kunden lassen extern erreichbare Systeme monatlich und interne Bereiche quartalsweise prüfen, damit neu bekannt gewordene Lücken nicht bis zum nächsten manuellen Test liegen bleiben. Der Einstieg liegt bei 1.499 €. Wiederkehrende Durchläufe behalten Scope und Bewertungsmaßstab bei, sodass Sie Veränderungen über die Zeit tatsächlich vergleichen können."
+        },
+        {
+          "question": "Wie unterscheidet sich das Assessment von unserem eigenen Scanner-Report?",
+          "answer": "Ein Scanner-Report zeigt, was ein Werkzeug gesehen hat. Das Assessment zeigt, was davon übrig bleibt, nachdem ein Mensch es geprüft hat: validierte Befunde, entfernte Fehlalarme, Einordnung nach Ihrem Geschäftsrisiko und eine Maßnahmenliste, die Sie an Auditoren und Kunden weitergeben können. Der praktische Unterschied liegt in der Weiterverarbeitung: Jeder verifizierte Befund kommt mit Reproduktionsschritten und lässt sich unverändert als Ticket an die Entwicklung übergeben."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen Schwachstellenscan und Penetrationstest?",
+          "answer": "Ein Schwachstellenscan findet bekannte Lücken in der Breite und lässt sich regelmäßig wiederholen. Ein Penetrationstest geht in die Tiefe: Ein Mensch nutzt Schwachstellen tatsächlich aus, verkettet sie und findet Geschäftslogikfehler, die in keiner Datenbank stehen. Der Scan ist laufende Hygiene, der Pentest der belastbare Nachweis."
+        },
+        {
+          "question": "Wie oft sollte ein Schwachstellenscan laufen?",
+          "answer": "Für nach außen erreichbare Systeme monatlich oder häufiger, für interne Systeme mindestens quartalsweise, zusätzlich nach jeder größeren Änderung. Neue CVEs erscheinen täglich - ein Scan, der ein Jahr zurückliegt, sagt über den heutigen Zustand wenig aus. Viele Kunden kombinieren regelmäßige Scans mit einem jährlichen manuellen Pentest."
+        }
+      ]
+    },
     "hero": {
       "title": "Schwachstellenbewertung-Dienste",
       "description": "Automatisierte und manuelle Schwachstellenscans zur Identifizierung von Sicherheitslücken in Ihrem gesamten Technologie-Stack.",

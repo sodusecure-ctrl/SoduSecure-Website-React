@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Box, Cloud, Database, FileText, GitBranch, Image, List, Lock, RotateCcw, Server, Settings, Shield } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import ComprehensiveTesting from '../../../components/service/ComprehensiveTesting';
+import ServiceFaq from '../../../components/service/ServiceFaq';
 import { useTranslations } from 'next-intl';
 
 export default function CloudDevOpsSecurityLanding() {
@@ -131,6 +132,7 @@ export default function CloudDevOpsSecurityLanding() {
       </div>
 
       {/* Comprehensive Testing Component */}
+      <ServiceFaq namespace="cloudDevopsTesting" />
       <ComprehensiveTesting />
     </div>
   );

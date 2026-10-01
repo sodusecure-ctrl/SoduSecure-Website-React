@@ -20,6 +20,6 @@ export const smeFaqs = [
   },
   {
     q: 'Wer führt den KMU Pentest durch?',
-    a: 'Ihren KMU Pentest führen OSCP-, OSWE- und CEH-zertifizierte Tester von Sodu Secure durch - remote oder vor Ort bei Ihnen. Nach Ihrer Anfrage erhalten Sie innerhalb von 24 Stunden eine Antwort. Zum Abschluss bekommen Sie einen Bericht mit Management Summary und technischen Details, der Retest nach Behebung der Schwachstellen ist kostenlos.',
+    a: 'Ihren KMU Pentest führen OSCP-, OSWE- und CEH-zertifizierte Tester von Sodu Secure durch - remote oder vor Ort bei Ihnen. Für das Projekt bekommen Sie einen festen Ansprechpartner, der auch die Abschlusspräsentation hält. Der Retest nach Behebung der Schwachstellen ist im Paketpreis enthalten.',
   },
 ];

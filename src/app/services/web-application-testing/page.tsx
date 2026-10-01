@@ -5,6 +5,7 @@ import { AlertCircle, FileCode, FileText, Globe, Image, Key, LayoutDashboard, Li
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import ComprehensiveTesting from '../../../components/service/ComprehensiveTesting';
+import ServiceFaq from '../../../components/service/ServiceFaq';
 
 export default function WebAppPentestLanding() {
   const router = useRouter();
@@ -131,6 +132,7 @@ export default function WebAppPentestLanding() {
           </div>
         </div>
       </div>
+      <ServiceFaq namespace="webApplicationTesting" />
       <ComprehensiveTesting />
     </div>
   );

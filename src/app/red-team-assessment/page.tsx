@@ -240,7 +240,8 @@ export default function RedTeamAssessmentPage() {
             <Link href="/penetration-testing" className="text-[#FF3B30] hover:text-[#FF6B61]">Pentest</Link>{" · "}
             <Link href="/vulnerability-assessment-service" className="text-[#FF3B30] hover:text-[#FF6B61]">Vulnerability Assessment</Link>{" · "}
             <Link href="/phishing-simulation" className="text-[#FF3B30] hover:text-[#FF6B61]">Phishing Simulation</Link>{" · "}
-            <Link href="/cyber-security-check" className="text-[#FF3B30] hover:text-[#FF6B61]">Cyber Security Check</Link>
+            <Link href="/cyber-security-check" className="text-[#FF3B30] hover:text-[#FF6B61]">Cyber Security Check</Link>{" · "}
+            <Link href="/tlpt" className="text-[#FF3B30] hover:text-[#FF6B61]">TLPT nach DORA</Link>
           </p>
         </div>
       </section>

@@ -22,7 +22,12 @@ export const metadata: Metadata = {
 
 export default async function Layout({ children }: { children: React.ReactNode }) {
   const t = await getTranslations("serviceCommon");
-  const faqItems = t.raw("faq.items") as Array<{ question: string; answer: string }>;
+  const tPage = await getTranslations("webApplicationTesting");
+  // EIN FAQPage je Route: gemeinsamer Service-FAQ + seitenspezifischer FAQ-Block.
+  const faqItems = [
+    ...(t.raw("faq.items") as Array<{ question: string; answer: string }>),
+    ...(tPage.raw("pageFaq.items") as Array<{ question: string; answer: string }>),
+  ];
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

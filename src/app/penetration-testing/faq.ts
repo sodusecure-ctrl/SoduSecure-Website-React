@@ -33,4 +33,20 @@ export const FAQS: FaqItem[] = [
     q: "Wer führt bei Sodu Secure die Penetrationstests durch?",
     a: "Alle Tests werden von zertifizierten Sicherheitsexperten (OSCP, CEH, ISO 27001 Lead Auditor) durchgeführt – keine Junior-Analysten, keine reinen Scan-Reports. Sie kommunizieren direkt mit dem Pentester.",
   },
+  {
+    q: "Wie läuft ein Penetrationstest ab?",
+    a: "In fünf Schritten: Im Scoping legen Sie Prüfobjekte, Testfenster und erlaubte Techniken schriftlich fest. Es folgen Informationssammlung und Schwachstellenidentifikation, danach die manuelle Ausnutzung der Funde mit Proof-of-Concept. Anschließend erhalten Sie den priorisierten Bericht und ein Abschlussgespräch. Nach Behebung der Schwachstellen prüfen wir im kostenlosen Retest nach, ob die Maßnahmen greifen.",
+  },
+  {
+    q: "Was bedeutet Pentester?",
+    a: "Ein Pentester ist ein Sicherheitsexperte, der Systeme im Auftrag des Eigentümers angreift, um ausnutzbare Schwachstellen zu finden, bevor es echte Angreifer tun. Die Grundlage ist immer ein schriftlicher Auftrag mit definiertem Scope. Fachliche Nachweise sind praktische Zertifizierungen wie OSCP oder OSWE, bei denen in einer Prüfung reale Systeme kompromittiert werden müssen.",
+  },
+  {
+    q: "Was steht im Bericht nach einem Penetrationstest?",
+    a: "Der Bericht enthält eine Executive Summary für die Geschäftsführung, den dokumentierten Prüfumfang und die Methodik sowie jede Schwachstelle einzeln: Schweregrad, betroffenes System, Nachweis der Ausnutzbarkeit und konkrete Fix-Empfehlung. Dazu kommt ein priorisierter Maßnahmenkatalog. Sie erhalten den Bericht auf Deutsch und Englisch, sodass er auch international vorgelegt werden kann.",
+  },
+  {
+    q: "Beeinträchtigt ein Penetrationstest den laufenden Betrieb?",
+    a: "In der Regel nicht. Testfenster, erlaubte Techniken und Eskalationswege werden vor dem Start schriftlich festgelegt, Prüfungen mit absichtlicher Überlastung finden nur nach ausdrücklicher Freigabe statt. Sensible Produktivsysteme testen wir auf Wunsch außerhalb der Geschäftszeiten oder gegen eine Staging-Umgebung. Während des Tests ist der Pentester für Ihr Team direkt erreichbar.",
+  },
 ];

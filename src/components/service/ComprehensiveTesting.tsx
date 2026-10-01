@@ -173,7 +173,7 @@ export default function ComprehensiveTesting() {
                 </button>
                 <div
                   id={`faq-answer-${index}`}
-                  className={`overflow-hidden transition-all duration-300 ${openFAQ === index ? 'max-h-96' : 'max-h-0'}`}
+                  className={`overflow-hidden transition-all duration-300 ${openFAQ === index ? 'max-h-[48rem]' : 'max-h-0'}`}
                 >
                   <div className="px-3 sm:px-4 md:px-5 pb-3 sm:pb-4 md:pb-5 text-gray-400 text-xs sm:text-sm leading-relaxed">
                     <p>{item.answer}</p>
@@ -203,10 +203,11 @@ export default function ComprehensiveTesting() {
 
         {/* Content container */}
         <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center">
-          {/* Main heading */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+          {/* CTA-Überschrift: h2, nicht h1 - die h1 der Seite trägt der Hero.
+              Zwei h1 pro Seite verwässern das Hauptthema für Crawler. */}
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
             {t('cta.title')}
-          </h1>
+          </h2>
 
           {/* Subtitle */}
           <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-3xl mx-auto">

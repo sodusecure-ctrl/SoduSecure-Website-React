@@ -756,12 +756,20 @@ const de: Copy = {
       a: 'Ein Penetrationstest ist ein beauftragter, kontrollierter Hackerangriff auf die eigenen Systeme: Sicherheitsexperten versuchen mit den Methoden echter Angreifer, in Anwendungen, Netzwerke oder Cloud-Umgebungen einzudringen. Das Ergebnis ist ein Bericht, der nachgewiesene Schwachstellen, deren Risiko und konkrete Behebungsempfehlungen enthält.',
     },
     {
+      q: 'Welche Arten von Penetrationstests gibt es?',
+      a: 'Unterschieden wird nach Prüfobjekt und nach Perspektive. Nach Prüfobjekt: Webanwendung, API, externe und interne Infrastruktur, Active Directory, Cloud, Mobile App, WLAN und Social Engineering. Nach Perspektive: extern aus dem Internet oder intern aus dem Firmennetz, jeweils als Black-, Grey- oder White-Box. Das BSI unterscheidet zusätzlich nach Informationsbasis, Aggressivität, Umfang, Vorgehensweise, Technik und Ausgangspunkt.',
+    },
+    {
       q: 'Was kostet ein Penetrationstest?',
       a: 'Die Kosten hängen von Scope und Prüftiefe ab. Ein automatisierter Schwachstellenscan startet bei Sodu Secure ab 1.499 €. Ein manueller Penetrationstest wird individuell auf das Projekt zugeschnitten und nach Aufwand und Tagessätzen kalkuliert - meist zwischen 4.000 und 20.000 €. Den verbindlichen Festpreis erhalten Sie nach dem Scoping-Call. Vorsicht bei Pauschalpreisen ohne Scoping - dahinter steckt oft nur ein automatisierter Scan.',
     },
     {
       q: 'Wie lange dauert ein Penetrationstest?',
       a: 'Je nach Scope wenige Testtage bis mehrere Wochen: Eine fokussierte Webanwendung ist meist innerhalb weniger Tage getestet, große interne Infrastrukturen brauchen länger. Der genaue Zeitrahmen wird im Scoping festgelegt und mit Ihrem Betrieb abgestimmt.',
+    },
+    {
+      q: 'Wie läuft ein Penetrationstest ab?',
+      a: 'In vier Schritten: Im Scoping werden Prüfobjekt, Prüftiefe, Zeitraum und Eskalationswege schriftlich festgelegt. Danach folgt die Informationsbeschaffung über Systeme, Dienste und erreichbare Angriffsfläche, anschließend die aktive Prüfung, bei der jeder Fund manuell verifiziert und zu realen Angriffspfaden verkettet wird. Zum Abschluss erhalten Sie den Bericht mit Management Summary, CVSS-Bewertung und Proof-of-Concept; nach Ihrer Behebung verifiziert der kostenlose Retest die Fixes.',
     },
     {
       q: 'Wie oft sollte ein Penetrationstest durchgeführt werden?',
@@ -1365,12 +1373,20 @@ const en: Copy = {
       a: 'A penetration test is a commissioned, controlled hacking attack on your own systems: security experts use the methods of real attackers to try to intrude into applications, networks or cloud environments. The result is a report with proven vulnerabilities, their risk and concrete remediation recommendations.',
     },
     {
+      q: 'What types of penetration tests are there?',
+      a: 'Tests are distinguished by target and by perspective. By target: web application, API, external and internal infrastructure, Active Directory, cloud, mobile app, Wi-Fi and social engineering. By perspective: external from the internet or internal from the corporate network, each as black, grey or white box. The BSI additionally classifies tests by information base, aggressiveness, scope, approach, technique and starting point.',
+    },
+    {
       q: 'How much does a penetration test cost?',
       a: 'Costs depend on scope and test depth. An automated vulnerability scan at Sodu Secure starts from €1,499. Manual pentests are individually scoped and calculated based on effort and day rates - typically €4,000 to €20,000. You receive a binding fixed price after the scoping call. Be cautious with flat rates offered without scoping - they usually hide an automated scan.',
     },
     {
       q: 'How long does a penetration test take?',
       a: 'Depending on scope, from a few testing days to several weeks: a focused web application is usually tested within days, large internal infrastructures take longer. The exact timeline is fixed during scoping and coordinated with your operations.',
+    },
+    {
+      q: 'How does a penetration test work step by step?',
+      a: 'In four steps: scoping fixes the target, test depth, time frame and escalation paths in writing. Next comes information gathering on systems, services and reachable attack surface, followed by active testing in which every finding is verified manually and chained into real attack paths. Finally you receive the report with executive summary, CVSS rating and proof of concept; after your remediation the free retest verifies the fixes.',
     },
     {
       q: 'How often should a penetration test be performed?',

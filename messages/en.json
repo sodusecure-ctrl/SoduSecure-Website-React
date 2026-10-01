@@ -334,28 +334,44 @@
       "title": "Frequently asked questions",
       "items": [
         {
-          "question": "How long does an infrastructure penetration test take?",
-          "answer": "Typically 1-3 weeks, depending on the size and complexity of your infrastructure."
+          "question": "What is a penetration test?",
+          "answer": "A penetration test is a controlled attack on your systems carried out by certified security experts. We use the same techniques as real attackers to not only find weaknesses but prove they are exploitable - agreed in advance, documented and without damaging your operations. You receive a report describing every finding with evidence, risk rating and a concrete fix."
         },
         {
-          "question": "Do we need to give you VPN access?",
-          "answer": "VPN access is required for internal testing.For external testing, only publicly accessible assets are tested."
+          "question": "What does a pentest cost at Sodu Secure?",
+          "answer": "An automated vulnerability scan starts at 1,499 EUR. A manual penetration test is calculated individually by scope and effort and usually lands between 4,000 and 20,000 EUR. Our configurator gives you a price range in three minutes, and you receive a binding fixed-price quote within 24 hours of the scoping call."
         },
         {
-          "question": "Will testing disrupt our operations?",
-          "answer": "We use non-intrusive testing methods during business hours and coordinate all invasive testing."
+          "question": "How does a pentest work?",
+          "answer": "In five steps: a free scoping call, written test authorisation with a time window, the active testing phase, a report with prioritised findings, and a free retest after remediation. Critical weaknesses are reported to you immediately during testing, not only in the final report. You name a contact who can pause testing at any time."
         },
         {
-          "question": "What happens if you find critical vulnerabilities?",
-          "answer": "We will immediately notify your security team and provide remediation instructions."
+          "question": "How long does a penetration test take?",
+          "answer": "One to three weeks usually pass between test start and report handover. The active testing phase runs from a few days to two weeks depending on scope, followed by roughly three to five working days for analysis and reporting. We fix the exact window during scoping, and short-notice slots are possible on request."
         },
         {
-          "question": "Are you also testing our cloud infrastructure?",
-          "answer": "Yes, we test both on-premise and cloud infrastructure including AWS, Azure and Google Cloud."
+          "question": "Will the test disrupt our operations?",
+          "answer": "No. We use testing methods that do not affect production and agree every potentially invasive step with you beforehand. On request we test outside business hours or against a staging environment. A tester stays reachable throughout the engagement and can pause running tests at any moment."
         },
         {
-          "question": "What access data do you need from us?",
-          "answer": "Credentials vary depending on the test type - from no credentials for black box testing to domain admin for comprehensive testing."
+          "question": "What access and credentials do you need from us?",
+          "answer": "For a black-box test the target addresses are enough. For grey-box and white-box tests you provide test users with different roles, and for internal tests a VPN account or a system inside the network. More access normally means more findings per testing day - we decide which model fits during scoping."
+        },
+        {
+          "question": "What happens if you find a critical vulnerability?",
+          "answer": "We report critical findings immediately during the test to your named contact, by phone and in writing, including first containment steps. You do not wait for the final report. On request we pause the test until the gap is closed and resume it within the agreed time window."
+        },
+        {
+          "question": "What is in the pentest report?",
+          "answer": "The report contains an executive summary, every finding with CVSS rating, proof of concept and screenshots, plus a remediation list prioritised by risk. You receive it as a PDF in German and English and can pass it straight to your development team, to auditors or to customers who require security evidence."
+        },
+        {
+          "question": "Is an automated vulnerability scanner not enough?",
+          "answer": "A scanner finds known, catalogued vulnerabilities. It does not detect business logic flaws, multi-step privilege escalation or the way harmless individual findings combine into a real attack path. That is where manual testing starts. A scan from 1,499 EUR suits continuous monitoring, a manual penetration test provides defensible evidence."
+        },
+        {
+          "question": "How do I find a reputable penetration testing provider?",
+          "answer": "Look for proven certifications of the actual testers, an anonymised sample report before you sign, written scoping with a clearly defined boundary, and a retest included in the price. Our testers hold OSCP, OSWE and CEH certifications and have delivered over 500 penetration tests. We work out of Berlin, remotely and on site."
         }
       ]
     },
@@ -1276,6 +1292,35 @@
     }
   },
   "infrastructureTesting": {
+    "pageFaq": {
+      "title": "Infrastructure penetration testing - common questions",
+      "items": [
+        {
+          "question": "What is an infrastructure penetration test?",
+          "answer": "An infrastructure penetration test examines servers, services, operating systems and central directory services for exploitable weaknesses. It focuses on missing patches, insecure configurations, weak credentials and privilege escalation. The goal is to prove the realistic attack path from initial access to a critical system instead of delivering a list of open ports."
+        },
+        {
+          "question": "What does an infrastructure penetration test cost?",
+          "answer": "Effort depends on the number of systems, sites and the desired depth. A manual infrastructure pentest usually lands between 4,000 and 20,000 EUR, while an automated vulnerability scan starts at 1,499 EUR. The biggest factor is whether only the externally reachable perimeter is tested or the internal network including Active Directory, where lateral movement and privilege escalation are reproduced step by step."
+        },
+        {
+          "question": "Do you test on-premise and cloud infrastructure?",
+          "answer": "Yes, both - including mixed environments. On premise we assess servers, hypervisors, network services and directory services; in the cloud we add identities, permissions and the configuration of the services in use. Hybrid setups matter in particular, because attack paths there often run through the link between the two worlds."
+        },
+        {
+          "question": "Does the infrastructure pentest also cover Active Directory?",
+          "answer": "Yes, when a Windows domain is in scope. We analyse attack paths with tools such as BloodHound and test Kerberoasting, AS-REP roasting, ACL and delegation abuse, and lateral movement up to domain takeover. For a dedicated deep dive into the domain we also offer a separate Active Directory pentest."
+        },
+        {
+          "question": "Which systems belong in the scope of an infrastructure pentest?",
+          "answer": "Every system whose outage or compromise would hurt your operations: domain controllers, file and database servers, virtualisation, backup systems, remote maintenance access and central services such as mail and monitoring. Backup and remote maintenance are often forgotten and are, in our experience, particularly rewarding targets."
+        },
+        {
+          "question": "Do you test remotely or on site?",
+          "answer": "Both. External tests and most internal tests run remotely through VPN access or a system inside the network. We come on site where it is technically required, for example for Wi-Fi testing, physically separated production networks, or when internal policy rules out external access. We work from Berlin across Germany."
+        }
+      ]
+    },
     "hero": {
       "title": "Infrastructure penetration testing",
       "description": "Comprehensive security assessment of your network infrastructure to identify vulnerabilities before attackers exploit them.",
@@ -1355,6 +1400,35 @@
     }
   },
   "webApplicationTesting": {
+    "pageFaq": {
+      "title": "Web application penetration testing - common questions",
+      "items": [
+        {
+          "question": "What is checked in a web application penetration test?",
+          "answer": "We test authentication and session handling, authorisation and role separation, input validation (SQL injection, XSS, command injection), file uploads, password reset and payment flows, and the business logic of the application. The basis is the OWASP Web Security Testing Guide, extended with manual tests that go beyond plain OWASP Top 10 coverage."
+        },
+        {
+          "question": "What does a web application penetration test cost?",
+          "answer": "The price depends on the number of roles, the feature set and the depth of testing. A manual web pentest usually lands between 4,000 and 20,000 EUR, while an automated vulnerability scan of your web application starts at 1,499 EUR. The main cost driver is the role model: every user role is tested against every other for broken access control, so the scope grows disproportionately with each additional role."
+        },
+        {
+          "question": "Do you test our web application in production or on staging?",
+          "answer": "Both work. We prefer a staging environment built close to production, which removes any residual risk to real customer data. If only production is available we work with dedicated test accounts, avoid destructive payloads and agree the testing window with you in advance."
+        },
+        {
+          "question": "What are the OWASP Top 10?",
+          "answer": "The OWASP Top 10 is a list of the ten most critical risk categories for web applications, published by the Open Web Application Security Project. It covers areas such as broken access control, injection and security misconfiguration. It is the minimum frame of our web pentest, not the limit: we additionally test application-specific logic."
+        },
+        {
+          "question": "Does a web pentest also find business logic flaws?",
+          "answer": "Yes, and that is the main reason for manual testing. Logic flaws such as manipulable cart prices, skippable approval steps or discount rules that can be applied repeatedly are invisible to scanners - they only emerge from understanding your process. That is why our testers first work their way into the application."
+        },
+        {
+          "question": "How often should a web application be tested?",
+          "answer": "At least once a year, plus after major releases, architecture changes or the introduction of new payment and authentication features. For applications with frequent deployments, many clients combine one annual manual pentest with continuous vulnerability scanning in between."
+        }
+      ]
+    },
     "hero": {
       "title": "Web Application Penetration Testing",
       "description": "In-depth manual web application security audit to identify OWASP Top 10 vulnerabilities, business logic errors, and authentication issues.",
@@ -1434,6 +1508,35 @@
     }
   },
   "apiSecurityTesting": {
+    "pageFaq": {
+      "title": "API penetration testing - common questions",
+      "items": [
+        {
+          "question": "What is checked in an API penetration test?",
+          "answer": "We test authentication and token handling, object and function level authorisation (BOLA and BFLA), mass assignment, rate limiting, input validation and injection, and how much data endpoints return. The frame is the OWASP API Security Top 10, extended with manual testing of authorisation logic across different accounts and roles."
+        },
+        {
+          "question": "What does an API penetration test cost?",
+          "answer": "Effort depends on the number of endpoints, the role model and the complexity of authentication. A manual API pentest usually lands between 4,000 and 20,000 EUR. If a current OpenAPI specification or a Postman collection exists, the laborious discovery of endpoints falls away and the effort drops measurably."
+        },
+        {
+          "question": "Which API types do you test?",
+          "answer": "REST, GraphQL, SOAP and gRPC. For GraphQL we additionally review introspection, nested queries and query depth; for SOAP the XML processing including XXE. An OpenAPI or GraphQL schema file helps but is not required - endpoints can also be derived from traffic captures and client analysis."
+        },
+        {
+          "question": "What do you need from us for an API pentest?",
+          "answer": "The base URL of the test environment, at least two test accounts per role so authorisation separation can be verified, and valid tokens or credentials. API documentation or a Postman collection speeds the test up considerably. If IP restrictions are in place we also need our testing IPs allowed."
+        },
+        {
+          "question": "What are the OWASP API Security Top 10?",
+          "answer": "The OWASP API Security Top 10 is a dedicated risk list for interfaces, because APIs show different weakness patterns than classic web applications. It focuses on missing object and function level authorisation, weak authentication, unrestricted resource consumption and unfiltered data exposure."
+        },
+        {
+          "question": "Is a web pentest enough or do we need a separate API pentest?",
+          "answer": "A web pentest covers your APIs only as far as the interface calls them. Endpoints without frontend usage, older versions and internal interfaces stay undetected. If your API is consumed directly by mobile apps, partners or customers, it belongs in the test as its own scope."
+        }
+      ]
+    },
     "hero": {
       "title": "API security testing",
       "description": "Comprehensive security assessment of REST, GraphQL, and microservices APIs to identify authentication errors, authorization bypasses, and data exposure vulnerabilities.",
@@ -1513,6 +1616,35 @@
     }
   },
   "mobileAppTesting": {
+    "pageFaq": {
+      "title": "Mobile app penetration testing - common questions",
+      "items": [
+        {
+          "question": "What is checked in a mobile app penetration test?",
+          "answer": "We test local data storage, encryption and key management, transport security including certificate pinning, authentication and session handling, tamper resistance against reverse engineering, and the communication with the backend. The frame is the OWASP Mobile Application Security Verification Standard, extended with manual runtime analysis on real devices."
+        },
+        {
+          "question": "Do you test iOS and Android apps?",
+          "answer": "Yes, both platforms. We test native iOS and Android apps as well as cross-platform builds from React Native or Flutter. Because storage, keychain and permission models differ between platforms, both builds are assessed separately - an iOS sign-off says nothing about the Android version."
+        },
+        {
+          "question": "What does a mobile app penetration test cost?",
+          "answer": "A manual mobile app pentest is calculated by number of platforms, feature scope and backend coverage and usually lands between 4,000 and 20,000 EUR. Whether one or both platforms are tested and whether the APIs are in scope drives the effort most. On top of that comes jailbreak and root detection plus certificate pinning, because bypassing those protections takes dedicated testing time."
+        },
+        {
+          "question": "How do we provide the app for testing?",
+          "answer": "Via TestFlight, a Firebase or Play Console test track, or as a direct IPA or APK file. We also need test accounts for the relevant user roles and, if available, access to a staging backend. Source code is not mandatory, but it increases the depth of testing."
+        },
+        {
+          "question": "Do you also test the backend APIs of the app?",
+          "answer": "Yes, when they are in scope - and we strongly recommend it. Most severe findings in mobile projects sit not in the app but in the API behind it: missing object-level authorisation, overly generous responses or unauthenticated endpoints. A hardened app does not protect an open interface."
+        },
+        {
+          "question": "Who carries out penetration tests for medical devices or medical device software?",
+          "answer": "Specialised pentest providers with certified testers do, and we test health and medical device apps together with their backend. The report is structured so that it can feed into the risk management and cybersecurity documentation of your product as technical evidence, including the retest after remediation."
+        }
+      ]
+    },
     "hero": {
       "title": "Mobile app penetration testing",
       "description": "Comprehensive security assessment for iOS and Android applications, including static analysis, dynamic testing, and backend API security.",
@@ -1592,6 +1724,35 @@
     }
   },
   "cloudDevopsTesting": {
+    "pageFaq": {
+      "title": "Cloud and DevOps pentest - common questions",
+      "items": [
+        {
+          "question": "What is cloud penetration testing?",
+          "answer": "Cloud penetration testing is the security assessment of the workloads and configurations you run in the cloud. We do not test the provider platform but your area of responsibility: identities and roles, storage permissions, network rules, secrets and service configuration - each with proof of what can actually be exploited."
+        },
+        {
+          "question": "What does a cloud penetration test cost?",
+          "answer": "The price depends on the number of accounts and subscriptions, the services in use and the depth of testing. A manual cloud pentest usually lands between 4,000 and 20,000 EUR. Effort rises noticeably once the CI/CD pipeline and the handling of secrets are in scope alongside the configuration review."
+        },
+        {
+          "question": "Which cloud platforms do you test?",
+          "answer": "AWS, Microsoft Azure and Google Cloud, as well as containerised environments on Kubernetes. The approach is the same - configuration and permission analysis plus active exploitation on your own resources - while the concrete services and weakness patterns differ per provider. For AWS we maintain a dedicated page."
+        },
+        {
+          "question": "Do you need the provider's permission for a cloud pentest?",
+          "answer": "The major providers allow customers to pentest their own resources for a defined list of services without prior notice. Certain test types such as load or denial-of-service scenarios remain excluded or require coordination. We check the applicable policy before testing starts and stay strictly within your provider's rules."
+        },
+        {
+          "question": "Do you also test CI/CD pipelines and infrastructure as code?",
+          "answer": "Yes. We review pipeline permissions, secrets handling in build jobs and repositories, artefact signing and provenance, and Terraform and Kubernetes manifests for insecure defaults. A compromisable pipeline often gives attackers a direct route into production without a single server being attacked."
+        },
+        {
+          "question": "What is the provider responsible for and what are we?",
+          "answer": "The provider owns the security of the platform: data centres, hardware and virtualisation. You own security in the cloud: identities, permissions, network rules, data, encryption and application configuration. That customer side is exactly what the cloud pentest targets, because it is where most data leaks originate."
+        }
+      ]
+    },
     "hero": {
       "title": "Cloud & DevOps security testing",
       "description": "Comprehensive security assessment of cloud infrastructure, DevOps pipelines, and containerized environments to identify misconfigurations and security vulnerabilities.",
@@ -1671,6 +1832,35 @@
     }
   },
   "networkAudit": {
+    "pageFaq": {
+      "title": "Network penetration testing - common questions",
+      "items": [
+        {
+          "question": "What is a network penetration test?",
+          "answer": "A network penetration test examines your network infrastructure for exploitable weaknesses: reachable services, outdated software, weak configurations, default passwords and segmentation flaws. We assess not only what is open but which of it can actually be abused to gain access or spread further inside the network."
+        },
+        {
+          "question": "What does a network penetration test cost?",
+          "answer": "The price depends on the number of IP addresses, sites and network segments. A manual network pentest usually lands between 4,000 and 20,000 EUR, while an automated vulnerability scan of your perimeter starts at 1,499 EUR. It only gets noticeably more expensive when the segmentation between network zones has to be evidenced individually, because that means testing outward from each segment."
+        },
+        {
+          "question": "What is the difference between an internal and an external network pentest?",
+          "answer": "The external test examines what is reachable from the internet: perimeter, VPN gateways, mail servers and exposed services. The internal test starts from inside your network and answers how far an attacker gets after initial access. Most companies need both, because the findings differ completely."
+        },
+        {
+          "question": "Do you provide the testing appliance for the internal test yourselves?",
+          "answer": "On request, yes: we ship a prepared testing appliance that you only need to plug into the target segment and power on. Alternatively we set up a test instance on your virtualisation platform. After the test the appliance is returned or the instance deleted; the data collected stays in the report and is not passed on."
+        },
+        {
+          "question": "Do you also test Wi-Fi and network segmentation?",
+          "answer": "Yes. In a segmentation test we verify whether the separation between client, server, guest and production networks actually holds or can be bypassed - a frequent finding and relevant for PCI DSS and NIS2 evidence. On-site Wi-Fi testing covers authentication, guest network isolation and rogue access point scenarios."
+        },
+        {
+          "question": "How often should a network penetration test be carried out?",
+          "answer": "Once a year as a rule, plus after relocations, network redesigns, firewall migrations or the connection of new sites and service providers. Between tests a regular perimeter vulnerability scan is advisable, since new services and CVEs keep appearing there."
+        }
+      ]
+    },
     "hero": {
       "title": "Network security audit",
       "description": "Comprehensive network infrastructure assessment to identify vulnerabilities in firewalls, routers, switches and network configurations.",
@@ -1829,6 +2019,35 @@
     }
   },
   "securityAudit": {
+    "pageFaq": {
+      "title": "Security audit - common questions",
+      "items": [
+        {
+          "question": "What is a security audit?",
+          "answer": "A security audit is a structured assessment of your IT security against a fixed evaluation frame: technical configuration, processes, policies, permissions and evidence. Unlike a pure attack test, the result is a maturity picture with gaps, priorities and an action plan that can be used directly for audits and management reporting."
+        },
+        {
+          "question": "What is the difference between a security audit and a penetration test?",
+          "answer": "A penetration test answers whether and how an attacker can get in. A security audit answers whether your controls are complete, documented and effective. The pentest gives depth at individual points, the audit gives breadth across technology and organisation. Compliance evidence usually requires both."
+        },
+        {
+          "question": "What does a security audit cost?",
+          "answer": "The price depends on company size, number of sites and the chosen frame, for example ISO 27001, NIS2 or DORA. An automated vulnerability scan as a technical building block starts at 1,499 EUR; manual assessments are calculated individually and usually land between 4,000 and 20,000 EUR. Covering several frameworks at once saves effort, because the technical evidence overlaps and can be collected once for multiple audits."
+        },
+        {
+          "question": "How can I check whether my systems are secure?",
+          "answer": "Reliably only through external assessment: a vulnerability scan shows known gaps in reachable systems, a penetration test shows which of them can actually be exploited, and a security audit shows whether the processes and configuration behind them hold up. Self-assessment without technical testing typically misses exactly the critical points."
+        },
+        {
+          "question": "What does IT security actually include?",
+          "answer": "Technology, organisation and people. Technically: network and system hardening, patch management, access control, encryption, logging and backup. Organisationally: policies, responsibilities, risk management, supplier control and incident processes. On top of that come staff awareness and regular effectiveness checks such as audits and penetration tests."
+        },
+        {
+          "question": "Do you sign a non-disclosure agreement?",
+          "answer": "Yes. We sign your NDA before scoping and can provide our own on request. Collected data is used only for the assessment, stored encrypted and deleted after an agreed period. Where personal data is involved we additionally conclude a data processing agreement under Article 28 GDPR."
+        }
+      ]
+    },
     "hero": {
       "title": "Security Audit Services",
       "description": "Comprehensive security assessment that combines multiple testing methods to provide a complete assessment of the security posture.",
@@ -1908,6 +2127,35 @@
     }
   },
   "vulnerabilityAssessment": {
+    "pageFaq": {
+      "title": "Vulnerability assessment - common questions",
+      "items": [
+        {
+          "question": "How do you prioritise the vulnerabilities you find?",
+          "answer": "The CVSS rating is the starting point, not the result. What decides the order is the context in your environment: whether the system is reachable from the internet, whether a public exploit exists, whether personal data or a production-critical process depends on it. The outcome is a sequence your team can work through from top to bottom instead of a list of equally ranked entries."
+        },
+        {
+          "question": "How do you handle false positives?",
+          "answer": "Every hit is verified by hand before it enters the report. Purely version-based alerts are checked against the actual behaviour of the service, because backported patches and unreachable code paths regularly produce false alarms in raw scanner output. Anything that cannot be confirmed is dropped or marked as not exploitable, with a reason."
+        },
+        {
+          "question": "Can we book the assessment on a recurring basis?",
+          "answer": "Yes. Many clients have internet-facing systems checked monthly and internal areas quarterly, so newly published flaws do not sit untouched until the next manual test. Entry level is 1,499 EUR. Recurring runs keep the same scope and rating scale, which is what makes changes over time genuinely comparable."
+        },
+        {
+          "question": "How does the assessment differ from our own scanner report?",
+          "answer": "A scanner report shows what a tool saw. The assessment shows what remains after a human has reviewed it: validated findings, false positives removed, rating against your business risk and an action list you can hand to auditors and customers. The practical difference shows downstream: every verified finding ships with reproduction steps and can be handed to your developers as a ticket unchanged."
+        },
+        {
+          "question": "What is the difference between a vulnerability scan and a penetration test?",
+          "answer": "A vulnerability scan finds known flaws broadly and can be repeated regularly. A penetration test goes deep: a human actually exploits weaknesses, chains them together and finds business logic flaws that appear in no database. The scan is ongoing hygiene, the pentest is the defensible proof."
+        },
+        {
+          "question": "How often should a vulnerability scan run?",
+          "answer": "Monthly or more often for internet-facing systems, at least quarterly for internal ones, plus after every major change. New CVEs appear daily - a scan from a year ago says little about today's state. Many clients combine regular scans with one annual manual penetration test."
+        }
+      ]
+    },
     "hero": {
       "title": "Vulnerability Assessment Services",
       "description": "Automated and manual vulnerability scanning to identify vulnerabilities across your technology stack.",

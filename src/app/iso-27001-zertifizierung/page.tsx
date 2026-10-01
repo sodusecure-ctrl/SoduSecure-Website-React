@@ -199,6 +199,26 @@ const FAQS = [
     q: "Kann ich ISO 27001 + andere Standards (SOC 2, BSI-GS) kombinieren?",
     a: "Ja! ISO 27001 ist modular und kombinierbar. Viele Kontrollen überlappen. Mit guter Planung: ISO 27001 + BSI-Grundschutz + SOC 2 in einer Implementierung möglich – spart Zeit und Kosten.",
   },
+  {
+    q: "Wann im Zertifizierungsprojekt sollte der Penetrationstest stattfinden?",
+    a: "Nach dem Aufbau der technischen Maßnahmen und vor dem internen Audit. So haben Sie Zeit, die Findings zu bewerten, in den Risikobehandlungsplan zu überführen und beheben zu lassen, bevor die Zertifizierungsstelle in Stufe 2 die Wirksamkeit prüft. Der Retest liefert dann den Beleg, dass die Korrekturen greifen. Zu früh getestet verliert der Bericht an Aussagekraft, zu spät getestet bleibt keine Zeit für die Behebung. Welche Anforderungen die Norm an den Test selbst stellt, steht auf unserer Seite zu den ISO-27001-Pentest-Anforderungen.",
+  },
+  {
+    q: "Wie läuft das Zertifizierungsaudit ab?",
+    a: "Das Zertifizierungsaudit besteht aus zwei Stufen. In Stufe 1 prüft die Zertifizierungsstelle Ihre Dokumentation und die Reife des ISMS und benennt offene Punkte. In Stufe 2 folgt die Prüfung der tatsächlichen Wirksamkeit vor Ort oder remote, mit Interviews und Stichproben. Zwischen beiden Stufen liegen üblicherweise einige Wochen für Nacharbeiten.",
+  },
+  {
+    q: "Welche Dokumente verlangt die ISO 27001 Zertifizierung?",
+    a: "Pflicht sind unter anderem der festgelegte Geltungsbereich, die Informationssicherheitsleitlinie, das Verfahren zur Risikobewertung und Risikobehandlung, die Erklärung zur Anwendbarkeit mit Begründung der gewählten Maßnahmen, der Risikobehandlungsplan, die Sicherheitsziele sowie Nachweise zu Schulungen, internen Audits, Managementbewertung und Korrekturmaßnahmen. Technische Prüfberichte ergänzen diese Nachweise.",
+  },
+  {
+    q: "Wer stellt das ISO 27001 Zertifikat aus?",
+    a: "Das Zertifikat stellt eine akkreditierte Zertifizierungsstelle aus, in Deutschland etwa TÜV, DEKRA oder DQS. Beratende Dienstleister dürfen nicht zugleich zertifizieren - diese Trennung sichert die Unabhängigkeit des Audits. Wir übernehmen deshalb die Vorbereitung, Gap-Analyse und die technischen Prüfungen und begleiten Sie bis zum Audittermin.",
+  },
+  {
+    q: "Wie legen wir den Geltungsbereich für die Zertifizierung fest?",
+    a: "Der Geltungsbereich beschreibt, welche Standorte, Organisationseinheiten, Prozesse und Systeme das ISMS abdeckt. Ein enger Scope, etwa ein Produkt samt Infrastruktur und Entwicklungsteam, verkürzt Projektlaufzeit und Kosten deutlich. Er muss aber alles enthalten, wonach Ihre Kunden fragen - ein Zertifikat, das den relevanten Dienst ausklammert, hilft in Ausschreibungen nicht.",
+  },
 ];
 
 // FAQPage-JSON-LD aus GENAU dem sichtbaren FAQS-Array (Single Source).

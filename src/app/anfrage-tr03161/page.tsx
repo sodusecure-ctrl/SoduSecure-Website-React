@@ -24,7 +24,27 @@ const FAQS = [
   },
   {
     q: "Wer führt die Sicherheitsprüfung durch?",
-    a: "Die Prüfung führen OSCP-, OSWE- und CEH-zertifizierte Penetrationstester von Sodu Secure aus Berlin durch. Die Methodik orientiert sich an den Prüfaspekten der TR-03161 sowie an OWASP MASVS, MASTG und ASVS. Sie erhalten einen Bericht in Deutsch und Englisch; die Prüfung ist remote und vor Ort möglich.",
+    a: "Die Prüfung führen OSCP-, OSWE- und CEH-zertifizierte Penetrationstester von Sodu Secure aus Berlin durch. Die Methodik orientiert sich an den Prüfaspekten der TR-03161 sowie an OWASP MASVS, MASTG und ASVS. Sie erhalten einen Bericht in Deutsch und Englisch, dessen Kapitel den drei Teilen der Richtlinie folgen: mobile App, Web-Anwendung und Hintergrundsystem.",
+  },
+  {
+    q: "Wie schnell erhalte ich nach der TR-03161-Anfrage ein Angebot?",
+    a: "Nach dem kostenlosen Erstgespräch erhalten Sie das Angebot in der Regel innerhalb von 24 Stunden. Darin stehen Scope, Zeitplan, Prüftiefe und Festpreis. Wenn Sie vorab eine Orientierung zur Größenordnung möchten, liefert der Online-Konfigurator in rund 3 Minuten eine Preisspanne, ohne dass Sie mit jemandem sprechen müssen.",
+  },
+  {
+    q: "Ist die Anfrage unverbindlich?",
+    a: "Ja. Die Anfrage und das anschließende Erstgespräch sind kostenlos und unverbindlich. Es entstehen erst Kosten, wenn Sie ein konkretes Angebot beauftragen. Auch wenn sich im Gespräch herausstellt, dass für Ihren Fall eine kleinere Prüfung genügt, sagen wir Ihnen das offen.",
+  },
+  {
+    q: "In welcher Entwicklungsphase sollten wir die TR-03161-Prüfung anfragen?",
+    a: "Am besten, sobald Backend und erste App-Version funktionsfähig sind. Dann lassen sich Architektur- und Kryptographie-Themen noch ohne großen Aufwand korrigieren. Eine Anfrage kurz vor dem geplanten BfArM-Antrag ist ebenfalls möglich, erhöht aber das Risiko, dass Befunde den Zeitplan verschieben. Auch laufende Projekte mit bestehender Listung prüfen wir nach größeren Releases.",
+  },
+  {
+    q: "Wird die TR-03161-Prüfung remote oder vor Ort durchgeführt?",
+    a: "Standardmäßig remote über VPN-Zugang, Testkonten oder eine bereitgestellte Staging-Umgebung. Das spart Zeit und Reisekosten und ist für App-, Web- und Backend-Tests vollständig ausreichend. Wenn interne Systeme oder Workshops mit Ihrem Entwicklungsteam es sinnvoll machen, kommen wir von Berlin aus auch vor Ort zu Ihnen.",
+  },
+  {
+    q: "Behandeln Sie unsere Angaben aus der Anfrage vertraulich?",
+    a: "Ja. Alle Angaben aus dem Formular und dem Erstgespräch behandeln wir vertraulich und geben sie nicht an Dritte weiter. Vor Projektstart schließen wir auf Wunsch eine Geheimhaltungsvereinbarung; werden personenbezogene Daten berührt, kommt ein Auftragsverarbeitungsvertrag nach DSGVO Art. 28 hinzu. Berichte und Zugangsdaten werden verschlüsselt übermittelt.",
   },
 ];
 

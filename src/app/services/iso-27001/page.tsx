@@ -36,7 +36,7 @@ const serviceSteps = [
     desc: "Durchführung einer strukturierten Risikoanalyse, Bewertung nach Eintrittswahrscheinlichkeit und Impact, anschließend Risk Treatment Plan mit Maßnahmen.",
   },
   {
-    title: "Pentest-Nachweise nach A.12.6",
+    title: "Pentest-Nachweise nach A.8.8",
     desc: "Durchführung und Dokumentation technischer Tests als Nachweis für die Wirksamkeit Ihrer Sicherheitsmaßnahmen, inkl. Findings, Priorisierung und Retest.",
   },
   {
@@ -78,24 +78,36 @@ const pentestFocus = [
 
 const faq = [
   {
-    q: "Ist ein Pentest für ISO 27001 verpflichtend?",
-    a: "Die Norm verlangt den Umgang mit technischen Schwachstellen und Wirksamkeitsprüfungen von Kontrollen. In der Praxis sind regelmäßige Pentests ein sehr starker und oft erwarteter Nachweis gegenüber Auditoren.",
+    q: "Wie bereiten Sie uns auf das Zertifizierungsaudit vor?",
+    a: "In vier Schritten. Zuerst schneiden wir den Geltungsbereich zu und gleichen ihn in einer Gap-Analyse gegen die Normanforderungen und die Maßnahmen aus Anhang A ab. Dann priorisieren wir die offenen Punkte nach Risiko und Aufwand. Anschließend prüfen wir die technischen Maßnahmen im Penetrationstest und liefern den Bericht in Deutsch und Englisch. Zuletzt stellen wir das Nachweispaket für den Auditor zusammen, in dem jedes Finding einer Maßnahme aus Anhang A zugeordnet ist.",
   },
   {
-    q: "Wie oft sollten Pentests im ISO 27001 Kontext stattfinden?",
-    a: "Mindestens jährlich und zusätzlich nach wesentlichen Änderungen (z. B. neue Systeme, Architekturwechsel, kritische Releases).",
+    q: "Welche Leistungen übernehmen Sie, welche die Zertifizierungsstelle?",
+    a: "Wir übernehmen die Vorbereitung: Gap-Analyse, Beratung zu den technischen Maßnahmen, Penetrationstests, Prüfberichte und Retest. Die Zertifizierungsstelle führt das zweistufige Audit durch und entscheidet über das Zertifikat. Beides in einer Hand ist nicht zulässig, denn wer aufbaut und testet, darf nicht zertifizieren. Wer das Zertifikat ausstellt und wie das Audit abläuft, lesen Sie auf unserer Seite ISO 27001 Zertifizierung.",
   },
   {
-    q: "Wie lange dauert eine ISO 27001 Vorbereitung?",
-    a: "Je nach Ausgangslage meist 4 bis 12 Monate. Unternehmen mit bereits etablierten Prozessen sind deutlich schneller audit-ready.",
+    q: "Welche ISO-27001-Controls deckt ein Penetrationstest ab?",
+    a: "Vor allem Control A.8.8 zum Umgang mit technischen Schwachstellen und A.8.29 zum Sicherheitstest in Entwicklung und Abnahme. Dazu kommt Kapitel 9.1 der Norm, das die Überwachung und Bewertung der Informationssicherheitsleistung fordert. Der Testbericht liefert für alle drei Punkte belastbare Evidenz.",
   },
   {
-    q: "Welche Quellen akzeptieren Auditoren?",
-    a: "Auditoren akzeptieren normnahe Nachweise wie Richtlinien, Risikoakten, interne Auditprotokolle, Management-Reviews und technische Testberichte mit nachvollziehbarer Methodik.",
+    q: "Wie oft sollten Pentests im ISO-27001-Kontext stattfinden?",
+    a: "Mindestens jährlich und zusätzlich nach wesentlichen Änderungen wie neuen Systemen, Architekturwechseln, Cloud-Migrationen oder kritischen Releases. Wichtig für das Audit ist, dass die Frequenz in Ihrem ISMS begründet festgelegt und dann auch eingehalten wird - ein einmaliger Test ohne Wiederholung fällt im Überwachungsaudit auf.",
   },
   {
-    q: "Was kostet ein Pentest für ISO 27001?",
-    a: "Ein automatisierter Schwachstellenscan startet bei Sodu Secure ab 1.499 €; ein manueller Pentest für ISO 27001 wird individuell auf Ihren Scope zugeschnitten und nach Aufwand kalkuliert - meist zwischen 4.000 und 20.000 €. Sie erhalten innerhalb von 24 Stunden ein Angebot, einen Bericht in Deutsch und Englisch als Audit-Nachweis sowie einen kostenlosen Retest nach Behebung der Findings.",
+    q: "Was gehört in den Scope eines ISO-27001-Pentests?",
+    a: "In den Scope gehören die Systeme, die im Anwendungsbereich Ihres ISMS liegen und ein relevantes Risiko tragen: extern erreichbare Anwendungen und Dienste, zentrale interne Infrastruktur inklusive Verzeichnisdienst, Cloud-Umgebungen sowie Schnittstellen zu Dienstleistern. Der Pentest-Scope sollte sich nachvollziehbar aus Ihrer Risikoanalyse ableiten.",
+  },
+  {
+    q: "Welche Nachweise akzeptieren ISO-27001-Auditoren?",
+    a: "Auditoren akzeptieren normnahe Nachweise wie Richtlinien, Risikoakten, den Risk Treatment Plan, interne Auditprotokolle, Management-Reviews und technische Testberichte mit nachvollziehbarer Methodik. Ein Pentest-Bericht überzeugt, wenn er Scope, Vorgehen, Zeitraum, Findings mit Risikobewertung und die dokumentierte Behebung inklusive Retest enthält.",
+  },
+  {
+    q: "Wie lange dauert die Vorbereitung auf ISO 27001?",
+    a: "Je nach Ausgangslage meist 4 bis 12 Monate bis zur Audit-Reife. Unternehmen mit bereits etablierten Prozessen, gepflegter Dokumentation und laufendem Risikomanagement sind deutlich schneller. Den Engpass bilden erfahrungsgemäß nicht die technischen Maßnahmen, sondern die vollständige und konsistente Nachweisführung.",
+  },
+  {
+    q: "Was passiert, wenn der Pentest kurz vor dem Audit kritische Lücken zeigt?",
+    a: "Kritische Findings sind kein Ausschlussgrund für das Zertifikat, solange Sie sie erkannt, bewertet und in den Risk Treatment Plan überführt haben. Entscheidend ist der dokumentierte Umgang damit. Wir melden kritische Funde sofort während des Tests, damit Sie sie vor dem Audittermin behandeln und die Wirksamkeit der Korrektur ohne Zusatzkosten nachweisen können.",
   },
 ];
 
@@ -292,6 +304,9 @@ export default function ISO27001ServicePage() {
             </Link>
             <Link href="/iso-27001" className="rounded-lg border border-gray-700 bg-white/5 px-8 py-3.5 font-semibold hover:bg-white/10">
               Zur ISO 27001 Landingpage
+            </Link>
+            <Link href="/iso-27001-zertifizierung" className="rounded-lg border border-gray-700 bg-white/5 px-8 py-3.5 font-semibold hover:bg-white/10">
+              Ablauf der Zertifizierung
             </Link>
           </div>
         </div>
