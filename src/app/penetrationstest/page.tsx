@@ -805,6 +805,7 @@ const de: Copy = {
   weiterHeadline: 'Vertiefende Inhalte zum Penetrationstest.',
   weiterLinks: [
     { title: 'Pentest Kosten', desc: 'Preisspannen, Kostenfaktoren und Beispielrechnungen im Detail.', href: '/pentest-kosten' },
+    { title: 'Pentest Preisindex', desc: 'Unsere Preisstufen und belegte Marktspannen deutscher Anbieter im Vergleich.', href: '/pentest-preisindex' },
     { title: 'Penetrationstest Anbieter', desc: 'Zertifizierungen, Red Flags und die richtige Auswahl.', href: '/penetrationstest-anbieter' },
     { title: 'Pentest-Leistungen', desc: 'Die kompakte Service-Übersicht: Web, API, Netzwerk, AD, Cloud.', href: '/penetration-testing' },
     { title: 'TLPT nach DORA', desc: 'Bedrohungsgeleitete Penetrationstests für Finanzunternehmen.', href: '/tlpt' },
@@ -1422,6 +1423,7 @@ const en: Copy = {
   weiterHeadline: 'Deep dives on penetration testing.',
   weiterLinks: [
     { title: 'Pentest costs', desc: 'Price ranges, cost drivers and sample calculations in detail.', href: '/pentest-kosten' },
+    { title: 'Pentest price index', desc: 'Our price tiers next to sourced market ranges from German providers.', href: '/pentest-preisindex' },
     { title: 'Pentest providers', desc: 'Certifications, red flags and making the right choice.', href: '/penetrationstest-anbieter' },
     { title: 'Pentest services', desc: 'The compact service overview: web, API, network, AD, cloud.', href: '/penetration-testing' },
     { title: 'TLPT under DORA', desc: 'Threat-led penetration testing for financial entities.', href: '/tlpt' },
