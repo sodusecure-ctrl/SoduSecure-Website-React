@@ -1,15 +1,34 @@
 import { NextResponse } from 'next/server';
 import { isAuthenticated } from '@/lib/sales-auth';
 import { type Lead, listLeads } from '@/lib/leads-db';
+import { STATUS_META, normalizeStatus } from '@/app/sales-dashboard/types';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
-const COLUMNS: { key: keyof Lead; label: string }[] = [
+/** Tage seit dem letzten Stufenwechsel - macht Liegenbleiber in Excel filterbar. */
+function daysInStage(lead: Lead): number {
+  const basis = lead.status_changed_at || lead.created_at;
+  const ms = Date.now() - new Date(basis).getTime();
+  return Math.max(0, Math.floor(ms / 86400000));
+}
+
+const COLUMNS: {
+  key: keyof Lead | 'days_in_stage';
+  label: string;
+  format?: (lead: Lead) => unknown;
+}[] = [
   { key: 'id', label: 'ID' },
   { key: 'created_at', label: 'Erstellt' },
   { key: 'source', label: 'Quelle' },
-  { key: 'status', label: 'Status' },
+  {
+    key: 'status',
+    label: 'Pipeline-Stufe',
+    // Deutsches Label statt des rohen DB-Keys - der Export geht an Menschen.
+    format: (lead) => STATUS_META[normalizeStatus(lead.status)].label,
+  },
+  { key: 'status_changed_at', label: 'Stufe geändert' },
+  { key: 'days_in_stage', label: 'Tage in Stufe', format: daysInStage },
   { key: 'name', label: 'Name' },
   { key: 'company', label: 'Firma' },
   { key: 'email', label: 'E-Mail' },
@@ -42,7 +61,9 @@ export async function GET() {
   const leads = await listLeads();
   const header = COLUMNS.map((c) => csvCell(c.label)).join(',');
   const rows = leads.map((lead) =>
-    COLUMNS.map((c) => csvCell(lead[c.key])).join(','),
+    COLUMNS.map((c) =>
+      csvCell(c.format ? c.format(lead) : lead[c.key as keyof Lead]),
+    ).join(','),
   );
   // BOM so Excel opens UTF-8 correctly.
   const csv = '﻿' + [header, ...rows].join('\r\n');

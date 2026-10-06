@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import {
+  ArrowRight,
   Building2,
   Check,
   Copy,
@@ -13,11 +14,16 @@ import {
 import {
   type Lead,
   type LeadStatus,
+  CLOSED_STATUSES,
+  OPEN_STATUSES,
   STATUS_META,
-  STATUS_ORDER,
+  daysInStage,
   displaySource,
   formatDateTime,
   initials,
+  isStale,
+  nextStage,
+  normalizeStatus,
   sourceColor,
   trafficColor,
   trafficLabelOf,
@@ -51,6 +57,18 @@ export default function LeadDrawer({
   const [value, setValue] = useState(String(lead.est_value ?? ''));
   const [copied, setCopied] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
+
+  const currentStatus = normalizeStatus(lead.status);
+  const currentMeta = STATUS_META[currentStatus];
+  // Nur innerhalb der laufenden Stufen weiterschalten - von "Unterschrieben"
+  // soll kein Button nach "Verloren" fuehren.
+  const forward = nextStage(currentStatus);
+  const upcoming: LeadStatus | null =
+    currentMeta.group !== 'open'
+      ? null // abgeschlossene Deals schaltet man nicht "weiter"
+      : forward && STATUS_META[forward].group === 'open'
+        ? forward
+        : 'won'; // letzte laufende Stufe -> Abschluss
 
   useEffect(() => {
     setNotes(lead.notes ?? '');
@@ -135,30 +153,51 @@ export default function LeadDrawer({
             )}
           </div>
 
-          {/* Status selector */}
-          <div>
-            <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-              Status
+          {/* Pipeline-Stufe */}
+          <div className="rounded-xl border border-border bg-muted/30 p-3">
+            <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+              <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+                Pipeline-Stufe
+              </span>
+              <span
+                className={`text-[11px] ${
+                  isStale(lead) ? 'font-medium text-amber-400' : 'text-muted-foreground'
+                }`}
+              >
+                {daysInStage(lead)} Tg. in {currentMeta.label}
+                {isStale(lead) ? ' · nachfassen' : ''}
+              </span>
             </div>
-            <div className="flex flex-wrap gap-1.5">
-              {STATUS_ORDER.map((s) => {
-                const active = lead.status === s;
-                return (
-                  <button
-                    key={s}
-                    disabled={saving}
-                    onClick={() => !active && onUpdate(lead.id, { status: s })}
-                    className={`rounded-lg border px-2.5 py-1 text-xs font-medium transition disabled:opacity-60 ${
-                      active
-                        ? STATUS_META[s].badge
-                        : 'border-border bg-transparent text-muted-foreground hover:bg-muted'
-                    }`}
-                  >
-                    {STATUS_META[s].label}
-                  </button>
-                );
-              })}
+
+            {/* Haeufigster Fall: eine Stufe weiter. Ein Klick statt Suchen. */}
+            {upcoming && (
+              <button
+                disabled={saving}
+                onClick={() => onUpdate(lead.id, { status: upcoming })}
+                className="mb-2.5 flex w-full items-center justify-center gap-1.5 rounded-lg bg-rose-500 px-3 py-2 text-xs font-semibold text-white transition hover:bg-rose-600 disabled:opacity-60"
+              >
+                <ArrowRight className="h-3.5 w-3.5" />
+                Weiter zu {STATUS_META[upcoming].label}
+              </button>
+            )}
+
+            <div className="space-y-2">
+              <StageRow
+                caption="Laufend"
+                stages={OPEN_STATUSES}
+                current={currentStatus}
+                saving={saving}
+                onPick={(s) => onUpdate(lead.id, { status: s })}
+              />
+              <StageRow
+                caption="Abschluss"
+                stages={CLOSED_STATUSES}
+                current={currentStatus}
+                saving={saving}
+                onPick={(s) => onUpdate(lead.id, { status: s })}
+              />
             </div>
+            <p className="mt-2 text-[11px] text-muted-foreground">{currentMeta.hint}</p>
           </div>
 
           {/* Contact grid */}
@@ -356,6 +395,49 @@ export default function LeadDrawer({
             </button>
           )}
         </div>
+      </div>
+    </div>
+  );
+}
+
+/** Eine Reihe Stufen-Buttons (laufend bzw. Abschluss). */
+function StageRow({
+  caption,
+  stages,
+  current,
+  saving,
+  onPick,
+}: {
+  caption: string;
+  stages: LeadStatus[];
+  current: LeadStatus;
+  saving: boolean;
+  onPick: (s: LeadStatus) => void;
+}) {
+  return (
+    <div>
+      <div className="mb-1 text-[10px] uppercase tracking-wider text-muted-foreground">
+        {caption}
+      </div>
+      <div className="flex flex-wrap gap-1.5">
+        {stages.map((s) => {
+          const active = current === s;
+          return (
+            <button
+              key={s}
+              disabled={saving}
+              title={STATUS_META[s].hint}
+              onClick={() => !active && onPick(s)}
+              className={`rounded-lg border px-2 py-1 text-[11px] font-medium transition disabled:opacity-60 ${
+                active
+                  ? STATUS_META[s].badge
+                  : 'border-border bg-transparent text-muted-foreground hover:bg-muted hover:text-foreground'
+              }`}
+            >
+              {STATUS_META[s].label}
+            </button>
+          );
+        })}
       </div>
     </div>
   );

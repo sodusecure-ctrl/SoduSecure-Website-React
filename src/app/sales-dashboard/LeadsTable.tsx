@@ -5,7 +5,11 @@ import { ArrowDown, ArrowUp, ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   type Lead,
   STATUS_META,
+  daysInStage,
   displaySource,
+  isStale,
+  normalizeStatus,
+  stageIndex,
   formatEuro,
   initials,
   relativeTime,
@@ -52,6 +56,11 @@ export default function LeadsTable({
         case 'company':
           av = (a.company || a.name || '').toLowerCase();
           bv = (b.company || b.name || '').toLowerCase();
+          break;
+        case 'status':
+          // Nach Pipeline-Reihenfolge, nicht alphabetisch.
+          av = stageIndex(normalizeStatus(a.status));
+          bv = stageIndex(normalizeStatus(b.status));
           break;
         default:
           av = a[sortKey] || '';
@@ -157,10 +166,20 @@ export default function LeadsTable({
                 </td>
                 <td className="px-3 py-2.5">
                   <span
-                    className={`inline-flex items-center rounded-md border px-2 py-0.5 text-[11px] font-medium ${STATUS_META[lead.status].badge}`}
+                    className={`inline-flex items-center rounded-md border px-2 py-0.5 text-[11px] font-medium ${
+                      STATUS_META[normalizeStatus(lead.status)].badge
+                    }`}
                   >
-                    {STATUS_META[lead.status].label}
+                    {STATUS_META[normalizeStatus(lead.status)].label}
                   </span>
+                  {isStale(lead) && (
+                    <span
+                      className="ml-1.5 text-[10px] font-medium text-amber-400"
+                      title={`Liegt seit ${daysInStage(lead)} Tagen in dieser Stufe`}
+                    >
+                      {daysInStage(lead)}T
+                    </span>
+                  )}
                 </td>
                 <td className="hidden px-3 py-2.5 lg:table-cell">
                   {lead.check_score !== null ? (

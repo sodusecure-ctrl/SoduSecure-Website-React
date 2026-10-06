@@ -4,10 +4,12 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import {
   Activity,
+  AlertTriangle,
   BarChart3,
   CalendarDays,
   CheckCircle2,
   Database,
+  Gauge,
   Download,
   Euro,
   KanbanSquare,
@@ -24,11 +26,17 @@ import {
 import {
   type Lead,
   type LeadStatus,
+  CLOSED_STATUSES,
+  OPEN_STATUSES,
   STATUS_META,
   STATUS_ORDER,
+  countsTowardsStats,
   formatEuro,
+  isStale,
+  normalizeStatus,
   sourceColor,
   sourceLabel,
+  weightedValue,
 } from './types';
 import {
   LeadsTrendChart,
@@ -139,17 +147,32 @@ export default function SalesDashboard({ dbConfigured }: { dbConfigured: boolean
   const kpis = useMemo(() => {
     const todayStart = startOfToday();
     const weekStart = todayStart - 6 * 86400000;
-    const open = filtered.filter((l) => ['new', 'contacted', 'qualified'].includes(l.status));
-    const won = filtered.filter((l) => l.status === 'won');
+    // Muell (Spam, Bewerbungen, Tests) fliegt aus allen Quoten - sonst
+    // druecken Spam-Eintraege die Conversion-Rate kuenstlich nach unten.
+    const real = filtered.filter(countsTowardsStats);
+    const openGroup = new Set<LeadStatus>(OPEN_STATUSES);
+    const open = real.filter((l) => openGroup.has(normalizeStatus(l.status)));
+    const won = real.filter((l) => normalizeStatus(l.status) === 'won');
+    const decided = real.filter((l) => {
+      const g = STATUS_META[normalizeStatus(l.status)].group;
+      return g === 'won' || g === 'lost';
+    });
     return {
-      total: filtered.length,
-      newCount: filtered.filter((l) => l.status === 'new').length,
-      today: filtered.filter((l) => new Date(l.created_at).getTime() >= todayStart).length,
-      week: filtered.filter((l) => new Date(l.created_at).getTime() >= weekStart).length,
+      total: real.length,
+      trashCount: filtered.length - real.length,
+      newCount: real.filter((l) => normalizeStatus(l.status) === 'new').length,
+      today: real.filter((l) => new Date(l.created_at).getTime() >= todayStart).length,
+      week: real.filter((l) => new Date(l.created_at).getTime() >= weekStart).length,
       openValue: open.reduce((s, l) => s + (l.est_value ?? 0), 0),
+      openCount: open.length,
+      // Gewichteter Forecast: jede Stufe mit ihrer Abschlusswahrscheinlichkeit.
+      forecast: Math.round(open.reduce((s, l) => s + weightedValue(l), 0)),
       wonValue: won.reduce((s, l) => s + (l.est_value ?? 0), 0),
       wonCount: won.length,
-      conversion: filtered.length ? Math.round((won.length / filtered.length) * 100) : 0,
+      // Quote auf entschiedene Deals (gewonnen + verloren), nicht auf alle
+      // Leads - offene Deals sind noch kein Misserfolg.
+      conversion: decided.length ? Math.round((won.length / decided.length) * 100) : 0,
+      stale: open.filter(isStale).length,
     };
   }, [filtered]);
 
@@ -388,29 +411,60 @@ export default function SalesDashboard({ dbConfigured }: { dbConfigured: boolean
               </div>
             </div>
             <div>
-              <div className="mb-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
-                Status
+              <div className="mb-2 flex flex-wrap items-center gap-2">
+                <span className="text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+                  Pipeline-Stufe
+                </span>
+                {/* Bei zehn Stufen sind Sammel-Shortcuts schneller als zehn Klicks */}
+                <button
+                  onClick={() => setStatusFilter(new Set(OPEN_STATUSES))}
+                  className="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                >
+                  nur offene
+                </button>
+                <button
+                  onClick={() => setStatusFilter(new Set(CLOSED_STATUSES))}
+                  className="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                >
+                  nur abgeschlossene
+                </button>
+                {statusFilter.size > 0 && (
+                  <button
+                    onClick={() => setStatusFilter(new Set())}
+                    className="rounded-md border border-border px-1.5 py-0.5 text-[10px] text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                  >
+                    alle
+                  </button>
+                )}
               </div>
               <div className="flex flex-wrap gap-1.5">
-                {STATUS_ORDER.map((s) => {
+                {STATUS_ORDER.map((s, i) => {
                   const on = statusFilter.has(s);
+                  // Trennstrich zwischen laufenden und abgeschlossenen Stufen
+                  const divider =
+                    i > 0 &&
+                    STATUS_META[s].group !== 'open' &&
+                    STATUS_META[STATUS_ORDER[i - 1]].group === 'open';
                   return (
-                    <button
-                      key={s}
-                      onClick={() =>
-                        setStatusFilter((prev) => {
-                          const n = new Set(prev);
-                          if (n.has(s)) n.delete(s);
-                          else n.add(s);
-                          return n;
-                        })
-                      }
-                      className={`rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
-                        on ? STATUS_META[s].badge : 'border-border text-muted-foreground hover:bg-muted'
-                      }`}
-                    >
-                      {STATUS_META[s].label}
-                    </button>
+                    <span key={s} className="flex items-center gap-1.5">
+                      {divider && <span className="mx-1 h-4 w-px bg-border" />}
+                      <button
+                        onClick={() =>
+                          setStatusFilter((prev) => {
+                            const n = new Set(prev);
+                            if (n.has(s)) n.delete(s);
+                            else n.add(s);
+                            return n;
+                          })
+                        }
+                        title={STATUS_META[s].hint}
+                        className={`rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
+                          on ? STATUS_META[s].badge : 'border-border text-muted-foreground hover:bg-muted'
+                        }`}
+                      >
+                        {STATUS_META[s].label}
+                      </button>
+                    </span>
                   );
                 })}
               </div>
@@ -427,18 +481,49 @@ export default function SalesDashboard({ dbConfigured }: { dbConfigured: boolean
         )}
 
         {/* KPI cards */}
-        <div className="mb-6 grid grid-cols-2 gap-3 lg:grid-cols-6">
-          <Kpi icon={Users} label="Leads" value={String(kpis.total)} tone="rose" />
+        <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+          <Kpi
+            icon={Users}
+            label="Leads"
+            value={String(kpis.total)}
+            sub={kpis.trashCount ? `+ ${kpis.trashCount} Müll` : undefined}
+            tone="rose"
+          />
           <Kpi icon={Activity} label="Neu" value={String(kpis.newCount)} tone="sky" />
-          <Kpi icon={CalendarDays} label="Heute" value={String(kpis.today)} tone="violet" />
-          <Kpi icon={TrendingUp} label="7 Tage" value={String(kpis.week)} tone="amber" />
-          <Kpi icon={Euro} label="Offene Pipeline" value={formatEuro(kpis.openValue)} tone="teal" />
+          <Kpi
+            icon={CalendarDays}
+            label="Heute"
+            value={String(kpis.today)}
+            sub={`${kpis.week} in 7 Tg.`}
+            tone="violet"
+          />
+          <Kpi
+            icon={Euro}
+            label="Pipeline"
+            value={formatEuro(kpis.openValue)}
+            sub={`${kpis.openCount} offen`}
+            tone="teal"
+          />
+          <Kpi
+            icon={Gauge}
+            label="Forecast"
+            value={formatEuro(kpis.forecast)}
+            sub="gewichtet"
+            tone="amber"
+          />
           <Kpi
             icon={CheckCircle2}
-            label={`Gewonnen · ${kpis.conversion}%`}
+            label="Unterschrieben"
             value={formatEuro(kpis.wonValue)}
-            sub={`${kpis.wonCount} Deals`}
+            sub={`${kpis.wonCount} Deals · ${kpis.conversion}% Quote`}
             tone="emerald"
+          />
+          <Kpi
+            icon={AlertTriangle}
+            label="Stockt"
+            value={String(kpis.stale)}
+            sub="zu lange liegen"
+            tone={kpis.stale > 0 ? 'warn' : 'slate'}
           />
         </div>
 
@@ -522,6 +607,8 @@ const TONES: Record<string, string> = {
   amber: 'text-amber-400 bg-amber-500/10',
   teal: 'text-teal-400 bg-teal-500/10',
   emerald: 'text-emerald-400 bg-emerald-500/10',
+  warn: 'text-amber-400 bg-amber-500/20 ring-1 ring-amber-500/40',
+  slate: 'text-slate-400 bg-slate-500/10',
 };
 
 function Kpi({

@@ -1,6 +1,48 @@
 // Shared client-side types & display metadata for the sales dashboard.
 
-export type LeadStatus = 'new' | 'contacted' | 'qualified' | 'won' | 'lost';
+/**
+ * Die Vertriebs-Pipeline. Der Key ist der in Postgres gespeicherte Wert und
+ * darf nachträglich NICHT umbenannt werden – bestehende Leads tragen ihn
+ * bereits. Neue Stufen lassen sich jederzeit ergänzen (die Spalte ist TEXT ohne
+ * CHECK-Constraint); allein STATUS_ORDER bestimmt die Reihenfolge im Board.
+ *
+ * probability ist die Abschlusswahrscheinlichkeit und speist den gewichteten
+ * Forecast. group trennt laufende von abgeschlossenen Deals – nur 'open' zählt
+ * in die offene Pipeline, und 'discarded' (Müll/Spam) fliegt aus allen Quoten
+ * und Charts heraus, damit Spam-Einträge die Conversion-Rate nicht verwässern.
+ */
+export type LeadStatus =
+  | 'new'
+  | 'contacted'
+  | 'replied'
+  | 'qualified'
+  | 'scoping'
+  | 'proposal'
+  | 'negotiation'
+  | 'won'
+  | 'lost'
+  | 'trash';
+
+export type StageGroup = 'open' | 'won' | 'lost' | 'discarded';
+
+export type StageMeta = {
+  /** Volle Bezeichnung – Filter, Drawer, Charts. */
+  label: string;
+  /** Kurzform für enge Kanban-Spaltenköpfe. */
+  short: string;
+  /** Was in dieser Stufe als Nächstes zu tun ist. */
+  hint: string;
+  group: StageGroup;
+  /** Abschlusswahrscheinlichkeit 0–1 für den gewichteten Forecast. */
+  probability: number;
+  /** Nach so vielen Tagen ohne Bewegung gilt der Lead als liegengeblieben. */
+  staleAfterDays: number;
+  dot: string;
+  badge: string;
+  ring: string;
+  /** Chartfarbe als Hex – Recharts kann keine Tailwind-Klassen. */
+  chart: string;
+};
 
 export type Lead = {
   id: number;
@@ -18,6 +60,8 @@ export type Lead = {
   check_verdict: string | null;
   est_value: number | null;
   status: LeadStatus;
+  /** Zeitpunkt des letzten Stufenwechsels (null bei Leads vor der Migration). */
+  status_changed_at?: string | null;
   notes: string | null;
   tag: string | null;
   source_page: string | null;
@@ -29,46 +73,204 @@ export type Lead = {
 export const STATUS_ORDER: LeadStatus[] = [
   'new',
   'contacted',
+  'replied',
   'qualified',
+  'scoping',
+  'proposal',
+  'negotiation',
   'won',
   'lost',
+  'trash',
 ];
 
-export const STATUS_META: Record<
-  LeadStatus,
-  { label: string; dot: string; badge: string; ring: string }
-> = {
+export const STATUS_META: Record<LeadStatus, StageMeta> = {
   new: {
     label: 'Neu',
+    short: 'Neu',
+    hint: 'Noch nicht angefasst – anrufen oder mailen.',
+    group: 'open',
+    probability: 0.1,
+    staleAfterDays: 1,
     dot: 'bg-sky-500',
     badge: 'bg-sky-500/15 text-sky-300 border-sky-500/30',
     ring: 'ring-sky-500/40',
+    chart: '#0ea5e9',
   },
   contacted: {
     label: 'Kontaktiert',
+    short: 'Kontaktiert',
+    hint: 'Erstkontakt raus, wartet auf Reaktion.',
+    group: 'open',
+    probability: 0.2,
+    staleAfterDays: 4,
     dot: 'bg-amber-500',
     badge: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
     ring: 'ring-amber-500/40',
+    chart: '#f59e0b',
+  },
+  replied: {
+    label: 'Geantwortet',
+    short: 'Geantwortet',
+    hint: 'Lead hat reagiert – Scoping-Termin vereinbaren.',
+    group: 'open',
+    probability: 0.3,
+    staleAfterDays: 4,
+    dot: 'bg-orange-500',
+    badge: 'bg-orange-500/15 text-orange-300 border-orange-500/30',
+    ring: 'ring-orange-500/40',
+    chart: '#f97316',
   },
   qualified: {
     label: 'Qualifiziert',
+    short: 'Qualifiziert',
+    hint: 'Bedarf, Budget und Entscheider geklärt.',
+    group: 'open',
+    probability: 0.4,
+    staleAfterDays: 7,
     dot: 'bg-violet-500',
     badge: 'bg-violet-500/15 text-violet-300 border-violet-500/30',
     ring: 'ring-violet-500/40',
+    chart: '#8b5cf6',
+  },
+  scoping: {
+    label: 'Scoping gemacht',
+    short: 'Scoping',
+    hint: 'Umfang steht – Aufwand schätzen, Angebot schreiben.',
+    group: 'open',
+    probability: 0.55,
+    staleAfterDays: 5,
+    dot: 'bg-indigo-500',
+    badge: 'bg-indigo-500/15 text-indigo-300 border-indigo-500/30',
+    ring: 'ring-indigo-500/40',
+    chart: '#6366f1',
+  },
+  proposal: {
+    label: 'Angebot raus',
+    short: 'Angebot',
+    hint: 'Angebot liegt beim Kunden – nachhaken.',
+    group: 'open',
+    probability: 0.7,
+    staleAfterDays: 7,
+    dot: 'bg-cyan-500',
+    badge: 'bg-cyan-500/15 text-cyan-300 border-cyan-500/30',
+    ring: 'ring-cyan-500/40',
+    chart: '#06b6d4',
+  },
+  negotiation: {
+    label: 'In Verhandlung',
+    short: 'Verhandlung',
+    hint: 'Preis, Termin oder Vertragsdetails offen.',
+    group: 'open',
+    probability: 0.85,
+    staleAfterDays: 7,
+    dot: 'bg-teal-500',
+    badge: 'bg-teal-500/15 text-teal-300 border-teal-500/30',
+    ring: 'ring-teal-500/40',
+    chart: '#14b8a6',
   },
   won: {
-    label: 'Gewonnen',
+    label: 'Unterschrieben',
+    short: 'Gewonnen',
+    hint: 'Auftrag gewonnen – Projekt einplanen.',
+    group: 'won',
+    probability: 1,
+    staleAfterDays: 365,
     dot: 'bg-emerald-500',
     badge: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30',
     ring: 'ring-emerald-500/40',
+    chart: '#10b981',
   },
   lost: {
     label: 'Verloren',
+    short: 'Verloren',
+    hint: 'Echter Lead, nicht gewonnen – Grund in die Notizen.',
+    group: 'lost',
+    probability: 0,
+    staleAfterDays: 365,
     dot: 'bg-rose-500',
     badge: 'bg-rose-500/15 text-rose-300 border-rose-500/30',
     ring: 'ring-rose-500/40',
+    chart: '#f43f5e',
+  },
+  trash: {
+    label: 'Müll',
+    short: 'Müll',
+    hint: 'Spam, Bewerbung, Testeintrag – zählt in keine Quote.',
+    group: 'discarded',
+    probability: 0,
+    staleAfterDays: 365,
+    dot: 'bg-slate-500',
+    badge: 'bg-slate-500/15 text-slate-300 border-slate-500/30',
+    ring: 'ring-slate-500/40',
+    chart: '#64748b',
   },
 };
+
+/** Laufende Deals – alles, was noch gewonnen werden kann. */
+export const OPEN_STATUSES: LeadStatus[] = STATUS_ORDER.filter(
+  (s) => STATUS_META[s].group === 'open',
+);
+
+/** Abgeschlossen: gewonnen, verloren oder verworfen. */
+export const CLOSED_STATUSES: LeadStatus[] = STATUS_ORDER.filter(
+  (s) => STATUS_META[s].group !== 'open',
+);
+
+/**
+ * Status aus der DB absichern: unbekannte oder alte Werte landen auf 'new',
+ * statt die UI über STATUS_META[undefined] zum Absturz zu bringen.
+ */
+export function normalizeStatus(raw: unknown): LeadStatus {
+  return typeof raw === 'string' && raw in STATUS_META ? (raw as LeadStatus) : 'new';
+}
+
+export function stageMetaOf(lead: Lead): StageMeta {
+  return STATUS_META[normalizeStatus(lead.status)];
+}
+
+export function stageIndex(status: LeadStatus): number {
+  const i = STATUS_ORDER.indexOf(status);
+  return i === -1 ? 0 : i;
+}
+
+/** Nächste bzw. vorherige Stufe für die Pfeil-Buttons auf der Karte. */
+export function nextStage(status: LeadStatus): LeadStatus | null {
+  return STATUS_ORDER[stageIndex(status) + 1] ?? null;
+}
+
+export function prevStage(status: LeadStatus): LeadStatus | null {
+  const i = stageIndex(status);
+  return i > 0 ? STATUS_ORDER[i - 1] : null;
+}
+
+/** Müll fliegt aus Quoten und Charts – sonst verzerrt Spam jede Kennzahl. */
+export function countsTowardsStats(lead: Lead): boolean {
+  return stageMetaOf(lead).group !== 'discarded';
+}
+
+/** Mit der Stufenwahrscheinlichkeit gewichteter Deal-Wert (Forecast). */
+export function weightedValue(lead: Lead): number {
+  const meta = stageMetaOf(lead);
+  if (meta.group !== 'open') return 0;
+  return (lead.est_value ?? 0) * meta.probability;
+}
+
+/**
+ * Tage seit dem letzten Stufenwechsel. Ohne status_changed_at (Leads von vor
+ * der Migration) zählt es ab dem Eingangsdatum.
+ */
+export function daysInStage(lead: Lead): number {
+  const basis = lead.status_changed_at || lead.created_at;
+  const ms = Date.now() - new Date(basis).getTime();
+  return Math.max(0, Math.floor(ms / 86400000));
+}
+
+/** Liegengeblieben: zu lange in einer offenen Stufe ohne Bewegung. */
+export function isStale(lead: Lead): boolean {
+  const meta = stageMetaOf(lead);
+  if (meta.group !== 'open') return false;
+  return daysInStage(lead) > meta.staleAfterDays;
+}
 
 export const SOURCE_META: Record<string, { label: string; color: string }> = {
   contact: { label: 'Kontaktformular', color: '#38bdf8' },

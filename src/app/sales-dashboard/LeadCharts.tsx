@@ -15,9 +15,10 @@ import {
 } from 'recharts';
 import {
   type Lead,
-  type LeadStatus,
   STATUS_META,
   STATUS_ORDER,
+  normalizeStatus,
+  weightedValue,
   displaySource,
   displaySourceColor,
   formatEuro,
@@ -276,25 +277,32 @@ export function TrafficDonut({ leads }: { leads: Lead[] }) {
 }
 
 export function StatusFunnel({ leads }: { leads: Lead[] }) {
+  // Zehn Stufenlabels passen nicht nebeneinander auf eine X-Achse, deshalb
+  // liegende Balken. Die Farben kommen aus STATUS_META, damit neue Stufen
+  // automatisch mitgezeichnet werden.
   const data = STATUS_ORDER.map((status) => ({
     status,
-    label: STATUS_META[status].label,
-    count: leads.filter((l) => l.status === status).length,
-  }));
-  const colors: Record<LeadStatus, string> = {
-    new: '#0ea5e9',
-    contacted: '#f59e0b',
-    qualified: '#8b5cf6',
-    won: '#10b981',
-    lost: '#f43f5e',
-  };
+    label: STATUS_META[status].short,
+    count: leads.filter((l) => normalizeStatus(l.status) === status).length,
+  })).filter((d) => d.count > 0 || STATUS_META[d.status].group === 'open');
 
   return (
-    <ChartCard title="Pipeline nach Status">
-      <ResponsiveContainer width="100%" height={220}>
-        <BarChart data={data} margin={{ top: 5, right: 5, left: -20, bottom: 0 }}>
-          <XAxis dataKey="label" tick={AXIS} tickLine={false} axisLine={false} />
-          <YAxis tick={AXIS} tickLine={false} axisLine={false} allowDecimals={false} width={32} />
+    <ChartCard title="Pipeline nach Stufe" subtitle="Anzahl Leads je Stufe">
+      <ResponsiveContainer width="100%" height={Math.max(220, data.length * 26)}>
+        <BarChart
+          data={data}
+          layout="vertical"
+          margin={{ top: 0, right: 20, left: 0, bottom: 0 }}
+        >
+          <XAxis type="number" hide allowDecimals={false} />
+          <YAxis
+            type="category"
+            dataKey="label"
+            tick={AXIS}
+            tickLine={false}
+            axisLine={false}
+            width={92}
+          />
           <Tooltip
             cursor={{ fill: 'var(--muted)', opacity: 0.3 }}
             content={({ active, payload, label }) =>
@@ -303,9 +311,9 @@ export function StatusFunnel({ leads }: { leads: Lead[] }) {
               ) : null
             }
           />
-          <Bar dataKey="count" radius={[6, 6, 0, 0]}>
+          <Bar dataKey="count" radius={[0, 6, 6, 0]} barSize={14}>
             {data.map((d) => (
-              <Cell key={d.status} fill={colors[d.status]} />
+              <Cell key={d.status} fill={STATUS_META[d.status].chart} />
             ))}
           </Bar>
         </BarChart>
@@ -362,44 +370,55 @@ export function TopCompanies({ leads }: { leads: Lead[] }) {
 }
 
 export function ValueByStatus({ leads }: { leads: Lead[] }) {
-  const data = STATUS_ORDER.map((status) => ({
-    status,
-    label: STATUS_META[status].label,
-    value: leads
-      .filter((l) => l.status === status)
-      .reduce((sum, l) => sum + (l.est_value ?? 0), 0),
-  }));
-  const colors: Record<LeadStatus, string> = {
-    new: '#0ea5e9',
-    contacted: '#f59e0b',
-    qualified: '#8b5cf6',
-    won: '#10b981',
-    lost: '#64748b',
-  };
+  // Rohes Volumen plus den mit der Stufenwahrscheinlichkeit gewichteten Wert –
+  // letzterer ist die realistische Erwartung und steht im Tooltip.
+  const data = STATUS_ORDER.map((status) => {
+    const inStage = leads.filter((l) => normalizeStatus(l.status) === status);
+    return {
+      status,
+      label: STATUS_META[status].short,
+      value: inStage.reduce((sum, l) => sum + (l.est_value ?? 0), 0),
+      weighted: Math.round(inStage.reduce((sum, l) => sum + weightedValue(l), 0)),
+    };
+  }).filter((d) => d.value > 0 || STATUS_META[d.status].group === 'open');
 
   return (
-    <ChartCard title="Pipeline-Wert nach Status" subtitle="Geschätztes Volumen">
-      <ResponsiveContainer width="100%" height={220}>
-        <BarChart data={data} margin={{ top: 5, right: 5, left: 5, bottom: 0 }}>
-          <XAxis dataKey="label" tick={AXIS} tickLine={false} axisLine={false} />
+    <ChartCard title="Pipeline-Wert nach Stufe" subtitle="Volumen und gewichteter Forecast">
+      <ResponsiveContainer width="100%" height={Math.max(220, data.length * 26)}>
+        <BarChart
+          data={data}
+          layout="vertical"
+          margin={{ top: 0, right: 20, left: 0, bottom: 0 }}
+        >
+          <XAxis type="number" hide />
           <YAxis
+            type="category"
+            dataKey="label"
             tick={AXIS}
             tickLine={false}
             axisLine={false}
-            width={52}
-            tickFormatter={(v) => (v >= 1000 ? `${Math.round(v / 1000)}k` : String(v))}
+            width={92}
           />
           <Tooltip
             cursor={{ fill: 'var(--muted)', opacity: 0.3 }}
             content={({ active, payload, label }) =>
               active && payload?.length ? (
-                <TooltipBox label={String(label)} rows={[{ name: 'Wert', value: formatEuro(Number(payload[0].value)) }]} />
+                <TooltipBox
+                  label={String(label)}
+                  rows={[
+                    { name: 'Volumen', value: formatEuro(Number(payload[0].value)) },
+                    {
+                      name: 'Gewichtet',
+                      value: formatEuro(Number(payload[0].payload?.weighted ?? 0)),
+                    },
+                  ]}
+                />
               ) : null
             }
           />
-          <Bar dataKey="value" radius={[6, 6, 0, 0]}>
+          <Bar dataKey="value" radius={[0, 6, 6, 0]} barSize={14}>
             {data.map((d) => (
-              <Cell key={d.status} fill={colors[d.status]} />
+              <Cell key={d.status} fill={STATUS_META[d.status].chart} />
             ))}
           </Bar>
         </BarChart>

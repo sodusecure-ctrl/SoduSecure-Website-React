@@ -13,14 +13,37 @@ import { sql } from '@vercel/postgres';
  * empty results instead of throwing, so the public site keeps working.
  */
 
-export type LeadStatus = 'new' | 'contacted' | 'qualified' | 'won' | 'lost';
+/**
+ * Pipeline-Stufen. Muss mit STATUS_ORDER in
+ * src/app/sales-dashboard/types.ts uebereinstimmen – dort liegen die Labels,
+ * Farben und Abschlusswahrscheinlichkeiten.
+ *
+ * Die Spalte ist TEXT ohne CHECK-Constraint, neue Stufen brauchen deshalb keine
+ * Datenmigration. Bestehende Werte NIE umbenennen – alte Leads tragen sie noch.
+ */
+export type LeadStatus =
+  | 'new'
+  | 'contacted'
+  | 'replied'
+  | 'qualified'
+  | 'scoping'
+  | 'proposal'
+  | 'negotiation'
+  | 'won'
+  | 'lost'
+  | 'trash';
 
 export const LEAD_STATUSES: LeadStatus[] = [
   'new',
   'contacted',
+  'replied',
   'qualified',
+  'scoping',
+  'proposal',
+  'negotiation',
   'won',
   'lost',
+  'trash',
 ];
 
 /** Which form / funnel produced the lead. */
@@ -71,6 +94,8 @@ export type Lead = {
   check_verdict: string | null;
   est_value: number | null;
   status: LeadStatus;
+  /** Zeitpunkt des letzten Stufenwechsels (treibt die Stagnations-Warnung). */
+  status_changed_at: string | null;
   notes: string | null;
   tag: string | null;
   source_page: string | null;
@@ -130,6 +155,11 @@ export async function ensureSchema(): Promise<void> {
       await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS link_slug TEXT;`;
       // Lesbare Traffic-Quelle (Google Ads, ChatGPT, LinkedIn …) – nachträglich ergänzt
       await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS traffic_label TEXT;`;
+      // Wann der Lead das letzte Mal die Pipeline-Stufe gewechselt hat. Treibt
+      // die "liegengeblieben"-Warnung im Kanban. Altbestand bekommt created_at,
+      // damit die Anzeige nicht auf NULL laeuft.
+      await sql`ALTER TABLE leads ADD COLUMN IF NOT EXISTS status_changed_at TIMESTAMPTZ;`;
+      await sql`UPDATE leads SET status_changed_at = created_at WHERE status_changed_at IS NULL;`;
       await sql`CREATE INDEX IF NOT EXISTS leads_created_at_idx ON leads (created_at DESC);`;
       await sql`CREATE INDEX IF NOT EXISTS leads_status_idx ON leads (status);`;
       await sql`CREATE INDEX IF NOT EXISTS leads_source_idx ON leads (source);`;
@@ -276,9 +306,16 @@ export async function updateLead(
     fields.est_value === undefined ? null : toNullableInt(fields.est_value);
   const estProvided = fields.est_value !== undefined;
 
+  // status_changed_at nur anfassen, wenn die Stufe sich wirklich aendert –
+  // ein erneutes Setzen desselben Status darf die Liegezeit nicht zuruecksetzen.
   const result = await sql<Lead>`
     UPDATE leads SET
-      status    = COALESCE(${status}, status),
+      status            = COALESCE(${status}, status),
+      status_changed_at = CASE
+                            WHEN ${status}::text IS NOT NULL AND ${status} <> status
+                            THEN now()
+                            ELSE COALESCE(status_changed_at, created_at)
+                          END,
       notes     = CASE WHEN ${notes}::text IS NOT NULL THEN ${notes} ELSE notes END,
       est_value = CASE WHEN ${estProvided} THEN ${estValue} ELSE est_value END
     WHERE id = ${id}
