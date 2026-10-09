@@ -6,7 +6,11 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   // absolute: verhindert, dass das Root-Template " | Sodu Secure" ein zweites Mal
   // anhängt (gerendert wurde zuvor "Sodu Secure - Pentest & AuditAI | Sodu Secure").
-  title: { absolute: 'Sodu Secure | Pentest aus Berlin und AI Code Review' },
+  // Ein Thema statt zwei: "und AI Code Review" verwaesserte den Titel und
+  // passte zu keiner Suchanfrage, fuer die die Startseite tatsaechlich rankt
+  // (pentest berlin, cybersecurity berlin, Markensuchen). Der Titel deckt sich
+  // jetzt mit der H1 – nur so uebernimmt Google ihn auch.
+  title: { absolute: 'Sodu Secure | Penetrationstests aus Berlin' },
   description:
     'OSCP-zertifizierte Pentester aus Berlin, über 500 Pentests, kostenloser Retest. Preisspanne in 3 Minuten berechnen oder AuditAI ab 99 € pro Monat.',
   alternates: { canonical: '/' },

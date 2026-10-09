@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/penetrationstest`,
   },
   openGraph: {
-    title: 'Penetrationstest | Ablauf in 5 Phasen erklärt | Sodu Secure',
+    title: 'Penetrationstest | Ablauf in 5 Phasen erklärt',
     description:
       'Definition nach BSI, Ablauf in 5 Phasen, Testarten und Standards - erklärt von OSCP-zertifizierten Testern aus Berlin. Preis in 3 Minuten berechnen.',
     url: `${baseUrl}/penetrationstest`,

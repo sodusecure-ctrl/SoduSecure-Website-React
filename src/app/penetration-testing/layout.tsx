@@ -4,9 +4,13 @@ import { FAQS } from './faq';
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  title: { absolute: 'Sodu Secure: Pentest Kosten & Angebot | Konfigurator' },
+  // Diese Seite rankte fuer "pentest kosten" anstelle von /pentest-kosten und
+  // nahm ihr damit das Ranking weg. Der Titel gibt das Kosten-Keyword daher ab
+  // und besetzt stattdessen die Transaktionsabsicht. Description von 212 auf
+  // unter 160 Zeichen gekuerzt - alles darueber schneidet Google ab.
+  title: { absolute: 'Pentest Preis berechnen | Angebot in 24 Stunden' },
   description:
-    'Pentest vom zertifizierten Anbieter - Kosten in 3 Minuten im Konfigurator berechnen. Web, API, Netzwerk & Active Directory. Schwachstellenscan ab 1.499 €, manueller Pentest individuell kalkuliert. Angebot in 24h.',
+    'Pentest-Umfang online zusammenstellen und Preisspanne sofort sehen. Web, API, Netzwerk und Active Directory. Verbindliches Angebot innerhalb von 24 Stunden.',
   keywords: [
     'Pentest',
     'Pentest Kosten',
@@ -37,7 +41,7 @@ export const metadata: Metadata = {
     'Red Team Test',
   ],
   openGraph: {
-    title: 'Sodu Secure: Pentest Kosten & Angebot | Konfigurator',
+    title: 'Pentest Preis berechnen | Angebot in 24 Stunden',
     description:
       'Pentest vom zertifizierten Anbieter - Kosten sofort im Konfigurator berechnen. Schwachstellenscan ab 1.499 €, manueller Pentest individuell kalkuliert. Bericht mit Fix-Empfehlungen und kostenlosem Retest.',
     url: `${baseUrl}/penetration-testing`,

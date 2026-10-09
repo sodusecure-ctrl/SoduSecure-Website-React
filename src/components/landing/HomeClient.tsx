@@ -232,16 +232,22 @@ const sharedEn: SharedCopy = {
 function getPentestCopy(de: boolean): BrandCopy {
   return de
     ? {
+        // Die H1 muss das Keyword tragen, fuer das die Startseite rankt
+        // ("pentest berlin"). Vorher stand hier nur "Sodu Secure / IT-Sicherheit
+        // durch Hacking" – weder Pentest noch Berlin. Google zieht die H1 als
+        // Titelquelle heran und zeigte in der SERP deshalb nur "Sodu Secure".
+        // Der Claim bleibt erhalten, ruecht aber eine Zeile tiefer.
         heroH1Top: (
           <>
             <span className="premium-silver whitespace-nowrap">Sodu Secure</span>
             <br />
-            <span className="premium-headline-accent">IT-Sicherheit durch Hacking</span>
+            <span className="premium-headline-accent">Penetrationstests aus Berlin</span>
           </>
         ),
         heroH1Bottom: (
           <>
-            Wir machen Ihre IT <span className="font-semibold text-[#FF3B30]">robuster</span> gegen Cyberangriffe.
+            IT-Sicherheit durch Hacking: Wir machen Ihre IT{' '}
+            <span className="font-semibold text-[#FF3B30]">robuster</span> gegen Cyberangriffe.
           </>
         ),
         heroSub: 'Hand-getestet von OSCP-zertifizierten Hackern aus Berlin. Echte Angriffsketten, reproduzierbare Proof-of-Concepts, klare Fix-Empfehlungen - individuell kalkuliert, meist 4.000 bis 20.000 €.',

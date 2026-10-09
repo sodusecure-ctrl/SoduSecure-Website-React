@@ -61,8 +61,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'de_DE',
     url: baseUrl,
-    title: 'Sodu Secure | zertifizierte Penetrationstests aus Berlin',
-    description: 'Ist Ihr Unternehmen hackbar? Jetzt kostenlos testen. OSCP-zertifizierter Pentest - Web, API, AD. Schwachstellenscan ab 1.499 € - manueller Pentest individuell kalkuliert.',
+    // Bewusst KEIN festes title/description hier: Next.js vererbt diesen Block
+    // an jede Seite ohne eigenes openGraph. Dadurch trugen ~85 Seiten denselben
+    // og:title, der ihrem eigenen <title> widersprach. Google nennt genau das
+    // als Grund, einen Titel zu ersetzen ("duplicate titles across multiple
+    // pages", "title doesn't reflect page content") – bei "pentest berlin"
+    // wurde daraus in der SERP nur noch "Sodu Secure". Ohne die Felder leitet
+    // Next.js og:title/og:description pro Seite aus title/description ab.
     siteName: 'Sodu Secure',
     images: [
       {
@@ -75,8 +80,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sodu Secure | zertifizierte Penetrationstests aus Berlin',
-    description: 'Zertifizierte Pentester - Schwachstellenscan ab 1.499 €, manueller Pentest individuell kalkuliert. Pentest sofort konfigurieren & Preis berechnen. Web, API, AD & Cloud.',
+    // Ebenfalls ohne festes title/description – siehe Begruendung bei openGraph.
     images: [`${baseUrl}/images/twitter-image.jpg`],
     creator: '@sodusecure',
   },
