@@ -58,9 +58,13 @@ export default function ThankYouPage() {
           <p className="text-white/80 text-sm sm:text-base mb-1 sm:mb-2">
             Ihre Anfrage ist bei uns eingegangen.
           </p>
+          {/* 24 Stunden, nicht 2: Der Konfigurator, die FAQ, die Bestaetigungsmail
+              und die Angebots-Zusage nennen durchgaengig 24 Stunden. Diese Seite
+              war der einzige Ausreisser und hat damit direkt nach dem Absenden
+              eine Zusage gemacht, die der Rest des Funnels nicht deckt. */}
           <p className="text-white/60 text-xs sm:text-sm mb-6 sm:mb-8">
-            Unser Team meldet sich in der Regel innerhalb von{" "}
-            <span className="text-white font-semibold">2 Stunden</span> persönlich bei Ihnen.
+            Unser Team meldet sich innerhalb von{" "}
+            <span className="text-white font-semibold">24 Stunden</span> persönlich bei Ihnen.
           </p>
 
           {/* Divider */}
