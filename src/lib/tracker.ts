@@ -246,15 +246,24 @@ export function getTrafficSource(): TrafficSource | null {
   }
 }
 
+/** Sammelcontainer fuer Besucher ohne Kampagnen-Attribution. */
+export const DIRECT_SLUG = 'direct';
+
 /**
- * Funnel-Event senden (fire-and-forget). No-op ohne Attribution.
+ * Funnel-Event senden (fire-and-forget).
+ *
+ * Frueher ein No-op ohne Kampagnen-Attribution - damit erzeugte die grosse
+ * Mehrheit der Besucher (organisch und direkt) ueberhaupt keine Ereignisse,
+ * und jede Aussage ueber Abbruchstellen blieb Vermutung. Ohne /t/-Link laufen
+ * die Ereignisse jetzt auf DIRECT_SLUG; die Kampagnenauswertung bleibt davon
+ * unberuehrt, weil sie nach Slug filtert.
+ *
  * `meta` darf nur unkritische Daten enthalten (Event-Kontext, nie Eingaben).
  */
 export function track(event: string, meta?: Record<string, unknown>): void {
   if (typeof window === 'undefined') return;
   try {
-    const slug = getAttribution();
-    if (!slug) return;
+    const slug = getAttribution() || DIRECT_SLUG;
     const payload = JSON.stringify({
       slug,
       visitorId: getVisitorId(),

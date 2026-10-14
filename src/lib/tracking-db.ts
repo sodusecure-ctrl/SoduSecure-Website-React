@@ -63,6 +63,14 @@ export const ALLOWED_EVENTS = [
   'result_unlocked',
   'calendly_view',
   'call_click',
+  // Besucheranalyse auf /request-pentest. Bewusst grobkoernig: scroll_depth in
+  // 25er-Stufen, element_click nur mit einem Label (nie mit Eingaben), und
+  // page_exit traegt die Verweildauer in Sekunden.
+  'scroll_depth',
+  'element_click',
+  'page_exit',
+  'step_view',
+  'field_focus',
 ] as const;
 
 export const SLUG_RE = /^[a-z0-9][a-z0-9_-]{1,63}$/;
@@ -204,6 +212,35 @@ export async function deleteTrackingLink(id: number): Promise<boolean> {
 // ── Events ───────────────────────────────────────────────────────────────
 
 /** Best-effort Insert – wirft nie, damit die öffentliche Seite nie leidet. */
+/**
+ * Slug fuer Besucher ohne Kampagnen-Attribution. tracking_events.link_slug ist
+ * NOT NULL, deshalb braucht auch organischer Verkehr einen Traeger - sonst
+ * entstehen fuer die grosse Mehrheit der Besucher gar keine Events.
+ */
+export const DIRECT_SLUG = 'direct';
+
+let directLinkReady: Promise<void> | null = null;
+
+/** Legt die Traegerzeile fuer DIRECT_SLUG an (einmal pro Serverinstanz). */
+export async function ensureDirectLink(): Promise<void> {
+  if (!isDbConfigured()) return;
+  if (!directLinkReady) {
+    directLinkReady = (async () => {
+      await ensureTrackingSchema();
+      await sql`
+        INSERT INTO tracking_links (slug, name, campaign, channel, target, notes, archived)
+        VALUES (${DIRECT_SLUG}, 'Direkt & organisch', NULL, 'organic', '/request-pentest',
+                'Automatisch angelegt: Sammelcontainer fuer Besucher ohne Kampagnen-Link.', false)
+        ON CONFLICT (slug) DO NOTHING;
+      `;
+    })().catch((err) => {
+      directLinkReady = null;
+      throw err;
+    });
+  }
+  return directLinkReady;
+}
+
 export async function insertTrackingEvent(input: TrackingEventInput): Promise<void> {
   if (!isDbConfigured()) return;
   try {
@@ -318,4 +355,104 @@ export async function funnelForLink(slug: string, sinceIso: string): Promise<Lin
     days: days.rows,
     recent: recent.rows,
   };
+}
+
+// ───────────────────────────────────────────────────────────────────────────
+// Besucheranalyse: eine Zeile je Sitzung auf einer bestimmten Seite.
+// ───────────────────────────────────────────────────────────────────────────
+
+export type VisitorSession = {
+  session_id: string;
+  visitor_id: string;
+  started_at: string;
+  last_at: string;
+  /** Verweildauer in Sekunden - aus page_exit, sonst aus der Ereignisspanne. */
+  seconds: number;
+  /** Groesste erreichte Scrolltiefe in Prozent. */
+  scroll_pct: number;
+  /** Weitester erreichter Konfigurator-Schritt. */
+  max_step: number;
+  clicks: number;
+  events: number;
+  /** Namen der angefassten Formularfelder - ohne Inhalte. */
+  fields: string[];
+  /** Angeklickte Elemente (Labels, keine Eingaben). */
+  clicked: string[];
+  submitted: boolean;
+  link_slug: string;
+  /** Herkunft, wie sie beim ersten Ereignis der Sitzung vorlag. */
+  source_label: string | null;
+  referrer: string | null;
+  utm_source: string | null;
+  utm_campaign: string | null;
+  device: string | null;
+  viewport: string | null;
+  country: string | null;
+};
+
+/**
+ * Sitzungen auf einer Seite, neueste zuerst. Aggregiert direkt in SQL, damit
+ * nicht tausende Einzelereignisse durch den Node-Prozess wandern.
+ */
+export async function visitorSessions(
+  path: string,
+  sinceIso: string,
+  limit = 300,
+): Promise<VisitorSession[]> {
+  if (!isDbConfigured()) return [];
+  await ensureTrackingSchema();
+  const result = await sql<VisitorSession>`
+    SELECT
+      session_id,
+      MIN(visitor_id)                                             AS visitor_id,
+      MIN(created_at)                                             AS started_at,
+      MAX(created_at)                                             AS last_at,
+      COALESCE(
+        MAX((meta->>'seconds')::numeric)::int,
+        GREATEST(0, EXTRACT(EPOCH FROM (MAX(created_at) - MIN(created_at)))::int)
+      )                                                           AS seconds,
+      COALESCE(MAX((meta->>'pct')::numeric)::int, 0)              AS scroll_pct,
+      COALESCE(MAX((meta->>'step')::numeric)::int, 0)             AS max_step,
+      COUNT(*) FILTER (WHERE event IN ('element_click', 'cta_click', 'call_click'))::int AS clicks,
+      COUNT(*)::int                                               AS events,
+      COALESCE(ARRAY_AGG(DISTINCT meta->>'field')
+        FILTER (WHERE meta->>'field' IS NOT NULL), '{}')          AS fields,
+      COALESCE(ARRAY_AGG(DISTINCT meta->>'label')
+        FILTER (WHERE meta->>'label' IS NOT NULL), '{}')          AS clicked,
+      BOOL_OR(event = 'lead_submitted')                           AS submitted,
+      MIN(link_slug)                                              AS link_slug,
+      MAX(meta->>'sourceLabel')                                   AS source_label,
+      MAX(meta->>'referrer')                                      AS referrer,
+      MAX(meta->>'utmSource')                                     AS utm_source,
+      MAX(meta->>'utmCampaign')                                   AS utm_campaign,
+      MAX(meta->>'device')                                        AS device,
+      MAX(meta->>'viewport')                                      AS viewport,
+      MAX(meta->>'country')                                       AS country
+    FROM tracking_events
+    WHERE path = ${path} AND created_at >= ${sinceIso}
+    GROUP BY session_id
+    ORDER BY MIN(created_at) DESC
+    LIMIT ${limit};
+  `;
+  return result.rows;
+}
+
+export type VisitorEvent = {
+  created_at: string;
+  event: string;
+  meta: Record<string, unknown> | null;
+};
+
+/** Der vollstaendige Ereignisverlauf einer einzelnen Sitzung. */
+export async function sessionTimeline(sessionId: string): Promise<VisitorEvent[]> {
+  if (!isDbConfigured()) return [];
+  await ensureTrackingSchema();
+  const result = await sql<VisitorEvent>`
+    SELECT created_at, event, meta
+    FROM tracking_events
+    WHERE session_id = ${sessionId}
+    ORDER BY created_at ASC
+    LIMIT 500;
+  `;
+  return result.rows;
 }

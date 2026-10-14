@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { ALLOWED_EVENTS, insertTrackingEvent, SLUG_RE } from '@/lib/tracking-db';
+import { ALLOWED_EVENTS, DIRECT_SLUG, ensureDirectLink, insertTrackingEvent, SLUG_RE } from '@/lib/tracking-db';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -35,6 +35,11 @@ export async function POST(request: NextRequest) {
       // 'click' wird ausschließlich serverseitig beim Redirect geloggt
       return NextResponse.json({ ok: true });
     }
+
+    // Besucher ohne Kampagnenlink laufen auf DIRECT_SLUG. Die zugehoerige
+    // tracking_links-Zeile muss existieren, sonst taucht der organische Verkehr
+    // in der Auswertung nicht auf (das Dashboard joint ueber den Slug).
+    if (slug === DIRECT_SLUG) await ensureDirectLink();
 
     await insertTrackingEvent({ linkSlug: slug, visitorId, sessionId, event, path, meta });
     return NextResponse.json({ ok: true });
