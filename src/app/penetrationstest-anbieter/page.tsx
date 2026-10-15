@@ -318,13 +318,13 @@ export default function PenetrationstestAnbieterPage() {
             <span>Penetrationstest Anbieter · Seriöse Pentester · OSCP Certified</span>
           </div>
           <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
-            <span className="premium-silver">Der richtige Penetrationstest Anbieter –</span>
+            <span className="premium-silver">Pentest Anbieter vergleichen:</span>
             <br />
-            <span className="premium-headline-accent">Wie man Qualität erkennt</span>
+            <span className="premium-headline-accent">8 Kriterien für Ihre Shortlist</span>
           </h1>
           <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
             <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
-            <span>Woran unterscheiden Sie seriöse Pentester von Anbietern, die einen automatisierten Scan als Penetrationstest verkaufen? Dieser Leitfaden zeigt die Prüfkriterien, die Warnsignale und die Anbieter-Typen am deutschen Markt – inklusive der offenen Einordnung, wo Sodu Secure dabei steht.</span>
+            <span>Woran unterscheiden Sie seriöse Pentester von Anbietern, die einen automatisierten Scan als Penetrationstest verkaufen? Dieser Leitfaden zeigt die acht Prüfkriterien, die Warnsignale und die Anbieter-Typen am deutschen Markt – inklusive der offenen Einordnung, wo Sodu Secure dabei steht.</span>
           </p>
           <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <Link href="/request-pentest" className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white">
@@ -454,7 +454,7 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="auswahlkriterien" className="scroll-mt-24 text-3xl font-bold mb-4">Auswahlkriterien im Vergleich: 8 Punkte für Ihre Shortlist</h2>
+            <h2 id="auswahlkriterien" className="scroll-mt-24 text-3xl font-bold mb-4">Die 8 Auswahlkriterien im direkten Vergleich</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
               Mit diesen Kriterien vergleichen Sie Penetrationstest-Anbieter strukturiert – aufgebaut auf den Empfehlungen des BSI-Praxis-Leitfadens für IS-Penetrationstests.
             </p>
