@@ -17,6 +17,7 @@ import {
 } from '@/lib/blogData';
 import { ORGANIZATION_ID, SITE_URL, WEBSITE_ID, authorJsonLd } from '@/lib/authors';
 import { trackConversion } from '@/lib/gtag';
+import { renderInline } from '@/lib/richText';
 
 export default function BlogArticleDetail() {
   const [showMobileTOC, setShowMobileTOC] = useState(false);
@@ -367,13 +368,13 @@ export default function BlogArticleDetail() {
             <section id="introduction" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.introduction.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4">
-                {t('sections.introduction.content')}
+                {renderInline(t('sections.introduction.content'))}
               </p>
 
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 sm:p-6 my-4 sm:my-6 rounded-r-lg">
                 <h3 className="font-bold text-gray-900 mb-2 text-lg">{t('sections.introduction.keyTakeaway.title')}</h3>
                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                  {t('sections.introduction.keyTakeaway.content')}
+                  {renderInline(t('sections.introduction.keyTakeaway.content'))}
                 </p>
               </div>
 
@@ -391,7 +392,7 @@ export default function BlogArticleDetail() {
                 {list('sections.commonAttackVectors.items').map((item, index) => (
                   <li key={index} className="flex gap-3 text-gray-700 text-sm sm:text-base">
                     <span className="text-red-500 mt-1 text-lg">•</span>
-                    <span>{item}</span>
+                    <span>{renderInline(item)}</span>
                   </li>
                 ))}
               </ul>
@@ -401,7 +402,7 @@ export default function BlogArticleDetail() {
             <section id="impact-analysis" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.impactAnalysis.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
-                {t('sections.impactAnalysis.content')}
+                {renderInline(t('sections.impactAnalysis.content'))}
               </p>
 
               {/* Real-World Statistics Card */}
@@ -431,7 +432,7 @@ export default function BlogArticleDetail() {
             <section id="mitigation-strategies" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.mitigationStrategies.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4 sm:mb-6">
-                {t('sections.mitigationStrategies.content')}
+                {renderInline(t('sections.mitigationStrategies.content'))}
               </p>
 
               <div className="space-y-4 sm:space-y-6">
@@ -439,7 +440,7 @@ export default function BlogArticleDetail() {
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">{t('sections.mitigationStrategies.essentialPractices.title')}</h3>
                   <ul className="space-y-2 ml-4">
                     {list('sections.mitigationStrategies.essentialPractices.items').map((item, index) => (
-                      <li key={index} className="text-gray-700 text-sm sm:text-base">• {item}</li>
+                      <li key={index} className="text-gray-700 text-sm sm:text-base">• {renderInline(item)}</li>
                     ))}
                   </ul>
                 </div>
@@ -450,10 +451,10 @@ export default function BlogArticleDetail() {
             <section id="conclusion" className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.conclusion.title')}</h2>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base mb-4">
-                {t('sections.conclusion.content1')}
+                {renderInline(t('sections.conclusion.content1'))}
               </p>
               <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
-                {t('sections.conclusion.content2')}
+                {renderInline(t('sections.conclusion.content2'))}
               </p>
             </section>
 
