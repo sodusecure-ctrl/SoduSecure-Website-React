@@ -5856,5 +5856,134 @@
       "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
       "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
     }
-  }
+  },
+    "itSicherheitstestPlanenDetail": {
+      "backToBlog": "Zurück zum Blog",
+      "shareArticle": "Artikel teilen",
+      "bookmarkArticle": "Artikel speichern",
+      "category": "IT-SICHERHEITSTEST",
+      "date": "15. Okt 2026",
+      "title": "Wie Sie einen IT-Sicherheitstest richtig planen: Checkliste für Gründer und IT-Leiter",
+      "description": "Welche Testart zu welchem Risikoprofil passt, was die Prüfung realistisch kostet, wie Sie den Prüfumfang sauber abgrenzen und welche sieben Fragen Sie jedem Anbieter stellen sollten.",
+      "author": "Sodu Secure Team",
+      "readTime": "12 Min. Lesezeit",
+      "tableOfContents": "Inhaltsverzeichnis",
+      "shareThisArticle": "Diesen Artikel teilen",
+      "share": "Teilen",
+      "save": "Speichern",
+      "sections": {
+        "introduction": {
+          "title": "Der häufigste Fehler passiert vor dem Test",
+          "content": "Viele Unternehmen scheitern beim IT-Sicherheitstest, bevor der erste Angriff simuliert wird. Nicht weil das Thema zu komplex wäre, sondern weil der Auftrag falsch gestellt ist: kein klarer Prüfumfang, keine Vorstellung vom Ergebnis, kein Plan für die Zeit danach. Was wir bei fast jedem Erstauftrag beobachten: Auftraggeber wissen nicht, welche Testart zu ihrem Risikoprofil passt, und holen Angebote ein, die sich kaum vergleichen lassen. Dieser Leitfaden ändert das. Er erklärt, welche Testarten es gibt, was sie realistisch kosten, wie Sie den Prüfumfang sauber definieren und welche sieben Fragen Sie jedem Anbieter stellen sollten, bevor Sie unterschreiben.",
+          "keyTakeaway": {
+            "title": "Testart zuerst, Angebot danach",
+            "content": "Ein Schwachstellenscan prüft automatisiert, ob bekannte Lücken existieren. Ein manueller Penetrationstest prüft, ob sie ausnutzbar sind, und dokumentiert funktionierende Angriffsketten. Red Teaming prüft darüber hinaus, ob Ihre Organisation den Angriff überhaupt bemerkt. Erst wenn diese Entscheidung gefallen ist, lohnt es sich, Angebote einzuholen - sonst vergleichen Sie Preise für drei verschiedene Leistungen."
+          },
+          "quote": "Je konkreter Ihr Prüfumfang, desto vergleichbarer die Angebote - und desto geringer das Risiko von Nachträgen."
+        },
+        "commonAttackVectors": {
+          "title": "Testarten und Informationstiefe im Überblick",
+          "items": [
+            "Schwachstellenscan: automatisiert, schnell und günstig. Findet bekannte Lücken in Konfigurationen und veralteter Software, kann aber nicht beurteilen, ob diese Lücken tatsächlich ausnutzbar sind. Ein nützlicher Einstieg, aber kein Ersatz für einen manuellen Test.",
+            "Manueller Penetrationstest: ein zertifizierter Tester versucht aktiv, in Ihr System einzudringen, und dokumentiert funktionierende Angriffsketten mit Machbarkeitsnachweis. Für KMU mit produktionsnahen Anwendungen meist der richtige Einstieg - die Entscheidung sollte risikobasiert und gemeinsam mit einem erfahrenen Anbieter fallen.",
+            "Red Teaming: simuliert über Wochen einen gezielten Angreifer und bewertet nicht nur die Technik, sondern auch die Erkennungs- und Reaktionsfähigkeit der gesamten Organisation. Ressourcenintensiv und sinnvoll erst bei bereits gereiften Sicherheitsprozessen.",
+            "Anwendungstest (Webanwendung, Programmierschnittstelle, mobile App): konzentriert sich auf Authentifizierungsfehler, Autorisierungsprobleme, Injection-Schwachstellen und Fehler in der Geschäftslogik.",
+            "Infrastrukturtest: prüft Server, Firewalls, Active Directory, VPN und interne Netze auf unbefugten Zugang, Rechteausweitung und laterale Bewegung. Andere Angriffsfläche, andere Fachkenntnis als beim Anwendungstest - entscheiden Sie danach, welche Systeme Ihr höchstes Geschäftsrisiko tragen.",
+            "Informationstiefe: Beim Blindtest hat der Tester kein Vorwissen, beim Graukasten-Test begrenzte Informationen wie Benutzerkonten oder Schnittstellendokumentation, beim Weißkasten-Test vollständige Unterlagen inklusive Quellcode und Architekturplänen. Das BSI empfiehlt grundsätzlich Weißkasten-Tests, weil bei Blindtests mangels Information Schwachstellen übersehen werden können. Für die meisten Unternehmensumgebungen ist der Graukasten-Test ein guter Kompromiss aus Aufwand und Tiefe."
+          ]
+        },
+        "impactAnalysis": {
+          "title": "Was ein IT-Sicherheitstest in Deutschland kostet",
+          "content": "Die Kosten hängen an Umfang und Methode, nicht an der Branche. Nach den öffentlich einsehbaren Preisübersichten deutscher Anbieter liegt ein Web-Application-Pentest bei 3.000 bis 25.000 Euro netto, der Test einer Programmierschnittstelle bei 2.000 bis 12.000 Euro, eine externe Infrastrukturprüfung bei 3.000 bis 15.000 Euro und ein interner Netzwerktest bei 5.000 bis 30.000 Euro. Ein Red-Team-Assessment beginnt bei rund 25.000 Euro. Ein automatisierter Schwachstellenscan liegt mit 300 bis 3.000 Euro deutlich darunter, leistet aber auch deutlich weniger. Diese Spannen stammen aus den veröffentlichten Preisangaben von AWARE7, Reepa Solutions, microCAT, Code & Lein und ChannelPartner; im Pentest-Preisindex von Sodu Secure sind sie mit Quelle nachlesbar. Die größten Preistreiber sind die Anzahl der Anwendungen, IP-Adressen und Benutzerrollen, die gewählte Testtiefe sowie Compliance-Anforderungen aus NIS2, ISO 27001, DORA oder TISAX, die detailliertere Berichte und Nachweise erfordern.",
+          "statistics": {
+            "title": "Marktzahlen zur Preisbildung",
+            "averageCost": {
+              "value": "900–1.800 €",
+              "label": "Tagessatz im Marktdurchschnitt, netto, nach den Angaben von Reepa Solutions und microCAT. Junior-Tester starten bei rund 800 Euro, Spezialisten liegen über 2.000 Euro."
+            },
+            "identificationTime": {
+              "value": "+30–60 %",
+              "label": "Aufschlag für Compliance-Anforderungen wie ISO 27001 oder TISAX, weil Berichtsformat und Nachweistiefe steigen. Eine kurzfristige Beauftragung kostet weitere 20 bis 30 Prozent."
+            },
+            "multipleBreaches": {
+              "value": "12 Wochen",
+              "label": "Mindestdauer der aktiven Testphase bei einem TLPT nach DORA, laut BaFin. Wer den Test als Nachweis braucht, muss entsprechend früh planen."
+            }
+          }
+        },
+        "mitigationStrategies": {
+          "title": "Prüfumfang festlegen und Anbieter prüfen",
+          "content": "Bevor Sie ein Angebot einholen, halten Sie schriftlich fest, welche Systeme, IP-Adressen, Domains, Anwendungen und Benutzerrollen in den Test einbezogen werden und welche ausdrücklich ausgeschlossen sind, und benennen Sie, wer während der Durchführung für Rückfragen erreichbar ist. Das BSI verlangt für IS-Penetrationstests grundsätzlich einen schriftlichen Auftrag mit genauer Abgrenzung des Prüfobjekts, benannten Ansprechpartnern und geregelten Abbruchkriterien - fehlen diese Angaben, fehlt auch die rechtliche Grundlage für den Test. Klären Sie außerdem früh, ob Sie den Test als Nachweis für ISO 27001, NIS2, DORA, TISAX oder PCI-DSS benötigen: Das wirkt sich direkt auf Berichtsformat, Prüftiefe und Anbieterqualifikation aus, und für Finanzinstitute sieht DORA bei einem TLPT zertifizierte Tester und eine aktive Testphase von mindestens zwölf Wochen vor. Sprechen Sie diese Anforderungen mit Ihrem Auditor ab, bevor Sie beauftragen, nicht danach. Drei Fehler treten beim ersten Test immer wieder auf: ein zu vager Prüfumfang, kein eingeplanter Nachtest zur Verifizierung behobener Schwachstellen und ein Bericht, für dessen Befunde niemand eine Behebungsreihenfolge festgelegt hat.",
+          "essentialPractices": {
+            "title": "Sieben Fragen, die Sie jedem Anbieter stellen sollten",
+            "items": [
+              "Welche Tester führen den Test konkret durch, und welche Zertifizierungen wie OSCP, OSWE oder CEH besitzen sie?",
+              "Können Sie einen anonymisierten Musterbericht vorlegen?",
+              "Welche Methodik verwenden Sie, etwa OWASP WSTG, PTES oder NIST SP 800-115?",
+              "Ist ein Nachtest zur Verifizierung behobener Schwachstellen im Angebot enthalten?",
+              "Welche Berufshaftpflicht- und Cyberversicherung besteht, und deckt sie Penetrationstests ausdrücklich ab?",
+              "Wer hat Zugriff auf Testdaten und Befunde, und wie werden diese nach Abschluss gelöscht?",
+              "Setzen Sie Nachunternehmer ein, und wenn ja, wer sind sie?"
+            ]
+          }
+        },
+        "conclusion": {
+          "title": "Prüfbericht, Nachtest und nächster Schritt",
+          "content1": "Am Bericht entscheidet sich, ob der Test etwas verändert. Die Zusammenfassung für die Leitungsebene richtet sich an Geschäftsführung und Risikoverantwortliche: Gesamtbewertung der Sicherheitslage, kritische Angriffswege, Geschäftsrisiken und eine priorisierte Maßnahmen-Roadmap ohne Technikvokabular. Der technische Befundbericht dokumentiert jede einzelne Schwachstelle mit eindeutiger Befund-Kennung, betroffenem System, technischer Ursache, Reproduktionsschritten und konkreter Handlungsempfehlung. Jeder Befund sollte einen vollständigen CVSS-Vektor tragen, nicht nur eine Farbmarkierung, und einen Machbarkeitsnachweis enthalten - Screenshot, HTTP-Anfrage oder Protokollauszug -, der zeigt, dass die Lücke tatsächlich ausgenutzt wurde und kein theoretisches Risiko ist. Wer nur einen Scanner-Export bekommt, hat keinen verwertbaren Penetrationstest-Bericht. Sodu Secure schließt einen definierten Nachtest standardmäßig ein: Jeder Befund wird nach der Behebung erneut geprüft und mit einem aktualisierten Statusbericht dokumentiert. Für Entwicklerteams, die darüber hinaus kontinuierliche Prüfungen brauchen, gibt es mit AuditAI ein wöchentliches KI-gestütztes Code-Review als ergänzende Option.",
+          "content2": "Einen IT-Sicherheitstest richtig zu planen erfordert keine wochenlange Vorarbeit. Es braucht einen klaren Prüfumfang, die passende Testart für Ihr Risikoprofil, realistische Budgeterwartungen und die sieben Fragen als Filter für die Anbieterauswahl. Wer so vorgeht, vermeidet die drei teuersten Fehler: einen zu vagen Auftrag, einen Anbieter ohne nachweisbare Qualifikation und einen Bericht, der im Regal landet, weil niemand weiß, was als Nächstes zu tun ist. Beschreiben Sie uns Ihre Systeme - Sie erhalten einen konkreten Prüfumfang, ein individuell kalkuliertes Angebot und Begleitung bis zum abgeschlossenen Nachtest."
+        }
+      },
+      "tags": [
+        "IT-Sicherheitstest",
+        "Sicherheitstest planen",
+        "Prüfumfang",
+        "Pentest Checkliste",
+        "Anbieterauswahl",
+        "Pentest Kosten"
+      ],
+      "cta": {
+        "title": "Prüfumfang klären, dann Angebot",
+        "description": "Beschreiben Sie kurz Ihre Systeme - wir melden uns mit einem konkreten Prüfumfang und einem individuell kalkulierten Angebot zurück. Nachtest inklusive.",
+        "emailPlaceholder": "E-Mail eingeben",
+        "buttonText": "Angebot anfragen",
+        "disclaimer": "Kein Spam, jederzeit abbestellen"
+      },
+      "relatedArticles": {
+        "title": "Weiterführende Seiten",
+        "articles": [
+          {
+            "title": "Pentest Preisindex mit belegten Marktpreisen",
+            "description": "Tagessätze, Preisspannen je Testart und übliche Aufschläge - jede Zahl mit Quelle und Datum.",
+            "category": "PENTEST PREISE",
+            "readTime": "7 Min. Lesezeit",
+            "readMore": "Seite ansehen →"
+          },
+          {
+            "title": "Pentest Anbieter in Deutschland und der DACH-Region",
+            "description": "Vergleichskriterien, Zertifizierungen und worauf Sie bei der Auswahl achten müssen.",
+            "category": "PENTEST ANBIETER",
+            "readTime": "8 Min. Lesezeit",
+            "readMore": "Seite ansehen →"
+          }
+        ]
+      },
+      "authorBio": {
+        "name": "Sodu Secure Team",
+        "role": "Offensive Security, Sodu Secure GmbH",
+        "bio": "OSCP-zertifizierte Penetrationstester aus Berlin. Über 500 durchgeführte Pentests für Unternehmen vom Start-up bis zum Konzern - manuell geprüft, mit verifizierten Findings und kostenlosem Retest."
+      },
+      "mobileActions": {
+        "enjoyedArticle": "War dieser Artikel hilfreich?",
+        "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+        "getHelp": "Angebot anfragen"
+      },
+      "toasts": {
+        "linkCopied": "Link in die Zwischenablage kopiert!",
+        "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+        "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+        "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+        "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+      }
+    }
 }

@@ -402,6 +402,27 @@ export const blogPosts: BlogPost[] = [
       'Vulnerability Assessment',
     ],
   },
+  {
+    id: 24,
+    slug: 'it-sicherheitstest-planen',
+    title: 'IT-Sicherheitstest planen: Checkliste und Kosten',
+    description: 'IT-Sicherheitstest planen: Welche Testart zu welchem Risikoprofil passt, was die Prüfung realistisch kostet, wie Sie den Prüfumfang sauber abgrenzen und sieben Fragen für die Anbieterauswahl.',
+    category: 'Pentest Grundlagen',
+    author: 'Sodu Secure Team',
+    date: '2026-10-15',
+    readTime: '12 min read',
+    image: '/images/blogs/image7.png',
+    keywords: [
+      'IT-Sicherheitstest',
+      'IT-Sicherheitstest planen',
+      'Sicherheitstest Unternehmen',
+      'Pentest Checkliste',
+      'Prüfumfang Penetrationstest',
+      'Pentest Scoping',
+      'Pentest Anbieter Fragen',
+      'IT Sicherheitstest Kosten',
+    ],
+  },
 ];
 
 /**

@@ -55,6 +55,7 @@ export default function BlogArticleDetail() {
       21: 'pentestKostenMarktuebersichtDetail',
       22: 'pentestAnbieterAuswaehlenDetail',
       23: 'pentestVsSchwachstellenscanDetail',
+      24: 'itSicherheitstestPlanenDetail',
     };
     return mapping[id] || 'blogDetail';
   };
@@ -65,12 +66,21 @@ export default function BlogArticleDetail() {
       21: ['/pentest-kosten', '/penetrationstest'],
       22: ['/penetrationstest-anbieter', '/request-pentest'],
       23: ['/penetrationstest', '/pentest'],
+      24: ['/pentest-preisindex', '/penetrationstest-anbieter'],
     };
     return mapping[id] || ['/case-studies/blogs/2', '/case-studies/blogs/2'];
   };
   const relatedArticleRoutes = getRelatedArticleRoutes(blogId);
 
   const t = useTranslations(getBlogTranslationKey(blogId));
+
+  // Listen kommen aus den Uebersetzungen, ihre Laenge ebenfalls. Vorher war sie
+  // hart verdrahtet (6 Punkte, 8 Punkte, 6 Tags) - ein Artikel mit sieben
+  // Punkten haette dadurch einen fehlenden Schluessel gerendert.
+  const list = (key: string): string[] => {
+    const roh = t.raw(key);
+    return Array.isArray(roh) ? (roh as string[]) : [];
+  };
 
   // Article-JSON-LD: Typ, Autor und Datumsangaben kommen aus den zentralen Datenquellen
   // (src/lib/blogData.ts, src/lib/authors.ts), damit Schema und sichtbarer Inhalt nicht driften.
@@ -378,7 +388,7 @@ export default function BlogArticleDetail() {
             <section className="bg-white border border-gray-200 rounded-2xl shadow-sm p-4 sm:p-6 lg:p-8">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{t('sections.commonAttackVectors.title')}</h2>
               <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
-                {Array.from({ length: 6 }, (_, i) => t(`sections.commonAttackVectors.items.${i}`)).map((item, index) => (
+                {list('sections.commonAttackVectors.items').map((item, index) => (
                   <li key={index} className="flex gap-3 text-gray-700 text-sm sm:text-base">
                     <span className="text-red-500 mt-1 text-lg">•</span>
                     <span>{item}</span>
@@ -428,7 +438,7 @@ export default function BlogArticleDetail() {
                 <div>
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">{t('sections.mitigationStrategies.essentialPractices.title')}</h3>
                   <ul className="space-y-2 ml-4">
-                    {Array.from({ length: 8 }, (_, i) => t(`sections.mitigationStrategies.essentialPractices.items.${i}`)).map((item, index) => (
+                    {list('sections.mitigationStrategies.essentialPractices.items').map((item, index) => (
                       <li key={index} className="text-gray-700 text-sm sm:text-base">• {item}</li>
                     ))}
                   </ul>
@@ -449,7 +459,7 @@ export default function BlogArticleDetail() {
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
-              {Array.from({ length: 6 }, (_, i) => t(`tags.${i}`)).map((tag) => (
+              {list('tags').map((tag) => (
                 <Badge key={tag} variant="secondary" className="bg-gray-100 text-gray-700 hover:bg-gray-200 text-xs sm:text-sm">
                   #{tag}
                 </Badge>

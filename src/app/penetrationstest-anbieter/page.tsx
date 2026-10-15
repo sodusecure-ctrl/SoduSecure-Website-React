@@ -791,6 +791,7 @@ export default function PenetrationstestAnbieterPage() {
               <Link href="/case-studies/blogs/pentest-anbieter-auswaehlen" className="text-[#FF6B61] hover:text-[#FF8077]">Checkliste: Pentest Anbieter auswählen</Link>
               <Link href="/pentest-kosten" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Kosten</Link>
               <Link href="/penetrationstest" className="text-[#FF6B61] hover:text-[#FF8077]">Was ist ein Penetrationstest?</Link>
+              <Link href="/case-studies/blogs/it-sicherheitstest-planen" className="text-[#FF6B61] hover:text-[#FF8077]">IT-Sicherheitstest planen</Link>
             </div>
           </div>
         </div>

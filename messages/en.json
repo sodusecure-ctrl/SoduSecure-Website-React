@@ -6167,5 +6167,134 @@
       "emailSent": "Thanks! Your request has been sent.",
       "emailFailed": "Sending failed. Please try again."
     }
-  }
+  },
+    "itSicherheitstestPlanenDetail": {
+      "backToBlog": "Back to blog",
+      "shareArticle": "Share article",
+      "bookmarkArticle": "Save article",
+      "category": "SECURITY TESTING",
+      "date": "Oct 15, 2026",
+      "title": "How to plan an IT security test properly: a checklist for founders and IT leads",
+      "description": "Which type of test fits which risk profile, what a test realistically costs, how to define the scope precisely and the seven questions to ask every provider.",
+      "author": "Sodu Secure Team",
+      "readTime": "12 min read",
+      "tableOfContents": "Table of contents",
+      "shareThisArticle": "Share this article",
+      "share": "Share",
+      "save": "Save",
+      "sections": {
+        "introduction": {
+          "title": "The most common mistake happens before the test",
+          "content": "Many companies run into trouble with their IT security test before the first attack is ever simulated. Not because the subject is too complex, but because the engagement is framed badly: no clear scope, no expectation of what the result should look like, no plan for what happens afterwards. What we see in almost every first engagement: clients do not know which type of test matches their risk profile, and they collect quotes that can barely be compared. This guide fixes that. It explains the types of test available, what they realistically cost, how to define the scope cleanly and which seven questions to ask every provider before you sign.",
+          "keyTakeaway": {
+            "title": "Pick the type of test first, then request quotes",
+            "content": "A vulnerability scan checks automatically whether known weaknesses exist. A manual penetration test checks whether they can actually be exploited and documents working attack chains. Red teaming goes further and checks whether your organisation notices the attack at all. Only once that decision is made is it worth collecting quotes - otherwise you are comparing prices for three different services."
+          },
+          "quote": "The more specific your scope, the more comparable the quotes - and the lower the risk of change requests later."
+        },
+        "commonAttackVectors": {
+          "title": "Types of test and levels of information",
+          "items": [
+            "Vulnerability scan: automated, fast and inexpensive. It finds known weaknesses in configurations and outdated software, but cannot judge whether those weaknesses are actually exploitable. A useful starting point, but no substitute for a manual test.",
+            "Manual penetration test: a certified tester actively attempts to break into your system and documents working attack chains with proof of concept. Usually the right entry point for SMEs with production-facing applications - the decision should be risk-based and made together with an experienced provider.",
+            "Red teaming: simulates a targeted adversary over several weeks and assesses not only the technology but the detection and response capability of the whole organisation. Resource-intensive and only worthwhile once security processes are mature.",
+            "Application test (web application, API, mobile app): focuses on authentication flaws, authorisation problems, injection vulnerabilities and business logic errors.",
+            "Infrastructure test: examines servers, firewalls, Active Directory, VPN and internal networks for unauthorised access, privilege escalation and lateral movement. A different attack surface and a different skill set from an application test - decide based on which systems carry your highest business risk.",
+            "Level of information: in a black-box test the tester has no prior knowledge; in a grey-box test they receive limited information such as user accounts or API documentation; in a white-box test full documentation including source code and architecture diagrams is available. The German BSI generally recommends white-box tests, because a lack of information in black-box tests means vulnerabilities can be missed. For most corporate environments the grey-box test is a good compromise between effort and depth."
+          ]
+        },
+        "impactAnalysis": {
+          "title": "What an IT security test costs in Germany",
+          "content": "Cost depends on scope and method, not on your industry. According to the publicly available price lists of German providers, a web application penetration test costs between 3,000 and 25,000 euros net, an API test between 2,000 and 12,000 euros, an external infrastructure test between 3,000 and 15,000 euros and an internal network test between 5,000 and 30,000 euros. A red team assessment starts at around 25,000 euros. An automated vulnerability scan is far cheaper at 300 to 3,000 euros, but it also delivers far less. These ranges come from the published figures of AWARE7, Reepa Solutions, microCAT, Code & Lein and ChannelPartner; the Sodu Secure pentest price index lists each one with its source. The biggest cost drivers are the number of applications, IP addresses and user roles, the chosen depth of testing, and compliance requirements from NIS2, ISO 27001, DORA or TISAX, which demand more detailed reports and evidence.",
+          "statistics": {
+            "title": "Market figures behind the pricing",
+            "averageCost": {
+              "value": "900–1,800 €",
+              "label": "Market average day rate, net, according to figures from Reepa Solutions and microCAT. Junior testers start at around 800 euros, specialists are above 2,000 euros."
+            },
+            "identificationTime": {
+              "value": "+30–60 %",
+              "label": "Surcharge for compliance requirements such as ISO 27001 or TISAX, because reporting format and evidence depth increase. Short-notice engagements add another 20 to 30 percent."
+            },
+            "multipleBreaches": {
+              "value": "12 weeks",
+              "label": "Minimum duration of the active testing phase for a TLPT under DORA, according to BaFin. If you need the test as evidence, plan accordingly early."
+            }
+          }
+        },
+        "mitigationStrategies": {
+          "title": "Define the scope and vet the provider",
+          "content": "Before you request a quote, put in writing which systems, IP addresses, domains, applications and user roles are included in the test and which are explicitly excluded, and name who is reachable for questions while testing is under way. For IS penetration tests the BSI generally requires a written engagement with a precise definition of the target, named contacts and agreed abort criteria - without those details there is also no legal basis for the test. Clarify early whether you need the test as evidence for ISO 27001, NIS2, DORA, TISAX or PCI-DSS: that directly affects reporting format, depth of testing and provider qualification, and for financial institutions DORA requires certified testers and an active testing phase of at least twelve weeks for a TLPT. Agree these requirements with your auditor before you place the order, not afterwards. Three mistakes come up again and again in a first test: a scope that is too vague, no retest planned to verify remediated findings, and a report whose findings nobody has put into a remediation order.",
+          "essentialPractices": {
+            "title": "Seven questions to ask every provider",
+            "items": [
+              "Which testers will actually carry out the test, and which certifications such as OSCP, OSWE or CEH do they hold?",
+              "Can you provide an anonymised sample report?",
+              "Which methodology do you use, for example OWASP WSTG, PTES or NIST SP 800-115?",
+              "Is a retest to verify remediated findings included in the quote?",
+              "What professional indemnity and cyber insurance is in place, and does it explicitly cover penetration testing?",
+              "Who has access to test data and findings, and how are they deleted after the engagement?",
+              "Do you use subcontractors, and if so, who are they?"
+            ]
+          }
+        },
+        "conclusion": {
+          "title": "Report, retest and next step",
+          "content1": "The report is where it is decided whether the test changes anything. The executive summary is written for management and risk owners: an overall assessment of the security posture, critical attack paths, business risks and a prioritised remediation roadmap without technical jargon. The technical findings report documents every single vulnerability with a unique finding ID, the affected system, the technical root cause, reproduction steps and a concrete recommendation. Every finding should carry a full CVSS vector, not just a colour code, and include proof of concept - a screenshot, HTTP request or log extract - showing that the weakness was actually exploited and is not a theoretical risk. If all you receive is a scanner export, you do not have a usable penetration test report. Sodu Secure includes a defined retest as standard: every finding is re-examined after remediation and documented in an updated status report. For development teams that need continuous checks on top of that, AuditAI offers a weekly AI-assisted code review as an additional option.",
+          "content2": "Planning an IT security test properly does not take weeks of preparation. It takes a clear scope, the right type of test for your risk profile, realistic budget expectations and the seven questions as a filter for provider selection. Work that way and you avoid the three most expensive mistakes: a vague engagement, a provider without demonstrable qualification, and a report that ends up on a shelf because nobody knows what to do next. Describe your systems to us and you will get a concrete scope, an individually calculated quote and support through to the completed retest."
+        }
+      },
+      "tags": [
+        "IT security test",
+        "Security test planning",
+        "Scope definition",
+        "Pentest checklist",
+        "Provider selection",
+        "Pentest cost"
+      ],
+      "cta": {
+        "title": "Clarify the scope, then get a quote",
+        "description": "Briefly describe your systems - we will come back with a concrete scope and an individually calculated quote. Retest included.",
+        "emailPlaceholder": "Enter email",
+        "buttonText": "Request a quote",
+        "disclaimer": "No spam, unsubscribe anytime"
+      },
+      "relatedArticles": {
+        "title": "Further reading",
+        "articles": [
+          {
+            "title": "Pentest price index with sourced market prices",
+            "description": "Day rates, price ranges per type of test and the usual surcharges - every figure with source and date.",
+            "category": "PENTEST PRICES",
+            "readTime": "7 min read",
+            "readMore": "View page →"
+          },
+          {
+            "title": "Pentest providers in Germany and the DACH region",
+            "description": "Comparison criteria, certifications and what to look for when choosing a provider.",
+            "category": "PENTEST PROVIDERS",
+            "readTime": "8 min read",
+            "readMore": "View page →"
+          }
+        ]
+      },
+      "authorBio": {
+        "name": "Sodu Secure Team",
+        "role": "Offensive Security, Sodu Secure GmbH",
+        "bio": "OSCP-certified penetration testers based in Berlin. More than 500 pentests delivered for companies from start-ups to large enterprises - tested manually, with verified findings and a free retest."
+      },
+      "mobileActions": {
+        "enjoyedArticle": "Was this article helpful?",
+        "shareWithNetwork": "Share with your network",
+        "getHelp": "Request a quote"
+      },
+      "toasts": {
+        "linkCopied": "Link copied to clipboard!",
+        "consultationNotImplemented": "The consultation request feature is not implemented yet.",
+        "saveNotImplemented": "The save feature is not implemented yet.",
+        "invalidEmail": "Please enter a valid email address.",
+        "emailSent": "Thank you! Your request has been sent.",
+        "emailFailed": "Sending failed. Please try again."
+      }
+    }
 }
