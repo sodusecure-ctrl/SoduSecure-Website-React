@@ -940,3 +940,139 @@ html.light .theme-static [class*="bg-white/"] { background-color: rgba(255, 255,
 html.light .theme-static .bg-white\/95 { background-color: rgba(255, 255, 255, 0.95) !important; }
 html.light .theme-static .bg-\[\#0B2A4A\] { background-color: #0B2A4A !important; }
 html.light .theme-static .bg-\[\#081F38\] { background-color: #081F38 !important; }
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* /request-pentest im hellen Modus                                   */
+/*                                                                    */
+/* Die Seite ist dark-first gebaut: Tiefe entsteht dort durch helle    */
+/* Schleier (bg-white/5), schwarze Schatten und den roten Aurora-      */
+/* Verlauf. Die pauschale Light-Invertierung weiter oben uebersetzt    */
+/* das nach rgba(15,23,42,.04) auf Weiss - rechnerisch korrekt,        */
+/* sichtbar ein flaches Drahtgitter ohne Kanten und ohne Tiefe.        */
+/* Die Website startet in Light, also sieht genau das jeder Besucher   */
+/* aus der Google-Suche. Dieser Block gibt den Flaechen der Seite      */
+/* deshalb eine eigene helle Gestaltung, statt die dunkle nur zu       */
+/* entsaettigen. Alles ist auf .cfg begrenzt und beruehrt keine        */
+/* andere Route.                                                       */
+/* ══════════════════════════════════════════════════════════════════ */
+
+/* Leicht getoente Buehne, damit die weisse Karte als Karte liest. */
+html.light .cfg { background-color: #F3F4F7 !important; }
+
+/* Hero: kein blankes Weiss, sondern ein Verlauf mit sichtbarem Rotschimmer. */
+html.light .cfg-hero {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFAFC 55%, #F3F4F7 100%) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+html.light .cfg-hero .premium-aurora { opacity: 0.34 !important; }
+
+/* Belege als Chips: heller Grund, klarer Rand, lesbarer Text. */
+html.light .cfg-proof {
+  background-color: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  color: #334155 !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+/* Die Konfigurator-Karte traegt den ganzen Bildschirm - sie braucht Kante
+   und Schatten, sonst verschwimmt sie mit dem Hintergrund. */
+html.light .cfg .premium-card {
+  background: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04),
+              0 28px 56px -28px rgba(15, 23, 42, 0.28) !important;
+}
+
+/* Auswahlkacheln ohne Auswahl: echte weisse Flaeche mit Rand statt
+   hellgrauer Fleck auf hellgrauem Grund. */
+html.light .cfg-opt {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+  border-color: rgba(15, 23, 42, 0.13) !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05) !important;
+}
+html.light .cfg-opt:hover {
+  border-color: rgba(255, 59, 48, 0.42) !important;
+  box-shadow: 0 10px 26px -10px rgba(255, 59, 48, 0.3) !important;
+}
+
+/* Ausgewaehlt: roter Grund, roter Rand, Ring - eindeutig vor allen anderen. */
+html.light .cfg-opt[class*="bg-[#FF3B30]/1"],
+html.light .cfg-opt[class*="from-[#FF3B30]/15"] {
+  background-color: #FFF1F0 !important;
+  background-image: none !important;
+  border-color: rgba(255, 59, 48, 0.55) !important;
+  box-shadow: 0 0 0 1px rgba(255, 59, 48, 0.25),
+              0 12px 28px -12px rgba(255, 59, 48, 0.35) !important;
+}
+/* Add-On-Auswahl in Bernstein bleibt als zweite Spur unterscheidbar. */
+html.light .cfg-opt[class*="bg-amber-300/10"] {
+  background-color: #FFFBEB !important;
+  border-color: rgba(217, 119, 6, 0.45) !important;
+}
+html.light .cfg-opt[class*="text-amber-300"] { color: #B45309 !important; }
+html.light .cfg .text-amber-300 { color: #B45309 !important; }
+
+/* Icon-Flaechen in den Kacheln: getoent statt weiss auf weiss. */
+html.light .cfg-opt [class*="bg-white/"] { background-color: rgba(15, 23, 42, 0.055) !important; }
+html.light .cfg-opt [class*="bg-[#FF3B30]/"] { background-color: rgba(255, 59, 48, 0.12) !important; }
+
+/* Eingabefelder brauchen eine sichtbare Kante, sonst wirkt das Formular
+   unfertig. */
+html.light .cfg input,
+html.light .cfg textarea {
+  background-color: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.16) !important;
+  color: #0F172A !important;
+}
+html.light .cfg input:focus,
+html.light .cfg textarea:focus {
+  border-color: rgba(255, 59, 48, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.12) !important;
+}
+html.light .cfg input::placeholder,
+html.light .cfg textarea::placeholder { color: #94A3B8 !important; }
+
+/* Zusammenfassung und die beiden Kontaktleisten: weisse Paneele mit Rand. */
+html.light .cfg [class*="bg-white/[0.03]"],
+html.light .cfg [class*="bg-white/[0.04]"],
+html.light .cfg [class*="bg-white/5"] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.10) !important;
+}
+
+/* Kundenstimmen stehen bewusst auf dunklem Grund - der Block ist der
+   einzige Kontrastanker der Seite und bleibt deshalb dunkel. */
+html.light .cfg .cfg-voices {
+  background-color: #0A0A0B !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+html.light .cfg .cfg-voices .text-white { color: #FFFFFF !important; }
+html.light .cfg .cfg-voices [class*="text-white/"] { color: rgba(255, 255, 255, 0.6) !important; }
+
+/* Inaktiver Weiter-Knopf: durchsichtiger Grund mit grauem Text war im
+   hellen Modus nicht als Knopf erkennbar - der Schritt wirkte abgebrochen. */
+html.light .cfg .cfg-next-off {
+  background-color: #EDEFF3 !important;
+  color: #94A3B8 !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Fortschritt: offene Schritte und ihre Verbindungslinien. */
+html.light .cfg .cfg-step-off {
+  background-color: #FFFFFF !important;
+  color: #94A3B8 !important;
+  border-color: rgba(15, 23, 42, 0.16) !important;
+}
+html.light .cfg .cfg-step-line.bg-white\/15 { background-color: rgba(15, 23, 42, 0.14) !important; }
+
+/* Icon-Flaeche in den Kacheln sichtbar verankern. */
+html.light .cfg-opt [class*="bg-white/"] { background-color: #F1F3F7 !important; }
+html.light .cfg-opt:hover [class*="bg-white/"] { background-color: #FFE9E7 !important; }
+
+/* Die Zusammenfassung ist eine Ruecklesung, kein Eingabefeld - sie bekommt
+   einen leicht abgesetzten Grund, damit sie sich vom Formular abhebt. */
+html.light .cfg .cfg-summary {
+  background-color: #F7F8FB !important;
+  border-color: rgba(15, 23, 42, 0.10) !important;
+}
