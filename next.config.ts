@@ -48,6 +48,13 @@ const nextConfig: NextConfig = {
       // Karriere-Seite entfernt (Juli 2026)
       { source: '/careers', destination: '/about', permanent: true },
       { source: '/careers/:id', destination: '/about', permanent: true },
+
+      // Beide Seiten entstanden im SEO-Umbau Ende September und sind mit dem
+      // Rueckbau entfallen. Google kennt die Adressen aber - /penetrationstest
+      // stand bei 387 Impressionen auf Position 10,5. Ohne Weiterleitung
+      // liefen die auf 404 und die aufgebaute Relevanz waere verloren.
+      { source: '/penetrationstest', destination: '/penetration-testing', permanent: true },
+      { source: '/pentest-preisindex', destination: '/pentest-kosten', permanent: true },
     ];
   },
 };
