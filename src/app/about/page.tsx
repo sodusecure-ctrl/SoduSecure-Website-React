@@ -115,16 +115,16 @@ export default function AboutSection() {
               <div className="text-white/60 text-xs sm:text-sm">{t('stats.years')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">100+</div>
-              <div className="text-white/60 text-xs sm:text-sm">{t('stats.tests')}</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">12</div>
+              <div className="text-white/60 text-xs sm:text-sm">{t('stats.employees')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">DACH</div>
               <div className="text-white/60 text-xs sm:text-sm">{t('stats.countries')}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">OSCP</div>
-              <div className="text-white/60 text-xs sm:text-sm">{t('stats.satisfaction')}</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#FF3B30] mb-1 sm:mb-2">8</div>
+              <div className="text-white/60 text-xs sm:text-sm">{t('stats.pentesters')}</div>
             </div>
           </div>
         </div>

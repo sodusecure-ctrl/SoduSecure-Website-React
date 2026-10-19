@@ -4581,9 +4581,9 @@
     },
     "stats": {
       "years": "years of experience",
-      "tests": "Tests carried out",
+      "employees": "People on the team",
       "countries": "Customers in DACH region",
-      "satisfaction": "Certified Pentesters"
+      "pentesters": "OSCP-certified pentesters"
     },
     "whoWeAre": {
       "title": "Who we are",

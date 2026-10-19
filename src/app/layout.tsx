@@ -139,6 +139,10 @@ export default async function RootLayout({
     areaServed: ['DE', 'AT', 'CH'],
     address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
     priceRange: '€€',
+    // Teamgroesse laut Inhaber. Die Zahl steht sichtbar im Kennzahlen-Block
+    // auf /about - die Regel fuer dieses Objekt ist, dass jeder Wert hier
+    // auch im HTML belegt ist.
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: 12 },
     knowsAbout: ['Penetrationstest', 'NIS2', 'ISO 27001', 'DORA', 'Red Teaming', 'Active Directory', 'Cloud Security'],
   };
 

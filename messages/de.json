@@ -4342,9 +4342,9 @@
     },
     "stats": {
       "years": "Jahre Erfahrung",
-      "tests": "Durchgeführte Tests",
+      "employees": "Mitarbeiter im Team",
       "countries": "Kunden im DACH-Raum",
-      "satisfaction": "Zertifizierte Pentester"
+      "pentesters": "OSCP-zertifizierte Pentester"
     },
     "whoWeAre": {
       "title": "Wer wir sind",
