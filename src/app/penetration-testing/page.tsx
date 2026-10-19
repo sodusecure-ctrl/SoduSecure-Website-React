@@ -190,7 +190,7 @@ export default function PenetrationTestingPage() {
             <span>
               Sodu Secure führt professionelle Penetrationstests für Web-Apps, Netzwerke, APIs,
               Active Directory und Cloud-Infrastrukturen durch. Zertifizierte Pentester –
-              Festpreise ab 1.499 € – Angebot in 24 Stunden. Erfahren Sie mehr über Penetration Testing und Pentest Services.
+              Schwachstellenscan ab 1.499 € – Angebot in 24 Stunden. Erfahren Sie mehr über Penetration Testing und Pentest Services.
             </span>
           </p>
 

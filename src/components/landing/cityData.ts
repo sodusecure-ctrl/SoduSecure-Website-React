@@ -58,7 +58,7 @@ const berlin: CityData = {
   heroBadge: "Penetration Testing Anbieter aus Berlin · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Berliner Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Anbieter aus Berlin. Wir simulieren reale Angriffe auf Ihre Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert und mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Anbieter aus Berlin. Wir simulieren reale Angriffe auf Ihre Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert und mit transparentem Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben zahlreiche Berliner Unternehmen bei Penetrationstests begleitet – vom Charlottenburger Mittelständler über Startups in Kreuzberg und Mitte bis zu Gesundheitsdienstleistern im Berliner Umland. Diese Nähe ist kein Zufall: Sodu Secure ist in Berlin verwurzelt.",
     "Berlin ist Deutschlands größter Startup-Hub und gleichzeitig Sitz von Kliniken, Behörden und einer wachsenden Finanzszene. Diese Dichte macht die Stadt zu einem der attraktivsten Ziele für Cyberkriminelle in Deutschland – und genau deshalb kennen wir die typischen Angriffsflächen Berliner Firmen sehr genau.",
@@ -91,7 +91,7 @@ const berlin: CityData = {
   ],
   metaTitle: "Penetration Testing Berlin | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
-    "Penetration Testing in Berlin von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests, DSGVO-konform, Festpreis ab 1.499 €. Pentest Anbieter Berlin - Angebot in 24h.",
+    "Penetration Testing in Berlin von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests, DSGVO-konform, Schwachstellenscan ab 1.499 €. Pentest Anbieter Berlin - Angebot in 24h.",
   keywords: [
     "penetration testing berlin",
     "pentest berlin",
@@ -115,7 +115,7 @@ const hamburg: CityData = {
   heroBadge: "Penetration Testing Anbieter für Hamburg · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Hamburger Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Partner für Hamburg. Wir simulieren reale Angriffe auf Web-Apps, Logistik- und Netzwerk-Infrastruktur, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Partner für Hamburg. Wir simulieren reale Angriffe auf Web-Apps, Logistik- und Netzwerk-Infrastruktur, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben viele Hamburger Unternehmen bei Penetrationstests betreut – von Logistik- und Handelsbetrieben rund um den Hafen über Medienhäuser bis zu E-Commerce-Teams in der HafenCity. Hamburg ist für uns kein anonymer Markt, sondern ein Standort, dessen Risikoprofil wir aus der Praxis kennen.",
     "Als Deutschlands größter Seehafen und wichtiger Logistik-, Medien- und Handelsknoten ist Hamburg besonders abhängig von funktionierender, vernetzter IT – und damit ein lohnendes Ziel für Ransomware und Supply-Chain-Angriffe. Genau dort setzen unsere Tests an.",
@@ -148,7 +148,7 @@ const hamburg: CityData = {
   ],
   metaTitle: "Penetration Testing Hamburg | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
-    "Penetration Testing in Hamburg von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Logistik, Handel & Industrie, DSGVO-konform, Festpreis ab 1.499 €. Angebot in 24h.",
+    "Penetration Testing in Hamburg von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Logistik, Handel & Industrie, DSGVO-konform, Schwachstellenscan ab 1.499 €. Angebot in 24h.",
   keywords: [
     "penetration testing hamburg",
     "pentest hamburg",
@@ -172,7 +172,7 @@ const muenchen: CityData = {
   heroBadge: "Penetration Testing Anbieter für München · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Münchner Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Partner für München und Bayern. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Partner für München und Bayern. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben zahlreiche Münchner Unternehmen bei Penetrationstests begleitet – von Versicherern und Finanzdienstleistern über Automotive-Zulieferer bis zu Tech- und Biotech-Firmen im Raum München. Bayerns Wirtschaftskraft bringt besonders hohe Anforderungen an Cybersicherheit mit sich, und genau darauf sind wir eingestellt.",
     "München ist Heimat von DAX-Konzernen, einer der dichtesten Versicherungs- und Finanzlandschaften Europas und eines starken Tech- und Life-Science-Clusters. Diese Konzentration wertvoller Daten und geistigen Eigentums macht Münchner Unternehmen zu bevorzugten Zielen gezielter Angriffe.",
@@ -205,7 +205,7 @@ const muenchen: CityData = {
   ],
   metaTitle: "Penetration Testing München | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
-    "Penetration Testing in München von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Versicherer, Automotive & Tech, DORA- & DSGVO-konform, Festpreis ab 1.499 €.",
+    "Penetration Testing in München von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Versicherer, Automotive & Tech, DORA- & DSGVO-konform, Schwachstellenscan ab 1.499 €.",
   keywords: [
     "penetration testing münchen",
     "pentest münchen",
@@ -229,7 +229,7 @@ const stuttgart: CityData = {
   heroBadge: "Penetration Testing Anbieter für Stuttgart · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Stuttgarter Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Partner für Stuttgart und die Region. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Partner für Stuttgart und die Region. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben viele Stuttgarter Unternehmen bei Penetrationstests betreut – von Automotive-Zulieferern und Maschinenbauern bis zu den vielen „Hidden Champions“ des baden-württembergischen Mittelstands. Die Region steht für Ingenieurskunst und Exportstärke – und genau diese wertvollen Daten gilt es zu schützen.",
     "Stuttgart ist das Herz der deutschen Automobil- und Maschinenbauindustrie: Mercedes-Benz, Porsche, Bosch und tausende spezialisierte Zulieferer. Diese Lieferketten sind eng vernetzt – ein einziger kompromittierter Zulieferer kann zum Einfallstor für Angriffe auf einen ganzen OEM werden.",
@@ -262,7 +262,7 @@ const stuttgart: CityData = {
   ],
   metaTitle: "Penetration Testing Stuttgart | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
-    "Penetration Testing in Stuttgart von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Automotive, Maschinenbau & Mittelstand, TISAX- & DSGVO-konform, Festpreis ab 1.499 €.",
+    "Penetration Testing in Stuttgart von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Automotive, Maschinenbau & Mittelstand, TISAX- & DSGVO-konform, Schwachstellenscan ab 1.499 €.",
   keywords: [
     "penetration testing stuttgart",
     "pentest stuttgart",
@@ -286,7 +286,7 @@ const koeln: CityData = {
   heroBadge: "Penetration Testing Anbieter für Köln · OSCP · CEH",
   heroH1Line2: "Penetration Testing für Kölner Unternehmen",
   heroSub:
-    "Sodu Secure ist Ihr Penetration Testing Partner für Köln und das Rheinland. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Festpreis ab 1.499 €.",
+    "Sodu Secure ist Ihr Penetration Testing Partner für Köln und das Rheinland. Wir simulieren reale Angriffe auf Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, mit transparentem Schwachstellenscan ab 1.499 €.",
   localIntro: [
     "Wir haben viele Kölner Unternehmen bei Penetrationstests begleitet – von Medien- und Versicherungsunternehmen über Games-Studios bis zu Handels- und Logistikbetrieben im Rheinland. Köln ist ein dichter Medien-, Versicherungs- und Digitalstandort, dessen Risikoprofil wir aus der Praxis kennen.",
     "Als einer der größten Medien- und Versicherungsstandorte Deutschlands und Heimat der größten Games-Branche des Landes verarbeitet Köln riesige Mengen sensibler Kunden- und Nutzerdaten. Diese Datenfülle macht Kölner Unternehmen zu attraktiven Zielen für Datendiebstahl und Erpressung.",
@@ -319,7 +319,7 @@ const koeln: CityData = {
   ],
   metaTitle: "Penetration Testing Köln | Pentest Anbieter ab 1.499 € | Sodu Secure",
   metaDescription:
-    "Penetration Testing in Köln von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Medien, Versicherer & Games, DSGVO-konform, Festpreis ab 1.499 €. Angebot in 24h.",
+    "Penetration Testing in Köln von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Medien, Versicherer & Games, DSGVO-konform, Schwachstellenscan ab 1.499 €. Angebot in 24h.",
   keywords: [
     "penetration testing köln",
     "pentest köln",

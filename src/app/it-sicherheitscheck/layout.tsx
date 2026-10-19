@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'Sodu Secure – IT Sicherheitscheck',
-            description: 'IT Sicherheitscheck für Unternehmen. Manuelles Pentesting durch OSCP-zertifizierte Experten. Festpreis ab 1.499 €.',
+            description: 'IT Sicherheitscheck für Unternehmen. Manuelles Pentesting durch OSCP-zertifizierte Experten. Schwachstellenscan ab 1.499 €.',
             url: 'https://sodusecure.com/it-sicherheitscheck',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
@@ -56,7 +56,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
             mainEntity: [
-              { '@type': 'Question', name: 'Was kostet ein IT Sicherheitscheck?', acceptedAnswer: { '@type': 'Answer', text: 'Ein IT Sicherheitscheck kostet bei Sodu Secure ab 1.499 € als Festpreis – je nach Umfang (Web-App, Netzwerk, Active Directory, Cloud). Der genaue Preis wird per Konfigurator sofort berechnet.' } },
+              { '@type': 'Question', name: 'Was kostet ein IT Sicherheitscheck?', acceptedAnswer: { '@type': 'Answer', text: 'Ein IT Sicherheitscheck beginnt bei Sodu Secure mit einem Schwachstellenscan ab 1.499 €; ein manueller Pentest wird individuell kalkuliert, meist 4.000 – 20.000 € – je nach Umfang (Web-App, Netzwerk, Active Directory, Cloud). Der genaue Preis wird per Konfigurator sofort berechnet.' } },
               { '@type': 'Question', name: 'Wie lange dauert ein IT Sicherheitscheck?', acceptedAnswer: { '@type': 'Answer', text: 'Ein fokussierter IT Sicherheitscheck dauert 2–5 Werktage, ein umfassender Check 1–2 Wochen. Sodu Secure stellt den Bericht innerhalb von 48 Stunden nach Testabschluss bereit.' } },
               { '@type': 'Question', name: 'Was wird beim IT Sicherheitscheck überprüft?', acceptedAnswer: { '@type': 'Answer', text: 'Beim IT Sicherheitscheck werden je nach Paket Web-Applikationen, Netzwerkinfrastruktur, Active Directory, Cloud-Konfigurationen und APIs auf Sicherheitslücken überprüft.' } },
             ],

@@ -47,7 +47,7 @@ const ABLAUF = [
 const FAQS = [
   { q: "Was bedeutet IT Sicherheit testen?", a: "IT Sicherheit testen bedeutet, die eigene IT-Infrastruktur – Web-Apps, Netzwerke, Cloud, Active Directory – gezielt auf Schwachstellen zu prüfen, bevor Angreifer sie finden. Ein professioneller IT Sicherheitstest wird von zertifizierten Experten manuell durchgeführt." },
   { q: "Wie oft sollte ich IT Sicherheit testen lassen?", a: "Mindestens einmal jährlich, und nach jeder größeren Systemänderung (Deployment, neue Infrastruktur). NIS2 und ISO 27001 fordern regelmäßige Sicherheitsprüfungen. Viele Unternehmen testen halbjährlich oder nach jedem Release-Zyklus." },
-  { q: "Was kostet ein IT Sicherheitstest?", a: "Ein professioneller IT Sicherheitstest kostet bei Sodu Secure ab 1.499 € als Festpreis. Nutzen Sie den Online-Konfigurator für sofortigen Preis – kein Tagessatz, kein Überraschungsbudget." },
+  { q: "Was kostet ein IT Sicherheitstest?", a: "Ein professioneller IT Sicherheitstest beginnt bei Sodu Secure mit einem Schwachstellenscan ab 1.499 €; ein manueller Pentest wird individuell kalkuliert, meist 4.000 – 20.000 €. Nutzen Sie den Online-Konfigurator für sofortigen Preis – kein Tagessatz, kein Überraschungsbudget." },
   { q: "Kann ich IT Sicherheit remote testen lassen?", a: "Ja – alle IT Sicherheitstests können vollständig remote über VPN oder Test-Account durchgeführt werden. Sodu Secure testet deutschlandweit und international." },
   { q: "Was sind die häufigsten Schwachstellen beim IT Sicherheitstest?", a: "Die häufigsten Findings: schwache Authentifizierung (72 %), veraltete Software/CVEs (68 %), unsichere API-Endpunkte (61 %), Active Directory-Fehlkonfigurationen (55 %), überprivilegierte Cloud-Rollen (49 %)." },
   { q: "Bekomme ich nach dem IT Sicherheitstest Unterstützung bei der Behebung?", a: "Ja – der Sodu Secure Pentest-Bericht enthält konkrete Remediation-Empfehlungen für jedes Finding. Optional bieten wir einen kostenlosen Retest kritischer Lücken an, um die Behebung zu verifizieren." },
@@ -73,7 +73,7 @@ export default function ITSicherheitTestenPage() {
           <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
             <Shield className="h-3.5 w-3.5 text-[#FF3B30]" />
-            <span>IT Sicherheit testen · Manuell · Festpreis ab 1.499 € · Ergebnis in 48 h</span>
+            <span>IT Sicherheit testen · Manuell · Schwachstellenscan ab 1.499 € · Ergebnis in 48 h</span>
           </div>
 
           <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
@@ -108,7 +108,7 @@ export default function ITSicherheitTestenPage() {
           </div>
 
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[13px] text-white/70">
-            {["Web · Netzwerk · AD · Cloud · API", "OSCP-zertifizierte Pentester", "Festpreis ab 1.499 €", "Bericht in 48 h nach Test"].map((s) => (
+            {["Web · Netzwerk · AD · Cloud · API", "OSCP-zertifizierte Pentester", "Schwachstellenscan ab 1.499 €", "Bericht in 48 h nach Test"].map((s) => (
               <div key={s} className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /><span>{s}</span>
               </div>

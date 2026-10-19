@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pentest Anbieter | zertifizierte Penetrationstests für Unternehmen',
     description:
-      'Zertifizierter Pentest Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Transparente Festpreise ab 1.499 €. Pentest Anbieter für KMU & Enterprise.',
+      'Zertifizierter Pentest Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Transparente Schwachstellenscan ab 1.499 €. Pentest Anbieter für KMU & Enterprise.',
     url: `${baseUrl}/penetration-testing-anbieter`,
     type: 'website',
     siteName: 'Sodu Secure',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Penetration Testing Anbieter | Sodu Secure',
-    description: 'Zertifizierter Pentest Anbieter - OSCP, CEH, ISO 27001. Festpreis ab 1.499 €. Sofort konfigurieren.',
+    description: 'Zertifizierter Pentest Anbieter - OSCP, CEH, ISO 27001. Schwachstellenscan ab 1.499 €. Sofort konfigurieren.',
   },
   alternates: { canonical: `${baseUrl}/penetration-testing-anbieter` },
   robots: {
@@ -52,7 +52,7 @@ export default function PenetrationTestingAnbieterLayout({ children }: { childre
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Sodu Secure – Penetration Testing Anbieter',
-    description: 'Zertifizierter Penetration Testing Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Manuelle Penetrationstests für KMU und Enterprise. Festpreis ab 1.499 €.',
+    description: 'Zertifizierter Penetration Testing Anbieter aus Berlin. OSCP-, CEH-zertifizierte Pentester. Manuelle Penetrationstests für KMU und Enterprise. Schwachstellenscan ab 1.499 €.',
     url: `${baseUrl}/penetration-testing-anbieter`,
     logo: `${baseUrl}/icons/logo.png`,
     image: `${baseUrl}/images/blogs/image9.png`,

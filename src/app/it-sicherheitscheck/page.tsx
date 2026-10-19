@@ -50,7 +50,7 @@ const ABLAUF = [
 const FAQS = [
   { q: "Was ist ein IT Sicherheitscheck?", a: "Ein IT Sicherheitscheck (auch IT Security Check) ist eine systematische manuelle Prüfung Ihrer IT-Infrastruktur durch Sicherheitsexperten. Im Gegensatz zu automatisierten Scannern decken zertifizierte Pentester auch komplexe Logikfehler und Angriffsketten auf." },
   { q: "Wie schnell erhalte ich Ergebnisse?", a: "Sodu Secure liefert den vollständigen IT Sicherheitscheck-Bericht innerhalb von 48 Stunden nach Testabschluss. Für kritische Findings kommunizieren wir sofort während des Tests. Das macht uns zu einem der schnellsten Pentest-Anbieter in Deutschland." },
-  { q: "Was kostet ein IT Sicherheitscheck?", a: "Ein IT Sicherheitscheck kostet bei Sodu Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Umfang (Web-App, Netzwerk, AD, Cloud) ab. Nutzen Sie den Konfigurator für sofortige Preistransparenz – kein Verkaufsgespräch nötig." },
+  { q: "Was kostet ein IT Sicherheitscheck?", a: "Ein IT Sicherheitscheck beginnt bei Sodu Secure mit einem Schwachstellenscan ab 1.499 €; ein manueller Pentest wird individuell kalkuliert, meist 4.000 – 20.000 €. Der genaue Preis hängt vom Umfang (Web-App, Netzwerk, AD, Cloud) ab. Nutzen Sie den Konfigurator für sofortige Preistransparenz – kein Verkaufsgespräch nötig." },
   { q: "Kann ein IT Sicherheitscheck remote durchgeführt werden?", a: "Ja – der IT Sicherheitscheck wird vollständig remote über VPN oder Test-Account durchgeführt. Für interne Infrastruktur-Checks kann optional auch ein Vor-Ort-Einsatz in Berlin und Umgebung vereinbart werden." },
   { q: "Welche Compliance-Anforderungen erfüllt ein IT Sicherheitscheck?", a: "Ein Sodu Secure IT Sicherheitscheck liefert Nachweise für NIS2 (Art. 21 Risikomanagement), ISO 27001 (Annex A), DSGVO Art. 32 und DORA. Der Bericht ist für die Vorlage bei Behörden und Versicherungen geeignet." },
   { q: "Was ist der Unterschied zwischen IT Sicherheitscheck und Penetrationstest?", a: "Die Begriffe werden oft synonym verwendet. Ein IT Sicherheitscheck ist oft etwas breiter gefasst und kann neben technischem Testing auch Prozess- und Konfigurationsprüfungen umfassen. Ein Penetrationstest fokussiert tiefer auf die aktive Exploitation von Schwachstellen. Sodu Secure kombiniert beides." },
@@ -76,7 +76,7 @@ export default function ITSicherheitscheckPage() {
           <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#FF3B30] shadow-[0_0_12px_rgba(255,59,48,0.8)]" />
             <Zap className="h-3.5 w-3.5 text-[#FF3B30]" />
-            <span>IT Sicherheitscheck · Ergebnis in 2–5 Tagen · Festpreis ab 1.499 €</span>
+            <span>IT Sicherheitscheck · Ergebnis in 2–5 Tagen · Schwachstellenscan ab 1.499 €</span>
           </div>
 
           <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">

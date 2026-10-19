@@ -2,7 +2,7 @@
 
 export const metadata: Metadata = {
   title: 'IT Sicherheit testen | IT Sicherheitstest für Unternehmen',
-  description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure führt manuelle IT Sicherheitstests durch. Festpreis ab 1.499 €, Ergebnis in 48 h. Jetzt konfigurieren.',
+  description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure führt manuelle IT Sicherheitstests durch. Schwachstellenscan ab 1.499 €, Ergebnis in 48 h. Jetzt konfigurieren.',
   keywords: 'IT Sicherheit testen, IT Sicherheitstest, Netzwerk Sicherheitstest, IT Sicherheitsprüfung, Sicherheitstest Unternehmen, IT Sicherheit überprüfen',
   robots: {
     index: true,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://sodusecure.com/it-sicherheit-testen' },
   openGraph: {
     title: 'IT Sicherheit testen | IT Sicherheitstest für Unternehmen',
-    description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure: Festpreis ab 1.499 €, Ergebnis in 48 h.',
+    description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure: Schwachstellenscan ab 1.499 €, Ergebnis in 48 h.',
     url: 'https://sodusecure.com/it-sicherheit-testen',
     siteName: 'Sodu Secure',
     locale: 'de_DE',
@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'ProfessionalService',
             name: 'Sodu Secure – IT Sicherheit testen',
-            description: 'Manueller IT Sicherheitstest für Unternehmen. Web-Apps, Netzwerke, Active Directory, Cloud. OSCP-zertifiziert, Festpreis ab 1.499 €.',
+            description: 'Manueller IT Sicherheitstest für Unternehmen. Web-Apps, Netzwerke, Active Directory, Cloud. OSCP-zertifiziert, Schwachstellenscan ab 1.499 €.',
             url: 'https://sodusecure.com/it-sicherheit-testen',
             telephone: '+491777750985',
             email: 'info@sodusecure.com',
@@ -47,8 +47,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
             mainEntity: [
-              { '@type': 'Question', name: 'Wie kann ich meine IT Sicherheit testen lassen?', acceptedAnswer: { '@type': 'Answer', text: 'IT Sicherheit testen lassen geht mit einem professionellen Penetrationstest. Sodu Secure prüft Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, Festpreis ab 1.499 €.' } },
-              { '@type': 'Question', name: 'Was kostet ein IT Sicherheitstest?', acceptedAnswer: { '@type': 'Answer', text: 'Ein professioneller IT Sicherheitstest kostet bei Sodu Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Testumfang ab und wird per Online-Konfigurator sofort berechnet.' } },
+              { '@type': 'Question', name: 'Wie kann ich meine IT Sicherheit testen lassen?', acceptedAnswer: { '@type': 'Answer', text: 'IT Sicherheit testen lassen geht mit einem professionellen Penetrationstest. Sodu Secure prüft Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, Schwachstellenscan ab 1.499 €.' } },
+              { '@type': 'Question', name: 'Was kostet ein IT Sicherheitstest?', acceptedAnswer: { '@type': 'Answer', text: 'Ein professioneller IT Sicherheitstest beginnt bei Sodu Secure mit einem Schwachstellenscan ab 1.499 €; ein manueller Pentest wird individuell kalkuliert, meist 4.000 – 20.000 €. Der genaue Preis hängt vom Testumfang ab und wird per Online-Konfigurator sofort berechnet.' } },
               { '@type': 'Question', name: 'Wie oft sollte man IT Sicherheit testen?', acceptedAnswer: { '@type': 'Answer', text: 'Empfohlen wird mindestens einmal jährlich sowie nach größeren Systemänderungen. NIS2 und ISO 27001 fordern regelmäßige Sicherheitsprüfungen als Pflicht.' } },
             ],
           }),
