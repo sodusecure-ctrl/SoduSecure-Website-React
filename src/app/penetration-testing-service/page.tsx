@@ -149,7 +149,7 @@ const FAQS = [
   },
   {
     q: "Was kostet ein Penetration Testing Service?",
-    a: "Ein automatisierter Schwachstellenscan startet ab 1.499 €. Manuelle Pentests werden individuell auf Ihr Projekt zugeschnitten und nach Aufwand kalkuliert – meist zwischen 4.000 und 20.000 €; ein vollständiges KMU-Engagement inkl. Active Directory und Phishing-Simulation liegt bei 15.000 €+. Nutzen Sie unseren Pentest-Preisrechner für eine individuelle Schätzung – oder kontaktieren Sie uns für ein Festpreis-Angebot innerhalb von 24 Stunden.",
+    a: "Pentest-Kosten reichen von 2.500 € für einen fokussierten Web-App-Test bis 15.000 €+ für ein vollständiges KMU-Engagement inkl. Active Directory und Phishing-Simulation. Nutzen Sie unseren Pentest-Preisrechner für eine individuelle Schätzung – oder kontaktieren Sie uns für ein Festpreis-Angebot innerhalb von 24 Stunden.",
   },
   {
     q: "Wie lange dauert ein Penetrationstest?",
@@ -169,7 +169,7 @@ const FAQS = [
   },
   {
     q: "Bieten Sie Pentests für KMUs an?",
-    a: "Ja – KMUs sind unser Kernsegment. Der Einstieg gelingt mit unserem automatisierten Schwachstellenscan ab 1.499 €; manuelle KMU-Pentest-Pakete kalkulieren wir individuell nach Aufwand – konzipiert für begrenzte IT-Ressourcen und reale Angriffsvektoren.",
+    a: "Ja – KMUs sind unser Kernsegment. Wir bieten scoped Festpreis-Pentest-Pakete ab 1.499 € an, die für begrenzte IT-Ressourcen konzipiert sind und reale Angriffsvektoren abdecken.",
   },
   {
     q: "Ist ein Penetrationstest DSGVO-konform?",
@@ -256,7 +256,7 @@ const COMPANY_TYPES = [
       "74 % der KMUs haben keinen dedizierten IT-Sicherheitsverantwortlichen (Bitkom 2022)",
     ],
     pentestValue:
-      "Ein Schwachstellenscan mit manueller Verifikation ab ~2.500 € prüft Ihre externe Angriffsfläche, E-Mail-Sicherheit und Webpräsenz. Sie erhalten eine konkrete To-do-Liste mit Sofortmaßnahmen und wissen genau, wo Sie tatsächlich verwundbar sind.",
+      "Ein Basis-Pentest ab ~2.500 € prüft Ihre externe Angriffsfläche, E-Mail-Sicherheit und Webpräsenz. Sie erhalten eine konkrete To-do-Liste mit Sofortmaßnahmen und wissen genau, wo Sie tatsächlich verwundbar sind.",
     sources: [
       { label: "Verizon DBIR 2023", href: "https://www.verizon.com/business/resources/reports/dbir/" },
       { label: "Bitkom 2022", href: "https://www.bitkom.org" },
@@ -882,21 +882,20 @@ export default function PenetrationTestingServicePage() {
             Penetration Testing Service Costs – What to Expect
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto text-sm">
-            Pentest costs depend heavily on scope, number of targets and test depth. Automated
-            vulnerability scans start from €1,499 – manual pentests are individually scoped,
-            typically €4,000 to €20,000.
+            Pentest costs depend heavily on scope, number of targets and test depth. Sodu Secure
+            offers fair, transparent fixed prices – no hidden day rates.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-3 gap-5 mb-10">
           {[
             {
-              name: "Vulnerability Scan + Verification",
+              name: "Baseline Pentest",
               price: "from €2,500",
-              desc: "Automated scan of your external surface, findings manually verified",
+              desc: "Focused web app or external surface test",
               items: [
                 "External systems (1–3 targets)",
-                "OWASP Top 10 scanning",
+                "OWASP Top 10 testing",
                 "Manual vulnerability validation",
                 "Executive Summary report",
                 "Remediation recommendations",
@@ -1068,7 +1067,7 @@ export default function PenetrationTestingServicePage() {
               {
                 href: "/pentest-berlin/kosten",
                 title: "Pentest Costs",
-                desc: "Vulnerability scan from €1,499, manual pentests individually scoped – all pricing factors explained.",
+                desc: "Baseline from €2,500, SME from €8,000 – all pricing factors transparently explained.",
                 badge: "Pricing",
                 badgeColor: "bg-green-600",
               },
