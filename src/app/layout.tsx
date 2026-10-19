@@ -26,9 +26,7 @@ const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  // Kein globales canonical: '/' hier — es würde sich auf alle Seiten ohne
-  // eigenes alternates vererben und sie auf die Homepage kanonisieren.
-  // Das Homepage-Canonical liegt in src/app/page.tsx.
+  alternates: { canonical: '/' },
   title: {
     default: "Sodu Secure – zertifizierte Penetrationstests aus Berlin",
     template: "%s | Sodu Secure"

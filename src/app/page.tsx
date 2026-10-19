@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: 'Sodu Secure - Pentest & AuditAI',
   description:
     'Manueller Penetrationstest von OSCP-Experten und wöchentliches AI-Code-Review. Wechseln Sie zwischen Sodu /Pentest und Sodu /AuditAI.',
-  alternates: { canonical: '/' },
 };
 
 export default function Home() {
