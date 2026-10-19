@@ -194,6 +194,10 @@ export default async function RootLayout({
       },
     ],
     priceRange: '€€',
+    // Teamgroesse laut Inhaber. Steht sichtbar im Kennzahlen-Block auf
+    // /about - die Regel fuer dieses Objekt ist, dass jeder Wert hier
+    // auch im HTML belegt ist.
+    numberOfEmployees: { '@type': 'QuantitativeValue', value: 12 },
     knowsAbout: [
       'Penetrationstest',
       'Webanwendungs-Pentest',
