@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { FileText, Image, List, RotateCcw, Shield, Target, CheckCircle, Settings, Users, BarChart3 } from 'lucide-react';
 import ComprehensiveTesting from '../../../components/service/ComprehensiveTesting';
-import ServiceFaq from '../../../components/service/ServiceFaq';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -138,7 +137,6 @@ export default function SecurityAuditLanding() {
       </div>
 
       {/* Comprehensive Testing Component */}
-      <ServiceFaq namespace="securityAudit" />
       <ComprehensiveTesting />
     </div>
   );

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   // jetzt mit der H1 – nur so uebernimmt Google ihn auch.
   title: { absolute: 'Sodu Secure | Penetrationstests aus Berlin' },
   description:
-    'OSCP-zertifizierte Pentester aus Berlin, über 500 Pentests, kostenloser Retest. Preisspanne in 3 Minuten berechnen oder AuditAI ab 99 € pro Monat.',
+    'OSCP-zertifizierte Pentester aus Berlin, über 500 Pentests, kostenloser Retest. Preisspanne in 3 Minuten berechnen oder AuditAI ab 99 € je Repository.',
   alternates: { canonical: '/' },
 };
 

@@ -5,7 +5,6 @@ import { AlertCircle, Code, FileCode, FileText, Image, List, Lock, RotateCcw, Sh
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import ComprehensiveTesting from '../../../components/service/ComprehensiveTesting';
-import ServiceFaq from '../../../components/service/ServiceFaq';
 
 export default function APISecurityTestingLanding() {
   const router = useRouter();
@@ -133,7 +132,6 @@ export default function APISecurityTestingLanding() {
       </div>
 
       {/* Comprehensive Testing Component */}
-      <ServiceFaq namespace="apiSecurityTesting" />
       <ComprehensiveTesting />
     </div>
   );

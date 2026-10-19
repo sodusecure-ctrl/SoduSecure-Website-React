@@ -66,8 +66,8 @@ const CERTIFICATIONS = [
   },
   {
     name: "eJPT",
-    org: "INE Security (eLearnSecurity)",
-    desc: "eLearnSecurity Junior Penetration Tester – Einstiegszertifikat. Als alleiniger Qualifikationsnachweis eines Testers zu wenig.",
+    org: "Offensive Security",
+    desc: "eLearnSecurity Junior Penetration Tester – Entry-Level. Besser kein Zertifikat als nur eJPT.",
     level: "Junior",
     color: "gray",
   },
@@ -102,7 +102,7 @@ const RED_FLAGS = [
   {
     icon: AlertTriangle,
     title: "Unzureichende NDA",
-    desc: "Findings aus einem Pentest sind hochsensibel. Eine belastbare Geheimhaltungsvereinbarung ist Standard, nicht Verhandlungssache.",
+    desc: "Eure Sicherheit ist sensitiv. Gutes NDA ist Standard, nicht Ausnahme.",
   },
 ];
 
@@ -135,7 +135,7 @@ const WHAT_TO_LOOK_FOR = [
   {
     icon: Shield,
     title: "Erfahrung in Ihrer Branche",
-    desc: "Ein Tester mit Projekten im Finanz-, Gesundheits- oder Automotive-Umfeld kennt die dort geltenden Regulierungen (DORA, MDR, TISAX) bereits.",
+    desc: "Ein Pentester mit Finance/Healthcare/Healthcare Erfahrung versteht Ihre Regulierungen besser.",
   },
 ];
 
@@ -158,12 +158,12 @@ const OUR_STRENGTHS = [
   {
     icon: Zap,
     title: "ISO 27001 & Compliance",
-    desc: "Findings werden auf Annex A 8.8 (ISO 27001:2022), § 30 BSIG (NIS2), BSI-Grundschutz und Art. 32 DSGVO gemappt – auditfähig dokumentiert.",
+    desc: "Wir verstehen A.12.6, NIS2, BSI-Grundschutz, DSGVO – und mappen Findings automatisch.",
   },
   {
     icon: Users,
     title: "Partnerschaftlicher Ansatz",
-    desc: "Fester Ansprechpartner, direkter Draht zum Tester, Zwischenstände statt Blackbox bis zur Berichtsabgabe.",
+    desc: "Wir arbeiten mit euch zusammen – nicht gegen euch. Klare Kommunikation, regelmäßige Updates.",
   },
   {
     icon: Shield,
@@ -174,36 +174,36 @@ const OUR_STRENGTHS = [
 
 const PENTEST_TYPES_COMPARISON = [
   {
-    type: "Automatisierter Schwachstellenscan",
-    automation: "überwiegend automatisiert",
-    manual: "Sichtung der Treffer",
-    cost: "500 – 1.500 €",
-    timeframe: "1 – 2 Tage",
+    type: "Automated Vulnerability Scan",
+    automation: "90%",
+    manual: "10%",
+    cost: "€500–€1.500",
+    timeframe: "1–2 Tage",
     best_for: "Schneller Security-Check, Compliance-Start",
   },
   {
-    type: "Interner Penetrationstest",
-    automation: "unterstützend",
-    manual: "überwiegend manuell",
-    cost: "2.000 – 6.000 €",
-    timeframe: "3 – 10 Tage",
+    type: "Internal Penetration Test",
+    automation: "30%",
+    manual: "70%",
+    cost: "€2.000–€6.000",
+    timeframe: "3–10 Tage",
     best_for: "Interne Systeme, Netzwerk-Security",
   },
   {
-    type: "Externer Penetrationstest",
-    automation: "unterstützend",
-    manual: "überwiegend manuell",
-    cost: "3.000 – 12.000 €",
-    timeframe: "5 – 14 Tage",
-    best_for: "Web-Apps, APIs, aus dem Internet erreichbare Systeme",
+    type: "External Penetration Test",
+    automation: "20%",
+    manual: "80%",
+    cost: "€3.000–€12.000",
+    timeframe: "5–14 Tage",
+    best_for: "Web-Apps, APIs, Public-Facing Systems",
   },
   {
     type: "Red Team Assessment",
-    automation: "gering",
-    manual: "nahezu vollständig manuell",
-    cost: "8.000 – 25.000 €+",
-    timeframe: "2 – 4 Wochen",
-    best_for: "Konzerne, realistische Angriffssimulation",
+    automation: "10%",
+    manual: "90%",
+    cost: "€8.000–€25.000+",
+    timeframe: "2–4 Wochen",
+    best_for: "Enterprise, realistische Angriffssimulation",
   },
 ];
 
@@ -318,13 +318,13 @@ export default function PenetrationstestAnbieterPage() {
             <span>Penetrationstest Anbieter · Seriöse Pentester · OSCP Certified</span>
           </div>
           <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
-            <span className="premium-silver">Pentest Anbieter vergleichen:</span>
+            <span className="premium-silver">Der richtige Penetrationstest Anbieter –</span>
             <br />
-            <span className="premium-headline-accent">8 Kriterien für Ihre Shortlist</span>
+            <span className="premium-headline-accent">Wie man Qualität erkennt</span>
           </h1>
           <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
             <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
-            <span>Woran unterscheiden Sie seriöse Pentester von Anbietern, die einen automatisierten Scan als Penetrationstest verkaufen? Dieser Leitfaden zeigt die acht Prüfkriterien, die Warnsignale und die Anbieter-Typen am deutschen Markt – inklusive der offenen Einordnung, wo Sodu Secure dabei steht.</span>
+            <span>Wie unterscheidest du zwischen seriösen Pentestern und unzureichenden Anbietern? Dieser Guide zeigt dir, worauf du achten musst – und was Sodu Secure macht, um deine Sicherheit zu garantieren.</span>
           </p>
           <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <Link href="/request-pentest" className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white">
@@ -349,40 +349,11 @@ export default function PenetrationstestAnbieterPage() {
         </div>
       </section>
 
-      {/* Sprungnavigation. Zwei Zwecke: Leser finden den Abschnitt, der sie
-          betrifft, ohne zu scrollen - und Google bekommt benannte Sprungziele,
-          aus denen es Sitelinks bilden KANN. Erzwingen laesst sich das nicht,
-          die Entscheidung liegt bei Google. */}
-      <section className="py-6 border-b border-white/10" aria-label="Inhalt dieser Seite">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex flex-wrap gap-x-2 gap-y-2">
-            {[
-              { id: 'auswahlkriterien', label: '8 Auswahlkriterien' },
-              { id: 'zertifizierungen', label: 'Zertifizierungen' },
-              { id: 'warnsignale', label: 'Warnsignale' },
-              { id: 'bsi-zertifizierung', label: 'BSI-Zertifizierung' },
-              { id: 'marktuebersicht', label: 'Marktübersicht' },
-              { id: 'pentest-typen', label: 'Pentest-Typen' },
-              { id: 'vor-der-beauftragung', label: 'Vor der Beauftragung' },
-              { id: 'faq', label: 'Häufige Fragen' },
-            ].map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-white/70 transition-colors hover:border-white/25 hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </section>
-
       {/* GEO/AEO Direktantwort */}
       <section className="py-10 lg:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-[#FF3B30]/20 bg-[#FF3B30]/5 p-6 sm:p-8">
-            <h2 id="qualitaet-erkennen" className="scroll-mt-24 text-xl sm:text-2xl font-bold mb-3">Woran erkennt man einen guten Penetrationstest-Anbieter?</h2>
+            <h2 className="text-xl sm:text-2xl font-bold mb-3">Woran erkennt man einen guten Penetrationstest-Anbieter?</h2>
             <p className="text-white/70 leading-relaxed">
               Einen guten Penetrationstest-Anbieter erkennen Sie an zertifizierten Testern (z. B. OSCP, OSWE, CREST),
               dokumentierter Methodik nach OWASP, PTES oder BSI-Praxis-Leitfaden, einem aussagekräftigen Musterbericht mit
@@ -405,13 +376,8 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="zertifizierungen" className="scroll-mt-24 text-3xl lg:text-4xl font-bold mb-4">Welche Zertifizierungen zeigen echte Pentest-Kompetenz?</h2>
-            <p className="text-white/70 max-w-3xl mx-auto">
-              Aussagekräftig sind Zertifikate mit praktischer Prüfung: OSCP, OSWE, GPEN und CREST verlangen, dass
-              Kandidaten unter Zeitdruck reale Systeme kompromittieren. Reine Wissensprüfungen wie die CEH-Basisprüfung
-              belegen Fachwissen, aber kein praktisches Können. Entscheidend ist außerdem, dass die Zertifikate auf die
-              konkret eingesetzten Tester lauten – nicht auf das Unternehmen.
-            </p>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Wichtige Pentester-Zertifizierungen</h2>
+            <p className="text-white/60 max-w-2xl mx-auto">Welche Zertifizierungen zeigen echte Kompetenz?</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             {CERTIFICATIONS.map((cert) => {
@@ -454,28 +420,24 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="auswahlkriterien" className="scroll-mt-24 text-3xl font-bold mb-4">Die 8 Auswahlkriterien im direkten Vergleich</h2>
+            <h2 className="text-3xl font-bold mb-4">Auswahlkriterien im Vergleich: 8 Punkte für Ihre Shortlist</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
               Mit diesen Kriterien vergleichen Sie Penetrationstest-Anbieter strukturiert – aufgebaut auf den Empfehlungen des BSI-Praxis-Leitfadens für IS-Penetrationstests.
             </p>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
-              <caption className="sr-only">
-                Acht Auswahlkriterien für Penetrationstest-Anbieter: je Kriterium, woran Sie es im Angebot erkennen und
-                warum es für die Qualität des Tests zählt
-              </caption>
               <thead>
                 <tr className="border-b border-white/10">
-                  <th scope="col" className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Kriterium</th>
-                  <th scope="col" className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Woran Sie es erkennen</th>
-                  <th scope="col" className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Warum es zählt</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Kriterium</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Woran Sie es erkennen</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Warum es zählt</th>
                 </tr>
               </thead>
               <tbody>
                 {SELECTION_CRITERIA.map((row) => (
                   <tr key={row.criterion} className="border-b border-white/10 bg-[#0A0A0B] hover:bg-white/5 align-top">
-                    <th scope="row" className="px-4 py-3 text-left font-semibold whitespace-nowrap">{row.criterion}</th>
+                    <td className="px-4 py-3 font-semibold whitespace-nowrap">{row.criterion}</td>
                     <td className="px-4 py-3 text-white/70">{row.check}</td>
                     <td className="px-4 py-3 text-white/60">{row.why}</td>
                   </tr>
@@ -498,13 +460,8 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="vor-der-beauftragung" className="scroll-mt-24 text-3xl font-bold mb-4">Was sollten Sie vor der Beauftragung prüfen?</h2>
-            <p className="text-white/70 max-w-3xl mx-auto">
-              Vor der Beauftragung eines Penetrationstest-Anbieters gehören sechs Dinge auf den Tisch: die Zertifikate
-              der eingesetzten Tester, ein geschwärzter Musterbericht, Referenzen aus vergleichbaren Projekten, die
-              dokumentierte Methodik, eine nachvollziehbare Erklärung des manuellen Testanteils und Erfahrung in Ihrer
-              Branche.
-            </p>
+            <h2 className="text-3xl font-bold mb-4">6 Punkte: Das solltest du prüfen</h2>
+            <p className="text-white/60">Wie man einen seriösen Pentester von einem unseriösen unterscheidet.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {WHAT_TO_LOOK_FOR.map((item, i) => {
@@ -529,13 +486,8 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="warnsignale" className="scroll-mt-24 text-3xl font-bold mb-4">Welche Warnsignale sprechen gegen einen Anbieter?</h2>
-            <p className="text-white/70 max-w-3xl mx-auto">
-              Sechs Warnsignale deuten auf einen unseriösen Penetrationstest hin: ein Pauschalpreis ohne Scoping,
-              ausschließlich automatisierte Tools, keine schriftliche Scope-Freigabe, kein angebotener Retest, ein
-              Bericht ohne Proof-of-Concept und eine dünne Geheimhaltungsvereinbarung. Trifft eines davon zu, lohnt
-              sich die Rückfrage vor der Unterschrift.
-            </p>
+            <h2 className="text-3xl font-bold mb-4">6 Rote Flaggen</h2>
+            <p className="text-white/60">Warnsignale für unseriöse Pentester.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {RED_FLAGS.map((flag, i) => {
@@ -558,29 +510,11 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="bsi-zertifizierung" className="scroll-mt-24 text-3xl font-bold mb-4">BSI-zertifizierte Penetrationstest-Anbieter: Was steckt dahinter?</h2>
+            <h2 className="text-3xl font-bold mb-4">BSI-zertifizierte Penetrationstest-Anbieter: Was steckt dahinter?</h2>
             <p className="text-white/60 max-w-3xl mx-auto">
               Das Bundesamt für Sicherheit in der Informationstechnik (BSI) zertifiziert sowohl Unternehmen als auch einzelne Penetrationstester. Drei Bausteine sollten Sie kennen, bevor Sie einen Anbieter auswählen.
             </p>
           </div>
-          <blockquote className="mb-10 rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8 max-w-3xl mx-auto">
-            <p className="text-white/85 leading-relaxed">
-              „Die Grundlage jeder Dienstleistung sind qualifizierte und kompetente Mitarbeiter.“
-            </p>
-            <footer className="mt-3 text-sm text-white/50">
-              BSI zur Zertifizierung von Penetrationstestern – die Behörde verlangt von IT-Sicherheitsdienstleistern,
-              dass sie sich „durch Zuverlässigkeit und Unabhängigkeit sowie Fachkompetenz und Qualität der Dienstleistung
-              auszeichnen“.{" "}
-              <a
-                href="https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/Zertifizierung-und-Anerkennung/Zertifizierung-von-Personen/Penetrationstester/penetrationstester.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#FF6B61] hover:text-[#FF8077]"
-              >
-                Quelle: BSI, Zertifizierung von Penetrationstestern
-              </a>
-            </footer>
-          </blockquote>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {BSI_PILLARS.map((pillar) => {
               const Icon = pillar.icon;
@@ -621,12 +555,8 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Wofür steht Sodu Secure als Anbieter?</h2>
-            <p className="text-white/70 max-w-3xl mx-auto">
-              Sodu Secure ist eine spezialisierte Pentest-Boutique aus Berlin mit OSCP-, OSWE- und CEH-zertifizierten
-              Testern und über 500 durchgeführten Penetrationstests. Getestet wird manuell, berichtet wird in Deutsch
-              und Englisch, abgerechnet wird zum Festpreis – der Retest nach der Behebung ist enthalten.
-            </p>
+            <h2 className="text-3xl font-bold mb-4">Das macht Sodu Secure unterschiedlich</h2>
+            <p className="text-white/60">Warum wir der Partner für seriöse Sicherheit sind.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {OUR_STRENGTHS.map((strength) => {
@@ -651,49 +581,33 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="pentest-typen" className="scroll-mt-24 text-3xl font-bold mb-4">Welcher Pentest-Typ passt zu welchem Ziel?</h2>
-            <p className="text-white/70 max-w-3xl mx-auto">
-              Ein automatisierter Schwachstellenscan eignet sich für den schnellen Überblick, ein interner
-              Penetrationstest für Netzwerke und Domänen, ein externer für alles, was aus dem Internet erreichbar ist,
-              und ein Red Team Assessment für die Frage, ob ein Angriff überhaupt bemerkt wird. Manueller Anteil und
-              Aufwand steigen in dieser Reihenfolge.
-            </p>
+            <h2 className="text-3xl font-bold mb-4">Pentest-Typen im Vergleich</h2>
+            <p className="text-white/60">Welche Pentest ist für wen geeignet?</p>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
-              <caption className="sr-only">
-                Vier Pentest-Typen im Vergleich nach Automatisierungsgrad, manuellem Anteil, marktüblicher Kostenspanne,
-                Dauer und typischem Einsatzzweck
-              </caption>
               <thead>
                 <tr className="border-b border-white/10">
-                  <th scope="col" className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Pentest-Typ</th>
-                  <th scope="col" className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Tool-Einsatz</th>
-                  <th scope="col" className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Manueller Anteil</th>
-                  <th scope="col" className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Kosten (marktüblich)</th>
-                  <th scope="col" className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Dauer</th>
-                  <th scope="col" className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Geeignet für</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Pentest-Typ</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Automation</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Manuell</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Kosten (marktüblich)</th>
+                  <th className="px-4 py-3 text-left font-semibold text-[#FF6B61]">Dauer</th>
                 </tr>
               </thead>
               <tbody>
                 {PENTEST_TYPES_COMPARISON.map((type, i) => (
-                  <tr key={i} className="border-b border-white/10 bg-[#0A0A0B] hover:bg-white/5 align-top">
-                    <th scope="row" className="px-4 py-3 text-left font-semibold">{type.type}</th>
-                    <td className="px-4 py-3 text-white/70">{type.automation}</td>
-                    <td className="px-4 py-3 text-white/70">{type.manual}</td>
+                  <tr key={i} className="border-b border-white/10 bg-[#0A0A0B] hover:bg-white/5">
+                    <td className="px-4 py-3 font-semibold">{type.type}</td>
+                    <td className="px-4 py-3">{type.automation}</td>
+                    <td className="px-4 py-3">{type.manual}</td>
                     <td className="px-4 py-3 text-[#FF6B61]">{type.cost}</td>
-                    <td className="px-4 py-3 text-white/70">{type.timeframe}</td>
-                    <td className="px-4 py-3 text-white/60">{type.best_for}</td>
+                    <td className="px-4 py-3">{type.timeframe}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="mt-6 text-xs text-white/40 text-center">
-            Kostenspannen sind marktübliche Orientierungswerte über mehrere Anbieter hinweg, keine Preisliste von Sodu
-            Secure. Belegte Marktpreise je Testart mit Quellenangabe finden Sie unter{" "}
-            <Link href="/pentest-kosten" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Kosten</Link>.
-          </p>
         </div>
       </section>
 
@@ -701,7 +615,7 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-16 lg:py-20 bg-[#0A0A0B]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="marktuebersicht" className="scroll-mt-24 text-3xl font-bold mb-4">Der Markt im Überblick: Vier Typen von Pentest-Anbietern</h2>
+            <h2 className="text-3xl font-bold mb-4">Der Markt im Überblick: Vier Typen von Pentest-Anbietern</h2>
             <p className="text-white/60 max-w-2xl mx-auto">Vom Big4-Beratungshaus bis zur Scan-Plattform – welcher Anbieter-Typ passt zu welchem Unternehmen?</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -738,12 +652,9 @@ export default function PenetrationstestAnbieterPage() {
       <section className="py-10 bg-[#FF3B30]/10 border-y border-[#FF3B30]/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <AlertTriangle className="w-7 h-7 text-[#FF6B61] mx-auto mb-3" />
-          <h3 className="text-lg font-bold mb-2">Warum 500 € kein Penetrationstest sein können</h3>
+          <h3 className="text-lg font-bold mb-2">Billig = Schlecht? Nicht immer, aber fast immer!</h3>
           <p className="text-white/60 text-sm max-w-2xl mx-auto">
-            Marktübliche Tagessätze für qualifizierte Pentester liegen bei 1.000 bis 1.800 €. Ein Angebot über 500 € für
-            einen kompletten „Pentest“ deckt damit nicht einmal einen halben Testtag ab – dahinter steckt in aller Regel
-            ein automatisierter Scan. Ein manueller Penetrationstest wird individuell kalkuliert und kostet meist 4.000
-            bis 20.000 €.
+            €500 für einen &apos;Pentest&apos;? Das ist ein Scan. Ein echter manueller Pentest mit zertifizierten Experten wird individuell kalkuliert und kostet meist 4.000 bis 20.000 €. Qualität hat ihren Preis – und der lohnt sich.
           </p>
         </div>
       </section>
@@ -757,12 +668,9 @@ export default function PenetrationstestAnbieterPage() {
               Ob Sie nach einem <strong>Pentest Dienstleister</strong>, einem <strong>Penetrationstest Dienstleister</strong>,
               einer Pentest-Firma, einem Pentest-Unternehmen oder englisch nach einem Penetration Test Anbieter suchen: Gemeint
               ist immer dasselbe – ein externer IT-Sicherheitsdienstleister, der autorisierte Angriffe auf Ihre Systeme durchführt
-              und die Ergebnisse so dokumentiert, dass Ihr Team sie beheben kann.
-            </p>
-            <p>
-              Wichtig zu wissen: Weder „Pentest“ noch „Penetrationstest“ ist ein geschützter Begriff. Jede Firma darf sich
-              so nennen, und die Qualitätsspanne reicht vom umformatierten Schwachstellenscan bis zum mehrwöchigen
-              Red-Team-Einsatz. Genau deshalb ersetzt die Prüfung der Tester-Qualifikation die fehlende Berufszulassung.
+              und die Ergebnisse so dokumentiert, dass Ihr Team sie beheben kann. Wichtig zu wissen: Weder Pentest noch
+              Penetrationstest ist ein geschützter Begriff. Jede Firma darf sich so nennen – die Qualitätsspanne reicht vom
+              umformatierten Schwachstellenscan bis zum mehrwöchigen Red-Team-Einsatz.
             </p>
             <p>
               Bei der Dienstleister-Auswahl zählt deshalb nicht das Etikett, sondern die Substanz: nachweisbare
@@ -791,7 +699,6 @@ export default function PenetrationstestAnbieterPage() {
               <Link href="/case-studies/blogs/pentest-anbieter-auswaehlen" className="text-[#FF6B61] hover:text-[#FF8077]">Checkliste: Pentest Anbieter auswählen</Link>
               <Link href="/pentest-kosten" className="text-[#FF6B61] hover:text-[#FF8077]">Pentest Kosten</Link>
               <Link href="/penetrationstest" className="text-[#FF6B61] hover:text-[#FF8077]">Was ist ein Penetrationstest?</Link>
-              <Link href="/case-studies/blogs/it-sicherheitstest-planen" className="text-[#FF6B61] hover:text-[#FF8077]">IT-Sicherheitstest planen</Link>
             </div>
           </div>
         </div>
@@ -800,7 +707,7 @@ export default function PenetrationstestAnbieterPage() {
       {/* FAQ */}
       <section className="py-16 lg:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 id="faq" className="scroll-mt-24 text-3xl font-bold text-center mb-10">Häufige Fragen zu Penetrationstest Anbietern</h2>
+          <h2 className="text-3xl font-bold text-center mb-10">Häufige Fragen zu Penetrationstest Anbietern</h2>
           <div className="space-y-3">
             {FAQS.map((faq, i) => (
               <div key={i} className="bg-[#0A0A0B] border border-white/10 rounded-xl overflow-hidden">

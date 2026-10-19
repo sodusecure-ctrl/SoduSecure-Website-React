@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Database, FileText, Image, List, Lock, Network, RotateCcw, Server, Settings, Shield, Wifi } from 'lucide-react';
 import ComprehensiveTesting from '../../../components/service/ComprehensiveTesting';
-import ServiceFaq from '../../../components/service/ServiceFaq';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 
@@ -140,7 +139,6 @@ export default function InfraPentestLanding() {
       </div>
 
       {/* Comprehensive Testing Component */}
-      <ServiceFaq namespace="infrastructureTesting" />
       <ComprehensiveTesting />
     </div>
   );

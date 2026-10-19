@@ -3,7 +3,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Code, Database, FileCode, FileText, Image, Key, List, Lock, RotateCcw, Shield, Smartphone, Wifi } from 'lucide-react';
 import ComprehensiveTesting from '../../../components/service/ComprehensiveTesting';
-import ServiceFaq from '../../../components/service/ServiceFaq';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -133,7 +132,6 @@ export default function MobileAppPentestLanding() {
       </div>
 
       {/* Comprehensive Testing Component */}
-      <ServiceFaq namespace="mobileAppTesting" />
       <ComprehensiveTesting />
     </div>
   );
