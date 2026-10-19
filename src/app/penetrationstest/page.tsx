@@ -25,11 +25,9 @@ import { SectionLabel, SectionLabelDark, StatRow } from '@/components/landing/ui
 const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
-  // "Definition" raus (liefert die AI Overview bereits), "Kosten" raus (gehört
-  // /pentest-kosten). Die Zahl 5 bleibt: Zahlen im Titel zu entfernen kostet CTR.
-  title: 'Penetrationstest | Ablauf in 5 Phasen erklärt',
+  title: 'Penetrationstest | Definition, Ablauf, Arten & Kosten',
   description:
-    'Definition nach BSI, Ablauf in 5 Phasen, Testarten und Standards - erklärt von OSCP-zertifizierten Testern aus Berlin. Preis in 3 Minuten berechnen.',
+    'Was ist ein Penetrationstest? Definition nach BSI, Ablauf in 5 Phasen, Arten, Standards, Kosten und gesetzliche Anforderungen - erklärt vom Pentest-Anbieter aus Berlin.',
   keywords: [
     'penetrationstest',
     'penetrationstest definition',
@@ -45,9 +43,9 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/penetrationstest`,
   },
   openGraph: {
-    title: 'Penetrationstest | Ablauf in 5 Phasen erklärt',
+    title: 'Penetrationstest | Definition, Ablauf, Arten & Kosten | Sodu Secure',
     description:
-      'Definition nach BSI, Ablauf in 5 Phasen, Testarten und Standards - erklärt von OSCP-zertifizierten Testern aus Berlin. Preis in 3 Minuten berechnen.',
+      'Was ist ein Penetrationstest? Definition nach BSI, Ablauf in 5 Phasen, Arten, Standards, Kosten und gesetzliche Anforderungen - erklärt vom Pentest-Anbieter aus Berlin.',
     url: `${baseUrl}/penetrationstest`,
     type: 'website',
     siteName: 'Sodu Secure',
@@ -197,9 +195,9 @@ type Copy = {
 const de: Copy = {
   heroLabel: 'Penetrationstest · Wissen kompakt',
   heroLine1: 'Penetrationstest:',
-  heroLine2: 'Definition, Ablauf in 5 Phasen, Arten, Kosten.',
+  heroLine2: 'Definition, Ablauf, Arten, Kosten.',
   heroSub:
-    'Der vollständige Überblick für Unternehmen: Was ein Penetrationstest ist, wie der Ablauf in 5 Phasen nach BSI-Methodik aussieht, welche Arten und Standards es gibt, was er kostet und wann Regulierungen wie NIS2, DORA oder ISO 27001 ihn faktisch verlangen.',
+    'Der vollständige Überblick für Unternehmen: Was ein Penetrationstest ist, wie er nach BSI-Methodik abläuft, welche Arten und Standards es gibt, was er kostet und wann Regulierungen wie NIS2, DORA oder ISO 27001 ihn faktisch verlangen.',
   answerLabel: 'Kurz erklärt',
   answerBox:
     'Ein Penetrationstest (Pentest) ist eine autorisierte, methodische Sicherheitsprüfung, bei der Fachleute mit den Techniken echter Angreifer kontrolliert versuchen, in IT-Systeme, Netzwerke oder Anwendungen einzudringen. Ziel ist es, Schwachstellen nachzuweisen, das reale Angriffspotenzial einzuschätzen und die Wirksamkeit vorhandener Sicherheitsmaßnahmen zu überprüfen - bevor es ein Angreifer tut.',
@@ -748,7 +746,6 @@ const de: Copy = {
   weiterHeadline: 'Vertiefende Inhalte zum Penetrationstest.',
   weiterLinks: [
     { title: 'Pentest Kosten', desc: 'Preisspannen, Kostenfaktoren und Beispielrechnungen im Detail.', href: '/pentest-kosten' },
-    { title: 'Pentest Preisindex', desc: 'Unsere Preisstufen und belegte Marktspannen deutscher Anbieter im Vergleich.', href: '/pentest-preisindex' },
     { title: 'Penetrationstest Anbieter', desc: 'Zertifizierungen, Red Flags und die richtige Auswahl.', href: '/penetrationstest-anbieter' },
     { title: 'Pentest-Leistungen', desc: 'Die kompakte Service-Übersicht: Web, API, Netzwerk, AD, Cloud.', href: '/penetration-testing' },
     { title: 'TLPT nach DORA', desc: 'Bedrohungsgeleitete Penetrationstests für Finanzunternehmen.', href: '/tlpt' },
@@ -769,9 +766,9 @@ const de: Copy = {
 const en: Copy = {
   heroLabel: 'Penetration testing · Knowledge base',
   heroLine1: 'Penetration testing:',
-  heroLine2: 'definition, 5 phases, types, costs.',
+  heroLine2: 'definition, process, types, costs.',
   heroSub:
-    'The complete overview for businesses: what a penetration test is, how the process runs in 5 phases along the German BSI methodology, which types and standards exist, what it costs and when regulations such as NIS2, DORA or ISO 27001 effectively require it.',
+    'The complete overview for businesses: what a penetration test is, how it runs along the German BSI methodology, which types and standards exist, what it costs and when regulations such as NIS2, DORA or ISO 27001 effectively require it.',
   answerLabel: 'In short',
   answerBox:
     'A penetration test (pentest) is an authorized, methodical security assessment in which professionals use the techniques of real attackers to attempt controlled intrusions into IT systems, networks or applications. The goal is to prove vulnerabilities, assess the realistic attack potential and verify whether existing security controls actually work - before an attacker does.',
@@ -1313,7 +1310,6 @@ const en: Copy = {
   weiterHeadline: 'Deep dives on penetration testing.',
   weiterLinks: [
     { title: 'Pentest costs', desc: 'Price ranges, cost drivers and sample calculations in detail.', href: '/pentest-kosten' },
-    { title: 'Pentest price index', desc: 'Our price tiers next to sourced market ranges from German providers.', href: '/pentest-preisindex' },
     { title: 'Pentest providers', desc: 'Certifications, red flags and making the right choice.', href: '/penetrationstest-anbieter' },
     { title: 'Pentest services', desc: 'The compact service overview: web, API, network, AD, cloud.', href: '/penetration-testing' },
     { title: 'TLPT under DORA', desc: 'Threat-led penetration testing for financial entities.', href: '/tlpt' },

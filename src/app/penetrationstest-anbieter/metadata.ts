@@ -3,28 +3,16 @@ import type { Metadata } from "next";
 const baseUrl = "https://sodusecure.com";
 
 export const metadata: Metadata = {
-  // Die SERP zu "pentest anbieter" besteht fast nur aus Vergleichslisten
-  // (Marktuebersicht, Top 5, "vollstaendige Liste"), die PAA-Fragen drehen sich
-  // um Serioesitaet und Marktfuehrerschaft. Gesucht wird Orientierung. Der alte
-  // Titel bot ein Feature an (kostenloser Retest) und bediente die Absicht
-  // nicht. Die Seite selbst ist laengst ein Auswahlratgeber - der Titel sagt
-  // das jetzt auch. absolute: ohne Brand-Suffix, das Google hier ohnehin kuerzt.
-  title: { absolute: 'Pentest Anbieter vergleichen | 8 Auswahlkriterien' },
-  // Die Description muss zum Titel passen: Er laedt zum Vergleich ein, sie
-  // verkaufte bisher Sodu selbst. Google nennt genau diese Diskrepanz
-  // ("title doesn't reflect page content") als Grund, Titel zu ersetzen.
-  // Konkrete Kriterien statt Eigenwerbung - naeher an dem, was auf dieser SERP
-  // funktioniert (binsec "Marktuebersicht", blazeinfosec listet Namen auf).
+  title: "Penetrationstest Anbieter mit Zertifizierung",
   description:
-    "Zertifizierungen, Methodik, Berichtsqualität, Haftung: 8 Kriterien zum Vergleich von Penetrationstest-Anbietern - plus Warnsignale, die dagegen sprechen.",
+    "Ihr Penetrationstest Anbieter aus Deutschland: OSCP-zertifiziert, DSGVO-konform, 500+ erfolgreiche Pentests. Kostenlose Erstberatung innerhalb von 24h.",
   keywords: [
-    "pentest anbieter",
     "penetrationstest anbieter",
-    "pentest dienstleister",
-    "penetrationstest dienstleister",
-    "pentest anbieter vergleich",
+    "penetrationstest anbieter vergleichen",
+    "seriöser penetrationstest anbieter",
+    "zertifizierter penetrationstest anbieter",
     "bsi zertifizierte penetrationstest anbieter",
-    "penetration test anbieter",
+    "penetration testing anbieter",
     "pentester deutschland",
     "oscp pentester",
   ],
@@ -32,9 +20,9 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/penetrationstest-anbieter`,
   },
   openGraph: {
-    title: "Pentest Anbieter vergleichen | 8 Auswahlkriterien",
+    title: "Penetrationstest Anbieter mit Zertifizierung | Sodu Secure",
     description:
-      "Zertifizierungen, Methodik, Berichtsqualität, Haftung: 8 Kriterien zum Vergleich von Penetrationstest-Anbietern - plus Warnsignale, die dagegen sprechen.",
+      "Ihr Penetrationstest Anbieter aus Deutschland: OSCP-zertifiziert, DSGVO-konform, 500+ erfolgreiche Pentests. Kostenlose Erstberatung innerhalb von 24h.",
     url: `${baseUrl}/penetrationstest-anbieter`,
     type: "website",
   },

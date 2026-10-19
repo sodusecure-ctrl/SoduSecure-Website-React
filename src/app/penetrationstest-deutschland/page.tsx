@@ -2,11 +2,9 @@ import type { Metadata } from "next";
 import RegulationPage, { type RegulationContent } from "@/components/common/RegulationPage";
 
 export const metadata: Metadata = {
-  // Gegen die Anbieter-Listicles dieser SERP gewinnt eine Bilanzzahl,
-  // keine weitere Eigenschaftsbehauptung.
-  title: "Penetrationstest Deutschland | 500+ Pentests",
+  title: "Penetrationstest Deutschland | zertifizierte Pentester",
   description:
-    "Pentester aus Berlin für Kunden in ganz Deutschland, remote oder vor Ort, über 500 durchgeführte Pentests. Berichte auf Deutsch und Englisch.",
+    "Penetrationstest deutschlandweit: OSCP-zertifizierte Pentester, DSGVO-konform, Berichte auf Deutsch. Schwachstellenscan ab 1.499 € - manueller Pentest individuell kalkuliert.",
   alternates: { canonical: "/penetrationstest-deutschland" },
 };
 
@@ -36,11 +34,11 @@ const data: RegulationContent = {
     }
   ],
   badgeIcon: "shield",
-  badgeText: "Penetrationstest · 500+ Pentests · Deutschlandweit",
+  badgeText: "Penetrationstest · Deutschlandweit",
   title: "Penetrationstest Deutschland",
   titleAccent: "zertifizierte Pentester, bundesweit",
   heroIntro:
-    "Aus über 500 durchgeführten Pentests wissen wir, wo Unternehmen wirklich angreifbar sind. Wir testen deutschlandweit, remote und vor Ort: OSCP-zertifizierte Pentester, DSGVO-konforme Durchführung und prüffähige Berichte auf Deutsch, mit transparenten Festpreisen.",
+    "Wir führen professionelle Penetrationstests für Unternehmen in ganz Deutschland durch – remote und vor Ort. OSCP-zertifizierte Pentester, DSGVO-konforme Durchführung und prüffähige Berichte auf Deutsch, mit transparenten Festpreisen.",
   heroPrimaryCta: "Kostenlose Erstberatung",
   whatIs: {
     title: "Was ist ein Penetrationstest?",
