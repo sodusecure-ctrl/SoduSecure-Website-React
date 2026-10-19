@@ -5957,7 +5957,7 @@
         },
         "impactAnalysis": {
           "title": "What an IT security test costs in Germany",
-          "content": "Cost depends on scope and method, not on your industry. According to the publicly available price lists of German providers, a web application penetration test costs between 3,000 and 25,000 euros net, an API test between 2,000 and 12,000 euros, an external infrastructure test between 3,000 and 15,000 euros and an internal network test between 5,000 and 30,000 euros. A red team assessment starts at around 25,000 euros. An automated vulnerability scan is far cheaper at 300 to 3,000 euros, but it also delivers far less. These ranges come from the published figures of AWARE7, Reepa Solutions, microCAT, Code & Lein and ChannelPartner; the [Sodu Secure pentest price index](/pentest-preisindex) lists each one with its source. The biggest cost drivers are the number of applications, IP addresses and user roles, the chosen depth of testing, and compliance requirements from NIS2, ISO 27001, DORA or TISAX, which demand more detailed reports and evidence.",
+          "content": "Cost depends on scope and method, not on your industry. According to the publicly available price lists of German providers, a web application penetration test costs between 3,000 and 25,000 euros net, an API test between 2,000 and 12,000 euros, an external infrastructure test between 3,000 and 15,000 euros and an internal network test between 5,000 and 30,000 euros. A red team assessment starts at around 25,000 euros. An automated vulnerability scan is far cheaper at 300 to 3,000 euros, but it also delivers far less. These ranges come from the published figures of AWARE7, Reepa Solutions, microCAT, Code & Lein and ChannelPartner; the [pentest cost page](/pentest-kosten) lists each one with its source. The biggest cost drivers are the number of applications, IP addresses and user roles, the chosen depth of testing, and compliance requirements from NIS2, ISO 27001, DORA or TISAX, which demand more detailed reports and evidence.",
           "statistics": {
             "title": "Market figures behind the pricing",
             "averageCost": {
@@ -6015,9 +6015,9 @@
         "title": "Further reading",
         "articles": [
           {
-            "title": "Pentest price index with sourced market prices",
-            "description": "Day rates, price ranges per type of test and the usual surcharges - every figure with source and date.",
-            "category": "PENTEST PRICES",
+            "title": "What a penetration test really costs",
+            "description": "Day rates, price ranges per type of test and the usual surcharges at a glance.",
+            "category": "PENTEST COST",
             "readTime": "7 min read",
             "readMore": "View page →"
           },

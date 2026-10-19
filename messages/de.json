@@ -5646,7 +5646,7 @@
         },
         "impactAnalysis": {
           "title": "Was ein IT-Sicherheitstest in Deutschland kostet",
-          "content": "Die Kosten hängen an Umfang und Methode, nicht an der Branche. Nach den öffentlich einsehbaren Preisübersichten deutscher Anbieter liegt ein Web-Application-Pentest bei 3.000 bis 25.000 Euro netto, der Test einer Programmierschnittstelle bei 2.000 bis 12.000 Euro, eine externe Infrastrukturprüfung bei 3.000 bis 15.000 Euro und ein interner Netzwerktest bei 5.000 bis 30.000 Euro. Ein Red-Team-Assessment beginnt bei rund 25.000 Euro. Ein automatisierter Schwachstellenscan liegt mit 300 bis 3.000 Euro deutlich darunter, leistet aber auch deutlich weniger. Diese Spannen stammen aus den veröffentlichten Preisangaben von AWARE7, Reepa Solutions, microCAT, Code & Lein und ChannelPartner; im [Pentest-Preisindex von Sodu Secure](/pentest-preisindex) sind sie mit Quelle nachlesbar. Die größten Preistreiber sind die Anzahl der Anwendungen, IP-Adressen und Benutzerrollen, die gewählte Testtiefe sowie Compliance-Anforderungen aus NIS2, ISO 27001, DORA oder TISAX, die detailliertere Berichte und Nachweise erfordern.",
+          "content": "Die Kosten hängen an Umfang und Methode, nicht an der Branche. Nach den öffentlich einsehbaren Preisübersichten deutscher Anbieter liegt ein Web-Application-Pentest bei 3.000 bis 25.000 Euro netto, der Test einer Programmierschnittstelle bei 2.000 bis 12.000 Euro, eine externe Infrastrukturprüfung bei 3.000 bis 15.000 Euro und ein interner Netzwerktest bei 5.000 bis 30.000 Euro. Ein Red-Team-Assessment beginnt bei rund 25.000 Euro. Ein automatisierter Schwachstellenscan liegt mit 300 bis 3.000 Euro deutlich darunter, leistet aber auch deutlich weniger. Diese Spannen stammen aus den veröffentlichten Preisangaben von AWARE7, Reepa Solutions, microCAT, Code & Lein und ChannelPartner; auf der Seite [Pentest Kosten](/pentest-kosten) sind sie mit Quelle nachlesbar. Die größten Preistreiber sind die Anzahl der Anwendungen, IP-Adressen und Benutzerrollen, die gewählte Testtiefe sowie Compliance-Anforderungen aus NIS2, ISO 27001, DORA oder TISAX, die detailliertere Berichte und Nachweise erfordern.",
           "statistics": {
             "title": "Marktzahlen zur Preisbildung",
             "averageCost": {
@@ -5704,9 +5704,9 @@
         "title": "Weiterführende Seiten",
         "articles": [
           {
-            "title": "Pentest Preisindex mit belegten Marktpreisen",
-            "description": "Tagessätze, Preisspannen je Testart und übliche Aufschläge - jede Zahl mit Quelle und Datum.",
-            "category": "PENTEST PREISE",
+            "title": "Was ein Penetrationstest wirklich kostet",
+            "description": "Tagessätze, Preisspannen je Testart und die üblichen Aufschläge im Überblick.",
+            "category": "PENTEST KOSTEN",
             "readTime": "7 Min. Lesezeit",
             "readMore": "Seite ansehen →"
           },

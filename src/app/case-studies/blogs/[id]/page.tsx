@@ -57,10 +57,10 @@ export default function BlogArticleDetail() {
   // Routen der "Verwandte Artikel"-Karten pro Blog (interne Verlinkung)
   const getRelatedArticleRoutes = (id: number): [string, string] => {
     const mapping: Record<number, [string, string]> = {
-      21: ['/pentest-kosten', '/penetrationstest'],
+      21: ['/pentest-kosten', '/penetrationstest-anbieter'],
       22: ['/penetrationstest-anbieter', '/request-pentest'],
-      23: ['/penetrationstest', '/pentest'],
-      24: ['/pentest-preisindex', '/penetrationstest-anbieter'],
+      23: ['/penetration-testing', '/pentest'],
+      24: ['/pentest-kosten', '/penetrationstest-anbieter'],
     };
     return mapping[id] || ['/case-studies/blogs/2', '/case-studies/blogs/2'];
   };
