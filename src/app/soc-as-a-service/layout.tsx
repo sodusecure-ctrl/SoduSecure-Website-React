@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { FAQS } from './faq';
 
 const baseUrl = 'https://sodusecure.com';
 
@@ -53,20 +52,9 @@ export default function SocAsAServiceLayout({ children }: { children: React.Reac
     email: 'info@sodusecure.com',
     priceRange: '€€€',
   };
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQS.map((faq) => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: { '@type': 'Answer', text: faq.a },
-    })),
-  };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {children}
     </>
   );

@@ -19,8 +19,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import LandingFaq from "@/components/common/LandingFaq";
-import { smeFaqs } from "./faqs";
 
 /* ─── Data ──────────────────────────────────── */
 
@@ -721,13 +719,6 @@ export default function SMESecurityPackagesPage() {
           </div>
         </div>
       </div>
-
-      {/* ── FAQ ───────────────────────────────── */}
-      <LandingFaq
-        faqs={smeFaqs}
-        headline="Häufige Fragen zum KMU Pentest-Paket"
-        withSchema={false}
-      />
 
     </div>
   );

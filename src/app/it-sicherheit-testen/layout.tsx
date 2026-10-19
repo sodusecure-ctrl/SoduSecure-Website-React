@@ -1,5 +1,4 @@
 ﻿import type { Metadata } from 'next';
-import { FAQS } from './faq';
 
 export const metadata: Metadata = {
   title: 'IT Sicherheit testen | IT Sicherheitstest für Unternehmen',
@@ -47,11 +46,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'FAQPage',
-            mainEntity: FAQS.map((faq) => ({
-              '@type': 'Question',
-              name: faq.q,
-              acceptedAnswer: { '@type': 'Answer', text: faq.a },
-            })),
+            mainEntity: [
+              { '@type': 'Question', name: 'Wie kann ich meine IT Sicherheit testen lassen?', acceptedAnswer: { '@type': 'Answer', text: 'IT Sicherheit testen lassen geht mit einem professionellen Penetrationstest. Sodu Secure prüft Web-Apps, Netzwerke, Active Directory und Cloud – manuell, OSCP-zertifiziert, Festpreis ab 1.499 €.' } },
+              { '@type': 'Question', name: 'Was kostet ein IT Sicherheitstest?', acceptedAnswer: { '@type': 'Answer', text: 'Ein professioneller IT Sicherheitstest kostet bei Sodu Secure ab 1.499 € als Festpreis. Der genaue Preis hängt vom Testumfang ab und wird per Online-Konfigurator sofort berechnet.' } },
+              { '@type': 'Question', name: 'Wie oft sollte man IT Sicherheit testen?', acceptedAnswer: { '@type': 'Answer', text: 'Empfohlen wird mindestens einmal jährlich sowie nach größeren Systemänderungen. NIS2 und ISO 27001 fordern regelmäßige Sicherheitsprüfungen als Pflicht.' } },
+            ],
           }),
         }}
       />

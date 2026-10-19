@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 import { ServiceJsonLd } from "@/lib/serviceJsonLd";
 
 const PATH = "/services/infrastructure-testing";
@@ -20,26 +19,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Layout({ children }: { children: React.ReactNode }) {
-  const t = await getTranslations("serviceCommon");
-  const faqItems = t.raw("faq.items") as Array<{ question: string; answer: string }>;
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
-  };
-
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <ServiceJsonLd name={NAME} description={DESC} path={PATH} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
       {children}
     </>
   );
