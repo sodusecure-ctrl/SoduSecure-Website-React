@@ -2003,7 +2003,7 @@
     "date": "1. Dez 2024",
     "title": "OWASP Top 10 2024: Was sich geändert hat und warum es wichtig ist",
     "description": "Ein umfassender Leitfaden zu den neuesten OWASP Top 10-Schwachstellen und umsetzbaren Sicherheitsstrategien für moderne Anwendungen.",
-    "author": "Alex Martinez",
+    "author": "Sodu Secure Team",
     "readTime": "8 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -2133,7 +2133,7 @@
     "date": "15. Jan 2025",
     "title": "React 4 Shell: RCE-Schwachstelle und Behebungsstrategien",
     "description": "Eine umfassende Sicherheitsanalyse der CVE-2024-50980 – verstehen Sie die Risiken, erkennen Sie die Gefahr in Ihrer Umgebung und implementieren Sie sichere Update-Pfade.",
-    "author": "Thomas Weber",
+    "author": "Sodu Secure Team",
     "readTime": "11 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -2263,7 +2263,7 @@
     "date": "10. Jan 2025",
     "title": "OpenClaw Security Risks: KI-Chatbot-Schwachstellen verstehen",
     "description": "Eine detaillierte Analyse der Sicherheitsrisiken bei der Integration von OpenClaw und anderen KI-Chatbots – Prompt Injection, Datenexfiltration und praktische Mitigationsstrategien.",
-    "author": "Julia Schmidt",
+    "author": "Sodu Secure Team",
     "readTime": "10 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -2393,7 +2393,7 @@
     "date": "5. Jan 2025",
     "title": "Cybersecurity für KMU: Wann Sie einen Pentest wirklich brauchen",
     "description": "Ein praxisorientierter Leitfaden für kleine und mittlere Unternehmen – wann Penetrationstests notwendig sind, welche Arten es gibt und wie sie Ihrem Business helfen.",
-    "author": "Michael Hoffmann",
+    "author": "Sodu Secure Team",
     "readTime": "13 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -2523,7 +2523,7 @@
     "date": "30. Jan 2026",
     "title": "OWASP Top 10 2026: Neue Risiken, neue Prioritäten",
     "description": "Ein praxisnaher Ausblick auf die OWASP Top 10 2026 – welche Trends sich abzeichnen und welche Maßnahmen jetzt Priorität haben.",
-    "author": "Lisa Krüger",
+    "author": "Sodu Secure Team",
     "readTime": "12 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -3087,7 +3087,7 @@
     "date": "1. Dez 2024",
     "title": "SQL Injection verstehen: Tiefenblick in Datenbanksicherheit",
     "description": "SQL-Injection bleibt eine der gefährlichsten Web-Schwachstellen. Lernen Sie Angriffsmuster, Risiken und praxisnahe Abwehrstrategien kennen.",
-    "author": "Dr. Sarah Mitchell",
+    "author": "Sodu Secure Team",
     "readTime": "8 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -3191,8 +3191,8 @@
       ]
     },
     "authorBio": {
-      "name": "Dr. Sarah Mitchell",
-      "role": "Security Research Lead",
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
       "bio": "Fokus auf Web Application Security, Datenbankschutz und sichere Softwarearchitektur."
     },
     "mobileActions": {
@@ -3217,7 +3217,7 @@
     "date": "28. Nov 2024",
     "title": "Zero-Day-Schwachstellen: Erkennen, Reagieren, Absichern",
     "description": "Zero-Days sind die gefährlichsten Schwachstellen. Lernen Sie, wie Sie Angriffe früh erkennen, Reaktionspläne testen und Risiken senken.",
-    "author": "Marcus Chen",
+    "author": "Sodu Secure Team",
     "readTime": "10 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -3321,8 +3321,8 @@
       ]
     },
     "authorBio": {
-      "name": "Marcus Chen",
-      "role": "Threat Intelligence Lead",
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
       "bio": "Fokus auf Zero-Day Research, Detection Engineering und Incident Response Strategien."
     },
     "mobileActions": {
@@ -3347,7 +3347,7 @@
     "date": "25. Nov 2024",
     "title": "API-Sicherheit: Best Practices für moderne Anwendungen",
     "description": "APIs sind das Rückgrat digitaler Produkte. Erfahren Sie, welche Risiken am häufigsten sind und wie Sie Ihre Schnittstellen sicher machen.",
-    "author": "Elena Rodriguez",
+    "author": "Sodu Secure Team",
     "readTime": "12 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -3451,8 +3451,8 @@
       ]
     },
     "authorBio": {
-      "name": "Elena Rodriguez",
-      "role": "API Security Specialist",
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
       "bio": "Spezialisiert auf API Threat Modeling, OAuth Security und sichere Integrationen."
     },
     "mobileActions": {
@@ -3477,7 +3477,7 @@
     "date": "22. Nov 2024",
     "title": "Mobile App Security: iOS vs Android im Vergleich",
     "description": "Mobile Apps speichern und übertragen sensible Daten. Wir zeigen typische Schwachstellen und wie Sie iOS- und Android-Apps absichern.",
-    "author": "James Anderson",
+    "author": "Sodu Secure Team",
     "readTime": "15 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -3581,8 +3581,8 @@
       ]
     },
     "authorBio": {
-      "name": "James Anderson",
-      "role": "Mobile Security Consultant",
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
       "bio": "Spezialisiert auf iOS/Android-Pentests, sichere App-Architektur und MASVS-Reviews."
     },
     "mobileActions": {
@@ -3607,7 +3607,7 @@
     "date": "18. Nov 2024",
     "title": "Cloud Security Fundamentals: AWS, Azure und GCP",
     "description": "Cloud-Sicherheit beginnt bei IAM und endet bei Logging. Lernen Sie die häufigsten Cloud-Risiken und wie Sie sie vermeiden.",
-    "author": "Maya Patel",
+    "author": "Sodu Secure Team",
     "readTime": "14 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -3711,8 +3711,8 @@
       ]
     },
     "authorBio": {
-      "name": "Maya Patel",
-      "role": "Cloud Security Lead",
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
       "bio": "Spezialisiert auf Cloud-Architekturen, IAM-Härtung und Compliance in AWS, Azure und GCP."
     },
     "mobileActions": {
@@ -3737,7 +3737,7 @@
     "date": "15. Nov 2024",
     "title": "Social Engineering: Der menschliche Faktor",
     "description": "Technik ist nur ein Teil der Sicherheit. Lernen Sie gängige Social-Engineering-Angriffe und wirksame Schutzmaßnahmen kennen.",
-    "author": "Dr. Sarah Mitchell",
+    "author": "Sodu Secure Team",
     "readTime": "9 Min. Lesezeit",
     "tableOfContents": "Inhaltsverzeichnis",
     "shareThisArticle": "Diesen Artikel teilen",
@@ -3841,8 +3841,8 @@
       ]
     },
     "authorBio": {
-      "name": "Dr. Sarah Mitchell",
-      "role": "Security Awareness Lead",
+      "name": "Sodu Secure Team",
+      "role": "Offensive Security, Sodu Secure GmbH",
       "bio": "Spezialisiert auf Human-Risk-Programme, Phishing-Resilienz und Security Culture."
     },
     "mobileActions": {
@@ -4457,70 +4457,70 @@
           "category": "SCHWACHSTELLEN",
           "title": "SQL Injection verstehen: Tiefenblick in Datenbanksicherheit",
           "description": "SQL-Injection bleibt eine der gefährlichsten Web-Schwachstellen. Lernen Sie Angriffsmuster, Risiken und praxisnahe Abwehrstrategien kennen.",
-          "author": "Dr. Sarah Mitchell",
+          "author": "Sodu Secure Team",
           "readTime": "8 Min"
         },
         {
           "category": "SCHWACHSTELLEN",
           "title": "Zero-Day-Schwachstellen: Erkennen, Reagieren, Absichern",
           "description": "Zero-Days sind die gefährlichsten Schwachstellen. Lernen Sie, wie Sie Angriffe früh erkennen, Reaktionspläne testen und Risiken senken.",
-          "author": "Marcus Chen",
+          "author": "Sodu Secure Team",
           "readTime": "10 Min"
         },
         {
           "category": "LEITFÄDEN",
           "title": "API-Sicherheit: Best Practices für moderne Anwendungen",
           "description": "APIs sind das Rückgrat digitaler Produkte. Erfahren Sie, welche Risiken am häufigsten sind und wie Sie Ihre Schnittstellen sicher machen.",
-          "author": "Elena Rodriguez",
+          "author": "Sodu Secure Team",
           "readTime": "12 Min"
         },
         {
           "category": "LEITFÄDEN",
           "title": "Mobile App Security: iOS vs Android im Vergleich",
           "description": "Mobile Apps speichern und übertragen sensible Daten. Wir zeigen typische Schwachstellen und wie Sie iOS- und Android-Apps absichern.",
-          "author": "James Anderson",
+          "author": "Sodu Secure Team",
           "readTime": "15 Min"
         },
         {
           "category": "LEITFÄDEN",
           "title": "Cloud Security Fundamentals: AWS, Azure und GCP",
           "description": "Cloud-Sicherheit beginnt bei IAM und endet bei Logging. Lernen Sie die häufigsten Cloud-Risiken und wie Sie sie vermeiden.",
-          "author": "Maya Patel",
+          "author": "Sodu Secure Team",
           "readTime": "14 Min"
         },
         {
           "category": "LEITFÄDEN",
           "title": "Social Engineering: Der menschliche Faktor",
           "description": "Technik ist nur ein Teil der Sicherheit. Lernen Sie gängige Social-Engineering-Angriffe und wirksame Schutzmaßnahmen kennen.",
-          "author": "Dr. Sarah Mitchell",
+          "author": "Sodu Secure Team",
           "readTime": "9 Min"
         },
         {
           "category": "SCHWACHSTELLEN",
           "title": "React 4 Shell: RCE-Schwachstelle und Behebungsstrategien",
           "description": "Eine umfassende Sicherheitsanalyse der CVE-2024-50980 – verstehen Sie die Risiken, erkennen Sie die Gefahr in Ihrer Umgebung und implementieren Sie sichere Update-Pfade.",
-          "author": "Thomas Weber",
+          "author": "Sodu Secure Team",
           "readTime": "11 Min"
         },
         {
           "category": "CYBER-NEWS",
           "title": "OpenClaw Security Risks: KI-Chatbot-Schwachstellen verstehen",
           "description": "Eine detaillierte Analyse der Sicherheitsrisiken bei der Integration von OpenClaw und anderen KI-Chatbots – Prompt Injection, Datenexfiltration und praktische Mitigationsstrategien.",
-          "author": "Julia Schmidt",
+          "author": "Sodu Secure Team",
           "readTime": "10 Min"
         },
         {
           "category": "LEITFÄDEN",
           "title": "Cybersecurity für KMU: Wann Sie einen Pentest wirklich brauchen",
           "description": "Ein praxisorientierter Leitfaden für kleine und mittlere Unternehmen – wann Penetrationstests notwendig sind, welche Arten es gibt und wie sie Ihrem Business helfen.",
-          "author": "Michael Hoffmann",
+          "author": "Sodu Secure Team",
           "readTime": "13 Min"
         },
         {
           "category": "SCHWACHSTELLEN",
           "title": "OWASP Top 10 2026: Neue Risiken, neue Prioritäten",
           "description": "Ein praxisnaher Ausblick auf die OWASP Top 10 2026 – welche Trends sich abzeichnen und welche Maßnahmen jetzt Priorität haben.",
-          "author": "Lisa Krüger",
+          "author": "Sodu Secure Team",
           "readTime": "12 Min"
         },
         {
