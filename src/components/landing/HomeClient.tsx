@@ -651,21 +651,18 @@ export default function HomeClient() {
       <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
         {/* Hintergrundfoto (Pexels-Lizenz, frei nutzbar) mit Verlauf zur Textseite */}
         <div className="absolute inset-0 hidden sm:block" aria-hidden>
+          {/* Ein Bild fuer beide Modi. Vorher lagen hier zwei Fassungen
+              uebereinander, von denen je nach Theme eine ausgeblendet wurde -
+              das helle Motiv gilt jetzt durchgaengig. Der Verlauf darueber
+              (hero-photo-overlay) hat weiterhin eine eigene helle und dunkle
+              Fassung, die Textseite bleibt in beiden Modi lesbar. */}
           <Image
             src="/images/hero-cybersecurity-light.jpg"
             alt=""
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[72%_center] dark:hidden"
-          />
-          <Image
-            src="/images/hero-cybersecurity.jpg"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="hidden object-cover object-[72%_center] dark:block"
+            className="object-cover object-[72%_center]"
           />
           <div className="absolute inset-0 hero-photo-overlay" />
           <div className="absolute inset-x-0 bottom-0 h-28 hero-photo-bottom" />
