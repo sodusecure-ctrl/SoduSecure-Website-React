@@ -966,14 +966,6 @@ html.light .cfg-hero {
 }
 html.light .cfg-hero .premium-aurora { opacity: 0.34 !important; }
 
-/* Belege als Chips: heller Grund, klarer Rand, lesbarer Text. */
-html.light .cfg-proof {
-  background-color: #FFFFFF !important;
-  border-color: rgba(15, 23, 42, 0.12) !important;
-  color: #334155 !important;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
-}
-
 /* Die Konfigurator-Karte traegt den ganzen Bildschirm - sie braucht Kante
    und Schatten, sonst verschwimmt sie mit dem Hintergrund. */
 html.light .cfg .premium-card {
@@ -1041,15 +1033,6 @@ html.light .cfg [class*="bg-white/5"] {
   border-color: rgba(15, 23, 42, 0.10) !important;
 }
 
-/* Kundenstimmen stehen bewusst auf dunklem Grund - der Block ist der
-   einzige Kontrastanker der Seite und bleibt deshalb dunkel. */
-html.light .cfg .cfg-voices {
-  background-color: #0A0A0B !important;
-  border-color: rgba(255, 255, 255, 0.08) !important;
-}
-html.light .cfg .cfg-voices .text-white { color: #FFFFFF !important; }
-html.light .cfg .cfg-voices [class*="text-white/"] { color: rgba(255, 255, 255, 0.6) !important; }
-
 /* Inaktiver Weiter-Knopf: durchsichtiger Grund mit grauem Text war im
    hellen Modus nicht als Knopf erkennbar - der Schritt wirkte abgebrochen. */
 html.light .cfg .cfg-next-off {
@@ -1058,21 +1041,9 @@ html.light .cfg .cfg-next-off {
   border: 1px solid rgba(15, 23, 42, 0.08) !important;
 }
 
-/* Fortschritt: offene Schritte und ihre Verbindungslinien. */
-html.light .cfg .cfg-step-off {
-  background-color: #FFFFFF !important;
-  color: #94A3B8 !important;
-  border-color: rgba(15, 23, 42, 0.16) !important;
-}
 html.light .cfg .cfg-step-line.bg-white\/15 { background-color: rgba(15, 23, 42, 0.14) !important; }
 
 /* Icon-Flaeche in den Kacheln sichtbar verankern. */
 html.light .cfg-opt [class*="bg-white/"] { background-color: #F1F3F7 !important; }
 html.light .cfg-opt:hover [class*="bg-white/"] { background-color: #FFE9E7 !important; }
 
-/* Die Zusammenfassung ist eine Ruecklesung, kein Eingabefeld - sie bekommt
-   einen leicht abgesetzten Grund, damit sie sich vom Formular abhebt. */
-html.light .cfg .cfg-summary {
-  background-color: #F7F8FB !important;
-  border-color: rgba(15, 23, 42, 0.10) !important;
-}
