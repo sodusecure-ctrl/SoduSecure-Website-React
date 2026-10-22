@@ -102,6 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/about',                          lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.5 },
     { path: '/contact',                        lastModified: '2026-03-16', changeFreq: 'monthly', priority: 0.6 },
     { path: '/case-studies',                   lastModified: '2026-03-16', changeFreq: 'weekly',  priority: 0.7 },
+    { path: '/referenzen',                     lastModified: '2026-10-22', changeFreq: 'monthly', priority: 0.6 },
   ];
 
   // Service-Detailseiten
