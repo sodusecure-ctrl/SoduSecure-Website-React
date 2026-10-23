@@ -6296,5 +6296,136 @@
         "emailSent": "Thank you! Your request has been sent.",
         "emailFailed": "Sending failed. Please try again."
       }
+    },
+    "penetrationstestPciDssIso27001Detail": {
+      "backToBlog": "Back to blog",
+      "shareArticle": "Share article",
+      "bookmarkArticle": "Save article",
+      "category": "COMPLIANCE",
+      "date": "Oct 23, 2026",
+      "title": "How to commission a compliant penetration test: a step-by-step guide for PCI-DSS and ISO 27001",
+      "description": "What PCI-DSS Requirement 11.4 and ISO 27001 demand of a penetration test, how to recognise an audit-ready report, and how to compare providers on the facts.",
+      "author": "Sodu Secure Team",
+      "readTime": "13 min read",
+      "tableOfContents": "Table of contents",
+      "shareThisArticle": "Share this article",
+      "share": "Share",
+      "save": "Save",
+      "sections": {
+        "introduction": {
+          "title": "Not every penetration test is a compliance penetration test",
+          "content": "Many companies order a compliance penetration test like any routine job. Then the audit arrives, the report is not accepted, and the surprise is considerable. The reason is almost always the same: **PCI-DSS Requirement 11.4 and ISO 27001 place specific demands on scope, methodology, report content and retest that a general vulnerability scan simply does not meet.** This article gives you the factual basis to compare providers, write a solid brief and set the engagement up properly.",
+          "keyTakeaway": {
+            "title": "Two frameworks, two different demands",
+            "content": "[PCI-DSS](/pci-dss-penetrationstest) requires internal and external testing of the cardholder data environment - at least annually and after any significant infrastructure change. [ISO 27001](/iso-27001) does not mandate a penetration test at all; the need follows from the risk assessment and the statement of applicability. Confusing the two means buying the wrong thing."
+          },
+          "quote": "The ASV scan is a separate obligation and no substitute for a penetration test."
+        },
+        "commonAttackVectors": {
+          "title": "What each framework actually demands",
+          "items": [
+            "**PCI-DSS, scope:** the entire cardholder data environment, exposed APIs, web applications and every system able to affect that environment. At least annually and after any significant infrastructure change.",
+            "**PCI-DSS, segmentation:** where network segmentation is used to reduce scope, the segmentation controls must be tested separately. That is a distinct step, not a by-product.",
+            "**PCI-DSS, boundaries:** the ASV scan is a separate obligation and does not replace the penetration test. The QSA need not run the test, but does judge whether methodology, independence and report content are compliant.",
+            "**ISO 27001, derivation:** the test must map to specific assets, risks and selected controls. Without that mapping the auditor has no basis to accept the report as evidence.",
+            "**ISO 27001, approach:** the choice between black-, grey- and white-box must be risk-justified and documented traceably. Agreeing it with the certification body beforehand is advisable.",
+            "**Both, retest:** PCI-DSS requires a documented retest once exploitable weaknesses are fixed. ISO 27001 auditors likewise expect confirmation that findings were handled. The status must appear per finding: fixed, partially fixed or open."
+          ]
+        },
+        "impactAnalysis": {
+          "title": "Manual test or automated scan",
+          "content": "This is the most common misunderstanding when comparing providers, and it decides whether the result stands up at audit. Automated scanners detect known weaknesses and misconfigurations. What they cannot do: uncover business logic flaws, trace privilege escalation in Active Directory, or map chained attack paths. Manual testing produces reproducible proof of concept - access through an API weakness, a privilege escalation, data access to the protected environment. Those are far stronger evidence for auditors than scanner output, and the executive summary lets management understand the risk and prioritise. For most compliance work the **grey-box approach** is the pragmatic standard: a realistic attacker perspective at reasonable coverage. Its suitability must be justified on risk, though - blanket acceptance by a QSA or auditor is not guaranteed.",
+          "statistics": {
+            "title": "Three details that belong in every tender",
+            "averageCost": {
+              "value": "11.4",
+              "label": "The PCI-DSS v4.0.1 requirement the report's methodology section must reference explicitly."
+            },
+            "identificationTime": {
+              "value": "annually",
+              "label": "Minimum frequency under PCI-DSS, plus after every significant change to the infrastructure."
+            },
+            "multipleBreaches": {
+              "value": "Art. 28",
+              "label": "GDPR data processing agreement, required as soon as personal data is processed during the test."
+            }
+          }
+        },
+        "mitigationStrategies": {
+          "title": "Vetting the provider and setting up the engagement",
+          "content": "Most mistakes happen not during the test but during procurement. On qualifications what counts is the competence of the testers actually assigned, not the company letterhead: OSCP, OSWE, CREST CRT or comparable hands-on credentials carry weight, and an accreditation at company level outweighs a single staff certificate. **ASV and QSA status are not indicators of pentest competence** - those are separate roles in the PCI structure. In the first call, ask directly about manual attack chains and how proof of concept is documented.",
+          "essentialPractices": {
+            "title": "Points for your tender",
+            "items": [
+              "**Request a sample report** and check it for reproduction steps, scope documentation and retest status. If it only lists findings, the provider is out.",
+              "**Have testers named**, with certificate evidence for those specific people - not general company statements.",
+              "**Have the price broken down** by test days, reporting effort and retest. A lump sum without a breakdown is not a comparable offer.",
+              "**Require the retest contractually.** For compliance work it is part of the evidence, not an add-on.",
+              "**Define scope precisely:** IP addresses, domains, applications, APIs, cloud environments, network segments. Put exclusions and prohibited actions in writing.",
+              "**Agree test windows, source IPs and abort procedures** with named contacts. For shared hosting or cloud environments obtain the provider's authorisation and document it in the contract.",
+              "**Sign a data processing agreement** under Art. 28 GDPR where personal data is processed, plus an NDA covering findings, exploit code, credentials and the final report.",
+              "**Ask for proof of insurance:** professional indemnity, general liability and where applicable cyber liability, explicitly covering penetration testing.",
+              "**Confirm in advance** that your QSA or ISO 27001 auditor will accept the report as suitable evidence. That question costs one email and can save half an audit."
+            ]
+          }
+        },
+        "conclusion": {
+          "title": "What the report must contain",
+          "content1": "An audit-ready report carries four mandatory parts: an **executive summary** with overall assessment, critical findings, business risks and prioritised actions; a **scope and methodology section** listing tested assets, period, limitations and the standards used such as PTES and the [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/); a **technical appendix** documenting, per finding, description, root cause, CVSS rating, screenshots, requests, log extracts and remediation advice; and **reproduction steps** with commands, payloads and prerequisites - without them a proof of concept is not usable evidence. For PCI-DSS, add: evidence of internal and external testing including segmentation checks, an explicit reference to Requirement 11.4, the retest status per finding, and a statement on the testers' organisational independence from development and administration of the systems under test. The [PCI Security Standards Council](https://www.pcisecuritystandards.org/) publishes guidance on this. ISO 27001 auditors additionally check the mapping to risks, ISMS scope and controls from the statement of applicability - including the rationale for assets left untested.",
+          "content2": "The underlying questions never change: who actually tests? What methodology is used? What does the report contain? And is the retest included? At Sodu Secure, OSCP-, OSWE- and CEH-certified testers work manually; every report carries an executive summary in German and English, reproducible proof of concept and a separate retest status per finding, and each finding is re-verified free of charge after remediation. Covered are [PCI-DSS](/pci-dss-penetrationstest), [ISO 27001](/iso-27001), [NIS2](/nis2), [DORA](/dora), [TISAX](/tisax) and [GDPR](/dsgvo-penetrationstest). [Put your scope together online](/request-pentest) - a binding quote follows within 24 hours."
+        }
+      },
+      "tags": [
+        "Compliance penetration test",
+        "PCI-DSS",
+        "ISO 27001",
+        "Requirement 11.4",
+        "Audit-ready report",
+        "Provider selection"
+      ],
+      "cta": {
+        "title": "An audit-ready test for your scope?",
+        "description": "Describe your environment and the framework you are tested against. You get a concrete scope and an individually calculated quote.",
+        "emailPlaceholder": "Enter email",
+        "buttonText": "Request a quote",
+        "disclaimer": "No spam, unsubscribe anytime"
+      },
+      "relatedArticles": {
+        "title": "Further reading",
+        "articles": [
+          {
+            "title": "PCI-DSS penetration testing",
+            "description": "What Requirement 11.4 demands, which scope applies and what the evidence for the QSA looks like.",
+            "category": "PCI-DSS",
+            "readTime": "7 min read",
+            "readMore": "View page →"
+          },
+          {
+            "title": "ISO 27001: requirements for the pentest",
+            "description": "How the test is derived from the risk assessment and statement of applicability, and documented for the auditor.",
+            "category": "ISO 27001",
+            "readTime": "8 min read",
+            "readMore": "View page →"
+          }
+        ]
+      },
+      "authorBio": {
+        "name": "Sodu Secure Team",
+        "role": "Offensive Security, Sodu Secure GmbH",
+        "bio": "OSCP-certified penetration testers based in Berlin. More than 500 pentests delivered for companies from start-ups to large enterprises - tested manually, with verified findings and a free retest."
+      },
+      "mobileActions": {
+        "enjoyedArticle": "Was this article helpful?",
+        "shareWithNetwork": "Share with your network",
+        "getHelp": "Request a quote"
+      },
+      "toasts": {
+        "linkCopied": "Link copied to clipboard!",
+        "consultationNotImplemented": "The consultation request feature is not implemented yet.",
+        "saveNotImplemented": "The save feature is not implemented yet.",
+        "invalidEmail": "Please enter a valid email address.",
+        "emailSent": "Thank you! Your request has been sent.",
+        "emailFailed": "Sending failed. Please try again."
+      }
     }
 }

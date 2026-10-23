@@ -5985,5 +5985,136 @@
         "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
         "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
       }
+    },
+    "penetrationstestPciDssIso27001Detail": {
+      "backToBlog": "Zurück zum Blog",
+      "shareArticle": "Artikel teilen",
+      "bookmarkArticle": "Artikel speichern",
+      "category": "COMPLIANCE",
+      "date": "23. Okt 2026",
+      "title": "So beauftragen Sie einen rechtskonformen Penetrationstest: Schritt für Schritt für PCI-DSS und ISO 27001",
+      "description": "Was PCI-DSS Requirement 11.4 und ISO 27001 vom Penetrationstest verlangen, woran auditfähige Berichte erkennbar sind und wie Sie Anbieter sachlich vergleichen.",
+      "author": "Sodu Secure Team",
+      "readTime": "13 Min. Lesezeit",
+      "tableOfContents": "Inhaltsverzeichnis",
+      "shareThisArticle": "Diesen Artikel teilen",
+      "share": "Teilen",
+      "save": "Speichern",
+      "sections": {
+        "introduction": {
+          "title": "Nicht jeder Penetrationstest ist ein Compliance-Penetrationstest",
+          "content": "Viele Unternehmen bestellen einen Compliance-Penetrationstest wie einen Routineauftrag. Dann kommt das Audit, der Bericht wird nicht anerkannt, und die Überraschung ist groß. Der Grund ist fast immer derselbe: **PCI-DSS Requirement 11.4 und ISO 27001 stellen konkrete Anforderungen an Prüfumfang, Methodik, Berichtsinhalt und Nachtest, die ein allgemeiner Schwachstellenscan schlicht nicht erfüllt.** Dieser Artikel gibt Ihnen die sachliche Grundlage, um Anbieter gezielt zu vergleichen, ein belastbares Briefing zu formulieren und die Beauftragung sauber aufzusetzen.",
+          "keyTakeaway": {
+            "title": "Zwei Regelwerke, zwei verschiedene Anforderungen",
+            "content": "[PCI-DSS](/pci-dss-penetrationstest) schreibt interne und externe Tests der Karteninhaberdatenumgebung vor - mindestens jährlich und zusätzlich nach wesentlichen Infrastrukturänderungen. [ISO 27001](/iso-27001) schreibt gar keinen Penetrationstest pauschal vor; die Notwendigkeit ergibt sich aus der Risikobeurteilung und der Anwendbarkeitserklärung. Wer das verwechselt, kauft am Bedarf vorbei."
+          },
+          "quote": "Der ASV-Scan ist eine separate Pflicht und kein Ersatz für den Penetrationstest."
+        },
+        "commonAttackVectors": {
+          "title": "Was die beiden Regelwerke jeweils verlangen",
+          "items": [
+            "**PCI-DSS, Prüfumfang:** die gesamte Karteninhaberdatenumgebung, exponierte Programmierschnittstellen, Webanwendungen und alle Systeme, die die Umgebung beeinflussen können. Mindestens jährlich und nach jeder wesentlichen Infrastrukturänderung.",
+            "**PCI-DSS, Segmentierung:** Wird Netzwerksegmentierung zur Reduzierung des Prüfumfangs eingesetzt, müssen die Segmentierungskontrollen separat geprüft werden. Das ist ein eigener Prüfschritt, kein Nebenprodukt.",
+            "**PCI-DSS, Abgrenzung:** Der ASV-Scan ist eine eigenständige Pflicht und ersetzt den Penetrationstest nicht. Der QSA führt den Test nicht zwingend selbst durch, beurteilt aber, ob Methodik, Unabhängigkeit und Berichtsinhalt konform sind.",
+            "**ISO 27001, Herleitung:** Der Test muss konkreten Assets, Risiken und ausgewählten Maßnahmen zugeordnet sein. Ohne diese Zuordnung fehlt dem Auditor die Grundlage, den Bericht als Nachweis zu werten.",
+            "**ISO 27001, Testansatz:** Die Wahl zwischen Blind-, Graukasten- und Weißkasten-Verfahren muss risikobegründet und nachvollziehbar dokumentiert sein. Eine Abstimmung mit der Zertifizierungsstelle vor dem Test ist empfehlenswert.",
+            "**Beide, Nachtest:** PCI-DSS verlangt nach Behebung ausnutzbarer Schwachstellen einen dokumentierten Nachtest. ISO-27001-Auditoren erwarten ebenfalls die Bestätigung, dass Befunde behandelt wurden. Der Status muss je Befund eigenständig erscheinen: behoben, teilweise behoben oder offen."
+          ]
+        },
+        "impactAnalysis": {
+          "title": "Manueller Test oder automatisierter Scan",
+          "content": "Das ist das häufigste Missverständnis beim Anbietervergleich, und es entscheidet über die Auditfähigkeit des Ergebnisses. Automatisierte Scanner erkennen bekannte Schwachstellen und Fehlkonfigurationen. Was sie nicht können: Fehler in der Geschäftslogik aufdecken, Rechteausweitungen im Active Directory nachvollziehen oder verkettete Angriffspfade abbilden. Manuelle Tests erzeugen dagegen reproduzierbare Machbarkeitsnachweise - einen Zugang über eine Schnittstellenschwachstelle, eine Rechteausweitung, einen Datenzugriff auf die geschützte Umgebung. Diese Nachweise sind für Auditoren deutlich belastbarer als Scanner-Ausgaben, und die Zusammenfassung für die Leitungsebene erlaubt es der Geschäftsführung, Risiken zu verstehen und Maßnahmen zu priorisieren. Für die meisten Compliance-Prüfungen ist der **Graukasten-Ansatz** der pragmatische Standard: realistische Angreiferperspektive bei vertretbarer Abdeckung. Seine Eignung muss allerdings risikobasiert begründet werden, eine pauschale Akzeptanz durch QSA oder Auditor ist nicht garantiert.",
+          "statistics": {
+            "title": "Drei Angaben, die in jede Ausschreibung gehören",
+            "averageCost": {
+              "value": "11.4",
+              "label": "Die Anforderung aus PCI-DSS v4.0.1, auf die sich der Methodikteil des Berichts ausdrücklich beziehen muss."
+            },
+            "identificationTime": {
+              "value": "jährlich",
+              "label": "Mindestfrequenz nach PCI-DSS, zusätzlich nach jeder wesentlichen Änderung an der Infrastruktur."
+            },
+            "multipleBreaches": {
+              "value": "Art. 28",
+              "label": "Auftragsverarbeitungsvertrag nach DSGVO, sobald im Rahmen des Tests personenbezogene Daten verarbeitet werden."
+            }
+          }
+        },
+        "mitigationStrategies": {
+          "title": "Anbieter prüfen und den Auftrag sauber aufsetzen",
+          "content": "Die meisten Fehler passieren nicht beim Test, sondern bei der Vergabe. Bei den Qualifikationen zählt die Kompetenz der tatsächlich eingesetzten Tester, nicht das Firmenbriefpapier: OSCP, OSWE, CREST CRT oder vergleichbare praktische Nachweise sind aussagekräftig, eine Akkreditierung auf Unternehmensebene wiegt schwerer als ein einzelnes Mitarbeiterzertifikat. **ASV- und QSA-Status sind dagegen keine Indikatoren für Pentest-Kompetenz** - das sind separate Rollen im PCI-Gefüge. Fragen Sie im Erstgespräch direkt nach manuellen Angriffsketten und nach der Dokumentation der Machbarkeitsnachweise.",
+          "essentialPractices": {
+            "title": "Punkte für Ihre Ausschreibung",
+            "items": [
+              "**Musterbericht anfordern** und auf Reproduktionsschritte, Dokumentation des Prüfumfangs und Nachtest-Status prüfen. Zeigt er nur eine Befundliste, scheidet der Anbieter aus.",
+              "**Tester namentlich benennen lassen**, mit Zertifikatsnachweis der konkreten Personen - nicht nur allgemeine Unternehmensaussagen.",
+              "**Preis aufschlüsseln lassen** nach Testtagen, Berichtsaufwand und Nachtest. Eine Pauschale ohne Aufschlüsselung ist kein vergleichbares Angebot.",
+              "**Nachtest vertraglich einfordern.** Bei Compliance-Tests ist er Bestandteil des Nachweises, kein Zusatzprodukt.",
+              "**Prüfumfang präzise benennen:** IP-Adressen, Domains, Anwendungen, Schnittstellen, Cloud-Umgebungen, Netzsegmente. Ausschlüsse und verbotene Maßnahmen schriftlich festhalten.",
+              "**Testfenster, Quell-IPs und Abbruchverfahren** mit benannten Ansprechpartnern vereinbaren. Bei geteilten Hosting- oder Cloud-Umgebungen die Freigabe des Anbieters einholen und vertraglich dokumentieren.",
+              "**Auftragsverarbeitungsvertrag** nach Art. 28 DSGVO schließen, wenn personenbezogene Daten verarbeitet werden. Dazu eine Geheimhaltungsvereinbarung, die Befunde, Exploit-Code, Zugangsdaten und Abschlussbericht abdeckt.",
+              "**Versicherungsnachweise verlangen:** Berufshaftpflicht, Betriebshaftpflicht und gegebenenfalls Cyber-Haftpflicht, mit ausdrücklicher Deckung für Penetrationstests.",
+              "**Vorab bestätigen lassen**, dass Ihr QSA oder ISO-27001-Auditor den Bericht als geeigneten Nachweis akzeptiert. Diese Frage kostet eine E-Mail und erspart im Zweifel das halbe Audit."
+            ]
+          }
+        },
+        "conclusion": {
+          "title": "Was der Bericht enthalten muss",
+          "content1": "Ein auditfähiger Bericht trägt vier Pflichtbestandteile: eine **Zusammenfassung für die Leitungsebene** mit Gesamtbewertung, kritischen Befunden, Geschäftsrisiken und priorisierten Maßnahmen; einen **Abschnitt zu Prüfumfang und Methodik** mit getesteten Assets, Zeitraum, Einschränkungen und den verwendeten Standards wie PTES und dem [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/); einen **technischen Anhang**, der je Befund Beschreibung, Ursache, CVSS-Bewertung, Screenshots, Anfragen, Protokollauszüge und Handlungsempfehlung dokumentiert; und **Reproduktionsschritte** mit Befehlen, Nutzlasten und Voraussetzungen - ohne sie ist ein Machbarkeitsnachweis kein verwertbarer Beweis. Für PCI-DSS kommen hinzu: der Nachweis interner und externer Tests einschließlich Segmentierungsprüfung, der ausdrückliche Bezug auf Requirement 11.4, der Nachtest-Status je Befund und eine Aussage zur organisatorischen Unabhängigkeit der Tester von Entwicklung und Administration der geprüften Systeme. Hinweise dazu veröffentlicht das [PCI Security Standards Council](https://www.pcisecuritystandards.org/). ISO-27001-Auditoren prüfen zusätzlich die Zuordnung zu Risiken, ISMS-Geltungsbereich und Maßnahmen aus der Anwendbarkeitserklärung - samt Begründung, welche Assets nicht geprüft wurden.",
+          "content2": "Die Grundfragen bleiben immer dieselben: Wer testet konkret? Welche Methodik kommt zum Einsatz? Was enthält der Bericht? Und ist der Nachtest inklusive? Bei Sodu Secure testen OSCP-, OSWE- und CEH-zertifizierte Prüfer manuell, jeder Bericht enthält eine Zusammenfassung für die Leitungsebene auf Deutsch und Englisch, reproduzierbare Machbarkeitsnachweise und einen eigenen Nachtest-Status je Befund; nach der Behebung wird jeder Befund kostenfrei erneut verifiziert. Abgedeckt sind [PCI-DSS](/pci-dss-penetrationstest), [ISO 27001](/iso-27001), [NIS2](/nis2), [DORA](/dora), [TISAX](/tisax) und [DSGVO](/dsgvo-penetrationstest). [Stellen Sie Ihren Prüfumfang online zusammen](/request-pentest) - ein verbindliches Angebot folgt innerhalb von 24 Stunden."
+        }
+      },
+      "tags": [
+        "Compliance Penetrationstest",
+        "PCI-DSS",
+        "ISO 27001",
+        "Requirement 11.4",
+        "Auditfähiger Bericht",
+        "Anbieterauswahl"
+      ],
+      "cta": {
+        "title": "Auditfähiger Test für Ihren Prüfumfang?",
+        "description": "Beschreiben Sie uns Ihre Umgebung und das Regelwerk, gegen das geprüft wird. Sie erhalten einen konkreten Prüfumfang und ein individuell kalkuliertes Angebot.",
+        "emailPlaceholder": "E-Mail eingeben",
+        "buttonText": "Angebot anfragen",
+        "disclaimer": "Kein Spam, jederzeit abbestellen"
+      },
+      "relatedArticles": {
+        "title": "Weiterführende Seiten",
+        "articles": [
+          {
+            "title": "PCI-DSS-Penetrationstest",
+            "description": "Was Requirement 11.4 verlangt, welcher Prüfumfang gilt und wie der Nachweis gegenüber dem QSA aussieht.",
+            "category": "PCI-DSS",
+            "readTime": "7 Min. Lesezeit",
+            "readMore": "Seite ansehen →"
+          },
+          {
+            "title": "ISO 27001: Anforderungen an den Pentest",
+            "description": "Wie der Test aus Risikobeurteilung und Anwendbarkeitserklärung hergeleitet und für den Auditor dokumentiert wird.",
+            "category": "ISO 27001",
+            "readTime": "8 Min. Lesezeit",
+            "readMore": "Seite ansehen →"
+          }
+        ]
+      },
+      "authorBio": {
+        "name": "Sodu Secure Team",
+        "role": "Offensive Security, Sodu Secure GmbH",
+        "bio": "OSCP-zertifizierte Penetrationstester aus Berlin. Über 500 durchgeführte Pentests für Unternehmen vom Start-up bis zum Konzern - manuell geprüft, mit verifizierten Findings und kostenlosem Retest."
+      },
+      "mobileActions": {
+        "enjoyedArticle": "War dieser Artikel hilfreich?",
+        "shareWithNetwork": "Mit Ihrem Netzwerk teilen",
+        "getHelp": "Angebot anfragen"
+      },
+      "toasts": {
+        "linkCopied": "Link in die Zwischenablage kopiert!",
+        "consultationNotImplemented": "Die Anfrageberatungsfunktion ist noch nicht implementiert.",
+        "saveNotImplemented": "Speicherfunktion ist noch nicht implementiert.",
+        "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "emailSent": "Danke! Ihre Anfrage wurde gesendet.",
+        "emailFailed": "Senden fehlgeschlagen. Bitte versuchen Sie es erneut."
+      }
     }
 }

@@ -56,7 +56,8 @@ export default function BlogArticleDetail() {
       21: 'pentestKostenMarktuebersichtDetail',
       22: 'pentestAnbieterAuswaehlenDetail',
       23: 'pentestVsSchwachstellenscanDetail',
-      24: 'itSicherheitstestPlanenDetail',
+      24: 'itSicherheitstestPlanenDetail',
+      25: 'penetrationstestPciDssIso27001Detail',
     };
     return mapping[id] || 'blogDetail';
   };
@@ -67,7 +68,8 @@ export default function BlogArticleDetail() {
       21: ['/pentest-kosten', '/penetrationstest'],
       22: ['/penetrationstest-anbieter', '/request-pentest'],
       23: ['/penetrationstest', '/pentest'],
-      24: ['/pentest-preisindex', '/penetrationstest-anbieter'],
+      24: ['/pentest-preisindex', '/penetrationstest-anbieter'],
+      25: ['/pci-dss-penetrationstest', '/iso-27001-pentest-anforderungen'],
     };
     return mapping[id] || ['/case-studies/blogs/2', '/case-studies/blogs/2'];
   };

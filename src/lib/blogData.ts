@@ -423,6 +423,27 @@ export const blogPosts: BlogPost[] = [
       'IT Sicherheitstest Kosten',
     ],
   },
+  {
+    id: 25,
+    slug: 'penetrationstest-pci-dss-iso-27001',
+    title: 'Penetrationstest für PCI-DSS und ISO 27001',
+    description: 'Was PCI-DSS Requirement 11.4 und ISO 27001 vom Penetrationstest verlangen, woran auditfähige Berichte erkennbar sind und wie Sie Anbieter sachlich vergleichen.',
+    category: 'Compliance',
+    author: 'Sodu Secure Team',
+    date: '2026-10-23',
+    readTime: '13 min read',
+    image: '/images/blogs/image3.png',
+    keywords: [
+      'Compliance Penetrationstest',
+      'PCI-DSS Penetrationstest',
+      'ISO 27001 Penetrationstest',
+      'PCI-DSS Requirement 11.4',
+      'Auditfähiger Pentest-Bericht',
+      'Pentest Anbieter vergleichen',
+      'QSA Nachweis',
+      'Pentest Ausschreibung',
+    ],
+  },
 ];
 
 /**
