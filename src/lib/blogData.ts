@@ -426,7 +426,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 25,
     slug: 'penetrationstest-pci-dss-iso-27001',
-    title: 'Penetrationstest für PCI-DSS und ISO 27001',
+    title: 'So beauftragen Sie einen rechtskonformen Penetrationstest: Schritt für Schritt für PCI-DSS und ISO 27001',
     description: 'Was PCI-DSS Requirement 11.4 und ISO 27001 vom Penetrationstest verlangen, woran auditfähige Berichte erkennbar sind und wie Sie Anbieter sachlich vergleichen.',
     category: 'Compliance',
     author: 'Sodu Secure Team',
