@@ -1047,3 +1047,15 @@ html.light .cfg .cfg-step-line.bg-white\/15 { background-color: rgba(15, 23, 42,
 html.light .cfg-opt [class*="bg-white/"] { background-color: #F1F3F7 !important; }
 html.light .cfg-opt:hover [class*="bg-white/"] { background-color: #FFE9E7 !important; }
 
+/* Kundenstimmen unter dem Konfigurator bleiben dunkel - der Block ist der
+   einzige Kontrastanker einer sonst hellen Seite. Ohne diese Regeln kehrt
+   die globale Light-Invertierung ihn nach Weiss und die Karten verschwinden
+   ineinander. */
+html.light .cfg .cfg-voices {
+  background-color: #0A0A0B !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+html.light .cfg .cfg-voices .text-white { color: #FFFFFF !important; }
+html.light .cfg .cfg-voices [class*="text-white/"] { color: rgba(255, 255, 255, 0.62) !important; }
+html.light .cfg .cfg-voices [class*="bg-white/"] { background-color: rgba(255, 255, 255, 0.05) !important; }
+html.light .cfg .cfg-voices [class*="border-white"] { border-color: rgba(255, 255, 255, 0.1) !important; }
