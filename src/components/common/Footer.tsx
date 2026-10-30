@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { ChevronDown, ChevronUp, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import { ChevronDown, ChevronUp, Github, Linkedin, Mail, MapPin, Phone, Twitter, Youtube } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
@@ -324,6 +324,15 @@ export default function Footer() {
               aria-label="GitHub"
             >
               <Github className="w-4 h-4 lg:w-5 lg:h-5" />
+            </a>
+            <a
+              href="https://www.youtube.com/@SoduSecure"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 lg:w-10 lg:h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors flex-shrink-0"
+              aria-label="YouTube"
+            >
+              <Youtube className="w-4 h-4 lg:w-5 lg:h-5" />
             </a>
           </div>
         </div>

@@ -130,6 +130,14 @@ const data: RegulationContent = {
     { href: "/dora", label: "DORA", desc: "Digitale operationale Resilienz für den Finanzsektor." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Der internationale Standard für Informationssicherheits-Managementsysteme." },
   ],
+  // Eigenes Erklaervideo vom Sodu-Secure-Kanal. Titel und Datum stammen aus
+  // dem Kanal-Feed, die Beschreibung fasst den Inhalt zusammen.
+  video: {
+    id: "77LKxqulXY0",
+    title: "NIS2 ohne Juristen-Deutsch: Das musst du wissen",
+    description: "Wen NIS2 betrifft, welche Pflichten daraus folgen und warum die Geschäftsleitung persönlich haftet - in wenigen Minuten zusammengefasst.",
+    uploadDate: "2026-07-07",
+  },
 };
 
 export default function Page() {

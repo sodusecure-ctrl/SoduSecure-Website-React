@@ -1,15 +1,43 @@
 "use client";
 
 import { Award, Building2, CheckCircle, Cloud, Code2, Crosshair, Eye, GitBranch, Globe, Headphones, Lock, Network, Shield, Target, TrendingUp, Users } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import YouTubeEmbed from '@/components/common/YouTubeEmbed';
+import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 import { Button } from '../../components/ui/button';
 import Link from 'next/link';
 import { ORGANIZATION_ID, SITE_URL, WEBSITE_ID } from '@/lib/authors';
 
+/**
+ * Drei Videos vom eigenen Kanal. Titel und Datum stammen aus dem Kanal-Feed,
+ * die Beschreibungen fassen den Inhalt zusammen. Die Vorschaubilder liegen
+ * lokal unter /public/images/videos.
+ */
+const KANAL_VIDEOS = [
+  {
+    id: 'CcHGtpaKPkY',
+    title: 'Wir hacken Firmen. Legal.',
+    description: 'Was ein Penetrationstest wirklich macht und wie sich zeigt, ob Ihre Systeme standhalten.',
+    uploadDate: '2026-07-13',
+  },
+  {
+    id: 'HOMcH6Bhtm0',
+    title: 'Was sind Cyberrisiken?',
+    description: 'Die größten Gefahren für Unternehmen - verständlich erklärt, ohne Fachchinesisch.',
+    uploadDate: '2026-10-12',
+  },
+  {
+    id: 'f0CCG5V_shg',
+    title: 'Cyberangriff: Wer ist verantwortlich?',
+    description: 'CTO, HR oder IT - wer im Ernstfall haftet und wer vorher handeln muss.',
+    uploadDate: '2026-10-19',
+  },
+];
+
 export default function AboutSection() {
   const t = useTranslations('about');
+  const isEnglish = useLocale() === 'en';
 
   const pathname = usePathname();
 
@@ -315,6 +343,38 @@ export default function AboutSection() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* YouTube-Kanal. Die Videos laden erst auf Klick - bis dahin steht
+          dort nur ein lokales Vorschaubild, es geht nichts an Google. */}
+      <div className="bg-black text-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="mb-8 sm:mb-10 text-center">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2">
+              {isEnglish ? 'Sodu Secure on YouTube' : 'Sodu Secure auf YouTube'}
+            </h2>
+            <p className="text-white/60 text-sm sm:text-base max-w-2xl mx-auto">
+              {isEnglish
+                ? 'Cybersecurity explained for decision-makers - short, practical, without jargon.'
+                : 'Cybersecurity für Entscheider erklärt - kurz, praxisnah und ohne Fachchinesisch.'}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+            {KANAL_VIDEOS.map((v) => (
+              <YouTubeEmbed key={v.id} video={v} />
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <a
+              href="https://www.youtube.com/@SoduSecure"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/10"
+            >
+              {isEnglish ? 'View channel on YouTube' : 'Kanal auf YouTube ansehen'}
+            </a>
           </div>
         </div>
       </div>

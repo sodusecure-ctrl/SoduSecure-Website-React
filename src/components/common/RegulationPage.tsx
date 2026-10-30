@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import YouTubeEmbed, { type YouTubeVideo } from '@/components/common/YouTubeEmbed';
 import Link from "next/link";
 import TrustedSources from "@/components/common/TrustedSources";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
@@ -106,6 +107,8 @@ export interface RegulationContent {
   sources?: { label: string; url: string }[];
   /** Zertifikats-Marquee + Kundenstimmen direkt unter dem Hero (wie Startseite) */
   showTrustSection?: boolean;
+  /** Optionales Erklaervideo vom eigenen YouTube-Kanal, vor der FAQ. */
+  video?: YouTubeVideo;
 }
 
 const SITE_URL = "https://sodusecure.com";
@@ -410,6 +413,18 @@ export default function RegulationPage({ data }: { data: RegulationContent }) {
               ))}
             </div>
           </div>
+        </section>
+      )}
+
+      {/* Erklaervideo, falls fuer diese Verordnung eines hinterlegt ist.
+          Bis zum Klick laedt nichts von YouTube - siehe YouTubeEmbed. */}
+      {data.video && (
+        <section className="max-w-3xl mx-auto px-4 pt-4 pb-8">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">Im Video erklärt</h2>
+            <p className="text-white/60 text-sm">Kurz und ohne Paragrafen-Deutsch.</p>
+          </div>
+          <YouTubeEmbed video={data.video} />
         </section>
       )}
 

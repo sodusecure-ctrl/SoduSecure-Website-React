@@ -22,6 +22,7 @@ import {
 import { SectionLabel, SectionLabelDark } from './ui';
 import { useBrand } from './BrandContext';
 import TestimonialsMarquee from './TestimonialsMarquee';
+import HeroVideo from './HeroVideo';
 import LandingFaq, { type LandingFaqItem } from '@/components/common/LandingFaq';
 
 // Muss inhaltlich mit dem faqSchema in src/app/page.tsx übereinstimmen (DE-Fragen).
@@ -670,7 +671,13 @@ export default function HomeClient() {
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
 
-        <div className="relative mx-auto max-w-7xl px-5 pt-12 pb-20 sm:px-6 sm:pt-14 sm:pb-28 lg:pt-20 lg:pb-36">
+        <div className={`relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-5 pt-12 pb-20 sm:px-6 sm:pt-14 sm:pb-28 lg:gap-12 lg:pt-20 lg:pb-36 xl:gap-16 ${
+          // Zweite Spalte nur, wenn dort auch ein Film steht. Die
+          // AuditAI-Fassung des Heros bliebe sonst mit einer leeren
+          // Spalte stehen.
+          isPentest ? 'lg:grid-cols-[minmax(0,1fr)_minmax(340px,400px)]' : ''
+        }`}>
+          <div>
           {/* Eyebrow */}
           <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
             <span>{s.productEyebrow} {isPentest ? s.toggle.pentest : s.toggle.auditai}</span>
@@ -740,6 +747,11 @@ export default function HomeClient() {
               <span key={p} className="rounded-full border border-white/15 bg-white/5 px-3 py-1">{p}</span>
             ))}
           </div>
+          </div>
+
+          {/* Imagefilm. Nur in der Pentest-Fassung des Heros - die
+              AuditAI-Fassung bewirbt ein anderes Produkt. */}
+          {isPentest && <HeroVideo locale={locale} />}
         </div>
       </section>
 
