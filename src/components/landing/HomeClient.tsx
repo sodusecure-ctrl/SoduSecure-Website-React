@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import {
@@ -650,24 +649,11 @@ export default function HomeClient() {
     <main className="bg-transparent text-white">
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
-        {/* Hintergrundfoto (Pexels-Lizenz, frei nutzbar) mit Verlauf zur Textseite */}
-        <div className="absolute inset-0 hidden sm:block" aria-hidden>
-          {/* Ein Bild fuer beide Modi. Vorher lagen hier zwei Fassungen
-              uebereinander, von denen je nach Theme eine ausgeblendet wurde -
-              das helle Motiv gilt jetzt durchgaengig. Der Verlauf darueber
-              (hero-photo-overlay) hat weiterhin eine eigene helle und dunkle
-              Fassung, die Textseite bleibt in beiden Modi lesbar. */}
-          <Image
-            src="/images/hero-cybersecurity-light.jpg"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-[72%_center] lg:object-[38%_center]"
-          />
-          <div className="absolute inset-0 hero-photo-overlay" />
-          <div className="absolute inset-x-0 bottom-0 h-28 hero-photo-bottom" />
-        </div>
+        {/* Kein Stockfoto mehr. Das Symbolbild aus der Bilddatenbank ist
+            raus - der eigene Imagefilm daneben sagt mehr ueber die Firma.
+            Den Hintergrund traegt jetzt der Aurora-Verlauf, dieselbe
+            Handschrift wie im Hero von /request-pentest. */}
+        <div className="premium-aurora" aria-hidden />
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
 
@@ -675,7 +661,9 @@ export default function HomeClient() {
           // Zweite Spalte nur, wenn dort auch ein Film steht. Die
           // AuditAI-Fassung des Heros bliebe sonst mit einer leeren
           // Spalte stehen.
-          isPentest ? 'lg:grid-cols-[minmax(0,1fr)_minmax(340px,400px)]' : ''
+          isPentest
+            ? 'lg:grid-cols-[minmax(0,1fr)_minmax(380px,440px)] xl:grid-cols-[minmax(0,1fr)_minmax(460px,560px)]'
+            : ''
         }`}>
           <div className="min-w-0">
           {/* Eyebrow */}
@@ -683,7 +671,9 @@ export default function HomeClient() {
             <span>{s.productEyebrow} {isPentest ? s.toggle.pentest : s.toggle.auditai}</span>
           </div>
 
-          <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-7xl lg:text-[80px]">
+          <h1 className={`mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-7xl ${
+              isPentest ? 'lg:text-[56px] xl:text-[68px] 2xl:text-[76px]' : 'lg:text-[80px]'
+            }`}>
             {isPentest ? (
               c.heroH1Top
             ) : (
@@ -704,13 +694,13 @@ export default function HomeClient() {
           <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <Link
               href={c.heroPrimaryHref}
-              className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
+              className="premium-cta inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-6 py-3.5 text-sm font-semibold text-white"
             >
               {c.heroPrimaryCta} <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
               href={c.heroSecondaryHref}
-              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
+              className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
             >
               {c.heroSecondaryCta} <ArrowRight className="h-4 w-4" />
             </Link>
@@ -1052,14 +1042,14 @@ export default function HomeClient() {
           <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
             <Link
               href={c.ctaPrimaryHref}
-              className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white"
+              className="premium-cta inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-6 py-3.5 text-sm font-semibold text-white"
             >
               {c.ctaPrimary} <ArrowRight className="h-4 w-4" />
             </Link>
             <button
               type="button"
               onClick={() => setBrand(isPentest ? 'auditai' : 'pentest')}
-              className="inline-flex items-center justify-center gap-1.5 rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
+              className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30 hover:bg-white/[0.06]"
             >
               {c.ctaSwitch} <ArrowRight className="h-4 w-4" />
             </button>
