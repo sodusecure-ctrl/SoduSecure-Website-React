@@ -663,7 +663,7 @@ export default function HomeClient() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[72%_center]"
+            className="object-cover object-[72%_center] lg:object-[38%_center]"
           />
           <div className="absolute inset-0 hero-photo-overlay" />
           <div className="absolute inset-x-0 bottom-0 h-28 hero-photo-bottom" />
@@ -677,7 +677,7 @@ export default function HomeClient() {
           // Spalte stehen.
           isPentest ? 'lg:grid-cols-[minmax(0,1fr)_minmax(340px,400px)]' : ''
         }`}>
-          <div>
+          <div className="min-w-0">
           {/* Eyebrow */}
           <div className="flex items-center gap-2 text-[12px] font-medium tracking-[0.04em] text-white/65">
             <span>{s.productEyebrow} {isPentest ? s.toggle.pentest : s.toggle.auditai}</span>

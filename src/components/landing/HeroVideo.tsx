@@ -77,8 +77,11 @@ export default function HeroVideo({ locale = 'de' }: { locale?: string }) {
         )}
       </div>
 
+      {/* Schriftfarbe bewusst als Literal: globals.css faerbt im hellen Modus
+          jede Klasse mit "text-white" dunkel ein (Zeile 569 f.). Auf dem
+          schwarzen Balken waere die Schrift sonst unlesbar. */}
       {!vollbild && (
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 flex items-center gap-1.5 bg-gradient-to-t from-black/75 to-transparent px-4 pb-3 pt-8 text-[11px] font-medium text-white/80">
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 flex items-center gap-1.5 bg-black/70 px-4 py-2 text-[11px] font-medium text-[#FFFFFF] backdrop-blur-sm">
           <Volume2 className="h-3.5 w-3.5" />
           {en ? 'Company film · click for sound' : 'Imagefilm · für Ton klicken'}
         </div>
