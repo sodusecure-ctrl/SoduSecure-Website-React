@@ -654,6 +654,11 @@ export default function HomeClient() {
             Den Hintergrund traegt jetzt der Aurora-Verlauf, dieselbe
             Handschrift wie im Hero von /request-pentest. */}
         <div className="premium-aurora" aria-hidden />
+        {/* Umgebungslicht links und rechts. Greift erst ab 1600 px, also
+            genau dort, wo neben dem 1280 px breiten Inhalt Leerraum
+            entsteht. Rein dekorativ. */}
+        <div className="ambient-side ambient-side-left" aria-hidden />
+        <div className="ambient-side ambient-side-right" aria-hidden />
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
 
@@ -1032,6 +1037,11 @@ export default function HomeClient() {
       {/* CTA */}
       <section className="relative overflow-hidden bg-[#0A0A0B] text-white">
         <div className="premium-aurora" aria-hidden />
+        {/* Umgebungslicht links und rechts. Greift erst ab 1600 px, also
+            genau dort, wo neben dem 1280 px breiten Inhalt Leerraum
+            entsteht. Rein dekorativ. */}
+        <div className="ambient-side ambient-side-left" aria-hidden />
+        <div className="ambient-side ambient-side-right" aria-hidden />
         <div className="absolute inset-0 premium-grid" aria-hidden />
         <div className="premium-noise" aria-hidden />
         <div className="relative mx-auto max-w-5xl px-5 py-20 text-center sm:px-6 sm:py-28">

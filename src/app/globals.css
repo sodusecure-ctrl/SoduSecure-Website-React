@@ -1047,3 +1047,51 @@ html.light .cfg .cfg-step-line.bg-white\/15 { background-color: rgba(15, 23, 42,
 html.light .cfg-opt [class*="bg-white/"] { background-color: #F1F3F7 !important; }
 html.light .cfg-opt:hover [class*="bg-white/"] { background-color: #FFE9E7 !important; }
 
+/* ══════════════════════════════════════════════════════════════════ */
+/* Seitliches Umgebungslicht auf sehr breiten Schirmen                */
+/*                                                                    */
+/* Der Inhalt endet bei 1280 px (max-w-7xl). Auf einem 4K-Schirm      */
+/* bleiben links und rechts je rund 640 px leer - der Hero steht als  */
+/* schmale Insel in viel Nichts. Diese beiden Flaechen bekommen       */
+/* einen weichen Markenschimmer, der von den Raendern hereinlaeuft.   */
+/*                                                                    */
+/* Rein dekorativ: pointer-events: none, aria-hidden im Markup, und   */
+/* erst ab 1600 px sichtbar - darunter gibt es keinen Leerraum zu     */
+/* fuellen.                                                           */
+/* ══════════════════════════════════════════════════════════════════ */
+.ambient-side {
+  display: none;
+  position: absolute;
+  top: -15%;
+  bottom: -15%;
+  width: 40vw;
+  max-width: 980px;
+  pointer-events: none;
+  filter: blur(90px);
+  z-index: 0;
+}
+
+@media (min-width: 1600px) {
+  .ambient-side { display: block; }
+}
+
+.ambient-side-left {
+  left: -12vw;
+  background:
+    radial-gradient(54% 46% at 64% 30%, rgba(255, 59, 48, 0.62), transparent 70%),
+    radial-gradient(46% 40% at 36% 74%, rgba(255, 107, 97, 0.44), transparent 72%),
+    radial-gradient(34% 30% at 52% 52%, rgba(255, 140, 120, 0.30), transparent 70%);
+}
+
+.ambient-side-right {
+  right: -12vw;
+  background:
+    radial-gradient(54% 48% at 36% 36%, rgba(255, 59, 48, 0.64), transparent 70%),
+    radial-gradient(44% 36% at 66% 78%, rgba(255, 107, 97, 0.38), transparent 72%),
+    radial-gradient(34% 30% at 48% 54%, rgba(150, 150, 165, 0.26), transparent 70%);
+}
+
+/* Heller Modus bekommt etwas weniger Deckung: Auf fast weissem Grund
+   traegt dieselbe Farbe weiter als auf Fast-Schwarz. */
+html.light .ambient-side { opacity: 0.72; }
+html:not(.light) .ambient-side { opacity: 0.95; }
