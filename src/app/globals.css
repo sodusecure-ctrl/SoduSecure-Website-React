@@ -1048,26 +1048,25 @@ html.light .cfg-opt [class*="bg-white/"] { background-color: #F1F3F7 !important;
 html.light .cfg-opt:hover [class*="bg-white/"] { background-color: #FFE9E7 !important; }
 
 /* ══════════════════════════════════════════════════════════════════ */
-/* Seitliches Umgebungslicht auf sehr breiten Schirmen                */
+/* Seitenraender auf sehr breiten Schirmen                            */
 /*                                                                    */
 /* Der Inhalt endet bei 1280 px (max-w-7xl). Auf einem 4K-Schirm      */
-/* bleiben links und rechts je rund 640 px leer - der Hero steht als  */
-/* schmale Insel in viel Nichts. Diese beiden Flaechen bekommen       */
-/* einen weichen Markenschimmer, der von den Raendern hereinlaeuft.   */
+/* bleiben links und rechts je rund 640 px leer. Statt die Flaeche    */
+/* mit Farbe zu fuellen, bekommt sie Struktur: eine Haarlinie an der  */
+/* Inhaltskante, ein feines technisches Raster und ein kaum           */
+/* sichtbarer Verlauf zum Rand hin. Das rahmt den Inhalt, statt vom   */
+/* ihm abzulenken.                                                    */
 /*                                                                    */
 /* Rein dekorativ: pointer-events: none, aria-hidden im Markup, und   */
-/* erst ab 1600 px sichtbar - darunter gibt es keinen Leerraum zu     */
-/* fuellen.                                                           */
+/* erst ab 1600 px sichtbar.                                          */
 /* ══════════════════════════════════════════════════════════════════ */
 .ambient-side {
   display: none;
   position: absolute;
-  top: -15%;
-  bottom: -15%;
-  width: 40vw;
-  max-width: 980px;
+  top: 0;
+  bottom: 0;
+  width: calc((100% - 1280px) / 2);
   pointer-events: none;
-  filter: blur(90px);
   z-index: 0;
 }
 
@@ -1075,23 +1074,40 @@ html.light .cfg-opt:hover [class*="bg-white/"] { background-color: #FFE9E7 !impo
   .ambient-side { display: block; }
 }
 
+/* Feines Raster, 56 px Teilung - sichtbar genug, um die Flaeche zu
+   ordnen, zurueckhaltend genug, um nicht als Muster aufzufallen. */
+.ambient-side::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(to right, var(--kante) 0 1px, transparent 1px 56px),
+    repeating-linear-gradient(to bottom, var(--kante) 0 1px, transparent 1px 56px);
+}
+
 .ambient-side-left {
-  left: -12vw;
-  background:
-    radial-gradient(54% 46% at 64% 30%, rgba(255, 59, 48, 0.62), transparent 70%),
-    radial-gradient(46% 40% at 36% 74%, rgba(255, 107, 97, 0.44), transparent 72%),
-    radial-gradient(34% 30% at 52% 52%, rgba(255, 140, 120, 0.30), transparent 70%);
+  left: 0;
+  border-right: 1px solid var(--kante-stark);
+}
+.ambient-side-left::before {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 70%);
+  mask-image: linear-gradient(to right, transparent, #000 70%);
 }
 
 .ambient-side-right {
-  right: -12vw;
-  background:
-    radial-gradient(54% 48% at 36% 36%, rgba(255, 59, 48, 0.64), transparent 70%),
-    radial-gradient(44% 36% at 66% 78%, rgba(255, 107, 97, 0.38), transparent 72%),
-    radial-gradient(34% 30% at 48% 54%, rgba(150, 150, 165, 0.26), transparent 70%);
+  right: 0;
+  border-left: 1px solid var(--kante-stark);
+}
+.ambient-side-right::before {
+  -webkit-mask-image: linear-gradient(to left, transparent, #000 70%);
+  mask-image: linear-gradient(to left, transparent, #000 70%);
 }
 
-/* Heller Modus bekommt etwas weniger Deckung: Auf fast weissem Grund
-   traegt dieselbe Farbe weiter als auf Fast-Schwarz. */
-html.light .ambient-side { opacity: 0.72; }
-html:not(.light) .ambient-side { opacity: 0.95; }
+html.light .ambient-side {
+  --kante: rgba(15, 23, 42, 0.045);
+  --kante-stark: rgba(15, 23, 42, 0.08);
+}
+html:not(.light) .ambient-side {
+  --kante: rgba(255, 255, 255, 0.045);
+  --kante-stark: rgba(255, 255, 255, 0.09);
+}
