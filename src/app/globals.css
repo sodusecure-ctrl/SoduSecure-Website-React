@@ -1111,3 +1111,25 @@ html:not(.light) .ambient-side {
   --kante: rgba(255, 255, 255, 0.045);
   --kante-stark: rgba(255, 255, 255, 0.09);
 }
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* Randausblendung des Bewertungs-Laufbands                           */
+/*                                                                    */
+/* Die Ausblendung lag vorher als Tailwind-Klasse am Element und war  */
+/* fest auf #0A0A0B gesetzt. Im hellen Modus wurde der Verlauf durch  */
+/* eine der html.light-Regeln auf transparent zurueckgesetzt - die    */
+/* Karten liefen dort ohne jeden Uebergang in die Panel-Kante und das */
+/* Laufband wirkte abgeschnitten statt laufend.                       */
+/*                                                                    */
+/* Jetzt haengt die Farbe am Modus: Fast-Schwarz im dunklen, Weiss im */
+/* hellen Modus - jeweils die Farbe der Flaeche dahinter.             */
+/* ══════════════════════════════════════════════════════════════════ */
+.tm-fade { --tm-fade-color: #0A0A0B; }
+html.light .tm-fade { --tm-fade-color: #FFFFFF; }
+
+.tm-fade-left {
+  background-image: linear-gradient(to right, var(--tm-fade-color), rgba(0, 0, 0, 0));
+}
+.tm-fade-right {
+  background-image: linear-gradient(to left, var(--tm-fade-color), rgba(0, 0, 0, 0));
+}

@@ -224,9 +224,12 @@ export default function TestimonialsMarquee({ isDe }: { isDe: boolean }) {
 
   return (
     <div className="testimonial-marquee group relative">
-      {/* edge fades */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-[#0A0A0B] to-transparent sm:w-28" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-[#0A0A0B] to-transparent sm:w-28" />
+      {/* Randausblendung. Die Farbe steckt in globals.css, weil sie vom Hell-/
+          Dunkelmodus abhaengt: Der fest verdrahtete Verlauf nach #0A0A0B wurde
+          im hellen Modus auf transparent zurueckgesetzt - die Karten wurden
+          dort hart von der Panel-Kante abgeschnitten statt auszublenden. */}
+      <div className="tm-fade tm-fade-left pointer-events-none absolute inset-y-0 left-0 z-10 w-16 sm:w-28" />
+      <div className="tm-fade tm-fade-right pointer-events-none absolute inset-y-0 right-0 z-10 w-16 sm:w-28" />
 
       <div
         ref={scrollRef}
