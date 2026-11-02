@@ -189,6 +189,12 @@ export default function Header() {
     ? { label: isEnglish ? 'Request pentest' : 'Pentest anfragen', href: '/request-pentest' }
     : { label: isEnglish ? 'Get started' : 'Jetzt starten', href: '/sodu-audit-ai' };
 
+  // Auf der Konfigurator-Seite selbst zeigt dieser Knopf auf genau die Seite,
+  // auf der man schon steht - und konkurriert dabei mit dem Konfigurator
+  // darunter. Dort also weglassen.
+  const aufKonfigurator = (pathname || '').replace(/\/$/, '').endsWith('/request-pentest');
+  const zeigeCta = !aufKonfigurator;
+
   const navLinks = [
     priceLink,
     { label: 'Wiki', href: '/wiki' },
@@ -425,13 +431,15 @@ export default function Header() {
               {isEnglish ? 'DE' : 'EN'}
             </button>
 
-            <Link
-              href={toLocalizedPath(cta.href)}
-              className="premium-cta inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[12px] font-semibold leading-none text-white sm:px-5 sm:text-[13px]"
-            >
-              {isPentest ? <Shield className="h-3.5 w-3.5" /> : <Sparkles className="h-3.5 w-3.5" />}
-              {cta.label}
-            </Link>
+            {zeigeCta && (
+              <Link
+                href={toLocalizedPath(cta.href)}
+                className="premium-cta inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-[12px] font-semibold leading-none text-white sm:px-5 sm:text-[13px]"
+              >
+                {isPentest ? <Shield className="h-3.5 w-3.5" /> : <Sparkles className="h-3.5 w-3.5" />}
+                {cta.label}
+              </Link>
+            )}
           </div>
         </div>
       </div>
@@ -617,13 +625,15 @@ export default function Header() {
         {/* Sticky footer actions */}
         <div className="relative border-t border-white/10 bg-[#0A0A0B]/90 px-4 py-4 backdrop-blur-sm">
           <div className="grid gap-2">
-            <Link
-              href={toLocalizedPath(cta.href)}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="premium-cta inline-flex w-full items-center justify-center gap-1.5 rounded-full px-4 py-3.5 text-[15px] font-semibold text-white"
-            >
-              {cta.label}
-            </Link>
+            {zeigeCta && (
+              <Link
+                href={toLocalizedPath(cta.href)}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="premium-cta inline-flex w-full items-center justify-center gap-1.5 rounded-full px-4 py-3.5 text-[15px] font-semibold text-white"
+              >
+                {cta.label}
+              </Link>
+            )}
             <button
               type="button"
               onClick={() => {
