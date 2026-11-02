@@ -1133,3 +1133,36 @@ html.light .tm-fade { --tm-fade-color: #FFFFFF; }
 .tm-fade-right {
   background-image: linear-gradient(to left, var(--tm-fade-color), rgba(0, 0, 0, 0));
 }
+
+/* ══════════════════════════════════════════════════════════════════ */
+/* Konfigurator auf sehr breiten Schirmen                             */
+/*                                                                    */
+/* Der Inhalt war bei 1400 px gedeckelt. Auf 3200 px gemessen waren   */
+/* das 44 Prozent der Flaeche, je 900 px blieben leer - und seit der  */
+/* Begleitspalte kamen davon nur noch 1028 px bei der Konfigurator-   */
+/* Karte an, also weniger als vor der Spalte. Darum waechst der       */
+/* Container ab 1920 px weiter mit.                                   */
+/*                                                                    */
+/* Als echte Media Query und nicht als Tailwind-Klasse, weil die      */
+/* beliebigen Breakpoints min-[1920px] hier nicht erzeugt wurden.     */
+/* ══════════════════════════════════════════════════════════════════ */
+@media (min-width: 1920px) {
+  .cfg-wide { max-width: 1640px !important; }
+}
+
+/* Ab hier reicht Breite allein nicht mehr. Der Text bleibt ja bei
+   14-15 px stehen, egal wie breit der Container wird - laengere Zeilen
+   mit gleich kleiner Schrift wirken eher noch verlorener. Deshalb wird
+   der Konfigurator als Ganzes skaliert: Schrift, Abstaende, Icons und
+   Rahmen wachsen im selben Verhaeltnis, das Layout bleibt identisch.
+   2300 px statt 2560 px als Schwelle, weil ein 4K-Schirm mit 150 %
+   Windows-Skalierung als 2554 CSS-Pixel ankommt und sonst knapp
+   darunter liegen wuerde. */
+@media (min-width: 2300px) {
+  .cfg-wide { max-width: 1640px !important; zoom: 1.10; }
+  .cfg-aside { width: 340px; }
+}
+@media (min-width: 3000px) {
+  .cfg-wide { max-width: 1720px !important; zoom: 1.22; }
+  .cfg-aside { width: 360px; }
+}
