@@ -23,6 +23,7 @@ import { useBrand } from './BrandContext';
 import TestimonialsMarquee from './TestimonialsMarquee';
 import HeroVideo from './HeroVideo';
 import LandingFaq, { type LandingFaqItem } from '@/components/common/LandingFaq';
+import YouTubeKanal from '@/components/common/YouTubeKanal';
 
 // Muss inhaltlich mit dem faqSchema in src/app/page.tsx übereinstimmen (DE-Fragen).
 const faqDe: LandingFaqItem[] = [
@@ -1073,6 +1074,13 @@ export default function HomeClient() {
         headline={isDe ? 'Häufige Fragen' : 'Frequently asked questions'}
         withSchema={false}
       />
+
+      {/* Kanal-Videos ganz unten - bewusst unterhalb der FAQ. Weiter oben
+          wuerden sie die Reihenfolge der Textsignale verschieben; die
+          Startseite ist die einzige Seite mit brauchbarer CTR, da wird an der
+          Gewichtung nichts geaendert. Die Videos laden erst auf Klick, bis
+          dahin steht dort nur ein lokales Vorschaubild. */}
+      <YouTubeKanal />
     </main>
   );
 }
