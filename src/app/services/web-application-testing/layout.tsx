@@ -5,7 +5,7 @@ import { ServiceJsonLd } from "@/lib/serviceJsonLd";
 const PATH = "/services/web-application-testing";
 const NAME = "Web Application Penetrationstest";
 const DESC =
-  "Web Application Penetrationstest nach OWASP Top 10 – manuell von OSCP-Testern, inkl. Business-Logic-Tests & Auth-Bypass. Festpreis nach Scoping, Angebot in 24 h.";
+  "Web-Pentest nach OWASP Top 10, manuell von OSCP-Testern - inklusive Business-Logik und Auth-Bypass. Festpreis nach Scoping, Angebot in 24 h.";
 
 export const metadata: Metadata = {
   title: "Web Application Penetrationstest | OWASP Top 10",

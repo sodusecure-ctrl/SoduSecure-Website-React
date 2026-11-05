@@ -6,7 +6,7 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'SOC as a Service | 24/7 Security Monitoring für KMU',
   description:
-    'SOC as a Service - Security Operations Center ohne eigenes Team: 24/7 Monitoring, Alert-Triage durch Analysten und Incident Response. NIS2-taugliche Detektion und Meldeprozesse. Jetzt anfragen.',
+    'Security Operations Center ohne eigenes Team: 24/7 Monitoring, Alert-Triage durch Analysten und Incident Response. NIS2-taugliche Meldeprozesse.',
   keywords: [
     'SOC as a Service',
     'Security Operations Center',

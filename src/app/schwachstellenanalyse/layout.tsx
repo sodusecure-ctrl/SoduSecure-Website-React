@@ -3,7 +3,7 @@ import { FAQS } from './faq';
 
 export const metadata: Metadata = {
   title: 'Schwachstellenanalyse | Sofort alle Sicherheitslücken finden',
-  description: 'Wissen Sie, wo Ihre IT-Infrastruktur angreifbar ist? Jetzt Schwachstellenanalyse beauftragen - Web, Netzwerk & Cloud. CVSS 3.1-Bericht inkl. Preis sofort berechnen - Festpreis ab 800 €.',
+  description: 'Wo ist Ihre IT angreifbar? Schwachstellenanalyse für Web, Netzwerk und Cloud mit CVSS-3.1-Bericht. Preis sofort berechnen, Festpreis ab 800 €.',
   keywords: 'Schwachstellenanalyse, Vulnerability Assessment, Sicherheitslücken finden, Schwachstellen Analyse, Sicherheitslücken Analyse, Schwachstellen Check Unternehmen',
   robots: {
     index: true,

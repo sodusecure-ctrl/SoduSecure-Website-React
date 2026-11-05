@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "TISAX Penetrationstest | Informationssicherheit Automotive",
   description:
-    "TISAX (VDA-ISA) ist der Informationssicherheits-Standard der Automobilindustrie. Wir bereiten Sie mit Gap-Analyse und Penetrationstests auf das TISAX-Assessment vor.",
+    "TISAX (VDA-ISA) ist der Informationssicherheits-Standard der Automobilindustrie. Gap-Analyse und Pentests zur Vorbereitung auf das Assessment.",
   alternates: { canonical: "/tisax" },
 };
 

@@ -5,7 +5,7 @@ import { ServiceJsonLd } from "@/lib/serviceJsonLd";
 const PATH = "/services/security-audit";
 const NAME = "Security Audit";
 const DESC =
-  "Security Audit für NIS2, ISO 27001 & DORA – manuelle, prüfsichere Bewertung Ihrer IT von zertifizierten Experten. Festpreis & prüffähiger Bericht, Angebot in 24 h.";
+  "Security Audit für NIS2, ISO 27001 und DORA - manuelle, prüfsichere Bewertung Ihrer IT. Festpreis und prüffähiger Bericht, Angebot in 24 h.";
 
 export const metadata: Metadata = {
   title: "Security Audit | NIS2 & ISO 27001 konform",

@@ -3,7 +3,7 @@ import { FAQS } from './faq';
 
 export const metadata: Metadata = {
   title: 'Sicherheitsaudit Unternehmen | IT Sicherheitsaudit',
-  description: 'IT Sicherheitsaudit für Ihr Unternehmen. Sodu Secure führt manuelle Sicherheitsaudits durch - NIS2-, ISO 27001- & DSGVO-konform. Festpreis, schnelle Abwicklung. Angebot in 24 h.',
+  description: 'Manuelles IT-Sicherheitsaudit für Ihr Unternehmen - NIS2-, ISO-27001- und DSGVO-konform. Festpreis, schnelle Abwicklung, Angebot in 24 Stunden.',
   keywords: 'Sicherheitsaudit, IT Sicherheitsaudit, Security Audit Unternehmen, Sicherheitsprüfung IT, IT Audit Firma, Sicherheitsüberprüfung Unternehmen',
   robots: {
     index: true,

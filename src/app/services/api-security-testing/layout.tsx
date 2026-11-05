@@ -5,7 +5,7 @@ import { ServiceJsonLd } from "@/lib/serviceJsonLd";
 const PATH = "/services/api-security-testing";
 const NAME = "API Penetrationstest";
 const DESC =
-  "API Penetrationstest nach OWASP API Top 10 – REST, GraphQL & SOAP manuell geprüft auf Auth-Fehler, BOLA & Injection. Festpreis nach Scoping, Angebot in 24 h.";
+  "API-Pentest nach OWASP API Top 10 - REST, GraphQL und SOAP manuell geprüft auf Auth-Fehler, BOLA und Injection. Festpreis, Angebot in 24 h.";
 
 export const metadata: Metadata = {
   title: "API Penetrationstest | OWASP API Top 10",

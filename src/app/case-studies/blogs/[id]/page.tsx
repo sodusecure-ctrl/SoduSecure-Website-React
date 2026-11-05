@@ -71,7 +71,12 @@ export default function BlogArticleDetail() {
       24: ['/pentest-preisindex', '/penetrationstest-anbieter'],
       25: ['/pci-dss-penetrationstest', '/iso-27001-pentest-anforderungen'],
     };
-    return mapping[id] || ['/case-studies/blogs/2', '/case-studies/blogs/2'];
+    // Rueckfall fuer Artikel ohne eigene Zuordnung. Zeigte vorher zweimal auf
+    // /case-studies/blogs/2 - einen englischen Altartikel, der inzwischen auf
+    // noindex steht. Deutsche Leser landeten dort auf einem englischen Text,
+    // und die interne Verlinkung lief ins Leere. Jetzt auf die beiden Seiten,
+    // die Verlinkung am besten gebrauchen koennen.
+    return mapping[id] || ['/penetrationstest', '/pentest-kosten'];
   };
   const relatedArticleRoutes = getRelatedArticleRoutes(blogId);
 

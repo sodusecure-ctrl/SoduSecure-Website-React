@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "AWS Penetrationstest | Cloud-Sicherheit für Amazon Web Services",
   description:
-    "AWS Penetrationstest: Wir prüfen IAM, S3, EC2 & Konfiguration Ihrer Amazon-Web-Services-Umgebung auf ausnutzbare Schwachstellen. OSCP-zertifiziert, DSGVO-konform.",
+    "AWS-Pentest: Wir prüfen IAM, S3, EC2 und die Konfiguration Ihrer AWS-Umgebung auf ausnutzbare Schwachstellen. OSCP-zertifiziert, DSGVO-konform.",
   alternates: { canonical: "/services/aws-penetrationstest" },
 };
 

@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "DSGVO-Penetrationstest | Art. 32 nachweisen",
   description:
-    "DSGVO Art. 32 verlangt regelmäßige Überprüfung technischer Maßnahmen. Penetrationstest als Wirksamkeitsnachweis - individuell kalkuliert, meist 4.000 bis 20.000 €.",
+    "DSGVO Art. 32 verlangt regelmäßige Überprüfung technischer Maßnahmen. Der Pentest als Wirksamkeitsnachweis, meist 4.000 bis 20.000 €.",
   alternates: { canonical: "/dsgvo-penetrationstest" },
 };
 

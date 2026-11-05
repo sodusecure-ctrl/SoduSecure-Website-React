@@ -6,7 +6,7 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'Schwachstellenscan als Service | Regelmäßig & validiert',
   description:
-    'Regelmäßiger Schwachstellenscan für Unternehmen - automatisiert gescannt, von Pentestern validiert. Priorisierte Ergebnisse statt Rohberichte. Monatlich oder quartalsweise. Jetzt anfragen.',
+    'Regelmäßiger Schwachstellenscan - automatisiert gescannt, von Pentestern validiert. Priorisierte Ergebnisse statt Rohberichte, monatlich oder quartalsweise.',
   keywords: [
     'Schwachstellenscan',
     'Vulnerability Scan',

@@ -18,12 +18,27 @@ export interface BlogPost {
   readTime: string;
   image: string;
   keywords: string[];
+  /**
+   * Haelt den Artikel aus dem Index und aus der Sitemap heraus.
+   *
+   * Gesetzt bei den Artikeln 1-12: Sie stammen aus der englischen Erstfassung
+   * der Website und stehen unuebersetzt auf einer Domain, die auf Deutschland
+   * ausgerichtet ist. Google hat sie ueber Monate gecrawlt und keinen einzigen
+   * davon indexiert - sie haben also nur Crawl-Budget gekostet, das den
+   * deutschen Seiten fehlte.
+   *
+   * Die Artikel bleiben erreichbar und verlinkt, nichts ist geloescht. Wird
+   * einer uebersetzt, genuegt es, diese Zeile zu entfernen und ihm einen
+   * sprechenden Slug zu geben.
+   */
+  noindex?: boolean;
 }
 
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
     slug: '1',
+    noindex: true,
     title: 'Understanding SQL Injection: A Deep Dive into Database Security',
     description: 'Learn about SQL injection vulnerabilities, how they work, and comprehensive strategies to protect your database from attacks. Essential reading for developers and security professionals.',
     category: 'Web Security',
@@ -36,6 +51,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 2,
     slug: '2',
+    noindex: true,
     title: 'Zero-Day Vulnerabilities: Detection and Response Strategies',
     description: 'Explore zero-day vulnerabilities, their impact on cybersecurity, and effective strategies for detection and response in enterprise environments.',
     category: 'Threat Intelligence',
@@ -48,6 +64,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 3,
     slug: '3',
+    noindex: true,
     title: 'API Security Best Practices for Modern Applications',
     description: 'Comprehensive guide to securing REST and GraphQL APIs. Learn authentication, authorization, rate limiting, and common API vulnerabilities.',
     category: 'API Security',
@@ -60,6 +77,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 4,
     slug: '4',
+    noindex: true,
     title: 'Mobile App Security: iOS vs Android Threat Landscape',
     description: 'Compare security challenges in iOS and Android platforms. Learn platform-specific vulnerabilities and security best practices for mobile development.',
     category: 'Mobile Security',
@@ -72,6 +90,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 5,
     slug: '5',
+    noindex: true,
     title: 'Cloud Security Fundamentals: AWS, Azure, and GCP',
     description: 'Essential guide to cloud security across major platforms. Learn about IAM, encryption, network security, and compliance in cloud environments.',
     category: 'Cloud Security',
@@ -84,6 +103,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 6,
     slug: '6',
+    noindex: true,
     title: 'Social Engineering: The Human Factor in Cybersecurity',
     description: 'Understand social engineering tactics, phishing attacks, and how to build a security-aware culture in your organization.',
     category: 'Security Awareness',
@@ -96,6 +116,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 7,
     slug: '7',
+    noindex: true,
     title: 'React4Shell Vulnerability: Analysis and Mitigation',
     description: 'Deep dive into the React4Shell vulnerability, its impact on React applications, and comprehensive mitigation strategies for developers.',
     category: 'Vulnerabilities',
@@ -108,6 +129,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 8,
     slug: '8',
+    noindex: true,
     title: 'OpenClaw Framework: Advanced Penetration Testing',
     description: 'Introduction to the OpenClaw penetration testing framework. Learn advanced techniques for security assessments and vulnerability discovery.',
     category: 'Pentesting Tools',
@@ -120,6 +142,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 9,
     slug: '9',
+    noindex: true,
     title: 'SME Penetration Testing: Affordable Security for Small Business',
     description: 'Cost-effective penetration testing strategies for small and medium enterprises. Learn how SMEs can implement professional security testing on a budget.',
     category: 'SME Security',
@@ -132,6 +155,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 10,
     slug: '10',
+    noindex: true,
     title: 'OWASP Top 10: New Threats and Mitigations',
     description: 'Comprehensive analysis of the OWASP Top 10 update. Discover new threats, changed rankings, and updated mitigation strategies.',
     category: 'OWASP',
@@ -144,6 +168,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 11,
     slug: '11',
+    noindex: true,
     title: 'OSCP Certification Path: Complete Guide to Success',
     description: 'Your roadmap to OSCP certification. Study materials, lab exercises, exam tips, and career advancement strategies for aspiring penetration testers.',
     category: 'Certifications',
@@ -156,6 +181,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 12,
     slug: '12',
+    noindex: true,
     title: 'GDPR & Penetration Testing: How Compliance and Security Work Together',
     description: 'Discover how GDPR (DSGVO) and penetration testing align. Learn why security testing supports Article 32, reduces breach risk, and proves data protection in practice.',
     category: 'Compliance & Pentesting',
@@ -169,7 +195,7 @@ export const blogPosts: BlogPost[] = [
     id: 13,
     slug: '5-sicherheitsluecken-kmu',
     title: '5 Sicherheitslücken, die wir bei nahezu jedem KMU finden',
-    description: 'Cyberangriffe treffen längst nicht mehr nur Konzerne. Welche 5 kritischen Sicherheitslücken wir bei nahezu jedem KMU entdecken - und wie Sie sich schützen können, bevor es teuer wird.',
+    description: 'Fünf kritische Sicherheitslücken, die wir bei nahezu jedem KMU finden - und wie Sie sich schützen, bevor es teuer wird.',
     category: 'KMU Security',
     author: 'Kerim K.',
     date: '2026-02-26',
@@ -181,7 +207,7 @@ export const blogPosts: BlogPost[] = [
     id: 14,
     slug: 'pentest-berlin-leitfaden',
     title: 'Pentest Berlin: Der vollständige Leitfaden für Berliner Unternehmen',
-    description: 'Was kostet ein Pentest in Berlin? Was testet man wie? Welche Berliner Unternehmen brauchen einen Penetrationstest - und warum jetzt? Der komplette Guide von Sodu Secure.',
+    description: 'Was ein Pentest in Berlin kostet, was wie getestet wird und welche Berliner Unternehmen einen brauchen. Der komplette Leitfaden.',
     category: 'Pentest Berlin',
     author: 'Kerim K.',
     date: '2026-02-27',
@@ -205,7 +231,7 @@ export const blogPosts: BlogPost[] = [
     id: 15,
     slug: 'pentest-ablauf',
     title: 'Pentest Ablauf: Wie läuft ein Penetrationstest wirklich ab?',
-    description: 'Schritt für Schritt erklärt: Wie läuft ein professioneller Penetrationstest ab? Von der Auftragsklärung über die aktive Testphase bis zum fertigen Report - der vollständige Pentest-Ablauf.',
+    description: 'Wie ein professioneller Penetrationstest abläuft: von der Auftragsklärung über die aktive Testphase bis zum fertigen Bericht, Schritt für Schritt.',
     category: 'Pentest Ablauf',
     author: 'Kerim K.',
     date: '2026-02-27',
@@ -228,7 +254,7 @@ export const blogPosts: BlogPost[] = [
     id: 16,
     slug: 'it-security-check-firma',
     title: 'IT Security Check Firma: Was ist ein IT-Sicherheitscheck für Unternehmen?',
-    description: 'Was ist ein IT Security Check für Unternehmen? Welche Bereiche werden geprüft, was kostet er und wann braucht Ihr Unternehmen einen IT-Sicherheitscheck? Der vollständige Praxisleitfaden für Firmen jeder Größe.',
+    description: 'Was ein IT Security Check prüft, was er kostet und wann Ihr Unternehmen einen braucht. Der Praxisleitfaden für Firmen jeder Größe.',
     category: 'IT Security Check',
     author: 'Kerim K.',
     date: '2026-02-27',
@@ -253,7 +279,7 @@ export const blogPosts: BlogPost[] = [
     id: 17,
     slug: 'it-security-audit',
     title: 'IT Security Audit & IS Sicherheitsaudit: Der vollständige Leitfaden für Unternehmen',
-    description: 'Was ist ein IT Security Audit? Was unterscheidet ein IT-Sicherheitsaudit vom IS-Sicherheitsaudit? Wie läuft ein Audit ab, was kostet es - und wie bereitet sich Ihr Unternehmen optimal vor? Alles in einem Guide.',
+    description: 'Was ein IT Security Audit ist, was es vom IS-Sicherheitsaudit unterscheidet, wie es abläuft und was es kostet. Der vollständige Leitfaden.',
     category: 'IT Security Audit',
     author: 'Kerim K.',
     date: '2026-02-27',
@@ -279,7 +305,7 @@ export const blogPosts: BlogPost[] = [
     id: 18,
     slug: 'bsi-tr-03161-einfach-erklaert',
     title: 'BSI TR-03161 einfach erklärt: Was DiGA-Hersteller jetzt wissen müssen',
-    description: 'Die BSI TR-03161 ist seit 2025 Pflicht für DiGA-Hersteller. Erfahren Sie was die Richtlinie bedeutet, welche drei Teile sie umfasst und was passiert wenn Sie die Anforderungen nicht erfüllen.',
+    description: 'Die BSI TR-03161 ist seit 2025 Pflicht für DiGA-Hersteller. Was die Richtlinie verlangt, welche drei Teile sie hat und was bei Verstößen passiert.',
     category: 'BSI TR-03161',
     author: 'Kerim K.',
     date: '2026-04-19',
@@ -301,7 +327,7 @@ export const blogPosts: BlogPost[] = [
     id: 19,
     slug: 'tr-03161-zertifizierung-vorbereitung',
     title: 'So bereiten Sie Ihre Gesundheitsanwendung auf die TR-03161-Zertifizierung vor',
-    description: 'Praxisorientierter Leitfaden für DiGA-Hersteller: Welche Schritte sind nötig, welche Stolpersteine gibt es und warum ist ein vorbereitender Pentest sinnvoll?',
+    description: 'Leitfaden für DiGA-Hersteller: welche Schritte nötig sind, welche Stolpersteine es gibt und warum ein vorbereitender Pentest sinnvoll ist.',
     category: 'BSI TR-03161',
     author: 'Kerim K.',
     date: '2026-04-19',
@@ -322,7 +348,7 @@ export const blogPosts: BlogPost[] = [
     id: 20,
     slug: 'mobile-app-security-gesundheitswesen-tr-03161',
     title: 'Mobile App Security im Gesundheitswesen: Die häufigsten Schwachstellen nach BSI TR-03161',
-    description: 'Technischer Überblick über die häufigsten Sicherheitsprobleme in mobilen Gesundheitsanwendungen - und wie eine Prüfung nach BSI TR-03161 hilft, diese zu identifizieren.',
+    description: 'Die häufigsten Sicherheitsprobleme in mobilen Gesundheitsanwendungen - und wie eine Prüfung nach BSI TR-03161 sie aufdeckt.',
     category: 'BSI TR-03161',
     author: 'Kerim K.',
     date: '2026-04-19',
@@ -343,7 +369,7 @@ export const blogPosts: BlogPost[] = [
     id: 21,
     slug: 'was-kostet-ein-penetrationstest',
     title: 'Was kostet ein Penetrationstest? Ehrliche Marktübersicht',
-    description: 'Was kostet ein Penetrationstest in Deutschland? Ehrliche Marktübersicht mit belegten Preisspannen - Tagessätze, Kosten nach Testart, die wichtigsten Kostenfaktoren und Warnsignale bei Billigangeboten.',
+    description: 'Was ein Penetrationstest in Deutschland kostet: belegte Preisspannen, Tagessätze, Kosten nach Testart und Warnsignale bei Billigangeboten.',
     category: 'Pentest Kosten',
     author: 'Sodu Secure Team',
     date: '2026-09-29',
@@ -364,7 +390,7 @@ export const blogPosts: BlogPost[] = [
     id: 22,
     slug: 'pentest-anbieter-auswaehlen',
     title: 'Pentest Anbieter auswählen: Kriterien und Checkliste',
-    description: 'Pentest Anbieter auswählen: Die wichtigsten Kriterien, die offizielle BSI-Liste zertifizierter IS-Penetrationstest-Dienstleister, Red Flags und eine Checkliste mit 8 Fragen vor der Beauftragung.',
+    description: 'Die wichtigsten Auswahlkriterien, die BSI-Liste zertifizierter Dienstleister, Warnsignale und acht Fragen vor der Beauftragung.',
     category: 'Pentest Anbieter',
     author: 'Sodu Secure Team',
     date: '2026-09-28',
@@ -385,7 +411,7 @@ export const blogPosts: BlogPost[] = [
     id: 23,
     slug: 'pentest-vs-schwachstellenscan',
     title: 'Pentest vs. Schwachstellenscan: Der Unterschied',
-    description: 'Pentest vs. Schwachstellenscan: Was unterscheidet die manuelle Angriffssimulation vom automatisierten Scan? Der direkte Vergleich mit Kosten, Aussagekraft, False Positives und Einsatzempfehlung.',
+    description: 'Manuelle Angriffssimulation oder automatisierter Scan? Der direkte Vergleich mit Kosten, Aussagekraft, False Positives und Einsatzempfehlung.',
     category: 'Pentest Grundlagen',
     author: 'Sodu Secure Team',
     date: '2026-09-27',
@@ -406,7 +432,7 @@ export const blogPosts: BlogPost[] = [
     id: 24,
     slug: 'it-sicherheitstest-planen',
     title: 'IT-Sicherheitstest planen: Checkliste und Kosten',
-    description: 'IT-Sicherheitstest planen: Welche Testart zu welchem Risikoprofil passt, was die Prüfung realistisch kostet, wie Sie den Prüfumfang sauber abgrenzen und sieben Fragen für die Anbieterauswahl.',
+    description: 'Welche Testart zu welchem Risiko passt, was die Prüfung kostet, wie Sie den Prüfumfang abgrenzen - und sieben Fragen für die Anbieterauswahl.',
     category: 'Pentest Grundlagen',
     author: 'Sodu Secure Team',
     date: '2026-10-15',
@@ -427,7 +453,7 @@ export const blogPosts: BlogPost[] = [
     id: 25,
     slug: 'penetrationstest-pci-dss-iso-27001',
     title: 'So beauftragen Sie einen rechtskonformen Penetrationstest: Schritt für Schritt für PCI-DSS und ISO 27001',
-    description: 'Was PCI-DSS Requirement 11.4 und ISO 27001 vom Penetrationstest verlangen, woran auditfähige Berichte erkennbar sind und wie Sie Anbieter sachlich vergleichen.',
+    description: 'Was PCI-DSS 11.4 und ISO 27001 vom Penetrationstest verlangen, woran auditfähige Berichte erkennbar sind und wie Sie Anbieter vergleichen.',
     category: 'Compliance',
     author: 'Sodu Secure Team',
     date: '2026-10-23',

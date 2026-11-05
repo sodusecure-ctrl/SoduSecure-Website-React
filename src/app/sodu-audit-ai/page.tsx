@@ -6,7 +6,7 @@ import { FAQ_DE } from './faq';
 export const metadata: Metadata = {
   title: 'Sodu /AuditAI · KI-Code-Audit ab 99 € pro Monat',
   description:
-    'Sodu /AuditAI · KI-gestütztes Code-Audit für Production-Repos. Wöchentlicher Bericht in DE & EN, fertige Fix-Vorschläge, jederzeit kündbar. Made in Germany.',
+    'KI-gestütztes Code-Audit für Produktiv-Repositories. Wöchentlicher Bericht auf Deutsch und Englisch, fertige Fix-Vorschläge, jederzeit kündbar.',
   alternates: { canonical: 'https://sodusecure.com/sodu-audit-ai' },
   robots: { index: true, follow: true },
   openGraph: {

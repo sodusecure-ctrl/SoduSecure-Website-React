@@ -5,7 +5,7 @@ import { ServiceJsonLd } from "@/lib/serviceJsonLd";
 const PATH = "/services/cloud-devops-testing";
 const NAME = "Cloud Penetrationstest";
 const DESC =
-  "Cloud Penetrationstest für AWS, Azure & GCP – IAM-Eskalation, Fehlkonfigurationen & CI/CD-Secrets manuell aufgedeckt. Festpreis nach Scoping, Angebot in 24 h.";
+  "Cloud-Pentest für AWS, Azure und GCP - IAM-Eskalation, Fehlkonfigurationen und CI/CD-Secrets manuell aufgedeckt. Festpreis, Angebot in 24 h.";
 
 export const metadata: Metadata = {
   title: "Cloud Penetrationstest | AWS, Azure & GCP",

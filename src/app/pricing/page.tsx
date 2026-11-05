@@ -5,7 +5,7 @@ import { PENTEST_FAQ_DE } from './faq';
 export const metadata: Metadata = {
   title: 'Preise - Sodu Secure · Pentest & AuditAI',
   description:
-    'Automatisierter Schwachstellen-Scan ab 1.499 €, manuelle Penetrationstests individuell (Preis ermitteln) und AuditAI-Wochenbericht ab 99 €/Monat. Brand-Toggle wechselt die Pakete.',
+    'Schwachstellen-Scan ab 1.499 €, manuelle Penetrationstests individuell kalkuliert und AuditAI ab 99 € im Monat. Alle Pakete im Überblick.',
   alternates: { canonical: '/pricing' },
 };
 

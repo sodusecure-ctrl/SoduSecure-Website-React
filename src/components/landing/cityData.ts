@@ -152,7 +152,7 @@ const hamburg: CityData = {
   ],
   metaTitle: "Penetration Testing Hamburg | Zertifizierte Pentester vor Ort & remote",
   metaDescription:
-    "Penetration Testing in Hamburg von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Logistik, Handel & Industrie, DSGVO-konform, individuell kalkuliert - Schwachstellenscan ab 1.499 €.",
+    "Manuelle Pentests in Hamburg von OSCP-zertifizierten Testern. Für Logistik, Handel und Industrie, DSGVO-konform. Schwachstellenscan ab 1.499 €.",
   keywords: [
     "penetration testing hamburg",
     "pentest hamburg",
@@ -213,7 +213,7 @@ const muenchen: CityData = {
   ],
   metaTitle: "Penetration Testing München | Zertifizierte Pentester vor Ort & remote",
   metaDescription:
-    "Penetration Testing in München von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Versicherer, Automotive & Tech, DORA- & DSGVO-konform, individuell kalkuliert - Scan ab 1.499 €.",
+    "Manuelle Pentests in München von OSCP-zertifizierten Testern. Für Versicherer, Automotive und Tech, DORA- und DSGVO-konform. Scan ab 1.499 €.",
   keywords: [
     "penetration testing münchen",
     "pentest münchen",
@@ -274,7 +274,7 @@ const stuttgart: CityData = {
   ],
   metaTitle: "Penetration Testing Stuttgart | Zertifizierte Pentester vor Ort & remote",
   metaDescription:
-    "Penetration Testing in Stuttgart von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Automotive, Maschinenbau & Mittelstand, TISAX- & DSGVO-konform, individuell kalkuliert - Scan ab 1.499 €.",
+    "Manuelle Pentests in Stuttgart von OSCP-zertifizierten Testern. Für Automotive, Maschinenbau und Mittelstand, TISAX-konform. Scan ab 1.499 €.",
   keywords: [
     "penetration testing stuttgart",
     "pentest stuttgart",
@@ -335,7 +335,7 @@ const koeln: CityData = {
   ],
   metaTitle: "Penetration Testing Köln | Zertifizierte Pentester vor Ort & remote",
   metaDescription:
-    "Penetration Testing in Köln von OSCP-zertifizierten Pentestern. Sodu Secure: manuelle Tests für Medien, Versicherer & Games, DSGVO-konform, individuell kalkuliert - Schwachstellenscan ab 1.499 €.",
+    "Manuelle Pentests in Köln von OSCP-zertifizierten Testern. Für Medien, Versicherer und Games, DSGVO-konform. Schwachstellenscan ab 1.499 €.",
   keywords: [
     "penetration testing köln",
     "pentest köln",

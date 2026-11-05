@@ -3,7 +3,7 @@ import { FAQS } from './faq';
 
 export const metadata: Metadata = {
   title: 'Hacker-Simulation | Angriff sofort simulieren lassen',
-  description: 'Testen Sie jetzt, ob Ihr Unternehmen einem echten Hackerangriff stannhält. Realistische Hacker-Simulation (Ethical Hacking) - OSCP-zertifiziert. Preis sofort online berechnen. Angebot in 24 h.',
+  description: 'Hält Ihr Unternehmen einem echten Angriff stand? Realistische Hacker-Simulation von OSCP-zertifizierten Testern. Preis online berechnen, Angebot in 24 h.',
   keywords: 'Hacker Simulation, Hacker Angriff simulieren, Ethical Hacking Firma, Hacking Test Unternehmen, simulierter Hackerangriff, Cyberangriff simulieren',
   robots: {
     index: true,

@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "PCI DSS Penetrationstest | Pflicht nach Requirement 11.4",
   description:
-    "PCI DSS verlangt regelmäßige interne und externe Penetrationstests (Requirement 11.4). Wir liefern PCI-konforme Pentests inkl. Segmentierungstest - nach v4.0.",
+    "PCI DSS verlangt regelmäßige interne und externe Penetrationstests (Req. 11.4). Wir liefern PCI-konforme Pentests inklusive Segmentierungstest.",
   alternates: { canonical: "/pci-dss-penetrationstest" },
 };
 

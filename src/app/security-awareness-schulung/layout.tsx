@@ -6,7 +6,7 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'Security Awareness Schulung | Individuelles Training',
   description:
-    'Individuelle Security Awareness Schulungen für Mitarbeiter, Entwickler und Führungskräfte - vor Ort oder remote, mit Wissenstest und Compliance-Nachweis für NIS2 und ISO 27001. Jetzt anfragen.',
+    'Security-Awareness-Schulungen für Mitarbeiter, Entwickler und Führungskräfte - vor Ort oder remote, mit Wissenstest und Nachweis für NIS2 und ISO 27001.',
   keywords: [
     'Security Awareness Schulung',
     'Security Awareness Training',

@@ -5,7 +5,7 @@ import { ServiceJsonLd } from "@/lib/serviceJsonLd";
 const PATH = "/services/mobile-app-testing";
 const NAME = "Mobile App Penetrationstest";
 const DESC =
-  "Mobile App Penetrationstest für iOS & Android nach OWASP MASVS – manuell, inkl. Reverse Engineering & Datenschutz-Checks. Festpreis nach Scoping, Angebot in 24 h.";
+  "Mobile-App-Pentest für iOS und Android nach OWASP MASVS - manuell, inklusive Reverse Engineering und Datenschutz-Checks. Angebot in 24 h.";
 
 export const metadata: Metadata = {
   title: "Mobile App Penetrationstest | iOS & Android",

@@ -3,7 +3,7 @@ import { FAQS } from './faq';
 
 export const metadata: Metadata = {
   title: 'IT Sicherheit testen | IT Sicherheitstest für Unternehmen',
-  description: 'IT Sicherheit testen lassen - Web, Netzwerk, Active Directory, Cloud. Sodu Secure führt manuelle IT Sicherheitstests durch. Schwachstellenscan ab 1.499 €, Pentest individuell kalkuliert. Jetzt konfigurieren.',
+  description: 'IT-Sicherheit testen lassen - Web, Netzwerk, Active Directory und Cloud, manuell geprüft. Schwachstellenscan ab 1.499 €, Pentest individuell.',
   keywords: 'IT Sicherheit testen, IT Sicherheitstest, Netzwerk Sicherheitstest, IT Sicherheitsprüfung, Sicherheitstest Unternehmen, IT Sicherheit überprüfen',
   robots: {
     index: true,

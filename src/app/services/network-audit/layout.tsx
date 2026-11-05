@@ -5,7 +5,7 @@ import { ServiceJsonLd } from "@/lib/serviceJsonLd";
 const PATH = "/services/network-audit";
 const NAME = "Netzwerk Penetrationstest";
 const DESC =
-  "Netzwerk Penetrationstest intern & extern – Firewalls, Segmentierung & exponierte Dienste systematisch geprüft von OSCP-Testern. Festpreis, Angebot in 24 h.";
+  "Netzwerk-Pentest intern und extern: Firewalls, Segmentierung und exponierte Dienste systematisch geprüft von OSCP-Testern. Angebot in 24 h.";
 
 export const metadata: Metadata = {
   title: "Netzwerk Penetrationstest | intern & extern",

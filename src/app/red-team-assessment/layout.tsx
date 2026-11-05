@@ -6,7 +6,7 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'Red Team Assessment | Realistische Angriffssimulation',
   description:
-    'Red Team Assessment für Unternehmen: Vollständige Angriffssimulation durch ein dediziertes Red Team. MITRE ATT&CK-Framework, NIS2/DORA-konform. Testen Sie Ihre echte Verteidigungsfähigkeit.',
+    'Vollständige Angriffssimulation durch ein dediziertes Red Team. Nach MITRE ATT&CK, NIS2- und DORA-konform. Testen Sie Ihre echte Verteidigungsfähigkeit.',
   keywords: [
     'Red Team Assessment',
     'Red Teaming Deutschland',

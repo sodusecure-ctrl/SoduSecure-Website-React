@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "TLPT | Threat-Led Penetration Testing (DORA)",
   description:
-    "Was ist TLPT? Bedrohungsgeleitetes Penetration Testing nach DORA (Art. 26) und TIBER-EU - Pflicht für bedeutende Finanzunternehmen. Wir liefern die technischen Angriffssimulationen.",
+    "Bedrohungsgeleitetes Penetration Testing nach DORA Art. 26 und TIBER-EU - Pflicht für bedeutende Finanzunternehmen. Wir liefern die Angriffssimulation.",
   alternates: { canonical: "/tlpt" },
 };
 

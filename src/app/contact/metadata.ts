@@ -4,7 +4,7 @@ const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Pentest anfragen | Kostenlose Beratung',
-  description: 'Pentest anfragen: Kostenlose Erstberatung & Festpreis-Angebot in 24h. Zertifizierte Pentester, transparente Kosten. Oder direkt Pentest konfigurieren & Preis berechnen.',
+  description: 'Pentest anfragen: kostenlose Erstberatung und Festpreis-Angebot in 24 Stunden. Oder direkt online konfigurieren und den Preis sofort berechnen.',
   keywords: [
     'contact cybersecurity',
     'penetration testing quote',

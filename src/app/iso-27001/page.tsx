@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "ISO 27001: Zertifizierung, Anforderungen & Pentest",
   description:
-    "Was ist ISO 27001? Anforderungen, Ablauf der Zertifizierung und die Rolle von Penetrationstests. Wir bringen Sie mit Gap-Analyse, Pentests und prüffähigen Nachweisen zur ISO-27001-Konformität.",
+    "Anforderungen, Ablauf der Zertifizierung und die Rolle von Penetrationstests. Gap-Analyse, Pentests und prüffähige Nachweise für Ihr Audit.",
   alternates: { canonical: "/iso-27001" },
 };
 

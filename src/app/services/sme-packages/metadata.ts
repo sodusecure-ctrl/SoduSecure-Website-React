@@ -5,7 +5,7 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'KMU Pentest-Paket | Komplett ab 8.000 € | Jetzt online konfigurieren',
   description:
-    'Alles-inklusive Pentest für KMUs: Externer Pentest + Phishing + Active Directory. Kein Tageshonorar - transparenter Festpreis ab 8.000 €. Jetzt online konfigurieren & Preis sofort berechnen.',
+    'Alles-inklusive-Pentest für KMU: externer Pentest, Phishing und Active Directory. Kein Tageshonorar, Festpreis ab 8.000 €. Online konfigurieren.',
   keywords: [
     // Primary
     'Pentest KMU',

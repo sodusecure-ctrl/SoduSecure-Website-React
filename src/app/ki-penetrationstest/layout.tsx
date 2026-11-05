@@ -6,7 +6,7 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'KI-Penetrationstest | LLMs, RAG & KI-Agenten absichern',
   description:
-    'KI-Penetrationstest für LLM-Anwendungen, RAG-Systeme und KI-Agenten - Prompt Injection, Datenabfluss und Tool-Missbrauch nach OWASP LLM Top 10. Von zertifizierten Pentestern. Jetzt anfragen.',
+    'Pentest für LLM-Anwendungen, RAG-Systeme und KI-Agenten: Prompt Injection, Datenabfluss und Tool-Missbrauch nach OWASP LLM Top 10. Jetzt anfragen.',
   keywords: [
     'KI Penetrationstest',
     'LLM Pentest',

@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "Active Directory Pentest | Windows-Domäne absichern",
   description:
-    "Active Directory Pentest: Wir finden Angriffspfade in Ihrer Windows-Domäne - Kerberoasting, ACL-Missbrauch, Lateral Movement bis Domain Admin. OSCP-zertifiziert, individuell kalkuliert.",
+    "Wir finden Angriffspfade in Ihrer Windows-Domäne: Kerberoasting, ACL-Missbrauch, laterale Bewegung bis Domain Admin. OSCP-zertifiziert, Festpreis.",
   alternates: { canonical: "/services/active-directory" },
 };
 

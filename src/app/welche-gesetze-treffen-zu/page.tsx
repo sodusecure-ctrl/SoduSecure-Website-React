@@ -9,7 +9,7 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'Welche Gesetze treffen auf mein Unternehmen zu? NIS2, DSGVO, DORA & MDR Check',
   description:
-    'Compliance-Schnellcheck in 60 Sekunden: Beantworten Sie 5 Fragen zu Branche, Größe und Daten und erfahren Sie sofort, ob NIS2, DSGVO, DORA oder MDR auf Ihr Unternehmen zutrifft - mit Rechtsgrundlage. Kostenlos & ohne Anmeldung.',
+    'Fünf Fragen zu Branche, Größe und Daten - und Sie wissen, ob NIS2, DSGVO, DORA oder MDR auf Sie zutrifft. Mit Rechtsgrundlage, ohne Anmeldung.',
   keywords: [
     'welche gesetze treffen auf mich zu', 'bin ich von NIS2 betroffen', 'NIS2 Betroffenheit prüfen',
     'NIS2 Betroffenheitscheck', 'DORA Betroffenheit', 'MDR Pflicht', 'DSGVO Pflicht',

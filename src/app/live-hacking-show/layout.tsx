@@ -6,7 +6,7 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'Live Hacking Show | Cyberangriffe live erleben',
   description:
-    'Live Hacking Show für Events, Teams und Management - echte Angriffe live vorgeführt: Phishing, Passwort-Cracking, WLAN-Angriffe, Deepfakes. Vor Ort oder remote. Jetzt Termin anfragen.',
+    'Echte Angriffe live vorgeführt: Phishing, Passwort-Cracking, WLAN-Angriffe und Deepfakes. Für Events, Teams und Management, vor Ort oder remote.',
   keywords: [
     'Live Hacking Show',
     'Live Hacking Event',

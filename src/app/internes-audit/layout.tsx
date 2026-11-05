@@ -6,7 +6,7 @@ const baseUrl = 'https://sodusecure.com';
 export const metadata: Metadata = {
   title: 'Internes Audit ISO 27001 | Extern durchführen lassen',
   description:
-    'Internes Audit nach ISO 27001 Kapitel 9.2 extern durchführen lassen - unabhängig, auditsicher dokumentiert, mit Maßnahmenplan. Auch NIS2-Gap-Assessment und TISAX-Vorbereitung. Jetzt anfragen.',
+    'Internes Audit nach ISO 27001 Kapitel 9.2 extern durchführen lassen - unabhängig, auditsicher dokumentiert, mit Maßnahmenplan. Jetzt anfragen.',
   keywords: [
     'Internes Audit ISO 27001',
     'internes Audit extern vergeben',

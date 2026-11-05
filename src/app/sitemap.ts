@@ -142,6 +142,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog-/Case-Study-Artikel
   blogPosts.forEach((blog) => {
+    // Artikel mit noindex gehoeren nicht in die Sitemap - sie Google zum
+    // Crawlen anzubieten und ihm gleichzeitig das Indexieren zu verbieten,
+    // ist ein Widerspruch, den die Search Console als Fehler meldet.
+    if (blog.noindex) return;
     const isKmuPost = blog.id === 15 || blog.id === 14 || blog.id === 13 || blog.id === 12 || blog.id === 9;
     const isTR03161Post = blog.id === 18 || blog.id === 19 || blog.id === 20;
     routes.push({

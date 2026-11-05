@@ -4,7 +4,7 @@ import RegulationPage, { type RegulationContent } from "@/components/common/Regu
 export const metadata: Metadata = {
   title: "BSI TR-03161: Sicherheit für DiGA & DiPA",
   description:
-    "Was verlangt die BSI TR-03161? Sicherheitsanforderungen für digitale Gesundheitsanwendungen (DiGA/DiPA), Pflicht seit 2025 (§ 139e SGB V). Wir bereiten Sie mit Gap-Analyse und Pentest auf die Zertifizierung vor.",
+    "Sicherheitsanforderungen für DiGA und DiPA, Pflicht seit 2025 nach § 139e SGB V. Gap-Analyse und Pentest zur Vorbereitung auf die Zertifizierung.",
   alternates: { canonical: "/bsi-tr-03161" },
 };
 

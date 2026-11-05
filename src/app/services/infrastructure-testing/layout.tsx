@@ -5,7 +5,7 @@ import { ServiceJsonLd } from "@/lib/serviceJsonLd";
 const PATH = "/services/infrastructure-testing";
 const NAME = "Infrastruktur Penetrationstest";
 const DESC =
-  "Infrastruktur Penetrationstest inkl. Active Directory – Kerberoasting, Pass-the-Hash & Lateral Movement, manuell geprüft. Festpreis nach Scoping, Angebot in 24 h.";
+  "Infrastruktur-Pentest inklusive Active Directory: Kerberoasting, Pass-the-Hash und laterale Bewegung, manuell geprüft. Festpreis, Angebot in 24 h.";
 
 export const metadata: Metadata = {
   title: "Infrastruktur Penetrationstest & Active Directory",

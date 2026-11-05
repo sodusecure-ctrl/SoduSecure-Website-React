@@ -4,7 +4,7 @@ const baseUrl = 'https://sodusecure.com';
 
 export const metadata: Metadata = {
   title: 'Über uns | Zertifizierte Pentester',
-  description: 'Lernen Sie unser Team zertifizierter Pentester kennen. OSCP-Methodik, OWASP & MITRE ATT&CK. Transparente Preise - Pentest sofort konfigurieren & Preis berechnen.',
+  description: 'Unser Team zertifizierter Pentester: OSCP-Methodik, OWASP und MITRE ATT&CK. Transparente Preise - Pentest online konfigurieren und Preis berechnen.',
   keywords: [
     'cybersecurity team',
     'penetration testing experts',
