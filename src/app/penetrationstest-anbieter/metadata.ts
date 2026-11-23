@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   // Titel bot ein Feature an (kostenloser Retest) und bediente die Absicht
   // nicht. Die Seite selbst ist laengst ein Auswahlratgeber - der Titel sagt
   // das jetzt auch. absolute: ohne Brand-Suffix, das Google hier ohnehin kuerzt.
-  title: { absolute: 'Pentest Anbieter vergleichen | 8 Auswahlkriterien' },
+  title: { absolute: 'Pentest Anbieter vergleichen: 8 Kriterien und 6 Warnsignale' },
   // Die Description muss zum Titel passen: Er laedt zum Vergleich ein, sie
   // verkaufte bisher Sodu selbst. Google nennt genau diese Diskrepanz
   // ("title doesn't reflect page content") als Grund, Titel zu ersetzen.
   // Konkrete Kriterien statt Eigenwerbung - naeher an dem, was auf dieser SERP
   // funktioniert (binsec "Marktuebersicht", blazeinfosec listet Namen auf).
   description:
-    "Zertifizierungen, Methodik, Berichtsqualität, Haftung: 8 Kriterien zum Vergleich von Penetrationstest-Anbietern - plus Warnsignale, die dagegen sprechen.",
+    "Zertifizierungen, Methodik, Berichtsqualität, Haftung: 8 Kriterien zum Vergleich von Pentest-Anbietern - und 6 Warnsignale, die dagegen sprechen.",
   keywords: [
     "pentest anbieter",
     "penetrationstest anbieter",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/penetrationstest-anbieter`,
   },
   openGraph: {
-    title: "Pentest Anbieter vergleichen | 8 Auswahlkriterien",
+    title: "Pentest Anbieter vergleichen: 8 Kriterien und 6 Warnsignale",
     description:
-      "Zertifizierungen, Methodik, Berichtsqualität, Haftung: 8 Kriterien zum Vergleich von Penetrationstest-Anbietern - plus Warnsignale, die dagegen sprechen.",
+      "Zertifizierungen, Methodik, Berichtsqualität, Haftung: 8 Kriterien zum Vergleich von Pentest-Anbietern - und 6 Warnsignale, die dagegen sprechen.",
     url: `${baseUrl}/penetrationstest-anbieter`,
     type: "website",
   },

@@ -320,7 +320,19 @@ export default function PenetrationstestAnbieterPage() {
           <h1 className="mt-8 max-w-5xl text-[34px] font-semibold leading-[1.08] tracking-[-0.03em] [text-wrap:balance] sm:text-[44px] sm:leading-[1.04] md:text-6xl lg:text-7xl">
             <span className="premium-silver">Pentest Anbieter vergleichen:</span>
             <br />
-            <span className="premium-headline-accent">8 Kriterien für Ihre Shortlist</span>
+            {/* "8 Kriterien und 6 Warnsignale" statt "8 Kriterien fuer Ihre
+                Shortlist": Auf dieser Trefferliste versprechen sechs von acht
+                Treffern eine Liste von Anbietern - der Suchende will den Markt
+                kleiner machen, bekommt ihn aber groesser. Kriterien sind
+                ebenfalls Hausaufgaben. Die Warnsignale drehen das Versprechen
+                vom Gewinn auf die Vermeidung eines Fehlgriffs, und das wiegt
+                beim Einkauf schwerer. Die sechs Signale stehen weiter unten auf
+                der Seite, der Titel verspricht also nichts Neues - er nennt nur,
+                was bisher nur in der Description stand.
+                Dieselbe Umstellung hat auf /pentest-kosten gewirkt: dort stieg
+                die CTR von 0,6 auf 1,0 Prozent und die Position von 8,1 auf 5,9
+                bei praktisch unveraenderten Impressionen. */}
+            <span className="premium-headline-accent">8 Kriterien und 6 Warnsignale</span>
           </h1>
           <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
             <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
