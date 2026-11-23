@@ -83,7 +83,7 @@ function CallbackForm({ isDe, getPayload }: { isDe: boolean; getPayload: () => {
         <span className="mx-auto mb-3 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#16A34A]/15 text-[#16A34A]"><Check className="h-6 w-6" /></span>
         <h4 className="text-lg font-bold text-[#0B2A4A]">{t('Vielen Dank – wir melden uns!', 'Thank you – we will be in touch!')}</h4>
         <p className="mx-auto mt-2 max-w-md text-sm text-slate-600">{t('Ihre Anfrage inklusive Check-Ergebnis ist bei unserem Security-Team. Sie hören innerhalb von 24 Stunden von uns.', 'Your request including the check result has reached our security team. You will hear from us within 24 hours.')}</p>
-        <a href="tel:+491777750985" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#0B2A4A] hover:text-[#DC2626]"><Phone className="h-4 w-4" /> (+49) 0177 7750985</a>
+        <a href="tel:+491777750985" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#0B2A4A] hover:text-[#DC2626]"><Phone className="h-4 w-4" /> +49 177 7750985</a>
       </div>
     );
   }

@@ -12,7 +12,7 @@ import {
   Clock,
 } from "lucide-react";
 
-const PHONE = "(+49) 0177 7750985";
+const PHONE = "+49 177 7750985";
 const PHONE_HREF = "tel:+491777750985";
 
 /**

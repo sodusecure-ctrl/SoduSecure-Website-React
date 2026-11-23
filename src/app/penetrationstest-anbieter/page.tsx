@@ -32,7 +32,7 @@ import { FAQS } from "./faq";
 import { ANBIETER_STAND } from './stand';
 
 const PHONE_HREF = "tel:+491777750985";
-const PHONE = "(+49) 01777750985";
+const PHONE = "+49 177 7750985";
 const EMAIL_HREF = "mailto:info@sodusecure.com";
 const EMAIL = "info@sodusecure.com";
 

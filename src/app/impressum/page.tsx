@@ -37,7 +37,7 @@ export default function Impressum() {
               <p>
                 <span className="font-medium">Telefon:</span>{' '}
                 <a href="tel:+491777750985" className="text-[#FF3B30] hover:underline">
-                  (+49) 01777750985
+                  +49 177 7750985
                 </a>
               </p>
               <p>

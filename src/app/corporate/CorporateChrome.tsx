@@ -26,7 +26,7 @@ export function CorporateHeader({ isDe }: { isDe: boolean }) {
             <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5" /> {t('Zertifizierte Penetrationstester', 'Certified penetration testers')}</span>
           </div>
           <div className="flex items-center gap-6">
-            <a href="tel:+491777750985" className="inline-flex items-center gap-1.5 hover:text-white"><Phone className="h-3.5 w-3.5" /> (+49) 0177 7750985</a>
+            <a href="tel:+491777750985" className="inline-flex items-center gap-1.5 hover:text-white"><Phone className="h-3.5 w-3.5" /> +49 177 7750985</a>
             <a href="mailto:info@sodusecure.com" className="inline-flex items-center gap-1.5 hover:text-white"><Mail className="h-3.5 w-3.5" /> info@sodusecure.com</a>
           </div>
         </div>
@@ -109,7 +109,7 @@ export function CorporateFooter({ isDe }: { isDe: boolean }) {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wide text-white/80">{t('Kontakt', 'Contact')}</h4>
             <ul className="mt-4 space-y-2.5 text-sm text-white/55">
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> (+49) 0177 7750985</li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4" /> +49 177 7750985</li>
               <li className="flex items-center gap-2"><Mail className="h-4 w-4" /> info@sodusecure.com</li>
               <li className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Berlin, {t('Deutschland', 'Germany')}</li>
               <li className="flex items-center gap-2"><Users className="h-4 w-4" /> {t('Mo–Fr, persönlicher Ansprechpartner', 'Mon–Fri, personal contact')}</li>
@@ -145,7 +145,7 @@ export function CorporateContactBand({ isDe }: { isDe: boolean }) {
               {t('Angebot anfordern', 'Request a quote')} <ArrowRight className="h-4 w-4" />
             </Link>
             <a href="tel:+491777750985" className="inline-flex items-center justify-center gap-2 rounded-md border border-white/25 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">
-              <Phone className="h-4 w-4" /> (+49) 0177 7750985
+              <Phone className="h-4 w-4" /> +49 177 7750985
             </a>
           </div>
         </div>

@@ -269,7 +269,7 @@ export default function InternesAuditPage() {
           <p className="text-white/60 text-lg mb-8">Kostenlose Erstberatung · Festpreisangebot in 24h · Terminierung nach Ihrem Zertifizierungszyklus</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href={PHONE_HREF} className="inline-flex items-center justify-center gap-2 premium-cta text-white px-10 py-4 rounded-2xl font-semibold transition-colors text-lg">
-              <Phone className="w-5 h-5" />(+49) 01777750985
+              <Phone className="w-5 h-5" />+49 177 7750985
             </a>
             <a href={EMAIL_HREF} className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/15 text-white px-10 py-4 rounded-2xl font-semibold transition-colors">
               <Mail className="w-5 h-5" />info@sodusecure.com

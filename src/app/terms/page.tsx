@@ -200,7 +200,7 @@ export default function TermsAndConditions() {
               </p>
               <div className="mt-4 text-gray-700">
                 <p className="font-semibold">{t('sections.contact.email')}: info@sodusecure.com</p>
-                <p className="font-semibold">{t('sections.contact.phone')}: (+49) 01777750985</p>
+                <p className="font-semibold">{t('sections.contact.phone')}: +49 177 7750985</p>
               </div>
             </CardContent>
           </Card>

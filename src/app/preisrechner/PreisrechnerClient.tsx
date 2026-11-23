@@ -922,7 +922,7 @@ const PentestPreisrechner = () => {
                       </Label>
                       <Input
                         id="phone"
-                        placeholder="(+49) 01777750985"
+                        placeholder="+49 177 7750985"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
                         className={`h-11 bg-white/[0.04] border-white/10 focus:border-white/15 focus:ring-[#FF3B30]/30 ${errors.phone ? 'border-[#FF3B30]/60 bg-[#FF3B30]/10' : ''}`}
@@ -1027,7 +1027,7 @@ const PentestPreisrechner = () => {
           <p className="text-white/70 text-xs">
             Fragen? Rufen Sie uns an:{' '}
             <a href="tel:+491777750985" className="text-white/70 font-medium hover:text-white transition-colors">
-              (+49) 01777750985
+              +49 177 7750985
             </a>
           </p>
         </div>

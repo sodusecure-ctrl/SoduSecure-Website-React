@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import { FAQS } from "./faq";
 
-const PHONE = "(+49) 01777750985";
+const PHONE = "+49 177 7750985";
 const PHONE_HREF = "tel:+491777750985";
 const EMAIL = "info@sodusecure.com";
 const EMAIL_HREF = "mailto:info@sodusecure.com";

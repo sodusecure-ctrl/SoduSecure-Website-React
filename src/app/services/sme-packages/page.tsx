@@ -716,7 +716,7 @@ export default function SMESecurityPackagesPage() {
               className="border-2 border-zinc-700 text-white hover:border-red-600 hover:bg-white/5 font-semibold px-8 py-4 rounded-xl transition-all hover:scale-105 flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
-              (+49) 01777750985
+              +49 177 7750985
             </a>
           </div>
         </div>
