@@ -228,7 +228,7 @@
     "tagline": "Professionelle Penetrationstests und Sicherheitsbewertungen für moderne Unternehmen.",
     "contact": {
       "email": "info@sodusecure.com",
-      "phone": "(+49) 01777750985",
+      "phone": "+49 177 7750985",
       "location": "Berlin, Germany",
       "needHelp": "Brauchen Sie sofortige Sicherheitsunterstützung?",
       "emergency": "Notfallkontakt"
@@ -843,7 +843,7 @@
       },
       "phone": {
         "label": "Telefonnummer",
-        "placeholder": "(+49) 01777750985"
+        "placeholder": "+49 177 7750985"
       },
       "description": {
         "label": "Projektbeschreibung",
@@ -896,7 +896,7 @@
       "emailAddress": "E-Mail-Adresse",
       "emailPlaceholder": "sie@beispiel.de",
       "phoneNumber": "Telefonnummer",
-      "phonePlaceholder": "(+49) 01777750985",
+      "phonePlaceholder": "+49 177 7750985",
       "companySize": "Unternehmensgröße",
       "additionalInfo": "Weitere Informationen",
       "additionalInfoPlaceholder": "Teilen Sie Kontext, Ziele oder Zeitpläne...",
@@ -4735,7 +4735,7 @@
         },
         "phone": {
           "label": "Telefonnummer",
-          "placeholder": "(+49) 01777750985"
+          "placeholder": "+49 177 7750985"
         },
         "message": {
           "label": "Nachricht",
@@ -4772,7 +4772,7 @@
       },
       "phone": {
         "title": "Telefon",
-        "value": "(+49) 01777750985"
+        "value": "+49 177 7750985"
       },
       "hours": {
         "title": "Supportzeiten",
@@ -4788,11 +4788,11 @@
       },
       "call": {
         "title": "Rufen Sie uns an",
-        "value": "(+49) 01777750985"
+        "value": "+49 177 7750985"
       },
       "emergency": {
         "title": "Notfall-Hotline",
-        "number": "(+49) 01777750985",
+        "number": "+49 177 7750985",
         "note": "24/7 für dringende Angelegenheiten verfügbar"
       },
       "chat": {

@@ -228,7 +228,7 @@
     "tagline": "Professional penetration testing and security assessments for modern organizations.",
     "contact": {
       "email": "info@sodusecure.com",
-      "phone": "(+49) 01777750985",
+      "phone": "+49 177 7750985",
       "location": "Berlin, Germany",
       "needHelp": "Need immediate security support?",
       "emergency": "Emergency contact"
@@ -843,7 +843,7 @@
       },
       "phone": {
         "label": "Telephone number",
-        "placeholder": "(+49) 01777750985"
+        "placeholder": "+49 177 7750985"
       },
       "description": {
         "label": "Project description",
@@ -896,7 +896,7 @@
       "emailAddress": "E-mail address",
       "emailPlaceholder": "you@company.com",
       "phoneNumber": "Telephone number",
-      "phonePlaceholder": "(+49) 01777750985",
+      "phonePlaceholder": "+49 177 7750985",
       "companySize": "Company size",
       "additionalInfo": "Additional information",
       "additionalInfoPlaceholder": "Share context, goals or timelines...",
@@ -4974,7 +4974,7 @@
         },
         "phone": {
           "label": "Phone Number",
-          "placeholder": "(+49) 01777750985"
+          "placeholder": "+49 177 7750985"
         },
         "message": {
           "label": "Message",
@@ -5011,7 +5011,7 @@
       },
       "phone": {
         "title": "Phone",
-        "value": "(+49) 01777750985"
+        "value": "+49 177 7750985"
       },
       "hours": {
         "title": "Support Hours",
@@ -5027,11 +5027,11 @@
       },
       "call": {
         "title": "Call Us",
-        "value": "(+49) 01777750985"
+        "value": "+49 177 7750985"
       },
       "emergency": {
         "title": "Emergency Hotline",
-        "number": "(+49) 01777750985",
+        "number": "+49 177 7750985",
         "note": "Available 24/7 for urgent matters"
       },
       "chat": {
