@@ -29,6 +29,7 @@ import {
   Landmark,
 } from "lucide-react";
 import { FAQS } from "./faq";
+import { ANBIETER_STAND } from './stand';
 
 const PHONE_HREF = "tel:+491777750985";
 const PHONE = "(+49) 01777750985";
@@ -337,6 +338,13 @@ export default function PenetrationstestAnbieterPage() {
           <p className="mt-6 flex max-w-2xl items-start gap-3 text-base leading-relaxed text-white/70 sm:mt-7 md:text-lg">
             <span aria-hidden className="mt-[0.75em] h-[2px] w-8 shrink-0 rounded-full bg-gradient-to-r from-[#FF3B30] to-[#FF3B30]/0 sm:w-12" />
             <span>Woran unterscheiden Sie seriöse Pentester von Anbietern, die einen automatisierten Scan als Penetrationstest verkaufen? Dieser Leitfaden zeigt die acht Prüfkriterien, die Warnsignale und die Anbieter-Typen am deutschen Markt – inklusive der offenen Einordnung, wo Sodu Secure dabei steht.</span>
+          </p>
+          {/* Sichtbares Pruefdatum. Google zeigt bei allen Wettbewerbern dieser
+              Trefferliste ein Datum neben dem Treffer, bei uns bisher nicht.
+              Die Angabe muss durch stand.ts gedeckt sein - sie wird nur bei
+              echter Durchsicht der Kriterien hochgesetzt. */}
+          <p className="mt-5 text-[13px] text-white/45">
+            Kriterien und Warnsignale zuletzt geprüft am {ANBIETER_STAND.label}
           </p>
           <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <Link href="/request-pentest" className="premium-cta inline-flex items-center justify-center gap-1.5 rounded-full px-6 py-3.5 text-sm font-semibold text-white">

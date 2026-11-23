@@ -1,5 +1,6 @@
 import { ServiceJsonLd } from "@/lib/serviceJsonLd";
 import { FAQS } from "./faq";
+import { ANBIETER_STAND } from "./stand";
 
 export { metadata } from "./metadata";
 
@@ -45,6 +46,26 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     })),
   };
 
+  // WebPage mit Pruefdatum. Auf dieser Trefferliste zeigt Google bei jedem
+  // Wettbewerber ein Datum neben dem Treffer, bei uns bisher nicht. Wer
+  // Anbieter vergleicht, will wissen, ob der Vergleich noch gilt - deshalb ist
+  // das Datum hier ein Klicksignal und kein Beiwerk. Die Werte stehen in
+  // stand.ts und werden nur bei echter Durchsicht geaendert.
+  const seitenJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://sodusecure.com/penetrationstest-anbieter#webpage",
+    url: "https://sodusecure.com/penetrationstest-anbieter",
+    name: "Pentest Anbieter vergleichen: 8 Kriterien und 6 Warnsignale",
+    description:
+      "Acht Kriterien zum Vergleich von Penetrationstest-Anbietern und sechs Warnsignale, die gegen einen Anbieter sprechen.",
+    inLanguage: "de-DE",
+    datePublished: ANBIETER_STAND.datePublished,
+    dateModified: ANBIETER_STAND.dateModified,
+    isPartOf: { "@id": "https://sodusecure.com/#website" },
+    publisher: { "@id": "https://sodusecure.com/#organization" },
+  };
+
   return (
     <>
       <ServiceJsonLd
@@ -59,6 +80,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(criteriaJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(seitenJsonLd) }}
       />
       {children}
     </>
