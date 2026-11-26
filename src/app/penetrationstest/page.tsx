@@ -25,10 +25,38 @@ import { ORGANIZATION_ID } from '@/lib/authors';
 
 const baseUrl = 'https://sodusecure.com';
 
+/**
+ * Stand der inhaltlichen Pruefung dieser Seite.
+ *
+ * Auf der Trefferliste zu "penetrationstest" zeigt Google bei mehreren
+ * Wettbewerbern ein Datum neben dem Treffer - heise 15.06.2026, keepbit
+ * 31.10.2025, n-komm "vor 7 Tagen", IT-Schulungen 17.10.2025. Bei uns stand
+ * dort nichts, obwohl die Seite 21 Schema-Typen traegt: datePublished und
+ * dateModified fehlten als einzige.
+ *
+ * NUR von Hand hochsetzen, und nur wenn Phasen, Testarten und Standards
+ * tatsaechlich durchgesehen wurden. Ein Datum, das bei jedem Deploy
+ * mitwandert, ist ein vorgetaeuschtes Frischesignal.
+ */
+const STAND = {
+  datePublished: '2026-09-29',
+  dateModified: '2026-11-24',
+  label: '24. November 2026',
+} as const;
+
 export const metadata: Metadata = {
   // "Definition" raus (liefert die AI Overview bereits), "Kosten" raus (gehört
   // /pentest-kosten). Die Zahl 5 bleibt: Zahlen im Titel zu entfernen kostet CTR.
-  title: 'Penetrationstest | Ablauf in 5 Phasen erklärt',
+  //
+  // Trenner "|" ersetzt durch einen durchgehenden Satz. Auf /pentest-kosten und
+  // /penetrationstest-anbieter hat Google Titel mit "|" verworfen und
+  // stattdessen die H1 angezeigt - offenbar liest es solche Titel als
+  // Stueckwerk. Seit der Umstellung auf ganze Saetze uebernimmt Google sie
+  // woertlich. Titel und H1 tragen jetzt dieselbe Aussage.
+  // absolute: Ohne das haengt das Root-Template " | Sodu Secure" an und der
+  // Titel waechst auf 652 px - Google kappt dann hinten. Mit absolute sind
+  // es 522 px bei einer Grenze von rund 600.
+  title: { absolute: 'Penetrationstest: Ablauf in 5 Phasen, Arten und Standards' },
   description:
     'Definition nach BSI, Ablauf in 5 Phasen, Testarten und Standards - erklärt von OSCP-zertifizierten Testern aus Berlin. Preis in 3 Minuten berechnen.',
   keywords: [
@@ -46,7 +74,7 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/penetrationstest`,
   },
   openGraph: {
-    title: 'Penetrationstest | Ablauf in 5 Phasen erklärt',
+    title: 'Penetrationstest: Ablauf in 5 Phasen, Arten und Standards',
     description:
       'Definition nach BSI, Ablauf in 5 Phasen, Testarten und Standards - erklärt von OSCP-zertifizierten Testern aus Berlin. Preis in 3 Minuten berechnen.',
     url: `${baseUrl}/penetrationstest`,
@@ -1479,6 +1507,21 @@ export default async function PenetrationstestPage() {
 
   const pageUrl = `${baseUrl}/penetrationstest`;
   const jsonLd = [
+    {
+      // WebPage traegt das Pruefdatum. Die uebrigen 21 Typen beschreiben die
+      // Leistung, keiner von ihnen sagt Google, wann die Seite zuletzt
+      // durchgesehen wurde.
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${pageUrl}#webpage`,
+      url: pageUrl,
+      name: 'Penetrationstest: Ablauf in 5 Phasen, Arten und Standards',
+      inLanguage: locale === 'en' ? 'en' : 'de-DE',
+      datePublished: STAND.datePublished,
+      dateModified: STAND.dateModified,
+      isPartOf: { '@id': `${baseUrl}/#website` },
+      publisher: { '@id': ORGANIZATION_ID },
+    },
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',

@@ -124,6 +124,7 @@ const data: RegulationContent = {
     { q: "Reicht ein automatisierter Schwachstellenscan für Art. 32?", a: "Für eine erste Bestandsaufnahme ja, als alleiniger Wirksamkeitsnachweis in der Regel nicht. Ein Scanner findet bekannte Schwachstellen in Versionen und Konfigurationen, aber keine fehlerhaften Berechtigungslogiken, keine Wege zu fremden Kundendatensätzen und keine Angriffsketten. Genau diese Fälle sind bei personenbezogenen Daten die kritischen. Sinnvoll ist die Kombination aus laufendem Scan und jährlichem Pentest." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest im Überblick", desc: "Ablauf, Arten und Standards der Prüfung, die Art. 32 als Wirksamkeitsnachweis verlangt." },
     { href: "/nis2", label: "NIS2", desc: "Cybersicherheitspflichten für wesentliche und wichtige Einrichtungen." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Der etablierte Nachweis für den 'Stand der Technik'." },
     { href: "/penetration-testing", label: "Penetrationstest", desc: "Manuelle Angriffssimulation für Web, API, Netzwerk & mehr." },

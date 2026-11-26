@@ -111,6 +111,7 @@ const data: RegulationContent = {
     { q: "Wer führt Penetrationstests für Medizinprodukte oder Medizinproduktesoftware durch?", a: "Dafür kommen Anbieter infrage, die neben dem technischen Test die Dokumentationsanforderungen des Herstellers bedienen können. Sodu Secure prüft Gesundheitsanwendungen, die zugehörigen Web-Portale, APIs und Backend-Infrastruktur und dokumentiert Prüfumfang, Methodik und Befunde so, dass die Ergebnisse in Ihre technische Dokumentation und Ihr Risikomanagement übernommen werden können. Die Bewertung nach MDR bleibt beim Hersteller." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest: Definition und Ablauf", desc: "Die fachlichen Grundlagen: BSI-Definition, fünf Phasen, Testarten und Standards." },
     { href: "/pentest-berlin", label: "Pentest Berlin", desc: "Unser regionaler Schwerpunkt mit lokalem Bezug." },
     { href: "/pentest-kosten", label: "Pentest Kosten", desc: "Transparente Preisübersicht für Penetrationstests." },
     { href: "/pentest-konfigurator", label: "Pentest-Konfigurator", desc: "Stellen Sie Ihren Test zusammen und sehen Sie sofort eine Preisspanne." },

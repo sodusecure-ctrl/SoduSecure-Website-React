@@ -102,6 +102,7 @@ const data: RegulationContent = {
     { q: "Welche Systeme werden beim KRITIS-Pentest geprüft?", a: "Im Fokus stehen die Systeme, von denen die kritische Dienstleistung abhängt: extern erreichbare Zugänge und VPN, Fernwartung, Leitstands- und Büronetz, die Übergänge zwischen IT und OT, zentrale Verzeichnisdienste wie Active Directory sowie Web-Anwendungen und Schnittstellen zu Partnern und Behörden." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest nach BSI-Methodik", desc: "Die sechs Klassifikationskriterien des BSI und der Ablauf einer Prüfung." },
     { href: "/nis2", label: "NIS2", desc: "Erweiterte Cybersicherheitspflichten für wesentliche und wichtige Einrichtungen." },
     { href: "/dora", label: "DORA", desc: "Digitale operationale Resilienz für den Finanzsektor." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Internationaler Standard für Informationssicherheits-Managementsysteme." },

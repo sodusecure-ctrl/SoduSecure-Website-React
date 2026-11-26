@@ -100,6 +100,7 @@ const data: RegulationContent = {
     { q: "Hilft ein AWS-Penetrationstest bei ISO 27001, NIS2 oder DSGVO?", a: "Ja. Der Bericht dient als technischer Wirksamkeitsnachweis: für ISO 27001 zum Umgang mit technischen Schwachstellen nach Control A.8.8, für NIS2 zur Bewertung der Wirksamkeit von Risikomanagementmaßnahmen und für Art. 32 DSGVO als Beleg eines Verfahrens zur regelmäßigen Überprüfung technischer Maßnahmen. Sie erhalten ihn auf Deutsch und Englisch." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest: Grundlagen und Ablauf", desc: "Die fünf Phasen und die Testarten, unabhängig von der Zielumgebung." },
     { href: "/services/cloud-devops-testing", label: "Cloud & DevOps", desc: "Cloud-Sicherheit und CI/CD-Pipelines im Detail prüfen." },
     { href: "/services/infrastructure-testing", label: "Infrastruktur-Pentest", desc: "Server, Dienste und Systeme umfassend testen." },
     { href: "/penetration-testing", label: "Penetrationstest", desc: "Alle Pentest-Leistungen im Überblick." },

@@ -123,6 +123,7 @@ const data: RegulationContent = {
     { q: "Was passiert nach der TR-03161-Prüfung mit den gefundenen Schwachstellen?", a: "Sie erhalten einen Bericht in Deutsch und Englisch mit allen Findings, CVSS-Bewertung, Nachweisschritten und priorisierten Behebungsempfehlungen. Ihr Entwicklungsteam arbeitet die Punkte ab, wir stehen für Rückfragen bereit. Die geschlossenen Punkte testen wir anschließend ohne Zusatzkosten nach und dokumentieren den bereinigten Stand so, dass er der BSI-anerkannten Prüfstelle als Nachweis vorgelegt werden kann." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Was ist ein Penetrationstest?", desc: "Definition, Ablauf und Testarten - die Prüfung hinter dem TR-03161-Nachweis." },
     { href: "/mdr", label: "MDR", desc: "Cybersicherheit für Medizinprodukte mit Software." },
     { href: "/pentest-gesundheitsanwendungen", label: "Pentest Gesundheit", desc: "Penetrationstests speziell für Gesundheitsanwendungen." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Internationaler Standard für Informationssicherheit." },

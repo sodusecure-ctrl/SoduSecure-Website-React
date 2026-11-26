@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: { path: string; lastModified: string; changeFreq: MetadataRoute.Sitemap[number]['changeFrequency']; priority: number }[] = [
     // ── Top-Landingpages ──
     { path: '',                                lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
-    { path: '/penetrationstest',               lastModified: '2026-09-29', changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/penetrationstest',               lastModified: '2026-11-24', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/pentest',                        lastModified: '2026-09-29', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/penetration-testing',            lastModified: '2026-08-19', changeFreq: 'weekly',  priority: 1.0 },
     { path: '/pentest-kosten',                 lastModified: '2026-09-29', changeFreq: 'weekly',  priority: 1.0 },

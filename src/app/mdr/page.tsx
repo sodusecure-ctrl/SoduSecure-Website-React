@@ -124,6 +124,7 @@ const data: RegulationContent = {
     { q: "Was brauchen Sie von uns für den Pentest?", a: "Für den Start genügen eine Beschreibung des Produkts und seiner Schnittstellen, Zugang zu Testgerät oder Testinstanz, Testkonten in den relevanten Rollen sowie eine Ansprechperson aus der Entwicklung. Nützlich, aber nicht zwingend sind Architekturdiagramme, API-Dokumentation und vorhandene Risikoanalysen. Vertraulichkeitsvereinbarung und Testfreigabe klären wir vor Projektbeginn." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest: Grundlagen", desc: "Was bei einer technischen Sicherheitsprüfung geschieht und welche Arten es gibt." },
     { href: "/bsi-tr-03161", label: "BSI TR-03161", desc: "Sicherheitsanforderungen für digitale Gesundheitsanwendungen (DiGA/DiPA)." },
     { href: "/pentest-gesundheitsanwendungen", label: "Pentest Gesundheit", desc: "Penetrationstests speziell für Gesundheitsanwendungen." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Internationaler Standard für Informationssicherheit." },

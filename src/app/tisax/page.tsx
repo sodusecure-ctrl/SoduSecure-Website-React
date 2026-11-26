@@ -123,6 +123,7 @@ const data: RegulationContent = {
     { q: "Wie lange dauert die Vorbereitung auf TISAX?", a: "Bei solider Ausgangslage sind drei bis sechs Monate realistisch, bei wenig dokumentierter Informationssicherheit eher sechs bis zwölf. Die Gap-Analyse liefert nach ein bis zwei Wochen Klarheit über den Abstand zum Ziel. Planen Sie zusätzlich Vorlauf für die Terminvergabe beim Prüfdienstleister ein, die mehrere Wochen betragen kann." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Was ist ein Penetrationstest?", desc: "Definition nach BSI, die fünf Phasen und die Testarten im Überblick." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Der internationale Standard, auf dem der VDA-ISA-Katalog aufbaut." },
     { href: "/nis2", label: "NIS2", desc: "EU-Cybersicherheitspflichten für wesentliche und wichtige Einrichtungen." },
     { href: "/penetration-testing", label: "Penetrationstest", desc: "Technische Angriffssimulation zur Verifikation Ihrer Schutzmaßnahmen." },

@@ -120,6 +120,7 @@ const data: RegulationContent = {
     { q: "Lohnt sich ISO 27001 für ein kleines Unternehmen?", a: "Ja, wenn Sie Kunden bedienen, die Sicherheitsnachweise verlangen - etwa Konzerne, Banken, Behörden oder Gesundheitswesen. Der Aufwand skaliert mit dem Geltungsbereich: Ein kleines Software-Unternehmen kann den Scope auf sein Produkt und die zugehörige Infrastruktur begrenzen. Wer den Nachweis nur intern braucht, fährt mit einer Gap-Analyse und jährlichen Penetrationstests oft günstiger." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest im Detail", desc: "Ablauf, Arten und Standards der Prüfung, die A.8.8 technisch ausfüllt." },
     { href: "/iso-27001-zertifizierung", label: "ISO 27001 Zertifizierung", desc: "Ablauf, Kosten und Pentest-Anforderungen der Zertifizierung." },
     { href: "/tisax", label: "TISAX", desc: "Automotive-Informationssicherheit auf Basis der ISO/IEC 27001 (VDA-ISA)." },
     { href: "/nis2", label: "NIS2", desc: "Cybersicherheitspflichten – häufig mit ISO 27001 nachweisbar." },

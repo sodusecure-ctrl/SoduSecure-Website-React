@@ -125,6 +125,7 @@ const data: RegulationContent = {
     { q: "Was muss im DORA-Bericht an die Aufsicht stehen?", a: "Die Aufsicht erwartet nachvollziehbare Belege: Scope und Methodik des Tests, die gefundenen Schwachstellen mit Risikobewertung, die getroffenen Gegenmaßnahmen und den Nachweis der Behebung. Genau so ist unser Bericht aufgebaut - mit Management Summary für die Geschäftsleitung und technischem Teil für Ihre IT, auf Deutsch und Englisch." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest: Grundlagen", desc: "Ablauf, Testarten und Standards - die Basis unterhalb des bedrohungsgeleiteten TLPT." },
     { href: "/tlpt", label: "TLPT", desc: "Threat-Led Penetration Testing – unter DORA (Art. 26) für bedeutende Finanzunternehmen verpflichtend." },
     { href: "/nis2", label: "NIS2", desc: "Cybersicherheitspflichten für wesentliche und wichtige Einrichtungen." },
     { href: "/bsig", label: "BSIG / KRITIS", desc: "Anforderungen an Betreiber Kritischer Infrastrukturen." },

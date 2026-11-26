@@ -125,6 +125,7 @@ const data: RegulationContent = {
     { q: "Ist ein TLPT für ein kleineres Institut sinnvoll?", a: "Wenn die Aufsicht Sie nicht für TLPT bestimmt hat, ist ein klassischer Penetrationstest der bessere Einstieg: schneller, günstiger und mit mehr konkreten Befunden pro investiertem Euro. Für kleinere Institute empfehlen wir jährliche Penetrationstests der kritischen Anwendungen plus Phishing-Simulation - das erfüllt die Testpflichten aus DORA." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest: Ablauf in fünf Phasen", desc: "Der klassische Pentest als Grundlage, auf der ein TLPT nach DORA aufsetzt." },
     { href: "/dora", label: "DORA", desc: "Die EU-Verordnung, die TLPT verpflichtend macht." },
     { href: "/nis2", label: "NIS2", desc: "Cybersicherheitspflichten für wesentliche und wichtige Einrichtungen." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Internationaler Standard für Informationssicherheit." },

@@ -126,6 +126,7 @@ const data: RegulationContent = {
     { q: "Wie schnell können wir starten?", a: "Eine erste Gap-Analyse lässt sich meist innerhalb von 1 bis 2 Wochen durchführen. Auf dieser Basis planen wir gemeinsam die technischen Prüfungen und Maßnahmen. Für die Gap-Analyse genügt ein Remote-Termin mit Ihrer IT; erst die späteren internen Netzwerktests finden auf Wunsch vor Ort statt." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest: Ablauf und Arten", desc: "Wie eine technische Sicherheitsprüfung abläuft, mit der sich Art. 21 NIS2 belegen lässt." },
     { href: "/bsig", label: "BSIG / KRITIS", desc: "Pflichten für Betreiber Kritischer Infrastrukturen nach dem BSI-Gesetz." },
     { href: "/dora", label: "DORA", desc: "Digitale operationale Resilienz für den Finanzsektor." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Der internationale Standard für Informationssicherheits-Managementsysteme." },

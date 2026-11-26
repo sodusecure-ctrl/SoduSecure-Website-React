@@ -100,6 +100,7 @@ const data: RegulationContent = {
     { q: "Wie oft sollte ein Active Directory Pentest durchgeführt werden?", a: "Einmal jährlich als Regelfall, zusätzlich nach Migrationen, Domänenzusammenführungen, größeren Berechtigungsumbauten oder nach einem Sicherheitsvorfall. Berechtigungen in einer gewachsenen Domäne verändern sich laufend. Ein Ergebnis von vor zwei Jahren sagt über die heutigen Angriffspfade wenig aus." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest: Ablauf und Arten", desc: "Wie ein Pentest grundsätzlich abläuft, über die Windows-Domäne hinaus." },
     { href: "/services/network-audit", label: "Netzwerk-Pentest", desc: "Prüfung interner und externer Netzwerk-Infrastruktur." },
     { href: "/services/infrastructure-testing", label: "Infrastruktur-Pentest", desc: "Server, Dienste und Systeme im Detail testen." },
     { href: "/penetration-testing", label: "Penetrationstest", desc: "Alle Pentest-Leistungen im Überblick." },

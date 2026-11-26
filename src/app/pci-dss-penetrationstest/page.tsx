@@ -122,6 +122,7 @@ const data: RegulationContent = {
     { q: "Was muss im PCI-DSS-Pentest-Bericht stehen?", a: "Ihr Assessor erwartet die angewandte Methodik, den geprüften Scope mit allen getesteten Systemen, Testzeitraum und Tester, die gefundenen Schwachstellen mit Risikobewertung, die Ergebnisse des Segmentierungstests sowie den Nachweis, dass ausnutzbare Findings behoben und nachgetestet wurden. Genau so ist unser Bericht aufgebaut, inklusive Retest-Protokoll." },
   ],
   related: [
+    { href: "/penetrationstest", label: "Penetrationstest: die fünf Phasen", desc: "Von der Auftragsklärung bis zum Retest - was Requirement 11.4 praktisch bedeutet." },
     { href: "/iso-27001", label: "ISO 27001", desc: "Internationaler Standard für Informationssicherheits-Managementsysteme." },
     { href: "/dora", label: "DORA", desc: "EU-Verordnung zur digitalen operationalen Resilienz im Finanzsektor." },
     { href: "/penetration-testing", label: "Penetrationstest", desc: "Manuelle Angriffssimulation für Web, API, Netzwerk & mehr." },
