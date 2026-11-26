@@ -145,38 +145,25 @@ type Copy = {
   defObjectsIntro: Para;
   defObjects: string[];
 
-  vsLabel: string;
-  vsHeadline: string;
-  vsSub: string;
-  vsTableCaption: string;
-  vsTableHead: [string, string, string, string];
-  vsRows: { crit: string; scan: string; pentest: string; red: string }[];
-  vsGlossaryTitle: string;
-  vsGlossary: { term: string; def: string }[];
-  vsParas: Para[];
+  sinnvollLabel: string;
+  sinnvollHeadline: string;
+  sinnvollIntro: Para;
+  sinnvollAnlaesse: { titel: string; text: string }[];
 
-  artenLabel: string;
-  artenHeadline: string;
-  artenSub: string;
-  boxes: { title: string; desc: string }[];
-  boxNote: Para;
-  criteriaTitle: string;
-  criteriaIntro: Para;
-  criteria: { title: string; desc: string }[];
-  objektTitle: string;
-  objektSub: string;
-  objekte: { title: string; desc: string; href: string; linkLabel: string }[];
+  moduleLabel: string;
+  moduleHeadline: string;
+  moduleSub: string;
+  moduleGruppen: { titel: string; text: string; items: { name: string; href: string }[] }[];
+
+  beratungHeadline: string;
+  beratungText: string;
+  beratungCta: string;
 
   praxisLabel: string;
   praxisHeadline: string;
   praxisIntro: Para;
   praxisFunde: { titel: string; was: string; warum: string }[];
   praxisOutro: Para;
-
-  stdLabel: string;
-  stdHeadline: string;
-  stdSub: string;
-  standards: { title: string; text: string; links: { label: string; url: string }[] }[];
 
   ablaufLabel: string;
   ablaufHeadline: string;
@@ -185,39 +172,7 @@ type Copy = {
   durationTitle: string;
   durationParas: Para[];
 
-  pflichtLabel: string;
-  pflichtHeadline: string;
-  pflichtSub: string;
-  pflichtQuote: { lead: string; text: string; src: string; srcUrl: string };
-  pflichtTableCaption: string;
-  pflichtTableHead: [string, string, string];
-  pflichtRows: { reg: string; href?: string; req: string; praxis: string; srcUrl: string }[];
-  pflichtParas: Para[];
-  disclaimer: string;
-
-  threatLabel: string;
-  threatHeadline: string;
-  threatSub: string;
-  threatSourceLabel: string;
-  threats: { value: string; label: string; srcLabel: string; srcUrl: string }[];
-  threatOutro: Para;
-
-  kostenLabel: string;
-  kostenHeadline: string;
-  kostenParas: Para[];
-  kostenAnchors: { name: string; price: string; desc: string }[];
-  kostenFactorsTitle: string;
-  kostenFactors: string[];
-  kostenCta: string;
   kostenCta2: string;
-
-  anbieterLabel: string;
-  anbieterHeadline: string;
-  anbieterSub: Para;
-  checklist: string[];
-  legalTitle: string;
-  legalParas: Para[];
-  anbieterCta: string;
 
   soduLabel: string;
   soduHeadline: string;
@@ -323,189 +278,67 @@ const de: Copy = {
     'Telekommunikationsanlagen',
   ],
 
-  vsLabel: 'Abgrenzung',
-  vsHeadline: 'Penetrationstest vs. Schwachstellenscan vs. Red Teaming',
-  vsSub:
-    'Ein Schwachstellenscan sucht automatisiert nach bekannten Lücken, ein Penetrationstest weist Schwachstellen manuell nach und verkettet sie zu Angriffspfaden, ein Red Teaming prüft verdeckt, ob die eigene Verteidigung einen Angriff überhaupt bemerkt. Die drei Formate unterscheiden sich also nicht im Anspruch, sondern in der Fragestellung.',
-  vsTableCaption:
-    'Vergleich von Schwachstellenscan, Penetrationstest und Red Teaming nach Ziel, Methode, Prüftiefe, Ergebnis und Aufwand',
-  vsTableHead: ['Kriterium', 'Schwachstellenscan', 'Penetrationstest', 'Red Teaming'],
-  vsRows: [
-    {
-      crit: 'Ziel',
-      scan: 'Bekannte Schwachstellen automatisiert erkennen',
-      pentest: 'Schwachstellen nachweisen, verketten und Angriffspotenzial bewerten',
-      red: 'Erkennung und Reaktion der Verteidigung (Blue Team) testen',
-    },
-    {
-      crit: 'Methode',
-      scan: 'Überwiegend automatisiert (Scanner)',
-      pentest: 'Überwiegend manuell, toolgestützt',
-      red: 'Verdeckte Angriffssimulation nach realen Taktiken',
-    },
-    {
-      crit: 'Tiefe',
-      scan: 'Oberfläche - laut BSI mit vielen False Positives',
-      pentest: 'Verifizierte Findings inkl. Logik- und Konfigurationsfehlern',
-      red: 'Wenige, dafür vollständige Angriffspfade bis zum Ziel',
-    },
-    {
-      crit: 'Ergebnis',
-      scan: 'Rohliste möglicher Schwachstellen',
-      pentest: 'Priorisierter Bericht mit Nachweis (PoC) und Empfehlungen',
-      red: 'Erkenntnisse zu Detektion, Alarmierung und Response',
-    },
-    {
-      crit: 'Aufwand',
-      scan: 'Gering',
-      pentest: 'Mittel - abhängig von Scope und Prüftiefe',
-      red: 'Hoch - mehrwöchige Kampagnen',
-    },
+  sinnvollLabel: 'Anlass',
+  sinnvollHeadline: 'Wann ein Penetrationstest sinnvoll ist.',
+  sinnvollIntro: [
+    { t: 'Die ehrliche Antwort: nicht ständig, aber regelmäßig und immer dann, wenn sich etwas Grundlegendes ändert. Ein Test auf einem System, das morgen umgebaut wird, ist verschwendetes Geld. Diese sechs Anlässe decken die allermeisten Fälle ab.' },
   ],
-  vsGlossaryTitle: 'Die vier Begriffe kurz definiert',
-  vsGlossary: [
-    {
-      term: 'Schwachstellenscan',
-      def: 'Automatisierter Abgleich eines Systems gegen Datenbanken bekannter Schwachstellen. Liefert schnell eine Rohliste, verifiziert die Treffer aber nicht - daher laut BSI mit vielen False Positives.',
-    },
-    {
-      term: 'Penetrationstest',
-      def: 'Autorisierte, überwiegend manuelle Sicherheitsprüfung, die Schwachstellen mit einem Proof-of-Concept nachweist, sie zu Angriffspfaden verkettet und das reale Angriffspotenzial bewertet.',
-    },
-    {
-      term: 'Red Teaming',
-      def: 'Verdeckte, mehrwöchige Angriffssimulation entlang realer Angreifer-Taktiken. Geprüft wird nicht die Schwachstellenliste, sondern ob das Verteidigungsteam den Angriff erkennt und darauf reagiert.',
-    },
-    {
-      term: 'TLPT',
-      def: 'Threat-Led Penetration Testing: bedrohungsgeleitete Prüfung auf Basis echter Bedrohungsdaten, für bestimmte Finanzunternehmen in Art. 26 und 27 DORA ausdrücklich vorgeschrieben.',
-    },
-  ],
-  vsParas: [
-    [
-      { t: 'Der ' },
-      { t: 'BSI-Praxis-Leitfaden', href: SRC.bsiLeitfaden, ext: true },
-      {
-        t: ' ordnet die Prüftiefen als Stufenmodell: Ein technisches Sicherheitsaudit sichtet Versionen und Konfigurationen, ein nicht invasiver Schwachstellenscan prüft automatisiert (mit dem Nachteil vieler False Positives), ein invasiver Scan setzt bereits Exploits ein. Der Penetrationstest geht darüber hinaus: Er sucht gezielt Wege, Sicherheitsmaßnahmen zu umgehen. Das BSI empfiehlt dabei eine moderate Angriffsstärke - Schwachstellen nachweisen, Exploits nur einsetzen, wenn es unvermeidbar und der Exploit ausreichend getestet ist.',
-      },
-    ],
-    [
-      { t: 'Red Teaming definiert das ' },
-      { t: 'NIST', href: SRC.nistRedTeam, ext: true },
-      {
-        t: ' als autorisierte Gruppe, die die Angriffs-Fähigkeiten eines realen Gegners gegen die Sicherheitsaufstellung eines Unternehmens nachbildet - das Ziel ist die Verbesserung der Verteidigung, nicht die möglichst vollständige Schwachstellenliste. Mehr dazu auf unseren Seiten zum ',
-      },
-      { t: 'Schwachstellenscan', href: '/schwachstellenscan' },
-      { t: ', zum ' },
-      { t: 'Red Team Assessment', href: '/red-team-assessment' },
-      { t: ' und zum bedrohungsgeleiteten ' },
-      { t: 'TLPT nach DORA', href: '/tlpt' },
-      { t: '.' },
-    ],
+  sinnvollAnlaesse: [
+    { titel: 'Vor dem Go-Live', text: 'Eine neue Anwendung oder ein neues Portal geht an den Start. Vorher prüfen ist billiger als hinterher abschalten.' },
+    { titel: 'Nach größeren Umbauten', text: 'Migration in die Cloud, neues ERP, umgestelltes Active Directory. Jede Architekturänderung bringt neue Angriffswege mit.' },
+    { titel: 'Für eine Zertifizierung', text: 'ISO 27001, TISAX oder eine NIS2-Prüfung verlangen einen Nachweis, dass die technischen Maßnahmen wirken. Der Bericht liefert ihn.' },
+    { titel: 'Weil ein Kunde ihn verlangt', text: 'Ausschreibungen und Konzernlieferanten fragen zunehmend einen aktuellen Pentest-Bericht ab, oft mit Datum aus den letzten zwölf Monaten.' },
+    { titel: 'Nach einem Vorfall', text: 'Nach Phishing, Ransomware oder einem auffälligen Login gehört geprüft, ob der Weg hinein wirklich geschlossen ist.' },
+    { titel: 'Einmal im Jahr als Routine', text: 'Ohne besonderen Anlass. Die Angriffsfläche verändert sich auch dann, wenn niemand bewusst etwas umbaut.' },
   ],
 
-  artenLabel: 'Arten',
-  artenHeadline: 'Welche Arten von Penetrationstests gibt es?',
-  artenSub:
-    'Penetrationstests werden nach drei Achsen unterschieden: nach der Informationsbasis (Black-, Grey- oder White-Box), nach den sechs Klassifikationskriterien des BSI und nach dem Prüfobjekt - also Webanwendung, API, Infrastruktur, Active Directory, Cloud, Mobile App oder WLAN. Festgelegt werden alle drei Achsen im Scoping vor Vertragsschluss.',
-  boxes: [
+  moduleLabel: 'Leistungen',
+  moduleHeadline: 'Was wir für Sie prüfen.',
+  moduleSub: 'Jedes Modul lässt sich einzeln beauftragen oder kombinieren. Der Umfang wird im Scoping festgelegt, der Preis steht danach fest - ohne Nachträge.',
+  moduleGruppen: [
     {
-      title: 'Black-Box',
-      desc: 'Die Tester erhalten vorab keine internen Informationen - wie ein externer Angreifer. Realistisch, aber aufwendig: Vieles der Testzeit fließt in die Informationsbeschaffung.',
+      titel: 'Netzwerk und Infrastruktur',
+      text: 'Von außen erreichbare Systeme, das interne Netz und die Windows-Domäne. Hier entstehen die Angriffsketten, die vom ersten Fuß in der Tür bis zum Domänenadministrator führen.',
+      items: [
+        { name: 'Externe Infrastruktur', href: '/services/infrastructure-testing' },
+        { name: 'Internes Netzwerk', href: '/services/network-audit' },
+        { name: 'Active Directory', href: '/services/active-directory' },
+      ],
     },
     {
-      title: 'Grey-Box',
-      desc: 'Teilwissen, z. B. Testaccounts oder Netzpläne. In der Praxis der häufigste Kompromiss aus Realismus und Effizienz.',
+      titel: 'Anwendungen und Cloud',
+      text: 'Webanwendungen, Schnittstellen, mobile Apps und Cloud-Konten. Geprüft wird nicht nur, ob der erlaubte Weg funktioniert, sondern ob der verbotene es auch tut.',
+      items: [
+        { name: 'Webanwendung', href: '/services/web-application-testing' },
+        { name: 'API', href: '/services/api-security-testing' },
+        { name: 'Mobile App', href: '/services/mobile-app-testing' },
+        { name: 'Cloud und DevOps', href: '/services/cloud-devops-testing' },
+        { name: 'AWS', href: '/services/aws-penetrationstest' },
+      ],
     },
     {
-      title: 'White-Box',
-      desc: 'Volle Transparenz über Systeme, Konfigurationen, ggf. Quellcode. Maximale Testabdeckung pro Testtag.',
-    },
-  ],
-  boxNote: [
-    { t: 'Das ' },
-    { t: 'BSI empfiehlt grundsätzlich Whitebox-Tests', href: SRC.bsiLeitfaden, ext: true },
-    {
-      t: ', da bei einem Blackbox-Test aufgrund fehlender Informationen Schwachstellen übersehen werden können - bei zugleich höherem Schadensrisiko und deutlich größerem Aufwand.',
-    },
-  ],
-  criteriaTitle: 'Die 6 Klassifikationskriterien des BSI',
-  criteriaIntro: [
-    { t: 'Das ' },
-    { t: 'BSI-Durchführungskonzept', href: SRC.bsiStudie, ext: true },
-    { t: ' klassifiziert jeden Penetrationstest anhand von sechs Kriterien, die im Scoping festgelegt werden:' },
-  ],
-  criteria: [
-    { title: '1 · Informationsbasis', desc: 'Black-Box oder White-Box: Wie viel wissen die Tester vorab?' },
-    { title: '2 · Aggressivität', desc: 'Von passiv scannend über vorsichtig und abwägend bis aggressiv.' },
-    { title: '3 · Umfang', desc: 'Vollständig, begrenzt oder fokussiert auf einzelne Systeme.' },
-    { title: '4 · Vorgehensweise', desc: 'Verdeckt (unangekündigt) oder offensichtlich (mit der IT abgestimmt).' },
-    { title: '5 · Technik', desc: 'Netzwerkzugang, sonstige Kommunikation, physischer Zugang oder Social Engineering.' },
-    { title: '6 · Ausgangspunkt', desc: 'Von außen (Internet) oder von innen (Innentäter-Perspektive).' },
-  ],
-  objektTitle: 'Nach Prüfobjekt',
-  objektSub: 'In der Praxis wird der Penetrationstest meist nach dem Zielsystem benannt:',
-  objekte: [
-    {
-      title: 'Webanwendungs-Pentest',
-      desc: 'Login, Session-Handling, Berechtigungen, Business-Logik - geprüft nach OWASP Top 10 und WSTG.',
-      href: '/services/web-application-testing',
-      linkLabel: 'Web-App-Pentest',
+      titel: 'Mensch und Organisation',
+      text: 'Technik lässt sich härten, Menschen nicht patchen. Diese Module prüfen, wie weit ein Angreifer ohne eine einzige technische Schwachstelle kommt.',
+      items: [
+        { name: 'Phishing-Simulation', href: '/phishing-simulation' },
+        { name: 'Security-Awareness', href: '/security-awareness-schulung' },
+        { name: 'Red Team Assessment', href: '/red-team-assessment' },
+      ],
     },
     {
-      title: 'API-Pentest',
-      desc: 'REST, GraphQL und gRPC: Authentifizierung, Autorisierung, Datenexposition, Rate Limiting.',
-      href: '/services/api-security-testing',
-      linkLabel: 'API-Sicherheitstest',
-    },
-    {
-      title: 'Externe & interne Infrastruktur',
-      desc: 'Angriffsfläche aus dem Internet sowie interne Netze inkl. Lateral Movement und Privilege Escalation.',
-      href: '/services/infrastructure-testing',
-      linkLabel: 'Infrastruktur-Pentest',
-    },
-    {
-      title: 'Active Directory',
-      desc: 'Kerberoasting, Delegationen, ACL-Missbrauch - die typischen Pfade zur Domänen-Übernahme.',
-      href: '/services/active-directory',
-      linkLabel: 'Active-Directory-Pentest',
-    },
-    {
-      title: 'Cloud (AWS, Azure, M365)',
-      desc: 'IAM-Rechte, Storage, Netzwerksegmentierung und Logging in Cloud-Umgebungen.',
-      href: '/services/cloud-devops-testing',
-      linkLabel: 'Cloud-Pentest',
-    },
-    {
-      title: 'Mobile Apps',
-      desc: 'iOS und Android nach OWASP MASVS - inklusive der dahinterliegenden Backend-APIs.',
-      href: '/services/mobile-app-testing',
-      linkLabel: 'Mobile-App-Pentest',
-    },
-    {
-      title: 'WLAN & Netzwerk-Audit',
-      desc: 'Funknetze, Segmentierung und Netzwerkkonfiguration als Einfallstor ins interne Netz.',
-      href: '/services/network-audit',
-      linkLabel: 'Netzwerk-Audit',
-    },
-    {
-      title: 'Phishing & Social Engineering',
-      desc: 'Der Faktor Mensch - laut BSI nur unter klar definierten Rahmenbedingungen und mit Einbeziehung der Personalvertretung.',
-      href: '/phishing-simulation',
-      linkLabel: 'Phishing-Simulation',
+      titel: 'KI-Systeme',
+      text: 'Sprachmodelle, RAG-Anwendungen und Agenten bringen Angriffswege mit, die in keinem klassischen Prüfkatalog stehen - Prompt Injection, Datenabfluss über Werkzeuge, umgangene Leitplanken.',
+      items: [
+        { name: 'KI-Penetrationstest', href: '/ki-penetrationstest' },
+        { name: 'KI-gestütztes Code-Audit', href: '/sodu-audit-ai' },
+      ],
     },
   ],
 
-  // Eigene Praxisbefunde. Quelle ist der Artikel "5 Sicherheitsluecken, die wir
-  // bei nahezu jedem KMU finden" - also bereits veroeffentlichtes, eigenes
-  // Material, keine neu erfundenen Behauptungen.
-  //
-  // Bewusst OHNE die drei Zahlen aus jenem Artikel ("80 % der AD-Umgebungen",
-  // "287 Tage", "200.000 €"). Die stehen dort unter "Zahlen aus der Praxis",
-  // sind aber nirgends belegt. Eine unbelegte Zahl auf der wichtigsten Seite zu
-  // wiederholen, verstaerkt nur das Problem. Die Befunde selbst sind
-  // beschreibend und damit vertretbar; sobald ausgewertete Zahlen aus den
-  // eigenen Projekten vorliegen, gehoeren sie hierher.
+  beratungHeadline: 'Welcher Test passt zu Ihnen?',
+  beratungText: 'Wenn Sie unsicher sind, welches Modul Ihr Risiko tatsächlich abdeckt, klären wir das in einem kurzen Gespräch - kostenlos und ohne Verpflichtung. Danach wissen Sie, was geprüft werden sollte und was es kostet.',
+  beratungCta: 'Scope in 3 Minuten festlegen',
+
   praxisLabel: 'Aus der Praxis',
   praxisHeadline: 'Was wir in fast jedem Projekt wiederfinden.',
   praxisIntro: [
@@ -544,44 +377,6 @@ const de: Copy = {
     { t: 'Keiner dieser Punkte ist exotisch, und keiner lässt sich mit einem Werkzeugkauf lösen. Sie entstehen, weil Systeme über Jahre wachsen und niemand von außen draufschaut. Vier der fünf fallen bei einem ' },
     { t: 'automatisierten Schwachstellenscan', href: '/schwachstellenscan' },
     { t: ' übrigens nicht auf - ein Scanner prüft bekannte Versionsstände, keine Rechtelogik und keine Angriffsketten.' },
-  ],
-
-  stdLabel: 'Standards & Methodik',
-  stdHeadline: 'Wonach seriöse Anbieter testen.',
-  stdSub:
-    'Professionelle Penetrationstests folgen vier etablierten Methodiken: der BSI-Systematik für Tests in Deutschland, dem OWASP Web Security Testing Guide für Webanwendungen, dem PTES für den Projektablauf und NIST SP 800-115 für technisches Sicherheitstesten. Dokumentierte Methodik macht Ergebnisse nachvollziehbar, reproduzierbar und zwischen Anbietern vergleichbar.',
-  standards: [
-    {
-      title: 'BSI-Methodik',
-      text: 'Das Durchführungskonzept für Penetrationstests und der Praxis-Leitfaden für IS-Penetrationstests definieren Phasen, Klassifikation und Anforderungen an Prüfer - die Referenz für Tests in Deutschland.',
-      links: [
-        { label: 'BSI-Durchführungskonzept', url: SRC.bsiStudie },
-        { label: 'BSI-Praxis-Leitfaden', url: SRC.bsiLeitfaden },
-      ],
-    },
-    {
-      title: 'OWASP Top 10 & WSTG',
-      text: 'Die OWASP Top 10 sind der Referenzstandard für die kritischsten Webanwendungs-Risiken (aktuell: Version 2025, angeführt von Broken Access Control). Der Web Security Testing Guide (v4.2) liefert das strukturierte Testframework dazu.',
-      links: [
-        { label: 'OWASP Top 10:2025', url: SRC.owaspTop10 },
-        { label: 'OWASP WSTG', url: SRC.owaspWstg },
-      ],
-    },
-    {
-      title: 'PTES',
-      text: 'Der Penetration Testing Execution Standard gliedert einen Pentest in sieben Abschnitte: Pre-Engagement, Intelligence Gathering, Threat Modeling, Vulnerability Analysis, Exploitation, Post Exploitation und Reporting.',
-      links: [{ label: 'PTES-Dokumentation', url: SRC.ptes }],
-    },
-    {
-      title: 'OSSTMM',
-      text: 'Das Open Source Security Testing Methodology Manual von ISECOM (Version 3) ist eine vollständige Methodik für Sicherheits- und Penetrationstests - von physischer Sicherheit bis Funk, inkl. Metriken.',
-      links: [{ label: 'ISECOM / OSSTMM', url: SRC.osstmm }],
-    },
-    {
-      title: 'NIST SP 800-115 & CVSS',
-      text: 'NIST SP 800-115 beschreibt technisches Sicherheitstesten methodisch; die Risikobewertung einzelner Findings erfolgt in der Praxis über CVSS-Scores, damit Sie Behebungen sauber priorisieren können.',
-      links: [{ label: 'NIST-Definition Penetration Testing', url: SRC.nistPentest }],
-    },
   ],
 
   ablaufLabel: 'Ablauf',
@@ -637,187 +432,7 @@ const de: Copy = {
     ],
   ],
 
-  pflichtLabel: 'Regulatorik',
-  pflichtHeadline: 'Wann sind Penetrationstests Pflicht?',
-  pflichtSub:
-    'Kaum eine Norm schreibt das Wort „Penetrationstest“ wörtlich vor - fast alle relevanten Regulierungen verlangen aber den Nachweis, dass Ihre Sicherheitsmaßnahmen wirksam sind. Der Pentest ist dafür das etablierte Mittel.',
-  pflichtQuote: {
-    lead: 'Wie indirekt diese Pflicht formuliert ist, zeigt § 30 Abs. 2 Nr. 6 BSIG - die deutsche Umsetzung der NIS2-Richtlinie. Gefordert werden dort:',
-    text: '„Konzepte und Verfahren zur Bewertung der Wirksamkeit von Risikomanagementmaßnahmen im Bereich der Sicherheit in der Informationstechnik“',
-    src: '§ 30 Abs. 2 Nr. 6 BSIG, gesetze-im-internet.de',
-    srcUrl: SRC.bsig30,
-  },
-  pflichtTableCaption:
-    'Regulatorische Anforderungen mit Pentest-Bezug: ISO 27001, NIS2, KRITIS, DORA, DSGVO und TISAX im Vergleich, je mit Normstelle und Bedeutung für die Praxis',
-  pflichtTableHead: ['Regulierung', 'Anforderung', 'Bedeutung für die Praxis'],
-  pflichtRows: [
-    {
-      reg: 'ISO 27001:2022',
-      href: '/iso-27001-pentest-anforderungen',
-      req: 'Annex A 8.8: Technische Schwachstellen identifizieren, bewerten und behandeln.',
-      praxis: 'Regelmäßige, dokumentierte Pentests sind das gängige Umsetzungs- und Nachweismittel im Audit.',
-      srcUrl: SRC.iso27001A88,
-    },
-    {
-      reg: 'NIS2 / § 30 BSIG',
-      href: '/nis2',
-      req: '§ 30 Abs. 2 Nr. 6 BSIG fordert Verfahren zur Bewertung der Wirksamkeit der Risikomanagementmaßnahmen.',
-      praxis: 'Der klassische Ansatzpunkt für Penetrationstests bei wichtigen und besonders wichtigen Einrichtungen.',
-      srcUrl: SRC.bsig30,
-    },
-    {
-      reg: 'KRITIS / § 39 BSIG',
-      req: 'Betreiber kritischer Anlagen müssen die Umsetzung ihrer Maßnahmen alle drei Jahre gegenüber dem BSI nachweisen.',
-      praxis: 'Nachweis erfolgt durch Sicherheitsaudits, Prüfungen oder Zertifizierungen - Pentests liefern die technische Substanz.',
-      srcUrl: SRC.bsig39,
-    },
-    {
-      reg: 'DORA',
-      href: '/tlpt',
-      req: 'Risikobasiertes, proportionales Testprogramm; für bestimmte Finanzunternehmen zusätzlich TLPT nach Art. 26/27.',
-      praxis: 'Verpflichtete Institute erhalten laut BaFin einen Bescheid - TLPT im Regelfall im Drei-Jahres-Rhythmus.',
-      srcUrl: SRC.bafinTlpt,
-    },
-    {
-      reg: 'DSGVO Art. 32',
-      href: '/dsgvo-penetrationstest',
-      req: 'Verfahren zur regelmäßigen Überprüfung, Bewertung und Evaluierung der Wirksamkeit der TOM.',
-      praxis: 'Pentests sind ein anerkanntes Verfahren, diese Prüfpflicht für personenbezogene Daten zu erfüllen.',
-      srcUrl: SRC.dsgvoArt32,
-    },
-    {
-      reg: 'TISAX / VDA ISA',
-      href: '/tisax',
-      req: 'Automotive-Prüfstandard der ENX Association; Labels sind drei Jahre gültig.',
-      praxis: 'Wirksame technische Sicherheitsmaßnahmen müssen belegt werden - Pentest-Berichte stützen das Assessment.',
-      srcUrl: SRC.tisaxEnx,
-    },
-  ],
-  pflichtParas: [
-    [
-      { t: 'Für Finanzunternehmen unter ' },
-      { t: 'DORA', href: '/dora' },
-      {
-        t: ' ist der bedrohungsgeleitete Penetrationstest (TLPT) die einzige Stelle, an der ein Pentest ausdrücklich vorgeschrieben ist - Details dazu auf unserer ',
-      },
-      { t: 'TLPT-Seite', href: '/tlpt' },
-      { t: '. Welche Anforderungen ISO 27001 konkret an Pentests stellt, erklärt unsere Seite zu den ' },
-      { t: 'ISO-27001-Pentest-Anforderungen', href: '/iso-27001-pentest-anforderungen' },
-      { t: '; für die Prüfpflichten bei personenbezogenen Daten siehe ' },
-      { t: 'DSGVO-Penetrationstest', href: '/dsgvo-penetrationstest' },
-      { t: '.' },
-    ],
-  ],
-  disclaimer:
-    'Hinweis: Diese Übersicht ist keine Rechtsberatung. Ob und in welcher Frequenz Ihre Organisation testen muss, hängt von Einstufung, Branche und Aufsicht ab.',
-
-  threatLabel: 'Bedrohungslage',
-  threatHeadline: 'Warum Penetrationstests? Die Lage in Zahlen.',
-  threatSub:
-    'Genau die Schwachstellen, die ein Pentest vorab aufdeckt, sind inzwischen der häufigste Einstiegspunkt echter Angriffe.',
-  threatSourceLabel: 'Quelle',
-  threats: [
-    {
-      value: '119',
-      label: 'neu bekannt gewordene Schwachstellen pro Tag - ein Plus von rund 24 %',
-      srcLabel: 'BSI-Lagebericht 2025',
-      srcUrl: SRC.bsiLage2025,
-    },
-    {
-      value: '31 %',
-      label: 'aller Breaches beginnen mit der Ausnutzung einer Schwachstelle - erstmals vor gestohlenen Zugangsdaten',
-      srcLabel: 'Verizon DBIR 2026',
-      srcUrl: SRC.verizonDbir,
-    },
-    {
-      value: '96 %',
-      label: 'der Unternehmen in Deutschland von Datendiebstahl, Spionage oder Sabotage betroffen oder vermutlich betroffen - Schaden: 211 bis 270,8 Mrd. €',
-      srcLabel: 'Bitkom Wirtschaftsschutz 2026',
-      srcUrl: SRC.bitkom2026,
-    },
-    {
-      value: '~80 %',
-      label: 'der angezeigten Angriffe, etwa mit Ransomware, richteten sich gegen kleine und mittlere Unternehmen',
-      srcLabel: 'BSI-Lagebericht 2025',
-      srcUrl: SRC.bsiLage2025,
-    },
-  ],
-  threatOutro: [
-    {
-      t: 'Die Schlussfolgerung ist unbequem, aber einfach: Wer seine Schwachstellen nicht selbst sucht, überlässt das Finden den Angreifern. Ein Penetrationstest dreht die Reihenfolge um.',
-    },
-  ],
-
-  kostenLabel: 'Kosten',
-  kostenHeadline: 'Was kostet ein Penetrationstest?',
-  kostenParas: [
-    [
-      {
-        t: 'Ein automatisierter Schwachstellenscan startet bei Sodu Secure ab 1.499 €. Ein manueller Penetrationstest wird individuell kalkuliert und liegt meist zwischen 4.000 und 20.000 €, abhängig von Scope, Prüftiefe und Komplexität des Ziels. Seriöse Anbieter nennen den Preis erst nach dem Scoping, nicht pauschal.',
-      },
-    ],
-    [
-      { t: 'Marktübliche Preisspannen anderer Anbieter, Tagessatz-Belege und eine Einordnung fremder Angebote finden Sie auf der Seite ' },
-      { t: 'Pentest Kosten', href: '/pentest-kosten' },
-      { t: '. Die drei Festpreis-Anker von Sodu Secure:' },
-    ],
-  ],
-  kostenAnchors: [
-    {
-      name: 'Schwachstellenscan (automatisiert)',
-      price: 'ab 1.499 €',
-      desc: 'Automatisierter Scan mit Report - schneller Einstieg, kein manueller Pentest.',
-    },
-    {
-      name: 'Manueller Pentest (Web, API, Netzwerk, AD)',
-      price: 'meist 4.000 – 20.000 €',
-      desc: 'Individuell auf das Projekt zugeschnitten, kalkuliert nach Aufwand und Tagessätzen.',
-    },
-    {
-      name: 'Multi-Scope / Enterprise',
-      price: 'individuell',
-      desc: 'Mehrere Systeme, Cloud, wiederkehrende Tests - Angebot nach Scoping-Call.',
-    },
-  ],
-  kostenFactorsTitle: 'Die wichtigsten Kostenfaktoren',
-  kostenFactors: [
-    'Scope: Anzahl und Größe der Systeme, Rollen und Schnittstellen',
-    'Prüftiefe und Testansatz (Black-, Grey- oder White-Box)',
-    'Komplexität der Umgebung (Legacy, Cloud, Segmentierung)',
-    'Berichtsumfang, Abschlussgespräch und Retest',
-  ],
-  kostenCta: 'Pentest Kosten im Detail',
   kostenCta2: 'Preisspanne online berechnen',
-
-  anbieterLabel: 'Anbieterwahl',
-  anbieterHeadline: 'Den richtigen Anbieter auswählen.',
-  anbieterSub: [
-    { t: 'Der ' },
-    { t: 'BSI-Praxis-Leitfaden', href: SRC.bsiLeitfaden, ext: true },
-    {
-      t: ' formuliert klare Anforderungen an Prüfer und Auftrag. Diese Checkliste trennt seriöse Anbieter von Scan-Verkäufern:',
-    },
-  ],
-  checklist: [
-    'Externe, unabhängige Prüfer beauftragen - nicht die hauseigene IT (BSI-Empfehlung)',
-    'Testteam aus mindestens zwei Personen: Vier-Augen-Prinzip',
-    'Nachweisbare Qualifikation: OSCP, BSI-Personenzertifizierung, CREST oder CEH',
-    'Erfahrung belegen lassen - BSI-Kriterium: mindestens 6 Penetrationstests in den letzten 3 Jahren',
-    'Schriftlicher Vertrag mit Prüfzeitraum, Prüfobjekt, Prüftiefe, NDA und Datenschutzregelungen',
-    'Berichtsqualität prüfen: Management Summary, reproduzierbare Findings, konkrete Empfehlungen',
-    'Retest nach Behebung inklusive - sonst fehlt die Qualitätskontrolle',
-  ],
-  legalTitle: 'Rechtliche Absicherung',
-  legalParas: [
-    [
-      {
-        t: 'Ohne ausdrückliche schriftliche Beauftragung wäre das Eindringen in fremde IT-Systeme strafbar (§ 202a ff. StGB). Ein schriftlicher Vertrag mit definiertem Prüfzeitraum, Prüfobjekt und Prüftiefe ist deshalb laut BSI Pflicht - er schützt Auftraggeber und Tester gleichermaßen. Worauf Sie darüber hinaus achten sollten, zeigt unser Leitfaden ',
-      },
-      { t: 'Penetrationstest Anbieter erkennen', href: '/penetrationstest-anbieter' },
-      { t: '.' },
-    ],
-  ],
-  anbieterCta: 'Zum Anbieter-Leitfaden',
 
   soduLabel: 'Sodu Secure',
   soduHeadline: 'Penetrationstest vom Anbieter aus Berlin.',
@@ -995,178 +610,66 @@ const en: Copy = {
     'Telecommunication systems',
   ],
 
-  vsLabel: 'Comparison',
-  vsHeadline: 'Penetration test vs. vulnerability scan vs. red teaming',
-  vsSub:
-    'A vulnerability scan looks for known issues automatically, a penetration test proves vulnerabilities manually and chains them into attack paths, and red teaming covertly checks whether your defence notices an attack at all. The three formats differ in the question they answer, not in ambition.',
-  vsTableCaption:
-    'Comparison of vulnerability scan, penetration test and red teaming by goal, method, depth, result and effort',
-  vsTableHead: ['Criterion', 'Vulnerability scan', 'Penetration test', 'Red teaming'],
-  vsRows: [
-    {
-      crit: 'Goal',
-      scan: 'Detect known vulnerabilities automatically',
-      pentest: 'Prove and chain vulnerabilities, assess attack potential',
-      red: 'Test detection and response of the defense (blue team)',
-    },
-    {
-      crit: 'Method',
-      scan: 'Mostly automated (scanners)',
-      pentest: 'Mostly manual, tool-assisted',
-      red: 'Covert attack simulation along real-world tactics',
-    },
-    {
-      crit: 'Depth',
-      scan: 'Surface level - per BSI with many false positives',
-      pentest: 'Verified findings incl. logic and configuration flaws',
-      red: 'Few, but complete attack paths to the objective',
-    },
-    {
-      crit: 'Result',
-      scan: 'Raw list of potential vulnerabilities',
-      pentest: 'Prioritized report with proof (PoC) and recommendations',
-      red: 'Insights into detection, alerting and response',
-    },
-    {
-      crit: 'Effort',
-      scan: 'Low',
-      pentest: 'Medium - depending on scope and depth',
-      red: 'High - multi-week campaigns',
-    },
+  sinnvollLabel: 'Trigger',
+  sinnvollHeadline: 'When a penetration test makes sense.',
+  sinnvollIntro: [
+    { t: 'The honest answer: not constantly, but regularly, and always when something fundamental changes. Testing a system that will be rebuilt tomorrow is wasted money. These six triggers cover almost every case.' },
   ],
-  vsGlossaryTitle: 'The four terms defined',
-  vsGlossary: [
-    {
-      term: 'Vulnerability scan',
-      def: 'Automated comparison of a system against databases of known vulnerabilities. Fast, but the hits are not verified - hence, per BSI, many false positives.',
-    },
-    {
-      term: 'Penetration test',
-      def: 'Authorized, largely manual security assessment that proves vulnerabilities with a proof of concept, chains them into attack paths and rates the realistic attack potential.',
-    },
-    {
-      term: 'Red teaming',
-      def: 'Covert, multi-week attack simulation along real adversary tactics. What is tested is not the vulnerability list but whether the defence team detects and responds to the attack.',
-    },
-    {
-      term: 'TLPT',
-      def: 'Threat-led penetration testing: assessment driven by real threat intelligence, explicitly prescribed for certain financial entities in Art. 26 and 27 DORA.',
-    },
-  ],
-  vsParas: [
-    [
-      { t: 'The ' },
-      { t: 'BSI practical guide', href: SRC.bsiLeitfaden, ext: true },
-      {
-        t: ' arranges test depths as a staged model: a technical security audit reviews versions and configurations, a non-invasive vulnerability scan tests automatically (with the downside of many false positives), an invasive scan already uses exploits. The penetration test goes further: it actively looks for ways to bypass security controls. The BSI recommends a moderate attack strength - prove vulnerabilities, use exploits only where unavoidable and sufficiently tested.',
-      },
-    ],
-    [
-      { t: 'Red teaming is defined by ' },
-      { t: 'NIST', href: SRC.nistRedTeam, ext: true },
-      {
-        t: ' as an authorized group emulating a potential adversary against an enterprise security posture - the goal is improving the defense, not producing the most complete vulnerability list. Read more on our ',
-      },
-      { t: 'vulnerability scan', href: '/schwachstellenscan' },
-      { t: ', ' },
-      { t: 'red team assessment', href: '/red-team-assessment' },
-      { t: ' and threat-led ' },
-      { t: 'TLPT under DORA', href: '/tlpt' },
-      { t: ' pages.' },
-    ],
+  sinnvollAnlaesse: [
+    { titel: 'Before go-live', text: 'A new application or portal is about to launch. Checking beforehand is cheaper than switching it off afterwards.' },
+    { titel: 'After major changes', text: 'A cloud migration, a new ERP, a rebuilt Active Directory. Every architectural change brings new ways in.' },
+    { titel: 'For a certification', text: 'ISO 27001, TISAX or a NIS2 review require evidence that technical measures work. The report provides it.' },
+    { titel: 'Because a customer asks', text: 'Tenders and corporate supply chains increasingly ask for a current pentest report, often dated within the last twelve months.' },
+    { titel: 'After an incident', text: 'Following phishing, ransomware or a suspicious login, the way in needs checking - properly closed, or only appearing so.' },
+    { titel: 'Once a year as routine', text: 'With no particular trigger. The attack surface changes even when nobody deliberately rebuilds anything.' },
   ],
 
-  artenLabel: 'Types',
-  artenHeadline: 'Which types of penetration tests exist?',
-  artenSub:
-    'Penetration tests are distinguished along three axes: by information basis (black, grey or white box), by the six BSI classification criteria and by target system - web application, API, infrastructure, Active Directory, cloud, mobile app or wireless. All three are fixed during scoping, before the contract is signed.',
-  boxes: [
+  moduleLabel: 'Services',
+  moduleHeadline: 'What we test for you.',
+  moduleSub: 'Each module can be booked on its own or combined. Scope is agreed up front, the price is fixed afterwards - no change requests.',
+  moduleGruppen: [
     {
-      title: 'Black box',
-      desc: 'Testers receive no internal information upfront - like an external attacker. Realistic, but costly: much of the test time goes into reconnaissance.',
+      titel: 'Network and infrastructure',
+      text: 'Internet-facing systems, the internal network and the Windows domain. This is where the chains form that lead from a first foot in the door to domain admin.',
+      items: [
+        { name: 'External infrastructure', href: '/services/infrastructure-testing' },
+        { name: 'Internal network', href: '/services/network-audit' },
+        { name: 'Active Directory', href: '/services/active-directory' },
+      ],
     },
     {
-      title: 'Grey box',
-      desc: 'Partial knowledge, e.g. test accounts or network diagrams. In practice the most common compromise between realism and efficiency.',
+      titel: 'Applications and cloud',
+      text: 'Web applications, interfaces, mobile apps and cloud accounts. We check not only whether the permitted path works, but whether the forbidden one does too.',
+      items: [
+        { name: 'Web application', href: '/services/web-application-testing' },
+        { name: 'API', href: '/services/api-security-testing' },
+        { name: 'Mobile app', href: '/services/mobile-app-testing' },
+        { name: 'Cloud and DevOps', href: '/services/cloud-devops-testing' },
+        { name: 'AWS', href: '/services/aws-penetrationstest' },
+      ],
     },
     {
-      title: 'White box',
-      desc: 'Full transparency about systems, configurations and possibly source code. Maximum test coverage per testing day.',
-    },
-  ],
-  boxNote: [
-    { t: 'The ' },
-    { t: 'BSI generally recommends white-box tests', href: SRC.bsiLeitfaden, ext: true },
-    {
-      t: ', since black-box tests can miss vulnerabilities due to missing information - while carrying a higher risk of damage and substantially more effort.',
-    },
-  ],
-  criteriaTitle: 'The 6 BSI classification criteria',
-  criteriaIntro: [
-    { t: 'The ' },
-    { t: 'BSI study', href: SRC.bsiStudie, ext: true },
-    { t: ' classifies every penetration test along six criteria that are fixed during scoping:' },
-  ],
-  criteria: [
-    { title: '1 · Information basis', desc: 'Black box or white box: how much do the testers know upfront?' },
-    { title: '2 · Aggressiveness', desc: 'From passive scanning through cautious and calculated to aggressive.' },
-    { title: '3 · Scope', desc: 'Complete, limited or focused on individual systems.' },
-    { title: '4 · Approach', desc: 'Covert (unannounced) or overt (coordinated with IT).' },
-    { title: '5 · Technique', desc: 'Network access, other communication, physical access or social engineering.' },
-    { title: '6 · Starting point', desc: 'From outside (internet) or from inside (insider perspective).' },
-  ],
-  objektTitle: 'By target system',
-  objektSub: 'In practice, penetration tests are usually named after the system under test:',
-  objekte: [
-    {
-      title: 'Web application pentest',
-      desc: 'Login, session handling, authorization, business logic - tested along OWASP Top 10 and WSTG.',
-      href: '/services/web-application-testing',
-      linkLabel: 'Web app pentest',
+      titel: 'People and organisation',
+      text: 'Technology can be hardened, people cannot be patched. These modules test how far an attacker gets without a single technical vulnerability.',
+      items: [
+        { name: 'Phishing simulation', href: '/phishing-simulation' },
+        { name: 'Security awareness', href: '/security-awareness-schulung' },
+        { name: 'Red team assessment', href: '/red-team-assessment' },
+      ],
     },
     {
-      title: 'API pentest',
-      desc: 'REST, GraphQL and gRPC: authentication, authorization, data exposure, rate limiting.',
-      href: '/services/api-security-testing',
-      linkLabel: 'API security test',
-    },
-    {
-      title: 'External & internal infrastructure',
-      desc: 'Internet-facing attack surface plus internal networks incl. lateral movement and privilege escalation.',
-      href: '/services/infrastructure-testing',
-      linkLabel: 'Infrastructure pentest',
-    },
-    {
-      title: 'Active Directory',
-      desc: 'Kerberoasting, delegations, ACL abuse - the typical paths to domain compromise.',
-      href: '/services/active-directory',
-      linkLabel: 'Active Directory pentest',
-    },
-    {
-      title: 'Cloud (AWS, Azure, M365)',
-      desc: 'IAM permissions, storage, network segmentation and logging in cloud environments.',
-      href: '/services/cloud-devops-testing',
-      linkLabel: 'Cloud pentest',
-    },
-    {
-      title: 'Mobile apps',
-      desc: 'iOS and Android along OWASP MASVS - including the backend APIs behind them.',
-      href: '/services/mobile-app-testing',
-      linkLabel: 'Mobile app pentest',
-    },
-    {
-      title: 'WLAN & network audit',
-      desc: 'Wireless networks, segmentation and network configuration as entry points into the internal network.',
-      href: '/services/network-audit',
-      linkLabel: 'Network audit',
-    },
-    {
-      title: 'Phishing & social engineering',
-      desc: 'The human factor - per BSI only under clearly defined conditions and with employee representatives involved.',
-      href: '/phishing-simulation',
-      linkLabel: 'Phishing simulation',
+      titel: 'AI systems',
+      text: 'Language models, RAG applications and agents bring attack paths that appear in no classic test catalogue - prompt injection, data exfiltration through tools, bypassed guardrails.',
+      items: [
+        { name: 'AI penetration test', href: '/ki-penetrationstest' },
+        { name: 'AI-assisted code audit', href: '/sodu-audit-ai' },
+      ],
     },
   ],
+
+  beratungHeadline: 'Which test fits your situation?',
+  beratungText: 'If you are unsure which module actually covers your risk, we clarify it in a short call - free and without obligation. Afterwards you know what should be tested and what it costs.',
+  beratungCta: 'Define scope in 3 minutes',
 
   praxisLabel: 'From practice',
   praxisHeadline: 'What we find in almost every engagement.',
@@ -1206,44 +709,6 @@ const en: Copy = {
     { t: 'None of this is exotic, and none of it is solved by buying a tool. These gaps appear because systems grow over years and nobody looks at them from the outside. Four of the five, incidentally, are invisible to an ' },
     { t: 'automated vulnerability scan', href: '/schwachstellenscan' },
     { t: ' - a scanner checks known version numbers, not permission logic and not attack chains.' },
-  ],
-
-  stdLabel: 'Standards & methodology',
-  stdHeadline: 'What serious providers test against.',
-  stdSub:
-    'Professional penetration tests follow four established methodologies: the BSI system for tests in Germany, the OWASP Web Security Testing Guide for web applications, PTES for the project structure and NIST SP 800-115 for technical security testing. Documented methodology makes results traceable, reproducible and comparable across providers.',
-  standards: [
-    {
-      title: 'BSI methodology',
-      text: 'The BSI penetration testing study and the practical guide for IS penetration tests define phases, classification and requirements for testers - the reference for tests in Germany.',
-      links: [
-        { label: 'BSI study (German)', url: SRC.bsiStudie },
-        { label: 'BSI practical guide (German)', url: SRC.bsiLeitfaden },
-      ],
-    },
-    {
-      title: 'OWASP Top 10 & WSTG',
-      text: 'The OWASP Top 10 is the reference standard for the most critical web application risks (current: the 2025 edition, led by Broken Access Control). The Web Security Testing Guide (v4.2) provides the structured test framework.',
-      links: [
-        { label: 'OWASP Top 10:2025', url: SRC.owaspTop10 },
-        { label: 'OWASP WSTG', url: SRC.owaspWstg },
-      ],
-    },
-    {
-      title: 'PTES',
-      text: 'The Penetration Testing Execution Standard structures a pentest into seven sections: pre-engagement, intelligence gathering, threat modeling, vulnerability analysis, exploitation, post exploitation and reporting.',
-      links: [{ label: 'PTES documentation', url: SRC.ptes }],
-    },
-    {
-      title: 'OSSTMM',
-      text: 'The Open Source Security Testing Methodology Manual by ISECOM (version 3) is a complete methodology for security and penetration testing - from physical security to wireless, including metrics.',
-      links: [{ label: 'ISECOM / OSSTMM', url: SRC.osstmm }],
-    },
-    {
-      title: 'NIST SP 800-115 & CVSS',
-      text: 'NIST SP 800-115 describes technical security testing methodically; individual findings are risk-rated via CVSS scores in practice, so you can prioritize remediation cleanly.',
-      links: [{ label: 'NIST definition of penetration testing', url: SRC.nistPentest }],
-    },
   ],
 
   ablaufLabel: 'Process',
@@ -1297,185 +762,7 @@ const en: Copy = {
     ],
   ],
 
-  pflichtLabel: 'Regulation',
-  pflichtHeadline: 'When are penetration tests mandatory?',
-  pflichtSub:
-    'Hardly any standard literally prescribes the word "penetration test" - but almost all relevant regulations require proof that your security controls are effective. The pentest is the established means to provide it.',
-  pflichtQuote: {
-    lead: 'How indirectly this obligation is worded shows in Sec. 30 (2) no. 6 BSIG, the German implementation of NIS2, which requires:',
-    text: '“Konzepte und Verfahren zur Bewertung der Wirksamkeit von Risikomanagementmaßnahmen im Bereich der Sicherheit in der Informationstechnik” (concepts and procedures to assess the effectiveness of IT security risk management measures)',
-    src: 'Sec. 30 (2) no. 6 BSIG, gesetze-im-internet.de',
-    srcUrl: SRC.bsig30,
-  },
-  pflichtTableCaption:
-    'Regulatory requirements with pentest relevance: ISO 27001, NIS2, KRITIS, DORA, GDPR and TISAX compared, each with the relevant clause and its practical meaning',
-  pflichtTableHead: ['Regulation', 'Requirement', 'What it means in practice'],
-  pflichtRows: [
-    {
-      reg: 'ISO 27001:2022',
-      href: '/iso-27001-pentest-anforderungen',
-      req: 'Annex A 8.8: identify, evaluate and treat technical vulnerabilities.',
-      praxis: 'Regular, documented pentests are the common implementation and audit evidence.',
-      srcUrl: SRC.iso27001A88,
-    },
-    {
-      reg: 'NIS2 / § 30 BSIG',
-      href: '/nis2',
-      req: 'Sec. 30 (2) no. 6 of the German BSIG requires procedures to assess the effectiveness of risk management measures.',
-      praxis: 'The classic entry point for penetration tests at important and essential entities.',
-      srcUrl: SRC.bsig30,
-    },
-    {
-      reg: 'KRITIS / § 39 BSIG',
-      req: 'Operators of critical facilities must prove implementation of their measures to the BSI every three years.',
-      praxis: 'Evidence comes from security audits, examinations or certifications - pentests provide the technical substance.',
-      srcUrl: SRC.bsig39,
-    },
-    {
-      reg: 'DORA',
-      href: '/tlpt',
-      req: 'Risk-based, proportionate testing program; certain financial entities additionally need TLPT under Art. 26/27.',
-      praxis: 'Obligated institutions receive a formal notice from BaFin - TLPT usually on a three-year cycle.',
-      srcUrl: SRC.bafinTlpt,
-    },
-    {
-      reg: 'GDPR Art. 32',
-      href: '/dsgvo-penetrationstest',
-      req: 'A process for regularly testing, assessing and evaluating the effectiveness of technical and organizational measures.',
-      praxis: 'Penetration tests are a recognized procedure to fulfill this obligation for personal data.',
-      srcUrl: SRC.dsgvoArt32,
-    },
-    {
-      reg: 'TISAX / VDA ISA',
-      href: '/tisax',
-      req: 'Automotive assessment standard governed by the ENX Association; labels are valid for three years.',
-      praxis: 'Effective technical controls must be demonstrated - pentest reports support the assessment.',
-      srcUrl: SRC.tisaxEnx,
-    },
-  ],
-  pflichtParas: [
-    [
-      { t: 'For financial entities under ' },
-      { t: 'DORA', href: '/dora' },
-      {
-        t: ', the threat-led penetration test (TLPT) is the one place where a pentest is explicitly prescribed - details on our ',
-      },
-      { t: 'TLPT page', href: '/tlpt' },
-      { t: '. What ISO 27001 specifically expects from pentests is covered on our ' },
-      { t: 'ISO 27001 pentest requirements', href: '/iso-27001-pentest-anforderungen' },
-      { t: ' page; for testing obligations around personal data see ' },
-      { t: 'GDPR penetration testing', href: '/dsgvo-penetrationstest' },
-      { t: '.' },
-    ],
-  ],
-  disclaimer:
-    'Note: this overview is not legal advice. Whether and how often your organization must test depends on classification, industry and supervisory authority.',
-
-  threatLabel: 'Threat landscape',
-  threatHeadline: 'Why penetration testing? The numbers.',
-  threatSub:
-    'The very vulnerabilities a pentest uncovers in advance have become the most common entry point of real attacks.',
-  threatSourceLabel: 'Source',
-  threats: [
-    {
-      value: '119',
-      label: 'newly disclosed vulnerabilities per day - an increase of around 24%',
-      srcLabel: 'BSI State of IT Security 2025',
-      srcUrl: SRC.bsiLage2025,
-    },
-    {
-      value: '31%',
-      label: 'of all breaches start with vulnerability exploitation - for the first time ahead of stolen credentials',
-      srcLabel: 'Verizon DBIR 2026',
-      srcUrl: SRC.verizonDbir,
-    },
-    {
-      value: '96%',
-      label: 'of German companies affected or presumably affected by data theft, espionage or sabotage - damage: €211 to €270.8 billion',
-      srcLabel: 'Bitkom Wirtschaftsschutz 2026',
-      srcUrl: SRC.bitkom2026,
-    },
-    {
-      value: '~80%',
-      label: 'of reported attacks, e.g. with ransomware, targeted small and medium-sized businesses',
-      srcLabel: 'BSI State of IT Security 2025',
-      srcUrl: SRC.bsiLage2025,
-    },
-  ],
-  threatOutro: [
-    {
-      t: 'The conclusion is uncomfortable but simple: if you do not look for your vulnerabilities yourself, you leave the finding to attackers. A penetration test reverses that order.',
-    },
-  ],
-
-  kostenLabel: 'Costs',
-  kostenHeadline: 'How much does a penetration test cost?',
-  kostenParas: [
-    [
-      {
-        t: 'An automated vulnerability scan at Sodu Secure starts from €1,499. A manual penetration test is scoped individually and typically lands between €4,000 and €20,000, depending on scope, test depth and target complexity. Serious providers quote after scoping, not with flat rates.',
-      },
-    ],
-    [
-      { t: 'Market ranges of other providers, day-rate evidence and help with judging third-party quotes are on our ' },
-      { t: 'pentest costs page', href: '/pentest-kosten' },
-      { t: '. The three fixed-price anchors at Sodu Secure:' },
-    ],
-  ],
-  kostenAnchors: [
-    {
-      name: 'Vulnerability scan (automated)',
-      price: 'from €1,499',
-      desc: 'Automated scan with report - a fast entry point, not a manual pentest.',
-    },
-    {
-      name: 'Manual pentest (web, API, network, AD)',
-      price: 'typically €4,000 – €20,000',
-      desc: 'Individually scoped, calculated based on effort and day rates.',
-    },
-    {
-      name: 'Multi-scope / enterprise',
-      price: 'custom',
-      desc: 'Multiple systems, cloud, recurring tests - quote after the scoping call.',
-    },
-  ],
-  kostenFactorsTitle: 'The main cost drivers',
-  kostenFactors: [
-    'Scope: number and size of systems, roles and interfaces',
-    'Test depth and approach (black, grey or white box)',
-    'Complexity of the environment (legacy, cloud, segmentation)',
-    'Report scope, debrief and retest',
-  ],
-  kostenCta: 'Pentest costs in detail',
   kostenCta2: 'Calculate a price range online',
-
-  anbieterLabel: 'Choosing a provider',
-  anbieterHeadline: 'Selecting the right provider.',
-  anbieterSub: [
-    { t: 'The ' },
-    { t: 'BSI practical guide', href: SRC.bsiLeitfaden, ext: true },
-    { t: ' sets clear requirements for testers and engagements. This checklist separates serious providers from scan resellers:' },
-  ],
-  checklist: [
-    'Engage external, independent testers - not your in-house IT (BSI recommendation)',
-    'Test team of at least two people: four-eyes principle',
-    'Verifiable qualification: OSCP, BSI personal certification, CREST or CEH',
-    'Ask for proven experience - BSI criterion: at least 6 penetration tests within the last 3 years',
-    'Written contract with test period, target, test depth, NDA and data protection terms',
-    'Check report quality: management summary, reproducible findings, concrete recommendations',
-    'Retest after remediation included - otherwise quality control is missing',
-  ],
-  legalTitle: 'Legal protection',
-  legalParas: [
-    [
-      {
-        t: 'Without an explicit written engagement, intruding into third-party IT systems would be a criminal offense under German law (Sec. 202a et seq. StGB). A written contract with defined test period, target and depth is therefore mandatory per BSI - it protects client and tester alike. What else to look for is covered in our guide ',
-      },
-      { t: 'how to recognize a serious pentest provider', href: '/penetrationstest-anbieter' },
-      { t: '.' },
-    ],
-  ],
-  anbieterCta: 'Read the provider guide',
 
   soduLabel: 'Sodu Secure',
   soduHeadline: 'Penetration testing from Berlin.',
@@ -1799,166 +1086,81 @@ export default async function PenetrationstestPage() {
         </div>
       </section>
 
-      {/* VS TABLE */}
-      <section className="premium-section">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-          <SectionLabel>{c.vsLabel}</SectionLabel>
-          <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.vsHeadline}</h2>
-          <p className="mt-4 max-w-3xl text-white/70">{c.vsSub}</p>
-
-          <div className="mt-10 overflow-x-auto rounded-2xl border border-white/10">
-            <table className="w-full min-w-[760px] text-sm">
-              <caption className="sr-only">{c.vsTableCaption}</caption>
-              <thead>
-                <tr className="border-b border-white/10 bg-white/5">
-                  {c.vsTableHead.map((h, i) => (
-                    <th
-                      key={h}
-                      scope="col"
-                      className={
-                        'px-4 py-3.5 text-left font-semibold ' + (i === 2 ? 'text-[#FF6B61]' : 'text-white')
-                      }
-                    >
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {c.vsRows.map((row) => (
-                  <tr key={row.crit} className="border-b border-white/10 last:border-b-0">
-                    <th scope="row" className="px-4 py-3.5 text-left font-semibold text-white">
-                      {row.crit}
-                    </th>
-                    <td className="px-4 py-3.5 text-white/70">{row.scan}</td>
-                    <td className="px-4 py-3.5 text-white/85">{row.pentest}</td>
-                    <td className="px-4 py-3.5 text-white/70">{row.red}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <h3 className="mt-12 text-2xl font-bold tracking-tight md:text-3xl">{c.vsGlossaryTitle}</h3>
-          <dl className="mt-6 grid gap-4 md:grid-cols-2">
-            {c.vsGlossary.map((g) => (
-              <div key={g.term} className="rounded-2xl border border-white/10 bg-transparent p-6 transition hover:border-white/20">
-                <dt className="text-base font-semibold tracking-tight text-white">{g.term}</dt>
-                <dd className="mt-2 text-sm leading-relaxed text-white/70">{g.def}</dd>
-              </div>
-            ))}
-          </dl>
-
-          {c.vsParas.map((p, i) => (
-            <p key={i} className="mt-6 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">
-              <RichText para={p} />
-            </p>
-          ))}
-        </div>
-      </section>
-
-      {/* ARTEN */}
+      {/* WANN SINNVOLL - SySS fuehrt diesen Abschnitt, wir hatten ihn nicht.
+          Er faengt die Suchenden ab, die schon wissen was ein Pentest ist und
+          nur noch den Anlass suchen. */}
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-        <SectionLabel>{c.artenLabel}</SectionLabel>
-        <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.artenHeadline}</h2>
-        <p className="mt-4 max-w-3xl text-white/70">{c.artenSub}</p>
-
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {c.boxes.map((b) => (
-            <article
-              key={b.title}
-              className="rounded-3xl border border-white/10 bg-transparent p-7 transition hover:border-white/20"
-            >
-              <h3 className="text-lg font-semibold tracking-tight text-white">{b.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/70">{b.desc}</p>
-            </article>
-          ))}
-        </div>
-        <div className="mt-6 rounded-2xl border border-[#FF3B30]/20 bg-[#FF3B30]/10 p-6">
-          <p className="text-sm leading-relaxed text-white/85">
-            <RichText para={c.boxNote} />
-          </p>
-        </div>
-
-        <h3 className="mt-16 text-2xl font-bold tracking-tight md:text-3xl">{c.criteriaTitle}</h3>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/70 md:text-base">
-          <RichText para={c.criteriaIntro} />
+        <SectionLabel>{c.sinnvollLabel}</SectionLabel>
+        <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.sinnvollHeadline}</h2>
+        <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/70 md:text-lg">
+          <RichText para={c.sinnvollIntro} />
         </p>
-        <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {c.criteria.map((cr, i) => {
-            const Icon = CRITERIA_ICONS[i % CRITERIA_ICONS.length];
-            return (
-              <div key={cr.title} className="rounded-2xl border border-white/10 bg-transparent p-6 transition hover:border-white/20">
-                <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#0A0A0B] text-[#FF3B30]">
-                  <Icon className="h-4 w-4" />
-                </div>
-                <div className="mt-4 text-base font-semibold text-white">{cr.title}</div>
-                <p className="mt-2 text-sm leading-relaxed text-white/70">{cr.desc}</p>
-              </div>
-            );
-          })}
-        </div>
+        <ul className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] sm:grid-cols-2">
+          {c.sinnvollAnlaesse.map((a) => (
+            <li key={a.titel} className="flex flex-col gap-2 bg-[#16141A] p-6">
+              <h3 className="text-base font-bold text-white">{a.titel}</h3>
+              <p className="text-sm leading-relaxed text-white/65">{a.text}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
 
-        <h3 className="mt-16 text-2xl font-bold tracking-tight md:text-3xl">{c.objektTitle}</h3>
-        <p className="mt-3 max-w-2xl text-white/70">{c.objektSub}</p>
-        <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {c.objekte.map((o, i) => {
-            const Icon = OBJEKT_ICONS[i % OBJEKT_ICONS.length];
-            return (
-              <article
-                key={o.title}
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-transparent p-6 transition hover:border-white/20"
-              >
-                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-[#0A0A0B] text-white">
-                  <Icon className="h-4 w-4" />
-                </div>
-                <h4 className="mt-4 text-base font-semibold tracking-tight text-white">{o.title}</h4>
-                <p className="mt-2 text-sm leading-relaxed text-white/70">{o.desc}</p>
-                <Link
-                  href={o.href}
-                  className="mt-4 inline-flex items-center gap-1 text-[12px] font-semibold uppercase tracking-[0.18em] text-[#FF3B30] transition hover:text-[#FF6B61]"
-                >
-                  {o.linkLabel} <ArrowRight className="h-3 w-3" />
-                </Link>
-              </article>
-            );
-          })}
+      {/* MODULE - der Leistungskatalog. Das ist der strukturelle Unterschied zu
+          vorher: Die Seite zeigt jetzt, was man buchen kann, statt welche
+          Testarten es theoretisch gibt. Jede Karte verlinkt auf die
+          Leistungsseite, die es ohnehin schon gibt. */}
+      <section className="premium-section">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+          <SectionLabel>{c.moduleLabel}</SectionLabel>
+          <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.moduleHeadline}</h2>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/70 md:text-lg">{c.moduleSub}</p>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-2">
+            {c.moduleGruppen.map((g) => (
+              <div key={g.titel} className="rounded-2xl border border-white/10 bg-[#16141A] p-6 lg:p-7">
+                <h3 className="text-lg font-bold text-white">{g.titel}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/60">{g.text}</p>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {g.items.map((it) => (
+                    <li key={it.href}>
+                      <Link
+                        href={it.href}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-white/12 bg-white/[0.03] px-3.5 py-1.5 text-[13px] font-medium text-white/80 transition hover:border-[#FF3B30]/40 hover:text-white"
+                      >
+                        {it.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* STANDARDS */}
-      <section className="premium-section">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-          <SectionLabel>{c.stdLabel}</SectionLabel>
-          <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.stdHeadline}</h2>
-          <p className="mt-4 max-w-3xl text-white/70">{c.stdSub}</p>
-
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {c.standards.map((s) => (
-              <article
-                key={s.title}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 premium-card p-6 transition hover:border-[#FF3B30]"
+      {/* BERATUNG - Zwischenruf mitten auf der Seite. SySS setzt denselben
+          Block ein, weil nicht jeder Besucher bis zum Schluss liest. */}
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="rounded-2xl border border-white/10 bg-gradient-to-b from-[#1B181F] to-[#141217] p-8 lg:p-10">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl">
+              <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">{c.beratungHeadline}</h2>
+              <p className="mt-3 text-base leading-relaxed text-white/70">{c.beratungText}</p>
+            </div>
+            <div className="flex flex-none flex-col items-stretch gap-3 sm:flex-row lg:flex-col">
+              <Link
+                href="/request-pentest"
+                className="premium-cta inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-6 py-3.5 text-sm font-semibold text-white"
               >
-                <div className="mb-4 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#0A0A0B] text-[#FF3B30]">
-                  <BookOpen className="h-5 w-5" />
-                </div>
-                <h3 className="text-base font-semibold text-white">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/70">{s.text}</p>
-                <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
-                  {s.links.map((l) => (
-                    <a
-                      key={l.url}
-                      href={l.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#FF6B61] transition hover:text-[#FF8077]"
-                    >
-                      {l.label} <ArrowRight className="h-3 w-3" />
-                    </a>
-                  ))}
-                </div>
-              </article>
-            ))}
+                {c.beratungCta} <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a
+                href="tel:+491777750985"
+                className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/15 bg-white/[0.03] px-6 py-3.5 text-sm font-semibold text-white transition hover:border-white/30"
+              >
+                +49 177 7750985
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -1989,115 +1191,6 @@ export default async function PenetrationstestPage() {
             <RichText para={p} />
           </p>
         ))}
-      </section>
-
-      {/* PFLICHT / REGULATORIK */}
-      <section className="premium-section">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-          <SectionLabel>{c.pflichtLabel}</SectionLabel>
-          <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.pflichtHeadline}</h2>
-          <p className="mt-4 max-w-3xl text-white/70">{c.pflichtSub}</p>
-
-          <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">{c.pflichtQuote.lead}</p>
-          <blockquote className="mt-4 max-w-3xl rounded-2xl border border-white/10 bg-white/5 p-6">
-            <p className="text-base leading-relaxed text-white/90 md:text-lg">{c.pflichtQuote.text}</p>
-            <footer className="mt-4 text-sm text-white/60">
-              <a
-                href={c.pflichtQuote.srcUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#FF6B61] transition hover:text-[#FF8077]"
-              >
-                {c.pflichtQuote.src}
-              </a>
-            </footer>
-          </blockquote>
-
-          <div className="mt-10 overflow-x-auto rounded-2xl border border-white/10">
-            <table className="w-full min-w-[760px] text-sm">
-              <caption className="sr-only">{c.pflichtTableCaption}</caption>
-              <thead>
-                <tr className="border-b border-white/10 bg-white/5">
-                  {c.pflichtTableHead.map((h) => (
-                    <th key={h} scope="col" className="px-4 py-3.5 text-left font-semibold text-white">
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {c.pflichtRows.map((row, i) => {
-                  const Icon = PFLICHT_ICONS[i % PFLICHT_ICONS.length];
-                  return (
-                    <tr key={row.reg} className="border-b border-white/10 last:border-b-0 align-top">
-                      <th scope="row" className="px-4 py-4 text-left font-semibold text-white">
-                        <span className="inline-flex items-center gap-2">
-                          <Icon className="h-4 w-4 shrink-0 text-[#FF3B30]" />
-                          {row.href ? (
-                            <Link href={row.href} className="text-[#FF6B61] transition hover:text-[#FF8077]">
-                              {row.reg}
-                            </Link>
-                          ) : (
-                            row.reg
-                          )}
-                        </span>
-                      </th>
-                      <td className="px-4 py-4 text-white/75">
-                        {row.req}{' '}
-                        <a
-                          href={row.srcUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="whitespace-nowrap text-[12px] text-white/50 underline underline-offset-2 transition hover:text-white/75"
-                        >
-                          {locale === 'en' ? 'Source' : 'Quelle'}
-                        </a>
-                      </td>
-                      <td className="px-4 py-4 text-white/70">{row.praxis}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-
-          {c.pflichtParas.map((p, i) => (
-            <p key={i} className="mt-6 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">
-              <RichText para={p} />
-            </p>
-          ))}
-          <p className="mt-6 max-w-3xl text-xs leading-relaxed text-white/50">{c.disclaimer}</p>
-        </div>
-      </section>
-
-      {/* BEDROHUNGSLAGE */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-        <SectionLabel>{c.threatLabel}</SectionLabel>
-        <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.threatHeadline}</h2>
-        <p className="mt-4 max-w-2xl text-white/70">{c.threatSub}</p>
-
-        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] sm:grid-cols-2 lg:grid-cols-4">
-          {c.threats.map((s) => (
-            <div key={s.label} className="flex flex-col bg-[#16141A] p-6">
-              <div className="premium-tabular text-3xl font-extrabold tracking-tight text-white md:text-4xl">
-                {s.value}
-              </div>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-white/70">{s.label}</p>
-              <a
-                href={s.srcUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#FF6B61] transition hover:text-[#FF8077]"
-              >
-                {c.threatSourceLabel}: {s.srcLabel}
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">
-          <RichText para={c.threatOutro} />
-        </p>
       </section>
 
       {/* PRAXIS - eigene Befunde, das inhaltliche Alleinstellungsmerkmal
@@ -2132,95 +1225,6 @@ export default async function PenetrationstestPage() {
           <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">
             <RichText para={c.praxisOutro} />
           </p>
-        </div>
-      </section>
-
-      {/* KOSTEN */}
-      <section className="premium-section">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-          <SectionLabel>{c.kostenLabel}</SectionLabel>
-          <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.kostenHeadline}</h2>
-          {c.kostenParas.map((p, i) => (
-            <p key={i} className="mt-4 max-w-2xl text-white/70">
-              <RichText para={p} />
-            </p>
-          ))}
-
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            {c.kostenAnchors.map((p, i) => (
-              <article
-                key={p.name}
-                className={
-                  'flex flex-col rounded-3xl border p-8 transition ' +
-                  (i === 1 ? 'border-[#0A0A0B] bg-[#0A0A0B] text-white' : 'border-white/10 bg-transparent hover:border-white/20')
-                }
-              >
-                <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/65">{p.name}</div>
-                <div className="mt-4 premium-tabular text-4xl font-extrabold tracking-tight">{p.price}</div>
-                <p className="mt-3 text-sm text-white/70">{p.desc}</p>
-              </article>
-            ))}
-          </div>
-
-          <h3 className="mt-12 text-xl font-bold tracking-tight md:text-2xl">{c.kostenFactorsTitle}</h3>
-          <ul className="mt-5 grid gap-3 md:grid-cols-2">
-            {c.kostenFactors.map((f) => (
-              <li key={f} className="flex items-start gap-2.5 text-sm text-white/75">
-                <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-[#FF3B30]" />
-                {f}
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link
-              href="/pentest-kosten"
-              className="inline-flex items-center gap-1.5 rounded-full bg-[#0A0A0B] px-5 py-3 text-sm font-semibold text-white transition hover:bg-black"
-            >
-              {c.kostenCta} <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link
-              href="/preisrechner"
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:border-white/20"
-            >
-              {c.kostenCta2} <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ANBIETERWAHL */}
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
-        <SectionLabel>{c.anbieterLabel}</SectionLabel>
-        <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">{c.anbieterHeadline}</h2>
-        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">
-          <RichText para={c.anbieterSub} />
-        </p>
-
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-          <ul className="space-y-4">
-            {c.checklist.map((item) => (
-              <li key={item} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-transparent p-5 text-sm text-white/80 transition hover:border-white/20">
-                <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[#FF3B30]" />
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <aside className="h-fit rounded-3xl border border-white/10 bg-transparent p-7">
-            <h3 className="text-lg font-semibold tracking-tight text-white">{c.legalTitle}</h3>
-            {c.legalParas.map((p, i) => (
-              <p key={i} className="mt-3 text-sm leading-relaxed text-white/70">
-                <RichText para={p} />
-              </p>
-            ))}
-            <Link
-              href="/penetrationstest-anbieter"
-              className="mt-6 inline-flex items-center gap-1.5 rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:border-white/20"
-            >
-              {c.anbieterCta} <ArrowRight className="h-4 w-4" />
-            </Link>
-          </aside>
         </div>
       </section>
 
