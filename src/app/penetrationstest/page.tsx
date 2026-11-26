@@ -54,9 +54,16 @@ export const metadata: Metadata = {
   // Stueckwerk. Seit der Umstellung auf ganze Saetze uebernimmt Google sie
   // woertlich. Titel und H1 tragen jetzt dieselbe Aussage.
   // absolute: Ohne das haengt das Root-Template " | Sodu Secure" an und der
-  // Titel waechst auf 652 px - Google kappt dann hinten. Mit absolute sind
-  // es 522 px bei einer Grenze von rund 600.
-  title: { absolute: 'Penetrationstest: Ablauf in 5 Phasen, Arten und Standards' },
+  // Titel wird gekappt.
+  //
+  // Von "Ablauf in 5 Phasen" auf eine Leistungsaussage umgestellt. Vorbild ist
+  // SySS, die auf dieser Suche Platz 4 halten mit "Pentest - IT-Sicherheit auf
+  // Schwachstellen pruefen": Begriff vorn, danach was man davon hat. Ein Titel,
+  // der eine Gliederung ankuendigt, spricht Nachschlagende an; einer, der eine
+  // Leistung benennt, spricht Einkaufende an. "Manuell" steht bewusst drin, das
+  // ist der Unterschied zum Scanner-Export und der Grund, warum jemand hier
+  // kauft statt dort. Gemessen 581 px bei einer Grenze von rund 600.
+  title: { absolute: 'Penetrationstest: IT-Systeme manuell auf Schwachstellen prüfen' },
   description:
     'Definition nach BSI, Ablauf in 5 Phasen, Testarten und Standards - erklärt von OSCP-zertifizierten Testern aus Berlin. Preis in 3 Minuten berechnen.',
   keywords: [
@@ -159,6 +166,12 @@ type Copy = {
   objektTitle: string;
   objektSub: string;
   objekte: { title: string; desc: string; href: string; linkLabel: string }[];
+
+  praxisLabel: string;
+  praxisHeadline: string;
+  praxisIntro: Para;
+  praxisFunde: { titel: string; was: string; warum: string }[];
+  praxisOutro: Para;
 
   stdLabel: string;
   stdHeadline: string;
@@ -468,6 +481,56 @@ const de: Copy = {
       href: '/phishing-simulation',
       linkLabel: 'Phishing-Simulation',
     },
+  ],
+
+  // Eigene Praxisbefunde. Quelle ist der Artikel "5 Sicherheitsluecken, die wir
+  // bei nahezu jedem KMU finden" - also bereits veroeffentlichtes, eigenes
+  // Material, keine neu erfundenen Behauptungen.
+  //
+  // Bewusst OHNE die drei Zahlen aus jenem Artikel ("80 % der AD-Umgebungen",
+  // "287 Tage", "200.000 €"). Die stehen dort unter "Zahlen aus der Praxis",
+  // sind aber nirgends belegt. Eine unbelegte Zahl auf der wichtigsten Seite zu
+  // wiederholen, verstaerkt nur das Problem. Die Befunde selbst sind
+  // beschreibend und damit vertretbar; sobald ausgewertete Zahlen aus den
+  // eigenen Projekten vorliegen, gehoeren sie hierher.
+  praxisLabel: 'Aus der Praxis',
+  praxisHeadline: 'Was wir in fast jedem Projekt wiederfinden.',
+  praxisIntro: [
+    { t: 'Die Lehrbuchantwort auf "Was findet ein Pentest?" lautet: Schwachstellen. Das stimmt und hilft niemandem. Nützlicher ist, was tatsächlich immer wieder auftaucht. Die folgenden fünf Befunde begegnen uns in nahezu jedem mittelständischen Netz - unabhängig von Branche und Größe. Ausführlich mit Gegenmaßnahmen stehen sie in unserem Artikel ' },
+    { t: '5 Sicherheitslücken, die wir bei nahezu jedem KMU finden', href: '/case-studies/blogs/5-sicherheitsluecken-kmu' },
+    { t: '.' },
+  ],
+  praxisFunde: [
+    {
+      titel: 'Ein Active Directory, das über Jahre gewachsen ist',
+      was: 'Dienstkonten mit mehr Rechten als nötig, fehlende Segmentierung zwischen Abteilungen, und Altprotokolle wie NTLMv1 oder SMBv1, die nie abgeschaltet wurden.',
+      warum: 'Dann genügt ein einziges übernommenes Benutzerkonto. Kerberoasting und Pass-the-Hash setzen genau hier an, und der Weg bis zum Domänenadministrator ist kürzer, als die meisten IT-Abteilungen vermuten.',
+    },
+    {
+      titel: 'Von außen erreichbare Systeme, die niemand mehr auf dem Schirm hat',
+      was: 'Ein VPN-Gateway aus der Homeoffice-Zeit, ein offener Verwaltungsport, eine TLS-Konfiguration von vor fünf Jahren.',
+      warum: 'Solche Systeme stehen in jedem Massenscan des Internets. Zwischen der Veröffentlichung einer VPN-Schwachstelle und den ersten automatisierten Angriffen liegen heute oft Stunden, nicht Wochen.',
+    },
+    {
+      titel: 'E-Mail-Absicherung, die nur auf dem Papier existiert',
+      was: 'SPF ist gesetzt, DKIM fehlt, und DMARC steht auf p=none.',
+      warum: 'p=none meldet nur, es blockiert nichts. Wer das übersieht, lässt zu, dass Fremde im Namen der Geschäftsführung schreiben - die Grundlage jedes gezielten Rechnungsbetrugs.',
+    },
+    {
+      titel: 'Webanwendungen, die nur funktional getestet wurden',
+      was: 'Fehlende Zugriffskontrollen zwischen Mandanten, veränderbare Objekt-IDs in der Adresszeile, Authentifizierung ohne zweiten Faktor.',
+      warum: 'Ein Funktionstest prüft, ob der erlaubte Weg funktioniert. Ein Penetrationstest prüft, ob der verbotene auch funktioniert. Die OWASP Top 10 führen Broken Access Control nicht ohne Grund auf Platz eins.',
+    },
+    {
+      titel: 'Sicherungen, die nie zurückgespielt wurden',
+      was: 'Keine Offline-Kopie, keine dokumentierte Wiederanlaufzeit, kein Test der Rückspielung.',
+      warum: 'Eine Sicherung, deren Wiederherstellung nie geprobt wurde, ist keine Sicherung, sondern eine Annahme. Moderne Ransomware verschlüsselt erreichbare Sicherungen zuerst, genau deshalb.',
+    },
+  ],
+  praxisOutro: [
+    { t: 'Keiner dieser Punkte ist exotisch, und keiner lässt sich mit einem Werkzeugkauf lösen. Sie entstehen, weil Systeme über Jahre wachsen und niemand von außen draufschaut. Vier der fünf fallen bei einem ' },
+    { t: 'automatisierten Schwachstellenscan', href: '/schwachstellenscan' },
+    { t: ' übrigens nicht auf - ein Scanner prüft bekannte Versionsstände, keine Rechtelogik und keine Angriffsketten.' },
   ],
 
   stdLabel: 'Standards & Methodik',
@@ -1092,6 +1155,46 @@ const en: Copy = {
     },
   ],
 
+  praxisLabel: 'From practice',
+  praxisHeadline: 'What we find in almost every engagement.',
+  praxisIntro: [
+    { t: 'The textbook answer to "what does a pentest find?" is: vulnerabilities. True, and useless. More helpful is what actually keeps coming up. These five findings appear in nearly every mid-sized network we test, regardless of industry or size. Covered in full, with remediation, in our article ' },
+    { t: '5 security gaps we find at almost every SME', href: '/case-studies/blogs/5-sicherheitsluecken-kmu' },
+    { t: '.' },
+  ],
+  praxisFunde: [
+    {
+      titel: 'An Active Directory grown over many years',
+      was: 'Service accounts with more rights than they need, no segmentation between departments, and legacy protocols such as NTLMv1 or SMBv1 that were never switched off.',
+      warum: 'One compromised user account is then enough. Kerberoasting and pass-the-hash start exactly here, and the path to domain admin is shorter than most IT departments assume.',
+    },
+    {
+      titel: 'Internet-facing systems nobody tracks any more',
+      was: 'A VPN gateway from the remote-work years, an exposed management port, a TLS configuration from five years ago.',
+      warum: 'Systems like these show up in every internet-wide scan. The gap between a VPN vulnerability going public and the first automated attacks is now measured in hours, not weeks.',
+    },
+    {
+      titel: 'Email protection that exists only on paper',
+      was: 'SPF is set, DKIM is missing, and DMARC sits at p=none.',
+      warum: 'p=none only reports, it blocks nothing. Overlook it and strangers can write in the name of your management - the basis of every targeted invoice fraud.',
+    },
+    {
+      titel: 'Web applications tested only for function',
+      was: 'Missing access controls between tenants, object IDs that can be changed in the address bar, authentication without a second factor.',
+      warum: 'A functional test checks whether the permitted path works. A penetration test checks whether the forbidden one works too. There is a reason the OWASP Top 10 place broken access control first.',
+    },
+    {
+      titel: 'Backups that were never restored',
+      was: 'No offline copy, no documented recovery time, no restore test.',
+      warum: 'A backup whose restoration has never been rehearsed is not a backup, it is an assumption. Modern ransomware encrypts reachable backups first, precisely for that reason.',
+    },
+  ],
+  praxisOutro: [
+    { t: 'None of this is exotic, and none of it is solved by buying a tool. These gaps appear because systems grow over years and nobody looks at them from the outside. Four of the five, incidentally, are invisible to an ' },
+    { t: 'automated vulnerability scan', href: '/schwachstellenscan' },
+    { t: ' - a scanner checks known version numbers, not permission logic and not attack chains.' },
+  ],
+
   stdLabel: 'Standards & methodology',
   stdHeadline: 'What serious providers test against.',
   stdSub:
@@ -1515,7 +1618,7 @@ export default async function PenetrationstestPage() {
       '@type': 'WebPage',
       '@id': `${pageUrl}#webpage`,
       url: pageUrl,
-      name: 'Penetrationstest: Ablauf in 5 Phasen, Arten und Standards',
+      name: 'Penetrationstest: IT-Systeme manuell auf Schwachstellen prüfen',
       inLanguage: locale === 'en' ? 'en' : 'de-DE',
       datePublished: STAND.datePublished,
       dateModified: STAND.dateModified,
@@ -1982,6 +2085,41 @@ export default async function PenetrationstestPage() {
         <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">
           <RichText para={c.threatOutro} />
         </p>
+      </section>
+
+      {/* PRAXIS - eigene Befunde, das inhaltliche Alleinstellungsmerkmal
+          gegenueber den Wettbewerbern auf dieser Suche. Die ranken alle mit
+          Lehrbuchtexten; keiner von ihnen schreibt, was er tatsaechlich
+          vorfindet. */}
+      <section className="premium-section">
+        <div className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+          <SectionLabel>{c.praxisLabel}</SectionLabel>
+          <h2 className="mt-5 max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">
+            {c.praxisHeadline}
+          </h2>
+          <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/70 md:text-lg">
+            <RichText para={c.praxisIntro} />
+          </p>
+
+          <ol className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] lg:grid-cols-2">
+            {c.praxisFunde.map((f, i) => (
+              <li key={f.titel} className="flex flex-col gap-3 bg-[#16141A] p-6 lg:p-7">
+                <div className="flex items-baseline gap-3">
+                  <span className="premium-tabular text-sm font-extrabold text-[#FF6B61]">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="text-lg font-bold leading-snug text-white">{f.titel}</h3>
+                </div>
+                <p className="text-sm leading-relaxed text-white/70">{f.was}</p>
+                <p className="text-sm leading-relaxed text-white/55">{f.warum}</p>
+              </li>
+            ))}
+          </ol>
+
+          <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/70 md:text-base">
+            <RichText para={c.praxisOutro} />
+          </p>
+        </div>
       </section>
 
       {/* KOSTEN */}
