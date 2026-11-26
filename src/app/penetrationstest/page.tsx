@@ -244,10 +244,23 @@ type Copy = {
 /* ---------- DE ---------- */
 const de: Copy = {
   heroLabel: 'Penetrationstest · Wissen kompakt',
+  // Ueberschrift auf eine Leistungsaussage umgestellt, passend zum Titel.
+  //
+  // Vorher: "Penetrationstest: Definition, Ablauf in 5 Phasen, Arten, Kosten."
+  // Das kuendigt eine Gliederung an - also ein Nachschlagewerk. Auf dieser
+  // Trefferliste steht Wikipedia auf Platz 1; gegen das beste Nachschlagewerk
+  // gewinnt niemand. SySS haelt Platz 4 mit "Pentest von SySS - Kompetenz, die
+  // Ihre Systeme schuetzt": Leistung statt Inhaltsverzeichnis.
+  //
+  // Abwaegung: "Definition", "Arten" und "Kosten" fallen aus der H1 heraus und
+  // damit ein Relevanzsignal fuer diese Suchanfragen. Die Begriffe stehen aber
+  // weiterhin als eigene H2 auf der Seite ("Was ist ein Penetrationstest?",
+  // "Welche Arten von Penetrationstests gibt es?", "Was kostet ein
+  // Penetrationstest?"), die thematische Abdeckung bleibt also erhalten.
   heroLine1: 'Penetrationstest:',
-  heroLine2: 'Definition, Ablauf in 5 Phasen, Arten, Kosten.',
+  heroLine2: 'IT-Systeme manuell auf Schwachstellen prüfen.',
   heroSub:
-    'Der vollständige Überblick für Unternehmen: Was ein Penetrationstest ist, wie der Ablauf in 5 Phasen nach BSI-Methodik aussieht, welche Arten und Standards es gibt, was er kostet und wann Regulierungen wie NIS2, DORA oder ISO 27001 ihn faktisch verlangen.',
+    'Wir greifen Ihre Systeme kontrolliert an, bevor es jemand anders tut - von Hand, nach OWASP, PTES und BSI-Methodik, nicht per Scanner-Export. Jeder Befund kommt mit Machbarkeitsnachweis, CVSS-Vektor und einer Empfehlung, die Ihre Entwickler umsetzen können. Festpreis, Angebot in 24 Stunden, Retest nach der Behebung inklusive.',
   answerLabel: 'Kurz erklärt',
   answerBox:
     'Ein Penetrationstest (Pentest) ist eine autorisierte, methodische Sicherheitsprüfung, bei der Fachleute mit den Techniken echter Angreifer kontrolliert versuchen, in IT-Systeme, Netzwerke oder Anwendungen einzudringen. Ziel ist es, Schwachstellen nachzuweisen, das reale Angriffspotenzial einzuschätzen und die Wirksamkeit vorhandener Sicherheitsmaßnahmen zu überprüfen - bevor es ein Angreifer tut.',
@@ -917,9 +930,9 @@ const de: Copy = {
 const en: Copy = {
   heroLabel: 'Penetration testing · Knowledge base',
   heroLine1: 'Penetration testing:',
-  heroLine2: 'definition, 5 phases, types, costs.',
+  heroLine2: 'checking IT systems for weaknesses, by hand.',
   heroSub:
-    'The complete overview for businesses: what a penetration test is, how the process runs in 5 phases along the German BSI methodology, which types and standards exist, what it costs and when regulations such as NIS2, DORA or ISO 27001 effectively require it.',
+    'We attack your systems under control before someone else does - manually, following OWASP, PTES and the German BSI methodology, not by exporting a scanner report. Every finding comes with a proof of concept, a CVSS vector and a recommendation your developers can act on. Fixed price, quote within 24 hours, retest after remediation included.',
   answerLabel: 'In short',
   answerBox:
     'A penetration test (pentest) is an authorized, methodical security assessment in which professionals use the techniques of real attackers to attempt controlled intrusions into IT systems, networks or applications. The goal is to prove vulnerabilities, assess the realistic attack potential and verify whether existing security controls actually work - before an attacker does.',
